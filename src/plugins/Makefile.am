@@ -1,1 +1,1 @@
-SUBDIRS = metrixplugin
+SUBDIRS = MyMetrix

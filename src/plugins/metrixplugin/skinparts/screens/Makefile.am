@@ -1,1 +1,0 @@
-SUBDIRS = active inactive
