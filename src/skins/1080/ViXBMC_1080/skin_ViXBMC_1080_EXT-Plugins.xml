@@ -1,0 +1,193 @@
+<skin>
+	<!--  Skin: ViXBMC_1080_EXT-Plugins by rossi2000  -->
+	<!--  SKIN FILE -->
+	<!--  This skin is OpenSource. Anyone can modify it and use it in other images.  -->
+	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
+	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
+	
+	<!--  ## Head ##  -->
+	
+	<!-- ## CROSSEPG ## -->
+	<screen name="CrossEPG_Menu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel3" />
+		<panel name="SetupMenuMenuWindowIcon" />
+       <widget source="list" render="Listbox" position="420,210" size="1080,720" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [	MultiContentEntryText(pos = (10,0), size = (1070,60), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1	) ],
+				"fonts": [gFont("menulist",40)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="CrossEPG_Setup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<panel name="SetupMenuConfigWidget" />
+		<widget name="information" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<panel name="SetupMenuRedButton2" />
+		<panel name="SetupMenuGreenButton2" />
+	</screen>
+	<screen name="CrossEPG_Providers" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<widget source="list" render="Listbox" position="420,210" size="1080,720" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (10, 0), size = (1000, 60), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+				MultiContentEntryPixmapAlphaBlend(pos = (1020, 5), size = (50, 50), png = 1),
+				],
+				"fonts": [gFont("menulist",40)],
+                "itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<panel name="SetupMenuRedButton2" />
+		<panel name="SetupMenuGreenButton2" />
+		<panel name="SetupMenuYellowButton2" />
+	</screen>
+	<screen name="CrossEPG_Ordering" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<widget source="list" render="Listbox" position="420,210" size="1080,720" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (10, 0), size = (1000, 60), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+				MultiContentEntryPixmapAlphaBlend(pos = (1035, 5), size = (35, 35), png = 1),
+				],
+				"fonts": [gFont("menulist",40)],
+                "itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<panel name="SetupMenuRedButton2" />
+		<panel name="SetupMenuGreenButton2" />
+		<panel name="SetupMenuYellowButton2" />
+		<panel name="SetupMenuBlueButton2" />
+	</screen>
+	<screen name="CrossEPG_Info" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<widget name="version" position="420,210" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="create" position="420,270" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="last_update" position="420,330" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="headersdb_size" position="420,390" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="descriptorsdb_size" position="420,450" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="indexesdb_size" position="420,510" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="aliasesdb_size" position="420,570" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="total_size" position="420,630" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="channels_count" position="420,690" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="events_count" position="420,750" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="hashes_count" position="420,810" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<panel name="SetupMenuRedButton2" />
+	</screen>
+	<screen name="CrossEPG_About" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuLogsWindowIcon" />
+		<widget name="about" position="420,210" size="1080,700" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
+		<panel name="SetupMenuRedButton2" />
+	</screen>
+	<screen name="CrossEPG_Converter" position="fill" title="CrossEPG" flags="wfNoBorder" backgroundColor="transparent" >
+	    <panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Defragmenter" position="fill" title="CrossEPG" flags="wfNoBorder" backgroundColor="transparent" >
+	    <panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Downloader" position="fill" title="CrossEPG" flags="wfNoBorder" backgroundColor="transparent" >
+	    <panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Importer" position="fill" title="CrossEPG" flags="wfNoBorder" backgroundColor="transparent" >
+	    <panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Loader" position="fill" title="CrossEPG" flags="wfNoBorder" backgroundColor="transparent" >
+	    <panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Rytec_Update" position="fill" title="CrossEPG" flags="wfNoBorder" backgroundColor="transparent" >
+	    <panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Xepgdb_Update" position="fill" title="CrossEPG" flags="wfNoBorder" backgroundColor="transparent" >
+	    <panel name="DownloadBar" />
+	</screen>
+	
+	<!-- ## LINUXSATADDONS ## -->
+	<screen name="addonsupdatesScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="LinuxsatSupportAddons Update" >
+		<panel name="SetupMenuPanel3" />
+		<panel name="SetupMenuLogsWindowIcon" />
+        <widget name="text" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+	</screen>
+	<screen name="AboutScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="About" >
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuLogsWindowIcon" />
+        <widget name="text" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+	</screen>
+	<screen name="AddonsGroups" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="LinuxsatSupportAddons" >
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuSetupWindowIcon" />
+		<widget name="info" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" enableWrapAround="1" zPosition="2"/>
+        <panel name="SetupMenuListWidget3" />
+		<panel name="SetupMenuRedButtonSource2" />
+		<panel name="SetupMenuGreenButtonSource2" />
+        <panel name="SetupMenuYellowButtonSource2" />
+		<panel name="SetupMenuBlueButtonSource2" />
+	</screen>
+	<screen name="IpkgPackages" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="LinuxsatSupportAddons" >
+		<panel name="SetupMenuPanel3" />
+		<panel name="SetupMenuSetupWindowIcon" />
+        <widget name="countrymenu" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+	</screen>
+	
+	<!-- ## OPENMULTIBOOT ## -->
+	<screen name="OMBManagerAbout" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
+		<panel name="SetupMenuPanel3" />
+		<panel name="SetupMenuLogsWindowIcon" />
+        <widget name="about" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+	</screen>
+	<screen name="OMBManagerInstall" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
+		<panel name="SetupMenuPanel3" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<widget source="list" render="Listbox" position="420,210" size="1080,660" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" >
+			<convert type="StringList" />
+		</widget>
+		<widget name="info" position="420,670" size="1080,150" font="screentitle;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+	</screen>
+	<screen name="OMBManagerList" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<widget source="list" render="Listbox" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" >
+			<convert type="StringList" />
+		</widget>
+		<panel name="SetupMenuRedButton2" />
+		<panel name="SetupMenuGreenButton2" />
+		<panel name="SetupMenuYellowButton2" />
+		<panel name="SetupMenuBlueButton2" />
+	</screen>
+	
+	<!-- ## XMLTV IMPORTER ## -->
+	<screen name="EPGMainSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<panel name="SetupMenuConfigWidget" />
+		<widget name="status" position="420,773" size="1080,100" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<widget name="statusbar" position="420,883" size="1080,60" font="screentitle;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<panel name="SetupMenuInfoButton" />
+		<panel name="SetupMenuRedButton2" />
+		<panel name="SetupMenuGreenButton2" />
+		<panel name="SetupMenuYellowButton2" />
+		<panel name="SetupMenuBlueButton2" />
+	</screen>
+	<screen name="XMLTVImportSources" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<panel name="SetupMenuListWidget3" />
+		<panel name="SetupMenuRedButton2" />
+		<panel name="SetupMenuGreenButton2" />
+	</screen>
+	<screen name="XMLTVImportLog" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuLogsWindowIcon" />
+		<panel name="SetupMenuListLogWidget" />
+		<panel name="SetupMenuRedButton2" />
+		<panel name="SetupMenuGreenButton2" />
+	</screen>
+	
+</skin>
