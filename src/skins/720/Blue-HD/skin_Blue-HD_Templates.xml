@@ -1,0 +1,571 @@
+<skin>
+	<!--  Skin: Blue-HD based on ViX-Night-HD Vs 3.01 (Original) by AndyBlac @ www.world-of-satellite.com  -->
+	<!--  Blue-HD based on ViX-Night-HD by rossi2000 and simonsez -->
+	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
+	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
+	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
+	
+	<!--  ## Head ##  -->
+	
+	<!-- ## ChannelSelection Panels ## --> 
+	<screen name="ChannelSelectionPicon">
+		<widget source="Service" render="Picon" position="46,20" size="110,66" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="ChannelSelectionIconBar">
+		<ePixmap pixmap="infobar/iconbar.png" position="290,35" size="440,42" transparent="1" alphatest="blend" zPosition="-1"/>
+	</screen>
+	<screen name="ChannelSelectionPIGPanel">
+		<eLabel position="852,20" size="382,215" zPosition="2" foregroundColor="window-bg" backgroundColor="darkgrey" />
+		<widget source="session.VideoPicture" render="Pig" position="854,22" size="378,211" zPosition="3" backgroundColor="#ff000000" />
+		<eLabel position="854,22" size="378,25" zPosition="4" backgroundColor="pig-channel-name" />
+		<widget source="session.CurrentService" render="Label" position="854,22" size="378,25" font="skyreg;23" foregroundColor="white" borderWidth="1" borderColor="black" transparent="1" valign="center" halign="center" noWrap="1" zPosition="5" >
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<screen name="ChannelSelectionTimeDatePanel">
+		<widget source="global.CurrentTime" render="Label" position="1000,238" size="100,25" font="skyreg;25" foregroundColor="skylighterblue2" backgroundColor="infobar-bkgrnd" halign="left" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1105,238" size="125,25" font="skyreg;25" foregroundColor="skylighterblue2" backgroundColor="infobar-bkgrnd" halign="right" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%a %d/%m</convert>
+		</widget>	
+	</screen>
+	<screen name="ChannelSelectionProgramNowStartTime">
+		<widget source="Event" render="Label" position="43,93" size="80,30" halign="right" foregroundColor="skylighterblue2" backgroundColor="black" font="skyreg;26" noWrap="1" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>	
+	</screen>
+	<screen name="ChannelSelectionProgramNowName">
+		<widget source="Event" render="Label" position="140,92" size="530,30" halign="left" foregroundColor="skylighterblue2" backgroundColor="black" font="skyreg;26" noWrap="1" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>	
+	</screen>
+	<screen name="ChannelSelectionProgramNowDescription">
+		<widget source="ServiceEvent" render="Label" position="46,126" zPosition="1" size="780,130" font="skyreg;24" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top">
+			<convert type="EventName">FullDescription</convert>
+		</widget>	
+	</screen>
+	<screen name="ChannelSelectionTVGuideText">
+		<eLabel text="TV Guide" position="50,239" size="243,25" font="skyreg;25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" halign="left" transparent="1" zPosition="1"/>	
+	</screen>
+	<screen name="ChannelSelectionBouquetName">
+		<widget source="Title" render="Label" position="80,272" size="850,43" font="skybold;25" transparent="1" foregroundColor="white" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" />	
+	</screen>
+	<screen name="ChannelSelectionRedButton">
+		<ePixmap pixmap="buttons/red.png" position="100,645" size="35,25" alphatest="blend" transparent="1" />
+		<widget name="key_red" position="140,645" size="240,25" zPosition="1" font="skyreg;23" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" />	
+	</screen>
+	<screen name="ChannelSelectionGreenButton">
+		<ePixmap pixmap="buttons/green.png" position="390,645" size="35,25" alphatest="blend" transparent="1" />
+		<widget name="key_green" position="430,645" size="240,25" zPosition="1" font="skyreg;23" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" />
+	</screen>
+	<screen name="ChannelSelectionYellowButton">
+		<ePixmap pixmap="buttons/yellow.png" position="680,645" size="35,25" alphatest="blend" transparent="1" />
+		<widget name="key_yellow" position="720,645" size="240,25" zPosition="1" font="skyreg;23" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" />	
+	</screen>
+	<screen name="ChannelSelectionBlueButton">
+		<ePixmap pixmap="buttons/blue.png" position="970,645" size="35,25" alphatest="blend" transparent="1" />
+		<widget name="key_blue" position="1010,645" size="240,25" zPosition="1" font="skyreg;23" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" />	
+	</screen>
+	<screen name="ChannelSelectionSelectToView">
+		<eLabel text="Press SELECT to view" position="100,677" size="243,25" font="skyreg;23" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" halign="left" transparent="1" zPosition="1"/>	
+	</screen>
+	<screen name="ChannelSelectionInfoButton">
+		<ePixmap pixmap="buttons/key_info.png" position="1104,645" size="35,25" alphatest="blend" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="ChannelSelectionMenuButton">
+		<ePixmap pixmap="buttons/key_menu.png" position="1140,677" size="35,25" alphatest="blend" transparent="1" zPosition="1" />
+	</screen>
+	
+	<!-- ## Channel Selection New ## -->
+	<screen name="NewChannelSelectionTVGuideText">
+		<eLabel text="TV Guide" position="40,95" size="243,25" font="skyreg;25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" halign="left" transparent="1" zPosition="1"/>	
+	</screen>
+	<screen name="NewChannelSelectionBouquetName">
+		<widget source="Title" render="Label" position="60,128" size="850,40" font="skyreg;25" transparent="1" foregroundColor="white" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" />	
+	</screen>
+	<screen name="NewChannelSelectionProgramNowName">
+		<widget source="ServiceEvent" render="Label" position="695,275" size="385,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" font="skyreg;23" halign="left" valign="center" noWrap="1" transparent="1">
+			<convert type="EventName">NowName</convert>
+		</widget>	
+	</screen>
+	<screen name="NewChannelSelectionProgramNowStartTime">
+		<widget source="ServiceEvent" render="Label" position="1095,275" size="60,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" font="skyreg;23" noWrap="1" halign="right" valign="center" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">
+			</convert>
+		</widget>	
+	</screen>
+	<screen name="NewChannelSelectionProgramNowEndTime">
+		<widget source="ServiceEvent" render="Label" position="1160,275" size="80,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" font="skyreg;23" noWrap="1" halign="left" valign="center" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>	
+	</screen>
+	<screen name="NewChannelSelectionProgramNowDescription">
+		<widget source="ServiceEvent" render="Label" position="695,305" size="535,122" font="skyreg;21" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>	
+	</screen>
+	<screen name="NewChannelSelectionProgramNextName">
+		<widget source="ServiceEvent" render="Label" position="695,435" size="385,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" font="skyreg;23" halign="left" valign="center" noWrap="1" transparent="1">
+			<convert type="EventName">NextName</convert>
+		</widget>	
+	</screen>
+	<screen name="NewChannelSelectionProgramNextStartTime">
+		<widget source="ServiceEvent" render="Label" position="1095,435" size="60,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" font="skyreg;23" noWrap="1" halign="right" valign="center" transparent="1">
+			<convert type="EventTime">NextStartTime</convert>
+			<convert type="ClockToText">
+			</convert>
+		</widget>	
+	</screen>
+	<screen name="NewChannelSelectionProgramNextEndTime">
+		<widget source="ServiceEvent" render="Label" position="1160,435" size="80,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" font="skyreg;23" noWrap="1" halign="left" valign="center" transparent="1">
+			<convert type="EventTime">NextEndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>	
+	</screen>
+	<screen name="NewChannelSelectionProgramNextDescription">
+		<widget source="ServiceEvent" render="Label" position="695,465" size="535,122" font="skyreg;21" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="1">
+			<convert type="EventName">NextDescription</convert>
+		</widget>	
+	</screen>
+	<screen name="NewChannelSelectionProgramLaterName">
+		<widget source="ServiceEvent" render="Label" position="695,605" size="385,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" font="skyreg;23" halign="left" valign="center" noWrap="1" transparent="1">
+			<convert type="EventName">ThirdName</convert>
+		</widget>	
+	</screen>
+	<screen name="NewChannelSelectionProgramLaterStartTime">
+		<widget source="ServiceEvent" render="Label" position="1095,605" size="60,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" font="skyreg;23" noWrap="1" halign="right" valign="center" transparent="1">
+			<convert type="EventTime">ThirdStartTime</convert>
+			<convert type="ClockToText">
+			</convert>
+		</widget>	
+	</screen>
+	<screen name="NewChannelSelectionProgramLaterEndTime">
+		<widget source="ServiceEvent" render="Label" position="1160,605" size="80,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" font="skyreg;23" noWrap="1" halign="left" valign="center" transparent="1">
+			<convert type="EventTime">ThirdEndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>	
+	</screen>
+	
+	<!-- ## CrossEPG Panel ## -->
+	<screen name="CrossEPGDownloadBar">
+		<ePixmap pixmap="infobar/background_hd.png" position="center,645" size="600,70" zPosition="-1"/>
+		<widget name="action" position="center,650" size="520,20" halign="center" valign="center" font="skyreg;18" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" />
+		<widget name="status" position="center,672" size="520,20" halign="center" valign="center" font="skyreg;18" foregroundColor="skygold" backgroundColor="skydarkblue" transparent="1" />
+		<widget name="progress" position="center,700" size="400,5" borderWidth="1" backgroundColor="skygold"/>
+	</screen>
+	
+	<!-- ## EPG Screen Panels ## -->
+	<screen name="EPGSelectionProgramNowDescription">
+		<widget source="Event" render="Label" position="46,126" zPosition="1" size="780,130" font="skyreg;24" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top">
+			<convert type="EventName">FullDescription</convert>
+		</widget>	
+	</screen>
+	<screen name="EPGSelectionSelectToViewOrRecord">
+		<eLabel text="Press SELECT to view or" font="skyreg;23" position="100,677" size="243,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" halign="left" transparent="1" zPosition="1"/>
+		<ePixmap pixmap="buttons/record.png" position="343,676" size="27,27" alphatest="blend" transparent="0" />
+		<eLabel text="to record" font="skyreg;23" position="378,677" size="150,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" halign="left" transparent="1" zPosition="1"/>
+	</screen>
+	
+	<!-- ## Infobar Panels ## -->
+	<screen name="InfobarChannelName">
+		<widget source="session.CurrentService" render="Label" position="18,4" size="625,34" font="skyreg;28" foregroundColor="white" backgroundColor="infobar-bkgrnd" transparent="1" valign="top" halign="left" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<screen name="InfobarTimeDatePanel">
+		<widget source="global.CurrentTime" render="Label" position="765,10" zPosition="1" size="90,20" font="skyreg;22" foregroundColor="skylighterblue" backgroundColor="infobar-bkgrnd" transparent="1" noWrap="1" halign="left" valign="top">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="855,10" zPosition="1" size="115,20" font="skyreg;22" foregroundColor="skylighterblue" backgroundColor="infobar-bkgrnd" transparent="1" noWrap="1" halign="center" valign="top">
+			<convert type="ClockToText">Format:%a %d/%m</convert>
+		</widget>
+	</screen>
+	<screen name="InfobarProgramNowStartTime">
+		<widget source="session.Event_Now" render="Label" position="29,45" size="70,35" font="skyreg;22" foregroundColor="skylighterblue" backgroundColor="infobar_sunken" transparent="1" noWrap="1" valign="center">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+	</screen>
+	<screen name="InfobarProgramNowProgressBar">
+		<widget source="session.Event_Now" render="Progress" position="25,75" size="454,35" pixmap="infobar/infobareventprogress.png" foregroundColor="skydarkblue" transparent="1" zPosition="0" alphatest="blend" >
+			<convert type="EventTime">Progress</convert>
+		</widget>
+	</screen>
+	<screen name="InfobarProgramNowName">
+		<widget source="session.Event_Now" render="Label" position="29,75" size="450,35" font="skyreg;22" noWrap="1" foregroundColor="skydarkblue" backgroundColor="skygold" transparent="1" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+	</screen>
+	<screen name="InfobarProgramNextStartTime">
+		<widget source="session.Event_Next" render="Label" position="500,45" size="70,35" font="skyreg;22" foregroundColor="skylighterblue" backgroundColor="infobar_sunken" transparent="1" noWrap="1" valign="center">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+	</screen>
+	<screen name="InfobarProgramNextName">
+		<widget source="session.Event_Next" render="Label" position="500,75" size="270,35" font="skyreg;22" noWrap="1" foregroundColor="white" backgroundColor="infobar_sunken" transparent="1" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+	</screen>
+	<screen name="InfobarRecordIcon">
+    <!--	<ePixmap pixmap="icons/icon_rec.png" position="948,47" size="21,21" zPosition="0" alphatest="blend" /> -->
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/icon_rec.png" position="948,47" size="21,21" zPosition="1" alphatest="blend" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+	<screen name="InfobarOnlineUpdateIcon">
+    <!--	<ePixmap pixmap="icons/icon_stableupdate.png" position="948,70" size="21,21" zPosition="0" alphatest="blend" /> -->
+		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/icon_stableupdate.png" position="948,70" size="20,20" zPosition="1" alphatest="blend" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/icon_unstableupdate.png" position="948,70" size="20,20" zPosition="1" alphatest="blend" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+	<screen name="InfobarTunerIcons">
+		<eLabel text="Tuner" position="830,118" size="60,20" font="skyreg;20" foregroundColor="white" backgroundColor="infobar_collab_back" transparent="1" />
+		<widget source="session.TunerInfo" render="FixedLabel" text="A" position="888,118" size="14,20" font="skyreg;20" foregroundColor="skygold" backgroundColor="infobar_collab_back" halign="center" zPosition="1" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="B" position="901,118" size="14,20" font="skyreg;20" foregroundColor="skygold" backgroundColor="infobar_collab_back" halign="center" zPosition="1" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="C" position="914,118" size="14,20" font="skyreg;20" foregroundColor="skygold" backgroundColor="infobar_collab_back" halign="center" zPosition="1" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="D" position="927,118" size="14,20" font="skyreg;20" foregroundColor="skygold" backgroundColor="infobar_collab_back" halign="center" zPosition="1" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="A" position="888,118" size="14,20" font="skyreg;20" foregroundColor="white" backgroundColor="infobar_collab_back" halign="center" zPosition="2" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="B" position="901,118" size="14,20" font="skyreg;20" foregroundColor="white" backgroundColor="infobar_collab_back" halign="center" zPosition="2" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="C" position="914,118" size="14,20" font="skyreg;20" foregroundColor="white" backgroundColor="infobar_collab_back" halign="center" zPosition="2" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="D" position="927,118" size="14,20" font="skyreg;20" foregroundColor="white" backgroundColor="infobar_collab_back" halign="center" zPosition="2" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	<screen name="InfobarPicon">
+		<widget source="session.CurrentService" render="Picon" position="810,47" size="110,66" alphatest="blend" backgroundColor="transparent" transparent="0" zPosition="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="InfobarRedButton">
+		<ePixmap pixmap="buttons/red.png" position="60,118" size="25,25" alphatest="blend" />
+		<widget name="key_red" position="95,118" size="130,25" font="skyreg;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" halign="left" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="InfobarGreenButton">
+		<ePixmap pixmap="buttons/green.png" position="250,118" size="25,25" alphatest="blend" />
+		<widget name="key_green" position="285,118" size="130,25" font="skyreg;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" halign="left" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="InfobarYellowButton">
+		<ePixmap pixmap="buttons/yellow.png" position="440,118" size="25,25" alphatest="blend" />
+		<widget name="key_yellow" position="475,118" size="130,25" font="skyreg;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" halign="left" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="InfobarBlueButton">
+		<ePixmap pixmap="buttons/blue.png" position="630,118" size="25,25" alphatest="blend" />
+		<widget name="key_blue" position="665,118" size="150,25" font="skyreg;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" halign="left" transparent="1" zPosition="1"/>
+	</screen>
+	<screen name="InfobarInfoButton">
+		<ePixmap pixmap="buttons/infobutton.png" position="645,118" size="35,25" alphatest="blend" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="InfobarInfoText">
+		<eLabel text="Info" position="675,118" size="243,25" font="skyreg;22" foregroundColor="skywhite" backgroundColor="skydarkblue" halign="left" transparent="1" zPosition="1"/>	
+	</screen>
+	
+	<!-- ## 2ndInfobar Panels ## -->
+	<screen name="2ndInfobarProgramNowDescription">
+		<widget name="epg_description" position="25,40" size="925,125" font="skyreg;22" foregroundColor="white" backgroundColor="infobar_sunken" transparent="1" valign="top" zPosition="2" />
+	</screen>
+	<screen name="2ndInfobarSNR">
+		<eLabel text="SNR:" position="763,20" size="50,22" font="skyreg;18" foregroundColor="skygold" backgroundColor="infobar_sunken" transparent="1" halign="right" noWrap="1" />
+		<widget source="session.FrontendStatus" render="Label" position="815,20" size="80,22" font="skyreg;18" foregroundColor="skygold" backgroundColor="infobar_sunken" transparent="1" noWrap="1">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel text="AGC:" position="854,20" size="50,22" font="skyreg;18" foregroundColor="skygold" backgroundColor="infobar_sunken" transparent="1" halign="right" noWrap="1" />
+		<widget source="session.FrontendStatus" render="Label" position="907,20" size="80,22" font="skyreg;18" foregroundColor="skygold" backgroundColor="infobar_sunken" transparent="1" noWrap="1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+	</screen>
+	<screen name="2ndInfobarChannelName">
+		<widget source="session.CurrentService" render="Label" position="18,168" size="625,34" font="skyreg;28" foregroundColor="white" backgroundColor="infobar-bkgrnd" transparent="1" valign="top" halign="left" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<screen name="2ndInfobarOrbitalPositionInfo">
+		<widget source="session.CurrentService" render="Label" position="460,179" size="60,20" font="skyreg;17" foregroundColor="skygold" backgroundColor="infobar-bkgrnd" transparent="1" halign="center" >
+			<convert type="PliExtraInfo">OrbitalPosition</convert>
+		</widget>
+	</screen>
+	<screen name="2ndInfobarECMInfo">
+		<widget source="session.CurrentService" render="Label" font="skyreg;17" position="29,207" size="320,36" halign="left" zPosition="1" foregroundColor="skygold" backgroundColor="infobar-bkgrnd" transparent="1" noWrap="1" >
+			<convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
+	</screen>
+	<screen name="2ndInfobarTimeDatePanel">
+		<widget source="global.CurrentTime" render="Label" position="765,174" zPosition="1" size="90,20" font="skyreg;22" foregroundColor="skylighterblue" backgroundColor="infobar-bkgrnd" transparent="1" noWrap="1" halign="left" valign="top">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="855,174" zPosition="1" size="115,20" font="skyreg;22" foregroundColor="skylighterblue" backgroundColor="infobar-bkgrnd" transparent="1" noWrap="1" halign="center" valign="top">
+			<convert type="ClockToText">Format:%a %d/%m</convert>
+		</widget>
+	</screen>
+	<screen name="2ndInfobarTransponderInfo">
+		<widget source="session.CurrentService" render="Label" position="563,207" size="390,36" font="skyreg;17" foregroundColor="skygold" backgroundColor="infobar-bkgrnd" transparent="1" halign="right">
+			<convert type="PliExtraInfo">TransponderInfo2line</convert>
+		</widget>
+	</screen>
+	<screen name="2ndInfobarRecordIcon">
+    <!--	<ePixmap pixmap="icons/icon_rec.png" position="948,249" size="21,21" zPosition="0" alphatest="blend" /> -->
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/icon_rec.png" position="948,249" size="21,21" zPosition="1" alphatest="blend" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+	<screen name="2ndInfobarOnlineUpdateIcon">
+    <!--	<ePixmap pixmap="icons/icon_stableupdate.png" position="948,272" size="21,21" zPosition="0" alphatest="blend" /> -->
+		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/icon_stableupdate.png" position="948,272" size="21,21" zPosition="1" alphatest="blend" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/icon_unstableupdate.png" position="948,272" size="21,21" zPosition="1" alphatest="blend" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+	<screen name="2ndInfobarTunerIcons">
+		<eLabel text="Tuner" position="830,320" size="60,20" font="skyreg;20" foregroundColor="white" backgroundColor="infobar_collab_back" transparent="1" />
+		<widget source="session.TunerInfo" render="FixedLabel" text="A" position="888,320" size="14,20" font="skyreg;20" foregroundColor="skygold" backgroundColor="infobar_collab_back" halign="center" zPosition="1" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="B" position="901,320" size="14,20" font="skyreg;20" foregroundColor="skygold" backgroundColor="infobar_collab_back" halign="center" zPosition="1" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="C" position="914,320" size="14,20" font="skyreg;20" foregroundColor="skygold" backgroundColor="infobar_collab_back" halign="center" zPosition="1" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="D" position="927,320" size="14,20" font="skyreg;20" foregroundColor="skygold" backgroundColor="infobar_collab_back" halign="center" zPosition="1" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="A" position="888,320" size="14,20" font="skyreg;20" foregroundColor="white" backgroundColor="infobar_collab_back" halign="center" zPosition="2" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="B" position="901,320" size="14,20" font="skyreg;20" foregroundColor="white" backgroundColor="infobar_collab_back" halign="center" zPosition="2" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="C" position="914,320" size="14,20" font="skyreg;20" foregroundColor="white" backgroundColor="infobar_collab_back" halign="center" zPosition="2" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="D" position="927,320" size="14,20" font="skyreg;20" foregroundColor="white" backgroundColor="infobar_collab_back" halign="center" zPosition="2" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	<screen name="2ndInfobarPicon">
+		<widget source="session.CurrentService" render="Picon" position="810,249" size="110,66" alphatest="blend" backgroundColor="transparent" transparent="0" zPosition="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="2ndInfobarRedButton">
+		<ePixmap pixmap="buttons/red.png" position="60,320" size="25,25" alphatest="blend" />
+		<widget name="key_red" position="95,320" size="130,25" font="skyreg;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" halign="left" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="2ndInfobarGreenButton">
+		<ePixmap pixmap="buttons/green.png" position="250,320" size="25,25" alphatest="blend" />
+		<widget name="key_green" position="285,320" size="130,25" font="skyreg;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" halign="left" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="2ndInfobarYellowButton">
+		<ePixmap pixmap="buttons/yellow.png" position="440,320" size="25,25" alphatest="blend" />
+		<widget name="key_yellow" position="475,320" size="130,25" font="skyreg;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" halign="left" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="2ndInfobarBlueButton">
+		<ePixmap pixmap="buttons/blue.png" position="630,320" size="25,25" alphatest="blend" />
+		<widget name="key_blue" position="665,320" size="150,25" font="skyreg;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" halign="left" transparent="1" zPosition="1"/>
+	</screen>
+	<screen name="2ndInfobarInfoButton">
+		<ePixmap pixmap="buttons/key_info.png" position="645,320" size="35,25" alphatest="blend" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="2ndInfobarInfoText">
+		<eLabel text="Info" position="675,320" size="243,25" font="skyreg;22" foregroundColor="skywhite" backgroundColor="skydarkblue" halign="left" transparent="1" zPosition="1"/>	
+	</screen>
+	
+	
+	<!-- ## Menu Panels ## -->
+	<screen name="MenuPanel">
+		<widget source="Title" render="Label" position="40,52" size="540,38" font="skybold;28" foregroundColor="white" backgroundColor="infobar-bkgrnd" transparent="1" />
+		<ePixmap pixmap="infobar/menu.png" position="0,0" size="540,720" alphatest="on" zPosition="-1" />
+		<widget source="global.CurrentTime" render="Label" position="280,8" size="110,28" font="skyreg;24" foregroundColor="skylighterblue2" backgroundColor="infobar-bkgrnd" halign="left" transparent="1">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="400,8" size="115,28" font="skyreg;24" foregroundColor="skylighterblue2" backgroundColor="infobar-bkgrnd" halign="right" transparent="1">
+			<convert type="ClockToText">Format:%a %d/%m</convert>
+		</widget>
+	</screen>
+	<screen name="MenuRed1Panel">
+		<ePixmap pixmap="buttons/red.png" position="40,662" size="26,25" alphatest="blend" transparent="1" />
+		<widget name="key_red" position="75,662" size="190,24" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1" />
+	</screen>
+	<screen name="MenuGreen1Panel">
+		<ePixmap pixmap="buttons/green.png" position="40,690" size="26,25" alphatest="blend" transparent="1" />
+		<widget name="key_green" position="75,690" size="190,24" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2" />
+	</screen>
+	<screen name="MenuYellow1Panel">
+		<ePixmap pixmap="buttons/yellow.png" position="280,662" size="26,25" alphatest="blend" transparent="1" />
+		<widget name="key_yellow" position="315,662" size="190,24" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1" />
+	</screen>
+	<screen name="MenuBlue1Panel">
+		<ePixmap pixmap="buttons/blue.png" position="280,690" size="26,25" alphatest="blend" transparent="1" />
+		<widget name="key_blue" position="315,690" size="200,24" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2" />
+	</screen>
+	<screen name="MenuRed2Panel">
+		<ePixmap pixmap="buttons/red.png" position="40,662" size="26,25" alphatest="blend" transparent="1" />
+		<widget source="key_red" render="Label" position="75,662" size="190,25" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1" />
+	</screen>
+	<screen name="MenuGreen2Panel">
+		<ePixmap pixmap="buttons/green.png" position="40,690" size="26,25" alphatest="blend" transparent="1" />
+		<widget source="key_green" render="Label" position="75,690" size="190,25" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2" />
+	</screen>
+	<screen name="MenuYellow2Panel">
+		<ePixmap pixmap="buttons/yellow.png" position="280,662" size="26,25" alphatest="blend" transparent="1" />
+		<widget source="key_yellow" render="Label" position="315,662" size="190,25" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1" />
+	</screen>
+	<screen name="MenuBlue2Panel">
+		<ePixmap pixmap="buttons/blue.png" position="280,690" size="26,25" alphatest="blend" transparent="1" />
+		<widget source="key_blue" render="Label" position="315,690" size="190,25" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2" />
+	</screen>
+	<screen name="MenuRed3Panel">
+		<ePixmap pixmap="buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="1" size="140,40" font="skyreg;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+	</screen>
+	<screen name="MenuGreen3Panel">
+		<ePixmap pixmap="buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+		<widget name="key_green" position="140,0" zPosition="1" size="140,40" font="skyreg;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+	</screen>
+	<screen name="MenuYellow3Panel">
+		<ePixmap pixmap="buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
+		<widget name="key_yellow" position="280,0" zPosition="1" size="140,40" font="skyreg;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+	</screen>
+	<screen name="MenuBlue3Panel">
+		<ePixmap pixmap="buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
+		<widget name="key_blue" position="420,0" zPosition="1" size="140,40" font="skyreg;20" halign="center" valign="center" backgroundColor="#141484" transparent="1" />
+	</screen>
+	<screen name="MenuRed4Panel">
+		<ePixmap pixmap="buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+		<widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="skyreg;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+	</screen>
+	<screen name="MenuGreen4Panel">
+		<ePixmap pixmap="buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+		<widget source="key_green" render="Label"  position="140,0" zPosition="1" size="140,40" font="skyreg;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+	</screen>
+	<screen name="MenuYellow4Panel">
+		<ePixmap pixmap="buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
+		<widget source="key_yellow" render="Label" position="280,0" zPosition="1" size="140,40" font="skyreg;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+	</screen>
+	<screen name="MenuBlue4Panel">
+		<ePixmap pixmap="buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
+		<widget source="key_blue" render="Label" position="420,0" zPosition="1" size="140,40" font="skyreg;20" halign="center" valign="center" backgroundColor="#141484" transparent="1" />
+	</screen>
+	<screen name="MenuMenuButton">
+		<ePixmap pixmap="buttons/key_menu.png" position="470,663" size="35,25" alphatest="blend" transparent="1" />
+	</screen>
+	<screen name="MenuInfoButton">
+		<ePixmap pixmap="buttons/key_info.png" position="470,690" size="35,25" alphatest="blend" transparent="1" />
+	</screen>
+	
+	<!-- ## Movie Selection Panels ## -->
+	<screen name="PlannerIconBar">
+		<ePixmap pixmap="infobar/iconbar2.png" position="290,35" size="440,42" transparent="1" alphatest="blend" zPosition="-1"/>
+	</screen>
+	<screen name="PlannerText">
+		<eLabel text="Planner" position="50,239" size="243,25" font="skyreg;25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" halign="left" transparent="1" zPosition="1"/>	
+	</screen>	
+	<screen name="PlannerBouquetName">
+		<widget source="Title" render="Label" position="80,272" size="1120,35" font="skyreg;25" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" zPosition="1" />	
+	</screen>
+	
+	<!-- ## FullScreen Panels ## -->	
+	<screen name="FullscreenTopPanel">
+		<ePixmap pixmap="screens/fs-bg-top.png" position="0,0" size="1280,70" zPosition="-1" />
+		<widget source="global.CurrentTime" render="Label" position="1160,10" size="100,28" font="skyreg;26" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="infobar-bkgrnd" halign="right" transparent="1" zPosition="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="910,40" size="350,25" font="skyreg;20" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="infobar-bkgrnd" halign="right" transparent="1" zPosition="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<ePixmap pixmap="screens/fs-bg-bot.png" position="0,680" size="1280,40" zPosition="-1" />
+	</screen>
+	<screen name="FullscreenTitlePanel">
+		<widget source="Title" render="Label" position="20,25" size="850,43" font="skyreg;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" />
+	</screen>
+	<screen name="FullscreenRed1Panel">
+		<ePixmap pixmap="buttons/red.png" position="5,688" size="25,25" alphatest="blend" transparent="1" />
+		<widget name="key_red" position="39,688" size="240,25" zPosition="1" font="skyreg;18" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+	</screen>
+	<screen name="FullscreenGreen1Panel">
+		<ePixmap pixmap="buttons/green.png" position="149,688" size="25,25" alphatest="blend" transparent="1" />
+		<widget name="key_green" position="179,688" size="240,25" zPosition="1" font="skyreg;18" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+	</screen>
+	<screen name="FullscreenYellow1Panel">
+		<ePixmap pixmap="buttons/yellow.png" position="274,688" size="25,25" alphatest="blend" transparent="1" />
+		<widget name="key_yellow" position="305,688" size="240,25" zPosition="1" font="skyreg;18" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+	</screen>
+	<screen name="FullscreenBlue1Panel">
+		<ePixmap pixmap="buttons/blue.png" position="409,688" size="25,25" alphatest="blend" transparent="1" />
+		<widget name="key_blue" position="439,688" size="240,25" zPosition="1" font="skyreg;18" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+	</screen>
+	<screen name="FullscreenRed2Panel">
+		<ePixmap pixmap="buttons/red.png" position="10,688" size="25,25" alphatest="blend" transparent="1" />
+		<widget source="key_red" render="Label" position="50,688" size="240,25" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+	</screen>
+	<screen name="FullscreenGreen2Panel">
+		<ePixmap pixmap="buttons/green.png" position="140,688" size="25,25" alphatest="blend" transparent="1" />
+		<widget source="key_green" render="Label" position="180,688" size="240,25" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+	</screen>
+	<screen name="FullscreenYellow2Panel">
+		<ePixmap pixmap="buttons/yellow.png" position="590,688" size="25,25" alphatest="blend" transparent="1" />
+		<widget source="key_yellow" render="Label" position="630,688" size="240,25" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+	</screen>
+	<screen name="FullscreenBlue2Panel">
+		<ePixmap pixmap="buttons/blue.png" position="880,688" size="25,25" alphatest="blend" transparent="1" />
+		<widget source="key_blue" render="Label" position="920,688" size="240,25" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+	</screen>
+	
+</skin>

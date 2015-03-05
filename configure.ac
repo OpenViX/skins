@@ -67,6 +67,19 @@ skins/src/plugins/MyMetrix/skintemplates/Makefile
 skins/src/skins/Makefile
 skins/src/skins/720/Makefile
 
+skins/src/skins/720/Blue-HD/Makefile
+skins/src/skins/720/Blue-HD/buttons/Makefile
+skins/src/skins/720/Blue-HD/countries/Makefile
+skins/src/skins/720/Blue-HD/epg/Makefile
+skins/src/skins/720/Blue-HD/extensions/Makefile
+skins/src/skins/720/Blue-HD/fonts/Makefile
+skins/src/skins/720/Blue-HD/icons/Makefile
+skins/src/skins/720/Blue-HD/infobar/Makefile
+skins/src/skins/720/Blue-HD/ondemand/Makefile
+skins/src/skins/720/Blue-HD/piconbg/Makefile
+skins/src/skins/720/Blue-HD/screens/Makefile
+skins/src/skins/720/Blue-HD/spinner/Makefile
+
 skins/src/skins/720/Magic-HD/Makefile
 skins/src/skins/720/Magic-HD/border/Makefile
 skins/src/skins/720/Magic-HD/buttons/Makefile
@@ -110,6 +123,20 @@ skins/src/skins/720/MetrixHD/skin_default/Makefile
 skins/src/skins/720/MetrixHD/skin_default/buttons/Makefile
 skins/src/skins/720/MetrixHD/skin_default/icons/Makefile
 skins/src/skins/720/MetrixHD/SkinDesign/Makefile
+
+skins/src/skins/720/Red-HD/Makefile
+skins/src/skins/720/Red-HD/buttons/Makefile
+skins/src/skins/720/Red-HD/countries/Makefile
+skins/src/skins/720/Red-HD/crossepg/Makefile
+skins/src/skins/720/Red-HD/epg/Makefile
+skins/src/skins/720/Red-HD/extensions/Makefile
+skins/src/skins/720/Red-HD/fonts/Makefile
+skins/src/skins/720/Red-HD/icons/Makefile
+skins/src/skins/720/Red-HD/infobar/Makefile
+skins/src/skins/720/Red-HD/ondemand/Makefile
+skins/src/skins/720/Red-HD/screens/Makefile
+skins/src/skins/720/Red-HD/selectionbars/Makefile
+skins/src/skins/720/Red-HD/spinner/Makefile
 
 skins/src/skins/720/ViX-Common/Makefile
 skins/src/skins/720/ViX-Common/buttons/Makefile
