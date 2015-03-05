@@ -90,6 +90,14 @@ skins/src/skins/720/Magic-HD/icons/Makefile
 skins/src/skins/720/Magic-HD/infobar/Makefile
 skins/src/skins/720/Magic-HD/window/Makefile
 
+skins/src/skins/720/Magic-HD-Night/Makefile
+skins/src/skins/720/Magic-HD-Night/crossepg/Makefile
+skins/src/skins/720/Magic-HD-Night/epg/Makefile
+
+skins/src/skins/720/Magic-HD-Noire/Makefile
+skins/src/skins/720/Magic-HD-Noire/crossepg/Makefile
+skins/src/skins/720/Magic-HD-Noire/epg/Makefile
+
 skins/src/skins/720/Magic-SD/Makefile
 skins/src/skins/720/Magic-SD/buttons/Makefile
 skins/src/skins/720/Magic-SD/crossepg/Makefile
@@ -123,6 +131,15 @@ skins/src/skins/720/MetrixHD/skin_default/Makefile
 skins/src/skins/720/MetrixHD/skin_default/buttons/Makefile
 skins/src/skins/720/MetrixHD/skin_default/icons/Makefile
 skins/src/skins/720/MetrixHD/SkinDesign/Makefile
+
+skins/src/skins/720/MHDC/Makefile
+skins/src/skins/720/MHDC/border/Makefile
+skins/src/skins/720/MHDC/buttons/Makefile
+skins/src/skins/720/MHDC/dvr/Makefile
+skins/src/skins/720/MHDC/fonts/Makefile
+skins/src/skins/720/MHDC/infobar/Makefile
+skins/src/skins/720/MHDC/logos/Makefile
+skins/src/skins/720/MHDC/window/Makefile
 
 skins/src/skins/720/Red-HD/Makefile
 skins/src/skins/720/Red-HD/buttons/Makefile
