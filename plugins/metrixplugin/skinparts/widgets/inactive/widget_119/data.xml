@@ -1,0 +1,44 @@
+<skinpartwidget screenname="SecondInfoBar">
+<!-- /*STYLE NEW -->
+<eLabel position="-1,560" size="1283,160" backgroundColor="metrixBackground" zPosition="-10" name="InfoBar"/>
+<eLabel name="new eLabel" position="288,615" size="950,1" backgroundColor="metrixAccent1"/>
+<widget source="session.CurrentService" render="Picon" position="40,570" zPosition="4" size="220,132" transparent="1" alphatest="blend">
+<convert type="ServiceName">Reference</convert>
+</widget>
+<widget source="session.Event_Now" render="Label" position="1091,563" size="75,30" font="Regular; 19" halign="right" backgroundColor="metrixBackground" transparent="1">
+<convert type="EventTime">StartTime</convert>
+<convert type="ClockToText">Default</convert>
+</widget>
+<eLabel text="-" position="1169,563" size="15,30" font="Regular; 19" halign="center" backgroundColor="metrixBackground" transparent="1"/>
+<widget source="session.Event_Now" render="Label" position="1177,563" size="60,30" font="Regular; 19" halign="right" backgroundColor="metrixBackground" transparent="1">
+<convert type="EventTime">EndTime</convert>
+<convert type="ClockToText">Default</convert>
+</widget>
+<widget source="session.Event_Now" render="Label" position="286,558" size="788,56" font="SetrixHD; 40" halign="left" backgroundColor="metrixBackground" transparent="1" noWrap="1">
+<convert type="EventName">Name</convert>
+</widget>
+<widget source="session.Event_Now" render="Label" position="1125,586" size="113,30" font="Regular; 19" halign="right" backgroundColor="metrixBackground" transparent="1">
+<convert type="EventTime">Remaining</convert>
+<convert type="RemainingToText">InMinutes</convert>
+</widget>
+<widget source="session.Event_Now" render="Progress" pixmap="MetrixHD/colors/00ffffff.png" position="288,614" size="950,3" zPosition="7" transparent="1">
+<convert type="EventTime">Progress</convert>
+</widget>
+<widget source="session.Event_Next" render="Label" position="1091,617" size="75,28" font="Regular; 18" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1" noWrap="1" valign="top">
+<convert type="EventTime">StartTime</convert>
+<convert type="ClockToText">Default</convert>
+</widget>
+<eLabel text="-" position="1169,617" size="15,28" font="Regular; 18" halign="center" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1" noWrap="1" valign="top"/>
+<widget source="session.Event_Next" render="Label" position="1177,617" size="60,28" font="Regular; 18" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1" noWrap="1" valign="top">
+<convert type="EventTime">EndTime</convert>
+<convert type="ClockToText">Default</convert>
+</widget>
+<widget source="session.Event_Next" render="Label" position="286,624" size="788,40" font="Regular; 26" halign="left" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent1" valign="top">
+<convert type="EventName">Name</convert>
+</widget>
+<widget source="session.Event_Next" render="Label" position="1124,639" size="113,28" font="Regular; 18" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+<convert type="EventTime">Duration</convert>
+<convert type="ClockToText">InMinutes</convert>
+</widget>
+<!-- STYLE NEW */ -->
+</skinpartwidget> 

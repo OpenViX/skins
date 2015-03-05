@@ -1,0 +1,17 @@
+<screen name="TimeshiftState" position="0,160" size="1280,400" backgroundColor="transparent" flags="wfNoBorder">
+<eLabel backgroundColor="metrixBackground2" name="StatussBar" position="center,346" size="860,54" zPosition="-1" />
+  <widget source="session.CurrentService" render="Progress" position="center,385" size="620,5" zPosition="5" transparent="1">
+    <convert type="ServicePosition">Position</convert>
+  </widget>
+<widget source="session.CurrentService" render="Label" position="211,351" size="112,32" font="Regular; 30" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground2">
+<convert type="ServicePosition">Position,ShowHours</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" position="958,351" size="110,32" font="Regular; 30" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground2">
+<convert type="ServicePosition">Length,ShowHours</convert>
+</widget>
+<widget name="eventname" position="center,351" zPosition="4" size="455,32" font="Regular; 20" halign="center" foregroundColor="metrixAccent1" backgroundColor="metrixBackground2" valign="center">
+</widget>
+      <widget name="statusicon" position="center,45" size="256,256" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" zPosition="5" alphatest="on" />
+  <widget name="speed" position="337,74" size="200,200" font="Regular;140" halign="left" foregroundColor="white" backgroundColor="transparent" transparent="1" zPosition="5" />
+    <eLabel name="new eLabel" position="center,387" size="620,1" backgroundColor="metrixAccent1" foregroundColor="metrixAccent1" zPosition="1" />
+</screen> 

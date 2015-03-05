@@ -1,0 +1,29 @@
+  <screen name="QuickEPG" position="center,0" size="1280,720" title="QuickEPG" flags="wfNoBorder" backgroundColor="transparent" >
+      <eLabel position="-2,521" size="1280,203" backgroundColor="metrixBackground" zPosition="-10" name="InfoBar" transparent="0" />
+  <eLabel position="43,620" size="84,1" backgroundColor="metrixAccent1" />
+  <widget source="Event" render="Progress" position="43,619" size="84,3" zPosition="7" transparent="1">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+ <widget source="Service" render="Picon" position="34,547" zPosition="4" size="100,60" transparent="1" alphatest="blend">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="Event" render="Label" position="895,535" size="375,195" font="Regular;22" transparent="1">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <widget name="list" position="161,535" size="725,122" transparent="1" />
+  <ePixmap pixmap="MetrixHD/buttons/red.png" position="42,679" size="30,40" alphatest="blend" zPosition="0" />
+  <ePixmap pixmap="MetrixHD/buttons/green.png" position="212,679" size="30,40" alphatest="blend" />
+  <ePixmap pixmap="MetrixHD/buttons/yellow.png" position="383,679" size="30,40" alphatest="blend" />
+  <ePixmap pixmap="MetrixHD/buttons/blue.png" position="552,679" size="30,40" alphatest="blend" />
+  <widget name="key_red" position="80,677" zPosition="1" size="140,42" font="Regular;20" halign="left" transparent="1" />
+  <widget name="key_green" position="250,677" zPosition="1" size="140,42" font="Regular;20" halign="left" transparent="1" />
+  <widget name="key_yellow" position="421,677" zPosition="1" size="140,42" font="Regular;20" halign="left" transparent="1" />
+  <widget name="key_blue" position="589,677" zPosition="1" size="140,42" font="Regular;20" halign="left" transparent="1" />
+  <widget source="Event" render="Label" position="34,625" size="100,30" font="Regular; 22" foregroundColor="metrixForeground" halign="center" backgroundColor="metrixBackground" transparent="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="Service" render="Label" position="44,365" size="1252,200" font="SetrixHD; 140" valign="top" noWrap="1" backgroundColor="metrixPreTrans2" transparent="1" foregroundColor="metrixPreTrans2" zPosition="-30">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  </screen>  

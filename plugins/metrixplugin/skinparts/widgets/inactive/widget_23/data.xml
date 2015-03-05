@@ -1,0 +1,34 @@
+<skinpartwidget screenname="InfoBar">
+     <ePixmap alphatest="blend" pixmap="MetrixHD/icons/ico_dolby_off.png" position="1020,694" size="64,23" zPosition="1" />
+  <widget alphatest="blend" pixmap="MetrixHD//icons/ico_dolby_on.png" position="1020,694" render="Pixmap" size="64,23" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="MetrixHD/icons/ico_format_off.png" position="1156,692" size="41,26" zPosition="1" />
+  <widget alphatest="blend" pixmap="MetrixHD/icons/ico_format_on.png" position="1156,692" render="Pixmap" size="41,26" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="MetrixHD/icons/ico_txt_off.png" position="981,693" size="28,24" zPosition="1" />
+  <widget alphatest="blend" pixmap="MetrixHD/icons/ico_txt_on.png" position="981,693" render="Pixmap" size="28,24" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="MetrixHD/icons/ico_hd_off.png" position="1095,694" size="49,24" zPosition="1" />
+  <widget alphatest="blend" pixmap="MetrixHD/icons/ico_hd_on.png" position="1095,694" render="Pixmap" size="49,24" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">721,1980</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="MetrixHD/icons/ico_crypt_off.png" position="1209,692" size="27,25" zPosition="1" />
+  <widget alphatest="blend" pixmap="MetrixHD/icons/ico_crypt_on.png" position="1209,692" render="Pixmap" size="27,25" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="MetrixHD/icons/subtitle_off.png" position="940,694" size="30,22" />
+  <widget alphatest="blend" pixmap="MetrixHD/icons/subtitle_on.png" position="940,694" render="Pixmap" size="30,22" source="session.CurrentService" zPosition="1">
+    <convert type="ServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+
+</skinpartwidget>
