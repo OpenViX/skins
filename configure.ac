@@ -66,6 +66,29 @@ skins/src/plugins/MyMetrix/skintemplates/Makefile
 
 skins/src/skins/Makefile
 skins/src/skins/720/Makefile
+
+skins/src/skins/720/Magic-HD/Makefile
+skins/src/skins/720/Magic-HD/border/Makefile
+skins/src/skins/720/Magic-HD/buttons/Makefile
+skins/src/skins/720/Magic-HD/dvr/Makefile
+skins/src/skins/720/Magic-HD/epg/Makefile
+skins/src/skins/720/Magic-HD/fonts/Makefile
+skins/src/skins/720/Magic-HD/icons/Makefile
+skins/src/skins/720/Magic-HD/infobar/Makefile
+skins/src/skins/720/Magic-HD/window/Makefile
+
+skins/src/skins/720/Magic-SD/Makefile
+skins/src/skins/720/Magic-SD/buttons/Makefile
+skins/src/skins/720/Magic-SD/crossepg/Makefile
+skins/src/skins/720/Magic-SD/dvr/Makefile
+skins/src/skins/720/Magic-SD/epg/Makefile
+skins/src/skins/720/Magic-SD/fonts/Makefile
+skins/src/skins/720/Magic-SD/icons/Makefile
+skins/src/skins/720/Magic-SD/infobar/Makefile
+skins/src/skins/720/Magic-SD/logos/Makefile
+skins/src/skins/720/Magic-SD/piconbg/Makefile
+skins/src/skins/720/Magic-SD/window/Makefile
+
 skins/src/skins/720/MetrixHD/Makefile
 skins/src/skins/720/MetrixHD/buttons/Makefile
 skins/src/skins/720/MetrixHD/buttonsHD/Makefile
@@ -107,6 +130,7 @@ skins/src/skins/720/ViX-Night-HD/menu/Makefile
 
 skins/src/skins/1080
 skins/src/skins/1080/Makefile
+
 skins/src/skins/1080/MetrixFHD/Makefile
 skins/src/skins/1080/MetrixFHD/buttons/Makefile
 skins/src/skins/1080/MetrixFHD/buttonsHD/Makefile
