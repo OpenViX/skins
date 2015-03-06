@@ -211,7 +211,6 @@ src/skins/720/ViX-Night-HD/epg/Makefile
 src/skins/720/ViX-Night-HD/icons/Makefile
 src/skins/720/ViX-Night-HD/menu/Makefile
 
-src/skins/1080
 src/skins/1080/Makefile
 
 src/skins/1080/MetrixFHD/Makefile
