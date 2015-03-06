@@ -1,5 +1,5 @@
 installdir = $(datadir)/enigma2/Magic-HD
 
-SUBDIRS = border buttons dvr epg fonts icons infobar window
+SUBDIRS = border buttons dvr epg fonts icons infobar meta window
 
 dist_install_DATA = *.png *.xml
