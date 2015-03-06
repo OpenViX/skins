@@ -115,7 +115,7 @@ src/skins/720/MetrixHD/buttons/Makefile
 src/skins/720/MetrixHD/buttonsHD/Makefile
 src/skins/720/MetrixHD/colors/Makefile
 src/skins/720/MetrixHD/Default/Makefile
-src/skins/720/MetrixHD/Default/SkinDesign
+src/skins/720/MetrixHD/Default/SkinDesign/Makefile
 src/skins/720/MetrixHD/epg/Makefile
 src/skins/720/MetrixHD/extensions/Makefile
 src/skins/720/MetrixHD/fonts/Makefile
@@ -219,7 +219,7 @@ src/skins/1080/MetrixFHD/buttons/Makefile
 src/skins/1080/MetrixFHD/buttonsHD/Makefile
 src/skins/1080/MetrixFHD/colors/Makefile
 src/skins/1080/MetrixFHD/Default/Makefile
-src/skins/1080/MetrixFHD/Default/SkinDesign
+src/skins/1080/MetrixFHD/Default/SkinDesign/Makefile
 src/skins/1080/MetrixFHD/epg/Makefile
 src/skins/1080/MetrixFHD/extensions/Makefile
 src/skins/1080/MetrixFHD/fonts/Makefile
