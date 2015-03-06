@@ -155,6 +155,35 @@ skins/src/skins/720/Red-HD/screens/Makefile
 skins/src/skins/720/Red-HD/selectionbars/Makefile
 skins/src/skins/720/Red-HD/spinner/Makefile
 
+skins/src/skins/720/ViXBMC_HD-Common/Makefile
+skins/src/skins/720/ViXBMC_HD-Common/busy/Makefile
+skins/src/skins/720/ViXBMC_HD-Common/buttons/Makefile
+skins/src/skins/720/ViXBMC_HD-Common/common_icons/Makefile
+skins/src/skins/720/ViXBMC_HD-Common/fonts/Makefile
+skins/src/skins/720/ViXBMC_HD-Common/icons/Makefile
+skins/src/skins/720/ViXBMC_HD-Common/images/Makefile
+skins/src/skins/720/ViXBMC_HD-Common/menu/Makefile
+
+skins/src/skins/720/ViXBMC_HD-Night/Makefile
+
+skins/src/skins/720/ViXBMC_HD-Slim/Makefile
+
+skins/src/skins/720/ViXBMC_Metropolis/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/border/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/busy/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/buttons/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/buttons_old/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/dvr/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/epg/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/fonts/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/icons/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/infobar/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/logos/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/markus625/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/osd/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/VU/Makefile
+skins/src/skins/720/ViXBMC_Metropolis/window/Makefile
+
 skins/src/skins/720/ViX-Common/Makefile
 skins/src/skins/720/ViX-Common/buttons/Makefile
 
