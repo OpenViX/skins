@@ -4,4 +4,4 @@ SUBDIRS = data email images locale skinparts skintemplates
 
 install_PYTHON = *.py
 
-dist_install_DATA = *.xml *.pyo *.ttf *.png
+dist_install_DATA = *.pyo *.ttf *.png
