@@ -75,6 +75,7 @@ src/skins/720/Blue-HD/extensions/Makefile
 src/skins/720/Blue-HD/fonts/Makefile
 src/skins/720/Blue-HD/icons/Makefile
 src/skins/720/Blue-HD/infobar/Makefile
+src/skins/720/Blue-HD/meta/Makefile
 src/skins/720/Blue-HD/ondemand/Makefile
 src/skins/720/Blue-HD/piconbg/Makefile
 src/skins/720/Blue-HD/screens/Makefile
@@ -88,15 +89,18 @@ src/skins/720/Magic-HD/epg/Makefile
 src/skins/720/Magic-HD/fonts/Makefile
 src/skins/720/Magic-HD/icons/Makefile
 src/skins/720/Magic-HD/infobar/Makefile
+src/skins/720/Magic-HD/meta/Makefile
 src/skins/720/Magic-HD/window/Makefile
 
 src/skins/720/Magic-HD-Night/Makefile
 src/skins/720/Magic-HD-Night/crossepg/Makefile
 src/skins/720/Magic-HD-Night/epg/Makefile
+src/skins/720/Magic-HD-Night/meta/Makefile
 
 src/skins/720/Magic-HD-Noire/Makefile
 src/skins/720/Magic-HD-Noire/crossepg/Makefile
 src/skins/720/Magic-HD-Noire/epg/Makefile
+src/skins/720/Magic-HD-Noire/meta/Makefile
 
 src/skins/720/Magic-SD/Makefile
 src/skins/720/Magic-SD/buttons/Makefile
@@ -107,6 +111,7 @@ src/skins/720/Magic-SD/fonts/Makefile
 src/skins/720/Magic-SD/icons/Makefile
 src/skins/720/Magic-SD/infobar/Makefile
 src/skins/720/Magic-SD/logos/Makefile
+src/skins/720/Magic-SD/meta/Makefile
 src/skins/720/Magic-SD/piconbg/Makefile
 src/skins/720/Magic-SD/window/Makefile
 
@@ -126,6 +131,7 @@ src/skins/720/MetrixHD/iconsHD/Makefile
 src/skins/720/MetrixHD/iconsHD/message/Makefile
 src/skins/720/MetrixHD/iconsHD/picons/Makefile
 src/skins/720/MetrixHD/menu/Makefile
+src/skins/720/MetrixHD/meta/Makefile
 src/skins/720/MetrixHD/mmp/Makefile
 src/skins/720/MetrixHD/skin_default/Makefile
 src/skins/720/MetrixHD/skin_default/buttons/Makefile
@@ -149,6 +155,7 @@ src/skins/720/PLi-Full-HD-Night/epg/Makefile
 src/skins/720/PLi-Full-HD-Night/icons/Makefile
 src/skins/720/PLi-Full-HD-Night/infobar/Makefile
 src/skins/720/PLi-Full-HD-Night/logos/Makefile
+src/skins/720/PLi-Full-HD-Night/meta/Makefile
 src/skins/720/PLi-Full-HD-Night/window/Makefile
 
 src/skins/720/Red-HD/Makefile
@@ -160,6 +167,7 @@ src/skins/720/Red-HD/extensions/Makefile
 src/skins/720/Red-HD/fonts/Makefile
 src/skins/720/Red-HD/icons/Makefile
 src/skins/720/Red-HD/infobar/Makefile
+src/skins/720/Red-HD/meta/Makefile
 src/skins/720/Red-HD/ondemand/Makefile
 src/skins/720/Red-HD/screens/Makefile
 src/skins/720/Red-HD/selectionbars/Makefile
@@ -175,8 +183,10 @@ src/skins/720/ViXBMC_HD-Common/images/Makefile
 src/skins/720/ViXBMC_HD-Common/menu/Makefile
 
 src/skins/720/ViXBMC_HD-Night/Makefile
+src/skins/720/ViXBMC_HD-Night/meta/Makefile
 
 src/skins/720/ViXBMC_HD-Slim/Makefile
+src/skins/720/ViXBMC_HD-Slim/meta/Makefile
 
 src/skins/720/ViXBMC_Metropolis/Makefile
 src/skins/720/ViXBMC_Metropolis/border/Makefile
@@ -190,6 +200,7 @@ src/skins/720/ViXBMC_Metropolis/icons/Makefile
 src/skins/720/ViXBMC_Metropolis/infobar/Makefile
 src/skins/720/ViXBMC_Metropolis/logos/Makefile
 src/skins/720/ViXBMC_Metropolis/markus625/Makefile
+src/skins/720/ViXBMC_Metropolis/meta/Makefile
 src/skins/720/ViXBMC_Metropolis/osd/Makefile
 src/skins/720/ViXBMC_Metropolis/VU/Makefile
 src/skins/720/ViXBMC_Metropolis/window/Makefile
@@ -203,6 +214,7 @@ src/skins/720/ViX-Day-HD/epg/Makefile
 src/skins/720/ViX-Day-HD/icons/Makefile
 src/skins/720/ViX-Day-HD/infobar/Makefile
 src/skins/720/ViX-Day-HD/menu/Makefile
+src/skins/720/ViX-Day-HD/meta/Makefile
 src/skins/720/ViX-Day-HD/screens/Makefile
 
 src/skins/720/ViX-Night-HD/Makefile
@@ -210,6 +222,7 @@ src/skins/720/ViX-Night-HD/crossepg/Makefile
 src/skins/720/ViX-Night-HD/epg/Makefile
 src/skins/720/ViX-Night-HD/icons/Makefile
 src/skins/720/ViX-Night-HD/menu/Makefile
+src/skins/720/ViX-Night-HD/meta/Makefile
 
 src/skins/1080/Makefile
 
@@ -229,6 +242,7 @@ src/skins/1080/MetrixFHD/iconsHD/Makefile
 src/skins/1080/MetrixFHD/iconsHD/message/Makefile
 src/skins/1080/MetrixFHD/iconsHD/picons/Makefile
 src/skins/1080/MetrixFHD/menu/Makefile
+src/skins/1080/MetrixFHD/meta/Makefile
 src/skins/1080/MetrixFHD/mmp/Makefile
 src/skins/1080/MetrixFHD/skin_default/Makefile
 src/skins/1080/MetrixFHD/skin_default/buttons/Makefile
@@ -247,6 +261,7 @@ src/skins/1080/myNOVUM_FHD2/icons/Makefile
 src/skins/1080/myNOVUM_FHD2/images/Makefile
 src/skins/1080/myNOVUM_FHD2/images/pvrstate/Makefile
 src/skins/1080/myNOVUM_FHD2/menu/Makefile
+src/skins/1080/myNOVUM_FHD2/meta/Makefile
 src/skins/1080/myNOVUM_FHD2/mmp/Makefile
 src/skins/1080/myNOVUM_FHD2/skin_default/Makefile
 src/skins/1080/myNOVUM_FHD2/skin_default/buttons/Makefile
@@ -266,6 +281,7 @@ src/skins/1080/myNOVUM_FHD2_Black/icons/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/images/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/images/pvrstate/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/menu/Makefile
+src/skins/1080/myNOVUM_FHD2_Black/meta/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/mmp/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/skin_default/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/skin_default/buttons/Makefile
@@ -285,6 +301,7 @@ src/skins/1080/NOVUM_FHD_Slim/icons/Makefile
 src/skins/1080/NOVUM_FHD_Slim/images/Makefile
 src/skins/1080/NOVUM_FHD_Slim/images/pvrstate/Makefile
 src/skins/1080/NOVUM_FHD_Slim/menu/Makefile
+src/skins/1080/NOVUM_FHD_Slim/meta/Makefile
 src/skins/1080/NOVUM_FHD_Slim/mmp/Makefile
 src/skins/1080/NOVUM_FHD_Slim/skin_default/Makefile
 src/skins/1080/NOVUM_FHD_Slim/skin_default/buttons/Makefile
@@ -303,6 +320,7 @@ src/skins/1080/ViXBMC_1080/icons/Makefile
 src/skins/1080/ViXBMC_1080/imdb/Makefile
 src/skins/1080/ViXBMC_1080/infobar/Makefile
 src/skins/1080/ViXBMC_1080/menuicons/Makefile
+src/skins/1080/ViXBMC_1080/meta/Makefile
 src/skins/1080/ViXBMC_1080/networkbrowser/Makefile
 src/skins/1080/ViXBMC_1080/pvr/Makefile
 src/skins/1080/ViXBMC_1080/screens/Makefile
@@ -319,6 +337,7 @@ src/skins/1080/ViXBMC_1080_Bello/fonts/Makefile
 src/skins/1080/ViXBMC_1080_Bello/icons/Makefile
 src/skins/1080/ViXBMC_1080_Bello/imdb/Makefile
 src/skins/1080/ViXBMC_1080_Bello/infobar/Makefile
+src/skins/1080/ViXBMC_1080_Bello/meta/Makefile
 src/skins/1080/ViXBMC_1080_Bello/networkbrowser/Makefile
 src/skins/1080/ViXBMC_1080_Bello/pvr/Makefile
 src/skins/1080/ViXBMC_1080_Bello/screens/Makefile
@@ -333,6 +352,7 @@ src/skins/1080/YouViX-Blue/epg/Makefile
 src/skins/1080/YouViX-Blue/extensions/Makefile
 src/skins/1080/YouViX-Blue/icons/Makefile
 src/skins/1080/YouViX-Blue/infobar/Makefile
+src/skins/1080/YouViX-Blue/meta/Makefile
 src/skins/1080/YouViX-Blue/networkbrowser/Makefile
 src/skins/1080/YouViX-Blue/screens/Makefile
 src/skins/1080/YouViX-Blue/selectionbars/Makefile
@@ -359,6 +379,7 @@ src/skins/1080/YouViX-Green/epg/Makefile
 src/skins/1080/YouViX-Green/extensions/Makefile
 src/skins/1080/YouViX-Green/icons/Makefile
 src/skins/1080/YouViX-Green/infobar/Makefile
+src/skins/1080/YouViX-Green/meta/Makefile
 src/skins/1080/YouViX-Green/networkbrowser/Makefile
 src/skins/1080/YouViX-Green/screens/Makefile
 src/skins/1080/YouViX-Green/selectionbars/Makefile
@@ -373,6 +394,7 @@ src/skins/1080/YouViX-Purple/epg/Makefile
 src/skins/1080/YouViX-Purple/extensions/Makefile
 src/skins/1080/YouViX-Purple/icons/Makefile
 src/skins/1080/YouViX-Purple/infobar/Makefile
+src/skins/1080/YouViX-Purple/meta/Makefile
 src/skins/1080/YouViX-Purple/networkbrowser/Makefile
 src/skins/1080/YouViX-Purple/screens/Makefile
 src/skins/1080/YouViX-Purple/selectionbars/Makefile
@@ -387,6 +409,7 @@ src/skins/1080/YouViX-Red/epg/Makefile
 src/skins/1080/YouViX-Red/extensions/Makefile
 src/skins/1080/YouViX-Red/icons/Makefile
 src/skins/1080/YouViX-Red/infobar/Makefile
+src/skins/1080/YouViX-Red/meta/Makefile
 src/skins/1080/YouViX-Red/networkbrowser/Makefile
 src/skins/1080/YouViX-Red/screens/Makefile
 src/skins/1080/YouViX-Red/selectionbars/Makefile
