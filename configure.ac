@@ -141,6 +141,16 @@ skins/src/skins/720/MHDC/infobar/Makefile
 skins/src/skins/720/MHDC/logos/Makefile
 skins/src/skins/720/MHDC/window/Makefile
 
+skins/src/skins/720/PLi-Full-HD-Night/Makefile
+skins/src/skins/720/PLi-Full-HD-Night/border/Makefile
+skins/src/skins/720/PLi-Full-HD-Night/buttons/Makefile
+skins/src/skins/720/PLi-Full-HD-Night/dvr/Makefile
+skins/src/skins/720/PLi-Full-HD-Night/epg/Makefile
+skins/src/skins/720/PLi-Full-HD-Night/icons/Makefile
+skins/src/skins/720/PLi-Full-HD-Night/infobar/Makefile
+skins/src/skins/720/PLi-Full-HD-Night/logos/Makefile
+skins/src/skins/720/PLi-Full-HD-Night/window/Makefile
+
 skins/src/skins/720/Red-HD/Makefile
 skins/src/skins/720/Red-HD/buttons/Makefile
 skins/src/skins/720/Red-HD/countries/Makefile
