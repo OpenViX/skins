@@ -1,1 +1,1 @@
-SUBDIRS = converters plugins renderers skins
+SUBDIRS = plugins skins
