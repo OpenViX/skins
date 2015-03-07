@@ -415,4 +415,5 @@ src/skins/1080/YouViX-Red/screens/Makefile
 src/skins/1080/YouViX-Red/selectionbars/Makefile
 src/skins/1080/YouViX-Red/spinner/Makefile
 src/skins/1080/YouViX-Red/vixcore/Makefile
+
 ])
