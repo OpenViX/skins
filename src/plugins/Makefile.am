@@ -1,1 +1,1 @@
-SUBDIRS = MyMetrix
+SUBDIRS = Metrix MyMetrix Novum

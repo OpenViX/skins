@@ -19,12 +19,11 @@ A
 AC_OUTPUT([
 Makefile
 src/Makefile
-
-src/converters/Makefile
-
-src/renderers/Makefile
-
 src/plugins/Makefile
+
+src/plugins/Metrix/Makefile
+src/plugins/Novum/Makefile
+
 src/plugins/MyMetrix/Makefile
 src/plugins/MyMetrix/data/Makefile
 src/plugins/MyMetrix/email/Makefile
