@@ -1,3 +1,3 @@
-installdir = $(datadir)/enigma2/MHDC/dvr
+installdir = $(datadir)/enigma2/MHD-Common/dvr
 
 dist_install_DATA = *.png

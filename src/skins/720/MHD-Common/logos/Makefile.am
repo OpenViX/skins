@@ -1,3 +1,3 @@
-installdir = $(datadir)/enigma2/MHDC/logos
+installdir = $(datadir)/enigma2/MHD-Common/logos
 
 dist_install_DATA = *.png
