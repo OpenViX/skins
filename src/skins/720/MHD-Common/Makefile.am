@@ -1,4 +1,4 @@
-installdir = $(datadir)/enigma2/MHDC
+installdir = $(datadir)/enigma2/MHD-Common
 
 SUBDIRS = border buttons dvr fonts infobar logos window
 

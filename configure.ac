@@ -137,14 +137,14 @@ src/skins/720/MetrixHD/skin_default/buttons/Makefile
 src/skins/720/MetrixHD/skin_default/icons/Makefile
 src/skins/720/MetrixHD/SkinDesign/Makefile
 
-src/skins/720/MHDC/Makefile
-src/skins/720/MHDC/border/Makefile
-src/skins/720/MHDC/buttons/Makefile
-src/skins/720/MHDC/dvr/Makefile
-src/skins/720/MHDC/fonts/Makefile
-src/skins/720/MHDC/infobar/Makefile
-src/skins/720/MHDC/logos/Makefile
-src/skins/720/MHDC/window/Makefile
+src/skins/720/MHD-Common/Makefile
+src/skins/720/MHD-Common/border/Makefile
+src/skins/720/MHD-Common/buttons/Makefile
+src/skins/720/MHD-Common/dvr/Makefile
+src/skins/720/MHD-Common/fonts/Makefile
+src/skins/720/MHD-Common/infobar/Makefile
+src/skins/720/MHD-Common/logos/Makefile
+src/skins/720/MHD-Common/window/Makefile
 
 src/skins/720/PLi-Full-HD-Night/Makefile
 src/skins/720/PLi-Full-HD-Night/border/Makefile
