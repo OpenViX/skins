@@ -1893,6 +1893,21 @@
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 	</screen>
+	<screen name="Dishpip" flags="wfNoBorder" position="0,0" size="400,400" backgroundColor="transparent" zPosition="-1" title="DishPiP">
+		<widget source="Dishpixmap" render="Pixmap" position="35,35" size="195,240" zPosition="1" pixmap="YouViX-Common/icons/dish.png" transparent="1" alphatest="blend">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget name="turnTime" position="105,205" size="120,38" zPosition="1" font="youvix-r;22" halign="left" valign="center" borderWidth="1" borderColor="menubackground" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" />
+		<widget name="From" position="50,235" size="80,38" zPosition="1" font="youvix-r;22" halign="right" valign="center" borderWidth="1" borderColor="menubackground" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
+		<widget name="posFrom" position="132,235" size="105,38" zPosition="1" font="youvix-r;22" halign="left" valign="center" borderWidth="1" borderColor="menubackground" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
+		<widget name="Goto" position="50,262" size="80,38" zPosition="1" font="youvix-r;22" halign="right" valign="center" borderWidth="1" borderColor="menubackground" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
+		<widget name="posGoto" position="132,262" size="105,38" zPosition="1" font="youvix-r;22" halign="left" valign="center" borderWidth="1" borderColor="menubackground" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
+		<widget name="tunerName" position="132,289" size="105,38" zPosition="2" font="youvix-r;22" halign="left" valign="center" borderWidth="1" borderColor="menubackground" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
+		<widget name="turnSpeed" position="132,314" size="180,38" zPosition="2" font="youvix-r;22" halign="left" valign="center" borderWidth="1" borderColor="menubackground" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
+		<widget source="Frontend" render="Progress" position="70,355" size="120,20" pixmap="icons/snr_bar.png" borderWidth="2" borderColor="white" zPosition="2">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+	</screen>
 	
 	<!-- ## Scan IP ## -->
 	<screen name="ScanIP" flags="wfNoBorder" position="fill" backgroundColor="transparent">
