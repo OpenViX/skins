@@ -68,45 +68,78 @@
         <panel name="InfobarTunerStatus"/>  		
 	</screen>
 	<screen name="SecondInfoBar" flags="wfNoBorder" position="fill" backgroundColor="transparent">
-	    <ePixmap pixmap="YouViX-Common/infobar/2ndinfobar.png" position="0,670" size="1920,215" zPosition="-1"/>
-		<widget source="session.CurrentService" render="Label" position="5,675" size="475,30" font="youvix-r;24" foregroundColor="white" backgroundColor="background2" halign="left" valign="center" transparent="1" zPosition="1">
-			<convert type="PliExtraInfo">CryptoSpecial</convert>
+	    <ePixmap pixmap="YouViX-Common/infobar/2ndinfobar1.png" position="0,545" size="1920,330" zPosition="-1"/>
+		<widget source="session.Event_Now" render="Label" position="40,550" size="670,40" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
+			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="5,705" size="475,60" font="youvix-r;24" foregroundColor="white" backgroundColor="background2" halign="left" valign="top" transparent="1" noWrap="1" zPosition="1" >
-			<convert type="CryptoInfo">VerboseInfo</convert>
+		<ePixmap position="75,600" size="600,10" pixmap="selectionbars/activitysliderbackground.png" alphatest="blend" zPosition="1"/>
+		<widget source="session.Event_Now" render="Progress" position="75,600" size="600,10" pixmap="selectionbars/activityslider.png" backgroundColor="background2" transparent="1" alphatest="blend" zPosition="2">
+			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="5,767" size="475,60" font="youvix-r;24" foregroundColor="white" backgroundColor="background2" halign="left" valign="center" transparent="1" zPosition="1">
+		<widget source="session.Event_Now" render="Label" position="40,620" size="670,180" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="40,805" size="670,60" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" halign="center" valign="center" transparent="1" zPosition="1">
 			<convert type="PliExtraInfo">TransponderInfo2line</convert>
 		</widget>
-		<eLabel text="SNR:" position="5,825" size="65,30" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="left" valign="center" noWrap="1" />
-		<widget source="session.FrontendStatus" render="Label" position="70,825" size="100,30" font="youvix-r;24" foregroundColor="white" backgroundColor="background2" halign="left" valign="center" transparent="1" noWrap="1">
+		<widget source="session.Event_Next" render="Label" position="760,550" size="670,40" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="760,590" size="670,153" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="760,755" size="670,60" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" halign="center" valign="center" transparent="1" noWrap="1" zPosition="1" >
+			<convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
+		<ePixmap pixmap="buttons/red.png" position="750,830" size="35,35" alphatest="blend" transparent="1" />
+		<widget name="key_red" position="790,830" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
+		<ePixmap pixmap="buttons/green.png" position="910,830" size="35,35" alphatest="blend" transparent="1" />
+		<widget name="key_green" position="950,830" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
+	    <ePixmap pixmap="buttons/yellow.png" position="1100,830" size="35,35" alphatest="blend" transparent="1" />
+		<widget name="key_yellow" position="1140,830" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
+		<ePixmap pixmap="buttons/blue.png" position="1260,830" size="35,35" alphatest="blend" transparent="1" />
+	    <widget name="key_blue" position="1300,830" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
+		<widget source="session.CurrentService" render="Label" position="1500,550" size="400,35" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" halign="center" valign="center" transparent="1" zPosition="1">
+			<convert type="PliExtraInfo">CryptoSpecial</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Picon" position="1500,585" size="400,240" transparent="0" alphatest="blend" zPosition="2">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<eLabel text="SNR:" position="1520,832" size="65,30" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="left" valign="center" noWrap="1" />
+		<widget source="session.FrontendStatus" render="Label" position="1590,832" size="100,30" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" halign="left" valign="center" transparent="1" noWrap="1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<eLabel text="AGC:" position="180,825" size="70,30" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="left" valign="center" noWrap="1" />
-		<widget source="session.FrontendStatus" render="Label" position="245,825" size="100,30" font="youvix-r;24" foregroundColor="white" backgroundColor="background2" halign="left" valign="center" transparent="1" noWrap="1">
+		<eLabel text="AGC:" position="1750,832" size="70,30" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="left" valign="center" noWrap="1" />
+		<widget source="session.FrontendStatus" render="Label" position="1815,832" size="100,30" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" halign="left" valign="center" transparent="1" noWrap="1">
 			<convert type="FrontendInfo">AGC</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="345,825" size="100,30" font="youvix-r;24" foregroundColor="white" backgroundColor="background2" halign="center" valign="top" transparent="1" >
-			<convert type="PliExtraInfo">OrbitalPosition</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Label" position="507,675" size="670,40" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Label" position="507,720" size="670,123" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
-		<widget source="session.Event_Next" render="Label" position="1230,675" size="670,40" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="session.Event_Next" render="Label" position="1230,720" size="670,123" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
-			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<ePixmap pixmap="infobar/infobar.png" position="0,870" size="1920,215" zPosition="-1"/>
 		<panel name="InfobarClock"/>
-		<widget source="session.CurrentService" render="Label" position="1715,882" size="155,30" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" halign="center" valign="center" transparent="1" zPosition="1">
+		<ePixmap pixmap="infobar/infobar.png" position="0,870" size="1920,215" zPosition="-1"/>
+		<panel name="InfobarClock"/>
+		<panel name="InfobarUpArrow"/>
+		<panel name="InfobarLeftArrow"/>				
+		<panel name="InfobarChannelName"/>
+		<panel name="InfobarProgramNowStartTime"/>
+        <panel name="InfobarProgramNowName"/>
+        <panel name="InfobarProgramNowRemainingTime"/>		
+		<panel name="InfobarNowPlayingIcon"/>
+		<panel name="InfobarRecIcon"/>
+		<panel name="InfobarInfoIcon"/>
+		<panel name="InfobarOnNowIcon"/>
+        <panel name="InfobarStatusIcons"/>
+		<widget source="session.CurrentService" render="Label" position="1720,940" size="155,35" font="youvix-r;28" foregroundColor="white" backgroundColor="background2" halign="center" valign="center" transparent="1" zPosition="1">
 			<convert type="PliExtraInfo">VideoCodec</convert>
 		</widget>
-		<panel name="InfoBar"/>	
+		<widget source="session.CurrentService" render="Label" position="1720,975" size="155,35" font="youvix-r;28" foregroundColor="white" backgroundColor="background2" halign="center" valign="center" transparent="1" >
+			<convert type="PliExtraInfo">OrbitalPositionOrTunerSystem</convert>
+		</widget>
+		<panel name="InfobarRightArrow"/>
+		<panel name="InfobarDownArrow"/>
+		<panel name="InfobarProgramNextStartTime"/>
+		<panel name="InfobarProgramNextName"/>
+		<panel name="InfobarProgramNextDuration"/> 
+        <panel name="InfobarTunerStatus"/> 
 	</screen>
 	<screen name="RadioInfoBar" flags="wfNoBorder" position="fill" backgroundColor="transparent">
 		<panel name="InfoBar"/>
@@ -114,16 +147,6 @@
 	
 	<!-- ## EPG SCREENS ## -->
 	<screen name="QuickEPG" flags="wfNoBorder" position="fill" title="InfoBar" backgroundColor="transparent">
-<!--	    <ePixmap pixmap="YouViX-Common/infobar/2ndinfobar.png" position="490,670" size="1430,215" zPosition="-1"/>
-		<widget source="session.CurrentService" render="Label" position="505,682" size="80,30" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" >
-			<convert type="PliExtraInfo">OrbitalPosition</convert>
-		</widget>
-		<widget source="Event" render="Label" position="607,675" size="740,38" zPosition="1" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" halign="left" valign="center" transparent="1" noWrap="1" >
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="Event" render="Label" position="607,720" size="740,140" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" valign="top" zPosition="2">
-			<convert type="EventName">FullDescription</convert>
-		</widget> -->
 		<ePixmap pixmap="YouViX-Common/infobar/quickepg.png" position="0,870" size="1920,215" zPosition="-1"/>
 		<panel name="InfobarClock"/>
 		<panel name="InfobarUpArrow"/>
@@ -131,7 +154,7 @@
 		<widget source="Service" render="Label" position="55,955" size="525,40" font="youvix-b;34" valign="center" halign="right" noWrap="1" foregroundColor="white" backgroundColor="background2" transparent="1" zPosition="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget name="list" position="592,870" size="1126,210" EventFontInfobar="youvix-r;36" selectionPixmap="selectionbars/quickepg-selection.png" foregroundColor="white" backgroundColor="menubackground"  EntryBackgroundColorNow="menubackground" transparent="1" zPosition="1"/>
+		<widget name="list" position="592,870" size="1126,210" EventFontInfobar="youvix-r;36" selectionPixmap="selectionbars/SelectionBar_H130x1160.png" foregroundColor="white" backgroundColor="menubackground"  EntryBackgroundColorNow="menubackground" transparent="1" zPosition="1"/>
 	    <widget source="Service" render="Picon" position="1720,926" size="155,97" transparent="0" alphatest="blend" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
@@ -193,9 +216,12 @@
 		<panel name="MenuMyGuideText" />
 		<panel name="ChannelSelectionPicon" />
 		<panel name="ChannelSelectionBouquetName" />
-		<widget name="list" position="680,210" size="1160,715" EventFontSingle="youvix-r;32" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H80x1160.png" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
+		<widget name="list" position="680,210" size="1160,665" EventFontSingle="youvix-r;32" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H80x1160.png" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="Event" render="RunningText" position="80,205" size="590,200" font="youvix-r;26" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1">
+			<convert type="TransponderInfo"></convert>
 		</widget>
 		<panel name="MenuMenuButton" />
 		<panel name="MenuInfoButton" />
@@ -232,8 +258,11 @@
 		<widget source="Event" render="RunningText" position="80,205" size="590,200" font="youvix-r;26" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget name="list" position="680,265" size="1160,665" EventFontSingle="youvix-r;32" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H80x1160.png" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="1" />
-		<widget name="bouquetlist" position="680,265" size="1160,654" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H80x1160.png" backgroundColor="menubackground" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
+		<widget name="list" position="680,265" size="1160,615" EventFontSingle="youvix-r;32" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H80x1160.png" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="1" />
+		<widget name="bouquetlist" position="680,265" size="1160,604" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H80x1160.png" backgroundColor="menubackground" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
+		<widget source="Service" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1">
+			<convert type="TransponderInfo"></convert>
+		</widget>
 		<panel name="MenuMenuButton" />
 		<panel name="MenuInfoButton" />
 		<panel name="MenuButtonRed" />
@@ -260,7 +289,7 @@
 		<widget name="lab1" position="center,238" size="1770,550" font="youvix-r;24" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="list" position="center,238" size="1770,550" ServiceFontGraphical="youvix-r;30" EntryFontGraphical="youvix-r;30" EntryFontWrap="no" EventNamePadding="5" backgroundColor="menubackground" ServiceForegroundColor="white" ServiceBackgroundColor="black" ServiceForegroundColorNow="white" ServiceBackgroundColorNow="darkergrey" EntryForegroundColor="white" EntryBackgroundColor="darkgrey" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="darkcolour" EntryForegroundColorNow="white" EntryBackgroundColorNow="darkergrey" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="darkcolour" RecordForegroundColorSelected="white" ZapForegroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="2" />	
 		<widget name="bouquetlist" position="center,238" size="1770,550" itemHeight="50" backgroundColor="menubackground" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
-		<panel name="ChannelSelectionPicon" />
+		<panel name="EPGSelectionPicon" />
 		<widget source="Event" render="Label" position="720,792" size="90,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" noWrap="1" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
@@ -672,7 +701,7 @@
 		<widget source="ServiceEvent" render="RunningText" position="80,498" size="590,150" font="youvix-r;26" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">NextDescription</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="80,668" size="590,35" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" noWrap="1" transparent="1" halign="center" valign="center" zPosition="1">
+		<!-- <widget source="ServiceEvent" render="Label" position="80,668" size="590,35" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" noWrap="1" transparent="1" halign="center" valign="center" zPosition="1">
 			<convert type="EventName">ThirdName</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="270,708" size="90,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="right" valign="center" noWrap="1" zPosition="1">
@@ -683,12 +712,12 @@
 		<widget source="ServiceEvent" render="Label" position="370,708" size="90,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1">
 			<convert type="EventTime">ThirdEndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
-		</widget>
+		</widget> -->
 		<panel name="ChannelSelectionPicon" />
 		<panel name="ChannelSelectionBouquetName" />
 		<widget name="list" position="680,210" size="1160,680" selectionPixmap="selectionbars/SelectionBar_H80x1160.png" backgroundColor="menubackground" foregroundColorEvent="lightcolour" foregroundColorEventSelected="white" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="lightcolour" serviceItemHeight="50" serviceNumberFont="youvix-r;28" serviceNameFont="youvix-r;28" serviceInfoFont="youvix-r;26" progressBarWidth="72" fieldMargins="13" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="ServiceEvent" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1">
-			<convert type="ServiceName">TransponderInfo</convert>
+			<convert type="TransponderInfo"></convert>
 		</widget>
 		<panel name="MenuMenuButton" />
 		<panel name="MenuInfoButton" />
