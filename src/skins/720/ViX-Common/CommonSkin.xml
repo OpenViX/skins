@@ -1,4 +1,4 @@
-<!--  Skin: ViX-Common Vs 3.2.40 by AndyBlac @ www.world-of-satellite.com  -->
+<!--  Skin: ViX-Common Vs 3.2.41 by AndyBlac @ www.world-of-satellite.com  -->
 <!--  This skin is a Freeware. Everyone can modify and use it in other images. , XmlUnboundNsPrefix -->
 <!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!! , XmlUnboundNsPrefix -->
 <!--  Do whatever you want with this skin, but don't tell it's yours, or your idea! , XmlUnboundNsPrefix -->
@@ -1796,45 +1796,52 @@ self.autoResize()
 		<eLabel text="9" position="5,250" size="16,25" font="Regular;21" foregroundColor="black" backgroundColor="transpWhite"/>
 		<widget name="subpages_9" position="35,250" size="36,20" alphatest="on"/>
 	</screen>
-	<screen name="Satfinder" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<widget name="introduction" position="40,663" size="250,25" font="Regular;23" alphatest="blend" transparent="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
-		<ePixmap pixmap="icons/dish_scan.png" position="40,143" zPosition="0" size="119,110" transparent="1" alphatest="on"/>
-		<widget source="Frontend" render="Label" position="235,133" zPosition="2" size="195,20" font="Regular;19" backgroundColor="window-bg" halign="center" valign="center" transparent="0">
-			<convert type="FrontendInfo">SNRdB</convert>
+	<screen name="Satfinder" position="fill" flags="wfNoBorder">
+<!-- ##SNR## -->
+		<eLabel name="snr" position="18,83" size="95,50" transparent="1" text="SNR:" font="Regular;30"/>
+		<widget source="Frontend" render="Progress" position="115,80" size="1000,50" foregroundColor="yellow" borderWidth="2" borderColor="window-fg">
+		<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<eLabel name="snr" text="SNR:" position="170,158" size="60,22" font="Regular;21" halign="right" backgroundColor="window-bg" transparent="0"/>
-		<widget source="Frontend" render="Progress" position="235,158" size="195,20" pixmap="bar_snr.png" borderWidth="2" borderColor="window-fg">
-			<convert type="FrontendInfo">SNR</convert>
+		<widget source="Frontend" render="Label" position="1130,83" size="129,50" backgroundColor="window-bg" transparent="0" font="Regular;35">
+		<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="435,158" size="60,22" font="Regular;21" backgroundColor="window-bg" transparent="0">
-			<convert type="FrontendInfo">SNR</convert>
+		<widget source="Frontend" render="Label" position="0,200" size="531,180" font="LCD;180" halign="center" valign="center" backgroundColor="window-bg" transparent="0">
+		<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
-		<eLabel name="agc" text="AGC:" position="170,183" size="60,22" font="Regular;21" halign="right" backgroundColor="window-bg" transparent="0"/>
-		<widget source="Frontend" render="Progress" position="235,183" size="195,20" pixmap="bar_snr.png" borderWidth="2" borderColor="window-fg">
-			<convert type="FrontendInfo">AGC</convert>
+		<!-- ##AGC## -->
+		<eLabel name="agc" position="18,135" size="95,50" transparent="0" text="AGC:" font="Regular;30"/>
+		<widget source="Frontend" render="Progress" position="115,135" size="1000,50" foregroundColor="yellow" borderWidth="2" borderColor="window-fg">
+		<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="435,183" size="60,22" font="Regular;21" backgroundColor="window-bg" transparent="0">
-			<convert type="FrontendInfo">AGC</convert>
+		<widget source="Frontend" render="Label" position="1130,135" size="130,50" backgroundColor="window-bg" transparent="1" font="Regular;35">
+		<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<eLabel name="ber" text="BER:" position="170,208" size="60,22" font="Regular;21" halign="right" backgroundColor="window-bg" transparent="0"/>
-		<widget source="Frontend" render="Progress" position="235,208" size="195,20" pixmap="bar_ber.png" borderWidth="2" borderColor="window-fg">
-			<convert type="FrontendInfo">BER</convert>
+		<widget source="Frontend" render="Label" position="0,360" size="531,180" backgroundColor="window-bg" transparent="1" font="LCD;180" halign="center" valign="center">
+		<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="435,208" size="60,22" font="Regular;21" backgroundColor="window-bg" transparent="0">
-			<convert type="FrontendInfo">BER</convert>
+		<!-- ##BER## -->
+		<eLabel name="ber" position="18,190" size="95,50" transparent="0" text="BER:" font="Regular;30"/>
+		<widget source="Frontend" render="Progress" position="115,190" size="1000,50" foregroundColor="yellow" borderWidth="2" borderColor="window-fg">
+		<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<eLabel name="lock" text="Lock:" position="170,238" size="60,22" font="Regular;21" backgroundColor="window-bg" halign="right" transparent="0"/>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="235,235" zPosition="1" size="38,31" alphatest="on">
-			<convert type="FrontendInfo">LOCK</convert>
-			<convert type="ConditionalShowHide"/>
+		<widget source="Frontend" render="Label" position="1130,190" size="130,50" backgroundColor="window-bg" transparent="0" font="Regular;35">
+		<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="235,235" zPosition="1" size="38,31" alphatest="on">
-			<convert type="FrontendInfo">LOCK</convert>
-			<convert type="ConditionalShowHide">Invert</convert>
+		<widget source="Frontend" render="Label" position="0,540" size="531,180" font="LCD;180" halign="center" valign="center" backgroundColor="window-bg" transparent="0">
+		<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<eLabel text=" " position="40,275" zPosition="1" size="458,2" backgroundColor="#008c8c8c"/>
-		<widget name="config" position="40,288" transparent="0" backgroundColor="window-bg" size="455,340" scrollbarMode="showOnDemand"/>
+	<!-- ##Lock## -->
+		<eLabel name="lock" position="590,245" size="120,28" foregroundColor="menu-buttons-frgrnd" transparent="1" text="Lock:" font="Regular;24"/>
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="689,244" size="38,31" alphatest="on">
+		<convert type="FrontendInfo">LOCK</convert>
+		<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="689,244" size="38,31" alphatest="on">
+		<convert type="FrontendInfo">LOCK</convert>
+		<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget name="config" position="500,280" size="740,380" transparent="1" itemHeight="40" font="Regular;32" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="introduction" position="535,670" size="320,40" font="Regular;35" foregroundColor="yellow" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="ScanSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
