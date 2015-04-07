@@ -184,7 +184,7 @@
 		<widget name="timeline_now" position="center,820" zPosition="1" size="19,85" pixmap="epg/timeline-now.png" alphatest="blend" />
 		<widget name="bouquetlist" position="center,832" size="1770,120" backgroundColor="menubackground" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
 		<widget name="lab1" position="center,832" size="1770,120" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" zPosition="1" transparent="1" />
-		<widget name="list" position="center,832" size="1770,120" ServiceFontInfobar="youvix-r;30" EventFontInfobar="youvix-r;30" backgroundColor="menubackground"  EntryForegroundColor="grey" EntryBackgroundColor="menubackground" EntryForegroundColorSelected="white" EntryForegroundColorNowSelected="white" RecordForegroundColorSelected="white" ZapForegroundColorSelected="white" scrollbarMode="showNever" zPosition="2" transparent="0" EntryFontWrap="no"/>
+		<widget name="list" position="center,832" size="1770,120" ServiceFontInfobar="youvix-r;30" EventFontInfobar="youvix-r;30" EventNamePadding="10" backgroundColor="menubackground"  EntryForegroundColor="grey" EntryBackgroundColor="menubackground" EntryForegroundColorSelected="white" EntryForegroundColorNowSelected="white" RecordForegroundColorSelected="white" ZapForegroundColorSelected="white" scrollbarMode="showNever" zPosition="2" transparent="0" EntryFontWrap="no"/>
 		<eLabel position="1845,785" size="75,175" backgroundColor="menubackground2" zPosition="-1" />
 		<ePixmap pixmap="icons/arrow-right.png" position="1855,847" size="32,48" zPosition="5"  alphatest="blend" />
 		<ePixmap position="345,966" size="50,32" pixmap="icons/arrow-down.png" alphatest="blend" zPosition="1"/>
@@ -287,26 +287,31 @@
 		<widget name="timeline_text" position="center,203" size="1770,40" itemHeight="40" font="youvix-b;24" valign="center" foregroundColor="white" transparent="1" zPosition="1"/>
 		<widget name="timeline_now" position="center,225" size="19,350" pixmap="epg/timeline-now.png" alphatest="blend" zPosition="2" />
 		<widget name="lab1" position="center,238" size="1770,550" font="youvix-r;24" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
-		<widget name="list" position="center,238" size="1770,550" ServiceFontGraphical="youvix-r;30" EntryFontGraphical="youvix-r;30" EntryFontWrap="no" EventNamePadding="5" backgroundColor="menubackground" ServiceForegroundColor="white" ServiceBackgroundColor="black" ServiceForegroundColorNow="white" ServiceBackgroundColorNow="darkergrey" EntryForegroundColor="white" EntryBackgroundColor="darkgrey" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="darkcolour" EntryForegroundColorNow="white" EntryBackgroundColorNow="darkergrey" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="darkcolour" RecordForegroundColorSelected="white" ZapForegroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="2" />	
+		<widget name="list" position="center,238" size="1770,550" ServiceFontGraphical="youvix-r;30" EntryFontGraphical="youvix-r;30" EntryFontWrap="no" EventNamePadding="10" backgroundColor="menubackground" ServiceForegroundColor="white" ServiceBackgroundColor="black" ServiceForegroundColorNow="white" ServiceBackgroundColorNow="darkergrey" EntryForegroundColor="white" EntryBackgroundColor="darkgrey" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="darkcolour" EntryForegroundColorNow="white" EntryBackgroundColorNow="darkergrey" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="darkcolour" RecordForegroundColorSelected="white" ZapForegroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="2" />	
 		<widget name="bouquetlist" position="center,238" size="1770,550" itemHeight="50" backgroundColor="menubackground" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
 		<panel name="EPGSelectionPicon" />
-		<widget source="Event" render="Label" position="720,792" size="90,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" noWrap="1" transparent="1">
+		<eLabel position="675,930" size="1170,150" backgroundColor="menubackground" zPosition="-1" />
+		<widget source="Event" render="Label" position="700,792" size="90,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" noWrap="1" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="815,792" size="100,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" noWrap="1" transparent="1">
+		<widget source="Event" render="Label" position="795,792" size="100,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" noWrap="1" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="935,792" size="475,35" zPosition="1" font="youvix-r;26" foregroundColor="lightcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" noWrap="1" >
+		<widget source="Event" render="Label" position="915,792" size="575,35" zPosition="1" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" noWrap="1" >
 			<convert type="EventName">Name</convert>
 		</widget>
-		<ePixmap pixmap="YouViX-Common/icons/info.png" position="1630,791" size="35,35" alphatest="blend" transparent="1" />
-		<widget source="Event" render="Label" position="1685,792" font="youvix-r;24" size="120,35" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2" >
+		<ePixmap pixmap="YouViX-Common/icons/info.png" position="1750,791" size="35,35" alphatest="blend" transparent="1" />
+		<ePixmap position="950,850" size="600,10" pixmap="selectionbars/activitysliderbackground.png" alphatest="blend" zPosition="1"/>
+		<widget source="Event" render="Progress" position="950,850" size="600,10" pixmap="selectionbars/activityslider.png" backgroundColor="menubackground" transparent="1" alphatest="blend" zPosition="2">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="Event" render="Label" position="1635,835" font="youvix-r;28" size="150,35" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2" >
 			<convert type="EventTime">Remaining</convert>
             <convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<widget source="Event" render="RunningText" position="730,830" size="1065,88" font="youvix-r;24" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=11000,wrap" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="1">
+		<widget source="Event" render="RunningText" position="730,885" size="1065,180" font="youvix-r;26" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=11000,wrap" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<panel name="MenuMenuButton" />
@@ -845,12 +850,12 @@
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
 		<panel name="MenuMyInfoText" />
-		<widget source="TunerHeader" render="Label" position="900,237" size="628,38" font="youvix-b;26" transparent="0" halign="left" zPosition="1" />
-		<widget source="nims" render="Label" position="900,267" size="628,186" font="youvix-r;24" transparent="0" halign="left" zPosition="1" enableWrapAround="0"/>
-		<widget source="HDDHeader" render="Label" position="900,461" size="628,38" font="youvix-b;26" transparent="0" halign="left" zPosition="1" />
-		<widget source="hdd" render="Label" position="900,489" size="628,120" font="youvix-r;24" transparent="0" halign="left" zPosition="1" enableWrapAround="0"/>
-		<widget source="MountsHeader" render="Label" position="900,630" size="628,38" font="youvix-b;26" transparent="0" halign="left" zPosition="1" />
-		<widget source="mounts" render="Label" position="900,660" size="628,143" font="youvix-r;24" transparent="0" halign="left" zPosition="1" enableWrapAround="0"/>
+		<widget source="TunerHeader" render="Label" position="900,217" size="628,38" font="youvix-b;26" transparent="0" halign="left" zPosition="1" />
+		<widget source="nims" render="Label" position="900,247" size="628,200" font="youvix-r;24" transparent="0" halign="left" zPosition="1" enableWrapAround="0"/>
+		<widget source="HDDHeader" render="Label" position="900,510" size="628,38" font="youvix-b;26" transparent="0" halign="left" zPosition="1" />
+		<widget source="hdd" render="Label" position="900,540" size="628,120" font="youvix-r;24" transparent="0" halign="left" zPosition="1" enableWrapAround="0"/>
+		<widget source="MountsHeader" render="Label" position="900,680" size="628,38" font="youvix-b;26" transparent="0" halign="left" zPosition="1" />
+		<widget source="mounts" render="Label" position="900,710" size="628,143" font="youvix-r;24" transparent="0" halign="left" zPosition="1" enableWrapAround="0"/>
 	</screen>
 	
 	<!-- ## Event View ## -->
