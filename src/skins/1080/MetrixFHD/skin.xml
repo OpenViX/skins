@@ -5152,62 +5152,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			</convert>
     </widget>
     <widget itemHeight="32" name="config" position="1050,645" scrollbarMode="showOnDemand" size="765,240" transparent="1" zPosition="14"/>
-  </screen>
-  <!-- LCD Screens -->
-  <!-- LCD screen (channelselection) -->
-  <screen name="ChannelSelection_summary" position="0,0" size="300,30">
-    <widget font="SetrixHD;30" position="0,0" render="Label" size="300,30" source="parent.ServiceEvent">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-  </screen>
-  <!-- LCD screen (main) -->
-  <screen name="InfoBarSummary" position="0,0" size="300,30">
-    <widget font="SetrixHD;30" position="0,0" render="RollerCharLCD" size="300,30" source="session.CurrentService">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-  </screen>
-  <!-- LCD screen (menus) -->
-  <screen name="MenuSummary" position="0,0" size="300,30">
-    <widget font="SetrixHD;30" position="0,0" render="Label" size="300,30" source="parent.title"/>
-    <widget font="SetrixHD;30" position="0,0" render="Label" size="300,30" source="parent.menu">
-      <convert type="StringListSelection"/>
-    </widget>
-  </screen>
-  <!-- LCD screen (movieplayer) -->
-  <screen name="InfoBarMoviePlayerSummary" position="0,0" size="300,30">
-    <widget font="SetrixHD;30" position="0,0" render="RollerCharLCD" size="300,30" source="session.CurrentService">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-  </screen>
-  <!-- LCD screen (setup) -->
-  <screen name="SetupSummary" position="0,0" size="300,30">
-    <widget font="SetrixHD;30" position="0,0" render="Label" size="300,30" source="SetupTitle"/>
-  </screen>
-  <!-- LCD screen (misc) -->
-  <screen name="SimpleSummary" position="0,0" size="300,30">
-    <widget font="SetrixHD;30" position="0,0" render="RollerCharLCD" size="300,30" source="parent.Title"/>
-  </screen>
-  <!-- LCD screen (dvd player ) -->
-  <screen name="DVDSummary" position="0,0" size="198,96">
-    <widget font="SetrixHD;67" halign="center" position="0,0" render="Label" size="198,96" source="session.CurrentService" valign="top">
-      <convert type="ServicePosition">Remaining</convert>
-    </widget>
-  </screen>
-  <!-- LCD StandBy-Clock -->
-  <screen name="StandbySummary" position="0,0" size="198,96">
-    <widget font="SetrixHD;33" halign="center" position="9,6" render="Label" size="180,36" source="global.CurrentTime" valign="center">
-      <convert type="ClockToText">Format:%H:%M  </convert>
-    </widget>
-    <eLabel backgroundColor="metrixForeground" position="0,42" size="198,1"/>
-    <widget font="SetrixHD;42" halign="center" position="9,48" render="Label" size="180,48" source="global.CurrentTime" valign="center">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <widget position="0,0" render="FixedLabel" size="300,30" source="session.RecordState" text=" REC " zPosition="1">
-      <convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
-  </screen>
-  
+  </screen>  
   <screen backgroundColor="transparent" flags="wfNoBorder" name="VTIMainMenu" position="0,0" size="2101,1081" title="VTI Panel">
     <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="0,0" size="1921,75" zPosition="-11"/>
     <ePixmap alphatest="blend" pixmap="MetrixFHD/menu/vti.png" position="340,208" size="495,306"/>
