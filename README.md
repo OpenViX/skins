@@ -1,4 +1,4 @@
-enigma2-display-skins
+enigma2-skins-openvix
 =====================
 
-This git contains skins for the STB display (VFD/LCD)
+This git contains skins for the STB GUI.
