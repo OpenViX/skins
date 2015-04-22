@@ -27,27 +27,34 @@
 	
 	<!-- ## FULLSCREEN TEMPLATES ## -->
 	<screen name="FullScreenTimeDate">
-		<widget source="global.CurrentTime" render="Label" position="1037,0" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
+		<widget source="global.CurrentTime" render="Label" position="1047,5" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
 			<convert type="ClockToText">Format:%A,%e %B %Y</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1735,0" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
+		<widget source="global.CurrentTime" render="Label" position="1755,5" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 	</screen>
-	<screen name="FullScreenEPGButton">
-		<ePixmap pixmap="buttons/key_epg.png" position="1630,64" size="67,48" alphatest="blend" zPosition="2"/>
-	</screen>
-	<screen name="FullScreenTextButton">
-		<ePixmap pixmap="buttons/key_text.png" position="1700,64" size="67,48" alphatest="blend" zPosition="2"/>
-	</screen>
-	<screen name="FullScreenInfoButton">
-		<ePixmap pixmap="buttons/key_info.png" position="1770,64" size="67,48" alphatest="blend" zPosition="2"/>
+	<screen name="FullscreenPIGPanel">
+		<widget source="session.CurrentService" render="Label" position="1007,90" size="835,50" font="screentitle;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" borderWidth="2" zPosition="5">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<eLabel position="1005,90" size="834,483" foregroundColor="window-bg" backgroundColor="maincolour" zPosition="3" />
+		<widget source="session.VideoPicture" render="Pig" position="1006,91" size="832,481" backgroundColor="#ff000000" zPosition="4" />
 	</screen>
 	<screen name="FullScreenMenuButton">
-		<ePixmap pixmap="buttons/key_menu.png" position="1840,64" size="67,48" alphatest="blend" zPosition="2"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="1780,895" size="67,48" alphatest="blend" zPosition="3"/>
+	</screen>
+	<screen name="FullScreenInfoButton">
+		<ePixmap pixmap="buttons/key_info.png" position="1710,895" size="67,48" alphatest="blend" zPosition="3"/>
+	</screen>
+	<screen name="FullScreenEPGButton">
+		<ePixmap pixmap="buttons/key_epg.png" position="1640,895" size="67,48" alphatest="blend" zPosition="3"/>
+	</screen>
+	<screen name="FullScreenTextButton">
+		<ePixmap pixmap="buttons/key_text.png" position="1570,895" size="67,48" alphatest="blend" zPosition="3"/>
 	</screen>
 	<screen name="FullScreenTitle">
-		<widget source="Title" render="Label" position="10,63" size="1500,55" font="screentitle;44" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="3" />
+		<widget source="Title" render="Label" position="25,20" size="850,55" font="screentitle;40" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="3" />
 	</screen>
 	<screen name="FullScreenRedButton">
 		<widget name="key_red" position="0,1020" size="480,60" font="buttons;40" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
@@ -84,8 +91,14 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
+	<screen name="InfobarEncryptedIcon">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/encrypted.png" position="490,802" size="50,50" alphatest="blend" zPosition="2">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
 	<screen name="InfobarChannelName">
-		<widget source="session.CurrentService" render="Label" position="500,790" size="750,55" font="infobar2;44" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+		<widget source="session.CurrentService" render="Label" position="550,797" size="750,55" font="infobar2;44" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
@@ -103,7 +116,7 @@
 		</widget>
 	</screen>
 	<screen name="InfobarPicon">
-		<widget source="session.CurrentService" render="Picon" position="50,805" size="400,240" alphatest="blend" zPosition="2">
+		<widget source="session.CurrentService" render="Picon" position="50,810" size="400,240" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 	</screen>
@@ -113,14 +126,8 @@
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 	</screen>
-	<screen name="InfobarEncryptedIcon">
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/encrypted.png" position="642,865" size="50,50" alphatest="blend" zPosition="2">
-			<convert type="ServiceInfo">IsCrypted</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-	</screen>
 	<screen name="InfobarProgramNowName">
-		<widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="710,850" size="1100,75" font="infobar2;54" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+		<widget source="session.Event_Now" render="Label" position="670,850" size="1100,75" font="infobar2;54" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
 			<convert type="EventName">Name</convert>
 		</widget>
 	</screen>
