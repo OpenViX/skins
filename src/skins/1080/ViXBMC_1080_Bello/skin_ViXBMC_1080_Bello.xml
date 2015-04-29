@@ -693,10 +693,9 @@
 		<panel name="FullScreenBlueButton" />
 	</screen>
 	<screen name="GraphicalEPG" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" >
-		<ePixmap pixmap="infobar/bellobackground3.png" position="0,0" size="1920,1080" alphatest="on" zPosition="1"/>
+		<ePixmap pixmap="infobar/epgbackground.png" position="0,0" size="1920,1080" alphatest="on" zPosition="1"/>
 		<panel name="FullScreenTimeDate" />
 		<panel name="FullScreenTitle" />
-		<ePixmap pixmap="infobar/epg.png" position="0,55" size="1920,440" alphatest="blend" zPosition="1"/>
 		<widget source="Event" render="Label" position="22,90" size="130,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" noWrap="1" transparent="1" zPosition="2">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
@@ -734,7 +733,6 @@
 		<ePixmap pixmap="infobar/epgbackground.png" position="0,0" size="1920,1080" alphatest="on" zPosition="1"/>
 		<panel name="FullScreenTimeDate" />
 		<panel name="FullScreenTitle" />
-		<ePixmap pixmap="infobar/epg.png" position="0,55" size="1920,440" alphatest="blend" zPosition="1"/>
 		<widget source="session.CurrentService" render="Label" position="1247,91" size="640,50" font="menulist;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" borderWidth="2" zPosition="4">
 			<convert type="ServiceName">Name</convert>
 		</widget>
