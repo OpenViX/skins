@@ -11,21 +11,30 @@
 	<screen name="DownloadBar">
 		<ePixmap position="center,0" size="900,150" pixmap="infobar/downloadbar.png" alphatest="blend" zPosition="1"/>
 		<ePixmap position="560,28" size="214,48" pixmap="icons/downloading.png" alphatest="blend" zPosition="2"/>
-		<widget name="action" position="810,10" size="660,50" font="menulist;36" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
-		<widget name="status" position="810,58" size="660,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="action" position="810,10" size="660,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="status" position="810,58" size="660,50" font="menulist;30" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<widget name="progress" position="center,115" size="860,10" foregroundColor="thirdcolour" transparent="1" zPosition="2"/>
 	</screen>
 	
 	<!-- ## FEEDS STATUS TEMPLATE ## -->
 	<screen name="FeedsStatus">
-		<widget name="tl_off" pixmap="icons/tl_off.png" position="820,600" size="300,100" alphatest="blend" zPosition="3" />
-		<widget name="tl_red" pixmap="icons/tl_red.png" position="820,600" size="300,100" alphatest="blend" zPosition="3" />
-		<widget name="tl_yellow" pixmap="icons/tl_yellow.png" position="820,600" size="300,100" alphatest="blend" zPosition="3" />
-		<widget name="tl_green" pixmap="icons/tl_green.png" position="820,600" size="300,100" alphatest="blend" zPosition="3" />
-		<widget name="feedStatusMSG" render="Label" position="720,700" size="500,40" font="screentitle;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<widget name="tl_off" pixmap="icons/tl_off.png" position="1280,630" size="300,100" alphatest="blend" zPosition="2" />
+		<widget name="tl_red" pixmap="icons/tl_red.png" position="1280,630" size="300,100" alphatest="blend" zPosition="2" />
+		<widget name="tl_yellow" pixmap="icons/tl_yellow.png" position="1280,630" size="300,100" alphatest="blend" zPosition="2" />
+		<widget name="tl_green" pixmap="icons/tl_green.png" position="1280,630" size="300,100" alphatest="blend" zPosition="2" />
+		<widget name="feedStatusMSG" render="Label" position="995,740" size="855,50" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 	</screen>
 	
 	<!-- ## FULLSCREEN TEMPLATES ## -->
+	<screen name="FullScreenTemplate">
+		<ePixmap pixmap="infobar/background.png" position="fill" alphatest="on" zPosition="-1"/>
+		<panel name="FullScreenTitle" />
+		<panel name="FullScreenTimeDate" />
+		<panel name="FullscreenPIGPanel" />
+	</screen>
+	<screen name="FullScreenTitle">
+		<widget source="Title" render="Label" position="25,20" size="850,55" font="screentitle;40" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="3" />
+	</screen>
 	<screen name="FullScreenTimeDate">
 		<widget source="global.CurrentTime" render="Label" position="1047,5" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
 			<convert type="ClockToText">Format:%A,%e %B %Y</convert>
@@ -35,11 +44,56 @@
 		</widget>
 	</screen>
 	<screen name="FullscreenPIGPanel">
-		<widget source="session.CurrentService" render="Label" position="1007,90" size="835,50" font="screentitle;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" borderWidth="2" zPosition="5">
+		<widget source="session.CurrentService" render="Label" position="1007,90" size="834,50" font="screentitle;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" borderWidth="2" zPosition="4">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<eLabel position="1005,90" size="834,483" foregroundColor="window-bg" backgroundColor="maincolour" zPosition="3" />
-		<widget source="session.VideoPicture" render="Pig" position="1006,91" size="832,481" backgroundColor="#ff000000" zPosition="4" />
+		<eLabel position="1005,90" size="834,483" foregroundColor="window-bg" backgroundColor="maincolour" zPosition="2" />
+		<widget source="session.VideoPicture" render="Pig" position="1006,91" size="832,481" backgroundColor="#ff000000" zPosition="3" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/dolbyprologic.png" position="1520,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">IsStereo</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/dolbydigital.png" position="1520,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/h264.png" position="1600,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/mpeg2.png" position="1600,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">IsSD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/169.png" position="1680,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/43.png" position="1680,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">IsNotWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/1080.png" position="1760,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">Is1080</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/720.png" position="1760,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">Is720</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/576.png" position="1760,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">Is576</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/540.png" position="1760,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">VideoWidth</convert>
+			<convert type="ValueRange">500,574</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/480.png" position="1760,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">Is480</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
 	</screen>
 	<screen name="FullScreenMenuButton">
 		<ePixmap pixmap="buttons/key_menu.png" position="1780,895" size="67,48" alphatest="blend" zPosition="3"/>
@@ -53,33 +107,90 @@
 	<screen name="FullScreenTextButton">
 		<ePixmap pixmap="buttons/key_text.png" position="1570,895" size="67,48" alphatest="blend" zPosition="3"/>
 	</screen>
-	<screen name="FullScreenTitle">
-		<widget source="Title" render="Label" position="25,20" size="850,55" font="screentitle;40" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="3" />
+	<screen name="FullScreenTextButtonVKey">
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1570,895" size="67,48" alphatest="blend" transparent="1" zPosition="3" >
+			<convert type="ConditionalShowHide" />
+		</widget> 
+	</screen>
+	<screen name="FullScreenConfigWidget">
+		<widget name="config" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
+	</screen>
+	<screen name="FullScreenListWidget">
+		<widget name="list" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
+	</screen>
+	<screen name="FullScreenList75Widget">
+		<widget name="list" position="22,90" size="850,825" font="menulist;34" itemHeight="75" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
+	</screen>
+	<screen name="FullScreenMenuWidget">
+		<widget name="menu" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
+	</screen>
+	<screen name="FullScreenAboutWidget">
+		<widget name="about" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"/>
+	</screen>
+	<screen name="FullScreenTextWidget">
+		<widget name="text" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
+	</screen>
+	<screen name="FullScreenInfoTextWidget">
+		<widget name="infotext" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
+	</screen>
+	<screen name="FullScreenInfoListWidget">
+		<widget name="infolist" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" selectionDisabled="1" zPosition="3"/>
+	</screen>
+	<screen name="FullScreenPleaseWaitWidget">
+		<widget name="pleasewait" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" selectionDisabled="1" zPosition="3" />
+	</screen>
+	<screen name="FullScreenDescriptionWidget">
+		<widget name="description" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+	</screen>
+	<screen name="FullScreenStatusWidget">
+		<widget source="status" render="Label" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+	</screen>
+	<screen name="FullScreenIntroductionWidget">
+		<widget source="introduction" render="Label" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+	</screen>
+	<screen name="FullScreenInformationWidget">
+		<widget name="information" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+	</screen>
+	<screen name="FullScreenFooterWidget">
+		<widget name="footer" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+	</screen>
+	<screen name="FullScreenHelpWidget">
+		<widget source="help" render="Label" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+	</screen>
+	<screen name="FullScreenInfoWidget">
+		<widget name="info" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+	</screen>
+	<screen name="FullScreenFootnoteWidget">
+		<widget name="footnote" position="570,950" size="300,50" font="screentitle;28" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="3" />
+	</screen>
+	<screen name="FullScreenHelpwindowWidget">
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="1220,750" size="541,720" backgroundColor="menubackground" transparent="0" alphatest="blend" zPosition="3" />	
 	</screen>
 	<screen name="FullScreenRedButton">
-		<widget name="key_red" position="0,1020" size="480,60" font="buttons;40" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_red" position="0,1020" size="480,60" font="menulist;40" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="FullScreenGreenButton">
-		<widget name="key_green" position="480,1020" size="480,60" font="buttons;40" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_green" position="480,1020" size="480,60" font="menulist;40" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="FullScreenYellowButton">
-		<widget name="key_yellow" position="960,1020" size="480,60" font="buttons;40" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_yellow" position="960,1020" size="480,60" font="menulist;40" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="FullScreenBlueButton">
-		<widget name="key_blue" position="1440,1020" size="480,60" font="buttons;40" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_blue" position="1440,1020" size="480,60" font="menulist;40" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="FullScreenRedButtonSource">
-		<widget source="key_red" render="Label" position="0,1020" size="480,60" font="buttons;40" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_red" render="Label" position="0,1020" size="480,60" font="menulist;40" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="FullScreenGreenButtonSource">
-		<widget source="key_green" render="Label" position="480,1020" size="480,60" font="buttons;40" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_green" render="Label" position="480,1020" size="480,60" font="menulist;40" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="FullScreenYellowButtonSource">
-		<widget source="key_yellow" render="Label" position="960,1020" size="480,60" font="buttons;40" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_yellow" render="Label" position="960,1020" size="480,60" font="menulist;40" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="FullScreenBlueButtonSource">
-		<widget source="key_blue" render="Label" position="1440,1020" size="480,60" font="buttons;40" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_blue" render="Label" position="1440,1020" size="480,60" font="menulist;40" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
+	
 	
 	<!-- ## INFOBAR TEMPLATES ## -->
 	<screen name="InfobarUpdateIcon">
@@ -138,22 +249,22 @@
 		</widget>
 	</screen>
 	<screen name="InfobarNextText">
-		<eLabel text="Next" position="490,945" size="120,60" font="infobar;44" foregroundColor="grey" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
-		<eLabel text="@" position="585,943" size="50,60" font="infobar;46" foregroundColor="grey" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+		<eLabel text="Next" position="490,945" size="120,60" font="infobar2;44" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<eLabel text="@" position="585,943" size="50,60" font="infobar2;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
 	</screen>
 	<screen name="InfobarProgramNextStartTime">
-		<widget source="session.Event_Next" render="Label" position="655,945" size="120,60" font="infobar;44" foregroundColor="grey" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+		<widget source="session.Event_Next" render="Label" position="645,945" size="120,60" font="infobar2;44" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 	</screen>
 	<screen name="InfobarProgramNextName">
-		<widget source="session.Event_Next" render="Label" position="790,945" size="900,60" font="infobar;44" foregroundColor="grey" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+		<widget source="session.Event_Next" render="Label" position="790,945" size="900,60" font="infobar2;44" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
 			<convert type="EventName">Name</convert>
 		</widget>
 	</screen>
 	<screen name="InfobarProgramNextDuration">
-		<widget source="session.Event_Next" render="Label" position="1630,945" size="200,60" font="infobar;44" foregroundColor="grey" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="1" zPosition="2">
+		<widget source="session.Event_Next" render="Label" position="1630,945" size="200,60" font="infobar2;44" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="1" zPosition="2">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
@@ -215,7 +326,7 @@
 	<!-- ## SETUP MENU TEMPLATES ## -->
 	<screen name="SetupMenuPanel">
 		<eLabel position="410,69" size="966,60" backgroundColor="menubackground" zPosition="1" />
-		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
+		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
 			<convert type="ClockToText">Format:%A,%e %B %Y</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1380,69" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
@@ -251,16 +362,16 @@
 		</widget>
 	</screen>
 	<screen name="SetupMenuRedButtonSource">
-		<widget source="key_red" render="Label" position="420,966" size="270,60" font="buttons;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_red" render="Label" position="420,966" size="270,60" font="menulist;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuGreenButtonSource">
-		<widget source="key_green" render="Label" position="690,966" size="270,60" font="buttons;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_green" render="Label" position="690,966" size="270,60" font="menulist;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuYellowButtonSource">
-		<widget source="key_yellow" render="Label" position="960,966" size="270,60" font="buttons;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_yellow" render="Label" position="960,966" size="270,60" font="menulist;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuBlueButtonSource">
-		<widget source="key_blue" render="Label" position="1230,966" size="270,60" font="buttons;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_blue" render="Label" position="1230,966" size="270,60" font="menulist;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuConfigWidget">
 		<widget name="config" position="420,210" size="1080,540" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
@@ -289,7 +400,7 @@
 	
 	<screen name="SetupMenuPanel2">
 		<ePixmap pixmap="infobar/menubackground2.png" position="387,45" size="1146,1016" alphatest="blend" zPosition="-1"/>
-		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
+		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
 			<convert type="ClockToText">Format:%A,%e %B %Y</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1380,69" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
@@ -298,33 +409,33 @@
 		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="420,129" size="900,60" font="screentitle;46" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 	</screen>
 	<screen name="SetupMenuRedButton2">
-		<widget name="key_red" position="420,963" size="270,60" font="buttons;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_red" position="420,963" size="270,60" font="menulist;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuGreenButton2">
-		<widget name="key_green" position="690,963" size="270,60" font="buttons;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_green" position="690,963" size="270,60" font="menulist;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuYellowButton2">
-		<widget name="key_yellow" position="960,963" size="270,60" font="buttons;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_yellow" position="960,963" size="270,60" font="menulist;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuBlueButton2">
-		<widget name="key_blue" position="1230,963" size="270,60" font="buttons;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_blue" position="1230,963" size="270,60" font="menulist;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuRedButtonSource2">
-		<widget source="key_red" render="Label" position="420,963" size="270,60" font="buttons;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_red" render="Label" position="420,963" size="270,60" font="menulist;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuGreenButtonSource2">
-		<widget source="key_green" render="Label" position="690,963" size="270,60" font="buttons;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_green" render="Label" position="690,963" size="270,60" font="menulist;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuYellowButtonSource2">
-		<widget source="key_yellow" render="Label" position="960,963" size="270,60" font="buttons;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_yellow" render="Label" position="960,963" size="270,60" font="menulist;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuBlueButtonSource2">
-		<widget source="key_blue" render="Label" position="1230,963" size="270,60" font="buttons;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_blue" render="Label" position="1230,963" size="270,60" font="menulist;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	
 	<screen name="SetupMenuPanel3">
 		<ePixmap pixmap="infobar/menubackground2.png" position="387,45" size="1146,1016" alphatest="blend" zPosition="-1"/>
-		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
+		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
 			<convert type="ClockToText">Format:%A,%e %B %Y</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1380,69" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
@@ -365,18 +476,18 @@
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11" />
 	</screen>
 	<screen name="WizardDescriptionWidget">
-		<widget name="text" position="420,210" size="1080,180" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<widget name="text" position="22,90" size="850,200" font="menulist;34" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 	</screen>
 	<screen name="WizardConfigWidget">
-		<widget name="config" position="420,400" size="1080,500" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
+		<widget name="config" position="22,300" size="850,500" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
 	</screen>
 	<screen name="WizardStringList">
-		<widget source="list" render="Listbox" position="420,400" size="1080,500" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="22,300" size="850,500" font="menulist;40" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
 	</screen>
 	<screen name="WizardRedButton">
-		<widget name="languagetext" render="Label" position="420,963" size="270,60" font="buttons;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="languagetext" render="Label" position="0,1020" size="480,60" font="menulist;40" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	
 </skin>
