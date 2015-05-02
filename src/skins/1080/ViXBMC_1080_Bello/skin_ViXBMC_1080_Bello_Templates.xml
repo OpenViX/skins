@@ -33,7 +33,7 @@
 		<panel name="FullscreenPIGPanel" />
 	</screen>
 	<screen name="FullScreenTitle">
-		<widget source="Title" render="Label" position="25,20" size="850,55" font="screentitle;40" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="3" />
+		<widget source="Title" render="Label" position="25,20" size="850,50" font="screentitle;40" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="3" />
 	</screen>
 	<screen name="FullScreenTimeDate">
 		<widget source="global.CurrentTime" render="Label" position="1047,5" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
@@ -270,12 +270,17 @@
 		</widget>
 	</screen>
 	<screen name="InfobarRecIcon">
-	    <!-- <ePixmap pixmap="icons/recording.png" position="1401,1020" size="109,30" alphatest="blend" zPosition="2"/> -->
-		<widget source="session.RecordState" render="Pixmap" pixmap="icons/recording.png" position="1401,1020" size="109,30" backgroundColor="menubackground" alphatest="blend" zPosition="2">
+	    <!-- <ePixmap pixmap="icons/recording.png" position="1321,1020" size="109,30" alphatest="blend" zPosition="2"/> -->
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/recording.png" position="1321,1020" size="109,30" backgroundColor="menubackground" alphatest="blend" zPosition="2">
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
 	<screen name="InfobarStatusIcons">
+		<!-- <ePixmap pixmap="icons/hbbtv.png" position="1440,1020" size="103,40" zPosition="1" alphatest="blend" /> -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hbbtv.png" position="1440,1020" size="70,30" alphatest="blend" zPosition="2">
+			<convert type="ServiceInfo">HasHBBTV</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/dolbyprologic.png" position="1520,1020" size="70,30" alphatest="blend" zPosition="2">
 			<convert type="ServiceInfo">IsStereo</convert>
 			<convert type="ConditionalShowHide" />
