@@ -332,7 +332,6 @@ src/skins/1080/ViXBMC_1080_Bello/countries/Makefile
 src/skins/1080/ViXBMC_1080_Bello/crossepg/Makefile
 src/skins/1080/ViXBMC_1080_Bello/epg/Makefile
 src/skins/1080/ViXBMC_1080_Bello/extensions/Makefile
-src/skins/1080/ViXBMC_1080_Bello/fonts/Makefile
 src/skins/1080/ViXBMC_1080_Bello/icons/Makefile
 src/skins/1080/ViXBMC_1080_Bello/imdb/Makefile
 src/skins/1080/ViXBMC_1080_Bello/infobar/Makefile
@@ -342,6 +341,9 @@ src/skins/1080/ViXBMC_1080_Bello/pvr/Makefile
 src/skins/1080/ViXBMC_1080_Bello/screens/Makefile
 src/skins/1080/ViXBMC_1080_Bello/spinner/Makefile
 src/skins/1080/ViXBMC_1080_Bello/vixcore/Makefile
+
+src/skins/1080/ViXBMC_1080_Common/Makefile
+src/skins/1080/ViXBMC_1080_Common/fonts/Makefile
 
 src/skins/1080/YouViX-Blue/Makefile
 src/skins/1080/YouViX-Blue/buttons/Makefile

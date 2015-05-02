@@ -1,1 +1,1 @@
-SUBDIRS = MetrixFHD myNOVUM_FHD2 myNOVUM_FHD2_Black NOVUM_FHD_Slim ViXBMC_1080 ViXBMC_1080_Bello YouViX-Blue YouViX-Common YouViX-Green YouViX-Purple YouViX-Red
+SUBDIRS = MetrixFHD myNOVUM_FHD2 myNOVUM_FHD2_Black NOVUM_FHD_Slim ViXBMC_1080 ViXBMC_1080_Bello ViXBMC_1080_Common YouViX-Blue YouViX-Common YouViX-Green YouViX-Purple YouViX-Red
