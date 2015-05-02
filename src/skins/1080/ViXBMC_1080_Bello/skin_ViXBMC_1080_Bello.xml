@@ -838,6 +838,21 @@
 		<widget name="ok" position="480,1020" size="480,60" font="menulist;40" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	
+	<!-- ## FIRMWARE UPGRADE ## -->
+	<screen name="FirmwareUpgrade" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Firmware Upgrade">
+		<panel name="FullScreenTemplate" />
+		<panel name="FullScreenConfigWidget" />
+		<widget source="status" render="Label" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
+		<panel name="FullScreenRedButtonSource" />
+		<panel name="FullScreenGreenButtonSource" />
+	</screen>
+	<screen name="FUFilebrowser" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="FullScreenTemplate" />
+		<widget name="file_list" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />		
+		<widget source="status" render="Label" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<panel name="FullScreenBlueButtonSource" />
+	</screen>
+	
 	<!-- ## FPGA UPDATE ## -->
 	<screen name="FPGAUpgrade" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -849,7 +864,7 @@
 		<panel name="FullScreenBlueButtonSource" />
 	</screen>
 	
-	<!-- ## Gigablue LED Setup ## -->
+	<!-- ## GIGABLUE LED SETUP ## -->
 	<screen name="LED_GigaSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Giga LED Setup" >
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
