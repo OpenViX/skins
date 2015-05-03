@@ -34,8 +34,8 @@
 		<widget source="session.Event_Now" render="Label" position="30,180" size="900,370" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<eLabel text="CAM" position="60,610" size="150,60" font="screentitle;56" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
-		<widget source="session.CurrentService" render="Label" position="220,600" size="660,90" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2" >
+		<eLabel text="CAM" position="60,620" size="150,60" font="screentitle;56" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget source="session.CurrentService" render="Label" position="220,605" size="660,90" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2" >
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
 		<ePixmap pixmap="infobar/2ndinfobar.png" position="960,0" size="960,754" alphatest="blend" zPosition="1"/>
@@ -46,9 +46,12 @@
 		<widget source="session.Event_Next" render="Label" position="990,180" size="900,370" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<eLabel text="FREQ" position="1080,610" size="160,70" font="screentitle;56" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
-		<widget source="session.CurrentService" render="Label" position="1250,600" size="600,90" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+		<eLabel text="TP" position="1050,622" size="100,70" font="screentitle;56" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget source="session.CurrentService" render="Label" position="1160,582" size="660,90" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
 			<convert type="PliExtraInfo">TransponderInfo2line</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1160,672" size="660,50" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2">
+			<convert type="PliExtraInfo">CryptoSpecial</convert>
 		</widget>
 		<ePixmap pixmap="infobar/infobar.png" position="0,780" size="1920,300" alphatest="blend" zPosition="1"/>
 		<panel name="InfobarChannelName" />
@@ -396,8 +399,7 @@
 		<panel name="FullScreenInfoButton" />
 		<panel name="FullScreenMenuButton" />
 		<widget name="list" position="22,90" size="850,850" backgroundColor="menubackground" foregroundColorEvent="secondcolour" foregroundColorEventSelected="maincolour" foregroundColorServiceNotAvail="grey" foregroundColorMarked="maincolour" foregroundColorMarkedSelected="red" backgroundColorMarked="maincolour" backgroundColorMarkedSelected="maincolour" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30" serviceInfoFont="channelselectionevent;28" progressBarWidth="72" fieldMargins="13" transparent="1" scrollbarMode="showOnDemand" zPosition="3" />
-		<eLabel text="FREQ" position="22,945" size="160,60" font="screentitle;40" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
-		<widget source="ServiceEvent" render="Label" position="140,944" size="770,60" font="infobar2;34" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
+		<widget source="ServiceEvent" render="Label" position="22,944" size="850,50" font="infobar2;34" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="995,570" size="855,50" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" noWrap="1" transparent="1" halign="center" valign="center" zPosition="3">
@@ -650,8 +652,7 @@
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenMenuButton" />
 		<widget name="list" position="22,90" size="850,850" EventFontSingle="infobar2;32" itemHeight="50" transparent="1" scrollbarMode="showOnDemand" zPosition="3" />
-		<eLabel text="FREQ" position="22,945" size="160,60" font="screentitle;40" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
-		<widget source="Service" render="Label" position="140,944" size="770,60" font="infobar2;34" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
+		<widget source="Service" render="Label" position="22,944" size="850,50" font="infobar2;34" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="1005,600" size="835,250" font="infobar2;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="3">
@@ -668,8 +669,7 @@
 		<panel name="FullScreenInfoButton" />
 		<widget name="list" position="22,90" size="850,850" EventFontSingle="infobar2;32" itemHeight="50" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="3" />
 		<widget name="bouquetlist" position="10,140" size="940,800" itemHeight="50" backgroundColor="menubackground" foregroundColorSelected="maincolour" scrollbarMode="showNever" transparent="0" zPosition="5" />
-		<eLabel text="FREQ" position="22,945" size="160,60" font="screentitle;40" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
-		<widget source="Service" render="Label" position="140,944" size="770,60" font="infobar2;34" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
+		<widget source="Service" render="Label" position="22,944" size="850,50" font="infobar2;34" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget name="date" position="1005,570" size="835,50" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="3" />
