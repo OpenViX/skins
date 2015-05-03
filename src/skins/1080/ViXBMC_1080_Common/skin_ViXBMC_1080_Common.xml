@@ -1,5 +1,5 @@
 <skin>
-	<!--  Skin: ViXBMC_1080_Bello by rossi2000 (based on ViXBMC_1080 by rossi2000)  -->
+	<!--  Skin: ViXBMC_1080_Common by rossi2000 -->
 	<!--  SKIN FILE -->
 	<!--  This skin is OpenSource. Anyone can modify it and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
@@ -625,21 +625,22 @@
 		<widget name="list" position="610,865" size="1130,140" EventFontInfobar="infobar2;36" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" EntryBackgroundColorNow="menubackground" transparent="1" zPosition="3"/>
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="fill" backgroundColor="transparent" flags="wfNoBorder" >
-		<ePixmap pixmap="infobar/infobarepg.png" position="0,680" size="1920,420" alphatest="blend" zPosition="1"/>
-		<widget source="global.CurrentTime" render="Label" position="1037,700" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
+		<ePixmap pixmap="infobar/background2.png" position="0,695" size="1920,405" alphatest="blend" zPosition="1"/>
+		<ePixmap pixmap="infobar/infobarepg.png" position="0,680" size="1920,420" alphatest="blend" zPosition="2"/>
+		<widget source="global.CurrentTime" render="Label" position="1037,700" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="3">
 			<convert type="ClockToText">Format:%A,%e %B %Y</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1735,700" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
+		<widget source="global.CurrentTime" render="Label" position="1735,700" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="3">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="30,750" size="900,60" font="screentitle;46" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
-		<ePixmap pixmap="buttons/key_info.png" position="1698,765" size="96,58" alphatest="blend" zPosition="2"/>
-		<ePixmap pixmap="buttons/key_menu.png" position="1780,765" size="96,58" alphatest="blend" zPosition="2"/>
-		<widget name="timeline_text" position="center,822" size="1770,40" TimelineFont="menulist;26" itemHeight="40" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" transparent="0" zPosition="2" />
-		<widget name="timeline_now" position="800,862" size="2,150" pixmap="epg/timeline-now.png" alphatest="blend" zPosition="3"/>
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="30,750" size="900,60" font="screentitle;46" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="3" />
+		<ePixmap pixmap="buttons/key_info.png" position="1698,765" size="96,58" alphatest="blend" zPosition="3"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="1780,765" size="96,58" alphatest="blend" zPosition="3"/>
+		<widget name="timeline_text" position="center,822" size="1770,40" TimelineFont="menulist;30" itemHeight="40" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="3" />
+		<widget name="timeline_now" position="800,862" size="2,150" pixmap="epg/timeline-now.png" alphatest="blend" zPosition="5"/>
 		<widget name="bouquetlist" position="center,862" size="1770,150" font="menulist;42" itemHeight="50" backgroundColor="menubackground" foregroundColorSelected="maincolour" scrollbarMode="showNever" transparent="0" zPosition="5" />
-		<widget name="lab1" position="center,862" size="1770,150" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2" />
-		<widget name="list" position="center,862" size="1770,150" ServiceFontInfobar="infobar2;30" EventFontInfobar="infobar2;30" EventNamePadding="10" backgroundColor="menubackground" EntryForegroundColor="grey" EntryBackgroundColor="menubackground" EntryForegroundColorSelected="maincolour" EntryForegroundColorNowSelected="maincolour" RecordForegroundColorSelected="maincolour" ZapForegroundColorSelected="maincolour" scrollbarMode="showNever" transparent="0" EntryFontWrap="no" zPosition="2"/>
+		<widget name="lab1" position="center,862" size="1770,150" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="3" />
+		<widget name="list" position="center,862" size="1770,150" ServiceFontInfobar="infobar2;30" EventFontInfobar="infobar2;30" EventNamePadding="10" backgroundColor="menubackground" EntryForegroundColor="grey" EntryBackgroundColor="menubackground" EntryForegroundColorSelected="maincolour" EntryForegroundColorNowSelected="maincolour" RecordForegroundColorSelected="maincolour" ZapForegroundColorSelected="maincolour" scrollbarMode="showNever" transparent="0" EntryFontWrap="no" zPosition="3"/>
 		<panel name="FullScreenRedButton" />
 		<panel name="FullScreenGreenButton" />
 		<panel name="FullScreenYellowButton" />
@@ -2350,6 +2351,47 @@
 	<screen name="Volume" position="center,20" size="200,120" title="Volume" flags="wfNoBorder" backgroundColor="transparent" zPosition="10">
 		<ePixmap pixmap="icons/volume_background.png" position="0,0" size="200,120" alphatest="blend" />
 		<widget render="VolumeText" source="global.CurrentTime" font="menulist;38" position="87,32" size="95,60" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="101" />
+	</screen>
+	
+	<!-- ## WIRELESS LAN ## -->
+	<screen name="WlanStatus" position="fill" flags="wfNoBorder">
+		<panel name="FullScreenTemplate" />
+		<widget source="LabelBSSID" render="Label" position="22,90" size="350,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="BSSID" render="Label" position="380,90" size="470,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="LabelESSID" render="Label" position="22,140" size="350,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="ESSID" render="Label" position="380,140" size="470,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="LabelQuality" render="Label" position="22,190" size="350,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="quality" render="Label" position="380,190" size="470,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="LabelSignal" render="Label" position="22,240" size="350,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="signal" render="Label" position="380,240" size="470,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="LabelBitrate" render="Label" position="22,290" size="350,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="bitrate" render="Label" position="380,290" size="470,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="LabelEnc" render="Label" position="22,340" size="350,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="enc" render="Label" position="380,340" size="470,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="IF" render="Label" position="22,450" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget source="Statustext" render="Label" position="22,500" size="350,50" font="menulist;34" halign="left" valign="center" backgroundColor="un25062748" transparent="1" zPosition="2"/>
+		<widget name="statuspic" position="380,502" size="63,45" pixmaps="icons/lock_on.png,icons/lock_error.png" transparent="1" alphatest="blend" zPosition="2"/>
+		<panel name="FullScreenRedButtonSource" />
+	</screen>
+	<screen name="WlanScan" position="fill" flags="wfNoBorder">
+		<panel name="FullScreenTemplate" />
+		<widget source="list" render="Listbox" position="22,90" size="850,550" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10,0),size = (550,50),font=0,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0),# index 0 is the essid
+						MultiContentEntryText(pos = (550,0),size = (230,50),font=1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 2),# index 0 is the signal
+						MultiContentEntryText(pos = (10,50),size = (270,50),font=1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 5),# index 5 is the interface
+						MultiContentEntryText(pos = (280,50),size = (270,50),font=1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 4),# index 0 is the encryption
+						MultiContentEntryText(pos = (550,50),size = (230,50),font=1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 3),# index 0 is the maxrate
+					],
+				"fonts": [gFont("menulist",34),gFont("menulist",26)],
+				"itemHeight": 100
+				}
+			</convert>
+		</widget>
+		<widget source="info" render="Label" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
+		<panel name="FullScreenRedButtonSource" />
+		<panel name="FullScreenGreenButtonSource" />
 	</screen>
 	
 	<!-- ## XMLTV IMPORTER ## -->

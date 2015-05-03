@@ -345,6 +345,22 @@ src/skins/1080/ViXBMC_1080_Bello/vixcore/Makefile
 src/skins/1080/ViXBMC_1080_Common/Makefile
 src/skins/1080/ViXBMC_1080_Common/fonts/Makefile
 
+src/skins/1080/ViXBMC_1080_Confluence/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/buttons/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/countries/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/crossepg/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/epg/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/extensions/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/icons/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/imdb/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/infobar/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/meta/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/networkbrowser/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/pvr/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/screens/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/spinner/Makefile
+src/skins/1080/ViXBMC_1080_Confluence/vixcore/Makefile
+
 src/skins/1080/YouViX-Blue/Makefile
 src/skins/1080/YouViX-Blue/buttons/Makefile
 src/skins/1080/YouViX-Blue/countries/Makefile
