@@ -1407,7 +1407,7 @@
 	<screen name="AutoMountEdit" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="FullScreenTextButtonVkey" />
+		<panel name="FullScreenTextButtonVKey" />
 		<panel name="FullScreenHelpwindowWidget" />
 		<panel name="FullScreenIntroductionWidget" />
 		<panel name="FullScreenRedButton" />
@@ -1463,8 +1463,9 @@
 			</convert>
 		</widget>
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="FullScreenRedButton" />
-		<panel name="FullScreenGreenButton" />
+		<panel name="FullScreenRedButtonSource" />
+		<panel name="FullScreenGreenButtonSource" />
+		<panel name="FullScreenYellowButtonSource" />
 	</screen>
 	
 	<!-- ## NETWORK - NAMESERVER ## -->
@@ -1701,6 +1702,38 @@
 	<screen name="ParentalControlChangePin" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
+	</screen>
+	
+	<!-- ## PICTURE PLAYER ## -->
+	<screen name="picshow" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="FullScreenTemplate" />
+		<widget name="filelist" position="22,90" size="850,550" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"/>
+	    <widget name="thn" position="170,650" size="500,300" alphatest="blend" zPosition="2"/>
+		<widget name="label" position="1005,610" size="835,230" font="infobar2;28" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
+		<panel name="FullScreenMenuButton" />
+		<panel name="FullScreenRedButtonSource" />
+		<panel name="FullScreenGreenButtonSource" />
+		<panel name="FullScreenGreenYellowSource" />
+	</screen>
+	<screen name="Pic_Full_View" position="fill" flags="wfNoBorder">
+		<eLabel position="0,0" size="1920,1080" backgroundColor="black" zPosition="0" />
+		<widget name="pic" position="fill" alphatest="blend" zPosition="1" />
+		<eLabel position="25,15" size="30,25" backgroundColor="menubackground" transparent="1" zPosition="2" />
+		<widget name="point" position="30,22" size="37,37" pixmap="icons/part_new.png" alphatest="blend" zPosition="3" />
+		<widget name="play_icon" position="30,22" size="37,37" pixmap="icons/movie_play.png" alphatest="blend" zPosition="3"/>
+		<widget source="file" render="Label" position="90,15" size="1200,50" font="menulist;34" foregroundColor="yellow" backgroundColor="menubackground" halign="left" valign="center" noWrap="1" transparent="1" zPosition="3"/>
+	</screen>
+	<screen name="Pic_Exif" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="FullScreenTemplate" />
+		<widget source="menu" render="Listbox" position="22,90" size="850,850" selectionDisabled="1" transparent="1" scrollbarMode="showOnDemand" zPosition="3">
+			<convert type="TemplatedMultiContent">
+				{"template": [	MultiContentEntryText(pos = (0,0),size = (405,50),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0),
+				MultiContentEntryText(pos = (405,0),size = (445,50),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 1)],
+				"fonts": [gFont("menulist",34)],
+				"itemHeight": 50 }
+			</convert>
+		</widget>
+	    <panel name="MenuButtonRedSource" />
 	</screen>
 	
 	<!-- ## PiP ## -->
@@ -1951,7 +1984,7 @@
 		<panel name="FullScreenDescriptionWidget" />
 		<panel name="FullScreenFootnoteWidget" />
 		<panel name="FullScreenHelpwindowWidget" />
-		<panel name="FullScreenTextButtonVKey" />
+		<panel name="FullScreenTextButtonVKeySource" />
 		<panel name="FullScreenRedButtonSource" />
 		<panel name="FullScreenGreenButtonSource" />
 	</screen>
