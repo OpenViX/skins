@@ -33,7 +33,7 @@
 		<panel name="FullscreenPIGPanel" />
 	</screen>
 	<screen name="FullScreenTitle">
-		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=140,repeat=3,always=0,oneshot=1,startdelay=6000,wrap" position="25,20" size="850,50" font="screentitle;40" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="3" />
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=140,repeat=3,always=0,oneshot=1,startdelay=6000,wrap" position="25,20" size="850,50" font="screentitle;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="3" />
 	</screen>
 	<screen name="FullScreenTimeDate">
 		<widget source="global.CurrentTime" render="Label" position="1047,5" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
@@ -143,25 +143,25 @@
 		<widget name="pleasewait" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" selectionDisabled="1" zPosition="3" />
 	</screen>
 	<screen name="FullScreenDescriptionWidget">
-		<widget name="description" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<widget name="description" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 	</screen>
 	<screen name="FullScreenStatusWidget">
-		<widget source="status" render="Label" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<widget source="status" render="Label" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 	</screen>
 	<screen name="FullScreenIntroductionWidget">
-		<widget source="introduction" render="Label" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<widget source="introduction" render="Label" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 	</screen>
 	<screen name="FullScreenInformationWidget">
-		<widget name="information" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<widget name="information" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 	</screen>
 	<screen name="FullScreenFooterWidget">
-		<widget name="footer" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<widget name="footer" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 	</screen>
 	<screen name="FullScreenHelpWidget">
-		<widget source="help" render="Label" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<widget source="help" render="Label" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 	</screen>
 	<screen name="FullScreenInfoWidget">
-		<widget name="info" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<widget name="info" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 	</screen>
 	<screen name="FullScreenFootnoteWidget">
 		<widget name="footnote" position="570,950" size="300,50" font="screentitle;28" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="3" />
@@ -212,7 +212,7 @@
 		</widget>
 	</screen>
 	<screen name="InfobarChannelName">
-		<widget source="session.CurrentService" render="Label" position="550,797" size="750,55" font="infobar2;44" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+		<widget source="session.CurrentService" render="Label" position="550,797" size="750,55" font="infobar2;44" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
@@ -230,7 +230,7 @@
 		</widget>
 	</screen>
 	<screen name="InfobarPicon">
-		<widget source="session.CurrentService" render="Picon" position="50,810" size="400,240" alphatest="blend" zPosition="2">
+		<widget source="session.CurrentService" render="Picon" position="70,810" size="400,240" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 	</screen>
@@ -320,11 +320,6 @@
 			<convert type="ServiceInfo">Is576</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<!-- <widget source="session.CurrentService" render="Pixmap" pixmap="icons/540.png" position="1760,1020" size="70,30" alphatest="blend" zPosition="1">
-			<convert type="ServiceInfo">VideoWidth</convert>
-			<convert type="ValueRange">500,574</convert>
-			<convert type="ConditionalShowHide" />
-		</widget> -->
 		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/480.png" position="1760,1020" size="70,30" alphatest="blend" zPosition="2">
 			<convert type="ServiceInfo">Is480</convert>
 			<convert type="ConditionalShowHide" />
@@ -341,7 +336,7 @@
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<eLabel position="410,132" size="966,60" backgroundColor="menubackground" zPosition="1" />
-		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="420,129" size="900,60" font="screentitle;46" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="420,129" size="900,60" font="screentitle;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 		<eLabel position="1380,69" size="130,123" backgroundColor="menubackground" zPosition="1" />
 		<eLabel position="410,195" size="1100,565" backgroundColor="menubackground" zPosition="-1" />
 		<eLabel position="410,763" size="1100,200" backgroundColor="menubackground" zPosition="1" />
@@ -391,13 +386,13 @@
 		<widget name="menu" position="420,210" size="1080,540" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuDescriptionWidget">
-		<widget name="description" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<widget name="description" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuPleaseWaitWidget">
 		<widget name="pleasewait" position="420,210" size="1080,540" font="screentitle;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuFooterWidget">
-		<widget name="footer" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<widget name="footer" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 	</screen>
 	<screen name="SetupMenuHelpwindowWidget">
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="420,700" size="541,720" backgroundColor="menubackground" transparent="0" alphatest="blend" zPosition="2" />
@@ -414,7 +409,7 @@
 		<widget source="global.CurrentTime" render="Label" position="1380,69" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="420,129" size="900,60" font="screentitle;46" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="420,129" size="900,60" font="screentitle;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 	</screen>
 	<screen name="SetupMenuRedButton2">
 		<widget name="key_red" position="420,963" size="270,60" font="menulist;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
@@ -449,7 +444,7 @@
 		<widget source="global.CurrentTime" render="Label" position="1380,69" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="420,129" size="900,60" font="screentitle;46" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="420,129" size="900,60" font="screentitle;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 	</screen>
 	<screen name="SetupMenuConfigWidget3">
 		<widget name="config" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
@@ -484,7 +479,7 @@
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11" />
 	</screen>
 	<screen name="WizardDescriptionWidget">
-		<widget name="text" position="22,90" size="850,200" font="menulist;34" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<widget name="text" position="22,90" size="850,200" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 	</screen>
 	<screen name="WizardConfigWidget">
 		<widget name="config" position="22,300" size="850,500" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
