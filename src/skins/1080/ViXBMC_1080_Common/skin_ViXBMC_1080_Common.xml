@@ -411,26 +411,29 @@
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<panel name="FullscreenPIGPanel" />
-		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="995,570" size="855,50" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" noWrap="1" transparent="1" halign="center" valign="center" zPosition="3">
+		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="995,570" size="855,50" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" noWrap="1" transparent="1" halign="center" valign="center" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="995,605" size="120,50" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="3">
+		<widget source="ServiceEvent" render="Label" position="995,600" size="120,50" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="3">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"></convert>
 		</widget>
-		<eLabel position="1130,630" size="580,2" backgroundColor="maincolour" zPosition="3" />
-		<widget source="ServiceEvent" render="Progress" position="1130,628" size="580,6" pixmap="infobar/progressbar.png" backgroundColor="transparent" transparent="1" zPosition="4">
+		<eLabel position="1130,625" size="580,2" backgroundColor="maincolour" zPosition="3" />
+		<widget source="ServiceEvent" render="Progress" position="1130,623" size="580,6" pixmap="infobar/progressbar.png" backgroundColor="transparent" transparent="1" zPosition="4">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1730,605" size="120,50" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="3">
+		<widget source="ServiceEvent" render="Label" position="1730,600" size="120,50" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="3">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="995,650" size="855,185" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="3">
+		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="995,645" size="855,150" font="infobar2;28" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="3">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1005,827" size="835,50" font="infobar2;34" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
+		<widget source="ServiceEvent" render="Label" position="1005,807" size="835,50" font="infobar2;32" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
 			<convert type="EventName">NextName</convert>
+		</widget>
+		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="1005,857" size="835,120" font="infobar2;28" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="3">
+			<convert type="EventName">NextDescription</convert>
 		</widget>
 		<panel name="FullScreenEPGButton" />
 		<panel name="FullScreenInfoButton" />
@@ -672,7 +675,7 @@
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<panel name="FullscreenPIGPanel" />
-		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="1005,600" size="835,250" font="infobar2;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="3">
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="1005,600" size="835,370" font="infobar2;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="3">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<panel name="FullScreenMenuButton" />
@@ -704,7 +707,7 @@
 		<widget name="more_text" position="1556,625" size="228,51" text="LATER" font="menulist;36" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="3" />
 		<widget name="more_button" pixmap="epg/now_next_more.png" position="1556,625" size="228,51" alphatest="blend" zPosition="3" />
 		<widget name="more_button_sel" pixmap="epg/now_next_more_on.png" position="1556,625" size="228,51" alphatest="blend" zPosition="3" />
-		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="1005,675" size="835,205" font="infobar2;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="3">
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="1005,680" size="835,295" font="infobar2;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="3">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<panel name="FullScreenMenuButton" />
@@ -806,7 +809,7 @@
 	
 	<!-- ## EVENTVIEW ## -->
 	<screen name="EventView" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
-		<panel name="EventViewSimple" />
+		<panel name="InfoBarEventView" />
 		<widget name="key_red" position="420,963" size="270,60" font="menulist;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 		<widget name="key_green" position="690,963" size="270,60" font="menulist;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
         <widget name="key_yellow" position="960,963" size="270,60" font="menulist;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
@@ -822,7 +825,7 @@
 		</widget>
 		<widget name="channel" position="420,139" size="600,60" font="screentitle;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 		<widget source="Service" render="Picon" position="420,220" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="2">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="MovieReference">Reference</convert>
 		</widget>
 		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="830,230" size="670,60" font="infobar2;44" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 		<widget name="datetime" position="830,310" size="670,50" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" valign="center" zPosition="2" />
@@ -830,7 +833,21 @@
 		<widget name="FullDescription" position="420,475" size="1080,470" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2" />
 	</screen>
 	<screen name="InfoBarEventView" position="0,0" size="1920,815" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
-		<panel name="EventViewSimple" />
+		<ePixmap pixmap="infobar/menubackground2.png" position="387,45" size="1146,1016" alphatest="blend" zPosition="-1"/>
+		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
+			<convert type="ClockToText">Format:%A,%e %B %Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1380,69" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget name="channel" position="420,139" size="600,60" font="screentitle;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget source="Service" render="Picon" position="420,220" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="2">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="830,230" size="670,60" font="infobar2;44" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<widget name="datetime" position="830,310" size="670,50" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" valign="center" zPosition="2" />
+		<widget name="duration" position="830,370" size="670,50" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" valign="center" zPosition="2" />
+		<widget name="FullDescription" position="420,475" size="1080,470" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2" />
 	</screen>
 	<screen name="EventViewContextMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel3" />
