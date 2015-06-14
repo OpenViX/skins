@@ -1713,14 +1713,14 @@
 	</screen>
 	<screen name="OMBManagerInstall" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
 		<panel name="FullScreenTemplate" />
-		<widget source="list" render="Listbox" position="420,210" size="1080,660" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" >
+		<widget source="list" render="Listbox" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" >
 			<convert type="StringList" />
 		</widget>
-		<widget name="info" position="420,670" size="1080,150" font="screentitle;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<widget name="info" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 	</screen>
 	<screen name="OMBManagerList" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
 		<panel name="FullScreenTemplate" />
-		<widget source="list" render="Listbox" position="420,210" size="1080,720" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" >
+		<widget source="list" render="Listbox" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" >
 			<convert type="StringList" />
 		</widget>
 		<panel name="FullScreenRedButton" />
@@ -1782,7 +1782,7 @@
 		<panel name="FullScreenMenuButton" />
 		<panel name="FullScreenRedButtonSource" />
 		<panel name="FullScreenGreenButtonSource" />
-		<panel name="FullScreenGreenYellowSource" />
+		<panel name="FullScreenYellowButtonSource" />
 	</screen>
 	<screen name="Pic_Full_View" position="fill" flags="wfNoBorder">
 		<eLabel position="0,0" size="1920,1080" backgroundColor="black" zPosition="0" />
@@ -1869,6 +1869,14 @@
 		<panel name="FullScreenGreenButton" />
 		<panel name="FullScreenYellowButton" />
 		<panel name="FullScreenBlueButton" />
+	</screen>
+	
+	<!-- ## QUICKBUTTON ## -->
+	<screen name="QuickbuttonSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Quickbutton Setup">
+		<panel name="FullScreenTemplate" />
+		<panel name="FullScreenConfigWidget" />
+		<panel name="FullScreenRedButton" />
+		<panel name="FullScreenGreenButton" />
 	</screen>
 	
 	<!-- ## REMOTE CONTROL CODE ## -->
@@ -1969,6 +1977,12 @@
 		<widget source="Frontend" render="Label" position="1005,90" size="834,483" font="menulist;170" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="99" >
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
+	</screen>
+	
+	<!-- ## SAT KEYS UPDATER by rossi2000 ## -->
+	<screen name="KeyUpdate" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="FullScreenTemplate" />
+		<widget name="myMenu" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
 	</screen>
 	
 	<!-- ## SCAN IP ## -->
@@ -2185,6 +2199,12 @@
 		<panel name="FullScreenBlueButton" />
 	</screen>
 	
+	<!-- ## TRANSMISSION ## -->
+	<screen  name="Transmission" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Transmission torrent downloader">
+		<panel name="FullScreenTemplate" />
+		<panel name="FullScreenMenuWidget" />
+	</screen>
+	
 	<!-- ## TUNER CONFIG ## -->
 	<screen name="NimSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -2274,8 +2294,20 @@
 			self.autoResize()
 		</applet>
 	</screen>
+	
+	<!-- ## TUNER SERVER ## -->
+	<screen name="TunerServer" position="fill" flags="wfNoBorder" title="" backgroundColor="transparent">
+		<panel name="FullScreenTemplate" />
+		<widget name="lab1" position="22,90" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
+		<widget name="lab2" position="150,180" size="330,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="2" />
+		<widget name="labstop" position="390,180" size="200,50" font="menulist;34" backgroundColor="red" valign="center" halign="center" zPosition="2" />
+		<widget name="labrun" position="390,180" size="200,50" font="menulist;34" backgroundColor="green" valign="center" halign="center" zPosition="3"/>
+		<panel name="FullScreenRedButton" />
+		<panel name="FullScreenGreenButton" />
+		<panel name="FullScreenYellowButton" />
+	</screen>
 		
-	<!-- ## Unhandled Key ## -->
+	<!-- ## UNHANDLED KEY ## -->
 	<screen name="UnhandledKey" position="1730,30" size="147,132" flags="wfNoBorder" zPosition="100" backgroundColor="transparent">
 		<widget name="UnhandledKeyPixmap" position="0,0" size="147,132" pixmap="icons/unhandled-key.png" alphatest="blend" backgroundColor="transparent" />
 	</screen>
