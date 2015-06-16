@@ -226,14 +226,14 @@
 				MultiContentEntryText(pos = (0, 0), size = (35, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # key,
 				MultiContentEntryText(pos = (10, 0), size = (50, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
 				MultiContentEntryText(pos = (80, 0), size = (300, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
-				MultiContentEntryText(pos = (320, 0), size = (400, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+				MultiContentEntryText(pos = (400, 0), size = (350, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
 				MultiContentEntryText(pos = (820, 0), size = (25, 50), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
 				], True, "showNever"),
 				"notselected": (50, [
 				MultiContentEntryText(pos = (0, 0), size = (35, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # key,
 				MultiContentEntryText(pos = (10, 0), size = (50, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
 				MultiContentEntryText(pos = (80, 0), size = (300, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
-				MultiContentEntryText(pos = (320, 0), size = (400, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+				MultiContentEntryText(pos = (400, 0), size = (350, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
 				MultiContentEntryText(pos = (820, 0), size = (25, 50), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
 				], False, "showNever")
 				},
@@ -1205,23 +1205,23 @@
 		<widget source="session.CurrentService" render="Picon" position="50,805" size="400,240" alphatest="blend" zPosition="2">
 			<convert type="MovieReference"/>
 		</widget>
-		<widget source="session.CurrentService" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="490,840" size="1100,75" font="infobar2;54" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+		<widget source="session.CurrentService" render="Label" position="490,840" size="1300,75" font="infobar2;54" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<eLabel position="490,927" size="1350,2" backgroundColor="maincolour" zPosition="1" />
 		<widget source="session.CurrentService" render="PositionGauge" position="490,925" size="1350,6" pointer="infobar/progressbar.png:1350,0" transparent="1" zPosition="2">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
-		<eLabel text="Length:" position="520,930" size="170,60" font="infobar;42" foregroundColor="grey" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
-		<widget source="session.CurrentService" render="Label" position="680,930" size="300,60" font="infobar;42" foregroundColor="grey" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2">
+		<eLabel text="Length:" position="520,930" size="170,60" font="infobar;42" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget source="session.CurrentService" render="Label" position="670,930" size="300,60" font="infobar;42" foregroundColor="grey" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
-		<eLabel text="Position:" position="1010,930" size="200,60" font="infobar;42" foregroundColor="grey" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<eLabel text="Position:" position="1010,930" size="200,60" font="infobar;42" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 		<widget source="session.CurrentService" render="Label" position="1180,930" size="300,60" font="infobar;42" foregroundColor="grey" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<eLabel text="Remaining:" position="1480,930" size="250,60" font="infobar;42" foregroundColor="grey" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
-		<widget source="session.CurrentService" render="Label" position="1700,930" size="300,60" font="infobar;42" foregroundColor="grey" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2">
+		<eLabel text="Remaining:" position="1480,930" size="250,60" font="infobar;42" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget source="session.CurrentService" render="Label" position="1690,930" size="300,60" font="infobar;42" foregroundColor="grey" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 		<widget name="statusicon" position="497,980" size="100,100" pixmaps="pvr/play1.png,pvr/pause1.png,pvr/stop1.png,pvr/forward1.png,pvr/backward1.png,pvr/slow1.png,pvr/blank.png" alphatest="blend" zPosition="2" />
