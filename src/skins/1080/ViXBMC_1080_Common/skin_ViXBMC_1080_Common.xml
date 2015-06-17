@@ -1448,13 +1448,13 @@
 		<widget name="labserialno" position="22,410" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" halign="right" transparent="1" zPosition="2" />
 		<widget name="sharedir" position="22,460" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="2" />
 		<widget name="labsharedir" position="22,460" size="850,200" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="right" valign="top" transparent="1" zPosition="2" />
-		<widget name="inotify" position="130,690" size="350,60" font="menulist;34" halign="right" valign="center" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2" />
+		<widget name="inotify" position="130,690" size="350,60" font="menulist;34" halign="right" valign="center" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="2" />
 		<widget name="inotifyinactive" position="500,697" pixmap="icons/lock_off.png" size="63,45" alphatest="blend" zPosition="3" />
 		<widget name="inotifyactive" position="500,697" pixmap="icons/lock_on.png" size="63,45" alphatest="blend" zPosition="4" />
-		<widget name="tivo" position="230,750" size="250,60" font="menulist;34" halign="right" valign="center" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2" />
+		<widget name="tivo" position="230,750" size="250,60" font="menulist;34" halign="right" valign="center" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="2" />
 		<widget name="tivoinactive" position="500,757" pixmap="icons/lock_off.png" size="63,45" alphatest="blend" zPosition="3" />
 		<widget name="tivoactive" position="500,757" pixmap="icons/lock_on.png" size="63,45" alphatest="blend" zPosition="4" />
-		<widget name="dlna" position="230,810" size="250,60" font="menulist;34" halign="right" valign="center" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2" />
+		<widget name="dlna" position="230,810" size="250,60" font="menulist;34" halign="right" valign="center" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="2" />
 		<widget name="dlnainactive" position="500,817" pixmap="icons/lock_off.png" size="63,45" alphatest="blend" zPosition="3" />
 		<widget name="dlnaactive" position="500,817" pixmap="icons/lock_on.png" size="63,45" alphatest="blend" zPosition="4" />
 		<panel name="FullScreenMenuButton" />
@@ -1846,10 +1846,10 @@
 		<widget name="list" position="22,90" size="850,400" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2" />
 		<widget name="snr_db" position="310,535" size="250,50" font="menulist;34" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 		<eLabel text="SNR" position="70,580" size="100,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="2" />
-		<widget name="snr_bar" position="195,595" size="500,20" pixmap="icons/snr_bar.png" borderWidth="1" borderColor="white" zPosition="1" />
+		<widget name="snr_bar" position="195,595" size="500,20" pixmap="icons/snr_bar.png" borderWidth="1" borderColor="maincolour" zPosition="1" />
 		<widget name="snr_percentage" position="715,580" size="80,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<eLabel text="BER" position="70,630" size="100,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="2" />
-		<widget name="ber_bar" position="195,645" size="500,20" pixmap="icons/agc_bar.png" borderWidth="1" borderColor="white" zPosition="1" />
+		<widget name="ber_bar" position="195,645" size="500,20" pixmap="icons/agc_bar.png" borderWidth="1" borderColor="maincolour" zPosition="1" />
 		<widget name="ber_value" position="715,630" size="80,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<eLabel text="LOCK" position="300,680" size="100,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<widget name="lock_state" position="420,680" size="200,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
@@ -1945,21 +1945,21 @@
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 		<eLabel name="snr" text="SNR" position="70,658" size="100,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="2" />
-		<widget source="Frontend" render="Progress" position="195,672" size="500,20" pixmap="icons/snr_bar.png" borderWidth="2" borderColor="white" zPosition="1">
+		<widget source="Frontend" render="Progress" position="195,672" size="500,20" pixmap="icons/snr_bar.png" borderWidth="2" borderColor="maincolour" zPosition="1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="715,658" size="80,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" >
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<eLabel name="agc" text="AGC" position="70,703" size="100,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="2" />
-		<widget source="Frontend" render="Progress" position="195,717" size="500,20" pixmap="icons/agc_bar.png" borderWidth="2" borderColor="white" zPosition="1">
+		<widget source="Frontend" render="Progress" position="195,717" size="500,20" pixmap="icons/agc_bar.png" borderWidth="2" borderColor="maincolour" zPosition="1">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="715,703" size="80,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" >
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<eLabel name="ber" text="BER" position="70,748" size="100,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="2" />
-		<widget source="Frontend" render="Progress" position="195,762" size="500,20" pixmap="icons/snr_bar.png" borderWidth="2" borderColor="white" zPosition="1">
+		<widget source="Frontend" render="Progress" position="195,762" size="500,20" pixmap="icons/snr_bar.png" borderWidth="2" borderColor="maincolour" zPosition="1">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="715,748" size="80,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" >
@@ -2453,7 +2453,7 @@
 	<screen name="VIXDevicePanelConf" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 	    <panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<!-- <widget name="Linconn" position="80,765" size="590,150" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" /> -->
+		<!-- <widget name="Linconn" position="80,765" size="590,150" font="youvix-r;22" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" /> -->
 		<panel name="FullScreenRedButton" />
 		<panel name="FullScreenGreenButton" />
 	</screen>
