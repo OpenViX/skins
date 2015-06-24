@@ -44,9 +44,10 @@
 		<widget source="session.Event_Next" render="Label" position="960,120" size="960,55" font="infobar2;42" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="990,180" size="900,370" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2">
+		<widget source="session.Event_Next" render="Label" position="990,180" size="900,230" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
+		<panel name="2IBWeather" />
 		<eLabel text="TP" position="1050,617" size="100,70" font="screentitle;56" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 		<widget source="session.CurrentService" render="Label" position="1160,582" size="660,90" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
 			<convert type="PliExtraInfo">TransponderInfo2line</convert>
@@ -406,7 +407,7 @@
 		<widget source="Service" render="Label" position="200,90" size="400,50" font="screentitle;40" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
 			<convert type="ServiceName2">Provider</convert>
 		</widget>
-		<widget name="list" position="22,160" size="850,800" backgroundColor="menubackground" foregroundColorEvent="maincolour" foregroundColorEventSelected="maincolour" foregroundColorServiceNotAvail="grey" foregroundColorMarked="maincolour" foregroundColorMarkedSelected="red" backgroundColorMarked="maincolour" backgroundColorMarkedSelected="maincolour" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30" serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" transparent="1" scrollbarMode="showOnDemand" zPosition="3" />
+		<widget name="list" position="22,160" size="850,800" backgroundColor="menubackground" foregroundColorEvent="grey" foregroundColorEventSelected="maincolour" foregroundColorServiceNotAvail="grey" foregroundColorMarked="maincolour" foregroundColorMarkedSelected="red" backgroundColorMarked="maincolour" backgroundColorMarkedSelected="maincolour" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30" serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" transparent="1" scrollbarMode="showOnDemand" zPosition="3" />
 		<widget source="ServiceEvent" render="Label" position="22,953" size="850,50" font="infobar2;32" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
 			<convert type="TransponderInfo"></convert>
 		</widget>
@@ -971,20 +972,20 @@
 	<!-- ## IMDB ## -->
 	<screen name="IMDB" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
-		<widget name="titellabel" position="420,205" size="1080,60" font="infobar;40" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" halign="center" transparent="1" zPosition="2" />
-		<widget name="statusbar" position="420,255" size="1080,60" font="infobar2;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
-		<widget name="menu" position="420,310" size="1080,480" font="infobar;42" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
-		<widget name="castlabel" position="420,350" size="1080,480" font="infobar;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" />	
-		<widget name="detailslabel" position="420,350" size="1080,480" font="infobar;40" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
-		<widget name="extralabel" position="420,350" size="1080,600" font="infobar;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" />
-		<widget name="starsbg" pixmap="imdb/starsbar_empty.png" position="1185,850" size="315,32" backgroundColor="menubackground" transparent="1" alphatest="blend" zPosition="2" />
-		<widget name="stars" pixmap="imdb/starsbar_filled.png" position="1185,850" size="315,32" backgroundColor="menubackground" transparent="1" alphatest="blend" zPosition="3" />
-		<widget name="ratinglabel" position="420,890" size="1080,60" font="infobar2;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="2" />
-		<widget name="poster" position="1550,320" size="335,427" alphatest="blend"  zPosition="2" />
+		<widget name="titellabel" position="22,10" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" halign="center" transparent="1" zPosition="2" />
+		<widget name="statusbar" position="22,40" size="850,100" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="menu" position="22,140" size="850,800" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget name="castlabel" position="22,140" size="850,800" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" />	
+		<widget name="detailslabel" position="22,140" size="850,800" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
+		<widget name="extralabel" position="22,140" size="850,850" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" />
+		<widget name="ratinglabel" position="22,900" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2" />
+		<widget name="starsbg" pixmap="imdb/starsbar_empty.png" position="22,950" size="315,32" backgroundColor="menubackground" transparent="1" alphatest="blend" zPosition="2" />
+		<widget name="stars" pixmap="imdb/starsbar_filled.png" position="22,950" size="315,32" backgroundColor="menubackground" transparent="1" alphatest="blend" zPosition="3" />
+		<widget name="poster" position="1250,600" size="335,377" alphatest="blend"  zPosition="2" />
 		<panel name="FullScreenRedButton" />
 		<panel name="FullScreenGreenButton" />
         <panel name="FullScreenYellowButton" />
-		<panel name="FullScreenBlueButton" />	
+		<panel name="FullScreenBlueButton" />
 	</screen>
 	
 	<!-- ## INPUT BOX ## -->
@@ -1238,7 +1239,7 @@
 			<convert type="MovieReference"/>
 		</widget>
 		<widget name="waitingtext" position="22,160" size="850,800" font="infobar2;36" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2" />
-		<widget name="list" position="22,160" size="850,800" font="channelselectionevent;30" itemHeight="50" pbarShift="15" pbarHeight="20" pbarLargeWidth="70" pbarColour="thirdcolour" pbarColourSeen="yellow" pbarColourRec="red" partIconeShift="7" spaceIconeText="8" iconsWidth="37" trashShift="7" dirShift="8" spaceRight="5" dateWidth="220" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"  />
+		<widget name="list" position="22,160" size="850,800" font="channelselectionservice;30" itemHeight="50" pbarShift="15" pbarHeight="20" pbarLargeWidth="70" pbarColour="thirdcolour" pbarColourSeen="yellow" pbarColourRec="red" partIconeShift="7" spaceIconeText="8" iconsWidth="37" trashShift="7" dirShift="8" spaceRight="5" dateWidth="220" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"  />
 		<eLabel text="STORAGE" position="22,950" size="250,60" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
 		<widget name="freeDiskSpace" position="190,950" size="690,60" font="infobar2;32" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3" />
 		<panel name="FullscreenPIGPanel" />
@@ -2164,13 +2165,13 @@
 	</screen>
 	
 	<!-- ## TIMESHIFT ## -->
-	<screen name="TimeshiftState" position="center,670" size="1920,90" backgroundColor="transparent" flags="wfNoBorder" zPosition="2">
+	<screen name="TimeshiftState" position="center,700" size="1920,90" backgroundColor="transparent" flags="wfNoBorder" zPosition="2">
 		<ePixmap pixmap="infobar/timeshiftbar.png" position="0,0" size="1920,90" alphatest="blend" zPosition="1"/>
 		<eLabel text="TIMESHIFT IN PROGRESS.." position="50,3" size="500,80" font="screentitle;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 		<widget source="session.CurrentService" render="Label" position="500,3" size="200,60" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2" >
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget name="eventname" position="750,0" size="1010,60" font="infobar;38" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2" />
+		<widget name="eventname" position="750,10" size="1010,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2" />
 		<widget name="statusicon" position="530,52" size="25,25" pixmaps="pvr/play.png,pvr/pause.png,pvr/stop.png,pvr/forward.png,pvr/backward.png,pvr/slow.png" alphatest="on" zPosition="5" />
 		<widget name="speed" position="565,45" size="100,30" font="screentitle;28" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="5" />
 		<widget name="PTSSeekPointer" position="605,58" size="19,10" pixmap="icons/timeshift_pointer.png" alphatest="blend" zPosition="4" />
