@@ -344,6 +344,7 @@ src/skins/1080/ViXBMC_1080_Bello/vixcore/Makefile
 
 src/skins/1080/ViXBMC_1080_Common/Makefile
 src/skins/1080/ViXBMC_1080_Common/fonts/Makefile
+src/skins/1080/ViXBMC_1080_Common/yahoo/Makefile
 
 src/skins/1080/ViXBMC_1080_Confluence/Makefile
 src/skins/1080/ViXBMC_1080_Confluence/buttons/Makefile
