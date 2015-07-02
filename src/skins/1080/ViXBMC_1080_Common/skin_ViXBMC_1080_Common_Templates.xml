@@ -4,26 +4,26 @@
 	<!--  This skin is OpenSource. Anyone can modify it and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	
+
 	<!--  ## Head ##  -->
-	
+
 	<!-- ## 2IB WEATHER ## -->
 	<screen name="2IBWeather">
 		<widget source="session.CurrentService" render="YWeatherPicon" path="Icon" position="1180,430" size="175,120" alphatest="blend" zPosition="2">
-            <convert type="YWeather">picon</convert>
-        </widget>
-        <widget source="session.CurrentService" render="Label" position="1380,430" size="70,40" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2">
-            <convert type="YWeather">temp</convert>
-        </widget>
-        <eLabel text="C" position="1460,430" size="75,40" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+			<convert type="YWeather">picon</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1380,430" size="70,40" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2">
+			<convert type="YWeather">temp</convert>
+		</widget>
+		<eLabel text="C" position="1460,430" size="75,40" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<widget source="session.CurrentService" render="Label" position="1400,470" size="450,40" font="menulist;34" foregroundColor="thirdcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2">
-            <convert type="YWeather">text</convert>
-        </widget>
+			<convert type="YWeather">text</convert>
+		</widget>
 		<widget source="session.CurrentService" render="Label" position="1400,510" size="450,40" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2">
-            <convert type="YWeather">city</convert>
-        </widget>
+			<convert type="YWeather">city</convert>
+		</widget>
 	</screen>
-	
+
 	<!-- DOWNLOADER TEMPLATES -->
 	<screen name="DownloadBar">
 		<ePixmap position="center,0" size="1200,100" pixmap="infobar/downloadbar.png" alphatest="blend" zPosition="1"/>
@@ -33,7 +33,7 @@
 		<widget name="progress" position="620,50" size="860,5" foregroundColor="thirdcolour" transparent="1" zPosition="3"/>
 		<widget name="status" position="620,50" size="860,50" font="menulist;30" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />	
 	</screen>
-	
+
 	<!-- ## FEEDS STATUS TEMPLATE ## -->
 	<screen name="FeedsStatus">
 		<widget name="tl_off" pixmap="icons/tl_off.png" position="1280,630" size="300,100" alphatest="blend" zPosition="2" />
@@ -42,7 +42,7 @@
 		<widget name="tl_green" pixmap="icons/tl_green.png" position="1280,630" size="300,100" alphatest="blend" zPosition="2" />
 		<widget name="feedStatusMSG" render="Label" position="995,740" size="855,50" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 	</screen>
-	
+
 	<!-- ## FULLSCREEN TEMPLATES ## -->
 	<screen name="FullScreenTemplate">
 		<ePixmap pixmap="infobar/background.png" position="fill" alphatest="on" zPosition="-1"/>
@@ -67,6 +67,21 @@
 		</widget>
 		<eLabel position="1005,90" size="834,483" foregroundColor="window-bg" backgroundColor="maincolour" zPosition="2" />
 		<widget source="session.VideoPicture" render="Pig" position="1006,91" size="832,481" backgroundColor="#ff000000" zPosition="3" />
+		<!-- <ePixmap pixmap="icons/hbbtv.png" position="1280,530" size="70,30" alphatest="blend" zPosition="3"/> -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hbbtv.png" position="1280,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">HasHBBTV</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- <ePixmap pixmap="icons/subtitles.png" position="1360,530" size="70,30" alphatest="blend" zPosition="3"/> -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/subtitles.png" position="1360,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">SubservicesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- <ePixmap pixmap="icons/teletext.png.png" position="1440,530" size="70,30" alphatest="blend" zPosition="3" /> -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/teletext.png" position="1440,530" size="70,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/dolbyprologic.png" position="1520,530" size="70,30" alphatest="blend" zPosition="3">
 			<convert type="ServiceInfo">IsStereo</convert>
 			<convert type="ConditionalShowHide" />
@@ -211,8 +226,7 @@
 	<screen name="FullScreenBlueButtonSource">
 		<widget source="key_blue" render="Label" position="1440,1020" size="480,60" font="menulist;40" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="3" />
 	</screen>
-	
-	
+
 	<!-- ## INFOBAR TEMPLATES ## -->
 	<screen name="InfobarUpdateIcon">
 		<!-- <ePixmap pixmap="icons/stableupdate.png" position="1580,0" size="340,190" zPosition="2" alphatest="blend" /> -->
@@ -381,15 +395,25 @@
 		</widget>
 	</screen>
 	<screen name="InfobarRecIcon">
-	    <!-- <ePixmap pixmap="icons/recording.png" position="1321,1020" size="109,30" alphatest="blend" zPosition="2"/> -->
-		<widget source="session.RecordState" render="Pixmap" pixmap="icons/recording.png" position="1321,1020" size="109,30" backgroundColor="menubackground" alphatest="blend" zPosition="2">
+		<!-- <ePixmap pixmap="icons/recording.png" position="1161,1020" size="109,30" alphatest="blend" zPosition="2"/> -->
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/recording.png" position="1161,1020" size="109,30" backgroundColor="menubackground" alphatest="blend" zPosition="2">
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
 	<screen name="InfobarStatusIcons">
-		<!-- <ePixmap pixmap="icons/hbbtv.png" position="1440,1020" size="103,40" zPosition="1" alphatest="blend" /> -->
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hbbtv.png" position="1440,1020" size="70,30" alphatest="blend" zPosition="2">
+		<!-- <ePixmap pixmap="icons/hbbtv.png" position="1280,1020" size="70,30" alphatest="blend" zPosition="2"/> -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hbbtv.png" position="1280,1020" size="70,30" alphatest="blend" zPosition="2">
 			<convert type="ServiceInfo">HasHBBTV</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- <ePixmap pixmap="icons/subtitles.png" position="1360,1020" size="70,30" alphatest="blend" zPosition="2"/> -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/subtitles.png" position="1360,1020" size="70,30" alphatest="blend" zPosition="2">
+			<convert type="ServiceInfo">SubservicesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- <ePixmap pixmap="icons/teletext.png" position="1440,1020" size="70,30" alphatest="blend" zPosition="2" /> -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/teletext.png" position="1440,1020" size="70,30" alphatest="blend" zPosition="2">
+			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/dolbyprologic.png" position="1520,1020" size="70,30" alphatest="blend" zPosition="2">
@@ -433,7 +457,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
-	
+
 	<!-- ## SETUP MENU TEMPLATES ## -->
 	<screen name="SetupMenuPanel">
 		<eLabel position="410,69" size="966,60" backgroundColor="menubackground" zPosition="1" />
@@ -508,7 +532,6 @@
 	<screen name="SetupMenuFootnoteWidget">
 		<widget name="footnote" position="1000,965" size="480,60" font="screentitle;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="2" />
 	</screen>
-	
 	<screen name="SetupMenuPanel2">
 		<ePixmap pixmap="infobar/menubackground2.png" position="387,45" size="1146,1016" alphatest="blend" zPosition="-1"/>
 		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
@@ -543,7 +566,6 @@
 	<screen name="SetupMenuBlueButtonSource2">
 		<widget source="key_blue" render="Label" position="1230,963" size="270,60" font="menulist;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
-	
 	<screen name="SetupMenuPanel3">
 		<ePixmap pixmap="infobar/menubackground2.png" position="387,45" size="1146,1016" alphatest="blend" zPosition="-1"/>
 		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
@@ -569,7 +591,7 @@
 	<screen name="SetupMenuListLogWidget3">
 		<widget name="list" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
 	</screen>
-	
+
 	<!-- WIZARD TEMPLATES -->
 	<screen name="WizardRemote">
 		<widget name="rc" pixmaps="rc.png,rcold.png" position="150,300" size="158,620" alphatest="blend" transparent="1" zPosition="1" />
