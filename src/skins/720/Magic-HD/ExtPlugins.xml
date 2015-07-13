@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-HD-ViX PlugIn-addition Vs 1.98	-->
+	<!--	Skin: Magic-HD-ViX PlugIn-addition Vs 2.00	-->
 	<!--	This skin is part of the Magic-HD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -2989,71 +2989,6 @@ background
 				}
 			</convert>
 		</widget>
-	</screen>
-	<screen name="DiseqcTester" position="fill" flags="wfNoBorder" title="DiSEqC Tester">
-		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<eLabel text="Cancel" position="15,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-		<panel name="GreenBPanel"/>
-		<eLabel text="OK" position="305,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-		<widget source="progress_list" render="Listbox" position="490,80" size="785,450" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (10,0), size = (600,25), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the index name,
-						MultiContentEntryText(pos = (620,0), size = (150,25), flags = RT_HALIGN_RIGHT, text = 2) # index 2 is the status,
-					],
-				 "fonts": [gFont("Regular", 20)],
-				 "itemHeight": 25
-				}
-			</convert>
-		</widget>
-<!--		<eLabel name="overall_progress" text="Overall progress:" position="20,377" size="480,22" font="Regular;22" halign="center" transparent="1" foregroundColor="grey"/>
-		<widget source="overall_progress" render="Progress" position="20,405" size="480,20" borderWidth="2" backgroundColor="#254f7497"/>
-		<eLabel name="overall_progress" text="Progress:" position="20,430" size="480,22" font="Regular;22" halign="center" transparent="1" foregroundColor="grey"/>
-		<widget source="sub_progress" render="Progress" position="20,457" size="480,20" borderWidth="2" backgroundColor="#254f7497"/>
-		<eLabel name="" text="Failed:" position="120,490" size="140,22" font="Regular;22" halign="left" transparent="1" foregroundColor="grey"/>
-		<widget source="failed_counter" render="Label" position="280,490" size="100,20" font="Regular;22" foregroundColor="grey"/>
-		<eLabel name="" text="Succeeded:" position="120,525" size="140,22" font="Regular;22" halign="left" foregroundColor="grey"/>
-		<widget source="succeeded_counter" render="Label" position="280,525" size="100,20" font="Regular;22" foregroundColor="grey"/>
-		<eLabel name="" text="With errors:" position="120,560" size="140,22" font="Regular;22" halign="left" foregroundColor="grey"/>
-		<widget source="witherrors_counter" render="Label" position="280,560" size="100,20" font="Regular;22" foregroundColor="grey"/>
-		<eLabel name="" text="Not tested:" position="120,595" size="140,22" font="Regular;22" halign="left" foregroundColor="grey"/>
-		<widget source="untestable_counter" render="Label" position="280,595" size="100,20" font="Regular;22" foregroundColor="grey"/>-->
-		<ePixmap pixmap="icons/dish_scan.png" position="5,25" zPosition="0" size="119,110" transparent="1" alphatest="on"/>
-		<widget source="Frontend" render="Label" position="190,10" zPosition="2" size="260,20" font="Regular;19" halign="center" valign="center" transparent="1">
-			<convert type="FrontendInfo">SNRdB</convert>
-		</widget>
-		<eLabel name="snr" text="SNR:" position="120,35" size="60,22" font="Regular;21" halign="right" transparent="1"/>
-		<widget source="Frontend" render="Progress" position="190,35" size="260,20" pixmap="bar_snr.png" borderWidth="2" borderColor="#cccccc">
-			<convert type="FrontendInfo">SNR</convert>
-		</widget>
-		<widget source="Frontend" render="Label" position="460,35" size="60,22" font="Regular;21">
-			<convert type="FrontendInfo">SNR</convert>
-		</widget>
-		<eLabel name="agc" text="AGC:" position="120,60" size="60,22" font="Regular;21" halign="right" transparent="1"/>
-		<widget source="Frontend" render="Progress" position="190,60" size="260,20" pixmap="bar_snr.png" borderWidth="2" borderColor="#cccccc">
-			<convert type="FrontendInfo">AGC</convert>
-		</widget>
-		<widget source="Frontend" render="Label" position="460,60" size="60,22" font="Regular;21">
-			<convert type="FrontendInfo">AGC</convert>
-		</widget>
-		<eLabel name="ber" text="BER:" position="120,85" size="60,22" font="Regular;21" halign="right" transparent="1"/>
-		<widget source="Frontend" render="Progress" position="190,85" size="260,20" pixmap="bar_ber.png" borderWidth="2" borderColor="#cccccc">
-			<convert type="FrontendInfo">BER</convert>
-		</widget>
-		<widget source="Frontend" render="Label" position="460,85" size="60,22" font="Regular;21">
-			<convert type="FrontendInfo">BER</convert>
-		</widget>
-		<eLabel name="lock" text="Lock:" position="120,115" size="60,22" font="Regular;21" halign="right"/>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="190,110" zPosition="1" size="38,31" alphatest="on">
-			<convert type="FrontendInfo">LOCK</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="190,110" zPosition="1" size="38,31" alphatest="on">
-			<convert type="FrontendInfo">LOCK</convert>
-			<convert type="ConditionalShowHide">Invert</convert>
-		</widget>
-		<widget source="CmdText" render="Label" position="490,530" size="785,100" font="Regular;22" foregroundColor="grey"/>
 	</screen>
 	<!-- ## SDG ImageDownLoader## -->
 	<screen name="s4fFeedsServersScreen" position="fill" flags="wfNoBorder" title="Image Feeds List">
