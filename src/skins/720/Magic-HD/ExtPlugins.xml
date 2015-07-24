@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-HD-ViX PlugIn-addition Vs 2.00	-->
+	<!--	Skin: Magic-HD-ViX PlugIn-addition Vs 2.1	-->
 	<!--	This skin is part of the Magic-HD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -41,137 +41,6 @@
 		<panel name="GreenBPanel"/>
 		<widget name="oktext" backgroundColor="secondBG" font="Regular;22" halign="left" position="340,687" size="220,26" transparent="1" zPosition="1"/>
 		<widget name="liste" scrollbarMode="showOnDemand" position="520,90" size="755,575" transparent="1"/>
-	</screen>
-	<!-- ## MyTube ## -->
-	<screen name="MyTubePlayerMainScreen" position="fill" title="InfoBar" flags="wfNoBorder">
-		<panel name="BasicTemplate2"/>
-		<widget name="thumbnail" position="0,0" size="130,98" alphatest="on"/>
-		<panel name="RedBPanel"/>
-		<panel name="GreenBPanel"/>
-		<panel name="YellowBPanel"/>
-		<panel name="MenuBPanel"/>
-		<panel name="InfoBPanel"/>
-		<panel name="RedT1Panel"/>
-		<panel name="GreenT1Panel"/>
-		<panel name="YellowT1Panel"/>
-		<eLabel text="'Text' = Virtual Keyboard" backgroundColor="secondBG" font="Regular;22" halign="left" position="890,687" size="300,26" transparent="1" zPosition="1"/>
-		<widget name="HelpWindow" position="65,500" size="1,1" transparent="1" zPosition="3" alphatest="on"/>
-		<widget name="config" position="520,82" size="755,30" scrollbarMode="showNever" transparent="1" zPosition="2"/>
-		<widget render="Listbox" scrollbarMode="showOnDemand" position="520,112" size="755,539" source="feedlist" transparent="1" zPosition="1">
-			<convert type="TemplatedMultiContent">
-				{"templates":
-					{"default": (77,[
-							MultiContentEntryPixmapAlphaTest(pos = (5,1),size = (100,75),png = 4),
-							MultiContentEntryText(pos = (110,1),size = (800,25),font=0,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 1),
-							MultiContentEntryText(pos = (110,27),size = (380,20),font=1,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 5),
-							MultiContentEntryText(pos = (110,48),size = (380,20),font=1,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 6),
-							MultiContentEntryText(pos = (500,27),size = (300,20),font=1,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 7),
-							MultiContentEntryText(pos = (500,48),size = (300,20),font=1,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 8),
-						]),
-					"state": (77,[
-							MultiContentEntryText(pos = (20,1),size = (800,40),font=2,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 0),
-							MultiContentEntryText(pos = (20,43),size = (800,30),font=3,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 1),
-						])
-					},
-					"fonts": [gFont("Regular",20),gFont("Regular",16),gFont("Regular",22),gFont("Regular",18)],
-					"itemHeight": 77
-				}
-				</convert>
-		</widget>
-	</screen>
-	<screen name="MyTubePlayer" position="0,30" size="1280,100" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="PlayerPanel"/>
-	</screen>
-	<screen name="MyTubeSettingsScreen" flags="wfNoBorder" position="fill">
-		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<panel name="GreenBPanel"/>
-		<panel name="RedT1Panel"/>
-		<panel name="GreenT1Panel"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;22" position="520,90" size="755,575" transparent="1"/>
-	</screen>
-	<screen name="MyTubeVideoInfoScreen" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<panel name="RedT1Panel"/>
-		<widget alphatest="on" name="thumbnail" position="0,0" size="130,98"/>
-		<widget font="Regular;20" foregroundColor="foreground" halign="left" name="title" position="590,100" size="600,50" transparent="1" valign="center" zPosition="5"/>
-		<widget position="590,400" render="Listbox" scrollbarMode="showNever" selectionDisabled="1" size="600,200" source="infolist" transparent="1" zPosition="6">
-			<convert type="TemplatedMultiContent">
-				{"templates":
-					{"default": (110,[
-							MultiContentEntryPixmapAlphaTest(pos = (0,4),size = (130,98),png = 0),
-							MultiContentEntryPixmapAlphaTest(pos = (130,4),size = (130,98),png = 1),
-							MultiContentEntryPixmapAlphaTest(pos = (260,4),size = (130,98),png = 2),
-							MultiContentEntryPixmapAlphaTest(pos = (390,4),size = (130,98),png = 3),
-						]),
-					"state": (110,[
-							MultiContentEntryText(pos = (10,40),size = (550,38),font=2,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 0),
-						])
-					},
-					"fonts": [gFont("Regular",18),gFont("Regular",14),gFont("Regular",22)],
-					"itemHeight": 110
-				}
-				</convert>
-		</widget>
-		<widget alphatest="on" name="Magic-HD/starsbg" pixmap="dvr/starsbar_empty.png" position="260,520" size="100,20" transparent="1" zPosition="5"/>
-		<widget name="stars" pixmap="dvr/starsbar_filled.png" position="260,520" size="100,20" transparent="1" zPosition="6"/>
-		<widget font="Regular;20" halign="left" name="author" position="70,400" size="300,24" transparent="1" valign="top" zPosition="10"/>
-		<widget font="Regular;20" halign="left" name="duration" position="380,400" size="200,24" transparent="1" valign="top" zPosition="10"/>
-		<widget font="Regular;20" halign="left" name="published" position="70,460" size="300,24" transparent="1" valign="top" zPosition="10"/>
-		<widget font="Regular;20" halign="left" name="views" position="380,460" size="200,24" transparent="1" valign="top" zPosition="10"/>
-		<widget font="Regular;20" halign="left" name="tags" position="70,560" size="500,60" transparent="1" valign="top" zPosition="10"/>
-		<widget font="Regular;20" halign="left" name="detailtext" position="590,150" size="600,250" transparent="1" valign="top" zPosition="10"/>
-	</screen>
-	<screen backgroundColor="background" flags="wfNoBorder" name="MyTubeSuggestionsListScreen" position="378,218" size="850,260" zPosition="6">
-		<eLabel backgroundColor="secondBG" position="0,0" size="850,260" zPosition="7"/>
-		<widget position="0,0" render="Listbox" scrollbarMode="showOnDemand" size="850,260" source="suggestionslist" transparent="1" zPosition="8">
-			<convert type="TemplatedMultiContent">
-					{"template": [
-							MultiContentEntryText(pos = (0,1),size = (610,24),font=0,flags = RT_HALIGN_LEFT,text = 0),
-							MultiContentEntryText(pos = (620,1),size = (180,24),font=1,flags = RT_HALIGN_RIGHT,text = 1),
-						],
-					"fonts": [gFont("Regular",20),gFont("Regular",18)],
-					"itemHeight": 25
-					}
-				</convert>
-		</widget>
-	</screen>
-	<screen backgroundColor="background" flags="wfNoBorder" name="MyTubeHistoryScreen" position="378,218" size="850,260" zPosition="6">
-		<eLabel backgroundColor="secondBG" position="0,0" size="850,260" zPosition="7"/>
-		<widget position="0,0" render="Listbox" scrollbarMode="showOnDemand" size="850,260" source="historylist" transparent="1" zPosition="8">
-			<convert type="TemplatedMultiContent">
-					{"template": [
-							MultiContentEntryText(pos = (0,1),size = (800,24),font=0,flags = RT_HALIGN_LEFT,text = 0),
-						],
-					"fonts": [gFont("Regular",20),gFont("Regular",18)],
-					"itemHeight": 25
-					}
-				</convert>
-		</widget>
-	</screen>
-	<screen name="MyTubeVideoHelpScreen" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<panel name="RedT1Panel"/>
-		<widget name="detailtext" font="Regular;22" position="520,90" size="755,575" valign="top" transparent="1"/>
-	</screen>
-	<screen name="MyTubeTasksScreen" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<panel name="RedT1Panel"/>
-		<widget render="Listbox" source="tasklist" scrollbarMode="showOnDemand" font="Regular;22" position="520,82" size="755,583" transparent="7"/>
-		<convert type="TemplatedMultiContent">
-					{"template": [
-							MultiContentEntryText(pos = (0,1),size = (400,24),font=1,flags = RT_HALIGN_LEFT,text = 1),
-							MultiContentEntryText(pos = (410,1),size = (150,24),font=1,flags = RT_HALIGN_RIGHT,text = 2),
-							MultiContentEntryProgress(pos = (570,1),size = (100,24),percent = -3),
-							MultiContentEntryText(pos = (680,1),size = (120,24),font=1,flags = RT_HALIGN_RIGHT,text = 4),
-						],
-					"fonts": [gFont("Regular",20),gFont("Regular",18)],
-					"itemHeight": 25
-					}
-				</convert>
 	</screen>
 	<!-- ## Classic NetRadio ## -->
 	<screen name="AboutScreen" position="fill" title="NetRadio Classic v.2.2c-Tunisiasat" flags="wfNoBorder">
@@ -1630,6 +1499,99 @@ background
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1160,682" zPosition="1" size="35,25" transparent="1" alphatest="on"/>
 		<widget name="config" position="490,80" size="785,588" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="5,379" size="477,264" zPosition="2" font="Regular;22" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<!-- ## YouTube ## -->
+	<screen name="YouTubeMain" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<widget name="text" position="490,80" size="785,32" zPosition="2" font="Regular;30" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="list" render="Listbox" position="490,115" size="785,546" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos=(0,0), size=(100,72), png=2), # Thumbnail
+					MultiContentEntryText(pos=(110,0), size=(675,54), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=3), # Title
+					MultiContentEntryText(pos=(120, 55), size=(200,23), font=1, flags=RT_HALIGN_LEFT, text=4), # Views
+					MultiContentEntryText(pos=(360,55), size=(200,23), font=1, flags=RT_HALIGN_LEFT, text=5), # Duration
+					],
+				"fonts": [gFont("Regular",26), gFont("Regular",22)],
+				"itemHeight": 78}
+			</convert>
+		</widget>
+		<widget name="thumbnail" position="0,0" size="100,72"/> # Thumbnail size in list
+		</screen>
+	<screen name="YouTubeSearch" position="0,0" size="1280,720" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="MenuBPanel"/>
+		<widget name="config" position="490,80" size="785,45" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="list" render="Listbox" position="490,130" size="785,410" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent" >
+				{"template": [MultiContentEntryText(pos=(15,1), size=(770,45), font=0, flags=RT_HALIGN_LEFT, text=0)],
+				"fonts": [gFont("Regular",30)],
+				"itemHeight": 45}
+			</convert>
+		</widget>
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="520,500" size="1,1" zPosition="1" transparent="1" alphatest="on"/>
+	</screen>
+	<screen name="XXXYouTubeDownloadList" position="0,0" size="1280,720" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+				<widget source="list" render="Listbox" position="490,80" size="785,584" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1">
+					<convert type="TemplatedMultiContent" >
+						{"template": [
+							MultiContentEntryText(pos=(0,0), size=(490,33), font=0, flags=RT_HALIGN_LEFT, text=1), # Title
+							MultiContentEntryText(pos=(345,1), size=(225,33), font=0, flags=RT_HALIGN_RIGHT, text=2), # State
+							MultiContentEntryProgress(pos=(585,6), size=(150,33), percent=-3), # Progress
+							MultiContentEntryText(pos=(750,1), size=(120,33), font=0, flags=RT_HALIGN_LEFT, text=4), # Percentage
+							],
+						"fonts": [gFont("Regular",25)],
+						"itemHeight": 50}
+					</convert>
+				</widget>
+	</screen>
+<!--
+YouTubeDownloadList
+<screen position="center,center" size="945,555">
+				<widget source="list" render="Listbox" position="center,45" size="900,405" \
+					scrollbarMode="showOnDemand" >
+					<convert type="TemplatedMultiContent" >
+						{"template": [
+							MultiContentEntryText(pos=(15,1), size=(465,33), \
+								font=0, flags=RT_HALIGN_LEFT, text=1), # Title
+							MultiContentEntryText(pos=(345,1), size=(225,33), \
+								font=0, flags=RT_HALIGN_RIGHT, text=2), # State
+							MultiContentEntryProgress(pos=(585,6), size=(150,33), \
+								percent=-3), # Progress
+							MultiContentEntryText(pos=(750,1), size=(120,33), \
+								font=0, flags=RT_HALIGN_LEFT, text=4), # Percentage
+							],
+						"fonts": [gFont("Regular",30)],
+						"itemHeight": 45}
+					</convert>
+				</widget>
+				<ePixmap position="center,484" size="210,60" pixmap="skin_default/buttons/red.png" \
+					transparent="1" alphatest="on" />
+				<widget source="key_red" render="Label" position="center,485" zPosition="2" \
+					size="210,60" valign="center" halign="center" font="Regular;33" transparent="1" />
+				</screen>-->
+	<screen name="YouTubeInfo" position="0,0" size="1280,720" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<widget name="title" position="490,80" size="785,45" font="Regular;22" foregroundColor="secondFG" halign="center"/>
+		<widget name="pic" position="490,130" size="400,225" transparent="1" alphatest="blend" zPosition="3"/>
+		<widget name="description" position="490,360" size="785,304" zPosition="2" font="Regular;18" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="grey" valign="center" halign="center"/>
+		<widget name="views" position="50,400" size="200,30" font="Regular;22" foregroundColor="grey" zPosition="2"/>
+		<widget name="duration" position="50,440" size="200,30" font="Regular;22" foregroundColor="grey" zPosition="2"/>
+		<widget name="likes" position="50,480" size="200,30" font="Regular;22" foregroundColor="grey" zPosition="2"/>
+		<widget name="dislikes" position="50,520" size="200,30" font="Regular;22" foregroundColor="grey" zPosition="2"/>
 	</screen>
 	<!-- ## YouTube-VU ## -->
 	<screen name="YoutubeTVWindow" position="fill" flags="wfNoBorder" title="">
