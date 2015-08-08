@@ -239,7 +239,6 @@ src/skins/1080/Magic-FHD/networkbrowser/Makefile
 src/skins/1080/Magic-FHD/spinner/Makefile
 src/skins/1080/Magic-FHD/window/Makefile
 
-
 src/skins/1080/MetrixFHD/Makefile
 src/skins/1080/MetrixFHD/buttons/Makefile
 src/skins/1080/MetrixFHD/buttonsHD/Makefile
