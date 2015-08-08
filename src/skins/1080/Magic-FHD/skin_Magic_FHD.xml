@@ -332,7 +332,7 @@
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
-		<widget name="list" position="780,123" size="1132,874" EventFontSingle="Regular;32" itemHeight="50" transparent="1" scrollbarMode="showOnDemand" zPosition="3"/>
+		<widget name="list" position="780,123" size="1132,874" EventFontSingle="Regular;32" itemHeight="50" transparent="1" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1"/>
 		<widget name="number" position="780,123" size="1132,874" zPosition="5" backgroundColor="background" transparent="0" font="Regular;54" borderColor="black" borderWidth="1" valign="center" halign="center"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" backgroundColor="background" transparent="1" halign="center" valign="center" foregroundColor="grey" zPosition="1"/>
 		<widget source="Event" render="Label" position="7,532" size="750,72" transparent="1" foregroundColor="secondFG" font="Regular;34" halign="center" valign="top">
@@ -791,7 +791,7 @@
 		<widget source="menu" render="Listbox" position="780,123" size="1102,850" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [	MultiContentEntryText(pos = (20,5), size = (1000,50), flags = RT_HALIGN_LEFT, text = 0	) ],
-				"fonts": [gFont("Regular",34)],
+				"fonts": [gFont("menulist",34)],
 				"itemHeight": 50
 				}
 			</convert>
@@ -807,7 +807,7 @@
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1740,1023" zPosition="1" size="52,37" transparent="1" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget name="footnote" position="1125,1030" size="525,30" zPosition="1" font="Regular;33" transparent="1" foregroundColor="grey"/>
+		<widget name="footnote" position="1125,1023" size="525,30" zPosition="1" font="Regular;33" transparent="1" foregroundColor="grey"/>
 	</screen>
 <!-- About -->
 	<screen name="AboutOE" position="fill" flags="wfNoBorder">
@@ -2233,12 +2233,12 @@ self.autoResize()
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="lab2" position="885,135" size="255,30" font="Regular;33" halign="lef" zPosition="2" transparent="0" valign="center" foregroundColor="grey"/>
-		<widget name="list" position="1162,406" size="360,225" transparent="0" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="lab1" position="885,406" size="255,30" font="Regular;33" halign="left" zPosition="2" transparent="0" foregroundColor="grey"/>
+		<widget name="lab2" position="885,135" size="255,30" font="menulist;34" halign="lef" zPosition="2" transparent="0" valign="center" foregroundColor="grey"/>
+		<widget name="list" position="1162,406" size="360,225" font="menulist;34" transparent="0" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="lab1" position="885,406" size="255,30" font="menulist;34" halign="left" zPosition="2" transparent="0" foregroundColor="grey"/>
 		<widget name="activecam" position="1162,135" size="360,225" font="Regular;30" halign="left" zPosition="2" transparent="0" noWrap="1" foregroundColor="grey"/>
 		<applet type="onLayoutFinish">
-		self["list"].instance.setItemHeight(40)
+		self["list"].instance.setItemHeight(45)
 			</applet>
 	</screen>
 	<screen name="VIXSoftcamLog" position="fill" flags="wfNoBorder">
@@ -2412,10 +2412,10 @@ self.autoResize()
 		<widget source="nimlist" render="Listbox" position="780,123" size="1132,874" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (10,7),size = (560,30),flags = RT_HALIGN_LEFT,text = 1),# index 1 is the nim name,
-						MultiContentEntryText(pos = (10,40),size = (700,250),font = 1,flags = RT_HALIGN_LEFT,text = 2),# index 2 is a description of the nim settings,
+						MultiContentEntryText(pos = (10,7),size = (1100,40),flags = RT_HALIGN_LEFT,text = 1),# index 1 is the nim name,
+						MultiContentEntryText(pos = (10,40),size = (1100,375),font = 1,flags = RT_HALIGN_LEFT,text = 2),# index 2 is a description of the nim settings,
 					],
-				 "fonts": [gFont("Regular",22),gFont("Regular",20)],
+				 "fonts": [gFont("menulist",33),gFont("menulist",30)],
 				 "itemHeight": 194
 				}
 			</convert>
@@ -2427,7 +2427,7 @@ self.autoResize()
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="config" position="780,120" size="1132,882" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" itemHeight="28" enableWrapAround="1"/>
+		<widget name="config" position="780,120" size="1132,882" font="menulist;34" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="SelectSatsEntryScreen" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -2435,23 +2435,23 @@ self.autoResize()
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="list" position="735,120" size="1177,840" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="hint" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="list" position="735,120" size="1177,840" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="hint" position="7,568" size="715,396" font="menulist;34" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="ScanSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="config" position="780,123" size="1132,840" font="Regular;33" itemHeight="28" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,123" size="1132,840" font="menulist;34" itemHeight="45" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 <!--		<widget name="introduction" position="15,600" size="715,150" font="Regular;33" selectionDisabled="1" transparent="1" foregroundColor="secondFG" halign="center"/>-->
 	</screen>
 	<screen name="ScanSimple" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="header" position="885,180" size="900,42" backgroundColor="darkgrey" transparent="1" foregroundColor="grey" font="Regular;36"/>
-		<widget name="config" position="885,270" size="900,525" transparent="1" scrollbarMode="showOnDemand" font="Regular;33" foregroundColor="grey" itemHeight="28" enableWrapAround="1"/>
-		<widget name="footer" position="15,600" size="715,150" font="Regular;33" selectionDisabled="1" transparent="1" foregroundColor="secondFG" halign="center"/>
+		<widget name="header" position="885,180" size="900,42" font="menulist;37" backgroundColor="darkgrey" transparent="1" foregroundColor="grey" />
+		<widget name="config" position="885,270" size="900,525" font="menulist;34" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="footer" position="15,600" size="715,150" font="menulist;34" selectionDisabled="1" transparent="1" foregroundColor="secondFG" halign="center"/>
 	</screen>
 	<screen name="DeleteBouquets" position="0,0" size="1920,1080" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -2463,11 +2463,11 @@ self.autoResize()
 				<convert type="TemplatedMultiContent">
 					{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (32, 32), png = 0),
-						MultiContentEntryText(pos = (47, 0), size = (400, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-						MultiContentEntryText(pos = (450, 0), size = (120, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+						MultiContentEntryText(pos = (47, 0), size = (600, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+						MultiContentEntryText(pos = (450, 0), size = (180, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 						],
-						"fonts": [gFont("Regular", 22)],
-						"itemHeight": 30
+						"fonts": [gFont("menulist", 34)],
+						"itemHeight": 45
 					}
 				</convert>
 			</widget>
@@ -2503,7 +2503,7 @@ self.autoResize()
 		<widget name="nimlist" scrollbarMode="showOnDemand" itemHeight="32" font="Regular;36" position="780,123" size="1132,874" foregroundColor="grey"	transparent="1"/>
 	</screen>
 	<screen name="Satfinder" position="fill" flags="wfNoBorder">
--->		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
+		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
 		<widget source="Title" foregroundColor="grey" render="Label" position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;37" halign="left" valign="center"/>
 		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;39" halign="right" position="1522,22" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Format:%-H:%M</convert>
@@ -2592,7 +2592,7 @@ self.autoResize()
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="list" position="735,120" size="1177,882" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="list" position="735,120" size="1177,882" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="TunerScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2863,114 +2863,6 @@ self.autoResize()
 	</screen>
 	<screen name="PiPSetup" position="center,center" size="1200,300" flags="wfNoBorder" backgroundColor="transparent" zPosition="2">
 		<widget name="text" position="0,0" size="1200,300" backgroundColor="transparent" transparent="1" font="Regular;33" borderColor="black" borderWidth="3" valign="center" halign="center"/>
-	</screen>
-	<!-- ## AutoBouquetsMaker ## -->
-	<screen name="AutoBouquetsMaker_Menu" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" scrollbarMode="showOnDemand" position="780,123" size="1132,840" transparent="1" foregroundColor="grey" enableWrapAround="1">
-			<convert type="TemplatedMultiContent">
-			{"template": [	MultiContentEntryText(pos = (0,0), size = (755,583), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1) ],
-					"fonts": [gFont("Regular", 25)],
-					"itemHeight": 38
-				}
-			</convert>
-		</widget>
-	</screen>
-	<screen name="AutoBouquetsMaker_ProvidersSetup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red1Panel"/>
-		<panel name="Green1Panel"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="28" position="780,123" size="1132,840" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="description" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget name="pleasewait" position="780,123" size="1132,840" font="Regular;39" transparent="1" halign="center" valign="center" foregroundColor="grey"/>
-	</screen>
-	<screen name="AutoBouquetsMaker_Setup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red1Panel"/>
-		<panel name="Green1Panel"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="28" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="description" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget name="pleasewait" position="780,123" size="1132,874" font="Regular;39" transparent="1" halign="center" valign="center" foregroundColor="grey"/>
-		<widget name="text" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-	</screen>
-	<screen name="AutoBouquetsMaker_Ordering" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red1Panel"/>
-		<panel name="Green1Panel"/>
-		<panel name="Yellow1Panel"/>
-		<panel name="Blue1Panel"/>
-		<widget source="list" render="Listbox" scrollbarMode="showOnDemand" position="780,123" size="1132,840" transparent="1" foregroundColor="grey" enableWrapAround="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-					MultiContentEntryText(pos = (10,1), size = (440,32), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
-					],
-					"fonts": [gFont("Regular", 22)],
-					"itemHeight": 28
-				}
-			</convert>
-		</widget>
-		<widget name="pleasewait" position="780,123" size="1132,840" font="Regular;39" transparent="1" halign="center" valign="center" foregroundColor="grey"/>
-	</screen>
-	<screen name="AutoBouquetsMaker_Providers" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red1Panel"/>
-		<panel name="Green1Panel"/>
-		<widget source="list" render="Listbox" scrollbarMode="showOnDemand" position="780,123" size="1132,882" transparent="1" foregroundColor="grey" enableWrapAround="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-					MultiContentEntryPixmapAlphaBlend(pos = (10,0), size = (32,32), png = 0),
-					MultiContentEntryText(pos = (450,0), size = (120,30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					],
-					"fonts": [gFont("Regular", 22)],
-					"itemHeight": 28
-				}
-			</convert>
-		</widget>
-		<widget name="pleasewait" position="780,123" size="1132,840" font="Regular;39" transparent="1" halign="center" valign="center" foregroundColor="grey"/>
-	</screen>
-	<screen name="AutoBouquetsMaker_HideSections" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red1Panel"/>
-		<panel name="Green1Panel"/>
-		<widget source="list" render="Listbox" scrollbarMode="showOnDemand" position="780,123" size="1132,882" transparent="1" foregroundColor="grey" enableWrapAround="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-					MultiContentEntryPixmapAlphaBlend(pos = (10,0), size = (32,32), png = 0),
-					MultiContentEntryText(pos = (47,0), size = (400,30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (450,0), size = (120,30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
-					],
-					"fonts": [gFont("Regular", 22)],
-					"itemHeight": 28
-				}
-			</convert>
-		</widget>
-	</screen>
-	<screen name="AutoBouquetsMaker_KeepBouquets" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red1Panel"/>
-		<panel name="Green1Panel"/>
-		<widget source="list" render="Listbox" scrollbarMode="showOnDemand" position="780,123" size="1132,882" transparent="1" foregroundColor="grey" enableWrapAround="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-					MultiContentEntryPixmapAlphaBlend(pos = (10,0), size = (32,32), png = 0),
-					MultiContentEntryText(pos = (47,0), size = (400,30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (450,0), size = (120,30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
-					],
-					"fonts": [gFont("Regular", 22)],
-					"itemHeight": 28
-				}
-			</convert>
-		</widget>
-	</screen>
-	<screen name="AutoBouquetsMaker_Log" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget name="list" scrollbarMode="showOnDemand" font="Regular;30" itemHeight="28" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="AutoBouquetsMaker_About" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red1Panel"/>
-		<widget name="about" scrollbarMode="showOnDemand" font="Regular;30" itemHeight="28" position="780,123" size="1132,645" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="oealogo" position="780,772" size="265,195" alphatest="on" zPosition="4"/>
 	</screen>
 	<!-- ##Picture-Player## -->
 	<screen name="picshow" position="fill" flags="wfNoBorder">
