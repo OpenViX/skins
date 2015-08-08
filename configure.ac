@@ -225,6 +225,21 @@ src/skins/720/ViX-Night-HD/meta/Makefile
 
 src/skins/1080/Makefile
 
+src/skins/1080/Magic-FHD/Makefile
+src/skins/1080/Magic-FHD/border/Makefile
+src/skins/1080/Magic-FHD/buttons/Makefile
+src/skins/1080/Magic-FHD/countries/Makefile
+src/skins/1080/Magic-FHD/dvr/Makefile
+src/skins/1080/Magic-FHD/epg/Makefile
+src/skins/1080/Magic-FHD/fonts/Makefile
+src/skins/1080/Magic-FHD/icons/Makefile
+src/skins/1080/Magic-FHD/infobar/Makefile
+src/skins/1080/Magic-FHD/meta/Makefile
+src/skins/1080/Magic-FHD/networkbrowser/Makefile
+src/skins/1080/Magic-FHD/spinner/Makefile
+src/skins/1080/Magic-FHD/window/Makefile
+
+
 src/skins/1080/MetrixFHD/Makefile
 src/skins/1080/MetrixFHD/buttons/Makefile
 src/skins/1080/MetrixFHD/buttonsHD/Makefile

@@ -1,0 +1,163 @@
+	<screen name="XXXXX" position="0,0" size="1920,1080" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<panel name="TextBPanel"/>
+
+		<widget name="config" position="735,120" size="1177,876" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="text" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+
+
+		<eLabel text="Cancel" position="22,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
+		<ePixmap pixmap="Magic-HD/buttons/red.png" alphatest="on" position="150,964" size="39,39"/>
+
+		<ePixmap pixmap="Magic-HD/buttons/green.png" alphatest="on" position="585,964" size="39,39"/>
+		<eLabel text="OK" position="457,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
+
+
+		<eLabel text="'Exit' = Cancel" backgroundColor="secondBG" font="Regular;33" halign="left" position="217,1023" size="330,39" transparent="1" zPosition="1"/>
+		<eLabel text="'OK' = Accept" backgroundColor="secondBG" font="Regular;33" halign="left" position="652,1023" size="330,39" transparent="1" zPosition="1"/>
+
+		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1762,1030"	size="52,37"/>
+		<ePixmap pixmap="buttons/key_info.png" alphatest="on" position="1822,1030" size="52,37"/>
+		<ePixmap pixmap="buttons/key_text.png" alphatest="on" position="1875,1030" size="52,37"/>
+
+		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1785,1023" size="52,39"/>
+
+		<ePixmap pixmap="Magic-HD-Common/buttons/key_ok.png" alphatest="on" position="22,1023" size="52,39"/>
+		<eLabel text="Accept" backgroundColor="secondBG" font="Regular;33" halign="left" position="75,1023" size="330,39" transparent="1" zPosition="1"/>
+
+
+		<ePixmap pixmap="buttons/key-exit.png" alphatest="on" position="457,1023" size="105,45"/>
+		<eLabel text="Cancel" backgroundColor="secondBG" font="Regular;33" halign="left" position="570,1023" size="300,39" transparent="1" zPosition="1"/>
+
+		<widget source="satus" render="Label" position="15,870" size="750,90" zPosition="10" font="Regular;33" halign="center" transparent="0"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/vkey_icon.png" position="1875,1030" size="52,37" zPosition="1" transparent="1" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		
+		<widget name="HelpWindow" pixmap="vkey_icon.png" position="22,600" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
+
+
+<!-- Inhoud van BasicTemplate
+		<ePixmap pixmap="Magic-HD-Common/border/top2_bg.png" position="0,0" size="1920,112"/>
+		<ePixmap pixmap="Magic-HD-Common/border/bottom_bg.png" position="0,1012" size="1920,3"/>
+		<widget source="Title" foregroundColor="grey" render="Label" position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;37" valign="center"/>
+		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;39" halign="right" position="1522,22" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Format:%-H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;30" halign="right" position="1522,67" size="375,37" transparent="1" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="0,115" size="723,409" backgroundColor="transparent" zPosition="1"/>
+		<widget source="session.CurrentService" render="Label" position="7,127" size="715,30" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" font="Regular;28" borderColor="black" valign="center" halign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<ePixmap pixmap="Magic-HD-Common/logos/vix.png" position="37,975" size="450,37" alphatest="on"/>
+    -->
+<!--
+	<screen name="BasicTemplate2">
+		<ePixmap pixmap="Magic-HD-Common/border/top2_bg.png" position="0,0" size="1920,112"/>
+		<ePixmap pixmap="Magic-HD-Common/border/bottom_bg.png" position="0,1012" size="1920,3"/>
+		<widget source="Title" render="Label" foregroundColor="grey"	position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;37" valign="center"/>
+		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;39" halign="right" position="1522,22" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Format:%-H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;30" halign="right" position="1522,67" size="375,37" transparent="1" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="0,115" size="723,409" backgroundColor="transparent" zPosition="1"/>
+		<widget source="session.CurrentService" render="Label" position="7,127" size="715,30" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" font="Regular;28" borderColor="black" valign="center" halign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+-->
+<!--
+	<screen name="BasicTemplate3">
+		<ePixmap pixmap="Magic-HD-Common/border/top2_bg.png" position="0,0" size="1920,112"/>
+		<ePixmap pixmap="Magic-HD-Common/border/bottom_bg.png" position="0,1012" size="1920,3"/>
+		<widget source="Title" render="Label" foregroundColor="grey"	position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;37" valign="center"/>
+		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;39" halign="right" position="1522,22" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Format:%-H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;30" halign="right" position="1522,67" size="375,37" transparent="1" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<ePixmap pixmap="Magic-HD-Common/logos/vix.png" position="37,975" size="450,37" alphatest="on"/>
+	</screen>
+-->
+<!-- Inhoud van ButtonTemplates
+	<screen name="Red1Panel">
+		<ePixmap pixmap="Magic-HD-Common/buttons/red.png" position="22,1023" size="39,39" alphatest="on"/>
+		<widget name="key_red" position="75,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="buttonred" position="75,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="cancel" position="75,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="Cancel" position="75,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="key_r" position="75,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="ButtonRedtext" position="75,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+	</screen>
+
+	<screen name="Green1Panel">
+		<ePixmap pixmap="Magic-HD-Common/buttons/green.png" position="457,1023" size="39,39" alphatest="on"/>
+		<widget name="key_green" position="510,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="buttongreen" position="510,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="ok" position="510,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="OK" position="510,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="key_g" position="510,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="ButtonGreentext" position="510,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+	</screen>
+
+	<screen name="Yellow1Panel">
+		<ePixmap pixmap="Magic-HD-Common/buttons/yellow.png" position="870,1023" size="39,39" alphatest="on"/>
+		<widget name="key_yellow" position="921,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="buttonyellow" position="921,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="key_y" position="921,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="ButtonYellowtext" position="921,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+	</screen>
+
+	<screen name="Blue1Panel">
+		<ePixmap pixmap="Magic-HD-Common/buttons/blue.png" position="1260,1023" size="39,39" alphatest="on"/>
+		<widget name="key_blue" position="1312,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="buttonblue" position="1312,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="key_b" position="1312,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="ButtonBluetext" position="1312,1023" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+	</screen>
+
+	<screen name="Red2Panel">
+		<ePixmap pixmap="Magic-HD-Common/buttons/red.png" position="22,1023" size="39,39" alphatest="on"/>
+		<widget source="key_red" render="Label" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="left" position="75,1023" size="330,39" transparent="1" zPosition="1"/>
+	</screen>
+
+	<screen name="Green2Panel">
+		<ePixmap pixmap="Magic-HD-Common/buttons/green.png" position="457,1023" size="39,39" alphatest="on"/>
+		<widget source="key_green" render="Label" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="left" position="510,1023" size="330,39" transparent="1" zPosition="1"/>
+	</screen>
+
+	<screen name="Yellow2Panel">
+		<ePixmap pixmap="Magic-HD-Common/buttons/yellow.png" position="870,1023" size="39,39" alphatest="on"/>
+		<widget source="key_yellow" render="Label" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="left" position="921,1023" size="330,39" transparent="1" zPosition="1"/>
+	</screen>
+
+	<screen name="Blue2Panel">
+		<ePixmap pixmap="Magic-HD-Common/buttons/blue.png" position="1260,1023" size="39,39" alphatest="on"/>
+		<widget source="key_blue" render="Label" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="left" position="1312,1023" size="330,39" transparent="1" zPosition="1"/>
+	</screen>-->
+
+
+
+
+
+foregroundColor="secondFG"
+
+
+selectionDisabled="1" transparent="1" foregroundColor="unf47d19"
+unf47d19"
+size="715,405" zPosition="4" font="Regular;31" foregroundColor="#f47d19"
+
+font="Regular;33" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"
