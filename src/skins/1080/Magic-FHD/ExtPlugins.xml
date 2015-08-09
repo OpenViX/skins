@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.1	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.2	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -56,7 +56,7 @@
 		<eLabel text="Accept" position="75,1024" size="330,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG"  halign="left" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="PermanentClockScreen" position="0,0" size="180,45" zPosition="-1" backgroundColor="transparent" title="%s" flags="wfNoBorder">
-		<widget source="global.CurrentTime" render="Label" position="1,1" size="180,45" backgroundColor="transparent" transparent="1" zPosition="0" foregroundColor="grey" borderWidth="2" font="Regular;39" borderColor="black" valign="center" halign="center">
+		<widget source="global.CurrentTime" render="Label" position="1,1" size="180,45" backgroundColor="transparent" transparent="1" zPosition="0" foregroundColor="grey" borderWidth="2" font="RegularOld;39" borderColor="black" valign="center" halign="center">
 			<convert type="ClockToText">Default</convert>
 		</widget>
 	</screen>
@@ -497,13 +497,13 @@
 	<!-- ## AutoBouquetsMaker ## -->
 	<screen name="AutoBouquetsMaker_Menu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" position="780,123" size="1132,840" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1">
+		<widget source="list" render="Listbox" position="780,123" size="1132,855" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 			{"template": [
 				MultiContentEntryText(pos = (0,0), size = (1100,583), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 				],
 				"fonts": [gFont("menulist",34)],
-				"itemHeight": 58
+				"itemHeight": 45
 			}
 			</convert>
 		</widget>
@@ -603,6 +603,22 @@
 		<panel name="Red1Panel"/>
 		<widget name="about" position="780,123" size="1132,585" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="oealogo" position="780,772" size="265,195" alphatest="on" zPosition="4"/>
+	</screen>
+	<!-- ## FastScan## -->
+	<screen name="FastScanScreen" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<eLabel text="Cancel" position="55,1023" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="GreenBPanel"/>
+		<eLabel text="Save" position="490,1023" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="config" position="780,123" size="1132,832" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="introduction" position="15,600" size="715,150" font="menulist;33" halign="center" selectionDisabled="1" foregroundColor="secondFG" transparent="1"/>
+	</screen>
+	<screen  name="FastScanStatus" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="frontend" pixmap="icons/scan-s.png" position="735,165" size="96,96" transparent="1" alphatest="on"/>
+		<widget name="scan_state" position="900,165" size="1050,45" font="menulist;27" zPosition="2"/>
+		<widget name="scan_progress" position="900,217" size="720,22" pixmap="infobar/progress_big.png" borderWidth="1" borderColor="grey"/>
 	</screen>
 
 	</skin>
