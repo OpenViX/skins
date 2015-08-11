@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.3.7 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.3.8 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -1358,7 +1358,8 @@ self.autoResize()
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="timerlist" position="735,127" size="1177,825"  scrollbarMode="showOnDemand" itemHeight="75" rowSplit="40" iconMargin="5" setEventNameFont="Regular;32" setServiceNameFont="Regular;32" setFont="Regular;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="timerlist" position="735,127" size="1177,825"  scrollbarMode="showOnDemand" itemHeight="75" rowSplit="37" iconMargin="15" setEventNameFont="menulist;32"
+		setServiceNameFont="menulist;32" setFont="menulist;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="description" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="TimerLog" position="fill" flags="wfNoBorder">
@@ -2760,56 +2761,7 @@ self.autoResize()
 		<widget name="list" position="825,570" size="990,225" zPosition="1"/>
 		<widget source="session.VideoPicture" backgroundColor="transparent" position="-7,-7" render="Pig" size="7,7" zPosition="1"/>
 	</screen>
-	<!-- ## Autotimer Plugin ## -->
-	<screen name="AutoTimerHelp" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
-		<panel name="Blue2Panel"/>
-		<widget name="detailtext" font="Regular;33" position="780,120" size="1132,882" transparent="1"/>
-	</screen>
-	<screen name="AutoTimerSettings" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate2"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<widget name="config" position="780,123" size="1132,855" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" background="background" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="help" render="Label" position="7,577" size="715,405" foregroundColor="secondFG" transparent="1" font="Regular;30"/>
-	</screen>
-	<screen name="AutoTimerEditor" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate2"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
-		<panel name="Blue2Panel"/>
-		<widget name="config" position="780,120" size="1132,858" font="Regular;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="help" render="Label" position="7,577" size="715,405" foregroundColor="secondFG" transparent="1" font="Regular;30"/>
-	</screen>
-	<screen name="AutoTimerFilterEditor" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
-		<panel name="Blue2Panel"/>
-		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" background="background"/>
-		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,750" size="1,1" zPosition="1" transparent="1" alphatest="on"/>
-	</screen>
-	<screen name="AutoTimerServiceEditor" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
-		<panel name="Blue2Panel"/>
-		<widget name="config" position="780,120" size="1132,855" itemHeight="45" font="Regular;33" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="AutoTimerImporter" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
-		<panel name="Blue2Panel"/>
-		<widget name="list" position="780,120" size="1132,855" font="menulist;30" itemHeight="50" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
+	<!-- ## Autotimer ## -->
 	<screen name="AutoTimerOverview" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
@@ -2817,7 +2769,8 @@ self.autoResize()
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget name="entries" position="780,127" size="1132,840" itemHeight="120" rowSplit1="40" rowSplit2="80" rowHeight="40" iconMargin="5" EventNameFont="menulist;30" ServiceNameFont="menulist;30" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2"/>
+		<widget name="entries" position="780,127" size="1132,840" itemHeight="100" rowSplit1="40" rowSplit2="60" rowHeight="33" iconMargin="5" EventNameFont="menulist;31"
+		ServiceNameFont="menulist;31" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2"/>
 		</screen>
 	<screen name="AutoTimerPreview" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2833,12 +2786,61 @@ self.autoResize()
 						MultiContentEntryText(pos=(2,65), size=(800,32), text = 4, font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
 						MultiContentEntryText(pos=(290,50), size=(800,32), text = 2, font = 1, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER),
 					],
-				 "fonts": [gFont("Regular", 30),gFont("Regular", 27)],
+				 "fonts": [gFont("menulist", 30),gFont("menulist", 27)],
 				 "itemHeight": 96
 				}
 			</convert>
 		</widget>
 		</screen>
+	<screen name="AutoTimerHelp" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="detailtext" position="780,120" size="1132,882" font="menulist;33" transparent="1"/>
+	</screen>
+	<screen name="AutoTimerSettings" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate2"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<widget name="config" position="780,123" size="1132,855" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" background="background" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="help" render="Label" position="7,577" size="715,405" font="menulist;30" foregroundColor="secondFG" transparent="1"/>
+	</screen>
+	<screen name="AutoTimerEditor" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate2"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="config" position="780,120" size="1132,858" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="help" render="Label" position="7,577" size="715,405" font="Regular;30" foregroundColor="secondFG" transparent="1"/>
+	</screen>
+	<screen name="AutoTimerFilterEditor" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="config" position="780,120" size="1132,855" font="menulist;33" itemHeight="45" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" background="background"/>
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,750" size="1,1" zPosition="1" transparent="1" alphatest="on"/>
+	</screen>
+	<screen name="AutoTimerServiceEditor" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="config" position="780,120" size="1132,855" font="menulist;33" itemHeight="45" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="AutoTimerImporter" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="list" position="780,120" size="1132,855" font="menulist;30" itemHeight="50" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
 <!-- ## Seekbar ##-->
 	<screen name="Seekbar" position="center,center" size="840,90" title="Seekbar" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="cursor" position="0,0" size="12,27" pixmap="dvr/position_arrow.png" alphatest="on"/>
