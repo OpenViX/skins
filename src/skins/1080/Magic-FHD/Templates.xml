@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Common Vs 0.3.5 	-->
+	<!--	Skin: Magic-FHD Common Vs 0.3.6 	-->
 	<!--	This skin is part of the skin Magic-HD; the same license applies.	-->
 
 	<!-- templates -->
@@ -224,41 +224,41 @@
 		<widget source="session.CurrentService" render="Picon" position="67,832" size="150,90" alphatest="blend" backgroundColor="secondBG" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="270,862" size="1597,54" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" valign="center" halign="left">
+		<widget source="session.CurrentService" render="Label" position="270,862" size="1597,54" font="Regular;36" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" valign="center" halign="left">
 		<convert type="ServiceName">Name</convert>
 		</widget>
-	<widget source="session.CurrentService" render="Label" position="510,1030" size="950,48" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="RegularOld;22" halign="right">
-		<convert type="CryptoInfo">VerboseInfo</convert>
-	</widget>
-	<widget source="session.CurrentService" render="Label" position="1545,1042" size="180,33" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" text="DVB-S" font="Regular;28" halign="right">
-		<convert type="ServiceOrbitalPosition">
-		</convert>
-	</widget>
-		<widget source="global.CurrentTime" render="Label" position="30,967" size="180,45" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" font="Regular;36" valign="center" halign="center">
-			<convert type="ClockToText">Default</convert>
+		<widget source="session.CurrentService" render="Label" position="510,1030" size="950,48" font="RegularOld;22" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" halign="right">
+			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" font="Regular;30" valign="center" halign="center">
+		<widget source="session.CurrentService" render="Label" position="1545,1042" size="180,33" font="Regular;28" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" text="DVB-S" halign="right">
+			<convert type="ServiceOrbitalPosition">
+			</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,33" font="Regular;30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" valign="center" halign="right">
 			<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="270,934" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" halign="left">
+		<widget source="global.CurrentTime" render="Label" position="30,970" size="180,45" font="Regular;40" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" valign="center" halign="right">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="270,934" size="105,45" font="Regular;36" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" halign="left">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="382,934" size="1140,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" noWrap="1" font="Regular;36" halign="left">
+		<widget source="session.Event_Now" render="Label" position="382,934" size="1140,45" font="Regular;36" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" noWrap="1" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="1485,934" size="240,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" halign="right">
+		<widget source="session.Event_Now" render="Label" position="1485,934" size="240,45" font="Regular;36" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" halign="right">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="270,982" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" halign="left">
+		<widget source="session.Event_Next" render="Label" position="270,982" size="105,45" font="Regular;36" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" halign="left">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="382,982" size="1155,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" noWrap="1" font="Regular;36" halign="left">
+		<widget source="session.Event_Next" render="Label" position="382,982" size="1155,45" font="Regular;36" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" noWrap="1" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="1545,982" size="180,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" halign="right">
+		<widget source="session.Event_Next" render="Label" position="1545,982" size="180,45" font="Regular;36" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" halign="right">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
@@ -274,7 +274,7 @@
 		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="1869,832" size="30,30" zPosition="3" alphatest="on">
 		<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="262,832" size="750,25" backgroundColor="secondBG" transparent="1" noWrap="1" font="Regular;21" halign="left">
+		<widget source="session.CurrentService" render="Label" position="262,832" size="750,25" font="Regular;21" backgroundColor="secondBG" transparent="1" noWrap="1" halign="left">
 			<convert type="ServiceName">Provider</convert>
 		</widget>
 		<widget render="VideoSize" source="session.CurrentService" position="1545,885" size="180,30" backgroundColor="secondBG" font="Regular;28" foregroundColor="grey" transparent="1" zPosition="10" halign="right"/>
