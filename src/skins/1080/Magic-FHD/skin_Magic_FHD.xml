@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.3.9 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.4 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -2751,13 +2751,13 @@ self.autoResize()
 		<widget name="list" position="780,120" size="1132,855" font="menulist;30" itemHeight="50" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 <!-- ## Seekbar ##-->
-	<screen name="Seekbar" position="center,center" size="840,90" title="Seekbar" backgroundColor="transparent" flags="wfNoBorder">
-		<widget name="cursor" position="0,0" size="12,27" pixmap="dvr/position_arrow.png" alphatest="on"/>
-		<widget source="session.CurrentService" render="PositionGauge" position="225,45" size="405,15" zPosition="2" pointer="Magic-FHD/dvr/position_pointer.png:540,0" transparent="1" foregroundColor="#20224f">
+	<screen name="Seekbar" position="center,center" size="560,60" title="Seekbar" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="cursor" position="0,0" size="8,18" pixmap="dvr/position_arrow.png" alphatest="on"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="150,30" size="270,10" zPosition="2" pointer="Magic-HD/dvr/position_pointer.png:540,0" transparent="1" foregroundColor="#20224f">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
-		<widget name="time" position="60,22" size="150,52" font="Regular;45" halign="right" backgroundColor="#4e5a74" transparent="1" borderColor="black" borderWidth="3"/>
-		<widget source="session.CurrentService" render="Label" position="645,22" size="135,52" font="Regular;45" halign="left" backgroundColor="#4e5a74" transparent="1" borderColor="black" borderWidth="3">
+		<widget name="time" position="40,15" size="100,35" font="Regular;30" halign="right" backgroundColor="#4e5a74" transparent="1" borderColor="black" borderWidth="3"/>
+		<widget source="session.CurrentService" render="Label" position="430,15" size="90,35" font="Regular;30" halign="left" backgroundColor="#4e5a74" transparent="1" borderColor="black" borderWidth="3">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
 	</screen>
