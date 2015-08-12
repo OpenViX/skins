@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.3.6	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.3.7	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -79,6 +79,97 @@
 		<eLabel text="Hide" position="1370,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
 		<widget name="menu" scrollbarMode="showOnDemand" position="780,120" size="1132,882" font="Regular;33" transparent="1" foregroundColor="grey" itemHeight="45" enableWrapAround="1"/>
 	</screen>
+	<!-- ## Cross EPG ## -->
+	<screen name="CrossEPG_Menu" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget source="list" render="Listbox" position="780,123" size="1132,860" transparent="0" scrollbarMode="showOnDemand" foregroundColor="grey">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (5,5), size = (1100,38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					],
+					"fonts": [gFont("menulist", 33)],
+					"itemHeight": 45
+		}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="CrossEPG_Setup" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<widget name="config" position="780,120" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="information" position="22,555" size="715,375" halign="center" valign="center" font="Regular;33" foregroundColor="secondFG"/>
+	</screen>
+	<screen name="CrossEPG_Info" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<widget name="version" position="900,199" size="900,37" font="menulist;33"/>
+		<widget name="create" position="900,244" size="900,37" font="menulist;33"/>
+		<widget name="last_update" position="900,289" size="900,37" font="menulist;33"/>
+		<widget name="headersdb_size" position="900,334" size="900,37" font="menulist;33"/>
+		<widget name="descriptorsdb_size" position="900,379" size="900,37" font="menulist;33"/>
+		<widget name="indexesdb_size" position="900,424" size="900,37" font="menulist;33"/>
+		<widget name="aliasesdb_size" position="900,469" size="900,37" font="menulist;33"/>
+		<widget name="total_size" position="900,514" size="900,37" font="menulist;33"/>
+		<widget name="channels_count" position="900,559" size="900,37" font="menulist;33"/>
+		<widget name="events_count" position="900,604" size="900,37" font="menulist;33"/>
+		<widget name="hashes_count" position="900,649" size="900,37" font="menulist;33"/>
+	</screen>
+	<screen name="CrossEPG_Extra" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<widget name="menu" position="780,120" size="1132,882" font="menulist;33" scrollbarMode="showOnDemand" transparent="1" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="CrossEPG_Providers" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<widget source="list" render="Listbox" position="780,120" size="900,855" transparent="0" foregroundColor="grey">
+			<convert type="TemplatedMultiContent">
+			{"template": [
+			MultiContentEntryText(pos = (12,2), size = (850,50), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+			MultiContentEntryPixmapAlphaBlend(pos = (860,6), size = (40, 40), png = 1),
+			],
+			"fonts": [gFont("menulist", 33)],
+			"itemHeight": 45
+			}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="CrossEPG_About" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<widget name="about" position="780,123" size="1132,874" font="menulist;33"/>
+		<widget name="rytec_pix" position="300,630" size="105,105"/>
+		<widget name="krkadoni_pix" position="300,750" size="105,33"/>
+	</screen>
+	<screen name="CrossEPG_Downloader" position="c-300,e-80" size="600,70" flags="wfNoBorder">
+		<widget name="background" position="0,0" size="600,80" zPosition="-1"/>
+		<widget name="action" halign="center" valign="center" position="65,10" size="520,20" font="menulist;16" backgroundColor="#11000000"/>
+		<widget name="status" halign="center" valign="center" position="65,30" size="520,20" font="menulist;16" backgroundColor="#11000000"/>
+		<widget name="progress" position="65,55" size="520,5" borderWidth="1" backgroundColor="#11000000"/>
+	</screen>
+	<screen name="CrossEPG_Ordering" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<widget source="list" render="Listbox" transparent="0" position="780,123" size="754,789" scrollbarMode="showOnDemand" itemHeight="45" foregroundColor="grey" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+					{"template": [
+				MultiContentEntryText(pos = (12,1), size = (440,50), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+				MultiContentEntryPixmapAlphaBlend(pos = (438,0), size = (40,40), png = 1),
+				],
+				"fonts": [gFont("menulist", 33)],
+				"itemHeight": 45
+				}
+			</convert>
+		</widget>
+	</screen>
 	<!-- ## XMLTV EPG importer ## -->
 	<screen name="EPGMainSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -87,7 +178,7 @@
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" position="780,120" size="1132,714" transparent="1" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" scrollbarMode="showOnDemand" position="780,120" size="1132,714" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="statusbar" position="780,967" size="1132,37" font="Regular;33" foregroundColor="secondFG"/>
 		<widget name="status" position="780,862" size="1132,90" font="Regular;36" foregroundColor="secondFG"/>
 	</screen>
@@ -105,7 +196,7 @@
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="list" position="780,123" size="1132,876" font="Regular;30" foregroundColor="grey" transparent="1"/>
+		<widget name="list" position="780,123" size="1132,876" font="menulist;30" foregroundColor="grey" transparent="1"/>
 	</screen>
 	<!-- ## Foreca Weather forecast ## -->
 	<screen name="CityPanel" position="fill" flags="wfNoBorder">
