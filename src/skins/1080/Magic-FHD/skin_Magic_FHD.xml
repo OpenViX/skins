@@ -335,7 +335,8 @@
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
-		<widget name="list" position="780,123" size="1132,874" EventFontSingle="Regular;32" itemHeight="50" transparent="1" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1"/>
+		<widget name="list" position="780,123" size="1132,880" EventFontSingle="menulist;32" itemHeight="55" transparent="1" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1"/>
+<!-- 	<widget name="list" position="780,123" size="1132,880" EventFontSingle="menulist;32" itemHeight="55" transparent="1" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1"/>-->
 		<widget name="number" position="780,123" size="1132,874" zPosition="5" backgroundColor="background" transparent="0" font="Regular;54" borderColor="black" borderWidth="1" valign="center" halign="center"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" backgroundColor="background" transparent="1" halign="center" valign="center" foregroundColor="grey" zPosition="1"/>
 		<widget source="Event" render="Label" position="7,532" size="750,72" transparent="1" foregroundColor="secondFG" font="Regular;34" halign="center" valign="top">
@@ -777,7 +778,7 @@
 		<widget source="IFtext" render="Label" position="780,900" size="180,37" zPosition="10" font="Regular;30" halign="right" transparent="1" foregroundColor="grey"/>
 		<widget source="IF" render="Label" position="967,900" size="600,37" zPosition="10" font="Regular;30" halign="left" transparent="1" foregroundColor="grey"/>
 		<widget source="Statustext" render="Label" position="780,945" size="172,37" zPosition="10" font="Regular;30" halign="right" transparent="1" foregroundColor="grey"/>
-		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="967,952" zPosition="10" size="22,24" transparent="1" alphatest="on"/>
+		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="967,952" zPosition="10" size="23,24" transparent="1" alphatest="on"/>
 	</screen>
 	<screen name="HarddiskSelection" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
@@ -1319,18 +1320,18 @@ self.autoResize()
 		<ePixmap pixmap="Magic-FHD/buttons/key_prev.png" position="1597,1027" size="52,38"/>
 		<ePixmap pixmap="Magic-FHD/buttons/key_next.png" position="1652,1027" size="52,38"/>
 		<ePixmap pixmap="Magic-FHD/buttons/key_0.png" position="1707,1027" size="52,38"/>
-		<widget name="list" position="780,123" size="1132,858" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="list" position="780,121" size="1132,884" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="PluginDownloadBrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="780,123" size="1132,750" zPosition="-1" transparent="1" font="Regular;37" valign="center" halign="center" foregroundColor="grey"/>
-		<widget name="list" position="780,123" size="1132,858" zPosition="3" transparent="0" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="text" position="780,123" size="1132,750" zPosition="-1" transparent="1" font="menulist;37" valign="center" halign="center" foregroundColor="grey"/>
+		<widget name="list" position="780,121" size="1132,884" zPosition="3" transparent="0" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="DirectoryBrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
-		<widget name="filelist" position="780,123" size="1132,874" itemHeight="28" scrollbarMode="showOnDemand"/>
+		<widget name="filelist" position="780,123" size="1132,874" font="FileList;37" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="configTest" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1558,7 +1559,7 @@ self.autoResize()
 		<widget source="IFtext" render="Label" position="885,967" size="249,37" font="menulist;36" transparent="1" zPosition="10" halign="right" foregroundColor="grey"/>
 		<widget source="IF" render="Label" position="1147,967" size="750,37" font="menulist;36" transparent="1" zPosition="10" halign="left" foregroundColor="grey"/>
 		<widget source="Statustext" render="Label" position="474,967" size="300,39" font="menulist;36" zPosition="10" halign="right" transparent="1" foregroundColor="grey"/>
-		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="787,978" zPosition="10" size="22,24" transparent="1" alphatest="on"/>
+		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="787,978" size="23,24" zPosition="10" transparent="1" alphatest="on"/>
 	</screen>
 	<screen name="AdapterSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2898,7 +2899,7 @@ self.autoResize()
 		<widget name="config" position="780,120" size="1125,750" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45"	transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="powerstatus" position="750,900" size="375,33" halign="right" font="Regular;30" zPosition="1" transparent="1" foregroundColor="grey"/>
 		<widget name="daemon0" alphatest="on" pixmap="buttons/button_green_off.png" position="1140,910" size="22,24" zPosition="10" transparent="1"/>
-		<widget name="daemon1" alphatest="on" pixmap="buttons/button_green.png" position="1140,910" size="22,24" zPosition="10" transparent="1"/>
+		<widget name="daemon1" alphatest="on" pixmap="buttons/button_green.png" position="1140,910" size="23,24" zPosition="10" transparent="1"/>
 		<widget name="hddTemp" position="7,568" size="715,45" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 		<widget name="sysTemp" position="7,637" size="715,45" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 		<widget name="cpuTemp" position="7,690" size="715,45" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>

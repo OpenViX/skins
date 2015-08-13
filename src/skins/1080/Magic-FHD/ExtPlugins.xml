@@ -274,64 +274,6 @@
 		<widget name="list" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="Text" position="7,622" zPosition="4" size="750,300" font="Regular;33" foregroundColor="secondFG" transparent="1" halign="center" valign="center"/>
 	</screen>
-	<!-- ## DreamExplorer ## -->
-	<screen name="DreamExplorerII" title="Dream-Explorer" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<panel name="GreenBPanel"/>
-		<panel name="YellowBPanel"/>
-		<panel name="BlueBPanel"/>
-		<panel name="MenuBPanel"/>
-		<panel name="InfoBPanel"/>
-		<eLabel text="Delete" position="55,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
-		<eLabel text="Rename" position="490,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
-		<eLabel text="Move/Copy" position="930,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
-		<eLabel text="Bookmarks" position="1370,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
-		<widget name="filelist" position="780,120" size="1132,855" zPosition="4" font="FileList;33" itemHeight="40"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="vEditor" position="fill" flags="wfNoBorder" title="File-Explorer">
--->		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget source="Title" foregroundColor="grey" render="Label" position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;37" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;39" halign="right" position="1522,22" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;30" halign="right" position="1522,67" size="375,37" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<widget name="filedata" position="7,120" size="1905,882" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="28"	transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="vInputBox" position="fill" flags="wfNoBorder" title="Input...">
-		<panel name="BasicTemplate"/>
-		<widget name="text" position="735,120" size="1177,300" font="Console;39" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget name="input" position="735,450" size="1177,75" font="Regular;39" itemHeight="25"	transparent="1" foregroundColor="grey" halign="center"/>
-	</screen>
-	<screen name="SoftLinkScreen" position="fill" flags="wfNoBorder" title="Make a softlink...">
-		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<eLabel text="Set name" position="22,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
-		<panel name="YellowBPanel"/>
-		<eLabel text="Make a softlink" position="892,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
-		<widget name="File" position="735,120" size="1177,150" font="Regular;39" transparent="1" foregroundColor="secondFG" valign="center" halign="center" enableWrapAround="1"/>
-		<widget name="SLto" position="735,277" size="1177,714" font="Regular;33" itemHeight="28" scrollbarMode="showOnDemand" foregroundColor="grey"/>
-	</screen>
-	<screen name="CPmaniger" position="fill" flags="wfNoBorder" title="Select Copy/Move location...">
-		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<panel name="YellowBPanel"/>
-		<eLabel text="MOVE" position="75,1032" size="330,39" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="center" transparent="1" zPosition="1"/>
-		<eLabel text="COPY" position="921,1032" size="330,39" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="center" transparent="1" zPosition="1"/>
-		<widget name="File" position="735,120" size="1177,297" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget name="CPto" position="735,420" size="1177,582" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="28"	transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="MusicExplorer" backgroundColor="#50070810" flags="wfNoBorder" position="center,center" size="1920,1080">
-		<widget font="Regular;36" position="75,75" render="Label" size="150,45" source="session.CurrentService" borderWidth="3" borderColor="black" foregroundColor="grey" transparent="1" valign="center" zPosition="1">
-			<convert type="ServicePosition">Remaining</convert>
-		</widget>
-		<widget font="Regular;39" position="75,450" render="Label" size="1800,90" source="session.CurrentService" borderWidth="3" borderColor="black" foregroundColor="grey" transparent="1" valign="center" halign="center" zPosition="1">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-	</screen>
 	<!-- ## EPG Translator# -->
 	<screen name="translatorMain" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -585,8 +527,8 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget name="list" position="780,120" size="1132,882" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="statusbar" render="Label" font="Regular;33" itemHeight="45" position="7,585" size="715,300" valign="center" halign="center" transparent="1" foregroundColor="secondFG" enableWrapAround="1"/>
+		<widget name="list" position="780,120" size="1132,855" font="menulist;31" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="statusbar" render="Label" position="7,585" size="715,300" font="Regular;33" valign="center" halign="center" transparent="1" foregroundColor="secondFG" />
 	</screen>
 	<!-- ## AutoBouquetsMaker ## -->
 	<screen name="AutoBouquetsMaker_Menu" position="fill" flags="wfNoBorder">

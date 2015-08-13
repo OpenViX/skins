@@ -227,6 +227,7 @@ src/skins/1080/Makefile
 
 src/skins/1080/Magic-FHD/Makefile
 src/skins/1080/Magic-FHD/border/Makefile
+src/skins/1080/Magic-FHD/crossepg/Makefile
 src/skins/1080/Magic-FHD/buttons/Makefile
 src/skins/1080/Magic-FHD/countries/Makefile
 src/skins/1080/Magic-FHD/dvr/Makefile
