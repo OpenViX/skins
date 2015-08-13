@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.4 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.4.1 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -9,6 +9,9 @@
 	<screen name="InfoBar" position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="InfoBarPanel"/>
 		<ePixmap pixmap="infobar/hd.png" position="0,754" size="1920,330" zPosition="-1" alphatest="off"/>
+		<widget source="session.CurrentService" render="Label" position="510,1030" size="950,48" font="menulist;22" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" halign="right">
+			<convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
 	</screen>
 	<screen name="SecondInfoBar" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="InfoBarPanel"/>
@@ -793,7 +796,7 @@
 	</screen>
 	<!-- ## Restart ## -->
 	<screen name="QuitMainloopScreen" position="fill" flags="wfNoBorder" backgroundColor="black">
-		<widget name="text" position="450,300" size="1000,300" font="Fixed;45" foregroundColor="selectedBG" backgroundColor="black" transparent="1" halign="center" valign="center" zPosition="3" />
+		<widget name="text" position="350,300" size="1500,300" font="Fixed;50" foregroundColor="selectedBG" backgroundColor="black" transparent="1" halign="center" valign="center" zPosition="3" />
 	</screen>
 	<!-- ## Input & Output Boxes ## -->
 	<screen name="SelectPath" position="fill" flags="wfNoBorder">
@@ -897,7 +900,7 @@
 		<eLabel text="Cancel" position="55,1023" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<panel name="GreenBPanel"/>
 		<eLabel text="OK" position="490,1023" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
-		<widget name="text" position="950,120" size="1012,882" font="menulist;33" foregroundColor="grey"/>
+		<widget name="text" position="950,120" size="1000,882" font="menulist;33" foregroundColor="grey"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="810,150" size="81,81" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="810,150" size="81,81" alphatest="on"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="810,150" size="81,81" alphatest="on"/>
@@ -905,7 +908,7 @@
 	</screen>
 	<screen name="MessageBoxSimple" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="950,120" size="1012,882" font="menulist;33" foregroundColor="grey"/>
+		<widget name="text" position="950,120" size="1000,882" font="menulist;33" foregroundColor="grey"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="810,150" size="81,81" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="810,150" size="81,81" alphatest="on"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="810,150" size="81,81" alphatest="on"/>
@@ -913,7 +916,7 @@
 	</screen>
 	<screen name="MessageBoxWizard" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="930,120" size="1012,882" font="Regular;33" foregroundColor="grey"/>
+		<widget name="text" position="930,120" size="1000,882" font="Regular;33" foregroundColor="grey"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="810,150" size="81,81" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="810,150" size="81,81" alphatest="on"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="810,150" size="81,81" alphatest="on"/>
@@ -1549,11 +1552,11 @@ self.autoResize()
 	<screen name="AdapterSetupConfiguration" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<widget name="menulist" position="780,123" size="1132,825" itemHeight="50" font="Regular;33" zPosition="10" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="description" render="Label" position="7,577" size="715,300" transparent="1" font="Regular;31" valign="center" halign="center" foregroundColor="secondFG"/>
-		<widget source="IFtext" render="Label" position="885,967" size="249,37" transparent="1" zPosition="10" font="Regular;36" halign="right" foregroundColor="grey"/>
-		<widget source="IF" render="Label" position="1147,967" size="750,37" transparent="1" zPosition="10" font="Regular;36" halign="left" foregroundColor="grey"/>
-		<widget source="Statustext" render="Label" position="474,967" size="300,39" zPosition="10" font="Regular;36" halign="right" transparent="1" foregroundColor="grey"/>
+		<widget name="menulist" position="780,123" size="1132,825" font="menulist;33" itemHeight="50" zPosition="10" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="description" render="Label" position="7,577" size="715,300" font="menulist;31" transparent="1" valign="center" halign="center" foregroundColor="secondFG"/>
+		<widget source="IFtext" render="Label" position="885,967" size="249,37" font="menulist;36" transparent="1" zPosition="10" halign="right" foregroundColor="grey"/>
+		<widget source="IF" render="Label" position="1147,967" size="750,37" font="menulist;36" transparent="1" zPosition="10" halign="left" foregroundColor="grey"/>
+		<widget source="Statustext" render="Label" position="474,967" size="300,39" font="menulist;36" zPosition="10" halign="right" transparent="1" foregroundColor="grey"/>
 		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="787,978" zPosition="10" size="22,24" transparent="1" alphatest="on"/>
 	</screen>
 	<screen name="AdapterSetup" position="fill" flags="wfNoBorder">
@@ -1628,8 +1631,8 @@ self.autoResize()
 	<screen name="NetworkMountsMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<widget name="menulist" position="780,123" size="1132,825" itemHeight="50" font="Regular;33" zPosition="10" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="introduction" render="Label" position="7,577" size="715,300" transparent="1" font="Regular;31" valign="center" halign="center" foregroundColor="secondFG"/>
+		<widget name="menulist" position="780,123" size="1132,825" font="menulist;33" itemHeight="50" zPosition="10" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="introduction" render="Label" position="7,577" size="715,300" font="menulist;31" transparent="1" valign="center" halign="center" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="NetworkBrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1652,15 +1655,15 @@ self.autoResize()
 		}
 	</convert>
 		</widget>
-		<widget source="infotext" render="Label" position="7,750" size="715,105" transparent="1" zPosition="10" font="Regular;33" valign="center" halign="center" foregroundColor="grey"/>
+		<widget source="infotext" render="Label" position="7,750" size="715,105" font="Regular;33" transparent="1" zPosition="10" valign="center" halign="center" foregroundColor="grey"/>
 	</screen>
 	<screen name="UserDialog" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="735,600" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
 		<widget name="VKeyIcon" pixmap="buttons/key_text.png" position="1740,1023" zPosition="1" size="52,37" transparent="1" alphatest="on"/>
-		<widget name="config" position="735,120" size="1177,882" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="introduction" render="Label" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="config" position="735,120" size="1177,882" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="introduction" render="Label" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="ScanIP" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1695,30 +1698,30 @@ self.autoResize()
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<widget source="legend1" render="Label" position="780,123" size="195,108" transparent="1" zPosition="1" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
-		<widget source="legend2" render="Label" position="1027,123" size="517,108" transparent="1" zPosition="1" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
-		<widget source="legend3" render="Label" position="1680,123" size="195,108" transparent="1" zPosition="1" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
+		<widget source="legend1" render="Label" position="780,123" size="195,108" font="menulist;31" transparent="1" zPosition="1" valign="center" halign="center" foregroundColor="grey"/>
+		<widget source="legend2" render="Label" position="1027,123" size="517,108" font="menulist;31" transparent="1" zPosition="1" valign="center" halign="center" foregroundColor="grey"/>
+		<widget source="legend3" render="Label" position="1680,123" size="195,108" font="menulist;31" transparent="1" zPosition="1" valign="center" halign="center" foregroundColor="grey"/>
 		<widget source="config" render="Listbox" position="780,240" size="1132,720" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaBlend(pos = (15,15),size = (48,48),png = 0),# index 0 is the isMounted pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (2,2),size = (72,71),png = 0),# index 0 is the isMounted pixmap
 					MultiContentEntryText(pos = (100,3),size = (800,31),font=0,flags = RT_HALIGN_LEFT,text = 1),# index 1 is the sharename
-					MultiContentEntryText(pos = (400,25),size = (750,23),font=1,flags = RT_HALIGN_LEFT,text = 2),# index 2 is the IPdescription
-					MultiContentEntryText(pos = (100,35),size = (650,23),font=1,flags = RT_HALIGN_LEFT,text = 3),# index 3 is the DIRdescription
+					MultiContentEntryText(pos = (430,25),size = (750,26),font=1,flags = RT_HALIGN_LEFT,text = 2),# index 2 is the IPdescription
+					MultiContentEntryText(pos = (100,35),size = (650,26),font=1,flags = RT_HALIGN_LEFT,text = 3),# index 3 is the DIRdescription
 					MultiContentEntryPixmapAlphaBlend(pos = (1000,20),size = (48,48),png = 4),# index 4 is the activepng pixmap
-					MultiContentEntryPixmapAlphaBlend(pos = (350,10),size = (48,48),png = 5),# index 4 is the mounttype pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (350,2),size = (72,72),png = 5),# index 4 is the mounttype pixmap
 				],
-				"fonts": [gFont("Regular",30),gFont("Regular",22)],
-				"itemHeight": 75
+				"fonts": [gFont("menulist",30),gFont("menulist",24)],
+				"itemHeight": 80
 				}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="1260,1023" size="630,33" transparent="1" zPosition="10" font="Regular;33" valign="center" halign="center" foregroundColor="grey"/>
+		<widget source="introduction" render="Label" position="1260,1023" size="630,33" font="menulist;33" transparent="1" zPosition="10" valign="center" halign="center" foregroundColor="grey"/>
 	</screen>
 	<screen name="AutoMountManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<widget source="introduction" render="Label" position="780,1030" size="1132,40" zPosition="1" transparent="1" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget source="introduction" render="Label" position="780,1030" size="1132,40" font="menulist;33" zPosition="1" transparent="1" halign="center" foregroundColor="grey"/>
 		<widget source="config" render="Listbox" position="780,123" size="1100,832" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1726,7 +1729,7 @@ self.autoResize()
 						MultiContentEntryText(pos = (100,45),size = (1000,30),font=1,flags = RT_HALIGN_LEFT,text = 2),# index 3 is the Description
 						MultiContentEntryPixmapAlphaBlend(pos = (10,15),size = (48,48),png = 3),# index 4 is the pixmap
 					],
-				"fonts": [gFont("Regular",34),gFont("Regular",26)],
+				"fonts": [gFont("menulist",34),gFont("menulist",26)],
 				"itemHeight": 82
 				}
 			</convert>
@@ -1736,9 +1739,9 @@ self.autoResize()
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="config" position="780,123" size="1132,412" font="Regular;33" itemHeight="50" zPosition="3" transparent="1" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,123" size="1132,412" font="menulist;33" itemHeight="50" zPosition="3" transparent="1" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" position="885,585" size="1,1" zPosition="1" transparent="1" alphatest="on"/>
-		<widget source="introduction" render="Label" position="930,1030" size="982,40" zPosition="1" transparent="1" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget source="introduction" render="Label" position="930,1030" size="982,40" font="menulist;33" zPosition="1" transparent="1" halign="center" foregroundColor="grey"/>
 		<widget name="VKeyIcon" pixmap="buttons/key_text.png" position="1740,1023" size="52,37" zPosition="10" transparent="1" alphatest="on"/>
 	</screen>
 	<screen name="UserManager" position="fill" flags="wfNoBorder" title="">
@@ -1751,12 +1754,12 @@ self.autoResize()
 							MultiContentEntryText(pos = (80,15), size = (600,75), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 							MultiContentEntryPixmapAlphaBlend(pos = (10,10), size = (48,48), png = 3), # index 4 is the status pixmap
 						],
-					"fonts": [gFont("Regular",34)],
+					"fonts": [gFont("menulist",34)],
 					"itemHeight": 78
 					}
 				</convert>
 			</widget>
-		<widget source="introduction" render="Label" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="introduction" render="Label" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="devicesMount" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1771,7 +1774,7 @@ self.autoResize()
 		<widget source="menu" render="Listbox" position="780,135" size="1132,862" zPosition="1" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{ "template": [	MultiContentEntryText(pos = (80,5),size = (990,100),flags = RT_HALIGN_LEFT,text = 0,border_width=1),
-				MultiContentEntryPixmapAlphaBlend(pos = (5,20),size = (64,64),png = 1)],"fonts": [gFont("Regular",18)],"itemHeight": 110 }
+				MultiContentEntryPixmapAlphaBlend(pos = (5,20),size = (64,64),png = 1)],"fonts": [gFont("menulist",18)],"itemHeight": 110 }
 			</convert>
 		</widget>
 	</screen>
@@ -1780,20 +1783,20 @@ self.autoResize()
 		<panel name="BasicTemplate"/>
 		<panel name="RedBPanel"/>
 		<panel name="RedT2Panel"/>
-		<widget source="IF" render="Label" position="780,135" size="1000,50" zPosition="1" halign="center" font="Regular;36" foregroundColor="secondFG" transparent="1"/>
-		<widget source="LabelBSSID" render="Label" position="885,200" size="375,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="BSSID" render="Label" position="1275,200" size="555,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="LabelESSID" render="Label" position="885,260" size="375,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="ESSID" render="Label" position="1275,260" size="555,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="LabelQuality" render="Label" position="885,315" size="375,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="quality" render="Label" position="1275,315" size="555,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="LabelSignal" render="Label" position="885,370" size="375,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="signal" render="Label" position="1275,370" size="555,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="LabelBitrate" render="Label" position="885,425" size="375,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="bitrate" render="Label" position="1275,425" size="555,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="LabelEnc" render="Label" position="885,480" size="375,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="enc" render="Label" position="1275,480" size="555,52" valign="center" font="Regular;30" foregroundColor="grey" transparent="1"/>
-		<widget source="Statustext" render="Label" position="930,900" size="525,42" font="Regular;30" halign="right" foregroundColor="grey" transparent="1"/>
+		<widget source="IF" render="Label" position="780,135" size="1000,50" zPosition="1" halign="center" font="menulist;36" foregroundColor="secondFG" transparent="1"/>
+		<widget source="LabelBSSID" render="Label" position="885,200" size="375,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="BSSID" render="Label" position="1275,200" size="555,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="LabelESSID" render="Label" position="885,260" size="375,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="ESSID" render="Label" position="1275,260" size="555,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="LabelQuality" render="Label" position="885,315" size="375,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="quality" render="Label" position="1275,315" size="555,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="LabelSignal" render="Label" position="885,370" size="375,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="signal" render="Label" position="1275,370" size="555,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="LabelBitrate" render="Label" position="885,425" size="375,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="bitrate" render="Label" position="1275,425" size="555,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="LabelEnc" render="Label" position="885,480" size="375,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="enc" render="Label" position="1275,480" size="555,52" valign="center" font="menulist;30" foregroundColor="grey" transparent="1"/>
+		<widget source="Statustext" render="Label" position="930,900" size="525,42" font="menulist;30" halign="right" foregroundColor="grey" transparent="1"/>
 		<widget name="statuspic" position="1462,900" size="37,36" pixmaps="icons/lock_on.png,icons/lock_error.png" transparent="1" alphatest="on"/>
 	</screen>
 	<screen name="WlanScan" position="fill" flags="wfNoBorder">
@@ -1802,7 +1805,7 @@ self.autoResize()
 		<panel name="GreenBPanel"/>
 		<panel name="RedT2Panel"/>
 		<panel name="GreenT2Panel"/>
-		<widget source="info" render="Label" position="780,124" size="1132,49" zPosition="1" halign="center" font="Regular;36" backgroundColor="background" transparent="1"/>
+		<widget source="info" render="Label" position="780,124" size="1132,49" zPosition="1" halign="center" font="menulist;36" backgroundColor="background" transparent="1"/>
 		<widget source="list" render="Listbox" position="780,172" size="1132,825" zPosition="1" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1812,7 +1815,7 @@ self.autoResize()
 						MultiContentEntryText(pos = (800,5),size = (330,35),font=1,flags = RT_HALIGN_LEFT,text = 2),# index 0 is the signal
 						MultiContentEntryText(pos = (800,55),size = (330,35),font=1,flags = RT_HALIGN_LEFT,text = 3),# index 0 is the maxrate
 					],
-				"fonts": [gFont("Regular",36),gFont("Regular",30)],
+				"fonts": [gFont("menulist",36),gFont("menulist",30)],
 				"itemHeight": 100
 				}
 			</convert>
@@ -2799,7 +2802,7 @@ self.autoResize()
 		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1762,1030"	size="52,37"/>
 		<widget name="label" position="22,577" size="723,420" zPosition="2" transparent="1" font="Regular;30"/>
 		<widget name="thn" position="0,115" size="723,409" zPosition="1" alphatest="on"/>
-		<widget name="filelist" position="735,120" size="1177,882" scrollbarMode="showOnDemand" font="Regular;36" itemHeight="35" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="filelist" position="735,120" size="1177,882" font="Regular;36" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="Pic_Exif" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2820,13 +2823,13 @@ self.autoResize()
 		<panel name="GreenBPanel"/>
 		<widget name="cancel" position="22,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
 		<widget name="ok" position="457,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
-		<widget name="config" font="Regular;33" position="780,135" size="1132,862" transparent="1" itemHeight="28" enableWrapAround="1"/>
+		<widget name="config" position="780,135" size="1132,862" font="Regular;33" itemHeight="45" transparent="1" enableWrapAround="1"/>
 	</screen>
 	<screen name="RemoteControlCode" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874" transparent="1"/>
+		<widget name="config" position="780,123" size="1132,874" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="RCSetupScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2834,7 +2837,7 @@ self.autoResize()
 		<panel name="GreenBPanel"/>
 		<widget name="cancel" position="22,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
 		<widget name="ok" position="457,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
-		<widget name="config" font="Regular;33" position="780,135" size="1132,862" transparent="1" itemHeight="28" enableWrapAround="1"/>
+		<widget name="config" position="780,135" size="1132,862" font="Regular;33" itemHeight="45" transparent="1" enableWrapAround="1"/>
 	</screen>
 <!-- ## FanControl ##-->
 	<screen name="TempFanControl" position="fill" flags="wfNoBorder">
