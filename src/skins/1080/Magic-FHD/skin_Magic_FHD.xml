@@ -577,7 +577,7 @@
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="list" position="780,123" size="1132,874" transparent="0" scrollbarMode="showOnDemand" itemHeight="45" enableWrapAround="1"/>
+		<widget name="list" position="780,123" size="1132,874" itemHeight="45" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
 						self["list"].instance.setItemHeight(45)
 		</applet>
@@ -647,7 +647,7 @@
 	</screen>
 	<screen name="MovieListTags" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="22,568" size="715,390" zPosition="2" font="Regular;33" foregroundColor="secondFG"/>
+		<widget name="text" position="22,568" size="715,390" font="Regular;33" zPosition="2" foregroundColor="secondFG"/>
 		<widget name="list" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<!-- Audio selection -->
@@ -714,86 +714,86 @@
 		<panel name="Green2Panel"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,750" size="1,1" zPosition="1" transparent="1" alphatest="on"/>
 		<widget name="config" position="780,120" size="1132,855" font="menulist;34" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<widget name="description" position="7,555" size="765,375" zPosition="10" font="menulist;33" halign="center" valign="center" transparent="0" foregroundColor="secondFG"/>
+		<widget name="description" position="7,555" size="765,375" font="menulist;33" zPosition="10" halign="center" valign="center" transparent="0" foregroundColor="secondFG"/>
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1740,1023" zPosition="1" size="52,37" transparent="1" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget name="footnote" position="1125,1023" size="725,40" zPosition="1" font="menulist;33" transparent="1" foregroundColor="grey"/>
+		<widget name="footnote" position="1125,1023" size="725,40" font="menulist;33" zPosition="1" transparent="1" foregroundColor="grey"/>
 	</screen>
 <!-- About -->
 	<screen name="AboutOE" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Green1Panel"/>
 		<panel name="InfoBPanel"/>
-		<eLabel text="Release notes = " position="1470,1023" size="330,39" font="Regular;33" halign="right" transparent="1" zPosition="1" foregroundColor="grey"/>
-		<widget source="lab1" render="Label" position="15,682" size="730,37" font="Regular;36" transparent="0" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<eLabel text="Release notes = " position="1470,1023" size="330,39" font="menulist;33" halign="right" transparent="1" zPosition="1" foregroundColor="grey"/>
+		<widget source="lab1" render="Label" position="15,682" size="730,37" font="menulist;36" transparent="0" zPosition="2" foregroundColor="secondFG" halign="center"/>
 		<widget source="lab2" render="Label" position="15,720" size="730,30" font="Crs;30" transparent="0" zPosition="2" foregroundColor="grey" halign="center"/>
 		<widget source="lab3" render="Label" position="15,750" size="730,30" font="Crs;30" transparent="0" zPosition="1" foregroundColor="grey" halign="center"/>
-		<widget name="AboutScrollLabel" font="Regular;33" position="750,123" size="1132,874" transparent="1" foregroundColor="grey"/>
-		<eLabel text="Skin Magic-FHD	 OE-A team skin by Rob van der Does" foregroundColor="grey" font="Regular;28" halign="center" position="7,885" size="750,82" transparent="1" zPosition="1"/>
+		<widget name="AboutScrollLabel" position="750,123" size="1132,874" font="menulist;33" transparent="1" foregroundColor="grey"/>
+		<eLabel text="Skin Magic-FHD	 OE-A team skin by Rob van der Does" position="7,885" size="750,82" font="menulist;28" foregroundColor="grey" halign="center" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="TranslationInfo" position="fill" flags="wfNoBorder" title="Translation">
 		<panel name="BasicTemplate"/>
-		<widget source="TranslatorName" render="Label" position="780,225" size="1177,150" font="Regular;33" transparent="1" foregroundColor="grey"/>
-		<widget source="TranslationInfo" render="Label" position="780,127" size="1177,450" font="Regular;33" transparent="1" foregroundColor="secondFG"/>
-		<widget name="text" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="TranslatorName" render="Label" position="780,225" size="1177,150" font="menulist;33" transparent="1" foregroundColor="grey"/>
+		<widget source="TranslationInfo" render="Label" position="780,127" size="1177,450" font="menulist;33" transparent="1" foregroundColor="secondFG"/>
+		<widget name="text" position="7,568" size="715,396" zPosition="2" font="menulist;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="TunerHeader" render="Label" position="735,187" size="1162,37" font="Regular;36" halign="center" transparent="0" zPosition="1" foregroundColor="secondFG"/>
-		<widget source="nims" render="Label" position="735,240" size="1162,150"	transparent="1" font="Regular;30" halign="left" foregroundColor="grey"/>
-		<widget source="HDDHeader" render="Label" position="735,412" size="1162,37" transparent="1" font="Regular;36" halign="center" foregroundColor="secondFG"/>
-		<widget source="hdd" render="Label" position="735,472" size="1162,180" transparent="1" font="Regular;30" halign="left" foregroundColor="grey"/>
-		<widget source="MountsHeader" render="Label" position="735,675" size="1162,37" transparent="1" font="Regular;36" halign="center" foregroundColor="secondFG"/>
-		<widget source="mounts" render="Label" position="735,720" size="1162,255" transparent="1" font="Regular;30" halign="left" foregroundColor="grey"/>
+		<widget source="TunerHeader" render="Label" position="735,187" size="1162,37" font="menulist;36" halign="center" transparent="0" zPosition="1" foregroundColor="secondFG"/>
+		<widget source="nims" render="Label" position="735,240" size="1162,150"	font="menulist;30" transparent="1" foregroundColor="grey" halign="center"/>
+		<widget source="HDDHeader" render="Label" position="735,412" size="1162,37" font="menulist;36" transparent="1" halign="center" foregroundColor="secondFG"/>
+		<widget source="hdd" render="Label" position="735,472" size="1162,180" font="menulist;30" transparent="1" foregroundColor="grey" halign="center"/>
+		<widget source="MountsHeader" render="Label" position="735,675" size="1162,37" font="menulist;36" transparent="1" halign="center" foregroundColor="secondFG"/>
+		<widget source="mounts" render="Label" position="735,720" size="1162,255" font="menulist;30" transparent="1" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="AboutReleaseNotes" position="fill" flags="wfNoBorder"	>
 		<panel name="BasicTemplate"/>
 		<widget name="list" font="Regular;33" position="780,123" size="1132,874" transparent="1" foregroundColor="grey"/>
-		<eLabel text="Skin Magic-FHD	 OE-A team skin by Rob van der Does" foregroundColor="grey" font="Regular;28" halign="center" position="7,885" size="750,82" transparent="1" zPosition="1"/>
+		<eLabel text="Skin Magic-FHD	 OE-A team skin by Rob van der Does" position="7,885" size="750,82" font="menulist;28" foregroundColor="grey" halign="center" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="ServiceInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="infolist" position="780,123" size="1132,874" font="Regular;24" itemHeight="50" foregroundColor="grey"/>
 		<panel name="RedBPanel"/>
-		<widget name="red" position="55,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;30" halign="left"/>/>
+		<widget name="red" position="55,1023" size="426,39" font="menulist;30" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>/>
 		<panel name="GreenBPanel"/>
-		<widget name="green" position="490,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;30" halign="left"/>
+		<widget name="green" position="490,1023" size="426,39" font="menulist;30" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<panel name="YellowBPanel"/>
-		<widget name="yellow" position="930,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;30" halign="left"/>
+		<widget name="yellow" position="930,1023" size="426,39" font="menulist;30" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1"  halign="left"/>
 		<panel name="BlueBPanel"/>
-		<widget name="blue" position="1370,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;30" halign="left"/>
+		<widget name="blue" position="1370,1023" size="426,39" font="menulist;30" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="infolist" position="5,435" size="1970,550" font="menulist;33" itemHeight="50" selectionDisabled="1" foregroundColor="grey"/>
 	</screen>
 	<screen name="SystemMemoryInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="lab1" render="Label" position="15,682" size="750,45" font="Regular;36" transparent="0" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget source="lab1" render="Label" position="15,682" size="750,45" font="menulist;36" transparent="0" zPosition="2" foregroundColor="secondFG" halign="center"/>
 		<widget source="lab2" render="Label" position="15,720" size="750,45" font="Crs;30" transparent="0" zPosition="2" foregroundColor="grey" halign="center"/>
-		<widget name="AboutScrollLabel" position="780,123" size="1132,873" transparent="0" font="Regular;30" zPosition="1" scrollbarMode="showOnDemand" foregroundColor="grey"/>
+		<widget name="AboutScrollLabel" position="780,123" size="1132,873" font="menulist;30" transparent="0" zPosition="1" scrollbarMode="showOnDemand" foregroundColor="grey"/>
 	</screen>
 	<screen name="SystemNetworkInfo" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<widget name="AboutScrollLabel" position="780,135" size="687,712" halign="left" font="Regular;30" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="IFtext" render="Label" position="780,900" size="180,37" zPosition="10" font="Regular;30" halign="right" transparent="1" foregroundColor="grey"/>
-		<widget source="IF" render="Label" position="967,900" size="600,37" zPosition="10" font="Regular;30" halign="left" transparent="1" foregroundColor="grey"/>
-		<widget source="Statustext" render="Label" position="780,945" size="172,37" zPosition="10" font="Regular;30" halign="right" transparent="1" foregroundColor="grey"/>
+		<widget name="AboutScrollLabel" position="780,135" size="687,712" font="menulist;30" halign="left" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="IFtext" render="Label" position="780,900" size="180,37" font="menulist;30" zPosition="10" halign="right" transparent="1" foregroundColor="grey"/>
+		<widget source="IF" render="Label" position="967,900" size="600,37" font="menulist;30" zPosition="10" halign="left" transparent="1" foregroundColor="grey"/>
+		<widget source="Statustext" render="Label" position="780,945" size="172,37" font="menulist;30" zPosition="10" halign="right" transparent="1" foregroundColor="grey"/>
 		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="967,952" zPosition="10" size="23,24" transparent="1" alphatest="on"/>
 	</screen>
 	<screen name="HarddiskSelection" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
-		<widget name="hddlist" position="780,123" size="1132,874" font="Regular;33" itemHeight="45" transparent="1"/>
+		<widget name="hddlist" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" transparent="1"/>
 	</screen>
 	<screen name="HarddiskSetup" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
 		<panel name="RedBPanel"/>
-		<widget name="initializetext" position="22,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
-		<widget name="model" position="885,165" size="570,37" font="Regular;33"/>
-		<widget name="capacity" position="885,210" size="570,37" font="Regular;33"/>
-		<widget name="bus" position="885,255" size="570,37" font="Regular;33"/>
+		<widget name="initializetext" position="22,1032" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="center"/>
+		<widget name="model" position="885,165" size="570,37" font="menulist;33"/>
+		<widget name="capacity" position="885,210" size="570,37" font="menulist;33"/>
+		<widget name="bus" position="885,255" size="570,37" font="menulist;33"/>
 	</screen>
 	<screen name="HarddiskWait" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
-		<widget name="wait" position="885,165" size="900,75" font="Regular;34" transparent="1"/>
+		<widget name="wait" position="885,165" size="900,75" font="menulist;34" transparent="1"/>
 	</screen>
 	<!-- ## Restart ## -->
 	<screen name="QuitMainloopScreen" position="fill" flags="wfNoBorder" backgroundColor="black">
