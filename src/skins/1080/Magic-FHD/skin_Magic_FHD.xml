@@ -804,14 +804,14 @@
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="target" position="780,135" size="1132,45" backgroundColor="background" transparent="1" font="Regular;34"/>
-		<widget name="filelist" position="780,180" size="1132,817" font="Regular;34" itemHeight="30" backgroundColor="background" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="target" position="780,135" size="1132,45" font="menulist;34" backgroundColor="background" transparent="1"/>
+		<widget name="filelist" position="780,180" size="1132,817" font="menulist;34" itemHeight="30" backgroundColor="background" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="RecordPathsSettings" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="config" position="780,123" size="1132,874" itemHeight="45" font="Regular;33" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="780,123" size="1132,874" itemHeight="45" font="menulist;33" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="clockDisplay" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2370,9 +2370,9 @@ self.autoResize()
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="header" position="885,180" size="900,42" font="menulist;37" backgroundColor="darkgrey" transparent="1" foregroundColor="grey" />
-		<widget name="config" position="885,270" size="900,525" font="menulist;34" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="footer" position="15,600" size="715,150" font="menulist;34" selectionDisabled="1" transparent="1" foregroundColor="secondFG" halign="center"/>
+<!--		<widget name="header" position="780,123" size="900,42" font="menulist;37" backgroundColor="darkgrey" transparent="1" foregroundColor="secondFG" halign="center"/>-->
+		<widget name="config" position="780,123" size="900,525" font="menulist;34" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="footer" position="780,900" size="715,150" font="menulist;34" selectionDisabled="1" transparent="1" foregroundColor="secondFG" halign="center"/>
 	</screen>
 	<screen name="DeleteBouquets" position="0,0" size="1920,1080" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -2488,24 +2488,24 @@ self.autoResize()
 		<panel name="Blue1Panel"/>
 		<panel name="InfoBPanel"/>
 		<widget name="list" position="885,165" size="900,382" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="snr_db" position="960,645" size="300,36" foregroundColor="grey" transparent="1" font="menulist;31" valign="center" halign="center"/>
-		<eLabel text="SNR:" position="825,690" size="120,36" transparent="1" font="menulist;31" foregroundColor="grey"/>
-		<widget name="snr_bar" position="960,690" size="300,30" foregroundColor="grey" transparent="1" borderWidth="1"/>
-		<widget name="snr_percentage" position="1275,690" size="120,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<eLabel text="BER:" position="825,735" size="120,36" foregroundColor="grey" transparent="1"  font="menulist;31"/>
-		<widget name="ber_bar" position="960,735" size="300,30" foregroundColor="grey" transparent="1" borderWidth="1"/>
-		<widget name="ber_value" position="1275,735" size="120,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<eLabel text="Lock:" position="825,780" size="120,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<widget name="lock_state" position="960,780" size="300,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<eLabel text="Frequency:" position="1440,690" size="225,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<widget name="frequency_value" position="1665,690" size="150,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<eLabel text="Symbolrate:" position="1440,735" size="225,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<widget name="symbolrate_value" position="1665,735" size="150,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<eLabel text="FEC:" position="1440,780" size="225,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<widget name="fec_value" position="1665,780" size="150,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<eLabel text="Polarisation:" position="1440,825" size="225,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<widget name="polarisation" position="1665,825" size="450,36" foregroundColor="grey" transparent="1" font="menulist;31"/>
-		<widget name="status_bar" position="750,870" size="750,36" foregroundColor="grey" zPosition="4" transparent="1" font="menulist;31"/>
+		<widget name="snr_db" position="960,645" size="300,36"  font="menulist;31" foregroundColor="grey" transparent="1" valign="center" halign="center"/>
+		<eLabel text="SNR:" position="825,690" size="120,36"  font="menulist;31" transparent="1" foregroundColor="grey"/>
+		<widget name="snr_bar" position="960,690" size="300,30"  foregroundColor="grey" transparent="1" borderWidth="1"/>
+		<widget name="snr_percentage" position="1275,690" size="120,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<eLabel text="BER:" position="825,735" size="120,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<widget name="ber_bar" position="960,735" size="300,30"  foregroundColor="grey" transparent="1" borderWidth="1"/>
+		<widget name="ber_value" position="1275,735" size="120,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<eLabel text="Lock:" position="825,780" size="120,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<widget name="lock_state" position="960,780" size="300,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<eLabel text="Frequency:" position="1440,690" size="225,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<widget name="frequency_value" position="1665,690" size="150,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<eLabel text="Symbolrate:" position="1440,735" size="225,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<widget name="symbolrate_value" position="1665,735" size="150,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<eLabel text="FEC:" position="1440,780" size="225,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<widget name="fec_value" position="1665,780" size="150,36"  font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<eLabel text="Polarisation:" position="1440,825" size="225,36" font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<widget name="polarisation" position="1665,825" size="450,36" font="menulist;31" foregroundColor="grey" transparent="1"/>
+		<widget name="status_bar" position="25,900" size="1900,70" font="menulist;55" halign="center" foregroundColor="red" zPosition="4" transparent="1"/>
 	</screen>
 	<screen name="PositionerSetupLog" position="fill" flags="wfNoBorder" title="Positioner Setup Log">
 		<panel name="BasicTemplate"/>
@@ -3099,11 +3099,10 @@ self.autoResize()
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<widget name="blue" pixmap="buttons/blue.png" position="1335,1027" size="426,60" zPosition="0" alphatest="blend"/>
-		<widget name="key_blue" render="Label" position="1335,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
-		<widget name="config" position="735,120" size="1177,876" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="description" position="7,570" size="715,247" zPosition="2" font="Regular;30" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget name="text" position="7,832" size="715,63" zPosition="2" font="Regular;30" valign="center" halign="center"/>
+		<panel name="Blue2Panel"/>
+		<widget name="config" position="735,120" size="1177,876" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="description" position="7,570" size="715,247" font="menulist;30" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="text" position="7,832" size="715,63" zPosition="2" font="menulist;30" valign="center" halign="center"/>
 	</screen>
 	<!-- ##AudioEffect (VU only)## -->
 	<screen name="AudioEffect" position="fill" flags="wfNoBorder" title="">
