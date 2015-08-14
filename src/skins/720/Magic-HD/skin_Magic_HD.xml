@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-HD Vs 8.2 by Rob van der Does @www.world-of-satellite.com, based on Magic-EHD Vs 1.91.54	-->
+	<!--	Skin: Magic-HD Vs 8.3 by Rob van der Does @www.world-of-satellite.com, based on Magic-EHD Vs 1.91.54	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -453,28 +453,28 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<ePixmap pixmap="dvr/scale2.png" position="0,110" size="477,12" zPosition="1" alphatest="on"/>
-		<eLabel backgroundColor="infobarBG" position="0,111" size="477,14" zPosition="0"/>
-		<widget source="session.CurrentService" render="PositionGauge" position="0,110" size="477,12" transparent="1" zPosition="5" pointer="Magic-HD/dvr/position_pointer2.png:477,0">
-			<convert type="ServicePosition">Gauge</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Progress" pixmap="dvr/position_pointer2.png" position="0,110" size="477,9" backgroundColor="un33333a" transparent="0" zPosition="4" borderWidth="0">
-			<convert type="EventTime">Progress</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="0,90" size="90,20" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="left">
+<!--		<ePixmap pixmap="dvr/scale2.png" position="0,110" size="477,12" zPosition="1" alphatest="on"/>-->
+		<eLabel backgroundColor="transpBlack" position="0,110" size="482,12" zPosition="5"/>
+		<widget source="session.CurrentService" render="Label" position="0,90" size="90,20" backgroundColor="transparent" transparent="1" zPosition="4" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="left">
 			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="5,90" size="117,20" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="left">
+		<widget source="session.CurrentService" render="PositionGauge" position="0,110" size="477,12" transparent="1" zPosition="6" pointer="Magic-HD/dvr/position_pointer2.png:477,0">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="365,90" size="117,20" backgroundColor="transparent" transparent="1" zPosition="4" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="right">
+			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+		</widget>
+<!--		<widget source="session.Event_Now" render="Progress" pixmap="dvr/position_pointer2.png" position="0,110" size="477,9" backgroundColor="un33333a" transparent="0" zPosition="4" borderWidth="0">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="5,90" size="117,20" backgroundColor="transparent" transparent="1" zPosition="4" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="left">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="365,90" size="117,20" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="right">
+		<widget source="session.Event_Now" render="Label" position="365,90" size="117,20" backgroundColor="transparent" transparent="1" zPosition="4" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="right">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="365,90" size="117,20" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="right">
-			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
-		</widget>
+		</widget>-->
 		<widget name="movie_sort" position="905,50" size="35,20" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" zPosition="10" transparent="1" alphatest="on"/>
 		<widget name="movie_off" position="960,50" size="35,20" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png" zPosition="10" transparent="1" alphatest="on"/>
 		<widget name="waitingtext" position="520,82" size="755,548" font="Regular;25" halign="center" valign="center" foregroundColor="grey" zPosition="4"/>
@@ -3758,5 +3758,9 @@ self.autoResize()
 		<panel name="Blue2Panel"/>
 		<widget name="list" position="520,80" size="755,584" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="introduction" render="Label" position="5,379" size="477,264" zPosition="2" font="Regular;22" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<!-- QuitMainloopScreen -->
+	<screen name="QuitMainloopScreen" position="fill" flags="wfNoBorder">
+		<widget name="text" position="150,250" size="1000,300" font="Fixed;35" foregroundColor="secondFG" halign="center"/>
 	</screen>
 </skin>

@@ -234,9 +234,6 @@
 		<widget name="list" position="780,123" size="1132,750" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30"
 		serviceInfoFont="channelselectionevent;28" colorEventProgressbar="blue" foregroundColorEvent="blue" foregroundColorEventSelected="yellow" 
 		foregroundColorServiceNotAvail="#656565" foregroundColorMarkedSelected="blue" progressBarWidth="80" fieldMargins="13" transparent="1" scrollbarMode="showOnDemand" zPosition="3"/>
-		<widget source="ServiceEvent" render="Label" position="780,967" size="1132,33" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
-			<convert type="TransponderInfo"></convert>
-		</widget>
 		<widget source="ServiceEvent" render="Label" position="780,877" size="937,37" font="Regular;33" foregroundColor="selectedFG" noWrap="1" zPosition="2" transparent="1" halign="left">
 			<convert type="EventName">NextName</convert>
 		</widget>
@@ -245,37 +242,40 @@
 			<convert type="ClockToText"/>
 		</widget>
 		<eLabel text="-" foregroundColor="selectedFG" backgroundColor="secondBG" position="1812,877" size="330,39" font="Regular;33" halign="left" transparent="1" zPosition="1"/>
-		<widget source="ServiceEvent" render="Label" position="1822,877" size="93,37" transparent="1" foregroundColor="selectedFG" font="Regular;31">
+		<widget source="ServiceEvent" render="Label" position="1822,877" size="93,37" font="Regular;31" transparent="1" foregroundColor="selectedFG">
 			<convert type="EventTime">NextEndTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="780,922" size="937,37" font="Regular;33" foregroundColor="selectedFG" noWrap="1" zPosition="2" transparent="1" halign="left">
 			<convert type="EventName">ThirdName</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1717,922" size="93,37" transparent="1" foregroundColor="selectedFG" font="Regular;31" halign="right">
+		<widget source="ServiceEvent" render="Label" position="1717,922" size="93,37" font="Regular;31" transparent="1" foregroundColor="selectedFG" halign="right">
 			<convert type="EventTime">ThirdStartTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
 		<eLabel text="-" foregroundColor="selectedFG" position="1812,922" size="330,39" font="Regular;33" halign="left" backgroundColor="secondBG" transparent="1" zPosition="1"/>
-		<widget source="ServiceEvent" render="Label" position="1822,922" size="93,37" transparent="1" foregroundColor="selectedFG" font="Regular;31">
+		<widget source="ServiceEvent" render="Label" position="1822,922" size="93,37" font="Regular;31" transparent="1" foregroundColor="selectedFG">
 			<convert type="EventTime">ThirdEndTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="7,525" size="765,37" font="Regular;33" transparent="1" foregroundColor="secondFG" halign="center" valign="top">
+		<widget source="ServiceEvent" render="Label" position="780,967" size="1132,35" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
+			<convert type="TransponderInfo"></convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="7,524" size="765,38" font="Regular;33" transparent="1" foregroundColor="secondFG" halign="center" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="7,564" size="78,33" font="Regular;31" transparent="1" foregroundColor="grey" halign="right">
+		<widget source="ServiceEvent" render="Label" position="7,564" size="78,35" font="Regular;31" transparent="1" foregroundColor="grey" halign="right">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="387,564" size="78,33" font="Regular;31" transparent="1" foregroundColor="grey">
+		<widget source="ServiceEvent" render="Label" position="387,564" size="78,35" font="Regular;31" transparent="1" foregroundColor="grey">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="ServiceEvent" render="Progress" pixmap="window/progress.png" position="94,576" size="285,12" transparent="1" borderWidth="1" foregroundcolor="secondFG" borderColor="grey">
+		<widget source="ServiceEvent" render="Progress" pixmap="window/progress.png" position="95,580" size="285,12" transparent="1" borderWidth="1" borderColor="grey">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="510,564" size="180,33" transparent="1" halign="right" foregroundColor="grey" font="Regular;31">
+		<widget source="ServiceEvent" render="Label" position="510,564" size="180,35" font="Regular;31" transparent="1" halign="right" foregroundColor="grey">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -336,7 +336,6 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<widget name="list" position="780,123" size="1132,880" EventFontSingle="menulist;32" itemHeight="55" transparent="1" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1"/>
-<!-- 	<widget name="list" position="780,123" size="1132,880" EventFontSingle="menulist;32" itemHeight="55" transparent="1" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1"/>-->
 		<widget name="number" position="780,123" size="1132,874" zPosition="5" backgroundColor="background" transparent="0" font="Regular;54" borderColor="black" borderWidth="1" valign="center" halign="center"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" backgroundColor="background" transparent="1" halign="center" valign="center" foregroundColor="grey" zPosition="1"/>
 		<widget source="Event" render="Label" position="7,532" size="750,72" transparent="1" foregroundColor="secondFG" font="Regular;34" halign="center" valign="top">
@@ -407,7 +406,6 @@
 			<convert type="EventName">NameNext</convert>
 		</widget>
 	</screen>
-
 	<screen name="EventViewContextMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="menu" position="780,123" size="1132,874" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" transparent="1" enableWrapAround="1"/>
@@ -434,7 +432,7 @@
 		<widget name="FullDescription" position="15,97" size="1890,720" font="Regular;42" borderColor="black" borderWidth="3" foregroundColor="grey" backgroundColor="background" transparent="1" valign="top" halign="center" zPosition="2"/>
 		<widget name="channel" position="15,7" size="1275,75" font="Regular;45" borderColor="black" borderWidth="3" foregroundColor="secondFG" transparent="1" backgroundColor="background" halign="center"/>
 		<widget name="datetime" position="1275,15" size="375,45" font="Regular;39" borderColor="black" borderWidth="3" transparent="1" halign="left"/>
-		<widget name="duration" position="1650,15" size="225,45" font="Regular;39" borderColor="black" borderWidth="3" transparent="1"  halign="left"/>
+		<widget name="duration" position="1650,15" size="225,45" font="Regular;39" borderColor="black" borderWidth="3" transparent="1" halign="left"/>
 	</screen>
 	<screen name="QuickEPG" title="InfoBar" position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="Red1Panel"/>
@@ -593,16 +591,20 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<ePixmap pixmap="dvr/scale716.png" position="0,165" size="716,18" zPosition="1" alphatest="on"/>
-		<eLabel backgroundColor="infobarBG" position="0,165" size="716,8" zPosition="0"/>
-		<widget source="session.CurrentService" render="PositionGauge" position="0,167" size="715,8" pointer="Magic-FHD/dvr/position_pointer716.png:716,4" transparent="0" zPosition="6">
+<!--		<ePixmap pixmap="dvr/scale716.png" position="0,165" size="716,18" zPosition="1" alphatest="on"/>-->
+		<eLabel backgroundColor="transpBlack" position="0,179" size="723,10" zPosition="5"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="0,179" size="715,10" pointer="Magic-FHD/dvr/position_pointer716.png:716,4" transparent="1" zPosition="6">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
+		<widget source="session.CurrentService" render="Label" position="0,135" size="135,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="left">
+			<convert type="ServicePosition">Position,ShowHours</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="540,135" size="175,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="right">
+			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+		</widget>
+<!-- Related to live TV
 		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar2.png" position="0,168" size="716,8" backgroundColor="un33333a" transparent="0" zPosition="5" borderWidth="0">
 			<convert type="EventTime">Progress</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="0,135" size="135,30" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;27" borderColor="black" valign="center" halign="left">
-			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="7,135" size="175,30" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;27" borderColor="black" valign="center" halign="left">
 			<convert type="EventTime">StartTime</convert>
@@ -611,10 +613,7 @@
 		<widget source="session.Event_Now" render="Label" position="530,135" size="175,30" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;27" borderColor="black" valign="center" halign="right">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="540,135" size="175,30" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;27" borderColor="black" valign="center" halign="right">
-			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
-		</widget>
+		</widget>-->
 		<widget name="movie_sort" position="1357,75" size="52,30" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" zPosition="10" transparent="1" alphatest="on"/>
 		<widget name="movie_off" position="1440,75" size="52,30" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png" zPosition="10" transparent="1" alphatest="on"/>
 		<widget name="waitingtext" position="780,123" size="1132,822" font="Regular;37" halign="center" valign="center" foregroundColor="grey" zPosition="4"/>
@@ -1137,7 +1136,7 @@ self.autoResize()
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Progress" pixmap="window/progress.png" position="225,211" size="285,18" transparent="1" borderWidth="1" borderColor="grey">
+		<widget source="session.Event_Now" render="Progress" pixmap="window/progress.png" position="225,215" size="285,18" transparent="1" borderWidth="1" borderColor="grey">
 		<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="540,205" size="93,33" transparent="1" foregroundColor="foreground" font="Regular;28">
