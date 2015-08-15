@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.4	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.4.1	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -714,5 +714,133 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
-
+	<!-- #Bluetooth Devices Manager# -->
+	<screen name="BluetoothDevicesManager" position="fill" flags="wfNoBorder" title="Bluetooth Devices Manager">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<widget name="devicelist" position="735,120" size="1177,876" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="ConnStatus" position="7,568" size="715,396" zPosition="2" font="menulist;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<!-- ## WikiPedia# -->
+	<screen name="searchWikipedia" position="fill" flags="wfNoBorder" title="Wikipedia - Search for Movie, Director or Actor">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="780,120" size="1132,876" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="wikiSearch_en" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="735,120" size="1177,875" scrollbarMode="showOnDemand" font="menulist;30" itemHeight="35" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="wikiSearch_es" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="735,120" size="1177,875" scrollbarMode="showOnDemand" font="menulist;30" itemHeight="35" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="wikiSearch" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="735,120" size="1177,875" scrollbarMode="showOnDemand" font="menulist;30" itemHeight="35" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="wikiSearch" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="15,568" size="1890,370" scrollbarMode="showOnDemand" font="menulist;30" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="wikiConfig" position="fill" flags="wfNoBorder" title="Wikipedia Setup">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<eLabel text="Cancel" position="55,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
+		<panel name="GreenBPanel"/>
+		<eLabel text="Save" position="490,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
+		<widget name="config" position="780,120" size="1132,876" scrollbarMode="showNever" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="wikiFullScreen" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<eLabel text="WiKi-photo" foregroundColor="grey" position="22,10" size="1050,82" font="Regular;37" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
+		<widget name="picture" position="735,220" size="1177,755" alphatest="blend"  />
+		<widget name="picindex" position="7,540" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<screen name="wikiArtikel_en" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<widget name="label4" position="55,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="GreenBPanel"/>
+		<widget name="label3" position="490,1023" size="490,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="YellowBPanel"/>
+		<widget name="label2" position="930,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1335,1025" size="52,37"/>
+		<eLabel text="= Photo" position="1390,1023" size="200,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="textpage" position="785,120" size="1127,855" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="pic1" position="0,550" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic2" position="0,750" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic3" position="220,550" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic4" position="220,750" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic5" position="450,550" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic6" position="450,750" size="200,150" alphatest="blend" zPosition="1"/>
+	</screen>
+	<screen name="wikiArtikel_es" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<widget name="label4" position="55,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="GreenBPanel"/>
+		<widget name="label3" position="490,1023" size="490,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="YellowBPanel"/>
+		<widget name="label2" position="930,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1335,1025" size="52,37"/>
+		<eLabel text="= Photo" position="1390,1023" size="200,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="textpage" position="785,120" size="1127,855" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="pic1" position="0,550" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic2" position="0,750" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic3" position="220,550" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic4" position="220,750" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic5" position="450,550" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic6" position="450,750" size="200,150" alphatest="blend" zPosition="1"/>
+	</screen>
+	<screen name="wikiArtikel" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<widget name="label4" position="55,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="GreenBPanel"/>
+		<widget name="label3" position="490,1023" size="490,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="YellowBPanel"/>
+		<widget name="label2" position="930,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1335,1025" size="52,37"/>
+		<eLabel text="= Photo" position="1390,1023" size="200,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="textpage" position="785,120" size="1127,855" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="pic1" position="0,550" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic2" position="0,750" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic3" position="220,550" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic4" position="220,750" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic5" position="450,550" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic6" position="450,750" size="200,150" alphatest="blend" zPosition="1"/>
+	</screen>
+	<screen name="wikiFav_en" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<widget name="label2" position="55,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="YellowBPanel"/>
+		<widget name="label" position="930,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="favmenu" position="800,120" size="1000,855" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="wikiFav_es" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<widget name="label2" position="55,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="YellowBPanel"/>
+		<widget name="label" position="930,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="favmenu" position="800,120" size="1000,855" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="wikiFav" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<widget name="label2" position="55,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="YellowBPanel"/>
+		<widget name="label" position="930,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="favmenu" position="800,120" size="1000,855" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
 	</skin>
