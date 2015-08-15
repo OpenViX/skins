@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Common Vs 0.3.7 	-->
+	<!--	Skin: Magic-FHD Common Vs 0.3.8 	-->
 	<!--	This skin is part of the skin Magic-HD; the same license applies.	-->
 
 	<!-- templates -->
@@ -33,8 +33,8 @@
 	<screen name="BasicTemplate">
 		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget source="Title" render="Label" foregroundColor="grey" position="22,10" size="1050,82" font="Regular;37" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;39" halign="right" position="1522,10" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
+		<widget source="Title" render="Label" foregroundColor="grey" position="22,5" size="1500,100" font="Regular;37" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
+		<widget source="global.CurrentTime" render="Label" position="1522,10" size="375,42" font="Regular;39" backgroundColor="secondBG" halign="right"  transparent="1" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Format:%-H:%M</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,37" font="Regular;30" backgroundColor="secondBG" halign="right" transparent="1" foregroundColor="grey" zPosition="1">
@@ -49,7 +49,7 @@
 	<screen name="BasicTemplate2">
 		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget source="Title" render="Label" foregroundColor="grey" position="22,10" size="1050,82" font="Regular;37" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
+		<widget source="Title" render="Label" position="22,5" size="1500,100" font="Regular;37" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
 		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;39" halign="right" position="1522,10" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Format:%-H:%M</convert>
 		</widget>
@@ -65,7 +65,7 @@
 	<screen name="BasicTemplate3">
 		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget source="Title" render="Label" position="22,10" size="1050,82" font="Regular;37" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
+		<widget source="Title" render="Label" position="22,5" size="1500,100" font="Regular;37" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
 		<widget source="global.CurrentTime" render="Label" position="1522,10" size="375,44" font="Regular;39" backgroundColor="secondBG" halign="right" transparent="1" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Format:%-H:%M</convert>
 		</widget>
@@ -122,22 +122,6 @@
 		<widget source="key_blue" render="Label" position="1370,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 	</screen>
 
-	<screen name="OKBPanel">
-		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="457,1025"	size="52,37"/>
-	</screen>
-
-	<screen name="MenuBPanel">
-		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1762,1025" size="52,37"/>
-	</screen>
-
-	<screen name="InfoBPanel">
-		<ePixmap pixmap="buttons/key_info.png" alphatest="on" position="1822,1025" size="52,37"/>
-	</screen>
-
-	<screen name="ExitBPanel">
-		<ePixmap pixmap="buttons/key_exit.png" alphatest="on" position="22,1025" size="52,37"/>
-	</screen>
-
 	<screen name="Red1Panel">
 		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" zPosition="0" alphatest="blend"/>
 		<widget name="key_red" position="55,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
@@ -176,6 +160,22 @@
 	<screen name="Blue2Panel">
 		<ePixmap pixmap="buttons/blue.png" position="1335,1027" size="30,30" zPosition="0" alphatest="blend"/>
 		<widget source="key_blue" render="Label" position="1370,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="left" transparent="1" zPosition="1"/>
+
+		</screen>
+	<screen name="OKBPanel">
+		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="457,1025"	size="52,37"/>
+	</screen>
+
+	<screen name="MenuBPanel">
+		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1762,1025" size="52,37"/>
+	</screen>
+
+	<screen name="InfoBPanel">
+		<ePixmap pixmap="buttons/key_info.png" alphatest="on" position="1822,1025" size="52,37"/>
+	</screen>
+
+	<screen name="ExitBPanel">
+		<ePixmap pixmap="buttons/key_exit.png" alphatest="on" position="22,1025" size="52,37"/>
 	</screen>
 
 	<screen name="PlayerPanel">
