@@ -232,8 +232,8 @@
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<widget name="list" position="780,123" size="1132,750" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30"
-		serviceInfoFont="channelselectionevent;28" colorEventProgressbar="blue" foregroundColorEvent="blue" foregroundColorEventSelected="yellow" 
-		foregroundColorServiceNotAvail="#656565" foregroundColorMarkedSelected="blue" progressBarWidth="80" fieldMargins="13" transparent="1" scrollbarMode="showOnDemand" zPosition="3"/>
+				serviceInfoFont="channelselectionevent;28" colorEventProgressbar="blue" foregroundColorEvent="blue" foregroundColorEventSelected="yellow" 
+				foregroundColorServiceNotAvail="#656565" foregroundColorMarkedSelected="blue" progressBarWidth="80" fieldMargins="13" transparent="1" scrollbarMode="showOnDemand" zPosition="3"/>
 		<widget source="ServiceEvent" render="Label" position="780,877" size="937,37" font="Regular;33" foregroundColor="selectedFG" noWrap="1" zPosition="2" transparent="1" halign="left">
 			<convert type="EventName">NextName</convert>
 		</widget>
@@ -296,7 +296,7 @@
 		<widget name="key_blue" backgroundColor="secondBG" font="Regular;30" halign="left" position="490,1017" size="330,39" transparent="1" zPosition="1"/>
 		<widget source="Title" foregroundColor="blue" render="Label" position="22,7" size="825,45" transparent="1" zPosition="1" font="Regular;37" halign="center" valign="center"/>
 		<widget name="list" position="22,51" size="855,757" itemHeight="45" noWrap="1" serviceNumberFont="Regular;33" serviceInfoFont="Crs;33" serviceNameFont="Regular;33" serviceItemHeight="35"
-		colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" transparent="1" foregroundColorServiceNotAvail="#656565" scrollbarMode="showOnDemand"/>
+				colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" transparent="1" foregroundColorServiceNotAvail="#656565" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceEvent" render="Label" position="22,855" size="855,97" font="Regular;27" backgroundColor="black" foregroundColor="foreground" zPosition="2" transparent="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
@@ -325,8 +325,10 @@
 		<panel name="GreenT1Panel"/>
 		<panel name="YellowT1Panel"/>
 		<panel name="BlueT1Panel"/>
-		<widget name="list" position="780,123" size="1132,874" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
-	</screen>
+		<widget name="list" position="780,123" size="1132,874" itemHeight="60" font="menulist;34" colorServiceDescription="yellow" transparent="1" colorEventProgressbar="blue"
+				foregroundColorEvent="blue" serviceNumberFont="channelselectionservice;36" serviceInfoFont="channelselectionevent;30" serviceNameFont="channelselectionservice;33"
+				serviceItemHeight="60" foregroundColorServiceNotAvail="#656565" foregroundColorEventSelected="yellow" foregroundColorMarkedSelected="blue" scrollbarMode="showOnDemand"/>
+		</screen>
 		<screen name="EPGSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
 		<panel name="InfoBPanel"/>
