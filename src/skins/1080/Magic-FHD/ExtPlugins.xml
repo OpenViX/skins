@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.4.4	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.4.5	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -963,5 +963,33 @@
 		<widget name="aavg" position="1110,450" size="120,39" font="menulist;33" backgroundColor="transparent" borderColor="black" borderWidth="3" transparent="1"/>
 		<eLabel text="current" position="1260,412" size="165,39" font="menulist;33" zPosition="1" backgroundColor="transparent" borderColor="black" borderWidth="3" transparent="1"/>
 		<widget name="acur" position="1260,450" size="120,39" font="menulist;33" backgroundColor="transparent" borderColor="black" borderWidth="3" transparent="1"/>
+	</screen>
+
+	<!-- ## OFDb Plugin ## -->
+	<screen name="OFDB" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<panel name="MenuBPanel"/>
+		<eLabel text="OFDb" foregroundColor="grey" position="22,5" size="1500,100" font="Regular;37" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
+		<widget name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/OFDb/starsbar_empty.png" position="223,570" size="315,31" zPosition="2" alphatest="on"/>
+		<widget name="stars" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/OFDb/starsbar_filled.png" position="223,570" size="315,31" zPosition="3" transparent="1"/>
+		<widget name="ratinglabel" position="75,615" size="600,36" foregroundColor="grey" transparent="1" font="menulist;30" halign="center"/>
+		<widget name="titellabel" position="7,667" size="765,75" foregroundColor="grey" transparent="1" font="menulist;30" halign="center"/>
+		<widget name="poster" position="780,123" size="165,270" alphatest="blend"/>
+		<widget name="detailslabel" position="960,123" size="945,270" backgroundColor="darkgrey" transparent="1" font="menulist;30" halign="center"/>
+		<widget name="menu" position="780,397" size="1132,600" zPosition="3" transparent="1" font="menulist;33" scrollbarMode="showOnDemand" itemHeight="45" enableWrapAround="1" foregroundColor="grey"/>
+		<widget name="castlabel" position="780,412" size="1132,577" transparent="1" font="menulist;33" foregroundColor="grey"/>
+		<widget name="extralabel" position="780,123" size="1132,874" transparent="1" font="menulist;33" foregroundColor="grey"/>
+		<widget name="statusbar" position="7,675" size="765,285" transparent="1" font="menulist;27" halign="center" valign="bottom"/>
+	</screen>
+	<screen name="OFDbLCDScreen" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="headline" position="735,568" size="1177,37" zPosition="2" font="menulist;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="session.Event_Now" render="Label" position="735,165" size="1132,882" font="menulist;33" transparent="1" foregroundColor="grey">
+			<convert type="EventName">Name</convert>
+		</widget>
 	</screen>
 </skin>
