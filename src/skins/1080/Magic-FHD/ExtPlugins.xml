@@ -4,6 +4,7 @@
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
+
 	<!-- ## IMDB Plugin ## -->
 	<screen name="IMDB" position="fill" flags="wfNoBorder" title="Internet Movie Database Details Plugin">
 		<panel name="BasicTemplate"/>
@@ -30,7 +31,8 @@
 		<widget source="help" render="Label" position="7,600" size="715,120" font="Regular;30" foregroundColor="secondFG"/>
 		<widget name="config" position="780,123" size="1132,874" font="Regular;33" foregroundColor="grey" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
-<!-- ## RemoteTimer ##-->
+
+	<!-- ## RemoteTimer ##-->
 	<screen name="RemoteTimerScreen" position="fill" flags="wfNoBorder" title="Remote-Timer digest">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
@@ -61,6 +63,13 @@
 			<convert type="ClockToText">Default</convert>
 		</widget>
 	</screen>
+	<screen name="PermanentClockPositioner" position="0,0" size="180,45" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
+		<widget source="global.CurrentTime" render="Label" position="1,1" size="180,45" font="menulist;39" backgroundColor="transparent" foregroundColor="grey" transparent="1" zPosition="0" borderWidth="3" borderColor="black" valign="center" halign="center">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+	</screen>
+
+	<!-- ## PluginHider ## -->
 	<screen name="PluginHiderSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
@@ -73,12 +82,15 @@
 		<widget source="eventinfo" render="Label" position="1111,135" size="162,33" font="Regular;27" valign="center" transparent="1" zPosition="2" halign="center"/>
 		<widget name="list" position="780,180" size="1110,810" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
+
+	<!-- ## MenuSort ## -->
 	<screen name="SortableMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="BlueBPanel"/>
 		<eLabel text="Hide" position="1370,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
 		<widget name="menu" scrollbarMode="showOnDemand" position="780,120" size="1132,882" font="Regular;33" transparent="1" foregroundColor="grey" itemHeight="45" enableWrapAround="1"/>
 	</screen>
+
 	<!-- ## Cross EPG ## -->
 	<screen name="CrossEPG_Menu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -170,6 +182,7 @@
 			</convert>
 		</widget>
 	</screen>
+
 	<!-- ## XMLTV EPG importer ## -->
 	<screen name="EPGMainSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -198,6 +211,7 @@
 		<panel name="Blue1Panel"/>
 		<widget name="list" position="780,123" size="1132,876" font="menulist;30" foregroundColor="grey" transparent="1"/>
 	</screen>
+
 	<!-- ## Foreca Weather forecast ## -->
 	<!--Templates-->
 	<screen name="ForecaTemplate">
@@ -263,6 +277,7 @@
 		<panel name="Green2Panel"/>
 		<widget name="Mlist" position="780,123" size="1110,855" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
+
 	<!-- ## Het weer ## -->
 	<screen name="Weermenu" position="fill" flags="wfNoBorder" title="Het weer">
 		<panel name="BasicTemplate"/>
@@ -274,6 +289,7 @@
 		<widget name="list" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="Text" position="7,622" zPosition="4" size="750,300" font="Regular;33" foregroundColor="secondFG" transparent="1" halign="center" valign="center"/>
 	</screen>
+
 	<!-- ## EPG Translator# -->
 	<screen name="translatorMain" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -310,6 +326,7 @@
 		<widget name="poster2" position="780,370" size="215,120" alphatest="blend" zPosition="1"/>
 		<widget name="poster4" position="780,500" size="215,120" alphatest="blend" zPosition="1"/>
 	</screen>
+
 	<!-- ## YouTube ## -->
 	<screen name="YouTubeMain" position="0,0" size="1920,1080" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -375,6 +392,7 @@
 		<widget name="likes" position="225,795" size="300,45" font="Regular;33" foregroundColor="grey" zPosition="2"/>
 		<widget name="dislikes" position="225,855" size="300,45" font="Regular;33" foregroundColor="grey" zPosition="2"/>
 	</screen>
+
 	<!-- ## FanControl 2 ##-->
 	<screen name="FanControl2SpezialSetup" position="fill" flags="wfNoBorder" title="Fan Control 2 - Setup">
 		<panel name="BasicTemplate"/>
@@ -442,6 +460,7 @@
 		<widget source="TextTest6" render="Label" position="907,435" size="930,45" zPosition="10" font="Regular;30" halign="left" valign="center" foregroundColor="grey" transparent="1"/>
 		<widget source="TextTest7" render="Label" position="907,480" size="930,45" zPosition="10" font="Regular;30" halign="left" valign="center" foregroundColor="grey" transparent="1"/>
 	</screen>
+
 	<!-- ##LCD4linux## -->
 	<screen name="XXXLCDdisplayConfig" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -473,7 +492,8 @@
 		<widget name="LCDfile" position="780,123" size="1132,876" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="File" render="Label" position="7,568" size="715,396" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
-  <!-- ##Media-Player## -->
+
+	<!-- ##Media-Player## -->
   <screen name="MediaPlayer" title="MediaPlayer" position="0,0" size="1920,1080" flags="wfNoBorder">
 	<ePixmap pixmap="Magic-HD-Common/border/top2_bg.png" position="0,0" size="1920,112"/>
 	<ePixmap pixmap="Magic-HD-Common/border/bottom_bg.png" position="0,1012" size="1920,3"/>
@@ -504,6 +524,7 @@
 	</widget>
 	<widget name="repeat" position="1680,1023" size="105,45" zPosition="10" pixmaps="Magic-HD-Common/buttons/repeat-off.png,Magic-HD-Common/buttons/repeat-on.png" alphatest="blend"/>
   </screen>
+
   <!-- ##Open-WEB-IF## -->
 	<screen name="OpenWebifConfig" position="fill" flags="wfNoBorder" title="OpenWebif Configuration">
 		<panel name="BasicTemplate"/>
@@ -512,7 +533,8 @@
 		<widget name="lab1" position="780,123" size="1132,90" font="menulist;40" halign="center" valign="top" zPosition="1" transparent="1"/>
 		<widget name="config" position="780,225" size="1110,765" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
-<!-- ## RemoteChannelStreamConverter ## -->
+
+	<!-- ## RemoteChannelStreamConverter ## -->
 	<screen name="ServerEditor" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
@@ -530,6 +552,7 @@
 		<widget name="list" position="780,120" size="1132,855" font="menulist;31" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="statusbar" render="Label" position="7,585" size="715,300" font="Regular;33" valign="center" halign="center" transparent="1" foregroundColor="secondFG" />
 	</screen>
+
 	<!-- ## AutoBouquetsMaker ## -->
 	<screen name="AutoBouquetsMaker_Menu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -656,6 +679,7 @@
 		<widget name="scan_state" position="900,165" size="1050,45" font="menulist;27" zPosition="2"/>
 		<widget name="scan_progress" position="900,217" size="720,22" pixmap="infobar/progress_big.png" borderWidth="1" borderColor="grey"/>
 	</screen>
+
 	<!-- ## DreamExplorer ## -->
 	<screen name="DreamExplorerII" title="Dream-Explorer" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -714,6 +738,7 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
+
 	<!-- #Bluetooth Devices Manager# -->
 	<screen name="BluetoothDevicesManager" position="fill" flags="wfNoBorder" title="Bluetooth Devices Manager">
 		<panel name="BasicTemplate"/>
@@ -724,6 +749,7 @@
 		<widget name="devicelist" position="735,120" size="1177,876" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="ConnStatus" position="7,568" size="715,396" zPosition="2" font="menulist;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
+
 	<!-- ## WikiPedia# -->
 	<screen name="searchWikipedia" position="fill" flags="wfNoBorder" title="Wikipedia - Search for Movie, Director or Actor">
 		<panel name="BasicTemplate"/>
@@ -843,6 +869,7 @@
 		<widget name="label" position="930,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<widget name="favmenu" position="800,120" size="1000,855" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
+
 	<!-- ## YouTube-VU ## -->
 	<screen name="YoutubeTVWindow" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -857,6 +884,7 @@
 		<panel name="Red2Panel"/>
 		<widget name="config" position="735,120" size="1177,876" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
+
 	<!-- ##SHOUTcast## -->
 	<screen name="SHOUTcastWidget" position="fill" transparent="0" backgroundColor="black" flags="wfNoBorder">
 		<panel name="BasicTemplate3"/>
@@ -887,6 +915,7 @@
 		<widget name="target" position="885,172" size="900,42" backgroundColor="background" transparent="1" font="menulist;36"/>
 		<widget name="filelist" position="885,247" size="900,675" itemHeight="30" backgroundColor="background" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 	</screen>
+
 	<!-- ## EPG refresh ## -->
 	<screen name="EPGRefreshConfiguration" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
