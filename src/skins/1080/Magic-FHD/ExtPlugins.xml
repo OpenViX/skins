@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.4.7	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.4.8	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -225,7 +225,7 @@
 		font="menulist;32" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<!--Screens-->
-	<screen name="ForecaPreview" position="fill" title="Forecast" flags="wfNoBorder" >
+	<screen name="ForecaPreview" position="fill" title="Forecast" flags="wfNoBorder">
 		<panel name="ForecaTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
@@ -240,9 +240,9 @@
 				setWindPict="410,43,42,42" setWindPictScale="1" setWind="470,22,150,30" setWindUnits="470,68,150,30"
 				text1Pos="615,15,500,35" text2Pos="615,50,500,35" text3Pos="615,80,500,35" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
-	<screen name="ForecaPreviewCache" position="center,center" size="76,76" flags="wfNoBorder" backgroundColor="#000000" >
-		<eLabel position="2,2" size="72,72" font="menulist;18" zPosition="1" backgroundColor="#40000000" />
-		<widget name="spinner" position="14,14" zPosition="4" size="48,48" alphatest="blend" />
+	<screen name="ForecaPreviewCache" position="center,center" size="76,76" flags="wfNoBorder" backgroundColor="#000000">
+		<eLabel position="2,2" size="72,72" font="menulist;18" zPosition="1" backgroundColor="#40000000"/>
+		<widget name="spinner" position="14,14" zPosition="4" size="48,48" alphatest="blend"/>
 	</screen>
 	<screen name="CityPanel" position="fill" title="CityPanel" flags="wfNoBorder">
 		<panel name="ForecaTemplate"/>
@@ -550,7 +550,7 @@
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
 		<widget name="list" position="780,120" size="1132,855" font="menulist;31" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="statusbar" render="Label" position="7,585" size="715,300" font="Regular;33" valign="center" halign="center" transparent="1" foregroundColor="secondFG" />
+		<widget source="statusbar" render="Label" position="7,585" size="715,300" font="Regular;33" valign="center" halign="center" transparent="1" foregroundColor="secondFG"/>
 	</screen>
 
 	<!-- ## AutoBouquetsMaker ## -->
@@ -782,7 +782,7 @@
 	<screen name="wikiFullScreen" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
 		<eLabel text="WiKi-photo" foregroundColor="grey" position="22,10" size="1050,82" font="Regular;37" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
-		<widget name="picture" position="735,220" size="1177,755" alphatest="blend"  />
+		<widget name="picture" position="735,220" size="1177,755" alphatest="blend"/>
 		<widget name="picindex" position="7,540" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="wikiArtikel_en" position="fill" flags="wfNoBorder" title="">
@@ -1026,4 +1026,147 @@
 		<widget name="labstop" position="1050,930" size="375,45" font="menulist;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="1050,930" size="375,45" font="menulist;30" zPosition="1" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
-</skin>
+
+	<!-- ## VideoEnhancement## -->
+	<screen name="VideoEnhancementPreview" position="fill" title="VideoEnhancementPreview" flags="wfNoBorder" backgroundColor="transparent">
+		<ePixmap alphatest="off" pixmap="infobar/hd.png" position="0,750" size="1920,330" zPosition="-1"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<widget name="config" position="885,877" size="915,112" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" backgroundColor="secondBG" zPosition="1"/>
+		<widget source="introduction" render="Label" position="885,1027" size="915,34" font="menulist;30" zPosition="1" halign="center"/>
+	</screen>
+	<screen name="VideoEnhancementSetup" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="config" position="735,120" size="1177,825" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="description" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="footnote" position="1125,985" size="525,30" font="menulist;33" zPosition="1" transparent="1" foregroundColor="grey"/>
+		<widget name="HelpWindow" pixmap="icons/vkey_icon.png" position="780,750" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
+	</screen>
+
+	<!-- ## DiSEqC Tester## -->
+	<screen name="DiseqcTesterNimSelection" position="fill" flags="wfNoBorder" title="Choose Tuner">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<eLabel text="Cancel" position="22,1032" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="center"/>
+		<panel name="GreenBPanel"/>
+		<eLabel text="OK" position="457,1032" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="center"/>
+		<widget source="nimlist" render="Listbox" position="735,120" size="1177,882" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (15,7), size = (1100,45), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
+						MultiContentEntryText(pos = (75,60), size = (1100,30), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+					],
+				 "fonts": [gFont("Regular", 33), gFont("Regular", 24)],
+				 "itemHeight": 105
+				}
+			</convert>
+		</widget>
+	</screen>
+
+		<screen name="DiseqcTester" position="fill" title="DiSEqC Tester">
+		<panel name="BasicTemplate"/>
+		<widget source="progress_list" render="Listbox" position="735,120" size="1177,700" transparent="1" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (5, 0), size = (500, 35), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the index name,
+						MultiContentEntryText(pos = (525, 0), size = (225, 35), flags = RT_HALIGN_RIGHT, text = 2) # index 2 is the status,
+					],
+				 "fonts": [gFont("menulist", 30)],
+				 "itemHeight": 37
+				}
+			</convert>
+		</widget>
+		<eLabel name="overall_progress" text="Overall progress:" position="1300,845" size="480,35" font="menulist;30" foregroundColor="secondFG" halign="center" transparent="1"/>
+		<widget source="overall_progress" render="Progress" position="1300,890" size="480,20" borderWidth="3" backgroundColor="#254f7497"/>
+		<eLabel name="overall_progress" text="Progress:" position="1300,930" size="480,35" font="menulist;30" foregroundColor="secondFG" halign="center" transparent="1"/>
+		<widget source="sub_progress" render="Progress" position="1300,975" size="480,20" borderWidth="3" backgroundColor="#254f7497"/>
+		<eLabel name="" text="Succeeded:" position="735,845" size="140,30" font="menulist;25" halign="left" foregroundColor="yellow" transparent="1"/>
+		<widget source="succeeded_counter" render="Label" position="890,845" size="100,30" font="menulist;25" foregroundColor="yellow"/>
+		<eLabel name="" text="Failed:" position="735,885" size="140,30" font="menulist;25" halign="left" foregroundColor="yellow" transparent="1"/>
+		<widget source="failed_counter" render="Label" position="890,885" size="100,30" font="menulist;25" foregroundColor="yellow"/>
+		<eLabel name="" text="With errors:" position="735,925" size="140,30" font="menulist;25" halign="left" foregroundColor="yellow" transparent="1"/>
+		<widget source="witherrors_counter" render="Label" position="890,925" size="100,30" font="menulist;25" foregroundColor="yellow"/>
+		<eLabel name="" text="Not tested:" position="735,965" size="140,30" font="menulist;25" halign="left" foregroundColor="yellow" transparent="1"/>
+		<widget source="untestable_counter" render="Label" position="890,965" size="100,30" font="menulist;25" foregroundColor="yellow"/>
+		<widget source="CmdText" render="Label" position="7,540" size="715,380" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+		</screen>
+	<!-- ## SDG ImageDownLoader## -->
+	<screen name="s4fFeedsServersScreen" position="fill" flags="wfNoBorder" title="Image Feeds List">
+		<panel name="BasicTemplate"/>
+		<panel name="RedTPanel"/>
+		<panel name="Yellow1Panel"/>
+		<eLabel text="Cancel" position="55,1023" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1785,1023" size="52,39"/>
+		<widget name="list" position="735,120" size="1177,840" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="tspace" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<screen name="idServerModels" position="fill" flags="wfNoBorder" title="Choose model">
+		<panel name="BasicTemplate"/>
+		<panel name="RedTPanel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<eLabel text="Cancel" position="55,1023" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1785,1023" size="52,39"/>
+		<widget name="list" position="780,127" size="1132,735" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="tspace" position="735,922" zPosition="4" size="1177,45" font="menulist;33" foregroundColor="#ffffff" transparent="1" halign="left"/>
+		<widget name="fspace" position="735,975" zPosition="4" size="1177,45" font="menulist;33" foregroundColor="#ffffff" transparent="1" halign="left"/>
+		<widget name="info" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<screen name="idDownloaderImages" position="fill" flags="wfNoBorder" title="Images Downloader">
+		<panel name="BasicTemplate"/>
+		<panel name="RedTPanel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<eLabel text="Cancel" position="55,1023" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1785,1023" size="52,39"/>
+		<widget name="menu" position="735,120" size="1177,876" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="info" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+
+		<!-- ## VU+ Wireless AP ## -->
+	<screen name="WirelessAccessPoint" position="fill" flags="wfNoBorder" title="Wireless Access Point">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+<!--		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>-->
+		<widget name="config" position="735,120" size="1177,876" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="IPAddress_text" render="Label" position="82,720" size="285,31" font="menulist;33" foregroundColor="secondFG"/>
+		<widget source="IPAddress" render="Label" position="375,720" size="360,31" font="menulist;33" foregroundColor="secondFG"/>
+		<widget source="Netmask_text" render="Label" position="82,765" size="285,31" font="menulist;33" foregroundColor="secondFG"/>
+		<widget source="Netmask" render="Label" position="375,765" size="360,31" font="menulist;33" foregroundColor="secondFG"/>
+		<widget source="Gateway_text" render="Label" position="82,810" size="285,31" font="menulist;33" foregroundColor="secondFG"/>
+		<widget source="Gateway" render="Label" position="375,810" size="360,31" font="menulist;33" foregroundColor="secondFG"/>
+	</screen>
+
+	<!-- ## RecInfoBar ## -->
+	<screen name="RecInfoBar" flags="wfNoBorder" position="0,20" size="1920,37" backgroundColor="transpBlack" zPosition="1">
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="7,7" zPosition="1" size="21,21" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget name="chTuner" position="37,3" size="30,27" zPosition="1" font="menulist;27" halign="left" transparent="1" noWrap="1" foregroundColor="blue" backgroundColor="black"/>
+		<widget name="chProv" position="75,3" size="375,27" zPosition="1" font="menulist;27" halign="left" transparent="1" noWrap="1" foregroundColor="yellow" backgroundColor="black"/>
+		<widget name="chBouq" position="450,3" size="375,27" zPosition="1" font="menulist;27" halign="left" transparent="1" noWrap="1" foregroundColor="yellow" backgroundColor="black"/>
+		<widget name="chNum" position="825,3"	size="75,27"	zPosition="1" font="menulist;27" halign="right" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
+		<widget name="chName" position="907,3" size="375,27" zPosition="1" font="menulist;27" halign="left"	transparent="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
+		<widget name="timelen" position="1275,3" size="120,27"	zPosition="1" font="menulist;27" halign="right" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
+		<widget name="recName" position="1425,3" size="375,27"	zPosition="1" font="menulist;27" halign="left" transparent="1" noWrap="1" foregroundColor="grey" backgroundColor="black"/>
+	</screen>
+	
+	<!-- ## CutListEditor ## -->
+	<!-- ## AtmoLight ## -->
+	<!-- ## Webbrowser VU-Plus (Opera) ## -->
+	<!-- ## Webbrowser ET ## -->
+	<!-- ## PictureViewer ## -->
+	<!-- ## Yamp ## -->
+	<!-- ## OnDemand players ## -->
+	<!-- ## AutoResolution# -->
+
+
+
+	</skin>
