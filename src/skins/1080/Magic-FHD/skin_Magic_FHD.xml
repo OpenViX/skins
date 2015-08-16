@@ -1043,19 +1043,19 @@ self.autoResize()
 		<widget name="number" position="0,-300" size="195,60" backgroundColor="transparent" transparent="1" font="Regular;54" borderColor="black" borderWidth="3" valign="center" halign="right" foregroundColor="grey"/>
 		<widget name="servicename" position="202,-300" size="675,60" backgroundColor="transparent" transparent="1" font="Regular;51" borderColor="black" borderWidth="3" valign="center" halign="left" foregroundColor="grey"/>
 	</screen>
-	<screen name="HistoryZapSelector" position="center,center" size="1200,675" backgroundColor="transpBlack" flags="wfNoBorder">
-		<widget source="menu" render="Listbox" position="0,15" size="1200,663" scrollbarMode="showOnDemand" backgroundColor="transpBlack" transparent="1">
+	<screen name="HistoryZapSelector" position="center,center" size="1320,725" backgroundColor="transpBlack" flags="wfNoBorder">
+		<widget source="menu" render="Listbox" position="0,15" size="1300,700" scrollbarMode="showOnDemand" backgroundColor="transpBlack" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (60, 10), size = (10, 20), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
-						MultiContentEntryText(pos = (80, 0), size = (260, 21), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff),
-						MultiContentEntryText(pos = (350, 5), size = (270, 22), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = 0x00ffc000, color_sel = 0x00ffc000),
-						MultiContentEntryText(pos = (80, 25), size = (180, 17), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = 0x00999999, color_sel = 0x00999999),
-						MultiContentEntryText(pos = (270, 25), size = (510, 17), font = 3, flags = RT_HALIGN_LEFT, text = 4, color = 0x00999999, color_sel = 0x00999999),
-						MultiContentEntryPixmapAlphaBlend(pos=(0, 6), size=(50, 30), png=6, flags = BT_SCALE)
+						MultiContentEntryText(pos = (90,15), size = (15,45), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
+						MultiContentEntryText(pos = (120,0), size = (390,32), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff),
+						MultiContentEntryText(pos = (525,2), size = (270,33), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = 0x00ffc000, color_sel = 0x00ffc000),
+						MultiContentEntryText(pos = (120,38), size = (405,25), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = 0x00999999, color_sel = 0x00999999),
+						MultiContentEntryText(pos = (405,38), size = (850,25), font = 3, flags = RT_HALIGN_LEFT, text = 4, color = 0x00999999, color_sel = 0x00999999),
+						MultiContentEntryPixmapAlphaBlend(pos=(2,9), size=(75,45), png=6, flags = BT_SCALE)
 					],
-				 "fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16)],
-				 "itemHeight": 42
+				 "fonts": [gFont("menulist", 33), gFont("channelselectionservice", 30), gFont("channelselectionevent", 25), gFont("menulist", 24)],
+				 "itemHeight": 70
 				}
 			</convert>
 		</widget>
