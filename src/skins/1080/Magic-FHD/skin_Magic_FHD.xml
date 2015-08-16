@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.4.3 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.4.4 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -2792,37 +2792,6 @@ self.autoResize()
 	<screen name="PiPSetup" position="center,center" size="1200,300" flags="wfNoBorder" backgroundColor="transparent" zPosition="2">
 		<widget name="text" position="0,0" size="1200,300" backgroundColor="transparent" transparent="1" font="Regular;33" borderColor="black" borderWidth="3" valign="center" halign="center"/>
 	</screen>
-	<!-- ##Picture-Player## -->
-	<screen name="picshow" position="fill" flags="wfNoBorder">
--->		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget source="Title" render="Label" foregroundColor="grey"	position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;37" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;39" halign="right" position="1522,22" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;30" halign="right" position="1522,67" size="375,37" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
-		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1762,1030"	size="52,37"/>
-		<widget name="label" position="22,577" size="723,420" zPosition="2" transparent="1" font="Regular;30"/>
-		<widget name="thn" position="0,115" size="723,409" zPosition="1" alphatest="on"/>
-		<widget name="filelist" position="735,120" size="1177,882" font="Regular;36" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="Pic_Exif" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<widget source="menu" render="Listbox" position="780,123" size="1132,874" selectionDisabled="1" transparent="1" scrollbarMode="showOnDemand">
-			<convert type="TemplatedMultiContent">
-				{"template": [	MultiContentEntryText(pos = (5,7),size = (350,30),flags = RT_HALIGN_LEFT,text = 0),
-				MultiContentEntryText(pos = (360,7),size = (390,30),flags = RT_HALIGN_LEFT,text = 1)],
-				"fonts": [gFont("Regular",20)],
-				"itemHeight": 35 }
-			</convert>
-		</widget>
-	</screen>
 	<!-- ## RemoteControlSetup ## -->
 	<screen name="RemoteControlSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2830,7 +2799,7 @@ self.autoResize()
 		<panel name="GreenBPanel"/>
 		<widget name="cancel" position="22,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
 		<widget name="ok" position="457,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
-		<widget name="config" position="780,135" size="1132,862" font="Regular;33" itemHeight="45" transparent="1" enableWrapAround="1"/>
+		<widget name="config" position="780,135" size="1132,855" font="Regular;33" itemHeight="45" transparent="1" enableWrapAround="1"/>
 	</screen>
 	<screen name="RemoteControlCode" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
