@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.5.3	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.5.4	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1358,11 +1358,84 @@
 		<widget name="content" position="7,7" size="480,33" font="menulist;30" borderWidth="3" borderColor="black" transparent="1"/>
 		<widget name="restxt" position="7,39" size="480,33" font="menulist;30" borderWidth="3" borderColor="black" transparent="1"/>
 	</screen>
+
+	<!-- ## Yamp ## -->
+	<screen name="YampScreen" position="fill" flags="wfNoBorder">
+-->		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
+		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
+		<widget name="title" foregroundColor="grey" render="Label" position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;37" valign="center"/>
+		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="menulist;39" halign="right" position="1522,22" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Format:%-H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="menulist;30" halign="right" position="1522,67" size="375,37" transparent="1" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<panel name="MenuBPanel"/>
+		<widget name="leftContentTitle" position="7,145" size="960,39" backgroundColor="#00aaaaaa" zPosition="5" foregroundColor="#00000000" font="menulist;33" halign="center"/>
+		<widget name="filelist" position="7,187" size="960,487" backgroundColor="#00101214" scrollbarMode="showOnDemand"/>
+		<widget name="rightContentTitle" position="990,145" size="900,39" backgroundColor="#00aaaaaa" zPosition="5" foregroundColor="#00000000" font="menulist;33" halign="center"/>
+		<widget name="playlist" position="990,187" size="900,487" backgroundColor="#00101214" selectionDisabled="1" scrollbarMode="showOnDemand"/>
+		<widget name="songtitle" position="450,690" size="840,45" foregroundColor="#00e5b243" backgroundColor="#00101214" transparent="1" font="menulist;39" valign="top"/>
+		<widget source="session.CurrentService" render="Label" position="1290,690" size="180,60" font="menulist;39" foregroundColor="#00e5b243" backgroundColor="#00101214" halign="right" transparent="1">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<eLabel position="433,750" size="1050,3" backgroundColor="#00555556"/>
+		<eLabel text="Artist" position="450,765" size="150,37" backgroundColor="#00101214" transparent="1" foregroundColor="#00555556" font="menulist;30" valign="top"/>
+		<widget name="artist" position="600,765" size="870,37" backgroundColor="#00101214" transparent="1" font="menulist;30" valign="top"/>
+		<eLabel text="Album" position="450,810" size="150,37" backgroundColor="#00101214" transparent="1" foregroundColor="#00555556" font="menulist;30" valign="top"/>
+		<widget name="album" position="600,810" size="870,37" backgroundColor="#00101214" transparent="1" font="menulist;30" valign="top"/>
+		<eLabel text="Year" position="450,855" size="150,37" backgroundColor="#00101214" transparent="1" foregroundColor="#00555556" font="menulist;30" valign="top"/>
+		<widget name="year" position="600,855" size="270,37" backgroundColor="#00101214" transparent="1" font="menulist;30" valign="top"/>
+		<eLabel text="Genre" position="870,855" size="150,37" font="menulist;30" backgroundColor="#00101214" transparent="1" foregroundColor="#00555556" valign="top"/>
+		<widget name="genre" position="1035,855" size="435,37" font="menulist;30" backgroundColor="#00101214" transparent="1" valign="top"/>
+		<widget name="coverArt" pixmap="skin_default/no_coverArt.png" position="7,690" size="300,300" transparent="1" alphatest="blend"/>
+		<widget source="session.CurrentService" render="Progress" position="600,910" size="720,15" backgroundColor="#00101214" borderWidth="1" borderColor="#00555556" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="450,900" size="90,37" backgroundColor="#00101214" transparent="1" font="menulist;33" valign="center" halign="left">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1380,900" size="90,37" backgroundColor="#00101214" transparent="1" font="menulist;33" valign="center" halign="right">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/images/yamp.png" position="1522,705" size="300,150" transparent="1" alphatest="on"/>
+		<widget name="repeat" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/images/repeat_off.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/images/repeat_on.png" position="1575,855" size="105,45" zPosition="2" transparent="1" alphatest="on"/>
+		<widget name="shuffle" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/images/shuffle_off.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/images/shuffle_on.png" position="1695,855" size="105,45" zPosition="2" transparent="1" alphatest="on"/>
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/images/smallshadowline.png" position="0,945" size="1920,3"/>
+	</screen>
+	<screen name="YampLyrics" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate2"/>
+		<panel name="RedBPanel"/>
+		<panel name="GreenBPanel"/>
+		<eLabel text="Cancel" position="75,1030" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
+		<eLabel text="Save" position="510,1030" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
+		<widget name="lyrics" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="28" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="YampConfigScreen" position="fill" flags="wfNoBorder" title="Yamp Configuration">
+		<panel name="BasicTemplate2"/>
+		<panel name="RedBPanel"/>
+		<panel name="GreenBPanel"/>
+		<eLabel text="Cancel" position="22,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="center"/>
+		<eLabel text="Save" position="457,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="center"/>
+		<widget name="config" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="28" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="YampSelectPath" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate2"/>
+		<panel name="RedBPanel"/>
+		<panel name="GreenBPanel"/>
+		<eLabel text="Cancel" position="75,1030" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
+		<eLabel text="OK" position="510,1030" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
+		<widget name="target" position="780,123" size="1132,33" font="menulist;33"/>
+		<widget name="config" position="780,157" size="1132,841" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
 	
 	<!-- ## CutListEditor ## -->
 	<!-- ## Webbrowser VU-Plus (Opera) ## -->
 	<!-- ## Webbrowser ET ## -->
-	<!-- ## Yamp ## -->
 	<!-- TheTVDBInfo -->
 
 
