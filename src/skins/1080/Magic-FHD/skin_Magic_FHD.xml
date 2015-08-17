@@ -876,7 +876,7 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>-->
 	</screen>
-	<!-- XXX##Pin input## -->
+	<!-- ##Pin input## -->
 	<screen name="PinInput" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="service" position="885,165" size="900,37" font="Regular;30"/>
@@ -895,11 +895,7 @@
 	<screen name="TextBox" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="text" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-<!--
-		<widget name="text" position="780,585" size="1132,360" font="menulist;36" foregroundColor="grey"/>-->
 		<panel name="ExitBPanel"/>
-<!--
-		<eLabel text="'Exit' = Leave message" position="75,1030" size="480,39" font="Regular;33" halign="left" backgroundColor="secondBG" transparent="1" zPosition="1"/>-->
 	</screen>
 	<screen name="MessageBox" title="Message" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -971,7 +967,7 @@
 							}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="22,570" size="715,225" zPosition="10" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG" transparent="1"/>
+		<widget source="introduction" render="Label" position="22,570" size="715,225" font="Regular;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG" transparent="1"/>
 	</screen>
 	<screen name="InputDeviceSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -991,26 +987,6 @@
 		<widget name="text" position="885,165" size="900,45" font="Regular;33" halign="center" transparent="1"/>
 		<widget name="input" position="885,225" size="900,45" font="Regular;33" halign="center" transparent="1"/>
 	</screen>
-	<screen name="Kernel" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget name="liste" position="780,123" size="1132,874" zPosition="3" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
-	</screen>
-	<screen name="general" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget name="liste" position="780,123" size="1132,874" scrollbarMode="showOnDemand" transparent="1"/>
-		<widget name="label" position="22,600" size="670,300" font="Regular;36" halign="center" valign="center" foregroundColor="secondFG"/>
-	</screen>
-	<screen name="modules" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="GreenBPanel"/>
-		<panel name="GreenT1Panel"/>
-		<widget name="liste" position="780,123" size="1132,865" scrollbarMode="showOnDemand" transparent="1"/>
-	</screen>
-	<screen name="password" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget name="liste" scrollbarMode="showOnDemand" position="780,123" size="1132,874" transparent="1"/>
-		<widget name="label1" position="22,600" size="670,300" font="Regular;36" halign="center" valign="center" foregroundColor="secondFG"/>
-	</screen>
 	<screen name="EcmExtraWindow" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="description" position="780,123" size="1132,874" transparent="1"/>
@@ -1019,15 +995,15 @@
 		<panel name="BasicTemplate"/>
 		<widget source="menu" render="Listbox" position="780,123" size="1132,874" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
-				{"template": [	MultiContentEntryText(pos = (8,7), size = (310,30), flags = RT_HALIGN_LEFT, text = 0)],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 40 }
+				{"template": [	MultiContentEntryText(pos = (8,7), size = (1100,40), flags = RT_HALIGN_LEFT, text = 0)],
+				"fonts": [gFont("menulist", 33)],
+				"itemHeight": 60 }
 			</convert>
 		</widget>
 	</screen>
 	<screen name="ChoiceBox" position="fill" zPosition="10" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="22,568" size="715,390" zPosition="2" font="Regular;33" foregroundColor="secondFG"/>
+		<widget name="text" position="22,568" size="715,390" font="Regular;33" zPosition="2" foregroundColor="secondFG"/>
 		<widget name="list" position="780,123" size="1132,874" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		</screen>
 	<screen name="RecordTimerQuestion" position="center,center" size="360,202" zPosition="5" flags="wfNoBorder">
@@ -1035,7 +1011,7 @@
 		<widget name="list" position="15,15" size="330,180" enableWrapAround="1"/>
 	</screen>
 	<screen name="RemoveTimerQuestion" position="center,center" size="754,195" zPosition="5" flags="wfNoBorder">
-		<widget name="text" position="0,0" size="0,0" font="Regular;33"/>
+		<widget name="text" position="0,0" size="0,0" font="menulist;33"/>
 		<widget name="list" position="15,15" size="330,75" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
 self.autoResize()
@@ -1044,8 +1020,8 @@ self.autoResize()
 	<screen name="Scart" position="fill" backgroundColor="transparent"/>
 	<screen name="Standby" title="Standby" position="fill" flags="wfNoBorder" backgroundColor="black"/>
 	<screen name="NumberZap" position="center,center" size="900,60" backgroundColor="transparent" flags="wfNoBorder">
-		<widget name="number" position="0,-300" size="195,60" backgroundColor="transparent" transparent="1" font="Regular;54" borderColor="black" borderWidth="3" valign="center" halign="right" foregroundColor="grey"/>
-		<widget name="servicename" position="202,-300" size="675,60" backgroundColor="transparent" transparent="1" font="Regular;51" borderColor="black" borderWidth="3" valign="center" halign="left" foregroundColor="grey"/>
+		<widget name="number" position="0,-300" size="195,60" font="Regular;54" borderColor="black" borderWidth="3" valign="center" halign="right" backgroundColor="transparent" transparent="1" foregroundColor="grey"/>
+		<widget name="servicename" position="202,-300" size="675,60" font="Regular;51" borderColor="black" borderWidth="3" backgroundColor="transparent" transparent="1" valign="center" halign="left" foregroundColor="grey"/>
 	</screen>
 	<screen name="HistoryZapSelector" position="center,center" size="1320,725" backgroundColor="transpBlack" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="0,15" size="1300,700" scrollbarMode="showOnDemand" backgroundColor="transpBlack" transparent="1">
@@ -1074,13 +1050,13 @@ self.autoResize()
 		<widget name="videofps" position="8,345" size="470,30" font="menulist;24" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center" halign="left" foregroundColor="blue"/>
 	</screen>
 	<screen name="ChapterZap" position="center,center" size="420,90" backgroundColor="transparent" flags="wfNoBorder">
-		<widget name="chapter" position="0,-300" size="300,60" backgroundColor="transparent" transparent="1" font="Regular;51" borderColor="black" borderWidth="4" valign="center" halign="right"/>
-		<widget name="number" position="300,-300" size="225,60" backgroundColor="transparent" transparent="1" font="Regular;51" borderColor="black" borderWidth="4" valign="center" halign="left"/>
+		<widget name="chapter" position="0,-300" size="300,60" font="Regular;51" borderColor="black" borderWidth="4" backgroundColor="transparent" transparent="1" valign="center" halign="right"/>
+		<widget name="number" position="300,-300" size="225,60" font="Regular;51" borderColor="black" borderWidth="4" backgroundColor="transparent" transparent="1" valign="center" halign="left"/>
 	</screen>
 	<screen name="TimeshiftState" position="6,45" size="1920,240" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="PlayerPanel"/>
 	<widget name="PTSSeekBack" position="192,81" size="1536,6" zPosition="1"/>
-	<widget name="PTSSeekPointer" position="192,60" zPosition="5" size="28,30" pixmap="position_pointer2.png" alphatest="blend"/>
+	<widget name="PTSSeekPointer" position="192,60" zPosition="5" size="24,30" pixmap="dvr/position_pointerTS1.png" alphatest="blend"/>
 	</screen>
 	<screen name="PVRState" position="15,150" size="187,90" backgroundColor="transparent" zPosition="2" flags="wfNoBorder">
 		<widget name="statusicon" position="112,0" size="75,75" pixmaps="icons/play_large.png,icons/pause_large.png,icons/stop_large.png,icons/forward_large.png,icons/backward_large.png,icons/slow_large.png" zPosition="5" alphatest="on"/>
