@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.4.4 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.4.5 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -3101,39 +3101,34 @@ self.autoResize()
 		<widget name="config" position="780,120" size="1132,876" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="50" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="introduction" render="Label" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
-	<!-- Video Clipping -->
-	<screen name="VideoClippingCoordinates" position="0,0" size="e,e" backgroundColor="transparent">
-		<panel name="RedBPanel"/>
-		<widget name="cancel" position="22,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
-		<panel name="GreenBPanel"/>
-		<widget name="ok" position="457,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
-		<widget name="config" position="c-262,c-112" size="525,195" foregroundColor="grey" font="Regular;33"/>
-	</screen>
-	<screen name="FUFilebrowser" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Blue2Panel"/>
-		<widget name="file_list" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="28" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="status" render="Label" position="15,555" zPosition="1" size="715,300" font="Regular;33" halign="center" transparent="1"/>
-	</screen>
 	<!-- ##FirmwareUpgrade## -->
 	<screen name="FirmwareUpgrade" position="0,0" size="1920,1080" flags="wfNoBorder" title="Firmware Upgrade">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,780" transparent="1"/>
-		<widget source="status" render="Label" position="780,903" zPosition="1" size="1110,90" font="Regular;33" halign="center" valign="center" backgroundColor="#a08500" transparent="1"/>
-		<widget name="oldversion_label" position="7,600" size="435,37" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="oldversion" position="450,600" size="150,37" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="newversion_label" position="7,675" size="435,37" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="newversion" position="450,675" size="150,37" font="Regular;33" foregroundColor="secondFG"/>
+		<widget name="config" position="780,123" size="1132,780" font="menulist;24" sitemHeight="36" crollbarMode="showOnDemand" transparent="1"/>
+		<widget source="status" render="Label" position="780,903" size="1110,90" font="menulist;33" halign="center" zPosition="1" valign="center" backgroundColor="#a08500" transparent="1"/>
+	</screen>
+	<screen name="UpgradeStatus" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="name" position="735,125" size="1177,45" font="menulist;33" transparent="1" foregroundColor="grey"/>
+		<widget name="status" position="735,540" size="715,45" font="Regular;33" zPosition="2" foregroundColor="selectedFG" halign="center"/>
+		<widget name="slider" position="735,600" size="715,30" borderWidth="3" borderColor="white" transparent="1" foregroundColor="grey"/>
+		<widget source="info" render="Label" position="15,600" size="715,100" font="menulist;33" zPosition="1" halign="center" valign="center" transparent="1" foregroundColor="secondFG"/>
+	</screen>
+	<screen name="FUFilebrowser" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Blue2Panel"/>
+		<widget name="file_list" position="735,120" size="1177,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="status" render="Label" position="15,555" size="715,300" font="menulist;33" zPosition="1" halign="center" valign="center" transparent="1" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="FPGAUpgrade" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget name="file_list" position="735,120" size="1177,882" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="status" render="Label" position="15,555" zPosition="1" size="715,300" font="Regular;33" halign="center" valign="center" transparent="1" foregroundColor="secondFG"/>
+		<widget name="file_list" position="735,120" size="1177,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="status" render="Label" position="15,555" size="715,300" font="menulist;33" zPosition="1" halign="center" valign="center" transparent="1" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="HdmiCECSetupScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
