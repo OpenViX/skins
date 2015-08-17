@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.4.5 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.4.6 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -1084,9 +1084,15 @@ self.autoResize()
 	</screen>
 	<screen name="VirtualKeyBoard" position="4,0" size="1920,1080" zPosition="99" flags="wfNoBorder" title="Virtual KeyBoard">
 		<panel name="BasicTemplate"/>
-		<ePixmap pixmap="buttons/vkey_text.png" position="975,412" size="813,78" zPosition="-4" alphatest="on"/>
+		<panel name="RedBPanel"/>
+		<eLabel text="Delete" render="Label" position="55,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="GreenBPanel"/>
+		<eLabel text="OK" render="Label" position="490,1023" size="490,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="YellowBPanel"/>
+		<widget source="country" render="Label" position="930,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<ePixmap pixmap="buttons/vkey_text.png" position="975,412" size="816,78" zPosition="-4" alphatest="on"/>
 		<widget name="header" position="978,358" size="750,39" transparent="1" noWrap="1" font="Regular;30"/>
-		<widget name="text" position="978,411" size="804,51" noWrap="1" font="Regular;45" halign="right"/>
+		<widget name="text" position="970,411" size="804,51" noWrap="1" font="Regular;38" valign="center" halign="right"/>
 		<widget name="list" position="970,570" size="810,337" selectionDisabled="1" transparent="1"/>
 	</screen>
 	<screen name="SubservicesQuickzap" position="607,492" size="705,96" backgroundColor="transpBlack" flags="wfNoBorder">
