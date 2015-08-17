@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.5.5	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.5.6	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1491,6 +1491,63 @@
 		<widget name="about" position="780,120" size="1132,876" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="oealogo" position="75,600" size="300,202"  zPosition="4" transparent="1" alphatest="blend"/>
 		</screen>
+
+	<!-- ## DNLA Server/Browser ## -->
+		<screen name="DLNADeviceBrowser" position="fill" flags="wfNoBorder" title="DLNA Device Browser">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="devicelist" position="735,120" size="1177,882" font="menulist;33" itemHeight="45"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="DLNAClientConfig" position="fill" flags="wfNoBorder" title="DLNA Client Config">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="config" position="735,120" size="1177,882" font="menulist;33" itemHeight="45"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="DLNAFileBrowser" position="fill" flags="wfNoBorder" title="DLNA Device Browser">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="directory" position="735,120" size="1177,67" font="menulist;30" halign="center"/>
+		<widget name="filelist" position="735,187" size="1177,798" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="DLNAImageViewer" position="fill" flags="wfNoBorder">
+		<eLabel position="0,0" zPosition="0" size="1920,1080" backgroundColor="secondBG"/>
+		<widget name="image" position="fill" zPosition="1" alphatest="on"/>
+		<eLabel position="37,22" size="45,37" zPosition="2" backgroundColor="secondBG" transparent="1"/>
+		<widget name="status" position="40,25" size="31,31" zPosition="3" pixmap="icons/epgclock.png" alphatest="on"/>
+		<widget name="icon" position="45,30" size="24,24" zPosition="3" pixmap="icons/ico_mp_play.png" alphatest="on"/>
+		<widget source="message" render="Label" position="105,22" size="900,37" font="menulist;33" halign="left" zPosition="3" noWrap="1" transparent="1" foregroundColor="foreground" backgroundColor="secondBG"/>
+	</screen>
+	<screen	name="DLNAStreamPlayer"	position="6,45"	size="1920,150"	backgroundColor="transparent"	flags="wfNoBorder">
+		<panel name="PlayerPanel"/>
+		<widget	name="sidebar"	position="543,30" size="15,30" font="menulist;27" halign="center" valign="center" backgroundColor="#4e5a74" transparent="1"	/>
+	</screen>
+	<screen name="SelectDirectoryWindow" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="currentDir" position="735,120" size="1177,67" font="menulist;30" halign="center"/>
+		<widget name="filelist" position="735,187" size="1177,849" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="DLNAServer" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="config" position="735,120" size="1177,882" font="menulist;33" itemHeight="45"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="information" position="7,568" size="715,390" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
 
 	<!-- ## CutListEditor ## -->
 	<!-- ## Webbrowser VU-Plus (Opera) ## -->
