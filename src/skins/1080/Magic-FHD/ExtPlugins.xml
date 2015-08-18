@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.5.7	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.5.8	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1569,9 +1569,34 @@
 	</screen>
 
 	<!-- ## CutListEditor ## -->
+	<screen name="CutListEditor" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate3"/>
+		<widget source="cutlist" render="Listbox" position="22,123" size="670,874" backgroundColor="black" zPosition="3" transparent="1" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos=(10,2),size=(170,35),text = 1,backcolor = MultiContentTemplateColor(3)),
+						MultiContentEntryText(pos=(190,2),size=(80,35),text = 2,flags = RT_HALIGN_CENTER,backcolor = MultiContentTemplateColor(3))
+					],
+				 "fonts": [gFont("menulist",30)],
+				 "itemHeight": 40
+				}
+			</convert>
+		</widget>
+		<widget name="Video" position="765,186" backgroundColor="transparent" size="1044,565" zPosition="1"/>
+		<widget name="SeekState" position="697,892" size="150,37" font="menulist;30" zPosition="1" halign="right" valign="center"/>
+		<widget source="session.CurrentService" render="Label" position="705,765" size="1185,45" font="menulist;36" backgroundColor="black" zPosition="1" transparent="1" valign="center" halign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="705,825" size="1185,37" font="menulist;30" backgroundColor="black" zPosition="1" transparent="1" valign="center" halign="center">
+			<convert type="ServicePosition">Position,Detailed</convert>
+		</widget>
+		<widget name="Timeline" position="862,892" size="922,30" pointer="Magic-FHD/position_arrow.png:3,5" foregroundColor="black" backgroundColor="#505555"/>
+		<eLabel text="'OK' = Menu" position="1455,1030" size="330,39" font="menulist;30" backgroundColor="black" zPosition="1" transparent="1" halign="center"/>
+		<eLabel text="'o' = Mark" position="510,1030" size="330,39" font="menulist;30" backgroundColor="black" zPosition="1" transparent="1" halign="center"/>
+	</screen>
+
 	<!-- ## Webbrowser VU-Plus (Opera) ## -->
 	<!-- ## Webbrowser ET ## -->
 	<!-- TheTVDBInfo -->
-
 
 	</skin>
