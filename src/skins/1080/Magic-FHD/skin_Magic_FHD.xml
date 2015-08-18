@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.4.9 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.5.0 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -900,10 +900,10 @@
 	<screen name="MessageBox" title="Message" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="RedBPanel"/>
-		<eLabel text="Cancel" position="55,1023" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<eLabel text="Cancel" position="55,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<panel name="GreenBPanel"/>
-		<eLabel text="OK" position="490,1023" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
-		<widget name="text" position="950,120" size="1000,882" font="menulist;33" foregroundColor="grey"/>
+		<eLabel text="OK" position="490,1023" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="text" position="950,120" size="950,882" font="menulist;33" foregroundColor="grey"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="810,150" size="81,81" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="810,150" size="81,81" alphatest="on"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="810,150" size="81,81" alphatest="on"/>
@@ -1324,17 +1324,6 @@ self.autoResize()
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,874" transparent="1"/>
 	</screen>
-	<!-- ##Softwaremanager## -->
-	<screen name="SoftwareManagerSetup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate2"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
-		<panel name="Blue2Panel"/>
-		<panel name="MenuBPanel"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874" transparent="1"/>
-		<widget source="introduction" render="Label" position="30,600" size="715,375" zPosition="10" font="Regular;31" halign="center" valign="center" foregroundColor="secondFG" transparent="1"/>
-	</screen>
 	<screen name="Ipkg" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="package" position="885,195" size="900,42" backgroundColor="darkgrey" transparent="1" font="Regular;36"/>
@@ -1342,181 +1331,34 @@ self.autoResize()
 		<widget name="slider" position="891,441" size="888,25" zPosition="2" transparent="1"/>
 		<widget name="activityslider" position="66,891" size="1791,9" pixmap="window/slider.png" transparent="1"/>
 	</screen>
-	<screen name="IpkgInstaller" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="MenuBPanel"/>
-		<widget name="list" position="885,180" size="900,450" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget source="introduction" render="Label" position="885,645" size="900,40" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" zPosition="1" transparent="1" foregroundColor="white" font="Regular;36" halign="center"/>
-	</screen>
-	<screen name="IPKGMenu" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<widget name="filelist" position="885,180" size="900,450" font="Fixed;36" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
-	</screen>
-	<screen name="IPKGSource" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<widget name="text" position="105,600" size="1725,45" font="Fixed;34" zPosition="3" transparent="1"/>
-	</screen>
-	<screen name="PacketManager" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<widget source="list" render="Listbox" position="780,123" size="1132,825" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-				MultiContentEntryText(pos = (5,1), size = (700,24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-				MultiContentEntryText(pos = (5,27), size = (700,24), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-				MultiContentEntryPixmapAlphaBlend(pos = (675,0), size = (48,48), png = 4), # index 5 is the status pixmap
-				MultiContentEntryPixmapAlphaBlend(pos = (0,49), size = (755,2), png = 5), # index 6 is the div pixmap
-				],
-				"fonts": [gFont("Regular",22),gFont("Regular",18)],
-				"itemHeight": 55
-				}
-			</convert>
-		</widget>
-	</screen>
 	<screen name="SkinSelector" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="SkinList" position="780,135" size="450,840" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="SkinList" position="780,135" size="450,840" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="Preview" position="1377,165" size="420,315" alphatest="on"/>
-		<widget source="introduction" render="Label" position="787,1023" size="960,45" transparent="1" zPosition="10" foregroundColor="grey" font="Regular;33" valign="center" halign="center"/>
+		<widget source="introduction" render="Label" position="787,1023" size="960,45" font="menulist;33" transparent="1" zPosition="10" foregroundColor="grey" valign="center" halign="center"/>
 	</screen>
 	<screen name="UpdatePlugin" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="package" render="Label" position="885,195" size="900,42" backgroundColor="darkgrey" foregroundColor="grey" transparent="1" font="Regular;36"/>
-		<widget source="status" render="Label" position="885,255" size="900,120" backgroundColor="darkgrey" foregroundColor="grey" transparent="1" font="Regular;36"/>
+		<widget source="package" render="Label" position="885,195" size="900,42" font="menulist;36" backgroundColor="darkgrey" foregroundColor="grey" transparent="1"/>
+		<widget source="status" render="Label" position="885,255" size="900,120" font="menulist;36" backgroundColor="darkgrey" foregroundColor="grey" transparent="1"/>
 		<widget name="slider" position="891,441" size="978,25" zPosition="2" transparent="1"/>
 		<widget name="activityslider" position="73,913" size="1791,9" pixmap="window/slider.png" transparent="1"/>
-		<widget name="feedStatusMSG" render="Label" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="feedStatusMSG" render="Label" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="SoftwareUpdateChanges" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
-		<widget name="text" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874" transparent="1"/>
+		<widget name="text" position="780,123" size="1132,874" font="menulist;33" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="SoftwareUpdateChoices" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="22,568" size="715,390" zPosition="2" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="list" position="780,123" size="1132,874" scrollbarMode="showOnDemand" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="UpdatePluginMenu" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<widget source="menu" render="Listbox" position="885,165" size="900,750" zPosition="3" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="grey">
-			<convert type="TemplatedMultiContent">
-			{"template": [
-					MultiContentEntryText(pos = (35,12),size = (590,40),flags = RT_HALIGN_LEFT,text = 1),# index 0 is the MenuText,
-				],
-			"fonts": [gFont("Regular",23)],
-			"itemHeight": 50
-			}
-			</convert>
-		</widget>
-		<widget source="menu" render="Listbox" position="7,600" size="715,375" backgroundColor="darkgrey" zPosition="3" selectionDisabled="1" transparent="1" foregroundColor="secondFG" scrollbarMode="showOnDemand">
-			<convert type="TemplatedMultiContent">
-			{"template": [
-					MultiContentEntryText(pos = (0,0),size = (450,140),flags = RT_HALIGN_LEFT|RT_VALIGN_TOP|RT_WRAP,text = 2),# index 0 is the MenuText,
-				],
-			"fonts": [gFont("Regular",20)],
-			"itemHeight": 140
-			}
-			</convert>
-		</widget>
-	</screen>
-	<screen name="PluginManager" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
-		<panel name="Blue2Panel"/>
-		<widget source="list" render="Listbox" position="780,123" size="1132,825" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
-			<convert type="TemplatedMultiContent">
-				{"templates":
-				{"default": (55,[
-				MultiContentEntryText(pos = (0,1), size = (755,24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-				MultiContentEntryText(pos = (0,27), size = (755,24), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-				MultiContentEntryPixmapAlphaBlend(pos = (690,0), size = (48,48), png = 5), # index 5 is the status pixmap
-				MultiContentEntryPixmapAlphaBlend(pos = (0,52), size = (755,2), png = 6), # index 6 is the div pixmap
-				]),
-				"category": (55,[
-				MultiContentEntryText(pos = (0,0), size = (755,24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-				MultiContentEntryText(pos = (0,27), size = (755,24), font=2, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the description
-				MultiContentEntryPixmapAlphaBlend(pos = (0,52), size = (755,2), png = 3), # index 3 is the div pixmap
-				])
-				},
-				"fonts": [gFont("Regular",22),gFont("Regular",20),gFont("Regular",20)],
-				}
-			</convert>
-		</widget>
-		<widget source="status" render="Label" position="22,600" size="670,300" foregroundColor="secondFG" transparent="1" font="Regular;33" halign="center"/>
-	</screen>
-	<screen name="PluginManagerInfo" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<widget source="list" render="Listbox" position="780,135" size="1132,825" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryPixmapAlphaBlend(pos = (18,14),size = (48,48),png = 2),# index 2 is the status pixmap
-						MultiContentEntryText(pos = (90,5),size = (665,26),font=0,flags = RT_HALIGN_LEFT,text = 0),# index 0 is the name
-						MultiContentEntryText(pos = (90,33),size = (665,38),font=1,flags = RT_HALIGN_LEFT,text = 1),# index 1 is the state
-					],
-				"fonts": [gFont("Regular",22),gFont("Regular",20)],
-				"itemHeight": 75
-				}
-			</convert>
-		</widget>
-		<widget source="status" render="Label" position="780,1030" size="1132,37" backgroundColor="background" transparent="1" font="Regular;33" foregroundColor="grey" halign="center"/>
-	</screen>
-	<screen name="PluginManagerHelp" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate2"/>
-		<panel name="Red2Panel"/>
-		<widget source="list" render="Listbox" position="780,135" size="1132,832" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (80,5),size = (665,26),font=0,flags = RT_HALIGN_LEFT,text = 0),# index 0 is the name
-						MultiContentEntryText(pos = (80,33),size = (665,38),font=1,flags = RT_HALIGN_LEFT,text = 1),# index 1 is the state
-						MultiContentEntryPixmapAlphaBlend(pos = (15,5),size = (48,48),png = 2),# index 2 is the status pixmap
-					],
-				"fonts": [gFont("Regular",22),gFont("Regular",20)],
-				"itemHeight": 75
-				}
-			</convert>
-		</widget>
-		<widget source="status" render="Label" position="22,600" size="670,375" foregroundColor="secondFG" transparent="1" font="Regular;33" halign="center"/>
-	</screen>
-	<screen name="PluginDetails" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<panel name="GreenBPanel"/>
-		<panel name="RedT2Panel"/>
-		<panel name="GreenT2Panel"/>
-		<eLabel text="Status:" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="right" position="435,945" size="210,36" transparent="1" zPosition="1"/>
-		<widget name="statuspic" position="660,930" size="72,72" alphatest="on"/>
-		<widget source="author" render="Label" position="780,135" size="1132,45" zPosition="10" halign="center" font="Regular;39" backgroundColor="background" foregroundColor="grey" transparent="1"/>
-		<widget name="screenshot" position="780,180" size="1132,825" alphatest="on"/>
-		<widget name="detailtext" position="22,577" size="715,300" font="Regular;33" backgroundColor="background" halign="center" foregroundColor="grey" transparent="1"/>
-	</screen>
-	<screen name="RestoreScreen" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,874" transparent="1" scrollbarMode="showOnDemand"/>
-	</screen>
-	<screen name="RestoreMenu" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
-		<widget name="filelist" position="780,123" size="1132,874" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="text" position="22,568" size="715,390" font="menulist;33" zPosition="2" foregroundColor="secondFG"/>
+		<widget name="list" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="MPHelp" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2470,21 +2312,6 @@ self.autoResize()
 		<widget name="config" font="Regular;33" position="780,123" size="1132,874" transparent="1"/>
 	</screen>
 	<!-- Start Wizards -->
-		<screen name="ImageWizard" position="0,0" size="1080,864" title="Welcome..." flags="wfNoBorder">
-			<widget name="text" position="229,60" size="510,495" font="Regular;33"/>
-			<widget source="list" render="Listbox" position="64,510" size="735,270" scrollbarMode="showOnDemand">
-				<convert type="StringList"/>
-			</widget>
-			<widget name="config" position="79,510" zPosition="1" size="660,270" transparent="1" scrollbarMode="showOnDemand"/>
-			<ePixmap pixmap="buttons/button_red.png" position="60,337" zPosition="0" size="22,24" transparent="1" alphatest="on"/>
-			<widget name="languagetext" position="82,337" size="142,45" font="Regular;27"/>
-			<widget name="wizard" pixmap="wizard.png" position="60,75" zPosition="10" size="165,261" alphatest="on"/>
-			<widget name="rc" pixmaps="rc.png,rcold.png" position="795,75" zPosition="10" size="231,750" alphatest="on"/>
-			<widget name="arrowdown" pixmap="arrowdown.png" position="-150,-150" zPosition="11" size="55,105" alphatest="on"/>
-			<widget name="arrowdown2" pixmap="arrowdown.png" position="-150,-150" zPosition="11" size="55,105" alphatest="on"/>
-			<widget name="arrowup" pixmap="arrowup.png" position="-150,-150" zPosition="11" size="55,105" alphatest="on"/>
-			<widget name="arrowup2" pixmap="arrowup.png" position="-150,-150" zPosition="11" size="55,105" alphatest="on"/>
-		</screen>
 	<screen name="DefaultWizard" position="fill" title="Welcome..." flags="wfNoBorder">
 		<panel name="WizardMarginsTemplate"/>
 		<panel name="WizardPictureLangTemplate"/>
@@ -2903,7 +2730,7 @@ self.autoResize()
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<widget name="checkList" position="780,123" size="1132,874" font="menulist;34" itemHeight="45" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="checkList" position="780,123" size="1132,855" font="menulist;34" itemHeight="45" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="XtraPluginsSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
