@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.4.8 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.4.9 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -2018,21 +2018,21 @@ self.autoResize()
 	</screen>
 	<screen name="MMIDialog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="title" position="885,165" size="900,37" font="Regular;34"/>
-		<widget name="subtitle" position="885,202" size="900,37" font="Regular;34"/>
-		<widget name="entries" position="885,255" size="900,225" scrollbarMode="showOnDemand"/>
-		<widget name="bottom" position="885,495" size="900,37" font="Regular;34"/>
+		<widget name="title" position="885,165" size="900,37" font="menulist;34" foregroundColor="grey"/>
+		<widget name="subtitle" position="885,202" size="900,37" font="menulist;34" foregroundColor="grey"/>
+		<widget name="entries" position="885,255" size="900,600" font="menulist;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+		<widget name="bottom" position="7,540" size="715,396" zPosition="2" font="Regular;36" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="CiSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="885,180" size="900,45" backgroundColor="background" transparent="1" font="Regular;37"/>
-		<widget name="entries" position="885,270" size="900,562" scrollbarMode="showOnDemand"/>
+		<widget name="text" position="885,180" size="900,45" font="Regular;37" foregroundColor="secondFG" transparent="1"/>
+		<widget name="entries" position="885,270" size="900,562" font="menulist;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="CIselectMainMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="CiList" position="885,180" size="900,675" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
+		<widget name="CiList" position="885,180" size="900,675" font="menulist;33" itemHeight="45" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="CIconfigMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2040,15 +2040,15 @@ self.autoResize()
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget source="CAidList_desc" render="Label" position="825,180" size="990,45" backgroundColor="background" transparent="1" font="Regular;36"/>
+		<widget source="CAidList_desc" render="Label" position="825,180" size="990,45" font="menulist;36" backgroundColor="background" transparent="1"/>
 		<eLabel position="825,238" size="990,3" backgroundColor="black"/>
 		<eLabel position="825,241" size="990,3" backgroundColor="grey"/>
-		<widget source="CAidList" render="Label" position="825,255" size="990,112" backgroundColor="background" transparent="1" font="Regular;33"/>
-		<widget source="ServiceList_desc" render="Label" position="825,397" size="990,45" backgroundColor="background" transparent="1" font="Regular;36"/>
+		<widget source="CAidList" render="Label" position="825,255" size="990,112" font="menulist;33" backgroundColor="background" transparent="1"/>
+		<widget source="ServiceList_desc" render="Label" position="825,397" size="990,45" font="menulist;36" backgroundColor="background" transparent="1"/>
 		<eLabel position="825,456" size="990,3" backgroundColor="black"/>
 		<eLabel position="825,459" size="990,3" backgroundColor="grey"/>
 		<widget name="ServiceList" position="885,472" size="900,450" backgroundColor="background" zPosition="1" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget source="ServiceList_info" render="Label" position="825,472" size="990,450" backgroundColor="background" zPosition="2" transparent="1" font="Regular;33"/>
+		<widget source="ServiceList_info" render="Label" position="825,472" size="990,450" font="menulist;33" backgroundColor="background" zPosition="2" transparent="1"/>
 	</screen>
 	<screen name="easyCIconfigMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
