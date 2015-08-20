@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.5.9	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.6.0	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1793,8 +1793,144 @@
 		<widget name="arrowup" pixmap="arrowup.png" position="-150,-150" size="55,105" zPosition="11" alphatest="on"/>
 		<widget name="arrowup2" pixmap="arrowup.png" position="-150,-150" size="55,105" zPosition="11" alphatest="on"/>
 	</screen>
-
-	
+	<!-- ## CCCam Info ##-->
+	<screen name="EcmInfoScreen" position="0,0" size="1132,37" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="-1">
+		<panel name="ExitBPanel"/>
+		<widget name="irdeto" position="0,0" size="22,37" font="Regular;24" text="I" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
+		<widget name="seca" position="22,0" size="22,37" font="Regular;24" text="S" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
+		<widget name="nagra" position="45,0" size="22,37" font="Regular;24" text="N" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
+		<widget name="via" position="67,0" size="22,37" font="Regular;24" text="V" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
+		<widget name="conax" position="90,0" size="45,37" font="Regular;24" text="CO" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
+		<widget name="betacrypt" position="135,0" size="37,37" font="Regular;24" text="BC" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
+		<widget name="crypto" position="172,0" size="52,37" font="Regular;24" text="CW" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
+		<widget name="dreamcrypt" position="225,0" size="37,37" font="Regular;24" text="DC" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
+		<widget name="nds" position="262,0" size="60,37" font="Regular;24" text="NDS" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
+		<widget name="ecmInfo" position="337,0" size="795,37" font="Regular;24" valign="center" transparent="1" borderColor="black" borderWidth="2" noWrap="1"/>
+	</screen>
+	<screen name="CCcamInfoMain" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="menu" position="780,123" size="1132,850" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<panel name="ExitBPanel"/>
+	</screen>
+	<screen name="CCcamInfoEcmInfoSelection" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="780,123" size="1132,850" font="menulist;33" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<panel name="ExitBPanel"/>
+	</screen>
+	<screen name="CCcamInfoInfoScreen" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="text" position="780,123" size="1132,850" font="menulist;33" itemHeight="50" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<panel name="ExitBPanel"/>
+	</screen>
+	<screen name="CCcamInfoConfigMenu" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="config" position="780,123" size="1132,850" font="menulist;33" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="CCcamInfoSubMenu" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="780,123" size="1132,850" font="menulist;33" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="info" position="22,600" size="715,360" font="menulist;33" transparent="1" foregroundColor="secondFG"/>
+		<panel name="ExitBPanel"/>
+		<panel name="OKBPanel"/>
+		<eLabel text="Info" position="515,1023" size="330,39" font="Regular;33" halign="left" backgroundColor="secondBG" transparent="1" zPosition="1"/>
+	</screen>
+	<screen name="CCcamInfoServerMenu" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="OKBPanel"/>
+		<panel name="ExitBPanel"/>
+		<eLabel text="Info" position="515,1023" size="330,39" font="Regular;33" halign="left" backgroundColor="secondBG" transparent="1" zPosition="1"/>
+		<widget name="list" position="780,123" size="1132,450" itemHeight="50" foregroundColor="grey" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1"/>
+		<widget name="info" position="780,680" size="1132,435" font="menulist;33" foregroundColor="grey" transparent="1"/>
+	</screen>
+	<screen name="CCcamShareViewMenu" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="ExitBPanel"/>
+		<panel name="OKBPanel"/>
+		<widget name="list" position="780,123" size="1132,850" font="menulist;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" transparent="1" enableWrapAround="1"/>
+		<widget name="uphops" position="30,600" size="675,37" font="menulist;30" foregroundColor="secondFG" halign="left"/>
+		<widget name="providers" position="30,660" size="675,37" font="menulist;30" foregroundColor="secondFG" halign="left"/>
+		<widget name="title" position="30,720" size="675,37" font="menulist;24" foregroundColor="secondFG" halign="left"/>
+		<widget name="reshare" position="30,780" size="675,37" font="menulist;30" foregroundColor="secondFG" halign="left"/>
+		<widget name="cards" position="30,840" size="675,37" font="menulist;30" foregroundColor="secondFG" halign="left"/>
+		<eLabel text="Info" position="515,1023" size="330,39" font="Regular;33" halign="left" backgroundColor="secondBG" transparent="1" zPosition="1"/>
+	</screen>
+	<screen name="CCcamInfoRemoteBoxMenu" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<panel name="GreenBPanel"/>
+		<panel name="YellowBPanel"/>
+		<panel name="BlueBPanel"/>
+		<panel name="RedT1Panel"/>
+		<panel name="GreenT1Panel"/>
+		<panel name="YellowT1Panel"/>
+		<panel name="BlueT1Panel"/>
+		<widget name="list" position="780,135" size="1132,850" font="menulist;33" itemHeight="50" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="CCcamInfoShareInfo" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<panel name="GreenBPanel"/>
+		<panel name="YellowBPanel"/>
+		<panel name="BlueBPanel"/>
+		<panel name="RedT1Panel"/>
+		<panel name="GreenT1Panel"/>
+		<panel name="YellowT1Panel"/>
+		<panel name="BlueT1Panel"/>
+		<widget name="list" position="780,123" size="1100,850" font="menulist;33" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="CCcamInfoConfigSwitcher" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<panel name="GreenBPanel"/>
+		<panel name="YellowBPanel"/>
+		<panel name="BlueBPanel"/>
+		<panel name="RedT1Panel"/>
+		<panel name="GreenT1Panel"/>
+		<panel name="YellowT1Panel"/>
+		<panel name="BlueT1Panel"/>
+		<widget name="list" position="780,123" size="1132,850" font="menulist;33" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="EcmInfoConfigMenu" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="config" position="780,135" size="1132,850" font="menulist;33" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<panel name="ExitBPanel"/>
+		<panel name="OKBPanel"/>
+		<eLabel text="Accept" position="515,1023" size="330,39" font="Regular;33" backgroundColor="secondBG" halign="left" transparent="1" zPosition="1"/>
+	</screen>
+	<screen name="CCcamInfoMenuConfig" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<panel name="GreenBPanel"/>
+		<panel name="YellowBPanel"/>
+		<panel name="RedT1Panel"/>
+		<panel name="GreenT1Panel"/>
+		<panel name="YellowT1Panel"/>
+		<widget name="list" position="780,135" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+<!-- ## Oscam Info ##-->
+	<screen name="OscamInfoMenu" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="mainmenu" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand"/>
+	</screen>
+	<screen name="oscECMInfo" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="output" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
+	</screen>
+	<screen name="OscamInfoConfigScreen" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<widget name="config" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="status" render="Label" position="22,600" zPosition="1" size="715,300" font="menulist;24" halign="center" valign="center" transparent="1" foregroundColor="secondFG"/>
+	</screen>
+	<screen name="oscInfo" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget name="output" position="5,540" size="1877,455" transparent="1" foregroundColor="grey"/>
+	</screen>
 
 
 	<!-- ## Webbrowser VU-Plus (Opera) ## -->
