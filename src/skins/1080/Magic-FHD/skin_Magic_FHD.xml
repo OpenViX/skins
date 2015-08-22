@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.5.5 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.5.6 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -36,11 +36,11 @@
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<eLabel name="lock" position="1012,75" size="120,22" font="menulist;21" backgroundColor="darkgrey" halign="right" transparent="1" text="Lock:" zPosition="1"/>
-		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_on.png" position="1140,70" size="25,24" alphatest="on">
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_on.png" position="1140,70" size="33,31" alphatest="on">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_off.png" position="1140,70" size="25,24" zPosition="1" alphatest="on">
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_off.png" position="1140,70" size="33,31" zPosition="1" alphatest="on">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
@@ -999,7 +999,7 @@
 	<screen name="ChoiceBox" position="fill" zPosition="10" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="text" position="22,568" size="715,390" font="Regular;33" zPosition="2" foregroundColor="secondFG"/>
-		<widget name="list" position="780,123" size="1132,874" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="list" position="735,123" font="ChoiceList;31" size="1177,874" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		</screen>
 	<screen name="RecordTimerQuestion" position="center,center" size="360,202" zPosition="5" flags="wfNoBorder">
 		<widget name="text" position="0,0" size="0,0" font="Regular;30"/>
@@ -2314,10 +2314,8 @@ self.autoResize()
 	<screen name="AutoTimerPreview" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<panel name="Blue2Panel"/>
-		<widget source="timerlist" render="Listbox" position="780,127" size="1132,864" backgroundColor="background" scrollbarMode="showAlways">
+		<widget source="timerlist" render="Listbox" position="780,127" size="1132,864" backgroundColor="background" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos=(5,2), size=(900,35), text = 3, font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
