@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.5.6 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.5.7 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -36,11 +36,11 @@
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<eLabel name="lock" position="1012,75" size="120,22" font="menulist;21" backgroundColor="darkgrey" halign="right" transparent="1" text="Lock:" zPosition="1"/>
-		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_on.png" position="1140,70" size="33,31" alphatest="on">
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_on.png" position="1140,70" size="33,31" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_off.png" position="1140,70" size="33,31" zPosition="1" alphatest="on">
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_off.png" position="1140,70" size="33,31" zPosition="1" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
@@ -2066,16 +2066,17 @@ self.autoResize()
 	</screen>
 	<screen name="Satfinder" position="fill" flags="wfNoBorder">
 		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
-		<widget source="Title" foregroundColor="grey" render="Label" position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;37" halign="left" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;39" halign="right" position="1522,22" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
+		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
+		<widget source="Title" render="Label" position="22,5" size="1500,100" font="Regular;37" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
+		<widget source="global.CurrentTime" render="Label" position="1522,5" size="375,47" font="Regular;39" backgroundColor="secondBG" halign="right"  transparent="1" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Format:%-H:%M</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;30" halign="right" position="1522,67" size="375,37" transparent="1" foregroundColor="grey" zPosition="1">
+		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" backgroundColor="secondBG" halign="right" transparent="1" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
 <!-- ##SNR## -->
-		<eLabel name="snr" position="27,124" size="142,75" foregroundColor="grey" transparent="1" text="SNR:" font="Regular;45"/>
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,120" size="1500,75" borderWidth="1" foregroundColor="grey" borderColor="uncccccc">
+		<eLabel name="snr" position="27,124" size="142,75" transparent="1" text="SNR:" font="Regular;45"/>
+		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,120" size="1500,75" borderWidth="1" borderColor="uncccccc">
 		<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="1695,124" size="193,75" backgroundColor="darkgrey" transparent="1" font="Regular;52">
@@ -2085,8 +2086,8 @@ self.autoResize()
 		<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 		<!-- ##AGC## -->
-		<eLabel name="agc" position="27,202" size="142,75" foregroundColor="grey" transparent="1" text="AGC:" font="Regular;45"/>
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,202" size="1500,75" borderWidth="1" foregroundColor="grey" borderColor="uncccccc">
+		<eLabel name="agc" position="27,202" size="142,75" transparent="1" text="AGC:" font="Regular;45"/>
+		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,202" size="1500,75" borderWidth="1" borderColor="uncccccc">
 		<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="1695,202" size="195,75" backgroundColor="darkgrey" transparent="1" font="Regular;52">
@@ -2096,8 +2097,8 @@ self.autoResize()
 		<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<!-- ##BER## -->
-		<eLabel name="ber" position="27,285" size="142,75" foregroundColor="grey" transparent="1" text="BER:" font="Regular;45"/>
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,285" size="1500,75" borderWidth="1" foregroundColor="grey" borderColor="uncccccc">
+		<eLabel name="ber" position="27,285" size="142,75" transparent="1" text="BER:" font="Regular;45"/>
+		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,285" size="1500,75" borderWidth="1" borderColor="uncccccc">
 		<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="1695,285" size="195,75" backgroundColor="darkgrey" transparent="1" font="Regular;52">
@@ -2107,18 +2108,16 @@ self.autoResize()
 		<convert type="FrontendInfo">BER</convert>
 		</widget>
 	<!-- ##Lock## -->
-		<eLabel name="lock" position="885,367" size="180,42" foregroundColor="grey" transparent="1" text="Lock:" font="Regular;36"/>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="1033,366" size="57,46" alphatest="on">
+		<eLabel name="lock" position="100,400" size="180,42" font="menulist;40" halign="right" transparent="1" text="Lock:"/>
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="290,403" size="33,31" alphatest="blend">
 		<convert type="FrontendInfo">LOCK</convert>
 		<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="1033,366" size="57,46" alphatest="on">
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="290,403" size="33,31" alphatest="blend">
 		<convert type="FrontendInfo">LOCK</convert>
 		<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
-<!--		<eLabel position="825,447" size="990,3" backgroundColor="black"/>
-		<eLabel position="825,450" size="990,3" backgroundColor="grey"/>-->
-		<widget name="config" position="802,420" size="1110,600" transparent="1" itemHeight="50" font="menulist;33" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="802,380" size="1110,600" transparent="1" itemHeight="50" font="menulist;33" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="introduction" position="802,1020" size="480,39" font="Regular;33" backgroundColor="secondBG" foregroundColor="secondFG" halign="left" transparent="1" zPosition="1"/>
 		</screen>
 	<screen name="PositionerSetup" position="fill" flags="wfNoBorder" title="Positioner setup">
