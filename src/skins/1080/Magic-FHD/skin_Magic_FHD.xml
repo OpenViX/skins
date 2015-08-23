@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.5.7 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.5.8 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -847,7 +847,7 @@
 		<widget source="job_name" render="Label" position="885,168" size="720,90" font="Regular;42" valign="center"/>
 		<widget source="job_task" render="Label" position="885,255" size="720,75" font="Regular;34"/>
 		<widget source="job_progress" render="Progress" position="885,393" size="720,54" borderWidth="2" backgroundColor="un254f7497"/>
-		<widget source="job_progress" render="Label" position="885,393" size="420,54" font="Regular;42" foregroundColor="black" zPosition="2" halign="left" transparent="1">
+		<widget source="job_progress" render="Label" position="900,395" size="420,54" font="menulist;42" foregroundColor="black" zPosition="2" halign="left" transparent="1">
 			<convert type="ProgressToText"/>
 		</widget>
 		<widget source="job_status" render="Label" position="885,468" size="720,45" font="Regular;34"/>
@@ -864,7 +864,7 @@
 		<widget source="finished" render="FixedLabel" text="OK" position="510,1023" size="330,39" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="backgroundable" render="Pixmap" pixmap="buttons/blue.png" position="1335,1023" size="426,60" zPosition="-1" alphatest="blend">
+		<widget source="backgroundable" render="Pixmap" pixmap="buttons/blue.png" position="1335,1027" size="426,60" zPosition="-1" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="1370,1023" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left">
@@ -1255,8 +1255,8 @@ self.autoResize()
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="timerlist" position="735,127" size="1177,825" scrollbarMode="showOnDemand" itemHeight="75" rowSplit="37" iconMargin="15" setEventNameFont="menulist;32"
-		setServiceNameFont="menulist;32" setFont="menulist;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="timerlist" position="735,127" size="1177,880" itemHeight="80" rowSplit="40" iconMargin="15" setEventNameFont="menulist;32" setServiceNameFont="menulist;32"
+				setFont="menulist;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="TimerLog" position="fill" flags="wfNoBorder">
@@ -1925,12 +1925,12 @@ self.autoResize()
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="lab2" position="885,135" size="255,30" font="menulist;34" halign="lef" zPosition="2" transparent="0" valign="center" foregroundColor="grey"/>
-		<widget name="list" position="1162,406" size="360,225" font="menulist;34" transparent="0" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="lab1" position="885,406" size="255,30" font="menulist;34" halign="left" zPosition="2" transparent="0" foregroundColor="grey"/>
+		<widget name="lab2" position="885,135" size="255,40" font="menulist;34" halign="lef" zPosition="2" transparent="0" valign="center" foregroundColor="grey"/>
+		<widget name="list" position="1162,406" size="360,225" font="SelectionList;34" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="lab1" position="885,406" size="255,40" font="menulist;34" halign="left" zPosition="2" transparent="0" foregroundColor="grey"/>
 		<widget name="activecam" position="1162,135" size="360,225" font="Regular;30" halign="left" zPosition="2" transparent="0" noWrap="1" foregroundColor="grey"/>
 		<applet type="onLayoutFinish">
-		self["list"].instance.setItemHeight(45)
+		self["list"].instance.setItemHeight(50)
 			</applet>
 	</screen>
 	<screen name="VIXSoftcamLog" position="fill" flags="wfNoBorder">
@@ -2571,7 +2571,7 @@ self.autoResize()
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<widget name="lab1" position="780,123" size="1132,75" font="menulist;33" zPosition="2" transparent="0" foregroundColor="secondFG" halign="center" itemHeight="28"/>
-		<widget name="list" position="780,217" size="1132,780" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"/>
+		<widget name="list" position="780,217" size="1132,765" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"/>
 		<widget name="backupstatus" position="22,652" size="675,105" font="menulist;33" zPosition="5" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="VIXBackupManagerMenu" position="fill" flags="wfNoBorder">
