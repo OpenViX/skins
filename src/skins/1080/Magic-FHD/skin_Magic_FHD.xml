@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.5.9 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.6.0 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -496,14 +496,23 @@
 		<widget name="menu" position="780,123" size="1132,874" font="Regular;33" ItemHeight="45" transparent="1"/>
 	</screen>
 	<screen name="GraphicalEPG" position="center,center" size="1920,1080" backgroundColor="background">
-		<widget source="Title" foregroundColor="grey" render="Label" position="7,7" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;37" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,75" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;30" valign="center" halign="right">
+		<widget source="Title" foregroundColor="grey" render="Label" position="7,7" size="1050,82" font="Regular;37" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,75" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;30" valign="center" halign="right">
 			<convert type="ClockToText">Full</convert>
 		</widget>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
 		<widget name="timeline_text" position="7,90" size="1905,45" foregroundColor="#00e5b243" backgroundColor="background" transparent="1"/>
 		<widget name="lab1" position="0,82" size="1920,727" font="Regular;36" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
-		<widget name="list" position="7,135" size="1905,712" scrollbarMode="showNever" transparent="1" ServiceBackgroundColor="bluetransparent" ServiceBackgroundColorSelected="black" ServiceBackgroundColorNow="greentransparent" ServiceBackgroundColorNowSelected="greentransparent" EntryBackgroundColor="bluetransparent" EntryBackgroundColorSelected="black" EntryBackgroundColorNow="redtransparent" EntryBackgroundColorNowSelected="black" EntryFontAlignment="center" EntryForegroundColorSelected="selectedFG" EntryForegroundColorNowSelected="selectedFG" ServiceForegroundColorSelected="selectedFG" ServiceForegroundColorNowSelected="selectedFG" RecordBackgroundColor="yellowtransparent" RecordBackgroundColorSelected="yellowtransparent" RecordForegroundColorSelected="selectedFG" ZapBackgroundColor="transpWhite" ZapBackgroundColorSelected="transpWhite" ZapForegroundColorSelected="selectedFG"/>
-		<widget name="bouquetlist" position="7,135" size="1905,715" itemHeight="28" foregroundColor="white" backgroundColor="background" foregroundColorSelected="yellow" backgroundColorSelected="#001C252D" borderColor="background" scrollbarMode="showNever" zPosition="4" transparent="0"/>
+		<widget name="list" position="7,135" size="1905,712" ServiceFontGraphical="channelselectionservice;30" EntryFontGraphical="channelselectionevent;30" EntryFontWrap="no" ServiceNamePadding="5"
+				ServiceBackgroundColor="bluetransparent" ServiceBackgroundColorNow="greentransparent" EntryBackgroundColor="bluetransparent" EntryBackgroundColorSelected="black"
+				EntryBackgroundColorNow="redtransparent" EntryBackgroundColorNowSelected="redtransparent" EntryFontAlignment="center" EntryForegroundColorSelected="selectedFG"
+				EntryForegroundColorNowSelected="selectedFG" RecordBackgroundColor="yellowtransparent" RecordBackgroundColorSelected="yellowtransparent"
+				RecordForegroundColorSelected="selectedFG" ZapBackgroundColor="white" ZapBackgroundColorSelected="white" ZapForegroundColorSelected="selectedFG" transparent="1"/>
+		<widget name="bouquetlist" position="7,135" size="1905,715" itemHeight="28" foregroundColor="white" backgroundColor="background" foregroundColorSelected="yellow" backgroundColorSelected="#001C252D" borderColor="background" zPosition="4" transparent="0"/>
 		<widget name="timeline_now" position="7,135" zPosition="2" size="28,682" pixmap="window/timeline-now.png" alphatest="on"/>
 		<widget source="Event" render="Label" position="7,832" size="150,45" font="Regular;39" foregroundColor="#00e5b243" backgroundColor="background" shadowColor="#000000" halign="right" transparent="1">
 			<convert type="EventTime">StartTime</convert>
@@ -516,37 +525,31 @@
 		<widget source="Event" render="Label" position="307,832" size="1605,45" font="Regular;39" foregroundColor="#00e5b243" backgroundColor="background" transparent="1" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,877" zPosition="1" size="1905,109" halign="left" valign="center" font="Regular;33" foregroundColor="foreground" backgroundColor="background" shadowColor="#000000" transparent="1">
+		<widget source="Event" render="Label" position="7,877" zPosition="1" size="1905,109" font="Regular;33" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" shadowColor="#000000" transparent="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,990" size="1755,30" foregroundColor="blue" backgroundColor="background" transparent="1" font="Regular;28" halign="center">
+		<widget source="Event" render="Label" position="7,990" size="1755,30" font="Regular;28" foregroundColor="blue" backgroundColor="background" transparent="1" halign="center">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="Event" render="Label" position="1762,990" size="150,30" foregroundColor="blue" backgroundColor="background" transparent="1" font="Regular;28" halign="right">
+		<widget source="Event" render="Label" position="1762,990" size="150,30" font="Regular;28" foregroundColor="blue" backgroundColor="background" transparent="1" halign="right">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<panel name="Red1Panel"/>
-		<panel name="Green1Panel"/>
-		<panel name="Yellow1Panel"/>
-		<panel name="Blue1Panel"/>
-		<panel name="MenuBPanel"/>
-		<panel name="InfoBPanel"/>
 	</screen>
 	<screen name="GraphicalEPGPIG" position="center,center" size="1920,1080" flags="wfNoBorder">
-		<widget source="Title" foregroundColor="grey" render="Label" position="7,7" size="450,45" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;37" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,45" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;30" valign="center" halign="right">
+		<widget source="Title" foregroundColor="grey" render="Label" position="1,1" size="465,80" font="Regular;33" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center"/>
+		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,45" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center" halign="right">
 		<convert type="ClockToText">Full</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="0,90" size="597,331" backgroundColor="transparent" zPosition="1"/>
+		<widget source="session.CurrentService" render="Label" position="7,93" size="589,30" font="Regular;28" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" borderColor="black" valign="center" halign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget source="session.CurrentService" render="Label" position="7,93" size="589,30" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" font="Regular;28" borderColor="black" valign="center" halign="center">
-			<convert type="ServiceName">Name</convert>
-		</widget>
 		<widget source="Event" render="Label" position="472,7" size="150,45" font="Regular;39" foregroundColor="#00e5b243" backgroundColor="#000000" shadowColor="#000000" halign="right" transparent="1">
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText"/>
@@ -561,18 +564,22 @@
 		<widget source="Event" render="Label" position="615,55" zPosition="1" size="1297,336" font="Regular;33" halign="left" valign="top" foregroundColor="#00dddddd" backgroundColor="#000000" shadowColor="#000000" transparent="1">
 		<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="Event" render="Label" position="615,393" size="1140,30" foregroundColor="blue" backgroundColor="background" transparent="1" font="Regular;27" halign="left">
+		<widget source="Event" render="Label" position="615,393" size="1140,30" font="Regular;27" foregroundColor="blue" backgroundColor="background" transparent="1" halign="left">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="Event" render="Label" position="1762,393" size="150,30" foregroundColor="blue" backgroundColor="background" transparent="1" font="Regular;27" halign="right">
+		<widget source="Event" render="Label" position="1762,393" size="150,30" font="Regular;27" foregroundColor="blue" backgroundColor="background" transparent="1" halign="right">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget name="lab1" position="7,469" size="1912,547" font="Regular;36" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
-		<widget name="timeline_text" position="7,429" size="1912,45" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1"/>
-		<widget name="list" position="7,469" size="1912,547" scrollbarMode="showNever" transparent="1" ServiceBackgroundColor="bluetransparent" ServiceBackgroundColorSelected="black" ServiceBackgroundColorNow="greentransparent" ServiceBackgroundColorNowSelected="greentransparent" EntryBackgroundColor="bluetransparent" EntryBackgroundColorSelected="black" EntryBackgroundColorNow="redtransparent" EntryBackgroundColorNowSelected="redtransparent" EntryFontAlignment="center" EntryForegroundColorSelected="selectedFG" EntryForegroundColorNowSelected="selectedFG" ServiceForegroundColorSelected="selectedFG" ServiceForegroundColorNowSelected="selectedFG" RecordBackgroundColor="yellowtransparent" RecordBackgroundColorSelected="yellowtransparent" RecordForegroundColorSelected="selectedFG" ZapBackgroundColor="transpWhite" ZapBackgroundColorSelected="transpWhite" ZapForegroundColorSelected="selectedFG"/>
-		<widget name="bouquetlist" position="615,105" size="1297,285" foregroundColor="white" backgroundColor="background" foregroundColorSelected="yellow" backgroundColorSelected="#001C252D" borderColor="background" scrollbarMode="showNever" zPosition="4" transparent="0"/>
-		<widget name="timeline_now" position="7,469" zPosition="2" size="28,547" pixmap="window/timeline-now.png" alphatest="on"/>
-	</screen>
+		<widget name="timeline_text" position="7,429" size="1912,45" TimelineFont="menulist;30" itemHeight="40" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1"/>
+		<widget name="lab1" position="7,469" size="1912,547" font="menulist;33" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
+		<widget name="list" position="7,469" size="1912,547" ServiceFontGraphical="channelselectionservice;30" EntryFontGraphical="channelselectionevent;30" EntryFontWrap="no" ServiceNamePadding="5"
+				ServiceBackgroundColor="bluetransparent" ServiceBackgroundColorNow="greentransparent" EntryBackgroundColor="bluetransparent" EntryBackgroundColorSelected="black"
+				EntryBackgroundColorNow="redtransparent" EntryBackgroundColorNowSelected="redtransparent" EntryFontAlignment="center" EntryForegroundColorSelected="selectedFG"
+				EntryForegroundColorNowSelected="selectedFG" RecordBackgroundColor="yellowtransparent" RecordBackgroundColorSelected="yellowtransparent"
+				RecordForegroundColorSelected="selectedFG" ZapBackgroundColor="white" ZapBackgroundColorSelected="white" ZapForegroundColorSelected="selectedFG" transparent="1"/>
+		<widget name="bouquetlist" position="615,105" size="1297,285" font="menulist;33" foregroundColorSelected="yellow" zPosition="4" transparent="0"/>
+		<widget name="timeline_now" pixmap="window/timeline-now.png" position="7,469" size="28,547" zPosition="2" alphatest="on"/>
+		</screen>
 	<screen name="LogManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
