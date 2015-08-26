@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.6.2	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.6.3	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1907,10 +1907,79 @@
 		<panel name="YellowT1Panel"/>
 		<widget name="list" position="780,135" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
-<!-- ## Oscam Info ##-->
+
+	<!-- ## Oscam Info ##-->
 	<screen name="OscamInfoMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="mainmenu" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="mainmenu" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+	<screen name="oscReaderStats" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget source="output" render="Listbox" position="5,540" size="1877,440" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+					MultiContentEntryText(pos = (0, 2), size = (150, 36), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+					MultiContentEntryText(pos = (150, 2), size = (75, 36), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+					MultiContentEntryText(pos = (225, 2), size = (225, 36), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+					MultiContentEntryText(pos = (450, 2), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+					MultiContentEntryText(pos = (540, 2), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+					MultiContentEntryText(pos = (630, 2), size = (120, 36), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+					MultiContentEntryText(pos = (765, 2), size = (120, 36), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+					MultiContentEntryText(pos = (1475, 2), size = (120, 36), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+					]),
+				"HD": (50,[
+					MultiContentEntryText(pos = (0, 2), size = (305, 36), font=1, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+					MultiContentEntryText(pos = (200, 2), size = (105, 36), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+					MultiContentEntryText(pos = (350, 2), size = (330, 36), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+					MultiContentEntryText(pos = (540, 2), size = (120, 36), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+					MultiContentEntryText(pos = (945, 2), size = (120, 36), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+					MultiContentEntryText(pos = (720, 2), size = (195, 36), font=1, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+					MultiContentEntryText(pos = (1260, 2), size = (195, 36), font=1, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+					MultiContentEntryText(pos = (1500, 2), size = (150, 36), font=1, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+					]),
+					},
+					"fonts": [gFont("menulist", 21),gFont("menulist", 27),gFont("menulist", 36),gFont("menulist", 30)],
+					"itemHeight": 40
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="oscEntitlements" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget source="output" render="Listbox" position="5,540" size="1877,440" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (55,[
+						MultiContentEntryText(pos = (0, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+						MultiContentEntryText(pos = (90, 1), size = (150, 24), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+						MultiContentEntryText(pos = (250, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+						MultiContentEntryText(pos = (290, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+						MultiContentEntryText(pos = (330, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+						MultiContentEntryText(pos = (370, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+						MultiContentEntryText(pos = (410, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+						MultiContentEntryText(pos = (480, 1), size = (70, 24), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+						MultiContentEntryText(pos = (550, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+						MultiContentEntryText(pos = (0, 25), size = (700, 24), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+						]),
+				"HD": (55,[
+						MultiContentEntryText(pos = (0, 10), size = (120, 36), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+						MultiContentEntryText(pos = (135, 10), size = (225, 36), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+						MultiContentEntryText(pos = (375, 10), size = (60, 36), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+						MultiContentEntryText(pos = (440, 10), size = (60, 36), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+						MultiContentEntryText(pos = (495, 10), size = (60, 36), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+						MultiContentEntryText(pos = (555, 10), size = (60, 36), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+						MultiContentEntryText(pos = (615, 10), size = (60, 36), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+						MultiContentEntryText(pos = (720, 10), size = (105, 36), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+						MultiContentEntryText(pos = (825, 10), size = (120, 36), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+						MultiContentEntryText(pos = (945, 2), size = (1536, 80), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+						]),
+				},
+				"fonts": [gFont("menulist", 27),gFont("menulist", 21),gFont("menulist", 36),gFont("menulist", 30)],
+				"itemHeight": 85
+			}
+			</convert>
+		</widget>
 	</screen>
 	<screen name="oscECMInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1931,10 +2000,4 @@
 		<panel name="Blue2Panel"/>
 		<widget name="output" position="5,540" size="1877,455" transparent="1" foregroundColor="grey"/>
 	</screen>
-
-
-	<!-- ## Webbrowser VU-Plus (Opera) ## -->
-	<!-- ## Webbrowser ET ## -->
-	<!-- TheTVDBInfo -->
-
-	</skin>
+</skin>
