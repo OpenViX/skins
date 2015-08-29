@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.6.4	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.6.5	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -20,8 +20,8 @@
 		<widget name="poster" position="780,123" size="165,270" alphatest="blend"/>
 		<widget name="detailslabel" position="960,123" size="945,270" font="Regular;30" backgroundColor="darkgrey" transparent="1" halign="center"/>
 		<widget name="menu" position="780,397" size="1132,585" font="Regular;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1" foregroundColor="grey"/>
-		<widget name="castlabel" position="780,412" size="1132,577" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey"/>
-		<widget name="extralabel" position="780,123" size="1132,874" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey"/>
+		<widget name="castlabel" position="780,412" size="1132,540" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey"/>
+		<widget name="extralabel" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey"/>
 		<widget name="statusbar" position="7,675" size="765,285" font="Regular;27" halign="center" transparent="1" valign="bottom"/>
 	</screen>
 	<screen name="IMDbSetup" position="fill" flags="wfNoBorder">
@@ -53,7 +53,7 @@
 	<!-- ## PermanentClock ## -->
 	<screen name="PermanentClockMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,135" size="1132,862" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey"/>
+		<widget name="list" position="780,135" size="1132,855" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey"/>
 		<eLabel text="Exit' = Cancel" position="457,1030" size="330,39" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="left"  transparent="1" zPosition="1"/>
 		<ePixmap pixmap="buttons/key_ok.png" position="22,1027" size="52,39" alphatest="on"/>
 		<eLabel text="Accept" position="75,1024" size="330,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG"  halign="left" transparent="1" zPosition="1"/>
@@ -88,7 +88,7 @@
 		<panel name="BasicTemplate"/>
 		<panel name="BlueBPanel"/>
 		<eLabel text="Hide" position="1370,1020" size="426,39"  font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
-		<widget name="menu" position="780,120" size="1132,882" font="Regular;33" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" itemHeight="45" enableWrapAround="1"/>
+		<widget name="menu" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 
 	<!-- ## Cross EPG ## -->
@@ -133,7 +133,7 @@
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="menu" position="780,120" size="1132,882" font="menulist;33" scrollbarMode="showOnDemand" transparent="1" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="menu" position="780,120" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="CrossEPG_Providers" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -170,7 +170,7 @@
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
-		<widget source="list" render="Listbox" transparent="0" position="780,123" size="754,789" scrollbarMode="showOnDemand" itemHeight="45" foregroundColor="grey" enableWrapAround="1">
+		<widget source="list" render="Listbox" position="780,123" size="754,765" itemHeight="45" transparent="0" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 					{"template": [
 				MultiContentEntryText(pos = (12,1), size = (440,50), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
@@ -191,7 +191,7 @@
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="config" scrollbarMode="showOnDemand" position="780,120" size="1132,714" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,120" size="1132,675" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="statusbar" position="780,967" size="1132,37" font="Regular;33" foregroundColor="secondFG"/>
 		<widget name="status" position="780,862" size="1132,90" font="Regular;36" foregroundColor="secondFG"/>
 	</screen>
@@ -281,12 +281,12 @@
 	<!-- ## Het weer ## -->
 	<screen name="Weermenu" position="fill" flags="wfNoBorder" title="Het weer">
 		<panel name="BasicTemplate"/>
-		<widget name="list" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="Text" position="7,622" zPosition="4" size="750,300" font="Regular;33" foregroundColor="secondFG" transparent="1" halign="center" valign="center"/>
+		<widget name="list" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="Text" position="7,622" size="750,300" font="Regular;33" foregroundColor="secondFG" zPosition="4" transparent="1" halign="center" valign="center"/>
 	</screen>
 	<screen name="secondmenu" position="fill" flags="wfNoBorder" title="Het weer">
 		<panel name="BasicTemplate"/>
-		<widget name="list" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="list" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="Text" position="7,622" zPosition="4" size="750,300" font="Regular;33" foregroundColor="secondFG" transparent="1" halign="center" valign="center"/>
 	</screen>
 
@@ -300,7 +300,7 @@
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<widget name="text" position="735,120" size="1177,420" font="Regular;33" transparent="1" foregroundColor="grey"/>
-		<widget name="text2" position="735,547" size="1177,420" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey"/>
+		<widget name="text2" position="735,547" size="1177,415" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey"/>
 	</screen>
 	<screen name="translatorConfig" position="fill" flags="wfNoBorder" title="PG Translator Setup">
 		<panel name="BasicTemplate"/>
@@ -308,11 +308,11 @@
 		<eLabel text="Cancel" position="55,1020" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
 		<panel name="GreenBPanel"/>
 		<eLabel text="Save" position="490,1020" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
-		<widget name="config" position="793,120" size="1050,861" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="793,120" size="1050,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="infoTranslator" position="fill" flags="wfNoBorder" title="PG Translator Info">
 		<panel name="BasicTemplate"/>
-		<widget name="donate" position="780,120" size="1132,876" font="Regular;33" ItemHeight="45" transparent="1" foregroundColor="grey"/>
+		<widget name="donate" position="780,120" size="1132,855" font="Regular;33" ItemHeight="45" transparent="1" foregroundColor="grey"/>
 	</screen>
 	<screen name="searchYouTube" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -355,7 +355,7 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="MenuBPanel"/>
-		<widget name="config" position="735,120" size="1177,67" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="735,120" size="1177,67" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="list" render="Listbox" position="735,195" size="1177,795" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [MultiContentEntryText(pos=(15,1), size=(1000,45), font=0, flags=RT_HALIGN_LEFT, text=0)],
@@ -396,7 +396,7 @@
 	<!-- ## FanControl 2 ##-->
 	<screen name="FanControl2SpezialSetup" position="fill" flags="wfNoBorder" title="Fan Control 2 - Setup">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,874" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="FanControl2Plugin" position="fill" flags="wfNoBorder" title="Fan Control 2">
 		<panel name="BasicTemplate"/>
@@ -469,7 +469,7 @@
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
-		<widget name="config" position="735,120" size="1150,765" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="735,120" size="1150,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="introduction" render="Label" position="780,900" size="1132,33" zPosition="2" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 		<widget source="LibUSB" render="Label" position="793,945" size="112,30" zPosition="2" font="Regular;30" foregroundColor="secondFG" valign="center" halign="center"/>
 <!--		<widget source="Version" render="Label" position="780,975" size="715,30" zPosition="2" font="Regular;30" foregroundColor="secondFG" valign="center" halign="right"/>-->
@@ -483,13 +483,13 @@
 	</screen>
 	<screen name="LCDdisplayMenu" position="fill" flags="wfNoBorder" title="LCD4linux - Config">
 		<panel name="BasicTemplate"/>
-		<widget name="menu" position="780,120" size="1132,876" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="menu" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="LCDdisplayFile" position="fill" flags="wfNoBorder" title="Select File/Dir...">
 		<panel name="BasicTemplate"/>
 		<panel name="GreenBPanel"/>
 		<eLabel text="Select" position="457,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
-		<widget name="LCDfile" position="780,123" size="1132,876" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="LCDfile" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="File" render="Label" position="7,568" size="715,396" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 
@@ -571,8 +571,8 @@
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
-		<widget name="config" position="780,123" font="menulist;34" size="1132,855" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="description" position="7,568" size="715,396" zPosition="2" font="menulist;34" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="config" position="780,123" size="1132,855" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="description" position="7,568" size="715,396" font="menulist;34" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 		<widget name="pleasewait" position="780,123" size="1132,840" font="menulist;34" transparent="1" halign="center" valign="center" foregroundColor="grey"/>
 	</screen>
 	<screen name="AutoBouquetsMaker_Setup" position="fill" flags="wfNoBorder">
@@ -670,7 +670,7 @@
 		<eLabel text="Cancel" position="55,1020" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<panel name="GreenBPanel"/>
 		<eLabel text="Save" position="490,1020" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
-		<widget name="config" position="780,123" size="1132,832" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,123" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="introduction" position="15,600" size="715,150" font="menulist;33" halign="center" selectionDisabled="1" foregroundColor="secondFG" transparent="1"/>
 	</screen>
 	<screen  name="FastScanStatus" position="fill" flags="wfNoBorder">
@@ -705,7 +705,7 @@
 		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;30" halign="right" position="1522,67" size="375,37" transparent="1" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<widget name="filedata" position="7,120" size="1905,882" scrollbarMode="showOnDemand" font="Regular;33" ItemHeight="45"	transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="filedata" position="7,120" size="1905,855" font="Regular;33" ItemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="vInputBox" position="fill" flags="wfNoBorder" title="Input...">
 		<panel name="BasicTemplate"/>
@@ -719,7 +719,7 @@
 		<panel name="YellowBPanel"/>
 		<eLabel text="Make a softlink" position="892,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="center"/>
 		<widget name="File" position="735,120" size="1177,150" font="Regular;39" transparent="1" foregroundColor="secondFG" valign="center" halign="center" enableWrapAround="1"/>
-		<widget name="SLto" position="735,277" size="1177,714" font="Regular;33" ItemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"/>
+		<widget name="SLto" position="735,277" size="1177,675" font="Regular;33" ItemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"/>
 	</screen>
 	<screen name="CPmaniger" position="fill" flags="wfNoBorder" title="Select Copy/Move location...">
 		<panel name="BasicTemplate"/>
@@ -728,7 +728,7 @@
 		<eLabel text="MOVE" position="75,1032" size="330,39" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="center" transparent="1" zPosition="1"/>
 		<eLabel text="COPY" position="921,1032" size="330,39" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="center" transparent="1" zPosition="1"/>
 		<widget name="File" position="735,120" size="1177,297" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget name="CPto" position="735,420" size="1177,582" scrollbarMode="showOnDemand" font="Regular;33" ItemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="CPto" position="735,420" size="1177,540" font="Regular;33" ItemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="MusicExplorer" backgroundColor="#50070810" flags="wfNoBorder" position="center,center" size="1920,1080">
 		<widget font="Regular;36" position="75,75" render="Label" size="150,45" source="session.CurrentService" borderWidth="3" borderColor="black" foregroundColor="grey" transparent="1" valign="center" zPosition="1">
@@ -746,14 +746,14 @@
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="devicelist" position="735,120" size="1177,876" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="devicelist" position="735,120" size="1177,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="ConnStatus" position="7,568" size="715,396" zPosition="2" font="menulist;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 
 	<!-- ## WikiPedia# -->
 	<screen name="searchWikipedia" position="fill" flags="wfNoBorder" title="Wikipedia - Search for Movie, Director or Actor">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,120" size="1132,876" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="list" position="780,120" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="wikiSearch_en" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -769,7 +769,7 @@
 	</screen>
 	<screen name="wikiSearch" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="15,568" size="1890,370" scrollbarMode="showOnDemand" font="menulist;30" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="list" position="15,568" size="1890,360" font="menulist;30" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="wikiConfig" position="fill" flags="wfNoBorder" title="Wikipedia Setup">
 		<panel name="BasicTemplate"/>
@@ -777,7 +777,7 @@
 		<eLabel text="Cancel" position="55,1020" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
 		<panel name="GreenBPanel"/>
 		<eLabel text="Save" position="490,1020" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
-		<widget name="config" position="780,120" size="1132,876" scrollbarMode="showNever" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,120" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showNever" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="wikiFullScreen" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -797,7 +797,7 @@
 		<panel name="InfoBPanel"/>
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1335,1025" size="52,37"/>
 		<eLabel text="= Photo" position="1390,1020" size="200,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
-		<widget name="textpage" position="785,120" size="1127,855" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="textpage" position="785,120" size="1127,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="pic1" position="0,550" size="200,150" alphatest="blend" zPosition="1"/>
 		<widget name="pic2" position="0,750" size="200,150" alphatest="blend" zPosition="1"/>
 		<widget name="pic3" position="220,550" size="200,150" alphatest="blend" zPosition="1"/>
@@ -817,7 +817,7 @@
 		<panel name="InfoBPanel"/>
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1335,1025" size="52,37"/>
 		<eLabel text="= Photo" position="1390,1020" size="200,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
-		<widget name="textpage" position="785,120" size="1127,855" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="textpage" position="785,120" size="1127,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="pic1" position="0,550" size="200,150" alphatest="blend" zPosition="1"/>
 		<widget name="pic2" position="0,750" size="200,150" alphatest="blend" zPosition="1"/>
 		<widget name="pic3" position="220,550" size="200,150" alphatest="blend" zPosition="1"/>
@@ -837,7 +837,7 @@
 		<panel name="InfoBPanel"/>
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1335,1025" size="52,37"/>
 		<eLabel text="= Photo" position="1390,1020" size="200,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
-		<widget name="textpage" position="785,120" size="1127,855" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="textpage" position="785,120" size="1127,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="pic1" position="0,550" size="200,150" alphatest="blend" zPosition="1"/>
 		<widget name="pic2" position="0,750" size="200,150" alphatest="blend" zPosition="1"/>
 		<widget name="pic3" position="220,550" size="200,150" alphatest="blend" zPosition="1"/>
@@ -882,7 +882,7 @@
 		<panel name="BasicTemplate"/>
 		<panel name="Green2Panel"/>
 		<panel name="Red2Panel"/>
-		<widget name="config" position="735,120" size="1177,876" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="735,120" size="1177,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 
 	<!-- ##SHOUTcast## -->
@@ -923,7 +923,7 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget name="config" position="780,123" size="1132,874" font="menulist;34" itemHeight="45" fscrollbarMode="showOnDemand"/>
+		<widget name="config" position="780,123" size="1132,855" font="menulist;34" itemHeight="45" fscrollbarMode="showOnDemand"/>
 		<widget source="help" render="Label" position="7,450" size="715,450" font="menulist;33" valign="center" halign="center" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="epgrefresh" position="fill" flags="wfNoBorder">
@@ -940,7 +940,7 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget name="config" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="config" position="780,123" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 
 	<!-- ## BitrateViewer## -->
@@ -979,8 +979,8 @@
 		<widget name="ratinglabel" position="75,615" size="600,36" foregroundColor="grey" transparent="1" font="menulist;30" halign="center"/>
 		<widget name="titellabel" position="7,667" size="765,75" foregroundColor="grey" transparent="1" font="menulist;30" halign="center"/>
 		<widget name="poster" position="780,123" size="165,270" alphatest="blend"/>
-		<widget name="detailslabel" position="960,123" size="945,270" backgroundColor="darkgrey" transparent="1" font="menulist;30" halign="center"/>
-		<widget name="menu" position="780,397" size="1132,600" zPosition="3" transparent="1" font="menulist;33" scrollbarMode="showOnDemand" itemHeight="45" enableWrapAround="1" foregroundColor="grey"/>
+		<widget name="detailslabel" position="960,123" size="945,270" font="menulist;30" backgroundColor="darkgrey" transparent="1" halign="center"/>
+		<widget name="menu" position="780,397" size="1132,585" font="menulist;33" itemHeight="45" zPosition="3" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="grey"/>
 		<widget name="castlabel" position="780,412" size="1132,577" transparent="1" font="menulist;33" foregroundColor="grey"/>
 		<widget name="extralabel" position="780,123" size="1132,874" transparent="1" font="menulist;33" foregroundColor="grey"/>
 		<widget name="statusbar" position="7,675" size="765,285" transparent="1" font="menulist;27" halign="center" valign="bottom"/>
@@ -1011,7 +1011,7 @@
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="config" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="config" position="780,123" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
 		<widget name="label" position="7,600" size="750,300" font="menulist;33" foregroundColor="secondFG" halign="center" valign="center"/>
 	</screen>
 
@@ -1041,7 +1041,7 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget name="config" position="735,120" size="1177,825" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="735,120" size="1177,815" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="description" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 		<widget name="footnote" position="1125,985" size="525,30" font="menulist;33" zPosition="1" transparent="1" foregroundColor="grey"/>
 		<widget name="HelpWindow" pixmap="icons/vkey_icon.png" position="780,750" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
@@ -1101,7 +1101,7 @@
 		<panel name="Yellow1Panel"/>
 		<eLabel text="Cancel" position="55,1020" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1785,1020" size="52,39"/>
-		<widget name="list" position="735,120" size="1177,840" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="list" position="735,120" size="1177,815" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="tspace" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="idServerModels" position="fill" flags="wfNoBorder" title="Choose model">
@@ -1111,7 +1111,7 @@
 		<panel name="Yellow1Panel"/>
 		<eLabel text="Cancel" position="55,1020" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1785,1020" size="52,39"/>
-		<widget name="list" position="780,127" size="1132,735" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="list" position="780,127" size="1132,720" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="tspace" position="735,922" zPosition="4" size="1177,45" font="menulist;33" foregroundColor="#ffffff" transparent="1" halign="left"/>
 		<widget name="fspace" position="735,975" zPosition="4" size="1177,45" font="menulist;33" foregroundColor="#ffffff" transparent="1" halign="left"/>
 		<widget name="info" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
@@ -1124,7 +1124,7 @@
 		<panel name="Blue1Panel"/>
 		<eLabel text="Cancel" position="55,1020" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1785,1020" size="52,39"/>
-		<widget name="menu" position="735,120" size="1177,876" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="menu" position="735,120" size="1177,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="info" position="7,568" size="715,396" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 
@@ -1413,7 +1413,7 @@
 		<panel name="GreenBPanel"/>
 		<eLabel text="Cancel" position="75,1030" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
 		<eLabel text="Save" position="510,1030" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
-		<widget name="lyrics" scrollbarMode="showOnDemand" font="menulist;33" ItemHeight="45" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="lyrics" position="780,123" size="1132,855" font="menulist;33" ItemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="YampConfigScreen" position="fill" flags="wfNoBorder" title="Yamp Configuration">
 		<panel name="BasicTemplate2"/>
@@ -1421,7 +1421,7 @@
 		<panel name="GreenBPanel"/>
 		<eLabel text="Cancel" position="22,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="center"/>
 		<eLabel text="Save" position="457,1032" size="426,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="center"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="menulist;33" ItemHeight="45" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,123" size="1132,855" font="menulist;33" ItemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="YampSelectPath" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
@@ -1430,7 +1430,7 @@
 		<eLabel text="Cancel" position="75,1030" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
 		<eLabel text="OK" position="510,1030" size="330,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;33" halign="left"/>
 		<widget name="target" position="780,123" size="1132,33" font="menulist;33"/>
-		<widget name="config" position="780,157" size="1132,841" scrollbarMode="showOnDemand" font="menulist;33" ItemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,157" size="1132,810" font="menulist;33" ItemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 
 	<!-- ## AutoBouquets E2## -->
@@ -1479,7 +1479,7 @@
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
-		<widget name="config" position="780,120" size="1132,876" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,120" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="AutoBouquetsLogView" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -1488,7 +1488,7 @@
 	<screen name="AutoBouquetsAbout" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
-		<widget name="about" position="780,120" size="1132,876" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="about" position="780,120" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="oealogo" position="75,600" size="300,202"  zPosition="4" transparent="1" alphatest="blend"/>
 		</screen>
 
@@ -1499,7 +1499,7 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget name="devicelist" position="735,120" size="1177,882" font="menulist;33" itemHeight="45"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="devicelist" position="735,120" size="1177,855" font="menulist;33" itemHeight="45"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="DLNAClientConfig" position="fill" flags="wfNoBorder" title="DLNA Client Config">
 		<panel name="BasicTemplate"/>
@@ -1507,7 +1507,7 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget name="config" position="735,120" size="1177,882" font="menulist;33" itemHeight="45"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="735,120" size="1177,855" font="menulist;33" itemHeight="45"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="DLNAFileBrowser" position="fill" flags="wfNoBorder" title="DLNA Device Browser">
 		<panel name="BasicTemplate"/>
@@ -1516,7 +1516,7 @@
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
 		<widget name="directory" position="735,120" size="1177,67" font="menulist;30" halign="center"/>
-		<widget name="filelist" position="735,187" size="1177,798" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="filelist" position="735,187" size="1177,765" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="DLNAImageViewer" position="fill" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="0" size="1920,1080" backgroundColor="secondBG"/>
@@ -1537,7 +1537,7 @@
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
 		<widget name="currentDir" position="735,120" size="1177,67" font="menulist;30" halign="center"/>
-		<widget name="filelist" position="735,187" size="1177,849" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="filelist" position="735,187" size="1177,810" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="DLNAServer" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1545,7 +1545,7 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget name="config" position="735,120" size="1177,882" font="menulist;33" itemHeight="45"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="735,120" size="1177,855" font="menulist;33" itemHeight="45"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="information" position="7,568" size="715,390" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 
@@ -1561,7 +1561,7 @@
 		<panel name="BlueBPanel"/>
 		<widget name="btt_blue" position="1370,1020" size="426,39" font="menulist;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1822,1030" size="52,37"/>
-		<widget name="config" position="735,120" size="1177,876" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="735,120" size="1177,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="ok" position="7,675" size="715,75" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="left"/>
 		<widget name="infos" position="7,757" size="715,75" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="left"/>
 		<widget name="bouquets" position="7,840" size="715,75" font="menulist;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="left"/>
@@ -1653,11 +1653,11 @@
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<widget name="filelist" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="filelist" position="780,123" size="1132,855" font="menulist;33" itemHeight="45" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="RestoreScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="780,123" size="1132,855" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="PacketManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1725,7 +1725,7 @@
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
 		<panel name="MenuBPanel"/>
-		<widget name="config" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="780,123" size="1132,855" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand"/>
 		<widget source="introduction" render="Label" position="30,600" size="715,375" font="menulist;31" zPosition="10" halign="center" valign="center" foregroundColor="secondFG" transparent="1"/>
 	</screen>
 <!-- #Still to add??? #
@@ -1911,7 +1911,7 @@
 	<!-- ## Oscam Info ##-->
 	<screen name="OscamInfoMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="mainmenu" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="mainmenu" position="780,123" size="1132,855" font="menulist;33" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="oscReaderStats" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1983,13 +1983,13 @@
 	</screen>
 	<screen name="oscECMInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="output" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="output" position="780,123" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="OscamInfoConfigScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="config" position="780,123" size="1132,874" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="config" position="780,123" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
 		<widget name="status" render="Label" position="22,600" zPosition="1" size="715,300" font="menulist;24" halign="center" valign="center" transparent="1" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="oscInfo" position="fill" flags="wfNoBorder" title="">
