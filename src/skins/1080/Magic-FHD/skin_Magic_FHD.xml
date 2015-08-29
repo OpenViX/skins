@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.6.2 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.6.3 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -2086,51 +2086,51 @@ self.autoResize()
 			<convert type="ClockToText">Date</convert>
 		</widget>
 <!-- ##SNR## -->
-		<eLabel name="snr" position="27,124" size="142,75" transparent="1" text="SNR:" font="Regular;45"/>
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,120" size="1500,75" borderWidth="1" borderColor="uncccccc">
-		<convert type="FrontendInfo">SNR</convert>
+		<eLabel name="snr" text="SNR:" position="27,124" size="142,75"  font="Regular;55"/>
+		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,120" size="1500,75" borderWidth="2" borderColor="uncccccc">
+			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="1695,124" size="193,75" backgroundColor="darkgrey" transparent="1" font="Regular;52">
-		<convert type="FrontendInfo">SNR</convert>
+			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="0,300" size="796,315" font="LCD;270" halign="center" valign="center" backgroundColor="darkgrey" transparent="1">
-		<convert type="FrontendInfo">SNRdB</convert>
+		<widget source="Frontend" render="Label" position="0,400" size="850,180" font="LCD;180" halign="center">
+			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
-		<!-- ##AGC## -->
-		<eLabel name="agc" position="27,202" size="142,75" transparent="1" text="AGC:" font="Regular;45"/>
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,202" size="1500,75" borderWidth="1" borderColor="uncccccc">
-		<convert type="FrontendInfo">AGC</convert>
+<!-- ##AGC## -->
+		<eLabel name="agc" text="AGC:" position="27,202" size="142,75" font="Regular;55"/>
+		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,202" size="1500,75" borderWidth="2" borderColor="uncccccc">
+			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="1695,202" size="195,75" backgroundColor="darkgrey" transparent="1" font="Regular;52">
-		<convert type="FrontendInfo">AGC</convert>
+		<widget source="Frontend" render="Label" position="1695,202" size="195,75" font="Regular;52" backgroundColor="darkgrey" transparent="1">
+			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="0,540" size="796,315" backgroundColor="darkgrey" transparent="1" font="LCD;270" halign="center" valign="center">
-		<convert type="FrontendInfo">AGC</convert>
+		<widget source="Frontend" render="Label" position="0,585" size="850,180" font="LCD;180" halign="center">
+			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<!-- ##BER## -->
-		<eLabel name="ber" position="27,285" size="142,75" transparent="1" text="BER:" font="Regular;45"/>
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,285" size="1500,75" borderWidth="1" borderColor="uncccccc">
-		<convert type="FrontendInfo">BER</convert>
+<!-- ##BER## -->
+		<eLabel name="ber" text="BER:" position="27,285" size="142,75" font="Regular;55"/>
+		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,285" size="1500,75" borderWidth="2" borderColor="uncccccc">
+			<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="1695,285" size="195,75" backgroundColor="darkgrey" transparent="1" font="Regular;52">
-		<convert type="FrontendInfo">BER</convert>
+		<widget source="Frontend" render="Label" position="1695,285" size="195,75" font="Regular;52" backgroundColor="darkgrey" transparent="1">
+			<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="0,772" size="796,315" font="LCD;270" halign="center" valign="center" backgroundColor="darkgrey" transparent="1">
-		<convert type="FrontendInfo">BER</convert>
+		<widget source="Frontend" render="Label" position="0,765" size="850,180" font="LCD;180" halign="center">
+			<convert type="FrontendInfo">BER</convert>
 		</widget>
-	<!-- ##Lock## -->
-		<eLabel name="lock" position="100,400" size="180,42" font="menulist;40" halign="right" transparent="1" text="Lock:"/>
+<!-- ##Lock## --> 
+		<eLabel name="lock" position="100,390" size="180,42" font="menulist;40" halign="right" transparent="1" text="Lock:"/>
 		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="290,403" size="33,31" alphatest="blend">
-		<convert type="FrontendInfo">LOCK</convert>
-		<convert type="ConditionalShowHide"/>
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="290,403" size="33,31" alphatest="blend">
-		<convert type="FrontendInfo">LOCK</convert>
-		<convert type="ConditionalShowHide">Invert</convert>
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
 		<widget name="config" position="802,380" size="1110,600" transparent="1" itemHeight="50" font="menulist;33" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="introduction" position="802,1020" size="480,39" font="Regular;33" backgroundColor="secondBG" foregroundColor="secondFG" halign="left" transparent="1" zPosition="1"/>
-		</screen>
+	</screen>
 	<screen name="PositionerSetup" position="fill" flags="wfNoBorder" title="Positioner setup">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
