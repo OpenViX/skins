@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.6.5	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.6.6	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1145,135 +1145,17 @@
 	</screen>
 
 	<!-- ## RecInfoBar ## -->
-	<screen name="RecInfoBar" flags="wfNoBorder" position="0,20" size="1920,37" backgroundColor="transpBlack" zPosition="1">
-		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="7,7" zPosition="1" size="21,21" alphatest="on">
+	<screen name="RecInfoBar" flags="wfNoBorder" position="0,225" size="1920,37" backgroundColor="transpBlack" zPosition="1">
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="7,7" size="21,21" zPosition="1" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget name="chTuner" position="37,3" size="30,27" zPosition="1" font="menulist;27" halign="left" transparent="1" noWrap="1" foregroundColor="blue" backgroundColor="black"/>
-		<widget name="chProv" position="75,3" size="375,27" zPosition="1" font="menulist;27" halign="left" transparent="1" noWrap="1" foregroundColor="yellow" backgroundColor="black"/>
-		<widget name="chBouq" position="450,3" size="375,27" zPosition="1" font="menulist;27" halign="left" transparent="1" noWrap="1" foregroundColor="yellow" backgroundColor="black"/>
-		<widget name="chNum" position="825,3"	size="75,27"	zPosition="1" font="menulist;27" halign="right" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
-		<widget name="chName" position="907,3" size="375,27" zPosition="1" font="menulist;27" halign="left"	transparent="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
-		<widget name="timelen" position="1275,3" size="120,27"	zPosition="1" font="menulist;27" halign="right" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
-		<widget name="recName" position="1425,3" size="375,27"	zPosition="1" font="menulist;27" halign="left" transparent="1" noWrap="1" foregroundColor="grey" backgroundColor="black"/>
-	</screen>
-
-	<!-- ## OnDemand players ## -->
-	<screen name="OnDemand_About" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<panel name="Red1Panel"/>
-		<widget name="about" position="735,120" size="1177,882" font="menulist;33" transparent="1" foregroundColor="grey"/>
-		<widget name="oealogo" position="7,568" size="715,396" zPosition="2" valign="center" halign="center" alphatest="blend"/>
-	</screen>
-	<screen name="StreamsThumb" position="fill" flags="wfNoBorder" title="">
-		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget source="Title" foregroundColor="grey" render="Label" position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;37" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="menulist;39" halign="right" position="1522,22" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="menulist;30" halign="right" position="1522,67" size="375,37" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<widget name="lab1" position="7,118" size="1882,750" font="menulist;39" halign="center" valign="center" transparent="0" zPosition="5"/>
-		<widget name="list" position="7,118" size="1882,888" scrollbarMode="showOnDemand" font="menulist;30" itemHeight="225" noWrap="1" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="GenresThumb" position="fill" flags="wfNoBorder" title="">
-		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget source="Title" foregroundColor="grey" render="Label" position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="menulist;37" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="menulist;39" halign="right" position="1522,22" size="375,42" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="menulist;30" halign="right" position="1522,67" size="375,37" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<panel name="Green2Panel"/>
-		<widget name="lab1" position="7,118" size="1882,750" font="menulist;39" halign="center" valign="center" transparent="0" zPosition="5"/>
-		<widget name="list" position="7,118" size="1882,888" scrollbarMode="showOnDemand" font="menulist;30" itemHeight="225" noWrap="1" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="OnDemandHelp" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<widget name="myLabel" position="780,120" size="1132,848" scrollbarMode="showOnDemand" font="menulist;36" itemHeight="53" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="OnDemandScreenSetup" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<widget name="config" position="780,127" size="1132,848" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="53" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<!-- ## RTE-Player ## -->
-	<screen name="RTEMenu" position="fill" flags="wfNoBorder" title="RTE Player - Main Menu">
-		<panel name="BasicTemplate"/>
-		<widget name="RTEMenu" position="780,127" size="1132,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="StreamsMenu" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<widget name="latestMenu" position="780,127" size="1132,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<!-- ##BBC iPlayer## -->
-	<screen name="BBCiMenu" position="fill" flags="wfNoBorder" title="BBC iPlayer">
-		<panel name="BasicTemplate"/>
-		<widget name="BBCiMenu" position="780,127" size="1132,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="bbcStreamUrl" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<widget name="bbcStreamUrl" position="780,127" size="1132,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<!-- ## ITV-Player ## -->
-	<screen name="ITVplayer" position="fill" flags="wfNoBorder" title="ITV Player">
-		<panel name="BasicTemplate"/>
-		<widget name="ITVMenu" position="780,127" size="1132,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<!-- ## 3-Player ## -->
-	<screen name="threeMainMenu" position="fill" flags="wfNoBorder" title="3Player - Main Menu">
-		<panel name="BasicTemplate"/>
-		<widget name="threeMainMenu" position="780,127" size="1132,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<!-- ## 4OD-Player ## -->
-	<screen name="fourODMainMenu" position="fill" flags="wfNoBorder" title="FourOD-Player - Main Menu">
-		<panel name="BasicTemplate"/>
-		<widget name="fourODMainMenu" position="780,127" size="1132,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<!-- ## ABC iView ## -->
-	<screen name="iViewMenu" position="fill" flags="wfNoBorder" title="3Player - Main Menu">
-		<panel name="BasicTemplate"/>
-		<widget name="iViewMenu" position="780,127" size="1132,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<!-- ## Radio Player ## -->
-	<screen name="iRadioMenu" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<widget name="iRadioMenu" position="780,120" size="832,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="shoutGenresMenu" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<widget name="shoutGenresMenu" position="780,120" size="832,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="shoutGenresThumb" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<panel name="Green2Panel"/>
-		<widget name="list" position="735,120" size="1177,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="lab1" position="7,568" size="715,396" zPosition="2" font="menulist;33" foregroundColor="secondFG" valign="center" halign="center"/>
-	</screen>
-	<screen name="shoutSubGenresMenu" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<widget name="shoutSubGenresMenu" position="780,120" size="832,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="FavoritesThumb" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<panel name="Yellow2Panel"/>
-		<widget name="list" position="735,120" size="1177,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="lab1" position="7,568" size="715,396" zPosition="2" font="menulist;33" foregroundColor="secondFG" valign="center" halign="center"/>
-	</screen>
-	<screen name="tuneinGenresMenu" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<widget name="tuneinGenresMenu" position="780,120" size="1132,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="tuneinGenresThumb" position="fill" flags="wfNoBorder" title="">
-		<panel name="BasicTemplate"/>
-		<panel name="Green2Panel"/>
-		<widget name="list" position="735,120" size="1177,855" scrollbarMode="showOnDemand" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="lab1" position="7,568" size="715,396" zPosition="2" font="menulist;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="chTuner" position="37,3" size="30,27" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="blue" backgroundColor="black"/>
+		<widget name="chProv" position="75,3" size="375,27" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="yellow" backgroundColor="black"/>
+		<widget name="chBouq" position="450,3" size="375,27" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="yellow" backgroundColor="black"/>
+		<widget name="chNum" position="825,3"	size="75,27" font="menulist;27" halign="right" transparent="1" zPosition="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
+		<widget name="chName" position="907,3" size="375,27" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
+		<widget name="timelen" position="1275,3" size="120,27" font="menulist;27" halign="right" transparent="1" zPosition="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
+		<widget name="recName" position="1425,3" size="375,27" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="grey" backgroundColor="black"/>
 	</screen>
 
 	<!-- ##Picture-Player## -->
@@ -2000,4 +1882,5 @@
 		<panel name="Blue2Panel"/>
 		<widget name="output" position="5,540" size="1877,455" transparent="1" foregroundColor="grey"/>
 	</screen>
+
 </skin>
