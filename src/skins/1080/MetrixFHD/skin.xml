@@ -7718,25 +7718,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ServiceName">Name</convert>
   </widget>
   <!-- CHANNEL NAME */-->
- <ePixmap alphatest="blend" pixmap="MetrixFHD/iconsHD/ico_dolby_off.png" position="1593,1012" size="96,34" zPosition="1"/>
-  <widget alphatest="blend" pixmap="MetrixFHD//iconsHD/ico_dolby_on.png" position="1593,1012" render="Pixmap" size="96,34" source="session.CurrentService" zPosition="2">
-    <convert type="ServiceInfo">IsMultichannel</convert>
-    <convert type="ConditionalShowHide"/>
+ <ePixmap alphatest="blend" pixmap="MetrixFHD/iconsHD/ico_dolby_off.png" position="1540,1011" size="163,55" zPosition="1" />
+  <widget alphatest="blend" pixmap="MetrixFHD//iconsHD/ico_dolby_on.png" position="1540,1011" render="Pixmap" size="163,55" source="session.CurrentService" zPosition="2">
+  <convert type="ServiceInfo">IsMultichannel</convert>
+  <convert type="ConditionalShowHide" />
+</widget>
+  <ePixmap alphatest="blend" pixmap="MetrixFHD/iconsHD/ico_hd_off.png" position="1740,1011" size="120,55" zPosition="1" />
+  <widget alphatest="blend" pixmap="MetrixFHD/iconsHD/ico_hd_on.png" position="1740,1011" render="Pixmap" size="120,55" source="session.CurrentService" zPosition="2">
+<convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap alphatest="blend" pixmap="MetrixFHD/iconsHD/ico_format_off.png" position="1797,1008" size="61,39" zPosition="1"/>
-  <widget alphatest="blend" pixmap="MetrixFHD/iconsHD/ico_format_on.png" position="1797,1008" render="Pixmap" size="61,39" source="session.CurrentService" zPosition="2">
-    <convert type="ServiceInfo">IsWidescreen</convert>
-    <convert type="ConditionalShowHide"/>
-  </widget>
-  <ePixmap alphatest="blend" pixmap="MetrixFHD/iconsHD/ico_hd_off.png" position="1705,1011" size="73,36" zPosition="1"/>
-  <widget alphatest="blend" pixmap="MetrixFHD/iconsHD/ico_hd_on.png" position="1705,1011" render="Pixmap" size="73,36" source="session.CurrentService" zPosition="2">
-    <convert type="ServiceInfo">VideoWidth</convert>
-    <convert type="ValueRange">721,1980</convert>
-    <convert type="ConditionalShowHide"/>
-  </widget>
-    <widget alphatest="blend" pixmap="MetrixFHD/iconsHD/ico_rec_on.png" position="85,60" render="Pixmap" size="111,34" source="session.RecordState" zPosition="2">
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
      <!-- /*STYLE NEW -->
   <eLabel backgroundColor="metrixBackground" name="InfoBar" position="-1,840" size="1924,240" zPosition="-10"/>
   <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="432,922" size="1425,1"/>
