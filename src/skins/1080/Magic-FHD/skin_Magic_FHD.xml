@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.6.4 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.6.5 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -2119,12 +2119,12 @@ self.autoResize()
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 <!-- ##Lock## --> 
-		<eLabel name="lock" position="100,390" size="180,42" font="menulist;40" halign="right" transparent="1" text="Lock:"/>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="290,403" size="33,31" alphatest="blend">
+		<eLabel name="lock" position="100,385" size="180,42" font="menulist;40" halign="right" transparent="1" text="Lock:"/>
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="290,393" size="33,31" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="290,403" size="33,31" alphatest="blend">
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="290,393" size="33,31" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
@@ -2164,14 +2164,16 @@ self.autoResize()
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="list" position="735,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="RotorNimSelection" position="fill" title="select Slot">
+		<panel name="BasicTemplate"/>
+		<widget name="nimlist" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="TunerScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="introduction" position="780,123" size="1132,45" font="Regular;34"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" position="780,169" size="1132,829" transparent="1"/>
-		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="22,1027" size="52,39"/>
-		<eLabel text="Accept" backgroundColor="secondBG" font="Regular;33" halign="left" position="75,1030" size="330,39" transparent="1" zPosition="1"/>
+		<panel name="OKBPanel"/>
+		<widget name="config" position="735,123" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="CableScanScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2650,7 +2652,7 @@ self.autoResize()
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
 		<widget name="Linconn" position="735,940" size="1177,60" font="menulist;27" halign="center" valign="center"/>
-		<widget name="config" position="735,120" size="1177,810" font="menulist;30" ItemHeight="45"	scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="735,120" size="1177,810" font="menulist;30" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="VIXPartitionPanelConf" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
