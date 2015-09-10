@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.6.8	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.6.9	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -159,11 +159,11 @@
 		<widget name="rytec_pix" position="300,630" size="105,105"/>
 		<widget name="krkadoni_pix" position="300,750" size="105,33"/>
 	</screen>
-	<screen name="CrossEPG_Downloader" position="c-300,e-80" size="600,70" flags="wfNoBorder">
-		<widget name="background" position="0,0" size="600,80" zPosition="-1"/>
-		<widget name="action" halign="center" valign="center" position="65,10" size="520,20" font="menulist;16" backgroundColor="#11000000"/>
-		<widget name="status" halign="center" valign="center" position="65,30" size="520,20" font="menulist;16" backgroundColor="#11000000"/>
-		<widget name="progress" position="65,55" size="520,5" borderWidth="1" backgroundColor="#11000000"/>
+	<screen name="CrossEPG_Downloader" position="510,965" size="900,105" flags="wfNoBorder">
+		<widget name="background" position="0,0" size="900,120" zPosition="-1"/>
+		<widget name="action" halign="center" valign="center" position="100,15" size="780,30" font="menulist;27" backgroundColor="#11000000"/>
+		<widget name="status" halign="center" valign="center" position="100,50" size="780,30" font="menulist;27" backgroundColor="#11000000"/>
+		<widget name="progress" position="100,82" size="780,8" borderWidth="1" backgroundColor="#11000000"/>
 	</screen>
 	<screen name="CrossEPG_Ordering" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -555,6 +555,12 @@
 	</screen>
 
 	<!-- ## AutoBouquetsMaker ## -->
+	<screen name="AutoBouquetsMaker" position="510,965" size="900,105" flags="wfNoBorder">
+		<ePixmap pixmap="crossepg/background_hd.png" position="0,0" size="900,120" alphatest="blend" zPosition="1"/>
+		<widget name="action" position="100,15" size="780,30" font="menulist;27" halign="center" valign="center" zPosition="2" backgroundColor="#11000000"/>
+		<widget name="status" position="100,50" size="780,30" font="menulist;27" halign="center" valign="center" backgroundColor="#11000000"/>
+		<widget name="progress" position="100,82" size="780,8" borderWidth="1" zPosition="2" backgroundColor="#11000000"/>
+	</screen>
 	<screen name="AutoBouquetsMaker_Menu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget source="list" render="Listbox" position="780,123" size="1132,855" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1">
@@ -1148,9 +1154,9 @@
 
 	<!-- ## RecInfoBar ## -->
 	<screen name="RecInfoBar" flags="wfNoBorder" position="0,225" size="1920,30" backgroundColor="transpBlack" zPosition="1">
-		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="7,10" size="30,30" zPosition="1" alphatest="on">
+<!--	<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="7,10" size="30,30" zPosition="1" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>
+		</widget>-->
 		<widget name="chTuner" position="37,3" size="30,27" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="blue" backgroundColor="black"/>
 		<widget name="chProv" position="75,3" size="375,27" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="yellow" backgroundColor="black"/>
 		<widget name="chBouq" position="450,3" size="375,27" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="yellow" backgroundColor="black"/>
