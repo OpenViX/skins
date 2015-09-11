@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.6.9	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.7.0	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -160,10 +160,28 @@
 		<widget name="krkadoni_pix" position="300,750" size="105,33"/>
 	</screen>
 	<screen name="CrossEPG_Downloader" position="510,965" size="900,105" flags="wfNoBorder">
-		<widget name="background" position="0,0" size="900,120" zPosition="-1"/>
-		<widget name="action" halign="center" valign="center" position="100,15" size="780,30" font="menulist;27" backgroundColor="#11000000"/>
-		<widget name="status" halign="center" valign="center" position="100,50" size="780,30" font="menulist;27" backgroundColor="#11000000"/>
-		<widget name="progress" position="100,82" size="780,8" borderWidth="1" backgroundColor="#11000000"/>
+	    <panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Converter" position="510,965" size="900,105" flags="wfNoBorder">
+		<panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Defragmenter" position="510,965" size="900,105" flags="wfNoBorder">
+		<panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Downloader" position="510,965" size="900,105" flags="wfNoBorder">
+		<panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Importer" position="510,965" size="900,105" flags="wfNoBorder">
+		<panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Loader" position="510,965" size="900,105" flags="wfNoBorder">
+		<panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Rytec_Update" position="510,965" size="900,105" flags="wfNoBorder">
+		<panel name="DownloadBar" />
+	</screen>
+	<screen name="CrossEPG_Xepgdb_Update" position="510,965" size="900,105" flags="wfNoBorder">
+		<panel name="DownloadBar" />
 	</screen>
 	<screen name="CrossEPG_Ordering" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -556,10 +574,7 @@
 
 	<!-- ## AutoBouquetsMaker ## -->
 	<screen name="AutoBouquetsMaker" position="510,965" size="900,105" flags="wfNoBorder">
-		<ePixmap pixmap="crossepg/background_hd.png" position="0,0" size="900,120" alphatest="blend" zPosition="1"/>
-		<widget name="action" position="100,15" size="780,30" font="menulist;27" halign="center" valign="center" zPosition="2" backgroundColor="#11000000"/>
-		<widget name="status" position="100,50" size="780,30" font="menulist;27" halign="center" valign="center" backgroundColor="#11000000"/>
-		<widget name="progress" position="100,82" size="780,8" borderWidth="1" zPosition="2" backgroundColor="#11000000"/>
+	    <panel name="DownloadBar" />
 	</screen>
 	<screen name="AutoBouquetsMaker_Menu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
