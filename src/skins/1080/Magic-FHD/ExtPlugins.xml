@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.7.1	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.7.2	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1171,9 +1171,9 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1762,1030"	size="52,37"/>
-		<widget name="label" position="22,577" size="723,420" zPosition="2" transparent="1" font="Regular;30"/>
-		<widget name="thn" position="0,115" size="723,409" zPosition="1" alphatest="on"/>
-		<widget name="filelist" position="735,120" size="1177,855" font="menulist;36" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="label" position="22,577" size="723,420" zPosition="2" transparent="1" font="FileList;30"/>
+		<widget name="thn" position="0,120" size="723,409" zPosition="1" alphatest="blend"/>
+		<widget name="filelist" position="735,120" size="1177,855" font="FileList;36" itemHeight="55" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="Pic_Exif" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1187,7 +1187,12 @@
 			</convert>
 		</widget>
 	</screen>
-
+	<screen name="Pic_Full_View" position="fill" flags="wfNoBorder">
+		<widget name="pic" position="fill" alphatest="blend" zPosition="1"/>
+		<widget name="point" position="35,10" size="37,37" pixmap="icons/part_new.png" alphatest="blend" zPosition="3"/>
+		<widget name="play_icon" position="30,10" size="37,37" pixmap="icons/movie_play.png" alphatest="blend" zPosition="3"/>
+		<widget source="file" render="Label" position="90,5" size="1200,50" font="menulist;33" foregroundColor="secondFG" borderColor="black" borderWidth="2" halign="left" transparent="1" noWrap="1" zPosition="3"/>
+	</screen>
 	<!-- ## AtmoLight ## -->
 	<screen name="AtmoLightAbout" position="fill" title="AtmoLight about" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
