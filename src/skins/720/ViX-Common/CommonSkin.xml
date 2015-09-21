@@ -4315,10 +4315,22 @@ self.autoResize()
 	<!-- ##FirmwareUpgrade## -->
 	<screen name="FirmwareUpgrade" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Firmware Upgrade">
 		<panel name="MenuPanel"/>
-		<widget name="config" position="10,107" size="503,420" font="Regular;20" zPosition="2" transparent="1" scrollbarMode="showOnDemand" halign="center"/>
+		<widget name="config" position="10,107" size="503,435" font="Regular;20" zPosition="2" transparent="1" scrollbarMode="showOnDemand" halign="center"/>
+		<widget name="oldversion_label" position="10,545" size="290,25" font="Regular;20" foregroundColor="secondFG"/>
+		<widget name="oldversion" position="300,545" size="100,25" font="Regular;20" foregroundColor="secondFG"/>
+		<widget name="newversion_label" position="10,575" size="290,25" font="Regular;20" foregroundColor="secondFG"/>
+		<widget name="newversion" position="300,575" size="100,25" font="Regular;20" foregroundColor="secondFG"/>
 		<widget source="status" render="Label" position="10,608" size="503,20" font="Regular;20" zPosition="5" valign="top"/>
 		<panel name="MenuRed2Panel"/>
 		<panel name="MenuGreen2Panel"/>
+	</screen>
+
+	<screen name="Filebrowser" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Firmware Upgrade">
+		<panel name="MenuPanel"/>
+		<widget name="file_list" position="10,107" size="503,490" font="Regular;20" zPosition="2" transparent="1" scrollbarMode="showOnDemand" halign="center"/>
+		<widget source="status" render="Label" position="10,608" size="503,20" font="Regular;20" zPosition="5" valign="top"/>
+		<panel name="MenuYellow2Panel"/>
+		<panel name="MenuBlue2Panel"/>
 	</screen>
 	<screen name="FUFilebrowser" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Firmware Upgrade">
 		<panel name="MenuPanel"/>
