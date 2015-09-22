@@ -898,9 +898,20 @@
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="15,682" size="35,26"/>
 		<eLabel text="Accept" foregroundColor="grey" backgroundColor="secondBG" font="Regular;22" halign="left" position="50,687" size="220,26" transparent="1" zPosition="1"/>
 	</screen>
-	<screen name="PermanentClockScreen" position="0,0" size="120,30" zPosition="-1" backgroundColor="transparent" title="%s" flags="wfNoBorder">
-		<widget source="global.CurrentTime" render="Label" position="1,1" size="120,30" backgroundColor="transparent" transparent="1" zPosition="0" foregroundColor="grey" borderWidth="2" font="Regular;26" borderColor="black" valign="center" halign="center">
+	<screen name="PermanentClockScreen" position="0,0" size="150,30" zPosition="-1" backgroundColor="transparent" title="%s" flags="wfNoBorder">
+		<widget source="global.CurrentTime" render="Label" position="1,1" size="100,30" font="Regular;26" backgroundColor="transparent" transparent="1" zPosition="0" foregroundColor="grey" borderWidth="2" borderColor="black" halign="right">
 			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="101,10" size="40,20" font="Regular;18" backgroundColor="transparent" transparent="1" zPosition="0" foregroundColor="grey" borderWidth="2"  borderColor="black" halign="left">
+			<convert type="ClockToText">Format::%S</convert>
+		</widget>
+	</screen>
+	<screen name="PermanentClockPositioner" position="0,0" size="150,30" zPosition="-1" backgroundColor="transparent" title="%s" flags="wfNoBorder">
+		<widget source="global.CurrentTime" render="Label" position="1,1" size="100,30" font="Regular;26" backgroundColor="transparent" transparent="1" zPosition="0" foregroundColor="grey" borderWidth="2" borderColor="black" halign="right">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="101,10" size="40,20" font="Regular;18" backgroundColor="transparent" transparent="1" zPosition="0" foregroundColor="grey" borderWidth="2"  borderColor="black" halign="left">
+			<convert type="ClockToText">Format::%S</convert>
 		</widget>
 	</screen>
 	<!-- ## PPanel ## -->
