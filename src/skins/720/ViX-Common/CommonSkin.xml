@@ -1,4 +1,4 @@
-<!--  Skin: ViX-Common Vs 3.2.47 by AndyBlac @ www.world-of-satellite.com  -->
+<!--  Skin: ViX-Common Vs 3.2.48 by AndyBlac @ www.world-of-satellite.com  -->
 <!--  This skin is a Freeware. Everyone can modify and use it in other images. , XmlUnboundNsPrefix -->
 <!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!! , XmlUnboundNsPrefix -->
 <!--  Do whatever you want with this skin, but don't tell it's yours, or your idea! , XmlUnboundNsPrefix -->
@@ -3400,16 +3400,18 @@ self.autoResize()
 		<widget name="connect" position="220,220" size="64,64" zPosition="2" pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy24.png" transparent="1" alphatest="blend"/>
 		<widget name="lab1" position="10,133" halign="center" size="503,60" zPosition="1" font="Regular;20" valign="top" transparent="0"/>
 	</screen>
-	<screen name="VIXBackupManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<widget name="lab1" position="10,107" size="503,50" font="Regular;20" zPosition="2" transparent="0" halign="center"/>
-		<widget name="list" position="10,190" size="503,400" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	<screen name="VIXBackupManager" position="fill" backgroundColor="black" flags="wfNoBorder">
+		<panel name="FullscreenTopPanel"/>
+		<panel name="FullscreenTitlePanel"/>
+		<panel name="FullscreenPIGPanel"/>
+		<widget name="lab1" position="10,107" size="670,50" font="Regular;20" zPosition="2" transparent="0" halign="center"/>
+		<widget name="list" position="10,190" size="670,400" selectionPixmap="ViX-Common/buttons/FocusBar_H25x670.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="backupstatus" position="12,608" size="503,20" font="Regular;20" zPosition="5" valign="top"/>
-		<panel name="MenuRed1Panel"/>
-		<panel name="MenuGreen1Panel"/>
-		<panel name="MenuYellow1Panel"/>
-		<ePixmap pixmap="buttons/key_menu.png" position="470,663" size="35,25" alphatest="blend" transparent="1"/>
-		<ePixmap pixmap="buttons/key_info.png" position="470,690" size="35,25" alphatest="blend" transparent="1"/>
+		<panel name="FullscreenRed1Panel"/>
+		<panel name="FullscreenGreen1Panel"/>
+		<panel name="FullscreenYellow1Panel"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="1000,686" size="35,25" alphatest="blend" transparent="1"/>
+		<ePixmap pixmap="buttons/key_info.png" position="1050,686" size="35,25" alphatest="blend" transparent="1"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(25)
 		</applet>
@@ -3431,7 +3433,7 @@ self.autoResize()
 		<panel name="MenuPanel"/>
 		<widget name="list" position="10,107" size="503,526" font="Regular;15" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
-	<screen name="VIXImageManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
+<!-- ORI	<screen name="VIXImageManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
 		<widget name="lab1" position="10,107" size="503,50" font="Regular;20" zPosition="2" transparent="0" halign="center"/>
 		<widget name="list" position="10,190" size="503,435" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
@@ -3444,7 +3446,25 @@ self.autoResize()
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(25)
 		</applet>
+	</screen>-->
+	<screen name="VIXImageManager" position="fill" backgroundColor="black" flags="wfNoBorder">
+		<panel name="FullscreenTopPanel"/>
+		<panel name="FullscreenTitlePanel"/>
+		<panel name="FullscreenPIGPanel"/>
+		<widget name="lab1" position="10,107" size="670,50" font="Regular;20" zPosition="2" transparent="0" halign="center"/>
+		<widget name="list" position="10,190" size="670,400" selectionPixmap="ViX-Common/buttons/FocusBar_H25x670.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="backupstatus" position="12,608" size="503,20" font="Regular;20" zPosition="5" valign="top"/>
+		<panel name="FullscreenRed1Panel"/>
+		<panel name="FullscreenGreen1Panel"/>
+		<panel name="FullscreenYellow1Panel"/>
+		<panel name="FullscreenBlue1Panel"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="1240,670" size="35,25" alphatest="blend" transparent="1"/>
+		<ePixmap pixmap="buttons/key_info.png" position="1240,695" size="35,25" alphatest="blend" transparent="1"/>
+		<applet type="onLayoutFinish">
+			self["list"].instance.setItemHeight(25)
+		</applet>
 	</screen>
+
 	<screen name="ImageManagerDownload" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
 		<widget name="lab1" position="10,107" size="503,50" font="Regular;20" zPosition="2" transparent="0" halign="center"/>
