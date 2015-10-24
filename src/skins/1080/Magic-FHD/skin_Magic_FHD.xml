@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.7.3 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.7.4 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -340,22 +340,22 @@
 		<widget name="list" position="780,123" size="1132,880" EventFontSingle="menulist;32" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1"/>
 		<widget name="number" position="780,123" size="1132,874" font="Regular;54" zPosition="5" backgroundColor="background" transparent="0" borderColor="black" borderWidth="1" valign="center" halign="center"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" backgroundColor="background" transparent="1" halign="center" valign="center" foregroundColor="grey" zPosition="1"/>
-		<widget source="Event" render="Label" position="7,532" size="750,72" font="menulist;34" transparent="1" foregroundColor="secondFG" halign="center" valign="top">
+		<widget source="Event" render="Label" position="7,532" size="750,74" font="menulist;34" transparent="1" foregroundColor="secondFG" halign="center" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="22,604" size="225,37" font="menulist;33" backgroundColor="background" transparent="1" foregroundColor="yellow">
+		<widget source="Event" render="Label" position="22,610" size="225,37" font="menulist;33" backgroundColor="background" transparent="1" foregroundColor="yellow">
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget source="Event" render="Label" position="247,604" size="120,37" font="menulist;33" backgroundColor="background" transparent="1" foregroundColor="yellow" halign="right">
+		<widget source="Event" render="Label" position="247,610" size="120,37" font="menulist;33" backgroundColor="background" transparent="1" foregroundColor="yellow" halign="right">
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText"/>
 		</widget>
-		<widget source="Event" render="Label" position="367,604" size="120,37" font="menulist;33" backgroundColor="background" transparent="1" foregroundColor="yellow" halign="left">
+		<widget source="Event" render="Label" position="367,610" size="120,37" font="menulist;33" backgroundColor="background" transparent="1" foregroundColor="yellow" halign="left">
 		<convert type="EventTime">EndTime</convert>
 		<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,642" size="750,367" font="menulist;33" transparent="1" foregroundcolor="grey">
+		<widget source="Event" render="Label" position="7,650" size="750,357" font="menulist;33" transparent="1" foregroundcolor="grey">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 	</screen>
@@ -855,7 +855,7 @@
 	<!-- ##JobView## -->
 	<screen name="JobView" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="job_name" render="Label" position="885,168" size="720,90" font="Regular;42" valign="center"/>
+		<widget source="job_name" render="Label" position="735,120" size="1177,90" font="Regular;42" foregroundColor="secondFG" halign="center" valign="top"/>
 		<widget source="job_task" render="Label" position="885,255" size="720,75" font="Regular;34"/>
 		<widget source="job_progress" render="Progress" position="885,393" size="720,54" borderWidth="2" backgroundColor="un254f7497"/>
 		<widget source="job_progress" render="Label" position="900,395" size="420,54" font="menulist;42" foregroundColor="black" zPosition="2" halign="left" transparent="1">
@@ -1009,8 +1009,8 @@
 	</screen>
 	<screen name="ChoiceBox" position="fill" zPosition="10" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="22,568" size="715,390" font="Regular;33" zPosition="2" foregroundColor="secondFG"/>
-		<widget name="list" position="735,123" font="ChoiceList;31" size="1177,874" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="text" position="22,568" size="715,390" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="list" position="735,125" font="ChoiceList;31" size="1177,850" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		</screen>
 	<screen name="RecordTimerQuestion" position="center,center" size="400,202" zPosition="5" flags="wfNoBorder">
 		<widget name="text" position="0,0" size="0,0" font="Regular;30"/>
