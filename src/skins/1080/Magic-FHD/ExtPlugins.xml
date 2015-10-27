@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.7.3	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.7.5	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -518,36 +518,36 @@
 	</screen>
 
 	<!-- ##Media-Player## -->
-  <screen name="MediaPlayer" title="MediaPlayer" position="fill" flags="wfNoBorder">
-	<ePixmap pixmap="Magic-HD-Common/border/top2_bg.png" position="0,0" size="1920,112"/>
-	<ePixmap pixmap="Magic-HD-Common/border/bottom_bg.png" position="0,1012" size="1920,3"/>
-	<widget source="Title" render="Label" position="22,22" size="1050,82" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;37" halign="left" valign="center"/>
-	<widget source="global.CurrentTime" render="Label" position="1522,22" size="375,75" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;30" valign="center" halign="right">
-	  <convert type="ClockToText">Full</convert>
-	</widget>
-	<eLabel position="22,123" size="907,39" backgroundColor="grey" zPosition="5" text="F i l e l i s t" foregroundColor="black" font="Regular;33" halign="center"/>
-	<widget name="filelist" position="22,162" size="907,502" backgroundColor="noTransBG" scrollbarMode="showOnDemand" selectionPixmap="Magic-HD-Common/buttons/sel.png"/>
-	<eLabel position="990,123" size="841,39" backgroundColor="grey" zPosition="5" text="P l a y l i s t" foregroundColor="black" font="Regular;33" halign="center"/>
-	<widget name="playlist" position="990,162" size="840,502" backgroundColor="noTransBG" selectionDisabled="1" scrollbarMode="showOnDemand" selectionPixmap="Magic-HD-Common/buttons/sel.png"/>
-	<widget name="title" position="450,705" size="1020,60" backgroundColor="noTransBG" transparent="1" font="Regular;39" valign="top"/>
-	<eLabel position="433,780" size="1050,3" backgroundColor="darkgrey"/>
-	<widget name="artisttext" position="450,802" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top"/>
-	<widget name="artist" position="600,802" size="870,37" backgroundColor="noTransBG" transparent="1" font="Regular;30" valign="top"/>
-	<widget name="albumtext" position="450,847" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top"/>
-	<widget name="album" position="600,847" size="870,37" backgroundColor="noTransBG" transparent="1" font="Regular;30" valign="top"/>
-	<widget name="yeartext" position="450,892" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top"/>
-	<widget name="year" position="600,892" size="870,37" backgroundColor="noTransBG" transparent="1" font="Regular;30" valign="top"/>
-	<widget name="coverArt" pixmap="skin_default/no_coverArt.png" position="135,705" size="225,225" transparent="1" alphatest="blend"/>
-	<ePixmap pixmap="Magic-HD-Common/dvr/mpslider.png" position="300,973" size="900,24" backgroundColor="noTransBG" zPosition="13" alphatest="on"/>
-	<widget name="PositionGauge" position="330,975" size="840,21" transparent="0" zPosition="12" pointer="Magic-HD-Common/dvr/pointer.png:13,3"/>
-	<widget source="session.CurrentService" render="Label" position="120,967" size="150,37" backgroundColor="noTransBG" transparent="1" font="Regular;33" valign="center" halign="right">
-	  <convert type="ServicePosition">Position</convert>
-	</widget>
-	<widget source="session.CurrentService" render="Label" position="1230,967" size="150,37" backgroundColor="noTransBG" transparent="1" font="Regular;33" valign="center" halign="left">
-	  <convert type="ServicePosition">Remaining</convert>
-	</widget>
-	<widget name="repeat" position="1680,1020" size="105,45" zPosition="10" pixmaps="Magic-HD-Common/buttons/repeat-off.png,Magic-HD-Common/buttons/repeat-on.png" alphatest="blend"/>
-  </screen>
+	<screen name="MediaPlayer" title="MediaPlayer" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate3"/>
+		<panel name="MenuBPanel"/>
+		<eLabel text="F i l e l i s t" position="22,123" size="907,39" font="Regular;33" backgroundColor="grey" zPosition="5" foregroundColor="black" halign="center"/>
+		<widget name="filelist" position="22,162" size="907,502" backgroundColor="noTransBG" scrollbarMode="showOnDemand"/>
+		<eLabel text="P l a y l i s t" position="990,123" size="841,39" font="Regular;33" backgroundColor="grey" zPosition="5" foregroundColor="black" halign="center"/>
+		<widget name="playlist" position="990,162" size="840,502" font="FileList;33" itemHeight="50" backgroundColor="noTransBG" selectionDisabled="1" scrollbarMode="showOnDemand"/>
+		<widget name="titletext" position="450,650" size="150,45" font="Regular;39" backgroundColor="noTransBG"/>
+		<widget name="title" position="600,650" size="870,45" font="Regular;39" backgroundColor="noTransBG"/>
+		<eLabel position="400,705" size="1100,3" backgroundColor="darkgrey"/>
+		<widget name="artisttext" position="450,710" size="150,37" font="Regular;30" backgroundColor="noTransBG"/>
+		<widget name="artist" position="600,710" size="870,37" font="Regular;30" backgroundColor="noTransBG"/>
+		<widget name="albumtext" position="450,750" size="150,37" font="Regular;30" backgroundColor="noTransBG"/>
+		<widget name="album" position="600,750" size="870,37" font="Regular;30" backgroundColor="noTransBG"/>
+		<widget name="yeartext" position="450,800" size="150,37" font="Regular;30" backgroundColor="noTransBG"/>
+		<widget name="year" position="600,800" size="870,37" font="Regular;30" backgroundColor="noTransBG"/>
+		<widget name="genretext" position="450,850" size="150,37" font="Regular;30" backgroundColor="noTransBG"/>
+		<widget name="genre" position="600,850" size="870,37" font="Regular;30" backgroundColor="noTransBG"/>
+		<widget name="currenttext" position="300,910" size="1100,40" font="Regular;33" backgroundColor="noTransBG"/>
+		<widget name="coverArt" pixmap="skin_default/no_coverArt.png" position="35,705" size="325,325" alphatest="blend"/>
+		<ePixmap pixmap="dvr/mpslider.png" position="300,973" size="900,24" backgroundColor="noTransBG" zPosition="13" alphatest="on"/>
+		<widget name="PositionGauge" position="330,975" size="840,21" transparent="0" zPosition="12" pointer="dvr/pointer.png:13,3"/>
+		<widget source="session.CurrentService" render="Label" position="120,960" size="150,37" font="Regular;33" backgroundColor="noTransBG" transparent="1" halign="right">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1300,960" size="150,37" font="Regular;33" backgroundColor="noTransBG" transparent="1" halign="left">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<widget name="repeat" position="1600,1027" size="105,45" zPosition="10" pixmaps="buttons/repeat-off.png,buttons/repeat-on.png" alphatest="blend"/>
+	</screen>
 
   <!-- ##Open-WEB-IF## -->
 	<screen name="OpenWebifConfig" position="fill" flags="wfNoBorder" title="OpenWebif Configuration">
