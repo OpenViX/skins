@@ -237,6 +237,7 @@ src/skins/1080/Magic-FHD/icons/Makefile
 src/skins/1080/Magic-FHD/infobar/Makefile
 src/skins/1080/Magic-FHD/meta/Makefile
 src/skins/1080/Magic-FHD/networkbrowser/Makefile
+src/skins/1080/Magic-FHD/plugins/Makefile
 src/skins/1080/Magic-FHD/spinner/Makefile
 src/skins/1080/Magic-FHD/window/Makefile
 
