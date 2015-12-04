@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.8.1 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.8.2 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -662,7 +662,12 @@
 	<!-- Audio selection -->
 	<screen name="AudioSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="930,122" size="637,270" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" foregroundColor="grey"/>
+		<panel name="ExitBPanel"/>
+		<eLabel text="Cancel" position="80,1020" size="330,39" font="Regular;33" foregroundColor="grey" halign="left" transparent="1" zPosition="1"/>
+		<panel name="OKBPanel"/>
+		<eLabel text="Accept" position="520,1020" size="330,39" font="Regular;33" foregroundColor="grey" halign="left" transparent="1" zPosition="1"/>
+		<panel name="MenuBPanel"/>
+		<widget name="config" position="930,122" size="637,450" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" foregroundColor="grey"/>
 		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="855,125" size="52,37" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -675,22 +680,22 @@
 		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="855,260" size="52,37" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="streams" render="Listbox" scrollbarMode="showOnDemand" position="735,600" size="975,300" zPosition="3" foregroundColor="grey" transparent="1">
+		<widget source="streams" render="Listbox" scrollbarMode="showOnDemand" position="435,600" size="1275,350" zPosition="3" foregroundColor="grey" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"templates":
 				{"default": (50, [
 					MultiContentEntryText(pos = (0, 0), size = (35, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # key,
 					MultiContentEntryText(pos = (10, 0), size = (90, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
 					MultiContentEntryText(pos = (120, 0), size = (300, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
-					MultiContentEntryText(pos = (420, 0), size = (360, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
-					MultiContentEntryText(pos = (820, 0), size = (25, 50), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
+					MultiContentEntryText(pos = (420, 0), size = (760, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+					MultiContentEntryText(pos = (1220, 0), size = (25, 50), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
 				], True, "showNever"),
 				"notselected": (50, [
 					MultiContentEntryText(pos = (0, 0), size = (35, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # key,
 					MultiContentEntryText(pos = (10, 0), size = (90, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
 					MultiContentEntryText(pos = (120, 0), size = (300, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
-					MultiContentEntryText(pos = (420, 0), size = (360, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
-					MultiContentEntryText(pos = (820, 0), size = (25, 50), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
+					MultiContentEntryText(pos = (420, 0), size = (760, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+					MultiContentEntryText(pos = (1220, 0), size = (25, 50), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
 				], False, "showNever")
 				},
 			"fonts": [gFont("Regular", 34), gFont("Regular", 32)],
@@ -698,12 +703,6 @@
 				}
 				</convert>
 		</widget>
-		<panel name="ExitBPanel"/>
-<!--		<ePixmap pixmap="buttons/key-exit.png" position="457,1027" size="53,38" alphatest="on"/>-->
-		<eLabel text="Cancel" position="80,1020" size="330,39" font="Regular;33" foregroundColor="grey" halign="left" transparent="1" zPosition="1"/>
-<!--		<ePixmap pixmap="buttons/key_ok.png" position="22,1027" size="53,38" alphatest="on"/>-->
-		<panel name="OKBPanel"/>
-		<eLabel text="Accept" position="540,1020" size="330,39" font="Regular;33" foregroundColor="grey" halign="left" transparent="1" zPosition="1"/>
 	</screen>
 	<!-- ## Menus ## -->
 	<screen name="Menu" position="fill" flags="wfNoBorder">
