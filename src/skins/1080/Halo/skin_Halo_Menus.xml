@@ -1,0 +1,105 @@
+<skin>
+    <!--  Skin:  Halo 1080p skin By Markus625 -->
+	<!--  SKIN FILE -->
+	<!--  This skin is OpenSource. Anyone can modify it and use it in other images.  -->
+	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
+	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
+
+	
+	<!-- menus -->
+
+		<screen name="MENU_template" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+			<eLabel position="0,0" size="785,1080" backgroundColor="Halo_infobar_fg" zPosition="-1"/>
+		<eLabel position="0,0" size="120,1080" backgroundColor="Halo_infobar_bg" zPosition="1"/>
+		
+		<ePixmap position="135,0" size="637,77" pixmap="common/image_blur.png" alphatest="blend" zPosition="3"/>
+		<widget source="Title" render="Label" position="135,10" size="637,47" font="RobotoCondensed-Regular;42" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="4"/>
+		<widget source="menu" render="Listbox" position="135,337" size="630,720" foregroundColorSelected="#FFFFFF" foregroundColor="#6D6D6D" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="3" backgroundPixmap="settings/menu_list_off.png" selectionPixmap="settings/menu_list_on.png">
+			<convert type="TemplatedMultiContent">
+                {"template": [ MultiContentEntryText(pos = (140,0), size = (630,120), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0 ) ],
+                "fonts": [gFont("Roboto-Light",36)],
+                "itemHeight": 120
+                }
+            </convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="20,920" size="84,72" font="RobotoCondensed-Regular;65" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" halign="center" valign="top" noWrap="1" zPosition="2">
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="40,996" size="38,44" font="RobotoCondensed-Regular;35" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" halign="center" valign="top" noWrap="1" zPosition="2">
+			<convert type="ClockToText">Format:%M</convert>
+		</widget>
+		</screen>
+		
+			<screen name="Menu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+	
+	</screen>
+				<screen name="menu_mainmenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256"  pixmap="icons/main_menu.png" alphatest="blend" zPosition="2"/>
+
+	</screen>
+	<screen name="menu_timermenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/menu_mainmenu_timer.png" alphatest="blend" zPosition="4"/>
+
+	</screen>
+	<screen name="menu_information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/info.png" alphatest="blend" zPosition="2"/>
+
+	</screen>
+		<screen name="menu_setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/menu_mainmenu_setup.png" alphatest="blend" zPosition="2"/>
+
+	</screen>
+	<screen name="menu_cam" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/menu_setup_ci.png" alphatest="blend" zPosition="2"/>
+
+	</screen>
+	<screen name="menu_system" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/menu_osd_menu_user_interface.png" alphatest="blend" zPosition="2"/>
+
+	</screen>
+		<screen name="menu_shutdown" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/shutdown.png" alphatest="blend" zPosition="2"/>
+
+	</screen>
+	<screen name="menu_epg" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/menu_epg_refresh.png" alphatest="blend" zPosition="2"/>
+	</screen>
+		<screen name="menu_network" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/menu_network_device_setup.png" alphatest="blend" zPosition="2"/>
+	</screen>
+			<screen name="menu_scan" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/menu_scan_tuner_setup.png" alphatest="blend" zPosition="2"/>
+	</screen>
+			<screen name="menu_osd_menu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/menu_osd_menu_osdsetup.png" alphatest="blend" zPosition="2"/>
+	</screen>
+			<screen name="menu_harddisk" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/menu_harddisk_harddisk_setup.png" alphatest="blend" zPosition="2"/>
+	</screen>
+				<screen name="menu_display" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/menu_display_display_setup.png" alphatest="blend" zPosition="2"/>
+	</screen>
+		<screen name="menu_logs_menu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<panel name="MENU_template"/>
+		<ePixmap position="313,80" size="256,256" pixmap="icons/filecom.png" alphatest="blend" zPosition="2"/>
+	</screen>
+	
+	
+	
+	
+
+</skin>

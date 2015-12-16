@@ -1,0 +1,73 @@
+<skin>
+    <!--  Skin:  Halo 1080p skin By Markus625 -->
+	<!--  SKIN FILE -->
+	<!--  This skin is OpenSource. Anyone can modify it and use it in other images.  -->
+	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
+	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
+	
+	
+		<screen name="AutoTimerOverview" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="AutoTimerOverview" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<eLabel position="268,540" size="1372,412" backgroundColor="settings_panel_background" zPosition="-1"/>
+		<eLabel position="268,480" size="1372,60" backgroundColor="settings_panel_titlebar" zPosition="-1"/>
+		<widget source="Title" render="Label" position="288,480" size="1372,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
+		<widget name="entries" position="268,540" size="1372,360" rowSplit1="40" rowSplit2="80" rowHeight="40" iconMargin="5" EventNameFont="Roboto-Light;34" ServiceNameFont="Roboto-Light;34" font="Roboto-Light;36" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" itemHeight="120" selectionPixmap="settings/List_On_1740x120.png" backgroundPixmap="settings/List_Off_1740x120.png" transparent="1" scrollbarMode="showOnDemand"/>
+		<panel name="background6_4_Buttons_Source"/>
+	</screen>
+	<screen name="AutoTimerEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="AutoTimerEditor" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<eLabel position="268,272" size="1372,680" backgroundColor="settings_panel_background" zPosition="-1"/>
+		<eLabel position="268,212" size="1372,60" backgroundColor="settings_panel_titlebar" zPosition="-1"/>
+		<widget source="Title" render="Label" position="288,212" size="1372,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
+		<widget name="config" position="268,272" size="1372,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColorSelected="menubackground" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		<widget source="help" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="268,773" size="1372,60" font="RobotoCondensed-Regular;38" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<panel name="background6_4_Buttons_Source"/>
+	</screen>
+	<screen name="AutoTimerSettings" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="AutoTimerEditor"/>
+	</screen>
+	<screen name="AutoTimerImporter" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="AutoTimerEditor"/>
+	</screen>
+	<screen name="AutoTimerFilterEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="AutoTimerEditor"/>
+	</screen>
+	<screen name="AutoTimerServiceEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="AutoTimerEditor"/>
+	</screen>
+
+	
+	<screen name="TimerEditList" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="TimerEditList" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<eLabel position="268,272" size="1372,680" backgroundColor="settings_panel_background" zPosition="-1"/>
+		<eLabel position="268,212" size="1372,60" backgroundColor="settings_panel_titlebar" zPosition="-1"/>
+		<widget source="Title" render="Label" position="288,212" size="1372,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
+
+		
+		<widget name="timerlist" position="268,272" size="1372,480"  itemHeight="120" rowSplit="40" rowHeight="60" iconMargin="5" satPosLeft="300"  setEventNameFont="Roboto-Light;34" setServiceNameFont="Roboto-Light;34" setFont="Roboto-Light;36" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColorSelected="menubackground" backgroundColor="menubackground"  selectionPixmap="settings/List_On_1740x120.png" backgroundPixmap="settings/List_Off_1740x120.png" transparent="1" scrollbarMode="showOnDemand"/>		
+		
+		<widget name="description" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="268,773" size="1372,42" font="RobotoCondensed-Regular;38" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<panel name="background6_4_Buttons"/>
+	</screen>	
+	
+	<screen name="TimerEntry" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="AutoTimerEditor"/>
+			
+		<eLabel position="608,876" size="305,60" backgroundColor="Button_Background" zPosition="7"/>
+		<eLabel position="1021,876" size="305,60" backgroundColor="Button_Background" zPosition="7"/>
+	<eLabel position="268,864" size="1372,87" backgroundColor="settings_panel_background" zPosition="6"/>
+			<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="269,769" size="1,1"  backgroundColor="menubackground" transparent="0" alphatest="blend" zPosition="20" />	
+			
+	
+		
+		<eLabel position="618,886" size="6,40" backgroundColor="bar_red" zPosition="8"/>
+		<widget name="canceltext" position="608,876" size="305,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="8"/>
+		<eLabel position="1031,886" size="6,40" backgroundColor="bar_green" zPosition="8"/>
+		<widget name="oktext" position="1021,876" size="305,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="8"/>
+					
+			
+	</screen>
+	
+	
+	
+</skin>

@@ -1,0 +1,124 @@
+<skin>
+    <!--  Skin:  Halo 1080p skin By Markus625 -->
+	<!--  SKIN FILE -->
+	<!--  This skin is OpenSource. Anyone can modify it and use it in other images.  -->
+	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
+	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
+	
+	<!--  ## Head ##  -->
+	
+	<!-- ## CROSSEPG ## -->
+	
+	<screen name="CrossEPG_Menu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<!--<eLabel text="CrossEPG_Menu" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background6"/>
+			<widget source="list" render="Listbox" position="90,185" size="1740,672"  font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+	
+			<convert type="TemplatedMultiContent">
+				{"template": [	MultiContentEntryText(pos = (20,0), size = (1720,84), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1	) ],
+				"fonts": [gFont("Roboto-Light",36)],
+				"itemHeight": 84
+				}
+			</convert>
+		</widget>
+		
+	
+	</screen>
+	
+	<screen name="CrossEPG_Setup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<!--<eLabel text="CrossEPG_Setup" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+	<panel name="settings_background6"/>
+		
+		<widget name="config"  position="90,185" size="1740,420" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+	
+			<widget name="information" render="Label" position="90,705" size="1740,120" font="Roboto-Light;32" foregroundColor="description_fontcolor" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="10"/>
+			<panel name="background6_2_Buttons"/>
+		
+
+	</screen>
+	
+			<screen name="CrossEPG_Providers" position="fill" flags="wfNoBorder" backgroundColor="transparent">>
+<!--	<eLabel text="CrossEPG_Providers" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+	
+<panel name="settings_background6"/>	
+	
+<widget source="list" render="Listbox" position="90,185" size="1740,672"  font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+	
+			<convert type="TemplatedMultiContent">
+				{"template": [	MultiContentEntryText(pos = (20,0), size = (1640,84), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	),
+	            MultiContentEntryPixmapAlphaBlend(pos = (1670, 15), size = (50, 50), png = 1),				
+				 ],
+				"fonts": [gFont("Roboto-Light",36)],
+				"itemHeight": 84
+				}
+			</convert>
+		</widget>		
+		<panel name="background6_3_Buttons"/>
+		
+
+	</screen>
+	
+			<screen name="CrossEPG_Ordering" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<!--<eLabel text="CrossEPG_Ordering" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+<panel name="settings_background6"/>	
+	
+<widget source="list" render="Listbox" position="90,185" size="1740,672"  font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+	
+			<convert type="TemplatedMultiContent">
+				{"template": [	MultiContentEntryText(pos = (20,0), size = (1640,84), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	),
+	            MultiContentEntryPixmapAlphaBlend(pos = (1670, 15), size = (50, 50), png = 1),				
+				 ],
+				"fonts": [gFont("Roboto-Light",36)],
+				"itemHeight": 84
+				}
+			</convert>
+		</widget>		
+		<panel name="background6_2_Buttons"/>
+	
+	</screen>
+	
+	<screen name="CrossEPG_About" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<!--<eLabel text="CrossEPG_About" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		
+		<panel name="settings_background6"/>	
+		<widget name="about" position="130,185" size="1710,672" font="Roboto-Light;34" itemHeight="50" foregroundColor="eventcolor" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
+		<panel name="background6_2_Buttons"/>
+		
+	</screen>
+	
+			<screen name="CrossEPG_Info" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<!--<eLabel text="CrossEPG_Info" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+	<panel name="settings_background6"/>
+		
+		<widget name="version" position="130,185" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="create" position="130,243" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="last_update" position="130,301" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="headersdb_size" position="130,359" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="descriptorsdb_size" position="130,417" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="indexesdb_size" position="130,475" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="aliasesdb_size" position="130,533" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="total_size" position="130,591" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="channels_count" position="130,649" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="events_count" position="130,707" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<widget name="hashes_count" position="130,765" size="1710,50" font="Roboto-Light;34" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<panel name="background6_2_Buttons"/>
+	</screen>
+		<screen name="CrossEPG_Downloader" position="fill" title="CrossEPG" flags="wfNoBorder" backgroundColor="transparent" >
+	<!--<eLabel text="CrossEPG_Downloader" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+	    <panel name="DownloadBar" />
+	</screen>
+	
+			<screen name="EPGMainSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="EPGMainSetup" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		
+		<panel name="settings_background_1372x545"/>
+		<panel name="button_background_1372x200"/>
+	
+			<panel name="background6_4_Buttons_Source"/>
+			<widget name="config" position="268,327" size="1372,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		
+				
+		
+	</screen>
+	</skin>
+	

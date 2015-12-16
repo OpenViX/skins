@@ -225,6 +225,31 @@ src/skins/720/ViX-Night-HD/meta/Makefile
 
 src/skins/1080/Makefile
 
+src/skins/1080/Halo/Makefile
+src/skins/1080/Halo/buttons/Makefile
+src/skins/1080/Halo/common/Makefile
+src/skins/1080/Halo/countries/Makefile
+src/skins/1080/Halo/crossepg/Makefile
+src/skins/1080/Halo/epg/Makefile
+src/skins/1080/Halo/extensions/Makefile
+src/skins/1080/Halo/fonts/Makefile
+src/skins/1080/Halo/Halo_fonts/Makefile
+src/skins/1080/Halo/icons/Makefile
+src/skins/1080/Halo/imdb/Makefile
+src/skins/1080/Halo/infobar/Makefile
+src/skins/1080/Halo/menuicons/Makefile
+src/skins/1080/Halo/networkbrowser/Makefile
+src/skins/1080/Halo/osd/Makefile
+src/skins/1080/Halo/pvr/Makefile
+src/skins/1080/Halo/pvr/pvr1/Makefile
+src/skins/1080/Halo/pvr/pvr2/Makefile
+src/skins/1080/Halo/pvr/pvrstate/Makefile
+src/skins/1080/Halo/screens/Makefile
+src/skins/1080/Halo/settings/Makefile
+src/skins/1080/Halo/spinner/Makefile
+src/skins/1080/Halo/views/Makefile
+src/skins/1080/Halo/vixcore/Makefile
+
 src/skins/1080/Magic-FHD/Makefile
 src/skins/1080/Magic-FHD/border/Makefile
 src/skins/1080/Magic-FHD/crossepg/Makefile

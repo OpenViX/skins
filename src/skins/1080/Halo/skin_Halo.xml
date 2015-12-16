@@ -1,0 +1,1100 @@
+<!--  Skin:  Halo 1080p skin By Markus625 -->
+<skin>
+	<screen name="InfoBar" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<panel name="Halo_Info_NavigationBar"/>
+		<panel name="Halo_InfoBar_BG"/>
+		<panel name="TunerStatus"/>
+		<eLabel text=" Next @ " position="1285,642" size="100,32" font="Roboto-Regular;25" foregroundColor="Now_Next_Text1" backgroundColor="Now_Next_Color1" halign="left" valign="top" transparent="0" zPosition="4"/>
+		<widget source="session.Event_Next" render="Label" position="1392,642" size="100,32" font="Roboto-Regular;25" foregroundColor="Now_Next_Text2" backgroundColor="Now_Next_Color2" transparent="0" halign="center" valign="top" noWrap="1" zPosition="4">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Picon" position="0,706" size="637,333" alphatest="blend" zPosition="2">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="788,700" size="1100,60" font="Roboto-Light;45" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="1285,590" size="640,60" font="Roboto-Light;36" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="788,825" size="1100,200" font="Roboto-Light;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="3">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="640,685" size="100,77" font="RobotoCondensed-Light;70" foregroundColor="infobar_EventHour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="650,770" size="90,44" font="RobotoCondensed-Light;38" foregroundColor="infobar_EventMIn" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="20,605" size="180,55" font="Roboto-Black;48" foregroundColor="clock" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Progress" position="778,815" size="1100,2" pixmap="common/progressbar_yellow.png" backgroundColor="transparent" transparent="1" zPosition="4">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/encrypted.png" position="664,834" size="80,80" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record2.png" position="653,920" zPosition="4" size="82,36" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+	<screen name="SecondInfoBar" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<panel name="Halo_Info_NavigationBar"/>
+		<panel name="Halo_2ndInfoBar_BG"/>
+		<panel name="TunerStatus"/>
+		<widget source="session.Event_Now" render="Label" position="155,700" size="725,60" font="Roboto-Light;45" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="1110,700" size="725,60" font="Roboto-Light;45" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="30,851" size="900,225" font="Roboto-Light;36" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="3">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="990,851" size="900,225" font="Roboto-Light;36" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="3">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="30,685" size="100,77" font="RobotoCondensed-Light;70" foregroundColor="infobar_EventHour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="45,770" size="90,44" font="RobotoCondensed-Light;38" foregroundColor="infobar_EventMIn" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%M</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="990,685" size="100,77" font="RobotoCondensed-Light;70" foregroundColor="infobar_EventHour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="1005,770" size="85,44" font="RobotoCondensed-Light;38" foregroundColor="infobar_EventMIn" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%M</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Progress" position="145,815" size="750,2" pixmap="common/progressbar_yellow.png" backgroundColor="transparent" transparent="1" zPosition="4">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<!-- INFOBAR ICONS -->
+		<widget source="global.CurrentTime" render="Label" position="20,605" size="180,55" font="Roboto-Black;48" foregroundColor="clock" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<panel name="StatusIcons_Bg_Blue"/>
+		<panel name="2ndInfobarStatusIcons"/>
+	</screen>
+	<screen name="ChannelSelection" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<panel name="Halo_Info_NavigationBar"/>
+		<panel name="Halo_ChannelSelection_BG"/>
+		<eLabel text=" Next @ " position="825,642" size="100,32" font="Roboto-Regular;25" foregroundColor="Now_Next_Text1" backgroundColor="Now_Next_Color1" halign="left" valign="top" transparent="0" zPosition="4"/>
+		<eLabel text=" Later @ " position="1378,642" size="120,32" font="Roboto-Regular;25" foregroundColor="Now_Next_Text1" backgroundColor="Now_Next_Color1" halign="left" valign="top" transparent="0" zPosition="4"/>
+		<widget source="ServiceEvent" render="Label" position="932,642" size="100,32" font="Roboto-Regular;25" foregroundColor="Now_Next_Text2" backgroundColor="Now_Next_Color2" transparent="0" halign="center" valign="top" noWrap="1" zPosition="4">
+			<convert type="EventTime">NextStartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1505,642" size="100,32" font="Roboto-Regular;25" foregroundColor="Now_Next_Text2" backgroundColor="Now_Next_Color2" transparent="0" halign="center" valign="top" noWrap="1" zPosition="4">
+			<convert type="EventTime">ThirdStartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="825,590" size="535,50" font="Roboto-Light;36" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="3">
+			<convert type="EventName">NextNameOnly</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1378,590" size="535,50" font="Roboto-Light;36" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="3">
+			<convert type="EventName">ThirdNameOnly</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="940,700" size="900,60" font="Roboto-Light;45" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="860,830" size="1015,195" font="Roboto-Light;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="3">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget name="list" position="0,580" size="800,500" backgroundColor="infobar_panel" foregroundColorEvent="channel_list_event" foregroundColorEventSelected="channel_list_event_sel" foregroundColorServiceSelected="channel_list_service_sel" foregroundColorServiceNotAvail="grey" foregroundColorMarked="maincolour" foregroundColorMarkedSelected="red" backgroundColorMarked="maincolour" backgroundColorMarkedSelected="'#292D31" serviceItemHeight="100" serviceNumberFont="channelselectionservice;32" serviceNameFont="Roboto-Regular;32" serviceInfoFont="Roboto-Light;30" progressBarWidth="60" fieldMargins="50" transparent="1" scrollbarMode="showNever" zPosition="10" backgroundPixmap="common/List_Off_800x100.png" selectionPixmap="common/List_On_800x100.png"/>
+		<widget source="Event" render="Label" position="820,685" size="100,77" font="RobotoCondensed-Light;70" foregroundColor="infobar_EventHour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="Event" render="Label" position="830,770" size="90,44" font="RobotoCondensed-Light;38" foregroundColor="infobar_EventMIn" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%M</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Progress" position="912,815" size="960,2" pixmap="common/progressbar_yellow.png" backgroundColor="transparent" transparent="1" zPosition="4">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+	</screen>
+	<screen name="ChannelContextMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="ChannelContextMenu" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background6"/>
+		<widget name="menu" position="90,185" size="1740,672" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+	
+		</widget>
+	</screen>
+	<screen name="GraphicalInfoBarEPG" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<panel name="Halo_Info_NavigationBar_InfoBarGraph"/>
+		<eLabel position="0,680" size="1920,400" backgroundColor="#292D31" zPosition="-1"/>
+		<widget name="bouquetlist" position="0,725" size="1276,352" font="Roboto-Light;40" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" scrollbarMode="showNever" transparent="1" zPosition="6"/>
+		<widget name="timeline_text" position="0,580" size="1920,100" TimelineFont="RobotoCondensed-Light;40" itemHeight="100" foregroundColor="#DDDDDD" backgroundColor="#737D7D7D" valign="center" transparent="0" zPosition="3"/>
+		<widget name="timeline_now" position="800,680" size="2,400" pixmap="epg/timeline-now.png" alphatest="blend" zPosition="3"/>
+		<widget name="lab1" position="0,680" size="1920,400" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2"/>
+		<widget name="list" position="0,680" size="1920,400" ServiceFontInfobar="RobotoCondensed-Regular;30" EventFontInfobar="RobotoCondensed-Bold;27" backgroundColor="menubackground" EntryForegroundColor="grey" EntryBackgroundColor="menubackground" EntryForegroundColorSelected="#212121" EntryForegroundColorNowSelected="#212121" RecordForegroundColorSelected="maincolour" ZapForegroundColorSelected="maincolour" scrollbarMode="showNever" transparent="0" EntryFontWrap="no" NumberOfRows="3" ServiceNamePadding="10" EventNamePadding="10" zPosition="2"/>
+	</screen>
+	<screen name="EPGSelection" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<panel name="Halo_Info_NavigationBar"/>
+		<panel name="Halo_EpgSelection_BG"/>
+		<widget source="Event" render="Label" position="940,700" size="900,60" font="Roboto-Light;45" foregroundColor="#DDDDDD" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="860,830" size="1015,195" font="Roboto-Light;38" foregroundColor="#DDDDDD" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="3">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget name="lab1" position="0,580" size="800,500" font="Regular;18" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
+		<widget name="number" position="0,580" size="800,500" zPosition="5" backgroundColor="transparent" transparent="0" font="Regular;24" borderColor="black" borderWidth="2" valign="center" halign="center"/>
+		<widget name="list" position="0,580" size="800,500" backgroundColor="infobar_panel" foregroundColorEvent="channel_list_event" foregroundColorEventSelected="black" foregroundColorServiceSelected="black" foregroundColorServiceNotAvail="grey" foregroundColorMarked="maincolour" foregroundColorMarkedSelected="red" backgroundColorMarked="maincolour" backgroundColorMarkedSelected="'#292D31" serviceItemHeight="100" serviceNumberFont="channelselectionservice;34" serviceNameFont="Roboto-Regular;32" serviceInfoFont="Roboto;34" progressBarWidth="60" fieldMargins="50" transparent="1" scrollbarMode="showNever" zPosition="10" backgroundPixmap="common/List_Off_800x100.png" selectionPixmap="common/List_On_800x100.png"/>
+		<widget source="Event" render="Label" position="820,685" size="100,77" font="RobotoCondensed-Light;70" foregroundColor="#F8AC37" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="Event" render="Label" position="830,770" size="90,44" font="RobotoCondensed-Light;38" foregroundColor="#AAAAAA" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%M</convert>
+		</widget>
+	</screen>
+	<screen name="GraphicalEPG" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1">
+		<eLabel position="0,211" size="1920,870" backgroundColor="Halo_Epg_background" zPosition="-1"/>
+		<eLabel position="0,725" size="1913,352" backgroundColor="Halo_Epg_foreground" zPosition="1"/>
+		<eLabel position="0,226" size="1913,352" backgroundColor="Halo_Epg_foreground" zPosition="1"/>
+		<eLabel position="31,819" size="1222,2" backgroundColor="Halo_infobardivider" zPosition="2"/>
+		<!-- # BBUK  search by number mod   -->
+		<widget name="searchnumber" position="0,972" size="1920,108" zPosition="5" textOffset="45,0" font="menulist;42" foregroundColor="#E66A4A" backgroundColor="#2C2C2C" transparent="0" valign="center" halign="center"/>
+		<!-- END-->
+		<widget name="bouquetlist" position="0,725" size="1276,352" font="Roboto-Light;40" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" scrollbarMode="showNever" transparent="1" zPosition="6"/>
+		<!--Halo_Info_NavigationBar2 background mask
+		<eLabel position="250,680" size="1670,45" backgroundColor="#545454" zPosition="14"/>  -->
+		<panel name="Halo_Info_NavigationBar_EpgGraph"/>
+		<widget source="Event" render="Label" position="149,750" size="1095,48" font="RobotoCondensed-Regular;42" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" noWrap="1" zPosition="2">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="149,840" size="1095,195" font="Roboto-Light;38" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" halign="left" valign="top" transparent="1" zPosition="2">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="Event" render="Label" position="40,744" size="84,72" font="RobotoCondensed-Regular;65" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" transparent="1" halign="center" valign="top" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="Event" render="Label" position="62,817" size="38,44" font="RobotoCondensed-Regular;35" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" transparent="1" halign="center" valign="top" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%M</convert>
+		</widget>
+		<eLabel text="Duration :" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" font="Roboto-Light;28" halign="right" position="945,1031" size="171,33" transparent="1" zPosition="3"/>
+		<widget source="Event" render="Label" position="1116,1031" size="140,33" font="Roboto-Light;28" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" halign="center" transparent="1" zPosition="3">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<ePixmap position="1279,724" size="630,118" pixmap="epg/picon_blur.png" alphatest="blend" zPosition="3"/>
+		<!-- Pig used to make background of timeline_text not show tv screen behind it as TimeLineTime.png is semi transparent-->
+		<widget source="session.VideoPicture" render="Pig" position="1279,724" size="634,352" backgroundColor="transparent" zPosition="1"/>
+		<widget source="Service" render="Picon" position="1279,724" size="634,352" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="2">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1329,754" size="560,40" font="Roboto-Medium;35" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" transparent="1" halign="right" valign="top" noWrap="1" zPosition="4">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget name="timeline_text" position="0,580" size="1920,145" pixmap="epg/TimeLineTime_dark.png" TimelineFont="RobotoCondensed-Light;40" itemHeight="100" foregroundColor="#DDDDDD" backgroundColor="Halo_Epg_background" valign="center" transparent="1" zPosition="11"/>
+		<widget name="timeline_now" position="0,0" size="2,400" pixmap="epg/timeline-now.png" alphatest="blend" zPosition="3"/>
+		<widget name="lab1" position="0,0" size="1920,580" font="menulist;25" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2"/>
+		<widget name="list" position="0,0" size="1920,580" ServiceFontGraphical="RobotoCondensed-Regular;30" EntryFontGraphical="RobotoCondensed-Bold;32" backgroundColor="menubackground" EntryForegroundColor="grey" EntryBackgroundColor="menubackground" EntryForegroundColorSelected="#212121" EntryForegroundColorNowSelected="#212121" RecordForegroundColorSelected="maincolour" ZapForegroundColorSelected="maincolour" scrollbarMode="showNever" transparent="0" EntryFontWrap="no" NumberOfRows="5" ServiceNamePadding="10" EventNamePadding="10" zPosition="2"/>
+		<!--<widget source="global.CurrentTime" render="Label" position="1721,662" size="180,55" font="Roboto-Black;48" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget> -->
+	</screen>
+	<screen name="GraphicalEPGPIG" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1">
+		<eLabel position="0,211" size="1920,870" backgroundColor="Halo_Epg_background" zPosition="-1"/>
+		<eLabel position="0,725" size="1913,352" backgroundColor="Halo_Epg_foreground" zPosition="1"/>
+		<eLabel position="0,226" size="1913,352" backgroundColor="Halo_Epg_foreground" zPosition="1"/>
+		<eLabel position="31,819" size="1222,2" backgroundColor="Halo_infobardivider" zPosition="2"/>
+		<!-- # BBUK  search by number mod  -->
+		<widget name="searchnumber" position="0,972" size="1920,108" zPosition="5" textOffset="45,0" font="menulist;42" foregroundColor="#E66A4A" backgroundColor="#2C2C2C" transparent="0" valign="center" halign="center"/>
+		<!-- END-->
+		<widget name="bouquetlist" position="0,725" size="1276,352" font="Roboto-Light;40" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" scrollbarMode="showNever" transparent="1" zPosition="6"/>
+		<!--Halo_Info_NavigationBar2 background mask
+		<eLabel position="250,680" size="1670,45" backgroundColor="#545454" zPosition="14"/>  -->
+		<panel name="Halo_Info_NavigationBar_EpgGraph"/>
+		<widget source="Event" render="Label" position="149,750" size="1095,48" font="RobotoCondensed-Regular;42" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" noWrap="1" zPosition="2">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="149,840" size="1095,195" font="Roboto-Light;38" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" halign="left" valign="top" transparent="1" zPosition="2">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="Event" render="Label" position="40,744" size="84,72" font="RobotoCondensed-Regular;65" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" transparent="1" halign="center" valign="top" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="Event" render="Label" position="62,817" size="38,44" font="RobotoCondensed-Regular;35" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" transparent="1" halign="center" valign="top" noWrap="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%M</convert>
+		</widget>
+		<eLabel text="Duration :" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" font="Roboto-Light;28" halign="right" position="945,1031" size="171,33" transparent="1" zPosition="3"/>
+		<widget source="Event" render="Label" position="1116,1031" size="140,33" font="Roboto-Light;28" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" halign="center" transparent="1" zPosition="3">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<ePixmap position="1279,724" size="630,118" pixmap="epg/picon_blur.png" alphatest="blend" zPosition="3"/>
+		<widget source="session.VideoPicture" render="Pig" position="1279,724" size="634,352" backgroundColor="transparent" zPosition="2"/>
+		<widget source="Service" render="Label" position="1329,754" size="560,40" font="Roboto-Medium;35" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" transparent="1" halign="right" valign="top" noWrap="1" zPosition="4">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget name="timeline_text" position="0,580" size="1920,145" TimelineFont="RobotoCondensed-Light;40" itemHeight="100" foregroundColor="#DDDDDD" backgroundColor="Halo_Epg_background" valign="center" transparent="1" zPosition="11"/>
+		<widget name="timeline_now" position="0,0" size="2,400" pixmap="epg/timeline-now.png" alphatest="blend" zPosition="3"/>
+		<widget name="lab1" position="0,0" size="1920,580" font="menulist;25" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2"/>
+		<widget name="list" position="0,0" size="1920,580" ServiceFontGraphical="RobotoCondensed-Regular;30" EntryFontGraphical="RobotoCondensed-Bold;32" backgroundColor="menubackground" EntryForegroundColor="grey" EntryBackgroundColor="menubackground" EntryForegroundColorSelected="#212121" EntryForegroundColorNowSelected="#212121" RecordForegroundColorSelected="maincolour" ZapForegroundColorSelected="maincolour" scrollbarMode="showNever" transparent="0" EntryFontWrap="no" NumberOfRows="5" ServiceNamePadding="10" EventNamePadding="10" zPosition="2"/>
+		<!--<widget source="global.CurrentTime" render="Label" position="1721,662" size="180,55" font="Roboto-Black;48" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget> -->
+	</screen>
+	<screen name="EventViewSimple" position="0,0" size="1920,568" flags="wfNoBorder" backgroundColor="transparent" zPosition="1">
+		<eLabel position="410,78" size="1100,440" backgroundColor="Halo_infobarbackground" zPosition="-1"/>
+		<eLabel position="701,78" size="809,126" backgroundColor="Halo_infobarforeground" zPosition="1"/>
+		<eLabel position="701,136" size="809,2" backgroundColor="Halo_infobardivider" zPosition="2"/>
+		<widget name="datetime" position="1015,88" size="460,45" font="Roboto-Light;36" foregroundColor="Halo_datecolor" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="3"/>
+		<widget name="duration" position="1270,147" size="204,45" font="Roboto-Light;36" foregroundColor="Halo_datecolor" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="3"/>
+		<widget name="channel" position="730,147" size="480,45" font="Roboto-Regular;36" foregroundColor="Halo_purple" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget source="Service" render="Picon" position="463,83" size="198,119" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="3">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="447,226" size="1025,50" font="Roboto-Regular;42" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget name="FullDescription" position="447,290" size="1025,214" font="Roboto-Light;36" foregroundColor="Halo_1stcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="2"/>
+	</screen>
+	<screen name="InfoBarEventView" position="0,0" size="1920,568" flags="wfNoBorder" backgroundColor="transparent" zPosition="1">
+		<panel name="EventViewSimple"/>
+	</screen>
+	<screen name="EventView" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="EventView" position="center,center" size="400,40" font="Regular;24" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background6"/>
+		<eLabel position="90,122" size="1740,60" backgroundColor="settings_panel_titlebar" zPosition="5"/>
+		<eLabel text="EventView" position="120,122" size="1720,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="6"/>
+		<panel name="background6_4_Buttons"/>
+		<widget source="Title" render="Label" position="152,247" size="1000,55" font="Roboto-Light;45" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="datetime" position="152,321" size="565,55" font="Roboto-Light;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="duration" position="152,381" size="565,55" font="Roboto-Light;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="FullDescription" position="780,320" size="985,495" font="Roboto-Light;36" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="3"/>
+	</screen>
+	<screen name="EPGSelectionMulti" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="settings_background6"/>
+		<panel name="background6_4_Buttons"/>
+		<widget name="date" render="Label" position="1360,122" size="411,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget name="now_text" position="606,126" size="228,51" text="NOW" font="RobotoCondensed-Regular;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="4"/>
+		<widget name="now_button" pixmap="epg/now_next_more.png" position="606,126" size="228,51" alphatest="blend" zPosition="3"/>
+		<widget name="now_button_sel" pixmap="epg/now_next_more_on.png" position="606,126" size="228,51" alphatest="blend" zPosition="3"/>
+		<widget name="next_text" position="844,126" size="228,51" text="NEXT" font="RobotoCondensed-Regular;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="4"/>
+		<widget name="next_button" pixmap="epg/now_next_more.png" position="844,126" size="228,51" alphatest="blend" zPosition="3"/>
+		<widget name="next_button_sel" pixmap="epg/now_next_more_on.png" position="844,126" size="228,51" alphatest="blend" zPosition="3"/>
+		<widget name="more_text" position="1082,126" size="228,51" text="LATER" font="RobotoCondensed-Regular;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="4"/>
+		<widget name="more_button" pixmap="epg/now_next_more.png" position="1082,126" size="228,51" alphatest="blend" zPosition="3"/>
+		<widget name="moret_button_sel" pixmap="epg/now_next_more_on.png" position="1082,126" size="228,51" alphatest="blend" zPosition="3"/>
+		<widget name="list" position="141,231" size="1631,613" EventFontSingle="Roboto-Light;40" font="Roboto-Light;40" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_title_font_color" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" NumberOfRows="10" backgroundColor="menubackground" scrollbarMode="showNever" transparent="1" zPosition="6"/>
+		<widget name="bouquetlist" position="141,231" size="1631,613" font="Roboto-Light;40" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_title_font_color" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="settings_panel_background" scrollbarMode="showNever" transparent="1" zPosition="7"/>
+	</screen>
+	<screen name="HistoryZapSelector" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<ePixmap position="175,300" size="1570,480" pixmap="views/HistoryZap_BG.png" alphatest="blend" zPosition="-1"/>
+		<widget source="Title" render="Label" position="235,310" size="500,40" font="Roboto-Medium;34" foregroundColor="#EBEBEB" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget source="menu" render="Listbox" position="175,360" size="858,420" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showNever" backgroundPixmap="common/HistoryZap_List_Off.png" selectionPixmap="common/HistoryZap_List_On.png" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					
+						MultiContentEntryText(pos = (290, 10), size = (550, 60), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = 0xD27E00, color_sel = 0x00ffffff),
+						MultiContentEntryText(pos = (290, 60), size = (550, 40), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 5, color = 0xFF9900, color_sel = 0x00ffffff),
+						MultiContentEntryPixmapAlphaBlend(pos=(60, 13), size=(155, 94), png=6, flags = BT_SCALE)
+					],
+				 "fonts": [gFont("Roboto-Light", 36), gFont("Roboto-Medium", 36), gFont("Roboto-Medium", 36), gFont("Roboto-Light", 26)],
+				 "itemHeight": 140
+				}
+			</convert>
+		</widget>
+		<widget source="menu" render="Listbox" position="1070,300" size="638,80" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showNever" selectionPixmap="common/HistoryZap_List_Off.png" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [		
+				MultiContentEntryText(pos = (0, 0), size = (638, 80), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff),
+						
+					],
+				 "fonts": [gFont("menulist", 36), gFont("menulist", 40), gFont("screentitle", 36), gFont("screentitle", 22)],
+				 "itemHeight": 80
+				}
+			</convert>
+		</widget>
+		<widget source="menu" render="Listbox" position="1070,383" size="638,333" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [		
+						MultiContentEntryPixmapAlphaBlend(pos=(0, 0), size=(638, 333), png=6, flags = BT_SCALE)
+					],
+				 "fonts": [gFont("menulist", 32), gFont("menulist", 28), gFont("screentitle", 28), gFont("screentitle", 22)],
+				 "itemHeight": 333
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="Menu_temp" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="0,0" size="785,1080" backgroundColor="Halo_infobar_fg" zPosition="-1"/>
+		<eLabel position="0,0" size="120,1080" backgroundColor="Halo_infobar_bg" zPosition="1"/>
+		<ePixmap position="135,0" size="637,333" pixmap="settings/background_menu.png" alphatest="blend" zPosition="2"/>
+		<ePixmap position="135,0" size="637,77" pixmap="common/image_blur.png" alphatest="blend" zPosition="3"/>
+		<widget source="Title" render="Label" position="40,10" size="605,47" font="RobotoCondensed-Regular;42" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" halign="right" valign="top" zPosition="4"/>
+		<widget source="menu" render="Listbox" position="135,337" size="630,720" foregroundColorSelected="#FFFFFF" foregroundColor="#6D6D6D" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="3" backgroundPixmap="settings/menu_list_off.png" selectionPixmap="settings/menu_list_on.png">
+			<convert type="TemplatedMultiContent">
+                {"template": [ MultiContentEntryText(pos = (140,0), size = (630,120), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0 ) ],
+                "fonts": [gFont("Roboto-Light",36)],
+                "itemHeight": 120
+                }
+            </convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="20,920" size="84,72" font="RobotoCondensed-Regular;65" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" halign="center" valign="top" noWrap="1" zPosition="2">
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="40,996" size="38,44" font="RobotoCondensed-Regular;35" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" halign="center" valign="top" noWrap="1" zPosition="2">
+			<convert type="ClockToText">Format:%M</convert>
+		</widget>
+	</screen>
+	<screen name="Setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="settings_background1"/>
+		<panel name="title1"/>
+		<panel name="description1"/>
+		<panel name="settings_config1"/>
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="269,769" size="1,1" backgroundColor="menubackground" transparent="0" alphatest="blend" zPosition="20"/>
+		<eLabel position="1251,687" size="6,40" backgroundColor="bar_red" zPosition="12"/>
+		<widget source="key_red" render="Label" position="1276,692" size="190,40" font="buttons;22" foregroundColor="#CFD0D2" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="12"/>
+		<eLabel position="1495,687" size="6,40" backgroundColor="bar_green" zPosition="12"/>
+		<widget source="key_green" render="Label" position="1520,692" size="190,40" font="buttons;22" foregroundColor="#CFD0D2" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="12"/>
+	</screen>
+	<screen name="SkinSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="SkinSelector" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<eLabel position="785,0" size="1135,1080" backgroundColor="#4F101010" zPosition="-3"/>
+		<eLabel position="0,0" size="785,1080" backgroundColor="Halo_infobar_fg" zPosition="-1"/>
+		<eLabel position="0,0" size="120,1080" backgroundColor="Halo_infobar_bg" zPosition="1"/>
+		<ePixmap position="313,80" size="256,256" pixmap="Matrix_icons/skin_selector.png" alphatest="blend" zPosition="2"/>
+		<ePixmap position="135,0" size="637,77" pixmap="common/image_blur.png" alphatest="blend" zPosition="3"/>
+		<widget source="Title" render="Label" position="135,10" size="637,47" font="RobotoCondensed-Regular;42" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="4"/>
+		<widget name="Preview" position="785,221" size="1134,639" alphatest="blend" zPosition="2"/>
+		<widget source="introduction" render="Label" position="900,140" size="920,60" font="screentitle;40" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+		<widget name="SkinList" render="Listbox" position="270,337" size="510,720" font="Roboto-Light;36" itemHeight="120" backgroundPixmap="settings/menu_list_off.png" selectionPixmap="settings/menu_list_on_2.png" foregroundColorSelected="#FFFFFF" foregroundColor="#6D6D6D" backgroundColor="menubackground" halign="center" valign="center" transparent="1" scrollbarMode="showNever" enableWrapAround="0" zPosition="3">
+		
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="20,920" size="84,72" font="RobotoCondensed-Regular;65" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" halign="center" valign="top" noWrap="1" zPosition="2">
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="40,996" size="38,44" font="RobotoCondensed-Regular;35" foregroundColor="#BFBFBF" backgroundColor="menubackground" transparent="1" halign="center" valign="top" noWrap="1" zPosition="2">
+			<convert type="ClockToText">Format:%M</convert>
+		</widget>
+		<widget source="key_red" render="Label" position="896,885" size="230,50" font="buttons;32" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="3"/>
+		<widget source="key_green" render="Label" position="1127,885" size="230,50" font="buttons;32" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="3"/>
+	</screen>
+	<!-- MOVIE SELECTION -->
+	<screen name="MovieSelection" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<panel name="settings_background6"/>
+		<panel name="background6_4_Buttons"/>
+		<widget name="list" position="90,185" size="1740,420" font="Roboto-Light;36"  pbarShift="14" pbarHeight="20" pbarLargeWidth="70" pbarColour="secondcolour" pbarColourSeen="yellow" pbarColourRec="red" partIconeShift="2" spaceIconeText="10" iconsWidth="37" trashShift="5" dirShift="5" spaceRight="5"  dateWidth="400"  selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"/>
+		<widget source="Service" render="Label" position="90,635" size="500,60" zPosition="2" foregroundColor="orange" backgroundColor="menubackground" font="Roboto-Light;42" noWrap="1" transparent="1" valign="top">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="590,635" size="500,60" zPosition="2" foregroundColor="orange" backgroundColor="menubackground" font="Roboto-Light;42" noWrap="1" transparent="1" halign="left" valign="top">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="90,755" size="1740,190" font="Roboto-Light;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="2">
+			<convert type="MovieInfo">MetaDescription</convert>
+		</widget>
+	</screen>
+	<screen name="MoviePlayer1" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<ePixmap position="0,0" size="1920,1080" pixmap="osd/osd_background.png" zPosition="-1"/>
+		<ePixmap position="90,975" size="1735,12" pixmap="osd/progressbar_Movieplayer_Grey.png" zPosition="1"/>
+		<ePixmap position="770,1010" size="441,27" pixmap="pvr/Pvr_Bg.png" zPosition="2"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="90,975" size="1735,12" pointer="osd/progressbar_Movieplayer_White.png:1735,0" transparent="1" zPosition="2">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="0,65" size="1920,48" font="Roboto-Light;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" valign="top" halign="center" noWrap="1" zPosition="3">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="50,1005" size="150,40" font="Roboto-Light;28" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1695,1005" size="150,40" font="Roboto-Light;28" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget name="statusicon" position="770,1010" size="441,27" pixmaps="pvr/pvrstate/play.png,pvr/pvrstate/pause.png,pvr/pvrstate/stop.png,pvr/pvrstate/forward.png,pvr/pvrstate/backward.png,pvr/pvrstate/slow.png,pvr/pvrstate/blank.png" zPosition="12" alphatest="blend"/>
+
+	</screen>
+	<screen name="MoviePlayer" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<eLabel position="0,950" size="1920,130" backgroundColor="movieplayer_infobar_bg" zPosition="-1"/>
+		<eLabel position="0,830" size="640,120" backgroundColor="movieplayer_timeshift_bg" zPosition="-1"/>
+		<ePixmap position="26,856" size="70,70" pixmap="pvr/pvr2/clock.png" zPosition="1" alphatest="blend"/>
+		<ePixmap position="20,980" size="1191,80" pixmap="pvr/pvr2/blank.png" zPosition="2"/>
+		<ePixmap position="100,910" size="500,10" pixmap="pvr/pvr2/progress_bar_grey_500x.png" zPosition="1"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="100,910" size="500,10" pointer="pvr/pvr2/progress_bar_yellow_500x.png:500,0" transparent="1" zPosition="2">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="140,1000" size="560,55" font="Roboto-Light;42" foregroundColor="movieplayer_title" backgroundColor="menubackground" transparent="1" valign="center" halign="left" noWrap="1" zPosition="3">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="93,861" size="107,35" font="Roboto-Light;28" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel text="/" position="195,861" size="30,35" font="Roboto-Light;28" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2"/>
+		<widget source="session.CurrentService" render="Label" position="217,861" size="107,35" font="Roboto-Light;28" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget name="statusicon" position="20,980" size="1191,80" pixmaps="pvr/pvr2/play.png,pvr/pvr2/pause.png,pvr/pvr2/stop.png,pvr/pvr2/forward.png,pvr/pvr2/backward.png,pvr/pvr2/slow.png,pvr/pvr2/blank.png" zPosition="12" alphatest="blend"/>
+
+	</screen>
+	<screen name="TimeshiftState" position="0,580" size="1920,100" backgroundColor="transparent" flags="wfNoBorder" zPosition="2">
+		<ePixmap position="0,0" size="1920,100" pixmap="pvr/pvr1/blank.png" zPosition="1"/>
+		<widget name="PTSSeekBack" position="740,70" size="500,10" pixmap="pvr/pvr2/progress_bar_grey_500x.png" alphatest="blend" zPosition="3"/>
+		<widget source="session.CurrentService" render="Progress" position="740,70" size="500,10" pixmap="pvr/pvr2/progress_bar_yellow_500x.png" transparent="1" zPosition="4">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget name="statusicon" position="0,0" size="1920,100" pixmaps="pvr/pvr1/play.png,pvr/pvr1/pause.png,pvr/pvr1/stop.png,pvr/pvr1/forward.png,pvr/pvr1/backward.png,pvr/pvr1/slow.png,pvr/pvr1/blank.png" zPosition="2" alphatest="blend"/>
+		<eLabel text="TimeShift In Progress..." position="134,25" size="560,55" font="Roboto-Light;42" foregroundColor="movieplayer_title" backgroundColor="menubackground" transparent="1" valign="center" halign="left" noWrap="1" zPosition="4"/>
+		<widget source="session.CurrentService" render="Label" position="733,21" size="107,35" font="Roboto-Light;28" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="4">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel text="/" position="835,21" size="30,35" font="Roboto-Light;28" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="4"/>
+		<widget source="session.CurrentService" render="Label" position="857,21" size="107,35" font="Roboto-Light;28" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="4">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+	</screen>
+	<!-- CCCAM -->
+	<screen name="CCcamInfoMain" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="CCcamInfoMain" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<panel name="settings_background1"/>
+		<panel name="settings_menu1"/>
+		<panel name="title1"/>
+		<ePixmap position="1340,490" size="350,106" pixmap="settings/cccam.png" alphatest="blend" zPosition="5"/>
+	</screen>
+	<screen name="CCcamInfoEcmInfoSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="CCcamInfoEcmInfoSelection" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<panel name="settings_background1"/>
+		<panel name="settings_list4"/>
+		<panel name="title1"/>
+		<ePixmap position="1340,490" size="350,106" pixmap="settings/cccam.png" alphatest="blend" zPosition="5"/>
+	</screen>
+	<screen name="CCcamInfoServerMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="CCcamInfoServerMenu" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<panel name="settings_background2"/>
+		<panel name="settings_list1"/>
+		<panel name="title2"/>
+		<panel name="description2"/>
+	</screen>
+	<screen name="CCcamInfoSubMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="CCcamInfoSubMenu" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<panel name="settings_background2"/>
+		<panel name="settings_list1"/>
+		<panel name="title2"/>
+		<panel name="description2"/>
+	</screen>
+	<screen name="CCcamInfoInfoScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="CCcamInfoInfoScreen" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<panel name="info_panel"/>
+		<widget name="text" position="575,310" size="770,520" font="Roboto-Light;28" foregroundColor="eventcolor" backgroundColor="menubackground" transparent="1" zPosition="10"/>
+	</screen>
+	<screen name="CCcamShareViewMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="CCcamShareViewMenu" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<panel name="settings_background3"/>
+		<panel name="settings_extrainfo"/>
+		<panel name="settings_list2"/>
+		<panel name="title3"/>
+		<widget name="uphops" position="1280,420" size="300,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="5"/>
+		<widget name="cards" position="1280,505" size="300,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="5"/>
+		<widget name="providers" position="1280,590" size="300,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="5"/>
+		<widget name="reshare" position="1280,675" size="300,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="5"/>
+	</screen>
+	<screen name="CCcamInfoShareInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="CCcamInfoShareInfo" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<panel name="settings_background3"/>
+		<panel name="settings_extrainfo"/>
+		<panel name="settings_list2"/>
+		<panel name="title3"/>
+		<panel name="MenuRed1Panel"/>
+		<panel name="MenuGreen1Panel"/>
+		<panel name="MenuYellow1Panel"/>
+		<panel name="MenuBlue1Panel"/>
+	</screen>
+	<screen name="CCcamInfoMenuConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="CCcamInfoMenuConfig" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<panel name="settings_background3"/>
+		<panel name="settings_extrainfo"/>
+		<panel name="settings_list3"/>
+		<panel name="title3"/>
+		<panel name="MenuRed1Panel"/>
+		<panel name="MenuGreen1Panel"/>
+		<panel name="MenuYellow1Panel"/>
+	</screen>
+	<screen name="VIXSoftcamManager" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="settings_background3"/>
+		<eLabel position="1250,360" size="380,2" backgroundColor="settings_panel_titlebar" zPosition="2"/>
+		<eLabel position="1440,300" size="2,60" backgroundColor="settings_panel_titlebar" zPosition="2"/>
+		<eLabel text="INFO" position="1250,300" size="190,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="5"/>
+		<eLabel text="MENU" position="1440,300" size="190,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="5"/>
+		<panel name="settings_extrainfo"/>
+		<widget name="lab1" position="290,360" size="940,60" font="Roboto-Light;32" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="5"/>
+		<widget name="list" position="290,420" size="940,180" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/List_On_1080x84.png" backgroundPixmap="settings/List_Off_1080x84.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		<widget name="lab2" position="390,695" size="300,60" font="Roboto-Light;32" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="5"/>
+		<widget name="activecam" position="860,695" size="300,60" font="Roboto-Light;32" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="5"/>
+		<panel name="title3"/>
+		<panel name="MenuRed1Panel"/>
+		<panel name="MenuGreen1Panel"/>
+		<panel name="MenuYellow1Panel"/>
+		<panel name="MenuBlue1Panel"/>
+	</screen>
+	<screen name="NimSelection1" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<panel name="info_panel"/>
+		<eLabel text="NimSelection" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<widget source="nimlist" render="Listbox" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" itemHeight="120" selectionPixmap="settings/List_On_1080x120.png" backgroundPixmap="settings/List_Off_1080x120.png" transparent="1" position="475,285" size="975,480" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (15,0), size = (960,40), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
+				MultiContentEntryText(pos = (15,40), size = (960,80), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+				],
+				"fonts": [gFont("Regular",32), gFont("Regular",28)],
+				"itemHeight": 120
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="NimSelection" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<panel name="settings_background3"/>
+		<panel name="title3"/>
+		<eLabel position="1260,675" size="340,60" backgroundColor="settings_panel_infopanels" zPosition="3"/>
+		<eLabel text="OK" position="1275,675" size="325,60" font="Roboto-Light;32" foregroundColor="eventcolor" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="4"/>
+		<eLabel text="NimSelection" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<widget source="nimlist" render="Listbox" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" itemHeight="120" selectionPixmap="settings/List_On_1080x120.png" backgroundPixmap="settings/List_Off_1080x120.png" transparent="1" position="290,360" size="940,360" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (15,0), size = (925,40), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
+				MultiContentEntryText(pos = (15,40), size = (925,80), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+				],
+				"fonts": [gFont("Regular",32), gFont("Regular",28)],
+				"itemHeight": 120
+				}
+			</convert>
+		</widget>
+	</screen>
+	<!--  MESSAGEBOX IS RELATED TO THE SETTINGS MENU-->
+	<screen name="MessageBoxTemplate" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="550,345" size="820,390" backgroundColor="settings_panel_background" zPosition="-3"/>
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="600,380" size="700,48" font="Roboto-Bold;38" foregroundColor="eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="text" position="600,455" size="700,70" font="Roboto-Light;28" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+		<widget name="list" position="710,560" size="490,140" textOffset="207,15" font="menulist;32" itemHeight="70" halign="center" valign="bottom" foregroundColor="white" foregroundColorSelected="black" selectionPixmap="settings/messagebox_list_on.png" backgroundPixmap="settings/messagebox_list_off.png" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+	</screen>
+	<!--  MESSAGEBOXSIMPLE IS RELATED TO THE TIMESHIFT QUESTION WHEN LEAVING TIMESHIFT-->
+	<screen name="MessageBoxTemplate2" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="550,345" size="820,390" backgroundColor="settings_panel_background" zPosition="-3"/>
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="600,380" size="700,48" font="Roboto-Bold;38" foregroundColor="eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="text" position="600,455" size="700,70" font="Roboto-Light;28" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+		<widget name="list" position="570,560" size="800,140" textOffset="10,15" font="menulist;29" itemHeight="70" halign="center" valign="bottom" foregroundColor="white" foregroundColorSelected="black" selectionPixmap="settings/messagebox_list_on_800x70.png" backgroundPixmap="settings/messagebox_list_off_800x70.png" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+	</screen>
+	<screen name="MessageBoxTemplate3" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="190,330" size="1540,520" backgroundColor="settings_panel_background" zPosition="-1"/>
+		<eLabel position="190,270" size="1540,60" backgroundColor="settings_panel_titlebar" zPosition="1"/>
+		<widget name="list" position="190,330" size="1540,504" font="Roboto-Light;36" textOffset="30,0" halign="left" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		<widget name="text" position="210,270" size="1520,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
+	</screen>
+	<screen name="MessageBox" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MessageBoxTemplate"/>
+	</screen>
+	<screen name="MessageBoxSimple" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MessageBoxTemplate3"/>
+	</screen>
+	<screen name="ChoiceBox" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="190,330" size="1540,520" backgroundColor="settings_panel_background" zPosition="-1"/>
+		<eLabel position="190,270" size="1540,60" backgroundColor="settings_panel_titlebar" zPosition="1"/>
+		<widget name="text" position="0,0" size="520,55" font="Regular;26"/>
+		<widget name="list" position="190,330" size="1540,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		<panel name="title2"/>
+	</screen>
+	<screen name="EventViewContextMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="190,330" size="1540,520" backgroundColor="settings_panel_background" zPosition="-1"/>
+		<eLabel position="190,270" size="1540,60" backgroundColor="settings_panel_titlebar" zPosition="1"/>
+		<widget name="menu" render="Listbox" position="190,330" size="1540,504" textOffset="30,10" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		<panel name="title2"/>
+	</screen>
+	<!-- PLUGIN BROWSER 	  -->
+	<screen name="PluginBrowser" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="PluginBrowser" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background6"/>
+		<widget name="list" render="Listbox" position="90,185" size="1740,672" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+		</widget>
+		<panel name="background6_3_Buttons"/>
+		<eLabel position="1158,876" size="305,60" backgroundColor="Button_Background" zPosition="5"/>
+		<eLabel text="Menu" position="1158,876" size="305,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="6"/>
+	</screen>
+	<screen name="PluginDownloadBrowser" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="PluginDownloadBrowser" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background6"/>
+		<widget name="text" position="90,185" size="1740,672" font="Roboto-Light;36" halign="center" valign="center" transparent="0" zPosition="1"/>
+		<widget name="list" render="Listbox" position="90,185" size="1740,672" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+
+		</widget>
+	</screen>
+	<screen name="Console" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Command execution...">
+		<!--<eLabel text="Console" position="center,center" size="400,40" font="menulist;30" foregroundColor="white" backgroundColor="red" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background6"/>
+		<widget name="text" position="90,185" size="1740,672" font="Roboto-Light;26"/>
+		<!--<widget name="text" position="90,185" size="1740,672"  font="Roboto-Light;32" halign="center" valign="center"  foregroundColor="settings_lists_font_foregroundcolor"  backgroundColor="menubackground" /> -->
+	</screen>
+	<!-- ABOUT SCREENS -->
+	<screen name="AboutOE" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--	<eLabel text="AboutOE" position="center,center" size="300,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background6"/>
+		<widget source="lab1" render="Label" position="180,208" size="600,55" font="Roboto-Light;45" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget source="lab2" render="Label" position="180,264" size="600,48" font="Roboto-Light;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget source="lab3" render="Label" position="180,312" size="600,40" font="Roboto-Light;32" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="AboutScrollLabel" position="840,218" size="880,630" font="Roboto-Light;26" backgroundColor="menubackground" transparent="1"/>
+		<panel name="background6_2_Buttons"/>
+		<eLabel position="608,876" size="305,60" backgroundColor="Button_Background" zPosition="3"/>
+		<eLabel position="618,886" size="6,40" backgroundColor="bar_red" zPosition="4"/>
+		<eLabel text="OK" render="Label" position="608,876" size="305,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="5"/>
+	</screen>
+	<screen name="SystemMemoryInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--	<eLabel text="SystemMemoryInfo" position="center,center" size="300,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background6"/>
+		<widget source="lab1" render="Label" position="180,208" size="600,55" font="Roboto-Light;45" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget source="lab2" render="Label" position="180,264" size="600,48" font="Roboto-Light;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget source="lab3" render="Label" position="180,312" size="600,40" font="Roboto-Light;32" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="AboutScrollLabel" position="840,218" size="880,630" font="Roboto-Light;36" backgroundColor="menubackground" transparent="1"/>
+		<eLabel position="608,876" size="305,60" backgroundColor="Button_Background" zPosition="3"/>
+		<eLabel position="618,886" size="6,40" backgroundColor="bar_red" zPosition="4"/>
+		<eLabel text="OK" render="Label" position="608,876" size="305,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="5"/>
+	</screen>
+	<screen name="ServiceInfoSimple" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="ServiceInfoSimple" position="center,center" size="300,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background6"/>
+		<widget name="infolist" position="453,300" size="1015,480" font="Roboto-Light;32" itemHeight="60" selectionDisabled="1" transparent="1"/>
+	</screen>
+	<screen name="ServiceInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--	<eLabel text="ServiceInfo" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="ServiceInfoSimple"/>
+		<panel name="background6_4_Buttons"/>
+	</screen>
+	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--	<eLabel text="SystemNetworkInfo" position="center,center" size="300,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background6"/>
+		<widget source="IFtext" render="Label" position="180,264" size="300,48" font="Roboto-Light;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget source="IF" render="Label" position="480,264" size="300,48" font="Roboto-Light;38" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget source="Statustext" render="Label" position="180,312" size="300,40" font="Roboto-Light;32" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="480,312" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
+		<widget name="AboutScrollLabel" position="900,265" size="770,480" font="Roboto-Light;36" backgroundColor="menubackground" transparent="1"/>
+		<eLabel position="608,876" size="305,60" backgroundColor="Button_Background" zPosition="3"/>
+		<eLabel position="618,886" size="6,40" backgroundColor="bar_red" zPosition="4"/>
+		<widget source="key_red" render="Label" position="608,876" size="305,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="5"/>
+	</screen>
+	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="Devices" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<eLabel position="610,160" size="700,835" backgroundColor="Info_panel_Background" zPosition="-1"/>
+		<eLabel position="610,160" size="700,60" backgroundColor="Info_panel_titlebar" zPosition="1"/>
+		<widget source="TunerHeader" render="Label" position="640,160" size="670,60" font="Roboto-Medium;34" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" zPosition="2"/>
+		<eLabel position="610,220" size="700,180" backgroundColor="Info_panel_infopanel1" zPosition="1"/>
+		<widget source="nims" render="Label" position="640,220" size="670,180" font="Roboto-Light;28" transparent="1" foregroundColor="eventcolor" backgroundColor="menubackground" zPosition="2" enableWrapAround="0"/>
+		<eLabel position="610,400" size="700,60" backgroundColor="Info_panel_titlebar" zPosition="1"/>
+		<widget source="HDDHeader" render="Label" position="640,400" size="670,60" font="Roboto-Medium;34" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" zPosition="2"/>
+		<eLabel position="610,460" size="700,180" backgroundColor="Info_panel_infopanel2" zPosition="1"/>
+		<widget source="hdd" render="Label" position="640,460" size="670,180" font="Roboto-Light;28" transparent="1" foregroundColor="eventcolor" backgroundColor="menubackground" zPosition="2" enableWrapAround="0"/>
+		<eLabel position="610,640" size="700,60" backgroundColor="Info_panel_titlebar" zPosition="1"/>
+		<widget source="MountsHeader" render="Label" position="640,640" size="670,60" font="Roboto-Medium;34" foregroundColor="infobar_eventcolor" backgroundColor="menubackground" transparent="1" zPosition="2"/>
+		<eLabel position="610,700" size="700,180" backgroundColor="Info_panel_infopanel2" zPosition="1"/>
+		<widget source="mounts" render="Label" position="640,700" size="670,180" font="Roboto-Light;28" transparent="1" foregroundColor="eventcolor" backgroundColor="menubackground" zPosition="2" enableWrapAround="0"/>
+		<eLabel position="808,905" size="305,60" backgroundColor="Button_Background" zPosition="1"/>
+		<eLabel text="OK" position="808,905" size="305,60" font="Roboto-Medium;28" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="5"/>
+	</screen>
+	<screen name="AudioSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<ePixmap position="640,237" size="641,615" pixmap="common/Audio_Info_Panel.png" zPosition="-1"/>
+		<widget source="Title" render="Label" position="694,237" size="586,60" font="Roboto-Medium;34" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget name="config" position="694,311" size="586,170" font="Roboto-Medium;32" itemHeight="85" foregroundColor="eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" scrollbarMode="showOnDemand" zPosition="2"/>
+		<widget source="key_red" render="Pixmap" pixmap="buttons/red.png" position="650,340" size="35,35" alphatest="blend" zPosition="4">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_green" render="Pixmap" pixmap="buttons/green.png" position="650,422" size="35,35" alphatest="blend" zPosition="4">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="22,189" size="67,48" alphatest="blend" zPosition="2">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="22,238" size="67,48" alphatest="blend" zPosition="2">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="streams" render="Listbox" position="640,563" size="641,255" foregroundColor="settings_title_font_color" foregroundColorSelected="black" backgroundColor="menubackground" backgroundPixmap="common/List_Off_800x100.png" selectionPixmap="common/List_On_800x100.png" transparent="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"templates":
+				{"default": (85, [
+				MultiContentEntryText(pos = (0, 0), size = (35, 85), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # key,
+				MultiContentEntryText(pos = (10, 0), size = (90, 85), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
+				MultiContentEntryText(pos = (100, 0), size = (150, 85), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
+				MultiContentEntryText(pos = (340, 0), size = (360, 85), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+				MultiContentEntryText(pos = (590, 0), size = (25, 85), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
+				], True, "showNever"),
+				"notselected": (85, [
+				MultiContentEntryText(pos = (0, 0), size = (35, 85), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # key,
+				MultiContentEntryText(pos = (10, 0), size = (90, 85), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
+				MultiContentEntryText(pos = (100, 0), size = (150, 85), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
+				MultiContentEntryText(pos = (340, 0), size = (360, 85), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+				MultiContentEntryText(pos = (590, 0), size = (25, 85), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
+				], False, "showNever")
+				},
+				"fonts": [gFont("menulist", 34), gFont("menulist", 34)],
+				"itemHeight": 85
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="RdsInfoDisplay" position="0,60" size="1280,200" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
+		<!--<eLabel text="RdsInfoDisplay" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>
+
+		<widget name="RassLogo" pixmap="icons/rass_logo.png" position="100,585" size="50,21"/>
+		<widget name="RadioText" position="0,0" size="1280,90" font="LCD;30" noWrap="1" foregroundColor="yellow" backgroundColor="transpBlack" valign="center" halign="center" borderColor="black" borderWidth="4"/>
+		<widget name="RtpText" position="0,100" size="1280,90" font="LCD;30" noWrap="1" backgroundColor="yellow" valign="center" halign="center" borderColor="black" borderWidth="4"/> -->
+	</screen>
+	<!-- ## HDMI-CEC ## -->
+	<screen name="HdmiCECSetupScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="HdmiCECSetupScreen" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background6"/>
+		<panel name="background6_4_Buttons_Source"/>
+		<widget name="config" render="Listbox" position="90,185" size="1740,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+			<convert type="TemplatedMultiContent">
+				{"template": [	MultiContentEntryText(pos = (20,0), size = (1640,84), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	),
+	            MultiContentEntryPixmapAlphaBlend(pos = (1670, 15), size = (50, 50), png = 1),				
+				 ],
+				"fonts": [gFont("Roboto-Light",36)],
+				"itemHeight": 84
+				}
+			</convert>
+		</widget>
+		<widget source="current_address" render="Label" position="90,682" size="1740,84" font="Roboto-Light;36" foregroundColor="eventcolor" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+		<widget source="fixed_address" render="Label" position="90,766" size="1740,84" font="Roboto-Light;36" foregroundColor="eventcolor" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+	</screen>
+	<!-- ## InputDeviceSelection ## -->
+	<screen name="InputDeviceSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="InputDeviceSelection" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background6"/>
+		<panel name="background6_4_Buttons_Source"/>
+		<widget source="list" render="Listbox" position="90,185" size="1740,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+									MultiContentEntryPixmapAlphaBlend(pos = (5, 8), size = (54, 54), png = 2), # index 3 is the interface pixmap
+									MultiContentEntryText(pos = (100, 0), size = (900, 60), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 1), # index 1 is the interfacename
+								],
+							"fonts": [gFont("menulist", 36),gFont("menulist", 36)],
+							"itemHeight": 84
+							}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="90,766" size="1740,84" font="Roboto-Light;36" foregroundColor="eventcolor" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+	</screen>
+	<!-- ## InputDeviceSetup ## -->
+	<screen name="InputDeviceSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="InputDeviceSetup" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background6"/>
+		<panel name="background6_4_Buttons_Source"/>
+		<widget name="config" render="Listbox" position="90,185" size="1740,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+		</widget>
+		<widget source="introduction" render="Label" position="90,766" size="1740,84" font="Roboto-Light;36" foregroundColor="eventcolor" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+	</screen>
+	<screen name="LanguageSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="LanguageSelection" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background6"/>
+		<panel name="background6_2_Buttons_Source"/>
+		<widget source="languages" render="Listbox" position="90,185" size="1740,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (200,0), size = (900,60), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
+				MultiContentEntryPixmapAlphaTest(pos = (40,15), size = (80,50), png = 2), # index 2 is the pixmap
+				],
+				"fonts": [gFont("Regular",36)],
+				"itemHeight": 84
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="LogManager" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="LogManager" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background6"/>
+		<panel name="background6_3_Buttons"/>
+		<widget name="list" render="Listbox" position="90,185" size="1740,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+	</screen>
+	<screen name="SimpleChannelSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="SimpleChannelSelection" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<eLabel position="268,272" size="1372,680" backgroundColor="settings_panel_background" zPosition="-1"/>
+		<eLabel position="268,212" size="1372,60" backgroundColor="settings_panel_titlebar" zPosition="-1"/>
+		<widget source="Title" render="Label" position="288,212" size="1372,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
+		<widget name="list" position="268,272" size="1372,504" serviceNumberFont="channelselectionservice;32" serviceNameFont="Roboto-Regular;32" serviceInfoFont="Roboto-Light;30" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColorSelected="menubackground" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		<panel name="background6_4_Buttons_Source"/>
+	</screen>
+	<screen name="SoftwareUpdateChoices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="SoftwareUpdateChoices" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x200"/>
+		<panel name="button_background_1372x200"/>
+		<widget name="list" position="268,327" size="1372,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		<widget name="text" position="268,858" size="1372,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+	</screen>
+	<screen name="UpdatePlugin" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="UpdatePlugin" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x200"/>
+		<widget name="activityslider" position="455,510" size="980,40"/>
+		<widget name="slider" position="455,510" size="980,40"/>
+		<widget source="package" render="Label" position="455,390" size="980,50" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget source="status" render="Label" position="455,650" size="980,50" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+	</screen>
+	<screen name="SoftwareUpdateChanges" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="SoftwareUpdateChanges" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background_1372x200"/>
+		<panel name="button_background_1372x200"/>
+		<panel name="background6_2_Buttons"/>
+		<widget name="text" position="318,340" size="1272,490" foregroundColor="settings_title_font_color" backgroundColor="menubackground" font="Regular;26" transparent="1" zPosition="4"/>
+	</screen>
+	<screen name="CiSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="CiSelection" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background_1372x200"/>
+		<widget name="text" position="455,390" size="980,50" foregroundColor="settings_title_font_color" backgroundColor="menubackground" halign="center" valign="center" font="Regular;26" transparent="1" zPosition="4"/>
+		<widget name="entries" position="455,510" size="980,150" foregroundColor="settings_title_font_color" backgroundColor="menubackground" halign="center" valign="center" font="Regular;26" transparent="1" zPosition="4"/>
+	</screen>
+	<screen name="CIselectMainMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="CIselectMainMenu" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x200"/>
+		<panel name="button_background_1372x200"/>
+		<panel name="background6_2_Buttons_Source"/>
+		<widget name="CiList" position="268,327" size="1372,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+	</screen>
+	<screen name="ScanSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="ScanSetup" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x200"/>
+		<panel name="button_background_1372x200"/>
+		<panel name="background6_2_Buttons_Source"/>
+		<eLabel text="Cancel" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
+		<eLabel text="Scan" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1"/>
+		<widget name="config" position="268,327" size="1372,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+	</screen>
+	<screen name="ScanSimple" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--	<eLabel text="ScanSimple" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background_1372x200"/>
+		<panel name="button_background_1372x200"/>
+		<panel name="background6_2_Buttons_Source"/>
+		<widget name="header" position="0,0" size="0,0" font="Regular;23"/>
+		<widget name="config" position="268,327" size="1372,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		<widget name="footer" position="0,0" size="0,0"/>
+	</screen>
+	<screen name="Satfinder" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="Satfinder" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background_1372x545"/>
+		<widget name="introduction" position="974,328" size="655,50" foregroundColor="settings_title_font_color" backgroundColor="menubackground" halign="center" valign="center" font="Roboto-Light;38" transparent="1" zPosition="4"/>
+		<ePixmap pixmap="icons/dish_scan.png" position="300,285" zPosition="4" size="179,165" transparent="1" alphatest="on"/>
+		<widget source="Frontend" render="Label" position="558,300" zPosition="4" size="260,26" font="Regular;22" halign="center" valign="center" transparent="1">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<eLabel name="snr" text="SNR:" position="488,328" size="60,22" font="Regular;21" halign="right" transparent="1"/>
+		<widget source="Frontend" render="Progress" position="558,328" size="260,20" pixmap="icons/bar_snr.png" borderWidth="2" borderColor="#cccccc">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="820,328" size="60,22" backgroundColor="menubackground" halign="center" font="Regular;21">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel name="ber" text="BER:" position="488,374" size="60,22" font="Regular;21" halign="right" transparent="1"/>
+		<widget source="Frontend" render="Progress" position="558,374" size="260,20" pixmap="icons/bar_ber.png" borderWidth="2" borderColor="#cccccc">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="820,374" size="60,22" backgroundColor="menubackground" halign="center" font="Regular;21">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<eLabel name="lock" text="Lock:" position="488,415" size="60,22" font="Regular;21" halign="right"/>
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="560,400" zPosition="1" size="50,50" alphatest="on">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="560,400" zPosition="1" size="50,50" alphatest="on">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget name="config" position="268,470" size="1372,336" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+	</screen>
+	<screen name="ServiceScan" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="ServiceScan" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>
+		<panel name="settings_background_1372x545"/>
+		<panel name="button_background_1372x200"/>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-s.png" position="445,290" size="96,96" transparent="1" zPosition="4" alphatest="blend">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-c.png" position="445,290" size="96,96" transparent="1" zPosition="4" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-t.png" position="445,290" size="96,96" transparent="1" zPosition="4" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="network" position="280,400" size="280,60" zPosition="4" backgroundColor="menubackground" transparent="1" font="Regular;24"/>
+		<widget name="transponder" position="280,460" size="280,60" zPosition="4" backgroundColor="menubackground" transparent="1" font="Regular;24"/>
+		<widget name="scan_state" position="280,740" zPosition="4" size="280,60" backgroundColor="menubackground" transparent="1" font="Regular;24"/>
+		<widget name="pass" position="280,740" zPosition="2" size="280,60" backgroundColor="menubackground" transparent="1" font="Regular;18"/>
+		<widget name="scan_progress" position="280,845" size="400,12" pixmap="common/progressbar_yellow.png"/>
+		<widget name="servicelist" position="728,275" size="912,672" font="Roboto-Light;32" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="infobar_nextlater" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4" selectionDisabled="1"/>
+	</screen>
+	<screen name="HarddiskSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--	<eLabel text="HarddiskSelection" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background_1372x200"/>
+		<widget name="hddlist" position="268,327" size="1372,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+	</screen>
+	<screen name="JobView" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="JobView" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x200"/>
+		<panel name="button_background_1372x200"/>
+		<panel name="background6_4_Buttons_Source"/>
+		<widget source="cancelable" render="FixedLabel" text="Cancel" position="327,876" size="305,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="6"/>
+		<widget source="finished" render="FixedLabel" text="OK" position="648,876" size="305,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="6"/>
+		<widget source="job_progress" render="Progress" position="455,510" size="980,40" borderWidth="2" backgroundColor="Progress_Bar" zPosition="2"/>
+		<widget source="job_progress" render="Label" position="728,510" size="458,44" font="RobotoCondensed-Regular;32" foregroundColor="black" zPosition="4" halign="center" transparent="1">
+			<convert type="ProgressToText"/>
+		</widget>
+		<widget source="job_name" render="Label" position="455,390" size="980,50" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget source="job_task" render="Label" position="455,440" size="980,50" font="RobotoCondensed-Regular;36" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget source="job_status" render="Label" position="455,650" size="980,50" font="RobotoCondensed-Regular;36" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+	</screen>
+	<screen name="HarddiskSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--	<eLabel text="HarddiskSetup" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/> -->
+		<panel name="settings_background_1372x200"/>
+		<panel name="button_background_1372x200"/>
+		<panel name="background6_1_Buttons_Source"/>
+		<widget name="initializetext" position="608,876" size="305,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="5"/>
+		<widget name="model" position="455,390" size="980,50" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget name="capacity" position="455,440" size="980,50" font="RobotoCondensed-Regular;36" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget name="bus" position="455,650" size="980,50" font="RobotoCondensed-Regular;36" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+	</screen>
+	<screen name="LocationBox" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="LocationBox" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x200"/>
+		<panel name="button_background_1372x200"/>
+		<panel name="background6_4_Buttons_Source"/>
+		<widget name="text" position="455,390" size="980,50" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget name="target" position="455,440" size="980,50" font="RobotoCondensed-Regular;36" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget name="filelist" position="455,510" size="980,44" font="menulist;40" itemHeight="60" foregroundColor="settings_title_font_color" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" zPosition="2"/>
+		<widget name="textbook" position="455,580" size="980,50" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget name="booklist" position="455,631" size="980,44" font="menulist;40" itemHeight="60" foregroundColor="settings_title_font_color" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" zPosition="2"/>
+	</screen>
+	<screen name="NumberZap" position="0,972" size="1920,108" backgroundColor="transparent" flags="wfNoBorder">
+		<!--<eLabel text="NumberZap" position="41,24" size="185,60" font="menulist;42" foregroundColor="#E66A4A" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="99"/> -->
+		<eLabel position="0,0" size="1920,108" backgroundColor="#2C2C2C" zPosition="-1"/>
+		<widget name="number" position="41,24" size="185,60" foregroundColor="#E66A4A" backgroundColor="menubackground" transparent="1" font="menulist;42" valign="center" halign="center" zPosition="2"/>
+		<widget name="servicename" position="265,24" size="800,60" foregroundColor="#E66A4A" backgroundColor="menubackground" transparent="1" font="menulist;42" valign="center" halign="left" zPosition="2"/>
+	</screen>
+	<screen name="ButtonSetup" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<!--<eLabel text="ButtonSetup" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x545"/>
+		<panel name="button_background_1372x200"/>
+		<panel name="background6_1_Button"/>
+		<widget name="list" position="728,308" size="912,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="4"/>
+		<widget name="choosen" position="298,308" size="410,120" font="RobotoCondensed-Regular;28" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget name="description" position="298,460" size="410,180" font="RobotoCondensed-Regular;32" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+	</screen>
+	<screen name="ButtonSetupSelect" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<!--<eLabel text="ButtonSetupSelect" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x545"/>
+		<panel name="button_background_1372x200"/>
+		<panel name="background6_2_Buttons"/>
+		<widget name="list" position="728,308" size="912,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="4"/>
+		<widget name="choosen" position="298,308" size="410,120" font="RobotoCondensed-Regular;34" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<widget name="description" position="298,460" size="410,280" font="RobotoCondensed-Regular;32" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+	</screen>
+	<screen name="HelpMenu" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<!--<eLabel text="HelpMenu" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x545"/>
+		<eLabel text="Help Menu" position="278,212" size="1362,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
+		<panel name="button_background_1372x200"/>
+		<widget name="list" position="728,308" size="912,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="4"/>
+		<widget name="rc" pixmaps="/usr/share/enigma2/skin_default/rc.png,rcold.png" position="410,310" zPosition="10" size="154,500" alphatest="blend" transparent="1"/>
+		<widget name="arrowdown" pixmap="/usr/share/enigma2/skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<widget name="arrowdown2" pixmap="/usr/share/enigma2/skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<widget name="arrowup" pixmap="/usr/share/enigma2/skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<widget name="arrowup2" pixmap="/usr/share/enigma2/skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<widget name="long_key" position="283,854" size="610,60" font="RobotoCondensed-Regular;32" foregroundColor="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+	</screen>
+	<screen name="ParentalControlSetup" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<!--<eLabel text="ParentalControlSetup" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x200"/>
+		<panel name="button_background_1372x200"/>
+		<widget name="config" position="268,327" size="1372,252" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+	</screen>
+	<screen name="PinInput" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="messagebox_BG"/>
+		<widget name="text" position="600,380" size="700,48" font="Roboto-Bold;38" foregroundColor="eventcolor" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="tries" position="600,455" size="700,70" font="Roboto-Light;28" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2"/>
+		<widget name="input" position="600,570" size="700,70" font="Roboto-Light;38" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2"/>
+	</screen>
+	<screen name="PVRState" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="12">
+		<widget name="statusicon" position="center,center" size="361,361" pixmaps="pvr/pvrstate/play.png,pvr/pvrstate/pause.png,pvr/pvrstate/stop.png,pvr/pvrstate/forward.png,pvr/pvrstate/backward.png,pvr/pvrstate/slow.png,pvr/pvrstate/blank.png" zPosition="12" alphatest="blend"/>
+		<!--<widget name="speed" position="600,990" size="150,60" font="infobar;40" foregroundColor="grey" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2" />-->
+	</screen>
+	<screen name="NumericalTextInputHelpDialog2" position="0,0" zPosition="1" size="1372,308" backgroundColor="window-bg" flags="wfNoBorder" transparent="1">
+		<ePixmap position="0,0" size="1372,308" pixmap="common/keyboard_BG.png" zPosition="20"/>
+		<widget name="key1" position="22,14" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="0" zPosition="21"/>
+		<widget name="key2" position="483,14" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="0" zPosition="21"/>
+		<widget name="key3" position="935,14" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="21"/>
+		<widget name="key4" position="22,85" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="21"/>
+		<widget name="key5" position="483,85" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="21"/>
+		<widget name="key6" position="935,85" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="21"/>
+		<widget name="key7" position="22,157" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="21"/>
+		<widget name="key8" position="483,157" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="21"/>
+		<widget name="key9" position="935,157" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="21"/>
+		<widget name="help1" position="22,230" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="21"/>
+		<widget name="key0" position="483,230" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="21"/>
+		<widget name="help2" position="935,230" size="411,60" font="Roboto-Light;24" foregroundColor="eventcolor" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="21"/>
+	</screen>
+	<screen name="NumericalTextInputHelpDialog" position="center,767" zPosition="2" size="1372,308" backgroundColor="window-bg" flags="wfNoBorder" transparent="0">
+		<ePixmap position="0,0" size="1372,308" pixmap="common/keyboard_BG.png" zPosition="-1"/>
+		<widget name="key1" position="22,14" size="411,60" font="Roboto-Light;30" halign="center" valign="center" transparent="1"/>
+		<widget name="key2" position="483,14" size="411,60" font="Roboto-Light;30" halign="center" valign="center" transparent="1"/>
+		<widget name="key3" position="935,14" size="411,60" font="Roboto-Light;30" halign="center" valign="center" transparent="1"/>
+		<widget name="key4" position="22,85" size="411,60" font="Roboto-Light;30" halign="center" valign="center" transparent="1"/>
+		<widget name="key5" position="483,85" size="411,60" font="Roboto-Light;30" halign="center" valign="center" transparent="1"/>
+		<widget name="key6" position="935,85" size="411,60" font="Roboto-Light;30" halign="center" valign="center" transparent="1"/>
+		<widget name="key7" position="22,157" size="411,60" font="Roboto-Light;30" halign="center" valign="center" transparent="1"/>
+		<widget name="key8" position="483,157" size="411,60" font="Roboto-Light;30" halign="center" valign="center" transparent="1"/>
+		<widget name="key9" position="935,157" size="411,60" font="Roboto-Light;30" halign="center" valign="center" transparent="1"/>
+		<widget name="help1" position="22,230" size="411,60" font="Roboto-Light;34" halign="center" valign="center" transparent="1"/>
+		<widget name="key0" position="483,230" size="411,60" font="Roboto-Light;30" halign="center" valign="center" transparent="1"/>
+		<widget name="help2" position="935,230" size="411,60" font="Roboto-Light;34" halign="center" valign="center" transparent="1"/>
+	</screen>
+	<!-- ## RESTART SCREEN ## -->
+	<screen name="QuitMainloopScreen" position="fill" flags="wfNoBorder" backgroundColor="menubackground">
+		<ePixmap pixmap="screens/backdrop.png" position="0,0" size="1920,1080" alphatest="blend" zPosition="1"/>
+		<widget name="text" position="450,700" size="1000,300" font="infobar2;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
+	</screen>
+	<!-- ## OptionDialog for Matts epg mods## -->
+	<screen name="OptionDialog-old" position="center,center" size="405,330" zPosition="99" flags="wfNoBorder" backgroundColor="#1B1B1B">
+		<widget name="text" position="0,0" size="0,0" font="Roboto-Light;23"/>
+		<widget name="list" position="10,10" size="380,300" enableWrapAround="1" font="Roboto-Light;23" backgroundColor="#1B1B1B">
+			<convert type="TemplatedMultiContent">
+                {"template": [ MultiContentEntryText(pos = (10,0), size = (298,50), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0 ) ],
+                "fonts": [gFont("Roboto-Light",20)],
+                "itemHeight": 25
+                }
+            </convert>
+		</widget>
+	</screen>
+	<screen name="OptionDialog" position="0,725" size="1276,352" zPosition="99" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="text" position="0,0" size="0,0" font="Roboto-Light;40"/>
+		<widget name="list" position="10,10" size="1276,352" font="Roboto-Light;40" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" scrollbarMode="showNever" transparent="1" zPosition="6"/>
+	</screen>
+	<!-- ## RecordTimerQuestion for the add timer popup in the graphicel epg when pressing the record button ## -->
+	<screen name="RecordTimerQuestion" position="735,487" size="390,105" zPosition="5" flags="wfNoBorder" backgroundColor="#30000000">
+		<widget name="text" position="0,0" size="0,0" font="Regular;22" backgroundColor="#05101010" transparent="1"/>
+		<widget name="list" position="15,15" size="360,75" font="Roboto-Light;25" selectionPixmap="common/List_On_800x100.png" backgroundPixmap="common/List_Off_800x100.png" foregroundColor="settings_title_font_color" foregroundColorSelected="black" backgroundColor="#05101010" enableWrapAround="1" transparent="1"/>
+		<applet type="onLayoutFinish">
+			self.autoResize()
+		</applet>
+	</screen>
+	<screen name="RemoveTimerQuestion" position="735,487" size="754,195" zPosition="5" flags="wfNoBorder" backgroundColor="#30000000">
+		<widget name="text" position="0,0" size="0,0" font="Regular;22" backgroundColor="#05101010" transparent="1"/>
+		<widget name="list" position="15,15" size="360,75" enableWrapAround="1" font="Roboto-Light;25" selectionPixmap="common/List_On_800x100.png" backgroundPixmap="common/List_Off_800x100.png" foregroundColor="settings_title_font_color" foregroundColorSelected="black" backgroundColor="#05101010" transparent="1"/>
+		<applet type="onLayoutFinish">
+            self.autoResize()
+	    </applet>
+	</screen>
+</skin>
