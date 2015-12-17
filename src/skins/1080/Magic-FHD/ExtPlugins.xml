@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.7.8	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.7.9	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1902,10 +1902,13 @@
 		<widget name="output" position="5,540" size="1877,455" transparent="1" foregroundColor="grey"/>
 	</screen>
 
+	<!-- ## Radio Online ##-->
 	<screen name="radmain" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate3"/>
 		<ePixmap position="100,5" size="1000,97" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/radioo/img/bar.png"/>
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/radioo/img/radio.png" position="0,115" size="723,409"/>
+		<panel name="RedBPanel"/>
+		<widget name="redText" position="55,1020" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<panel name="GreenBPanel"/>
 		<widget name="greenText" position="490,1020" size="490,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
 		<panel name="YellowBPanel"/>
@@ -1917,4 +1920,16 @@
 		<widget name="listName" position="7,530" size="715,50" zPosition="2" font="Regular;33" valign="center" halign="center"/>
 		<widget name="stationText" position="7,600" size="715,50" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
+
+	<!-- ## Channel selection navigator ##-->
+	<screen name="CSNOpenSetup" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<widget name="cancel" position="55,1020" size="426,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<panel name="GreenBPanel"/>
+		<widget name="ok" position="490,1020" size="490,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="config" position="755,120" size="1147,855" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="help" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+
 </skin>
