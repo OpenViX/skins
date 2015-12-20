@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.8.4 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.8.5 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -337,25 +337,25 @@
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
-		<widget name="list" position="780,123" size="1132,880" EventFontSingle="menulist;32" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1"/>
+		<widget name="list" position="780,123" size="1132,880" EventFontSingle="Regular;32" itemHeight="45" transparent="1" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1"/>
 		<widget name="number" position="780,123" size="1132,874" font="Regular;54" zPosition="5" backgroundColor="background" transparent="0" borderColor="black" borderWidth="1" valign="center" halign="center"/>
-		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" backgroundColor="background" transparent="1" halign="center" valign="center" foregroundColor="grey" zPosition="1"/>
-		<widget source="Event" render="Label" position="7,532" size="750,74" font="menulist;34" transparent="1" foregroundColor="secondFG" halign="center" valign="top">
+		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" backgroundColor="background" transparent="1" halign="center" valign="center" zPosition="1"/>
+		<widget source="Event" render="Label" position="7,532" size="750,74" font="Regular;34" transparent="1" foregroundColor="secondFG" halign="center" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="22,610" size="225,37" font="menulist;33" backgroundColor="background" transparent="1" foregroundColor="yellow">
+		<widget source="Event" render="Label" position="22,610" size="225,37" font="Regular;33" backgroundColor="background" transparent="1" foregroundColor="yellow">
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget source="Event" render="Label" position="247,610" size="120,37" font="menulist;33" backgroundColor="background" transparent="1" foregroundColor="yellow" halign="right">
+		<widget source="Event" render="Label" position="247,610" size="120,37" font="Regular;33" backgroundColor="background" transparent="1" foregroundColor="yellow" halign="right">
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText"/>
 		</widget>
-		<widget source="Event" render="Label" position="367,610" size="120,37" font="menulist;33" backgroundColor="background" transparent="1" foregroundColor="yellow" halign="left">
+		<widget source="Event" render="Label" position="367,610" size="120,37" font="Regular;33" backgroundColor="background" transparent="1" foregroundColor="yellow" halign="left">
 		<convert type="EventTime">EndTime</convert>
 		<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,650" size="750,357" font="menulist;33" transparent="1" foregroundcolor="grey">
+		<widget source="Event" render="Label" position="7,650" size="750,357" font="Regular;33" transparent="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 	</screen>
@@ -397,7 +397,7 @@
 		<panel name="Blue1Panel"/>
 		<widget name="channel" position="22,585" size="690,78" font="Regular;36" transparent="1" foregroundColor="selectedFG" halign="center"/>
 		<widget name="duration" position="22,739" size="690,45" font="Regular;33" transparent="1" halign="center"/>
-		<widget name="FullDescription" position="780,123" size="1132,874" font="Regular;33" foregroundColor="grey" transparent="1"/>
+		<widget name="FullDescription" position="780,123" size="1132,874" font="Regular;33" transparent="1"/>
 		<widget source="session.Event_Now" render="Label" position="22,787" size="690,45" font="Regular;33" transparent="1" foregroundColor="secondFG" halign="center">
 			<convert type="EventName">Genre</convert>
 		</widget>
@@ -410,7 +410,7 @@
 	</screen>
 	<screen name="EventViewContextMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="menu" position="780,123" size="1132,874" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" transparent="1" enableWrapAround="1"/>
+		<widget name="menu" position="780,123" size="1132,874" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1"/>
 	</screen>
 	<screen name="EventViewSimple" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -641,7 +641,7 @@
 		</widget>
 		<widget name="freeDiskSpace" position="1087,960" size="375,35" font="menulist;30" foregroundColor="secondFG" halign="center"/>
 		<widget name="TrashcanSize" position="1537,960" size="375,35" font="menulist;30" foregroundColor="secondFG" halign="right"/>
-		<widget source="Service" render="Label" position="277,532" size="465,37" font="menulist;33" foregroundColor="selectedFG" zPosition="1" halign="right">
+		<widget source="Service" render="Label" position="277,532" size="465,37" font="Regular;33" foregroundColor="selectedFG" zPosition="1" halign="right">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
 		<widget source="Service" render="Label" position="22,532" size="120,36" font="Regular;30" foregroundColor="selectedFG" halign="left" transparent="1">

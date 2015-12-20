@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.7.9	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.8.0	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -53,16 +53,16 @@
 	<!-- ## PermanentClock ## -->
 	<screen name="PermanentClockMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,135" size="1132,855" font="menulist;33" itemHeight="45" transparent="1" foregroundColor="grey"/>
+		<widget name="list" position="780,135" size="1132,855" font="menulist;33" itemHeight="45" transparent="1"/>
 		<eLabel text="Exit' = Cancel" position="457,1030" size="330,39" foregroundColor="grey" backgroundColor="secondBG" font="Regular;33" halign="left"  transparent="1" zPosition="1"/>
 		<ePixmap pixmap="buttons/key_ok.png" position="22,1027" size="52,39" alphatest="on"/>
-		<eLabel text="Accept" position="75,1024" size="330,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG"  halign="left" transparent="1" zPosition="1"/>
+		<eLabel text="Accept" position="75,1024" size="330,39" font="Regular;33" backgroundColor="secondBG"  halign="left" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="PermanentClockScreen" position="0,0" size="205,55" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
-		<widget source="global.CurrentTime" render="Label" position="1,1" size="150,45" font="menulist;39" backgroundColor="transparent" foregroundColor="grey" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="right">
+		<widget source="global.CurrentTime" render="Label" position="1,1" size="150,45" font="menulist;39" backgroundColor="transparent" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="right">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="152,15" size="50,45" font="menulist;22" backgroundColor="transparent" foregroundColor="grey" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="left">
+		<widget source="global.CurrentTime" render="Label" position="152,15" size="50,45" font="menulist;22" backgroundColor="transparent" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="left">
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>
 	</screen>
