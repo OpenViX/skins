@@ -1715,18 +1715,17 @@
 	
 	<!-- ## Job View ## -->
 	<screen name="JobView" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-	    <panel name="InfoPanel" />
-		<panel name="MenuMyJobsText" />
-		<widget source="job_name" render="Label" position="680,210" size="1160,80" font="youvix-r;32" halign="center" valign="center" zPosition="1" />
-		<widget source="job_task" render="Label" position="680,300" size="1160,60" font="youvix-r;28" halign="center" valign="center" zPosition="1" />
-		<ePixmap position="960,380" size="600,10" pixmap="selectionbars/activitysliderbackground.png" alphatest="blend" zPosition="-1"/>
-		<widget source="job_progress" render="Progress" position="960,380" size="600,10" pixmap="selectionbars/activityslider.png" transparent="1" zPosition="1" />
-		<widget source="job_progress" render="Label" position="680,400" size="1160,32" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" transparent="1" zPosition="2">
+		<ePixmap pixmap="YouViX-Common/screens/crossepgdownloadbox.png" position="center,965" size="800,115" zPosition="-1"/>
+		<widget source="job_name" render="Label" position="center,975" size="520,30" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
+		<widget source="job_status" render="Label" position="1020,970" size="320,30" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" transparent="1" />
+		<widget source="job_task" render="Label" position="center,1010" size="520,30" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
+		<ePixmap position="center,1050" size="600,10" pixmap="selectionbars/activitysliderbackground.png" alphatest="blend" zPosition="-1"/> 
+		<widget source="job_progress" render="Progress" position="center,1050" size="600,10" pixmap="selectionbars/activityslider.png" transparent="1" zPosition="1" />
+		<!-- <widget source="job_progress" render="Label" position="1180,1040" size="300,32" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1">
 			<convert type="ProgressToText" />
-		</widget>
+		</widget> -->
 		<widget name="config" position="680,354" size="480,30" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" zPosition="1" />
-		<widget source="job_status" render="Label" position="680,456" size="1160,40" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" zPosition="1" />
-		<widget source="cancelable" render="Pixmap" pixmap="buttons/red.png" position="80,986" size="35,35" alphatest="blend" transparent="1">
+		<!-- <widget source="cancelable" render="Pixmap" pixmap="buttons/red.png" position="80,986" size="35,35" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="cancelable" render="FixedLabel" text="Cancel" position="120,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1">
@@ -1743,7 +1742,7 @@
 		</widget>
 		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="363,1031" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="1" zPosition="1">
 			<convert type="ConditionalShowHide" />
-		</widget>
+		</widget> -->
 	</screen>
 	
 	<!-- ## Language Selection ## -->
