@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.8.0	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.8.1	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1932,4 +1932,47 @@
 		<widget name="help" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 
+	<!-- ## TMBD ##-->
+	<screen name="TMBD" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<widget name="title" position="650,5" size="800,100" font="Regular;33" foregroundColor="grey" zPosition="1" valign="center" halign="right"/>
+		<widget name="poster" position="780,123" size="165,270" alphatest="blend"/>
+		<widget name="menu" position="980,123" size="945,270" font="Regular;33" itemHeight="45" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="extralabel" position="960,123" size="965,855" font="Regular;30" itemHeight="45" foregroundColor="grey"/>
+		<widget name="detailslabel" position="960,123" size="945,270" font="Regular;30" itemHeight="45" halign="center"/>
+		<widget name="castlabel" position="780,412" size="1132,540" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
+		<widget name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" position="223,570" size="315,31" zPosition="2" alphatest="blend"/>
+		<widget name="stars" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" position="223,570" size="315,31" zPosition="3" transparent="1"/>
+		<widget name="ratinglabel" position="75,615" size="600,36" font="Regular;30" foregroundColor="grey" transparent="1" halign="center"/>
+		<widget name="voteslabel" position="75,660" size="600,36" font="Regular;30" foregroundColor="grey" halign="center"/>
+		<widget name="statusbar" position="7,875" size="765,50" font="Regular;33" halign="center"/>
+		</screen>
+
+	<screen name="TMBDSettings" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<widget name="config" position="780,123" size="1132,874" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+	</screen>	
+
+	<screen name="TmbdYTTrailerList" position="fill" title="YTTrailer List" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget source="list" render="Listbox" position="780,123" size="1132,874" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent" >
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos=(0,0), size=(150,108), png=3), # Thumbnail
+					MultiContentEntryText(pos=(160,1), size=(800,100), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=1)],
+					"fonts": [gFont("Regular",30)],
+				"itemHeight": 108}
+			</convert>
+		</widget>
+		<widget name="thumbnail" position="0,0" size="150,108" /> # Thumbnail size in list
+		<eLabel text="'OK'= Play trailer" backgroundColor="secondBG" position="652,1030" size="330,39" font="menulist;33" halign="left" transparent="1" zPosition="1"/>
+	</screen>
 </skin>
