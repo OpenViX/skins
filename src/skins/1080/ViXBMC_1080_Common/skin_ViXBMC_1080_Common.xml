@@ -1038,16 +1038,14 @@
 
 	<!-- ## JOB VIEW ## -->
 	<screen name="JobView" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="SetupMenuPanel3" />
-		<widget source="job_name" render="Label" position="420,210" size="1080,60" font="screentitle;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<widget source="job_task" render="Label" position="420,280" size="1080,60" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<widget source="job_progress" render="Progress" position="420,350" size="1080,60" foregroundColor="thirdcolour" borderWidth="2" transparent="1" zPosition="2" />
-		<widget source="job_progress" render="Label" position="420,350" size="1080,60" font="screentitle;42" foregroundColor="white" backgroundColor="menubackground" halign="center" transparent="1" zPosition="3">
-			<convert type="ProgressToText" />
-		</widget>
+		<ePixmap position="center,0" size="1200,100" pixmap="ViXBMC_1080_Common/infobar/downloadbar.png" alphatest="blend" zPosition="1"/>
+		<widget source="job_status" render="Label" position="380,25" size="214,48" font="menulist;28" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2" />
+		<widget source="job_name" render="Label" position="620,0" size="860,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
+		<eLabel position="620,52" size="860,1" backgroundColor="maincolour" zPosition="2" />
+		<widget source="job_progress" render="Progress" position="620,50" size="860,5" foregroundColor="thirdcolour" transparent="1" zPosition="3" />
+		<widget source="job_task" render="Label" position="620,50" size="860,50" font="menulist;30" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<widget name="config" position="420,410" size="1080,60" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" zPosition="2" />
-		<widget source="job_status" render="Label" position="420,456" size="1080,60" font="menulist;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<widget source="cancelable" render="Pixmap" pixmap="buttons/key_red.png" position="730,781" size="67,48" alphatest="blend" transparent="1" zPosition="2">
+		<!-- <widget source="cancelable" render="Pixmap" pixmap="buttons/key_red.png" position="730,781" size="67,48" alphatest="blend" transparent="1" zPosition="2">
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="cancelable" render="FixedLabel" text="Cancel" position="800,780" size="400,60" font="menulist;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
@@ -1064,7 +1062,7 @@
 		</widget>
 		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="800,900" size="400,60" font="menulist;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
 			<convert type="ConditionalShowHide" />
-		</widget>
+		</widget> -->
 	</screen>
 
 	<!-- ## LANGUAGES ## -->
