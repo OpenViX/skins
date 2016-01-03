@@ -2229,41 +2229,6 @@
 		<panel name="FullScreenMenuWidget" />
 	</screen>
 
-	<!-- ## TUNER CONFIG ## -->
-	<screen name="NimSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="FullScreenTemplate" />
-		<widget source="nimlist" render="Listbox" position="22,90" size="850,840" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-				MultiContentEntryText(pos = (10,2), size = (830,50), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
-				MultiContentEntryText(pos = (10,45), size = (830,65), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
-				],
-				"fonts": [gFont("menulist",40), gFont("menulist",30)],
-				"itemHeight": 120
-				}
-			</convert>
-		</widget>
-		<panel name="FullScreenRedButtonSource" />
-		<panel name="FullScreenGreenButtonSource" />
-	</screen>
-	<screen name="NimSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="FullScreenTemplate" />
-		<panel name="FullScreenConfigWidget" />
-		<panel name="FullScreenRedButton" />
-		<panel name="FullScreenGreenButton" />
-		<panel name="FullScreenYellowButton" />
-		<panel name="FullScreenBlueButton" />
-	</screen>
-	<screen name="SelectSatsEntryScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="">
-		<panel name="FullScreenTemplate" />
-		<panel name="FullScreenListWidget" />
-		<widget name="hint" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
-		<panel name="FullScreenRedButton" />
-		<panel name="FullScreenGreenButton" />
-		<panel name="FullScreenYellowButton" />
-		<panel name="FullScreenBlueButton" />
-	</screen>
-
 	<!-- ## TIMERS ## -->
 	<screen name="TimerEditList" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -2317,6 +2282,41 @@
 		<applet type="onLayoutFinish">
 			self.autoResize()
 		</applet>
+	</screen>
+
+		<!-- ## TUNER CONFIG ## -->
+	<screen name="NimSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="FullScreenTemplate" />
+		<widget source="nimlist" render="Listbox" position="22,90" size="850,840" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (10,2), size = (830,50), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
+				MultiContentEntryText(pos = (10,45), size = (830,65), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+				],
+				"fonts": [gFont("menulist",36), gFont("menulist",28)],
+				"itemHeight": 120
+				}
+			</convert>
+		</widget>
+		<panel name="FullScreenRedButtonSource" />
+		<panel name="FullScreenGreenButtonSource" />
+	</screen>
+	<screen name="NimSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="FullScreenTemplate" />
+		<panel name="FullScreenConfigWidget" />
+		<panel name="FullScreenRedButton" />
+		<panel name="FullScreenGreenButton" />
+		<panel name="FullScreenYellowButton" />
+		<panel name="FullScreenBlueButton" />
+	</screen>
+	<screen name="SelectSatsEntryScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="">
+		<panel name="FullScreenTemplate" />
+		<panel name="FullScreenListWidget" />
+		<widget name="hint" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
+		<panel name="FullScreenRedButton" />
+		<panel name="FullScreenGreenButton" />
+		<panel name="FullScreenYellowButton" />
+		<panel name="FullScreenBlueButton" />
 	</screen>
 
 	<!-- ## TUNER SERVER ## -->
