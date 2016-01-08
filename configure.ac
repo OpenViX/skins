@@ -321,6 +321,7 @@ src/skins/1080/myNOVUM_FHD2_Black/fonts/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/icons/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/images/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/images/pvrstate/Makefile
+src/skins/1080/myNOVUM_FHD2_Black/images/slider/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/menu/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/meta/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/mmp/Makefile
