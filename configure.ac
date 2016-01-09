@@ -342,6 +342,7 @@ src/skins/1080/NOVUM_FHD_Slim/fonts/Makefile
 src/skins/1080/NOVUM_FHD_Slim/icons/Makefile
 src/skins/1080/NOVUM_FHD_Slim/images/Makefile
 src/skins/1080/NOVUM_FHD_Slim/images/pvrstate/Makefile
+src/skins/1080/NOVUM_FHD_Slim/images/slider/Makefile
 src/skins/1080/NOVUM_FHD_Slim/menu/Makefile
 src/skins/1080/NOVUM_FHD_Slim/meta/Makefile
 src/skins/1080/NOVUM_FHD_Slim/mmp/Makefile
