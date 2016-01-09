@@ -1,9 +1,31 @@
 <skin>
-    <!--  Skin:  Halo 1080p skin By Markus625 -->
+	<!--  Skin_Halo_Timers by markus625  -->
 	<!--  SKIN FILE -->
 	<!--  This skin is OpenSource. Anyone can modify it and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
+	<!--  ## Head ##  -->
+	<!-- ABM -->
+	
+	<screen name="AutoTimerTemplate1" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="AutoTimerTemplate1" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<eLabel position="268,272" size="1372,680" backgroundColor="settings_panel_background" zPosition="-1"/>
+		<eLabel position="268,212" size="1372,60" backgroundColor="settings_panel_titlebar" zPosition="-1"/>
+		<widget source="Title" render="Label" position="288,212" size="1372,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
+		<widget name="list" position="268,272" size="1372,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColorSelected="menubackground" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		<widget source="help" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="268,773" size="1372,60" font="RobotoCondensed-Regular;38" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<panel name="background6_2_Buttons_Source"/>
+	</screen>
+		<screen name="AutoTimerTemplate2" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel text="AutoTimerTemplate1" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<eLabel position="268,272" size="1372,680" backgroundColor="settings_panel_background" zPosition="-1"/>
+		<eLabel position="268,212" size="1372,60" backgroundColor="settings_panel_titlebar" zPosition="-1"/>
+		<widget source="Title" render="Label" position="288,212" size="1372,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
+		<widget name="config" position="268,272" size="1372,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColorSelected="menubackground" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
+		<widget source="help" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="268,773" size="1372,60" font="RobotoCondensed-Regular;38" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+		<panel name="background6_4_Buttons_Source"/>
+		
+	</screen>
 	
 	
 		<screen name="AutoTimerOverview" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -16,24 +38,19 @@
 	</screen>
 	<screen name="AutoTimerEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel text="AutoTimerEditor" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
-		<eLabel position="268,272" size="1372,680" backgroundColor="settings_panel_background" zPosition="-1"/>
-		<eLabel position="268,212" size="1372,60" backgroundColor="settings_panel_titlebar" zPosition="-1"/>
-		<widget source="Title" render="Label" position="288,212" size="1372,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
-		<widget name="config" position="268,272" size="1372,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColorSelected="menubackground" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4"/>
-		<widget source="help" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="268,773" size="1372,60" font="RobotoCondensed-Regular;38" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
-		<panel name="background6_4_Buttons_Source"/>
+			<panel name="AutoTimerTemplate2"/>
 	</screen>
 	<screen name="AutoTimerSettings" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="AutoTimerEditor"/>
+		<panel name="AutoTimerTemplate2"/>
 	</screen>
 	<screen name="AutoTimerImporter" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="AutoTimerEditor"/>
+		<panel name="AutoTimerTemplate1"/>
 	</screen>
 	<screen name="AutoTimerFilterEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="AutoTimerEditor"/>
+	<panel name="AutoTimerTemplate2"/>
 	</screen>
 	<screen name="AutoTimerServiceEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="AutoTimerEditor"/>
+		<panel name="AutoTimerTemplate2"/>
 	</screen>
 
 	
@@ -51,7 +68,7 @@
 	</screen>	
 	
 	<screen name="TimerEntry" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="AutoTimerEditor"/>
+		<panel name="AutoTimerTemplate2"/>
 			
 		<eLabel position="608,876" size="305,60" backgroundColor="Button_Background" zPosition="7"/>
 		<eLabel position="1021,876" size="305,60" backgroundColor="Button_Background" zPosition="7"/>
