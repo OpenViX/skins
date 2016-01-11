@@ -301,6 +301,7 @@ src/skins/1080/myNOVUM_FHD2/fonts/Makefile
 src/skins/1080/myNOVUM_FHD2/icons/Makefile
 src/skins/1080/myNOVUM_FHD2/images/Makefile
 src/skins/1080/myNOVUM_FHD2/images/pvrstate/Makefile
+src/skins/1080/myNOVUM_FHD2/images/slider/Makefile
 src/skins/1080/myNOVUM_FHD2/menu/Makefile
 src/skins/1080/myNOVUM_FHD2/meta/Makefile
 src/skins/1080/myNOVUM_FHD2/mmp/Makefile
