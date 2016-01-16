@@ -1553,9 +1553,10 @@
 		<widget source="menu" render="Listbox" position="680,165" size="1160,750" selectionPixmap="selectionbars/SelectionBar_H150x1160.png" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (275,2), size = (10,61), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
-						MultiContentEntryText(pos = (295,2), size = (260,30), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff),
-						MultiContentEntryText(pos = (675,33), size = (440,30), font = 2, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3, color = 0x003499cc, color_sel = 0x00ffffff),
+						MultiContentEntryText(pos = (275,0), size = (20,60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
+						MultiContentEntryText(pos = (295,0), size = (100,30), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 7, color = 0x003499cc, color_sel = 0x00ffffff),
+						MultiContentEntryText(pos = (390,0), size = (260,30), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff),
+						MultiContentEntryText(pos = (675,33), size = (460,30), font = 2, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3, color = 0x003499cc, color_sel = 0x00ffffff),
 						MultiContentEntryText(pos = (295,33), size = (280,30), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 5, color = 0x003499cc, color_sel = 0x00ffffff),
 						MultiContentEntryText(pos = (295,68), size = (830,76), font = 3, flags = RT_HALIGN_LEFT|RT_WRAP, text = 4, color = 0x00ffffff, color_sel = 0x00ffffff),
 						MultiContentEntryPixmapAlphaBlend(pos=(25,10), size=(220,132), png=6, flags = BT_SCALE)
@@ -1773,7 +1774,7 @@
 	<screen name="LCDdisplayFile" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Select File/Dir..." >
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
-        <widget source="File" render="Label" position="5,0" size="610,100" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="4"/>
+		<widget source="File" render="Label" position="5,0" size="610,100" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="4"/>
 		<widget name="LCDfile" position="5,100" size="610,312" scrollbarMode="showOnDemand" zPosition="4"/>
 		<ePixmap pixmap="buttons/green.png" position="80,1031" size="35,35" alphatest="blend" transparent="1" />
 		<eLabel text="Select" position="120,1033" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1"/>
