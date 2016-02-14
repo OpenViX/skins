@@ -1,6 +1,6 @@
 ﻿<!--suppress XmlUnboundNsPrefix -->
 <skin>
-  <!--	Skin: myNOVUM_FHD2_Black vs.13.5 by Nashu  -->
+  <!--	Skin: myNOVUM_FHD2_Black vs.13.6 by Nashu  -->
   <!--	This skin is a Freeware. Everyone can modify and use it in other images.		-->
   <!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!		-->
   <!--	Do whatever you want with this skin, but don't tell it's yours, or your idea! -->
@@ -11619,7 +11619,7 @@ self.instance.move(ePoint(0,0))
     <eLabel text="OPEN SOURCE" position="315,315" size="300,45" font="Regular;33" backgroundColor="background2" transparent="1" zPosition="1" />
     <widget name="AboutScrollLabel" position="315,525" size="975,480" font="Regular;26" backgroundColor="background" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
     <ePixmap position="1567,863" size="104,37" pixmap="myNOVUM_FHD2_Black/buttons/key_info.png" alphatest="blend" />
-    <eLabel text="Skin myNOVUM_FHD2_Black vs.13.5 by Nashu" position="315,1020" size="705,45" backgroundColor="background2" foregroundColor="unc0d7ff" transparent="1" font="Regular;28" halign="left" />
+    <eLabel text="Skin myNOVUM_FHD2_Black vs.13.6 by Nashu" position="315,1020" size="705,45" backgroundColor="background2" foregroundColor="unc0d7ff" transparent="1" font="Regular;28" halign="left" />
   </screen>
   <screen name="SystemMemoryInfo" position="0,0" size="1920,1080" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
     <ePixmap pixmap="myNOVUM_FHD2_Black/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
@@ -15346,143 +15346,149 @@ self.instance.move(ePoint(0,0))
     <eLabel text="Abbrechen" position="1620,900" size="300,30" font="Regular;24" halign="left" transparent="1" zPosition="1" backgroundColor="menu-buttons-bkgrnd" foregroundColor="menu-buttons-frgrnd" />
   </screen>
   <!-- ## CoolTVGuide Skin ## -->
-  <screen name="CoolChannelGuide" position="0,0" size="1920,1080" title="Cool Channel Guide" backgroundColor="transparent" flags="wfNoBorder">
-    <eLabel text="Cool Channel Guide" position="792,22" size="750,54" font="Regular;39" foregroundColor="ivorywhite" backgroundColor="un2D3033" shadowColor="#000000" halign="center" transparent="1" />
-    <eLabel position="0,0" size="772,1080" backgroundColor="background" zPosition="-2" />
-    <eLabel position="1560,0" size="360,1080" backgroundColor="background" zPosition="-2" />
-    <eLabel position="772,0" size="787,1080" backgroundColor="un2D3033" zPosition="-2" />
-    <widget name="date" position="30,22" size="340,45" font="scoutcondWide; 39" halign="left" foregroundColor="white" backgroundColor="background" transparent="1" />
-    <widget source="global.CurrentTime" render="Label" position="397,22" size="270,45" font="scoutcondWide;39" foregroundColor="white" backgroundColor="background" shadowColor="#000000" halign="left" transparent="1">
+  <screen name="CoolChannelGuide" position="0,0" size="1920,1080" title="Cool Channel Guide" backgroundColor="transparent" flags="wfNoBorder">       
+    <eLabel position="0,160" size="980,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="0,880" size="980,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,80" size="740,930" zPosition="-9" backgroundColor="background70" />    
+    <eLabel position="1135,685" size="680,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1135,320" size="680,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel text="my Cool Channel Guide" position="50,80" size="450,57" halign="left" font="Regular; 36" foregroundColor="preTrans30" backgroundColor="background2" transparent="1" noWrap="1" valign="center" zPosition="4" />
+    <eLabel text="N e x t  E v e n t s:" position="1135,700" size="400,46" halign="left" font="RegularWide; 30" foregroundColor="preTrans30" backgroundColor="background70" transparent="1" noWrap="1" valign="center" zPosition="4" />
+    <widget name="date" position="1335,130" size="400,45" halign="right" font="scoutcondWide; 36" foregroundColor="transpWhite" backgroundColor="background2" transparent="1" noWrap="1" valign="center" zPosition="4" />
+    <widget source="Service" render="CoolPico" position="1135,103" size="180,108" zPosition="1" alphatest="blend" transparent="1" backgroundColor="background80" />
+    <widget backgroundColor="background60" font="scoutcondWide; 30" foregroundColor="preTrans20" halign="right" position="520,84" render="Label" size="400,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
       <convert type="ClockToText">WithSeconds</convert>
     </widget>
-    <widget source="Service" render="CoolPico" position="1635,226" zPosition="1" size="220,132" alphatest="blend" transparent="1" />
-    <widget source="global.CurrentTime" render="Label" position="1570,22" size="330,45" font="scoutcondWide;39" foregroundColor="white" backgroundColor="un2D3033" shadowColor="#000000" halign="center" transparent="1">
-      <convert type="ClockToText">Format:%d.%m.%Y</convert>
+    <widget source="global.CurrentTime" render="Label" position="1735,130" size="130,45" font="scoutcondWide; 36" foregroundColor="transpWhite" backgroundColor="background2" shadowColor="#000000" halign="left" transparent="1">
+      <convert type="ClockToText">Format:%Y</convert>
     </widget>
-    <widget source="session.VideoPicture" render="Pig" position="805,127" size="720,405" zPosition="3" backgroundColor="transparent2" />
-    <widget source="Event" render="Label" position="802,667" size="150,45" font="scoutcondWide; 33" foregroundColor="undddddd" backgroundColor="un2D3033" shadowColor="#00605f5e" halign="right" transparent="1">
+    <widget source="Event" render="Label" position="1135,230" size="112,39" halign="left" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" transparent="1" noWrap="1" zPosition="6" valign="top">
       <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText" />
+      <convert type="ClockToText">Format:%H:%M -</convert>
     </widget>
-    <widget source="Event" render="Label" position="1372,667" size="150,45" font="scoutcondWide; 33" foregroundColor="undddddd" backgroundColor="un2D3033" shadowColor="#00605f5e" halign="left" transparent="1">
+    <widget source="Event" render="Label" position="1115,272" size="112,39" halign="right" font="scoutcondWide; 29" backgroundColor="background2" transparent="1" noWrap="1" zPosition="6" foregroundColor="preTrans50" valign="top">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <widget source="Event" render="Label" position="792,607" size="750,45" font="Regular;28" backgroundColor="un2D3033" shadowColor="#00605f5e" transparent="1" halign="center" foregroundColor="ivorywhite">
+    </widget>   
+    <widget source="Event" render="Label" position="1255,230" size="560,80" halign="left" Valign="top" backgroundColor="background2" font="Regular; 30" foregroundColor="preTrans30" transparent="1" zPosition="6" Wrap="0" valign="top">
       <convert type="EventName">Name</convert>
-    </widget>
-    <ePixmap position="982,682" size="360,15" zPosition="1" pixmap="myNOVUM_FHD2_Black/progress_back.png" />
-    <widget source="Event" render="Progress" position="982,682" size="360,15" pixmap="myNOVUM_FHD2_Black/progress.png" borderWidth="2" borderColor="event-bkgrnd" zPosition="2" transparent="1">
-      <convert type="EventTime">Progress</convert>
+    </widget>    
+    <widget source="Event" render="Label" position="1115,344" size="112,37" font="scoutcondWide; 25" foregroundColor="orange" backgroundColor="background2" halign="right" transparent="1" noWrap="1" valign="center" zPosition="6">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <!-- Running Text Start -->
-    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=3,always=0,oneshot=1,startdelay=5000,wrap" position="792,770" zPosition="0" size="742,250" font="Regular-Light;30" foregroundColor="white" backgroundColor="un2D3033" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=120,repeat=3,always=0,oneshot=1,startdelay=8000,wrap" position="1255,335" size="560,338" font="Regular;27" backgroundColor="background70" foregroundColor="preTrans40" transparent="1" zPosition="6">
       <convert type="EventName">FullDescription</convert>
-    </widget>
+    </widget>    
     <!-- Running Text End -->
-    <widget name="list" position="30,95" size="735,560" itemHeight="70" zPosition="25" CoolPico="35" Coolfont="Regular;28" CoolServicefont="Regular;28" CoolEventFont="Regular;24" CoolServiceSize="305" CoolEventSize="478" CoolServicePos="0" CoolServiceHPos="4" CoolEventPos="0" CoolEventHPos="32" CoolBarPos="320" CoolBarHPos="14" CoolBarSize="100" CoolBarHigh="10" CoolTimePos="350" CoolTimeHPos="9" CoolTimeSize="150" CoolDurationPos="370" CoolDurationSize="100" CoolServiceColor="#FFFFFF" CoolBarColor="#3B98C9" CoolEventColor="#6C6C6C" CoolBackColorSel="myblue1transp1" CoolRecPreColor="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" CoolCurrentCol="#0026D5" selectionPixmap="myNOVUM_FHD2_Black/images/FocusBar.png" foregroundColor="white" backgroundColor="background2" transparent="1" />
-    <widget source="Service" render="CoolNextEvent" position="30,770" size="735,260" font="Regular;26" backgroundColor="background2" foregroundColor="white" transparent="1">
+    <widget name="list" position="0,160" size="980,720" itemHeight="90" zPosition="0" CoolPico="70" CoolPicoPos="4" Coolfont="Regular;26" CoolServicefont="Regular;28" CoolEventFont="Regular;26" CoolServiceSize="700" CoolEventSize="770" CoolServicePos="0" CoolServiceHPos="10" CoolEventPos="0" CoolEventHPos="42" CoolBarPos="790" CoolBarHPos="58" CoolBarSize="70" CoolBarHigh="10" CoolTimePos="790" CoolTimeHPos="42" CoolTimeSize="180" CoolDurationPos="850" CoolServiceColor="white" CoolBarColor="mybluelight3" CoolEventColor="mybluelight3" CoolBackColorSel="background50" CoolRecPreColor="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" CoolCurrentCol="secondFG" selectionPixmap="myNOVUM_FHD2_Black/images/FocusBar_CoolTV.png" backgroundPixmap="myNOVUM_FHD2_Black/images/sel_bg2.png" foregroundColor="white" foregroundColorSelected="mybluelight3" backgroundColor="background50" backgroundColorSelected="background50" transparent="1" scrollbarMode="showNever" />
+    <widget source="Service" render="CoolNextEvent" position="1255,760" size="560,215" font="Regular;26" foregroundColor="preTrans40" backgroundColor="background70" Wrap="0" transparent="1">
     </widget>
-    <widget source="Title" render="Label" position="30,700" size="600,48" zPosition="3" font="Regular;28" foregroundColor="un27ebebeb" backgroundColor="background" halign="left" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
-    <widget name="key_red" position="1620,900" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_green" position="1620,937" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_yellow" position="1620,975" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_blue" position="1620,1012" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <eLabel position="772,585" size="787,1" zPosition="1" backgroundColor="background80" foregroundColor="background80" />
+    <widget source="Title" render="Label" position="290,15" size="630,45" font="Regular; 30" foregroundColor="transpWhite" backgroundColor="background2" transparent="1" zPosition="6" halign="right" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/red.png" position="20,920" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/green.png" position="20,957" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/yellow.png" position="20,994" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/blue.png" position="20,1031" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="72,923" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <widget name="key_green" position="72,960" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <widget name="key_yellow" position="72,997" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <widget name="key_blue" position="72,1034" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <eLabel position="0,0" size="980,1080" zPosition="-10" backgroundColor="background50" />
   </screen>
   <screen name="CoolChannelGuide2" position="0,0" size="1920,1080" title="Cool Channel Guide" backgroundColor="transparent" flags="wfNoBorder">
-    <eLabel text="Cool Channel Guide" position="810,22" size="795,45" font="Regular;39" foregroundColor="ivorywhite" backgroundColor="black" shadowColor="#000000" halign="left" transparent="1" />
-    <widget name="date" position="60,22" size="280,45" font="scoutcondWide; 39" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" />
-    <widget source="session.VideoPicture" render="Pig" position="150,100" size="534,300" zPosition="3" backgroundColor="transparent2" />
-    <widget source="global.CurrentTime" render="Label" position="487,22" size="270,45" font="scoutcondWide;39" foregroundColor="white" backgroundColor="background" shadowColor="#000000" halign="left" transparent="1">
+    <eLabel position="40,180" size="980,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="40,900" size="980,1" backgroundColor="transpWhite3" zPosition="4" /> 
+    <eLabel position="1020,40" size="1,1000" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel text="Cool Channel Guide" position="40,30" size="400,45" font="Regular; 36" foregroundColor="ivorywhite" backgroundColor="black" shadowColor="#000000" halign="left" transparent="1" />
+    <widget name="date" position="1460,38" size="340,45" font="scoutcondWide; 36" halign="right" foregroundColor="transpWhite" backgroundColor="black" transparent="1" />
+    <widget source="global.CurrentTime" render="Label" position="760,110" size="240,45" font="scoutcondWide; 36" foregroundColor="transpWhite" backgroundColor="black" shadowColor="#000000" halign="right" transparent="1">
       <convert type="ClockToText">WithSeconds</convert>
     </widget>
-    <widget source="Service" render="CoolPico" position="360,18" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
-    <widget source="global.CurrentTime" render="Label" position="1570,22" size="330,45" font="scoutcondWide;39" foregroundColor="white" backgroundColor="un2D3033" shadowColor="#000000" halign="center" transparent="1">
-      <convert type="ClockToText">Format:%d.%m.%Y</convert>
+    <widget source="Service" render="CoolPico" position="1083,120" zPosition="1" size="220,132" alphatest="blend" transparent="1" />
+    <widget source="global.CurrentTime" render="Label" position="1800,38" size="130,45" font="scoutcondWide; 36" foregroundColor="transpWhite" backgroundColor="background2" shadowColor="#000000" halign="left" transparent="1">
+      <convert type="ClockToText">Format:%Y</convert>
     </widget>
-    <widget source="Event" render="Label" position="90,427" size="120,45" font="scoutcondWide; 32" foregroundColor="undddddd" backgroundColor="black" shadowColor="#00605f5e" halign="right" transparent="1">
+    <widget source="Event" render="Label" position="1085,500" size="120,45" font="scoutcondWide; 32" foregroundColor="undddddd" backgroundColor="black" shadowColor="#00605f5e" halign="right" transparent="1">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText" />
     </widget>
-    <widget source="Event" render="Label" position="625,427" size="120,45" font="scoutcondWide; 32" foregroundColor="undddddd" backgroundColor="black" shadowColor="#00605f5e" halign="left" transparent="1">
+    <widget source="Event" render="Label" position="1765,500" size="120,45" font="scoutcondWide; 32" foregroundColor="undddddd" backgroundColor="black" shadowColor="#00605f5e" transparent="1">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <widget source="Event" render="Label" position="60,480" size="727,42" font="Regular; 28" foregroundColor="light_blue1" backgroundColor="black" transparent="1" halign="left">
+    <widget source="Event" render="Label" position="1085,440" size="800,45" font="Regular; 32" foregroundColor="mybluelight3" backgroundColor="black" transparent="1">
       <convert type="EventName">Name</convert>
-    </widget>
-    <ePixmap position="229,435" size="375,21" zPosition="1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/progress_back.png" />
-    <widget source="Event" render="Progress" position="229,435" size="375,21" pixmap="myNOVUM_FHD2_Black/progress.png" borderWidth="2" borderColor="black" zPosition="2" transparent="1">
+    </widget>    
+    <widget source="Event" render="Progress" position="1222,513" size="525,16" foregroundColor="mybluelight3" borderWidth="2" borderColor="mybluelight3" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
+    <widget source="session.VideoPicture" render="Pig" position="1345,120" size="534,300" zPosition="3" backgroundColor="transparent2" />
     <!-- Running Text Start -->
-    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=3,always=0,oneshot=1,startdelay=5000,wrap" position="60,537" zPosition="1" size="727,276" font="Regular;25" foregroundColor="undddddd" backgroundColor="black" shadowColor="#00605f5e" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=100,repeat=3,always=0,oneshot=1,startdelay=8000,wrap" position="1085,570" zPosition="1" size="800,338" font="Regular;28" foregroundColor="undddddd" backgroundColor="black" shadowColor="#000000" transparent="1" valign="top">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <!-- Running Text End -->
-    <widget name="list" position="810,95" size="1050,910" itemHeight="70" zPosition="25" CoolPico="28" CoolPicoHPos="1" Coolfont="Regular;28" CoolServiceFont="Regular;28" CoolEventFont="Regular;26" CoolServiceSize="230" CoolEventSize="320" CoolServicePos="1" CoolServiceHPos="1" CoolEventPos="240" CoolEventHPos="3" CoolMarkerPicPos="2" CoolMarkerPicHPos="2" CoolMarkerPos="145" CoolMarkerHPos="1" CoolBar="0" CoolTime="1" CoolTimePos="580" CoolTimeHPos="3" CoolTimeSize="130" CoolDurationPos="650" CoolDurationSize="40" CoolServiceColor="#FFFFFF" CoolBarColor="#3B98C9" CoolEventColor="#C6C6C6" CoolBackColorSel="myblue1transp1" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" CoolCurrentCol="#B59E01" selectionPixmap="myNOVUM_FHD2_Black/images/FocusBar2.png" foregroundColor="black" backgroundColor="un404040" transparent="1" />
-    <eLabel text="Next Events" position="60,823" size="727,37" font="Regular; 27" halign="left" valign="center" foregroundColor="unf23d21" backgroundColor="black" transparent="1" />
-    <widget source="Service" render="CoolNextEvent" position="60,870" size="727,135" font="Regular;25" backgroundColor="black" foregroundColor="white" transparent="1">
+    <widget name="list" position="40,180" size="980,720" itemHeight="90" zPosition="0" CoolPico="70" CoolPicoPos="4" Coolfont="Regular;26" CoolServicefont="Regular;28" CoolEventFont="Regular;26" CoolServiceSize="700" CoolEventSize="770" CoolServicePos="0" CoolServiceHPos="10" CoolEventPos="0" CoolEventHPos="42" CoolBarPos="790" CoolBarHPos="58" CoolBarSize="70" CoolBarHigh="10" CoolTimePos="790" CoolTimeHPos="42" CoolTimeSize="180" CoolDurationPos="850" CoolServiceColor="white" CoolBarColor="mybluelight3" CoolEventColor="mybluelight3" CoolBackColorSel="black" CoolRecPreColor="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" CoolCurrentCol="secondFG" selectionPixmap="myNOVUM_FHD2_Black/images/FocusBar_CoolTV.png" backgroundPixmap="myNOVUM_FHD2_Black/images/sel_bg2.png" foregroundColor="white" foregroundColorSelected="mybluelight3" backgroundColor="black" backgroundColorSelected="black" transparent="1" scrollbarMode="showNever" />
+    <eLabel text="Next Event:" position="1085,930" size="210,37" font="Regular; 30" foregroundColor="unf23d21" backgroundColor="black" transparent="1" />
+    <widget source="Service" render="CoolNextEvent" position="1085,985" size="800,37" font="Regular;30" backgroundColor="black" foregroundColor="white" transparent="1">
     </widget>
-    <widget source="Title" render="Label" position="60,1025" size="345,48" zPosition="3" font="Regular;28" foregroundColor="un8c8c8c" backgroundColor="black" halign="left" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/red.png" position="465,1032" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/green.png" position="832,1033" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/yellow.png" position="1200,1033" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/blue.png" position="1567,1033" size="37,37" alphatest="blend" transparent="1" />
-    <widget name="key_red" position="517,1033" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_green" position="885,1032" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_yellow" position="1252,1032" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_blue" position="1620,1032" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <eLabel position="0,0" size="1920,1080" backgroundColor="black" zPosition="-10" />
+    <widget source="Title" render="Label" position="40,110" size="545,48" zPosition="3" font="Regular; 30" foregroundColor="un8c8c8c" backgroundColor="black" halign="left" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/red.png" position="40,920" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/green.png" position="40,957" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/yellow.png" position="40,994" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/blue.png" position="40,1031" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="92,923" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <widget name="key_green" position="92,960" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <widget name="key_yellow" position="92,997" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <widget name="key_blue" position="92,1034" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <eLabel position="0,0" size="1920,1080" backgroundColor="background20" zPosition="-10" />
   </screen>
   <screen name="CoolChannelGuide3" position="0,0" size="1920,1080" title="Cool Channel Guide" backgroundColor="transparent" flags="wfNoBorder">
-    <eLabel text="Cool Channel Guide" position="810,22" size="780,45" font="Regular;39" foregroundColor="ivorywhite" backgroundColor="black" shadowColor="#000000" halign="left" transparent="1" />
-    <widget name="date" position="60,22" size="280,45" font="scoutcondWide; 39" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" />
-    <widget source="global.CurrentTime" render="Label" position="487,22" size="240,45" font="scoutcondWide;39" foregroundColor="white" backgroundColor="black" shadowColor="#000000" halign="left" transparent="1">
+    <eLabel position="40,180" size="980,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="40,900" size="980,1" backgroundColor="transpWhite3" zPosition="4" /> 
+    <eLabel position="1020,40" size="1,1000" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel text="Cool Channel Guide" position="40,30" size="400,45" font="Regular; 36" foregroundColor="ivorywhite" backgroundColor="black" shadowColor="#000000" halign="left" transparent="1" />
+    <widget name="date" position="1460,38" size="340,45" font="scoutcondWide; 36" halign="right" foregroundColor="transpWhite" backgroundColor="black" transparent="1" />
+    <widget source="global.CurrentTime" render="Label" position="760,110" size="240,45" font="scoutcondWide; 36" foregroundColor="transpWhite" backgroundColor="black" shadowColor="#000000" halign="right" transparent="1">
       <convert type="ClockToText">WithSeconds</convert>
     </widget>
-    <widget source="Service" render="CoolPico" position="360,18" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
-    <widget source="global.CurrentTime" render="Label" position="1570,22" size="330,45" font="scoutcondWide;39" foregroundColor="white" backgroundColor="un2D3033" shadowColor="#000000" halign="center" transparent="1">
-      <convert type="ClockToText">Format:%d.%m.%Y</convert>
+    <widget source="Service" render="CoolPico" position="1085,90" zPosition="1" size="220,132" alphatest="blend" transparent="1" />
+    <widget source="global.CurrentTime" render="Label" position="1800,38" size="130,45" font="scoutcondWide; 36" foregroundColor="transpWhite" backgroundColor="background2" shadowColor="#000000" halign="left" transparent="1">
+      <convert type="ClockToText">Format:%Y</convert>
     </widget>
-    <widget source="Event" render="Label" position="1020,870" size="120,45" font="scoutcondWide; 32" foregroundColor="undddddd" backgroundColor="black" shadowColor="#00605f5e" halign="right" transparent="1">
+    <widget source="Event" render="Label" position="1085,320" size="120,45" font="scoutcondWide; 32" foregroundColor="undddddd" backgroundColor="black" shadowColor="#00605f5e" halign="right" transparent="1">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText" />
     </widget>
-    <widget source="Event" render="Label" position="1735,870" size="120,45" font="scoutcondWide; 32" foregroundColor="undddddd" backgroundColor="black" shadowColor="#00605f5e" transparent="1">
+    <widget source="Event" render="Label" position="1765,320" size="120,45" font="scoutcondWide; 32" foregroundColor="undddddd" backgroundColor="black" shadowColor="#00605f5e" transparent="1">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <widget source="Event" render="Label" position="60,870" size="945,45" font="Regular; 32" foregroundColor="light_blue1" backgroundColor="black" transparent="1">
+    <widget source="Event" render="Label" position="1085,250" size="800,45" font="Regular; 32" foregroundColor="mybluelight3" backgroundColor="black" transparent="1">
       <convert type="EventName">Name</convert>
-    </widget>
-    <ePixmap position="1175,878" size="525,21" zPosition="1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/progress_back.png" />
-    <widget source="Event" render="Progress" position="1175,878" size="525,21" pixmap="myNOVUM_FHD2_Black/progress.png" borderWidth="2" borderColor="black" zPosition="2" transparent="1">
+    </widget>    
+    <widget source="Event" render="Progress" position="1222,333" size="525,16" foregroundColor="mybluelight3" borderWidth="2" borderColor="mybluelight3" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <!-- Running Text Start -->
-    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=100,repeat=3,always=0,oneshot=1,startdelay=8000,wrap" position="60,930" zPosition="1" size="1800,85" font="Regular;25" foregroundColor="undddddd" backgroundColor="black" shadowColor="#000000" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=100,repeat=3,always=0,oneshot=1,startdelay=8000,wrap" position="1085,405" zPosition="1" size="800,500" font="Regular;28" foregroundColor="undddddd" backgroundColor="black" shadowColor="#000000" transparent="1" valign="top">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <!-- Running Text End -->
-    <widget name="list" position="60,200" size="1800,630" itemHeight="70" zPosition="25" CoolPico="28" CoolPicoHPos="1" Coolfont="Regular;28" CoolServiceFont="Regular;28" CoolEventFont="Regular;26" CoolServiceSize="320" CoolEventSize="710" CoolServicePos="1" CoolServiceHPos="1" CoolEventPos="330" CoolEventHPos="3" CoolMarkerPicPos="2" CoolMarkerPicHPos="1" CoolMarkerHPos="1" CoolMarkerPos="350" CoolBarPos="1065" CoolBarHPos="8" CoolBarSize="70" CoolBarHigh="10" CoolTimePos="1080" CoolTimeHPos="3" CoolTimeSize="130" CoolDurationPos="1090" CoolDurationSize="100" CoolServiceColor="#FF6600" CoolBarColor="#3B98C9" CoolEventColor="#FFFFFF" CoolBackColorSel="myblue1transp1" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" CoolCurrentCol="#00e5b243" selectionPixmap="myNOVUM_FHD2_Black/images/FocusBar2.png" foregroundColor="black" backgroundColor="un404040" transparent="1" />
-    <eLabel text="Next Event:" position="60,85" size="210,37" font="Regular; 30" foregroundColor="unf23d21" backgroundColor="black" transparent="1" />
-    <widget source="Service" render="CoolNextEvent" position="285,88" size="1560,85" font="Regular;25" backgroundColor="black" foregroundColor="white" transparent="1">
+    <widget name="list" position="40,180" size="980,720" itemHeight="90" zPosition="0" CoolPico="70" CoolPicoPos="4" Coolfont="Regular;26" CoolServicefont="Regular;28" CoolEventFont="Regular;26" CoolServiceSize="700" CoolEventSize="770" CoolServicePos="0" CoolServiceHPos="10" CoolEventPos="0" CoolEventHPos="42" CoolBarPos="790" CoolBarHPos="58" CoolBarSize="70" CoolBarHigh="10" CoolTimePos="790" CoolTimeHPos="42" CoolTimeSize="180" CoolDurationPos="850" CoolServiceColor="white" CoolBarColor="mybluelight3" CoolEventColor="mybluelight3" CoolBackColorSel="background20" CoolRecPreColor="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" CoolCurrentCol="secondFG" selectionPixmap="myNOVUM_FHD2_Black/images/FocusBar_CoolTV.png" backgroundPixmap="myNOVUM_FHD2_Black/images/sel_bg2.png" foregroundColor="white" foregroundColorSelected="mybluelight3" backgroundColor="background20" backgroundColorSelected="background20" transparent="1" scrollbarMode="showNever" />
+    <eLabel text="Next Event:" position="1085,930" size="210,37" font="Regular; 30" foregroundColor="unf23d21" backgroundColor="black" transparent="1" />
+    <widget source="Service" render="CoolNextEvent" position="1085,985" size="800,37" font="Regular;30" backgroundColor="black" foregroundColor="white" transparent="1">
     </widget>
-    <widget source="Title" render="Label" position="60,1025" size="345,48" zPosition="3" font="Regular;28" foregroundColor="un8c8c8c" backgroundColor="black" halign="left" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/red.png" position="465,1032" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/green.png" position="832,1033" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/yellow.png" position="1200,1033" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/blue.png" position="1567,1033" size="37,37" alphatest="blend" transparent="1" />
-    <widget name="key_red" position="517,1033" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_green" position="885,1032" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_yellow" position="1252,1032" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_blue" position="1620,1032" size="300,32" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget source="Title" render="Label" position="40,110" size="545,48" zPosition="3" font="Regular; 30" foregroundColor="un8c8c8c" backgroundColor="black" halign="left" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/red.png" position="40,920" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/green.png" position="40,957" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/yellow.png" position="40,994" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="myNOVUM_FHD2_Black/buttons/blue.png" position="40,1031" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="92,923" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <widget name="key_green" position="92,960" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <widget name="key_yellow" position="92,997" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
+    <widget name="key_blue" position="92,1034" size="340,30" zPosition="1" font="scoutcondWide; 29" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
     <eLabel position="0,0" size="1920,1080" backgroundColor="background20" zPosition="-10" />
   </screen>
   <screen name="CoolUniGuide" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
