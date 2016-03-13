@@ -347,11 +347,11 @@
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="1380,50" size="492,270" backgroundColor="transparent" zPosition="4"/>
-		<widget source="global.CurrentTime" render="Label" position="1567,330" zPosition="1" size="150,38" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="centre">
+		<widget source="global.CurrentTime" render="Label" position="1567,330" zPosition="1" size="150,38" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center">
 			<convert type="ClockToText">Format:%a %e %h</convert>
 		</widget>
 		<ePixmap position="1735,332" size="24,24" pixmap="YouViX-Common/icons/clock.png" alphatest="blend" zPosition="1"/>
-		<widget source="global.CurrentTime" render="Label" position="1775,330" zPosition="1" size="100,38" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="centre">
+		<widget source="global.CurrentTime" render="Label" position="1775,330" zPosition="1" size="100,38" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<ePixmap position="center,335" size="50,32" pixmap="icons/arrow-up.png" alphatest="blend" zPosition="1"/>
@@ -359,10 +359,10 @@
 		<widget name="timeline_now" position="center,409" size="19,350" pixmap="epg/timeline-now.png" transparent="1" alphatest="blend" zPosition="3" />
 		<widget name="bouquetlist" position="center,422" size="1760,595" itemHeight="50" backgroundColor="menubackground" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
 		<widget name="lab1" position="center,422" size="1760,600" font="youvix-r;24" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
-		<widget name="list" position="center,422" size="1760,600" ServiceFontGraphical="youvix-r;30" EntryFontGraphical="youvix-r;30" EntryFontWrap="no" EventNamePadding="10" backgroundColor="menubackground" ServiceForegroundColor="white" ServiceBackgroundColor="black" ServiceForegroundColorNow="white" ServiceBackgroundColorNow="darkergrey" EntryForegroundColor="white" EntryBackgroundColor="darkgrey" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="darkcolour" EntryForegroundColorNow="white" EntryBackgroundColorNow="darkergrey" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="darkcolour" RecordForegroundColorSelected="white" ZapForegroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="3" />	
+		<widget name="list" position="center,422" size="1760,600" ServiceFontGraphical="youvix-r;30" EntryFontGraphical="youvix-r;30" EntryFontWrap="no" EventNamePadding="10" backgroundColor="menubackground" ServiceForegroundColor="white" ServiceBackgroundColor="black" ServiceForegroundColorNow="white" ServiceBackgroundColorNow="darkergrey" EntryForegroundColor="white" EntryBackgroundColor="darkgrey" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="darkcolour" EntryForegroundColorNow="white" EntryBackgroundColorNow="darkergrey" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="darkcolour" RecordForegroundColorSelected="white" ZapForegroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="3" />
 		<ePixmap pixmap="icons/arrow-left.png" position="25,700" size="32,48" zPosition="5" alphatest="blend" />
 		<ePixmap pixmap="icons/arrow-right.png" position="1865,700" size="32,48" zPosition="5" alphatest="blend" />
-		<ePixmap position="center,1030" size="50,32" pixmap="icons/arrow-down.png" alphatest="blend" zPosition="1"/>	
+		<ePixmap position="center,1030" size="50,32" pixmap="icons/arrow-down.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="buttons/red.png" position="460,1028" size="35,35" alphatest="blend" transparent="1" />
 		<widget source="key_red" render="Label" position="500,1021" size="218,50" zPosition="1" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" noWrap="1" />
 		<ePixmap pixmap="buttons/green.png" position="715,1028" size="35,35" alphatest="blend" transparent="1" />
@@ -371,7 +371,7 @@
 		<widget source="key_yellow" render="Label" position="1095,1021" size="218,50" zPosition="1" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" noWrap="1" />
 		<ePixmap pixmap="buttons/blue.png" position="1300,1028" size="35,35" alphatest="blend" transparent="1" />
 		<widget source="key_blue" render="Label" position="1340,1021" size="218,50" zPosition="1" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" noWrap="1" />
-		<ePixmap pixmap="buttons/key_menu.png" position="1852,1025" size="53,38" alphatest="blend" transparent="1" />	
+		<ePixmap pixmap="buttons/key_menu.png" position="1852,1025" size="53,38" alphatest="blend" transparent="1" />
 	</screen>
 
 	<!-- #### GENERAL SCREENS #### -->
@@ -2723,6 +2723,26 @@
 		<panel name="MenuButtonGreenSource" />
 	</screen>
 
+	<!-- ## OSD 3D Setup ## -->
+	<screen name="OSD3DSetupScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
+		<panel name="BigMenuPanel" />
+		<panel name="MenuMySetupText" />
+		<panel name="MenuConfigWidget" />
+		<ePixmap pixmap="buttons/red.png" position="80,986" size="35,35" alphatest="blend" transparent="1" />
+		<widget name="cancel" render="Label" position="120,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1"/>
+		<ePixmap pixmap="buttons/green.png" position="80,1031" size="35,35" alphatest="blend" transparent="1" />
+		<widget name="ok" render="Label" position="120,1033" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1"/>
+	</screen>
+
+	<!-- ## OSD Position Setup ## -->
+	<screen name="OSDScreenPosition" position="fill" flags="wfNoBorder" backgroundColor="darkergrey" >
+		<panel name="MenuConfigWidget" />
+		<ePixmap pixmap="buttons/red.png" position="80,986" size="35,35" alphatest="blend" transparent="1" />
+		<widget name="cancel" render="Label" position="120,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1"/>
+		<ePixmap pixmap="buttons/green.png" position="80,1031" size="35,35" alphatest="blend" transparent="1" />
+		<widget name="ok" render="Label" position="120,1033" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1"/>
+	</screen>
+
 	<!-- ## Parental Control ## -->
 	<screen name="ParentalControlSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
@@ -3439,7 +3459,7 @@
 		<panel name="MenuMyTunersText" />
 		<panel name="MenuListWidget" />
 		<widget name="hint" position="80,765" size="590,150" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1"/>
-	    <panel name="MenuButtonRed" />
+		<panel name="MenuButtonRed" />
 		<panel name="MenuButtonGreen" />
 		<panel name="MenuButtonYellow" />
 		<panel name="MenuButtonBlue" />
@@ -3547,7 +3567,7 @@
 		</widget>
 		<panel name="MenuButtonRed" />
 		<panel name="MenuButtonGreen" />
-        <panel name="MenuButtonYellow" />
+		<panel name="MenuButtonYellow" />
 		<panel name="MenuButtonBlue" />
 	</screen>
 	<screen name="VIXPartitionPanelConf" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -3636,7 +3656,7 @@
 		<widget name="entrylist" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H50x1160.png" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1"/>
 		<panel name="MenuButtonRedSource" />
 		<panel name="MenuButtonGreenSource" />
-        <panel name="MenuButtonYellowSource" />
+		<panel name="MenuButtonYellowSource" />
 		<panel name="MenuButtonBlueSource" />
 	</screen>
 	<screen name="MSNWeatherPluginEntryConfigScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -3722,7 +3742,7 @@
 	</screen>
 
 	<!-- ## XMLTV Importer ## -->
-	<screen name="EPGMainSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="XMLTVImportConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
 		<panel name="MenuConfigWidget" />
@@ -3930,5 +3950,90 @@
 
 	<screen name="InstallWizardIpkgUpdater" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="statusbar" render="Label" position="150,140" size="730,250" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
+	</screen>
+	
+		<!-- ## OPENBLACKHOLE ## -->
+	<screen name="DeliteBluePanel" position="fill" flags="wfNoBorder" title="Open Black Hole Blue Panel" backgroundColor="transparent">
+		<panel name="BigMenuPanel" />
+		<panel name="MenuMyOBHBluePanelText" />
+		<widget name="lab2" position="680,165" size="1160,50" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+		<widget name="lab1" position="680,165" size="1160,50" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="2"/>
+		<ePixmap position="1585,226" size="32,48" pixmap="icons/arrow-right.png" alphatest="blend" zPosition="1"/>
+		<widget name="list" position="975,225" size="590,50" font="youvix-r;28" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H50x590.png" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+		<ePixmap position="925,226" size="32,48" pixmap="icons/arrow-left.png" alphatest="blend" zPosition="1"/>
+		<widget name="activecam" position="680,295" size="1160,50" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/> 
+		<widget name="Ecmtext" position="680,400" size="1160,400" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" zPosition="2"/>
+		<widget name="Ilab1" position="80,745" size="590,50" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+		<widget name="Ilab2" position="80,785" size="590,50" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+		<widget name="Ilab3" position="80,825" size="590,50" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+		<widget name="Ilab4" position="80,865" size="590,50" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+		<widget name="lab3" position="30,120" size="185,50" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<panel name="MenuButtonRed" />
+		<panel name="MenuButtonYellow" />
+		<panel name="MenuButtonBlue" />
+	</screen>
+	<screen name="BhsysInfo" position="fill" flags="wfNoBorder" title="Open Black Hole System Info Panel" backgroundColor="transparent">
+		<panel name="InfoPanel" />
+		<panel name="MenuMyOBHSystemPanelText" />
+		<widget name="lab1" position="680,165" size="1160,750" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" zPosition="2"/>
+	</screen>
+	<screen name="DeliteSettings" position="fill" flags="wfNoBorder" title="Open Black Hole Extras Panel" backgroundColor="transparent">
+		<panel name="MenuPanel" />
+		<panel name="MenuMyOBHAppsPanelText" />
+		<widget source="list" render="Listbox" position="80,165" size="590,750" backgroundPixmap="selectionbars/MenuSelectionBarBackground_H50x700.png" selectionPixmap="selectionbars/MenuSelectionBar_H50x590.png" foregroundColor="white" backgroundColor="menubackground2" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (70,0), size = (465,50), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER, text = 0 ) ],
+				"fonts": [gFont("youvix-r",32)],
+				"itemHeight":50
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="BhEpgPanel" position="fill" flags="wfNoBorder" title="Open Black Hole EPG Panel" backgroundColor="transparent">
+		<panel name="BigMenuPanel" />
+		<panel name="MenuMyOBHEPGPanelText" />
+		<widget source="list" render="Listbox" position="680,165" size="1160,750" font="youvix-r;28" selectionPixmap="selectionbars/SelectionBar_H50x1160.png" foregroundColor="white" backgroundColor="menubackground" transparent="1" itemHeight="50" scrollbarMode="showOnDemand" zPosition="2" >
+			<convert type="StringList" />
+		</widget>
+	</screen>
+	<screen name="DeliteDevicesPanel" position="fill" flags="wfNoBorder" title="Open Black Hole Device Manager" backgroundColor="transparent">
+		<panel name="BigMenuPanel" />
+		<panel name="MenuMyOBHDevicesPanelText" />
+		<widget source="list" render="Listbox" position="680,195" size="1160,720" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="menubackground" selectionPixmap="selectionbars/SelectionBar_H130x1160.png" transparent="1" zPosition="2" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (150, 5), size = (1140, 50), font=0, text = 0),
+				MultiContentEntryText(pos = (150, 50), size = (1140, 90), font=1, flags = RT_VALIGN_TOP, text = 1),
+				MultiContentEntryPixmapAlphaBlend(pos = (10,5), size = (120,120), png = 2),
+				],
+				"fonts": [gFont("youvix-r", 32),gFont("youvix-r", 28)],
+				"itemHeight": 130
+				}
+			</convert>
+		</widget>
+		<widget name="lab1" position="680,195" size="1160,750" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2"/>
+		<panel name="MenuButtonRed" />
+		<panel name="MenuButtonYellow" />
+	</screen>
+	<screen name="DeliteSetupDevicePanelConf" position="fill" flags="wfNoBorder" title="Open Black Hole Device Manager" backgroundColor="transparent">
+		<panel name="BigMenuPanel" />
+		<panel name="MenuMyOBHDevicesPanelText" />
+		<panel name="MenuConfigWidget" />
+		<panel name="MenuButtonRed" />
+		<panel name="MenuButtonGreen" />
+	</screen>
+	<screen name="BhBackupSettings" position="fill" flags="wfNoBorder" title="Open Black Hole Device Manager" backgroundColor="transparent">
+		<panel name="BigMenuPanel" />
+		<panel name="MenuMyOBHBackupPanelText" />
+		<widget name="infotext" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H50x1160.png" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
+		<panel name="MenuButtonRed" />
+	</screen>
+	<screen name="EGPSelectEPGSources" position="fill" flags="wfNoBorder" title="Select EPG sources" zPosition="2" >
+		<panel name="BigMenuPanel" />
+		<panel name="MenuMyOBHEPGPanelText" />
+		<panel name="MenuListWidget" />
+		<widget name="videoPicture" position="720,20" size="500,273" zPosition="1" backgroundColor="transparent" />
+		<panel name="MenuButtonGreen" />
+		<panel name="MenuButtonBlue" />
 	</screen>
 </skin>
