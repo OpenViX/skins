@@ -1,6 +1,6 @@
 ﻿<!--suppress XmlUnboundNsPrefix -->
 <skin>
-  <!--	Skin: myNOVUM_FHD2 vs.14.9 by Nashu  -->
+  <!--	Skin: myNOVUM_FHD2 vs.15.1 by Nashu  -->
   <!--	This skin is a Freeware. Everyone can modify and use it in other images.		-->
   <!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!		-->
   <!--	Do whatever you want with this skin, but don't tell it's yours, or your idea! -->
@@ -3212,19 +3212,18 @@
     <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <widget name="menu" scrollbarMode="showOnDemand" selectionPixmap="myNOVUM_FHD2/images/FocusBar.png" font="Regular;28" position="210,240" size="1200,720" foregroundColor="lightgrey" backgroundColor="background2" transparent="1" itemHeight="40" enableWrapAround="1" />
   </screen>
-  <screen name="InfoBarEventView" position="67,15" size="754,710" backgroundColor="transparent" flags="wfNoBorder" zPosition="1">
-    <eLabel position="0,0" size="754,710" backgroundColor="background90" transparent="0" zPosition="-11" />
-    <widget name="datetime" position="24,170" size="450,40" font="scoutcondWide; 32" foregroundColor="transpWhite" backgroundColor="background90transp" transparent="1" noWrap="1" valign="center" halign="left" zPosition="2" />
-    <widget name="duration" position="490,170" size="240,40" font="scoutcondWide; 32" foregroundColor="light_blue" backgroundColor="background90transp1" transparent="1" noWrap="1" valign="center" halign="right" zPosition="2" />
+  <screen name="InfoBarEventView" position="0,0" size="775,750" backgroundColor="background90" flags="wfNoBorder" zPosition="1">   
+    <widget name="datetime" position="20,65" size="460,50" font="scoutcondWide; 36" foregroundColor="preTrans30" backgroundColor="background90" transparent="1" noWrap="1" valign="center" halign="left" zPosition="2" />
+    <widget name="duration" position="20,145" size="300,50" font="scoutcondWide; 36" foregroundColor="light_blue1" backgroundColor="background90" transparent="1" noWrap="1" valign="center" halign="left" zPosition="2" />
     <!-- neu start -->
-    <widget source="Event" render="Label" position="24,223" size="705,450" halign="left" Valign="top" backgroundColor="background90transp" font="Regular;28" foregroundColor="white" transparent="1" zPosition="6" Wrap="0">
+    <widget source="Event" render="Label" position="20,250" size="730,460" halign="left" Valign="top" backgroundColor="background90" font="Regular; 34" foregroundColor="white" transparent="1" zPosition="6" Wrap="0">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Service" render="Picon" position="24,30" size="200,120" transparent="0" zPosition="3" alphatest="blend">
+    <widget source="Service" render="Picon" position="480,45" size="267,160" transparent="0" zPosition="3" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <!-- Running Text Start -->
-    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="33,325" size="690,312" font="Regular;30" foregroundColor="white" backgroundColor="background90transp" transparent="1">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="20,385" size="730,310" font="Regular;28" foregroundColor="white" backgroundColor="background90" transparent="1">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <!-- Running Text End -->
@@ -11629,7 +11628,7 @@ self.instance.move(ePoint(0,0))
     <widget source="lab3" render="Label" position="315,450" size="975,60" font="Regular;28" backgroundColor="background2" transparent="1" zPosition="1" />
     <eLabel text="OPEN SOURCE" position="315,315" size="300,45" font="Regular;33" backgroundColor="background2" transparent="1" zPosition="1" />
     <widget name="AboutScrollLabel" position="315,525" size="975,480" font="Regular;26" backgroundColor="background" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
-    <eLabel text="Skin myNOVUM_FHD2 vs.14.9 by Nashu" position="315,1020" size="705,45" backgroundColor="background2" foregroundColor="unc0d7ff" transparent="1" font="Regular;28" halign="left" />
+    <eLabel text="Skin myNOVUM_FHD2 vs.15.1 by Nashu" position="315,1020" size="705,45" backgroundColor="background2" foregroundColor="unc0d7ff" transparent="1" font="Regular;28" halign="left" />
   </screen>
   <screen name="SystemMemoryInfo" position="0,0" size="1920,1080" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
     <ePixmap pixmap="myNOVUM_FHD2/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
@@ -27905,10 +27904,19 @@ self.instance.move(ePoint(0,0))
   </screen>
   <!-- SkyRecorder -->
   <screen name="SkyRecorderArchiv" position="center,center" size="1920,1080" title="SkyRecorder" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -27923,17 +27931,17 @@ self.instance.move(ePoint(0,0))
     <widget name="handlung" position="60,790" size="1030,280" backgroundColor="background2" transparent="1" font="Regular; 24" valign="top" halign="left" zPosition="1" foregroundColor="preTrans30" />
     <widget name="searchlist_bg" position="295,330" size="800,720" backgroundColor="background10" transparent="0" zPosition="4" />
     <widget name="searchlist" position="310,380" size="770,520" itemHeight="40" font="Regular;26" backgroundColor="background10" scrollbarMode="showOnDemand" transparent="0" zPosition="5" selectionPixmap="myNOVUM_FHD2/images/FocusBar.png" />
-    <widget name="searchlist_red" backgroundColor="background2" pixmap="myNOVUM_FHD2/buttons/red.png" position="360,982" zPosition="5" size="37,37" alphatest="blend" />
-    <widget name="searchlist_green" backgroundColor="background2" pixmap="myNOVUM_FHD2/buttons/green.png" position="600,982" zPosition="5" size="37,37" alphatest="blend" />
-    <widget name="searchlist_yellow" backgroundColor="background2" pixmap="myNOVUM_FHD2/buttons/yellow.png" position="840,982" zPosition="5" size="37,37" alphatest="blend" />
+    <widget name="searchlist_red" pixmap="myNOVUM_FHD2/buttons/red.png" position="360,982" zPosition="5" size="37,37" alphatest="blend" />
+    <widget name="searchlist_green" pixmap="myNOVUM_FHD2/buttons/green.png" position="600,982" zPosition="5" size="37,37" alphatest="blend" />
+    <widget name="searchlist_yellow" pixmap="myNOVUM_FHD2/buttons/yellow.png" position="840,982" zPosition="5" size="37,37" alphatest="blend" />
     <widget name="searchlist_red_label" position="415,985" size="170,30" backgroundColor="menu-buttons-bkgrnd" transparent="1" zPosition="5" font="Regular;24" halign="left" foregroundColor="menu-buttons-frgrnd" />
-    <widget name="searchlist_green_label" position="655,985" size="170,30" backgroundColor="menu-buttons-bkgrnd" transparent="1" zPosition="4" font="Regular;24" halign="left" foregroundColor="menu-title_frgrnd" />
+    <widget name="searchlist_green_label" position="655,985" size="170,30" backgroundColor="menu-buttons-bkgrnd" transparent="1" zPosition="4" font="Regular;24" halign="left" foregroundColor="menu-buttons-frgrnd" />
     <widget name="searchlist_yellow_label" position="895,985" size="170,30" backgroundColor="menu-buttons-bkgrnd" transparent="1" zPosition="4" font="Regular;24" halign="left" foregroundColor="menu-buttons-frgrnd" />
     <widget name="movieinfo_bg" position="295,330" size="800,720" backgroundColor="background10" transparent="0" zPosition="4" />
     <widget name="movieinfo" position="310,350" size="770,675" backgroundColor="background10" scrollbarMode="showOnDemand" transparent="0" zPosition="5" selectionPixmap="myNOVUM_FHD2/images/FocusBar.png" foregroundColor="ivorywhite" font="Regular; 24" />
-    <widget name="movieinfo_red" backgroundColor="background" pixmap="myNOVUM_FHD2/buttons/red.png" position="360,982" zPosition="4" size="37,37" alphatest="blend" />
-    <widget name="movieinfo_green" backgroundColor="background" pixmap="myNOVUM_FHD2/buttons/green.png" position="600,982" zPosition="4" size="37,37" alphatest="blend" />
-    <widget name="movieinfo_red_label" position="415,985" size="170,30" backgroundColor="event-bkgrnd" transparent="1" zPosition="4" font="Regular;24" valign="center" halign="left" />
+    <widget name="movieinfo_red" pixmap="myNOVUM_FHD2/buttons/red.png" position="360,982" zPosition="4" size="37,37" alphatest="blend" />
+    <widget name="movieinfo_green" pixmap="myNOVUM_FHD2/buttons/green.png" position="600,982" zPosition="4" size="37,37" alphatest="blend" />
+    <widget name="movieinfo_red_label" position="415,985" size="170,30" backgroundColor="menu-buttons-bkgrnd" foregroundColor="menu-buttons-frgrnd" transparent="1" zPosition="4" font="Regular;24" valign="center" halign="left" />
     <widget name="movieinfo_green_label" position="655,985" size="170,30" backgroundColor="menu-buttons-bkgrnd" transparent="1" zPosition="4" font="Regular;24" valign="center" halign="left" foregroundColor="menu-buttons-frgrnd" />
     <ePixmap pixmap="myNOVUM_FHD2/buttons/red.png" position="1120,1000" size="37,37" alphatest="blend" transparent="1" />
     <ePixmap pixmap="myNOVUM_FHD2/buttons/green.png" position="1120,1037" size="37,37" alphatest="blend" transparent="1" />
@@ -27973,10 +27981,19 @@ self.instance.move(ePoint(0,0))
     <ePixmap name="nostar9" transparent="1" zPosition="2" position="1350,335" size="36,36" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/NoStar2.png" alphatest="blend" />
   </screen>
   <screen name="SkyChannelSelect" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -27986,10 +28003,19 @@ self.instance.move(ePoint(0,0))
     <eLabel text="Sendernamen umschlüsseln" position="1172,1037" size="500,30" zPosition="1" font="Regular;24" halign="left" backgroundColor="menu-buttons-bkgrnd" transparent="1" foregroundColor="menu-buttons-frgrnd" valign="center" />
   </screen>
   <screen name="SkyChannelEditor" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -28002,10 +28028,19 @@ self.instance.move(ePoint(0,0))
     <eLabel text="Eintrag löschen" position="1172,1037" size="300,30" zPosition="1" font="Regular;24" halign="left" backgroundColor="menu-buttons-bkgrnd" transparent="1" foregroundColor="menu-buttons-frgrnd" />
   </screen>
   <screen name="SkySelectAnytimeFolder" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -28018,10 +28053,19 @@ self.instance.move(ePoint(0,0))
     <eLabel text="Speichern" position="1172,1037" size="300,30" zPosition="1" font="Regular;24" halign="left" backgroundColor="menu-buttons-bkgrnd" transparent="1" foregroundColor="menu-buttons-frgrnd" />
   </screen>
   <screen name="SkySelectSkydbFolder" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -28034,10 +28078,19 @@ self.instance.move(ePoint(0,0))
     <eLabel text="Speichern" position="1172,1037" size="300,30" zPosition="1" font="Regular;24" halign="left" backgroundColor="menu-buttons-bkgrnd" transparent="1" foregroundColor="menu-buttons-frgrnd" />
   </screen>
   <screen name="SkyGenreSelect" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -28052,10 +28105,19 @@ self.instance.move(ePoint(0,0))
     -->
   </screen>
   <screen name="SkyRecorderMainScreen" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -28080,10 +28142,10 @@ self.instance.move(ePoint(0,0))
     <widget name="filmliste_event_bg" position="295,330" size="800,720" backgroundColor="background10" transparent="0" zPosition="4" />
     <widget name="filmliste_event" position="310,380" size="770,520" itemHeight="40" font="Regular;26" backgroundColor="background10" scrollbarMode="showOnDemand" transparent="0" zPosition="5" selectionPixmap="myNOVUM_FHD2/images/FocusBar.png" />
     <widget name="movieinfo" position="310,350" size="770,675" backgroundColor="background10" scrollbarMode="showOnDemand" transparent="0" zPosition="5" selectionPixmap="myNOVUM_FHD2/images/FocusBar.png" foregroundColor="ivorywhite" font="Regular; 24" />
-    <widget name="movieinfo_red" backgroundColor="un181d20" pixmap="myNOVUM_FHD2/buttons/red.png" position="390,892" zPosition="4" size="37,37" alphatest="blend" />
-    <widget name="movieinfo_green" backgroundColor="un181d20" pixmap="myNOVUM_FHD2/buttons/green.png" position="690,892" zPosition="4" size="37,37" alphatest="blend" />
-    <widget name="movieinfo_red_label" position="450,892" size="150,30" backgroundColor="menu-buttons-bkgrnd" transparent="1" zPosition="4" font="Regular;24" valign="center" halign="left" foregroundColor="menu-buttons-frgrnd" />
-    <widget name="movieinfo_green_label" position="750,892" size="150,30" backgroundColor="menu-buttons-bkgrnd" transparent="1" zPosition="4" font="Regular;24" valign="center" halign="left" foregroundColor="menu-buttons-frgrnd" />
+    <widget name="movieinfo_red" pixmap="myNOVUM_FHD2/buttons/red.png" position="360,982" zPosition="4" size="37,37" alphatest="blend" />
+    <widget name="movieinfo_green" pixmap="myNOVUM_FHD2/buttons/green.png" position="600,982" zPosition="4" size="37,37" alphatest="blend" />
+    <widget name="movieinfo_red_label" position="415,985" size="170,30" backgroundColor="event-bkgrnd" transparent="1" zPosition="4" font="Regular;24" valign="center" halign="left" />
+    <widget name="movieinfo_green_label" position="655,985" size="170,30" backgroundColor="menu-buttons-bkgrnd" transparent="1" zPosition="4" font="Regular;24" valign="center" halign="left" foregroundColor="menu-buttons-frgrnd" />
     <ePixmap pixmap="myNOVUM_FHD2/buttons/menu.png" position="1120,963" size="104,37" zPosition="1" alphatest="blend" />
     <ePixmap pixmap="myNOVUM_FHD2/buttons/red.png" position="1120,1000" size="37,37" alphatest="blend" transparent="1" />
     <ePixmap pixmap="myNOVUM_FHD2/buttons/green.png" position="1120,1037" size="37,37" alphatest="blend" transparent="1" />
@@ -28125,7 +28187,7 @@ self.instance.move(ePoint(0,0))
       <convert type="ClockToText">Full</convert>
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconsky.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <widget name="title" position="210,240" size="1200,75" backgroundColor="background2" transparent="1" zPosition="1" font="Regular;31" valign="center" halign="left" foregroundColor="transpWhite" />
     <widget name="config" position="210,340" size="1200,440" font="Regular; 28" itemHeight="40" backgroundColor="background2" selectionPixmap="myNOVUM_FHD2/images/FocusBar.png" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="log" position="210,860" size="1200,200" zPosition="0" font="Regular; 28" transparent="1" itemHeight="40" backgroundColor="background2" foregroundColor="ivorywhite" />
@@ -28139,10 +28201,19 @@ self.instance.move(ePoint(0,0))
     <eLabel text="Timer hinzufügen" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" backgroundColor="menu-buttons-bkgrnd" transparent="1" foregroundColor="menu-buttons-frgrnd" />
   </screen>
   <screen name="SkySkipWordsSelect" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
-    <ePixmap position="40,80" size="200,120" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -28154,10 +28225,19 @@ self.instance.move(ePoint(0,0))
     <eLabel text="Hinzufügen" position="1172,1037" size="300,30" zPosition="1" font="Regular;24" halign="left" backgroundColor="menu-buttons-bkgrnd" transparent="1" foregroundColor="menu-buttons-frgrnd" />
   </screen>
   <screen name="SkyWhitelist" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -28172,10 +28252,19 @@ self.instance.move(ePoint(0,0))
     <eLabel text="Hinzufügen" position="1572,1000" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
   </screen>
   <screen name="SkyAddedEdit" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -28187,10 +28276,19 @@ self.instance.move(ePoint(0,0))
     <eLabel text="Eintrag löschen" position="1172,1037" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="background2" />
   </screen>
   <screen name="SkyRecorderTimerSelect" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -28234,10 +28332,19 @@ self.instance.move(ePoint(0,0))
     <ePixmap name="nostar9" transparent="1" zPosition="2" position="1350,335" size="36,36" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/NoStar2.png" alphatest="blend" />
   </screen>
   <screen name="SkySkyTimerRec" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="myNOVUM_FHD2/images/Lcd4Sel_bg.png" position="0,0" size="1920,1080" zPosition="-10" />
     <ePixmap position="25,108" size="160,100" pixmap="myNOVUM_FHD2/menu/sky_bg.png" transparent="1" alphatest="blend" />
-    <eLabel position="1110,210" size="784,719" zPosition="-9" backgroundColor="background10" />
-    <eLabel position="25,210" size="1870,1" backgroundColor="transpWhite3" zPosition="13" />
+    <eLabel position="0,25" size="1920,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="25,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1895,25" size="1,1055" zPosition="2" backgroundColor="transpWhite3" />
+    <eLabel position="1105,960" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
+    <eLabel position="1105,210" size="790,750" zPosition="-9" backgroundColor="background10" />
+    <eLabel position="1105,25" size="790,1055" zPosition="-10" backgroundColor="background60" />
+    <eLabel position="0,0" size="1920,25" zPosition="-30" backgroundColor="un181A1C" />
+    <eLabel position="0,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="1896,25" size="24,1055" backgroundColor="un181A1Ctransp2" zPosition="-10" />
+    <eLabel position="25,25" size="1080,1055" zPosition="-20" backgroundColor="background" />
+    <eLabel position="1105,210" size="790,1" backgroundColor="transpWhite3" zPosition="4" />
     <widget source="global.CurrentTime" render="Label" position="1555,58" size="300,57" font="scoutcondWide; 32" foregroundColor="preTrans30" backgroundColor="background2" halign="right" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
@@ -29991,377 +30098,380 @@ self.instance.move(ePoint(0,0))
     <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
   </screen>
   <!-- TV Spielfilm -->
-  <screen name="TVHeuteView" position="0,0" size="1920,1080" title="TV Programm - TV Spielfilm.de" flags="wfNoBorder" backgroundColor="transparent">    
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+  <screen name="TVHeuteView" position="0,0" size="1920,1080" title="TV Programm - TV Spielfilm.de" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="sender1" position="50,109" size="261,30" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="sender2" position="426,109" size="261,30" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="sender3" position="794,109" size="261,30" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="sender4" position="1161,109" size="261,30" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="sender5" position="1529,109" size="261,30" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="logo1" position="320,105" size="66,40" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="logo2" position="687,105" size="66,40" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="logo3" position="1055,105" size="66,40" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="logo4" position="1422,105" size="66,40" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="logo5" position="1790,105" size="66,40" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic1" position="50,145" size="345,229" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic2" position="417,147" size="345,229" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic3" position="785,145" size="345,229" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic4" position="1152,145" size="345,229" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic5" position="1520,145" size="345,229" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pictime1" position="55,385" size="90,66" font="Regular;27" valign="top" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="pictime2" position="413,385" size="97,66" font="Regular;27" valign="top" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="pictime3" position="780,385" size="97,66" font="Regular;27" valign="top" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="pictime4" position="1148,385" size="97,66" font="Regular;27" valign="top" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="pictime5" position="1515,385" size="97,66" font="Regular;27" valign="top" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="pictext1" position="150,385" size="240,66" font="Regular;27" valign="top" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="pictext2" position="518,385" size="240,66" font="Regular;27" valign="top" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="pictext3" position="885,385" size="240,66" font="Regular;27" valign="top" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="pictext4" position="1253,385" size="240,66" font="Regular;27" valign="top" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="pictext5" position="1620,385" size="240,66" font="Regular;27" valign="top" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="menu1" position="60,456" size="340,460" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="menu2" position="427,456" size="340,460" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="menu3" position="795,456" size="340,460" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="menu4" position="1162,456" size="340,460" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="menu5" position="1530,456" size="340,460" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="label" position="397,985" size="1125,51" alphatest="blend" zPosition="2" backgroundColor="background20" transparent="1" foregroundColor="light_blue1" font="Regular;28" halign="center" />
-    <widget name="labelpost" position="center,985" size="1125,51" alphatest="blend" zPosition="2" backgroundColor="background20" font="Regular;28" foregroundColor="orange" halign="center" />
-    <widget name="textpage" position="50,570" size="1815,397" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="wiki" position="1775,169" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvdb" position="1775,229" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tmdb" position="1775,229" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="imdb" position="1775,289" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="picpost" position="612,109" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="bilderlogo" position="1775,109" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="mehrbilder" position="1445,109" size="300,180" font="Regular;28" foregroundColor="unaab2ba" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext" position="50,105" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext2" position="50,157" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext3" position="50,210" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo1" position="50,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo2" position="155,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo3" position="260,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo4" position="365,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="reclogo" position="50,333" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchmenu" position="50,210" size="1820,762" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="searchlogo" position="50,127" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchtext" position="390,130" size="1387,45" font="Regular;32" valign="center" zPosition="1" backgroundColor="background20" foregroundColor="orange" />
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="sender1" position="95,260" size="260,40" font="Regular; 26" halign="right" zPosition="1" backgroundColor="background" />
+    <widget name="sender2" position="435,260" size="260,40" font="Regular; 26" halign="right" zPosition="1" backgroundColor="background" />
+    <widget name="sender3" position="775,260" size="260,40" font="Regular; 26" halign="right" zPosition="1" backgroundColor="background" />
+    <widget name="sender4" position="1115,260" size="260,40" font="Regular; 26" halign="right" zPosition="1" backgroundColor="background" />
+    <widget name="sender5" position="1455,260" size="260,40" font="Regular; 26" halign="right" zPosition="1" backgroundColor="background" />
+    <widget name="logo1" position="365,260" size="66,40" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="logo2" position="705,260" size="66,40" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="logo3" position="1045,260" size="66,40" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="logo4" position="1385,260" size="66,40" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="logo5" position="1725,260" size="66,40" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic1" position="130,310" size="300,169" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic2" position="470,310" size="300,169" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic3" position="810,310" size="300,169" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic4" position="1150,310" size="300,169" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic5" position="1490,310" size="300,169" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pictime1" position="130,485" size="80,66" font="Regular; 25" valign="top" halign="center" zPosition="1" backgroundColor="background" />
+    <widget name="pictime2" position="470,485" size="80,66" font="Regular; 25" valign="top" halign="center" zPosition="1" backgroundColor="background" />
+    <widget name="pictime3" position="810,485" size="80,66" font="Regular; 25" valign="top" halign="center" zPosition="1" backgroundColor="background" />
+    <widget name="pictime4" position="1150,485" size="80,66" font="Regular; 25" valign="top" halign="center" zPosition="1" backgroundColor="background" />
+    <widget name="pictime5" position="1490,485" size="80,66" font="Regular; 25" valign="top" halign="center" zPosition="1" backgroundColor="background" />
+    <widget name="pictext1" position="210,485" size="220,66" font="Regular; 25" valign="top" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="pictext2" position="550,485" size="220,66" font="Regular; 25" valign="top" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="pictext3" position="890,485" size="220,66" font="Regular; 25" valign="top" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="pictext4" position="1230,485" size="220,66" font="Regular; 25" valign="top" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="pictext5" position="1570,485" size="220,66" font="Regular; 25" valign="top" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="menu1" position="130,555" size="300,460" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="menu2" position="470,555" size="300,460" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="menu3" position="810,555" size="300,460" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="menu4" position="1150,555" size="300,460" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="menu5" position="1490,555" size="300,460" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="label" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" transparent="1" foregroundColor="orange" font="Regular; 25" halign="center" />
+    <widget name="labelpost" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" font="Regular; 25" foregroundColor="orange" halign="center" />
+    <widget name="textpage" position="130,700" size="1660,320" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="wiki" position="1700,300" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvdb" position="1700,360" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tmdb" position="1700,360" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="imdb" position="1700,420" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="picpost" position="622,240" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="bilderlogo" position="1700,240" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="mehrbilder" position="1380,240" size="300,180" font="Regular;28" foregroundColor="unaab2ba" halign="center" zPosition="1" backgroundColor="background" />
+    <widget name="infotext" position="130,240" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext2" position="130,290" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext3" position="130,340" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo1" position="130,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo2" position="235,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo3" position="335,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo4" position="435,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="reclogo" position="130,440" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="searchmenu" position="130,235" size="1660,780" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="searchlogo" position="130,240" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="searchtext" position="450,240" size="1340,45" font="Regular; 28" valign="center" zPosition="1" backgroundColor="background" foregroundColor="orange" />
   </screen>
-  <screen name="TVBlog" position="0,0" size="1920,1080" title="TV Spielfilm Blog" backgroundColor="transparent" flags="wfNoBorder">    
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+  <screen name="TVBlog" position="0,0" size="1920,1080" title="TV Spielfilm Blog" backgroundColor="transparent" flags="wfNoBorder">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="menu" position="1485,225" size="375,375" scrollbarMode="showNever" backgroundColor="background20" zPosition="1" />
-    <widget name="meta" position="45,120" size="450,82" font="Regular;28" foregroundColor="light_blue" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="item" position="45,682" size="180,37" font="Regular;28" foregroundColor="light_blue" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="picture" position="510,120" size="900,600" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="topictext" position="45,727" size="1830,37" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="previewtext" position="45,780" size="1830,225" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="picpost" position="592,120" size="735,367" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="playlogo" position="877,259" size="163,87" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/icons/playHD.png" alphatest="blend" zPosition="2" />
-    <widget name="textpage" position="45,502" size="1830,502" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="label" position="576,1020" size="768,60" font="Regular;28" foregroundColor="grey" backgroundColor="background2" halign="center" valign="center" transparent="1" zPosition="2" />
-    <widget name="statuslabel" position="405,952" size="1110,40" font="Regular;28" foregroundColor="grey" halign="center" zPosition="2" backgroundColor="background20" />
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="menu" position="1390,240" size="400,375" scrollbarMode="showNever" backgroundColor="background" zPosition="1" transparent="1" />
+    <widget name="meta" position="130,240" size="440,82" font="Regular;28" foregroundColor="light_blue" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="item" position="130,660" size="180,40" font="Regular;28" foregroundColor="light_blue" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="picture" position="585,240" size="750,500" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
+    <widget name="topictext" position="130,750" size="1660,40" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="previewtext" position="130,800" size="1660,200" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="picpost" position="592,240" size="735,367" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
+    <widget name="playlogo" position="877,280" size="163,87" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/icons/playHD.png" alphatest="blend" zPosition="2" />
+    <widget name="textpage" position="130,610" size="1660,360" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="label" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" transparent="1" foregroundColor="orange" font="Regular; 25" halign="center" />
+    <widget name="statuslabel" position="397,970" size="1125,40" font="Regular; 25" foregroundColor="grey" halign="center" zPosition="2" backgroundColor="background" transparent="1" />
   </screen>
-  <screen name="TVTippsView" position="0,0" size="1920,1080" title="TV-Tipps - TV Spielfilm.de" flags="wfNoBorder" backgroundColor="transparent">    
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+  <screen name="TVTippsView" position="0,0" size="1920,1080" title="TV-Tipps - TV Spielfilm.de" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="menu" position="50,127" size="1615,810" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="pic1" position="1670,127" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic2" position="1670,262" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic3" position="1670,397" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic4" position="1670,532" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic5" position="1670,667" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic6" position="1670,802" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="label" position="397,969" size="1125,66" alphatest="blend" zPosition="2" transparent="1" backgroundColor="background20" font="Regular;28" foregroundColor="light_blue1" halign="center" />
-    <widget name="labelpost" position="center,969" size="1125,66" alphatest="blend" zPosition="2" backgroundColor="background20" font="Regular;28" foregroundColor="orange" halign="center" />
-    <widget name="textpage" position="50,570" size="1815,382" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="wiki" position="1775,169" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvdb" position="1775,229" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tmdb" position="1775,229" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="imdb" position="1775,289" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="picpost" position="612,109" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background20" />
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="menu" position="130,240" size="1515,540" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="pic1" position="1655,240" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic2" position="1655,330" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic3" position="1655,420" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic4" position="1655,510" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic5" position="1655,600" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic6" position="1655,690" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="label" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" transparent="1" foregroundColor="orange" font="Regular; 25" halign="center" />
+    <widget name="labelpost" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" font="Regular; 25" foregroundColor="orange" halign="center" />
+    <widget name="textpage" position="130,570" size="1660,382" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="wiki" position="1700,300" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvdb" position="1700,360" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tmdb" position="1700,360" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="imdb" position="1700,420" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="picpost" position="622,240" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
     <widget name="piclabel" position="750,510" size="100,25" font="Regular;22" foregroundColor="white" backgroundColor="uncd006c" halign="center" valign="center" zPosition="2" />
     <widget name="piclabel2" position="750,535" size="100,25" font="Regular;18" foregroundColor="uncd006c" backgroundColor="white" halign="center" valign="center" zPosition="2" />
-    <widget name="bilderlogo" position="1775,109" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="mehrbilder" position="1445,109" size="300,180" font="Regular;28" foregroundColor="unaab2ba" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext" position="50,105" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext2" position="50,157" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext3" position="50,210" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo1" position="50,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo2" position="155,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo3" position="260,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo4" position="365,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="reclogo" position="50,333" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchmenu" position="50,210" size="1820,720" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="searchlogo" position="50,127" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchtext" position="387,130" size="1387,45" font="Regular;32" valign="center" zPosition="1" backgroundColor="background20" foregroundColor="orange" />
-    <widget name="slider_textpage" position="1832,570" size="33,385" zPosition="1" backgroundColor="background20" />
-    <widget name="playlogo" position="900,293" size="109,58" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/icons/playHD.png" alphatest="blend" zPosition="2" />
+    <widget name="bilderlogo" position="1700,240" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="mehrbilder" position="1380,240" size="300,180" font="Regular;28" foregroundColor="unaab2ba" halign="center" zPosition="1" backgroundColor="background" />
+    <widget name="infotext" position="130,240" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext2" position="130,290" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext3" position="130,340" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo1" position="130,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo2" position="235,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo3" position="335,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo4" position="435,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="reclogo" position="130,440" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="searchmenu" position="130,235" size="1660,780" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="searchlogo" position="130,240" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="searchtext" position="450,240" size="1340,45" font="Regular;32" valign="center" zPosition="1" backgroundColor="background" foregroundColor="orange" />
+    <widget name="slider_textpage" position="1757,570" size="33,385" zPosition="1" backgroundColor="background" />
+    <widget name="playlogo" position="900,300" size="109,58" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/icons/playHD.png" alphatest="blend" zPosition="2" />
   </screen>
-  <screen name="TVJetztView" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent" transparent="0">   
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+  <screen name="TVJetztView" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent" transparent="0">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd-jetzt.png" alphatest="blend" zPosition="1" />
-    <widget name="menu" position="50,112" size="1815,840" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="series" position="1775,285" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="label" position="397,969" size="1125,66" alphatest="blend" zPosition="2" backgroundColor="background20" transparent="1" foregroundColor="light_blue1" font="Regular;28" halign="center" />
-    <widget name="labelpost" position="center,969" size="1125,66" alphatest="blend" zPosition="2" backgroundColor="background20" font="Regular;28" foregroundColor="orange" halign="center" />
-    <widget name="textpage" position="50,520" size="1815,432" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="wiki" position="1775,169" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvdb" position="1775,229" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tmdb" position="1775,229" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="imdb" position="1775,289" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="picpost" position="612,109" size="600,400" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="bilderlogo" position="1775,109" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="mehrbilder" position="1445,109" size="300,180" font="Regular;28" foregroundColor="unaab2ba" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext" position="50,105" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext2" position="50,157" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext3" position="50,210" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo1" position="50,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo2" position="155,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo3" position="260,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo4" position="365,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="reclogo" position="50,333" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchmenu" position="50,210" size="1815,740" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="searchlogo" position="50,127" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchtext" position="387,130" size="1387,45" font="Regular;32" valign="center" zPosition="1" backgroundColor="background20" foregroundColor="orange" />
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="menu" position="130,235" size="1660,760" itemHeight="40" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="series" position="1700,480" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="label" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" transparent="1" foregroundColor="orange" font="Regular; 25" halign="center" />
+    <widget name="labelpost" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" font="Regular; 25" foregroundColor="orange" halign="center" />
+    <widget name="textpage" position="130,700" size="1660,320" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="wiki" position="1700,300" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvdb" position="1700,360" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tmdb" position="1700,360" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="imdb" position="1700,420" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="picpost" position="622,240" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
+    <widget name="bilderlogo" position="1700,240" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="mehrbilder" position="1380,240" size="300,180" font="Regular;28" foregroundColor="unaab2ba" halign="center" zPosition="1" backgroundColor="background" />
+    <widget name="infotext" position="130,240" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext2" position="130,290" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext3" position="130,340" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo1" position="130,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo2" position="235,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo3" position="335,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo4" position="435,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="reclogo" position="130,440" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="searchmenu" position="130,235" size="1660,780" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="searchlogo" position="130,240" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="searchtext" position="450,240" size="1340,45" font="Regular;32" valign="center" zPosition="1" backgroundColor="background" foregroundColor="orange" />
   </screen>
-  <screen name="TVProgrammView" position="0,0" size="1920,1080" title="TV Programm - TV Spielfilm.de" flags="wfNoBorder" transparent="0" backgroundColor="transparent">    
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+  <screen name="TVProgrammView" position="0,0" size="1920,1080" title="TV Programm - TV Spielfilm.de" flags="wfNoBorder" transparent="0" backgroundColor="transparent">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="menu" position="50,112" size="1815,840" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="label" position="center,969" size="1125,66" alphatest="blend" zPosition="2" backgroundColor="background20" transparent="1" foregroundColor="light_blue1" font="Regular;28" halign="center" />
-    <widget name="labelpost" position="center,969" size="1125,66" alphatest="blend" zPosition="2" backgroundColor="background20" transparent="1" font="Regular;28" foregroundColor="orange" halign="center" />
-    <widget name="textpage" position="50,570" size="1815,382" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="wiki" position="1775,169" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvdb" position="1775,229" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tmdb" position="1775,229" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="imdb" position="1775,289" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="picpost" position="612,109" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="bilderlogo" position="1775,109" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="mehrbilder" position="1445,109" size="300,180" font="Regular;28" foregroundColor="unaab2ba" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext" position="50,105" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext2" position="50,157" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext3" position="50,210" size="300,37" font="Regular;28" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo1" position="50,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo2" position="155,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo3" position="260,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo4" position="365,270" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="reclogo" position="50,333" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchmenu" position="50,210" size="1815,750" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="searchlogo" position="50,127" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchtext" position="387,130" size="1387,45" font="Regular;32" valign="center" zPosition="1" backgroundColor="background20" foregroundColor="orange" />
-    <widget name="slider_textpage" position="1832,570" size="33,385" zPosition="1" backgroundColor="background20" />
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="menu" position="130,235" size="1660,760" scrollbarMode="showNever" zPosition="1" itemHeight="40" backgroundColor="background" />
+    <widget name="label" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" transparent="1" foregroundColor="orange" font="Regular; 25" halign="center" />
+    <widget name="labelpost" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" font="Regular; 25" foregroundColor="orange" halign="center" />
+    <widget name="textpage" position="130,570" size="1660,382" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="wiki" position="1700,300" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvdb" position="1700,360" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tmdb" position="1700,360" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="imdb" position="1700,420" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="picpost" position="622,240" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
+    <widget name="bilderlogo" position="1700,240" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="mehrbilder" position="1380,240" size="300,180" font="Regular;28" foregroundColor="unaab2ba" halign="center" zPosition="1" backgroundColor="background" />
+    <widget name="infotext" position="130,240" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext2" position="130,290" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext3" position="130,340" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo1" position="130,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo2" position="235,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo3" position="335,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo4" position="435,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="reclogo" position="130,440" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="searchmenu" position="130,235" size="1660,780" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="searchlogo" position="130,240" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="searchtext" position="450,240" size="1340,45" font="Regular;32" valign="center" zPosition="1" backgroundColor="background" foregroundColor="orange" />
   </screen>
-  <screen name="TVStory" position="0,0" size="1920,1080" title="TV-Story - TV Spielfilm.de" flags="wfNoBorder" backgroundColor="transparent">    
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+  <screen name="TVStory" position="0,0" size="1920,1080" title="TV-Story - TV Spielfilm.de" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="menu" position="50,105" size="600,525" scrollbarMode="showAlways" zPosition="1" backgroundColor="background20" />
-    <widget name="slider_menu" position="617,105" size="33,525" zPosition="2" backgroundColor="background20" />
-    <widget name="picture" position="962,154" size="592,396" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="picturetext" position="662,600" size="1192,90" font="Regular;27" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="topictext" position="50,727" size="1815,37" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="previewtext" position="50,772" size="1815,157" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="picpost" position="696,109" size="507,337" alphatest="blend" zPosition="2" backgroundColor="background20" />
-    <widget name="bilderlogo" position="1775,105" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="mehrbilder" position="1445,105" size="300,180" font="Regular;28" foregroundColor="unaab2ba" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="playboy" position="1778,157" size="76,117" alphatest="blend" zPosition="2" />
-    <widget name="textpage" position="50,487" size="1815,450" font="Regular;28" halign="left" zPosition="2" backgroundColor="background20" />
-    <widget name="slider_textpage" position="1832,570" size="33,385" zPosition="1" backgroundColor="background20" />
-    <widget name="label" position="510,993" size="900,40" font="Regular;28" foregroundColor="light_blue1" backgroundColor="background20" halign="center" transparent="1" zPosition="2" />
-    <widget name="statuslabel" position="375,948" size="1170,37" font="Regular;28" halign="center" zPosition="2" backgroundColor="background20" foregroundColor="orange" transparent="1" />
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="menu" position="130,240" size="470,480" itemHeight="30" scrollbarMode="showAlways" zPosition="1" backgroundColor="background" />    
+    <widget name="picturetext" position="622,705" size="1170,40" font="Regular; 24" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="picture" position="622,240" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
+    <widget name="topictext" position="130,750" size="1660,40" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="previewtext" position="130,800" size="1660,200" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="picpost" position="622,240" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
+    <widget name="bilderlogo" position="1700,240" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="mehrbilder" position="1380,240" size="300,180" font="Regular;28" foregroundColor="unaab2ba" halign="center" zPosition="1" backgroundColor="background" />
+    <widget name="playboy" position="1715,300" size="76,117" alphatest="blend" zPosition="2" />
+    <widget name="textpage" position="130,570" size="1660,385" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="slider_textpage" position="1757,570" size="33,385" zPosition="1" backgroundColor="background" />
+    <widget name="label" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" transparent="1" foregroundColor="orange" font="Regular; 25" halign="center" />
+    <widget name="statuslabel" position="397,970" size="1125,40" font="Regular; 25" foregroundColor="grey" halign="center" zPosition="2" backgroundColor="background" transparent="1" />
   </screen>
-  <screen name="TVNeuView" position="0,0" size="1920,1080" title="TV Neuerscheinungen - TV Spielfilm.de" backgroundColor="transparent" flags="wfNoBorder" transparent="0">    
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />  
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+  <screen name="TVNeuView" position="0,0" size="1920,1080" title="TV Neuerscheinungen - TV Spielfilm.de" backgroundColor="transparent" flags="wfNoBorder" transparent="0">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="menu" position="50,112" size="1610,810" scrollbarMode="showNever" backgroundColor="background20" zPosition="1" />
-    <widget name="pic1" position="1662,112" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic2" position="1662,247" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic3" position="1662,382" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic4" position="1662,517" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic5" position="1662,652" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic6" position="1662,787" size="202,135" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchtimer" position="360,952" size="1200,40" alphatest="blend" zPosition="3" backgroundColor="background20" font="Regular;27" halign="center" foregroundColor="light_blue1" />
-    <widget name="searchlogo" position="50,112" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchtext" position="387,112" size="1432,75" font="Regular;39" valign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="searchmenu" position="50,210" size="1815,720" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="picpost" position="612,105" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext" position="50,105" size="465,37" font="Regular;27" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext2" position="50,157" size="562,37" font="Regular;27" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext3" position="50,210" size="562,37" font="Regular;27" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext4" position="50,262" size="562,37" font="Regular;27" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo1" position="50,322" size="90,30" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo2" position="145,322" size="90,30" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo3" position="250,322" size="90,30" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo4" position="355,322" size="90,30" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="cinlogo" position="522,105" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="playlogo" position="867,286" size="163,87" alphatest="blend" zPosition="2" backgroundColor="background20" />
-    <widget name="textpage" position="50,570" size="1815,390" font="Regular;27" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="slider_textpage" position="1832,570" size="33,385" zPosition="1" backgroundColor="background20" />
-    <widget name="label" position="360,990" size="1200,40" font="Regular;28" backgroundColor="background20" halign="center" transparent="1" zPosition="2" foregroundColor="orange" />
-    <widget name="label2" position="495,1035" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
-    <widget name="label3" position="825,1035" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
-    <widget name="label4" position="1155,1035" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
-    <ePixmap position="445,1038" size="37,37" pixmap="myNOVUM_FHD2/buttons/red.png" alphatest="blend" zPosition="2" />
-    <ePixmap position="775,1038" size="37,37" pixmap="myNOVUM_FHD2/buttons/yellow.png" alphatest="blend" zPosition="2" />
-    <ePixmap position="1105,1038" size="37,37" pixmap="myNOVUM_FHD2/buttons/green.png" alphatest="blend" zPosition="2" />
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="menu" position="130,240" size="1515,540" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="pic1" position="1655,240" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic2" position="1655,330" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic3" position="1655,420" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic4" position="1655,510" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic5" position="1655,600" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic6" position="1655,690" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="searchtimer" position="360,960" size="1200,40" alphatest="blend" zPosition="3" backgroundColor="background" font="Regular; 25" halign="center" foregroundColor="grey" />
+    <widget name="tvinfo1" position="130,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo2" position="235,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo3" position="335,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo4" position="435,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="picpost" position="622,240" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
+    <widget name="infotext" position="130,240" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext2" position="130,290" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext3" position="130,340" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext4" position="130,390" size="480,37" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="cinlogo" position="510,240" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="playlogo" position="878,280" size="163,87" alphatest="blend" zPosition="2" backgroundColor="background" />
+    <widget name="textpage" position="130,570" size="1660,385" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="slider_textpage" position="1757,570" size="33,385" zPosition="1" backgroundColor="background" />
+    <widget name="label" position="360,1000" size="1200,40" font="Regular; 25" backgroundColor="background" halign="center" transparent="1" zPosition="2" foregroundColor="orange" />
+    <widget name="label2" position="495,1042" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
+    <widget name="label3" position="825,1042" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
+    <widget name="label4" position="1155,1042" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
+    <ePixmap position="445,1040" size="37,37" pixmap="myNOVUM_FHD2/buttons/red.png" alphatest="blend" zPosition="2" />
+    <ePixmap position="775,1040" size="37,37" pixmap="myNOVUM_FHD2/buttons/yellow.png" alphatest="blend" zPosition="2" />
+    <ePixmap position="1105,1040" size="37,37" pixmap="myNOVUM_FHD2/buttons/green.png" alphatest="blend" zPosition="2" />
   </screen>
-  <screen name="TVGenreView" position="0,0" size="1920,1080" title="TV Genre - TV Spielfilm.de" backgroundColor="transparent" flags="wfNoBorder">    
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+  <screen name="TVGenreView" position="0,0" size="1920,1080" title="TV Genre - TV Spielfilm.de" backgroundColor="transparent" flags="wfNoBorder">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="menu" position="50,112" size="1615,840" backgroundColor="background20" scrollbarMode="showNever" zPosition="1" />
-    <widget name="searchtimer" position="360,952" size="1200,40" alphatest="blend" zPosition="3" backgroundColor="background20" font="Regular;27" halign="center" foregroundColor="light_blue1" />
-    <widget name="searchlogo" position="50,112" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="searchtext" position="387,112" size="1432,75" font="Regular;39" valign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="searchmenu" position="50,210" size="1815,750" scrollbarMode="showNever" zPosition="1" backgroundColor="background20" />
-    <widget name="picpost" position="612,105" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext" position="50,105" size="465,37" font="Regular;27" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext2" position="50,157" size="562,37" font="Regular;27" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext3" position="50,210" size="562,37" font="Regular;27" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="infotext4" position="50,262" size="562,37" font="Regular;27" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo1" position="50,322" size="90,30" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo2" position="145,322" size="90,30" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo3" position="250,322" size="90,30" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="tvinfo4" position="355,322" size="90,30" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="cinlogo" position="522,105" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="playlogo" position="867,286" size="163,87" alphatest="blend" zPosition="2" backgroundColor="background20" />
-    <widget name="textpage" position="50,570" size="1815,390" font="Regular;27" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="slider_textpage" position="1832,570" size="33,385" zPosition="1" backgroundColor="background20" />
-    <widget name="label" position="360,990" size="1200,40" font="Regular;28" backgroundColor="background20" halign="center" transparent="1" zPosition="2" foregroundColor="orange" />
-    <widget name="label2" position="495,1035" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
-    <widget name="label3" position="825,1035" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
-    <widget name="label4" position="1155,1035" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
-    <ePixmap position="445,1038" size="37,37" pixmap="myNOVUM_FHD2/buttons/red.png" alphatest="blend" zPosition="2" />
-    <ePixmap position="775,1038" size="37,37" pixmap="myNOVUM_FHD2/buttons/yellow.png" alphatest="blend" zPosition="2" />
-    <ePixmap position="1105,1038" size="37,37" pixmap="myNOVUM_FHD2/buttons/green.png" alphatest="blend" zPosition="2" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="menu" position="130,235" size="1660,760" itemHeight="40" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="searchmenu" position="130,235" size="1660,780" scrollbarMode="showNever" zPosition="1" backgroundColor="background" />
+    <widget name="searchlogo" position="130,240" size="300,75" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="searchtext" position="450,240" size="1340,45" font="Regular;32" valign="center" zPosition="1" backgroundColor="background" foregroundColor="orange" />
+    <widget name="searchtimer" position="360,960" size="1200,40" alphatest="blend" zPosition="3" backgroundColor="background" font="Regular; 25" halign="center" foregroundColor="grey" />
+    <widget name="tvinfo1" position="130,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo2" position="235,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo3" position="335,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="tvinfo4" position="435,385" size="90,33" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="picpost" position="622,240" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
+    <widget name="infotext" position="130,240" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext2" position="130,290" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext3" position="130,340" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="infotext4" position="130,390" size="480,37" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="cinlogo" position="522,240" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="playlogo" position="867,280" size="163,87" alphatest="blend" zPosition="2" backgroundColor="background" />
+    <widget name="textpage" position="130,570" size="1660,385" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="slider_textpage" position="1757,570" size="33,385" zPosition="1" backgroundColor="background" />
+    <widget name="label" position="360,1000" size="1200,40" font="Regular; 25" backgroundColor="background" halign="center" transparent="1" zPosition="2" foregroundColor="orange" />
+    <widget name="label2" position="495,1042" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
+    <widget name="label3" position="825,1042" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
+    <widget name="label4" position="1155,1042" size="285,33" font="Regular;24" foregroundColor="light_blue" backgroundColor="menu-buttons-bkgrnd" halign="left" transparent="1" zPosition="2" />
+    <ePixmap position="445,1040" size="37,37" pixmap="myNOVUM_FHD2/buttons/red.png" alphatest="blend" zPosition="2" />
+    <ePixmap position="775,1040" size="37,37" pixmap="myNOVUM_FHD2/buttons/yellow.png" alphatest="blend" zPosition="2" />
+    <ePixmap position="1105,1040" size="37,37" pixmap="myNOVUM_FHD2/buttons/green.png" alphatest="blend" zPosition="2" />
   </screen>
   <screen name="TVNews" position="0,0" title="TV-News - TV Spielfilm" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
-    
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />
-    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="menu" position="50,105" size="560,540" scrollbarMode="showAlways" backgroundColor="background20" zPosition="1" />
-    <widget name="slider_menu" position="577,105" size="33,540" zPosition="2" transparent="0" backgroundColor="background20" />
-    <widget name="picture" position="863,105" size="787,525" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="picturetext" position="665,630" size="1185,90" font="Regular;27" valign="center" halign="center" zPosition="1" backgroundColor="background20" />
-    <widget name="topictext" position="50,727" size="1815,37" font="Regular;27" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="previewtext" position="50,772" size="1815,157" font="Regular;27" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="picpost" position="612,105" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="cinlogo" position="522,105" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="playlogo" position="867,286" size="163,87" alphatest="blend" zPosition="2" backgroundColor="background20" />
-    <widget name="textpage" position="50,570" size="1815,390" font="Regular;27" halign="left" zPosition="1" backgroundColor="background20" />
-    <widget name="slider_textpage" position="1832,570" size="33,385" zPosition="1" backgroundColor="background20" />
-    <widget name="label" position="510,1002" size="900,40" font="Regular;28" foregroundColor="light_blue" backgroundColor="background20" halign="center" transparent="1" zPosition="2" />
-    <widget name="statuslabel" position="375,960" size="1170,40" font="Regular;28" foregroundColor="orange" halign="center" zPosition="2" backgroundColor="background20" transparent="1" />
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="menu" position="130,240" size="470,480" itemHeight="30" scrollbarMode="showAlways" zPosition="1" backgroundColor="background" />    
+    <widget name="picturetext" position="622,705" size="1170,40" font="Regular; 24" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="picture" position="622,240" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
+    <widget name="topictext" position="130,750" size="1660,40" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="previewtext" position="130,800" size="1660,200" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="picpost" position="622,240" size="675,450" alphatest="blend" zPosition="1" backgroundColor="background" halign="center" />
+    <widget name="cinlogo" position="510,240" size="90,43" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="playlogo" position="878,280" size="163,87" alphatest="blend" zPosition="2" backgroundColor="background" />
+    <widget name="textpage" position="130,570" size="1660,385" font="Regular;28" halign="left" zPosition="1" backgroundColor="background" />
+    <widget name="slider_textpage" position="1757,570" size="33,385" zPosition="1" backgroundColor="background" />
+    <widget name="label" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" transparent="1" foregroundColor="orange" font="Regular; 25" halign="center" />
+    <widget name="statuslabel" position="397,970" size="1125,40" font="Regular; 25" foregroundColor="grey" halign="center" zPosition="2" backgroundColor="background" transparent="1" /> 
+ </screen>
+  <screen name="TVTrailer" position="0,0" title="Trailer - Video - TV Spielfilm" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="menu" position="460,280" size="923,540" scrollbarMode="showNever" backgroundColor="background" zPosition="1" />
+    <widget name="pic1" position="1395,280" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic2" position="1395,370" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic3" position="1395,460" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic4" position="1395,550" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic5" position="1395,640" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="pic6" position="1395,730" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="play1" position="340,291" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="play2" position="340,391" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="play3" position="340,481" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="play4" position="340,571" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="play5" position="340,661" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="play6" position="340,751" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background" />
+    <widget name="label" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" transparent="1" foregroundColor="orange" font="Regular; 25" halign="center" />
   </screen>
-  <screen name="TVTrailer" position="0,0" title="Trailer - Video - TV Spielfilm" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">    
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+  <screen name="TVPicShow" position="0,0" size="1920,1080" title="Mehr Bilder - TV Spielfilm.de" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="menu" position="460,280" size="923,540" scrollbarMode="showNever" backgroundColor="background20" zPosition="1" />
-    <widget name="pic1" position="1395,280" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic2" position="1395,370" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic3" position="1395,460" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic4" position="1395,550" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic5" position="1395,640" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="pic6" position="1395,730" size="135,90" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="play1" position="340,291" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="play2" position="340,391" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="play3" position="340,481" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="play4" position="340,571" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="play5" position="340,661" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="play6" position="340,751" size="109,58" alphatest="blend" zPosition="1" backgroundColor="background20" />
-    <widget name="label" position="405,967" size="1110,40" font="Regular;28" foregroundColor="light_blue" backgroundColor="background20" halign="center" transparent="1" zPosition="2" />
-  </screen>
-  <screen name="PixShow" position="0,0" size="1920,1080" title="Mehr Bilder - TV Spielfilm.de" flags="wfNoBorder" backgroundColor="transparent">   
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="infotext" position="130,240" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="infotext2" position="130,290" size="300,40" font="scoutcondWide; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="infotext3" position="130,340" size="300,40" font="Regular; 26" foregroundColor="unaab2ba" halign="left" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="picture" position="510,240" size="900,643" alphatest="blend" zPosition="1" backgroundColor="background20" transparent="1" halign="center" />
+    <widget name="picindex" position="1500,240" size="165,40" font="Regular; 25" halign="right" zPosition="2" transparent="1" />
+    <widget name="label" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" transparent="1" foregroundColor="orange" font="Regular; 25" halign="center" />
+    <widget name="pictext" position="460,920" size="1000,80" font="Regular; 28" foregroundColor="grey" halign="center" zPosition="2" backgroundColor="background" transparent="1" />
+  </screen>  
+  <screen name="PlayboyPicShow" position="0,0" size="1920,1080" title="Erotische Playmates - TV Spielfilm.de" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1920,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1800,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
       <convert type="ClockToText">Full</convert>
     </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="list" position="0,0" size="0,0" scrollbarMode="showNever" zPosition="1" />
-    <widget name="infotext" position="50,110" size="300,40" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" transparent="1" />
-    <widget name="infotext2" position="50,162" size="300,40" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" transparent="1" />
-    <widget name="infotext3" position="50,215" size="300,40" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" transparent="1" />
-    <widget name="picture" position="435,112" size="1050,787" alphatest="blend" zPosition="1" backgroundColor="background20" transparent="1" />
-    <widget name="label" position="center,960" size="900,66" font="Regular;28" backgroundColor="background20" halign="center" transparent="1" zPosition="2" foregroundColor="light_blue" />
-    <widget name="statuslabel" position="180,907" size="1560,40" font="Regular;28" foregroundColor="orange" halign="center" zPosition="1" backgroundColor="background20" transparent="1" />
-  </screen>
-  <screen name="PlayboyPicShow" position="0,0" size="1920,1080" title="Erotische Playmates - TV Spielfilm.de" flags="wfNoBorder" backgroundColor="transparent">    
-    <eLabel position="0,0" size="1920,105" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,105" size="1920,1" backgroundColor="background80" zPosition="3" />
-    <eLabel position="0,106" size="1920,975" backgroundColor="background20" zPosition="-10" />    
-    <widget source="global.CurrentTime" render="Label" position="1560,30" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
-      <convert type="ClockToText">Full</convert>
-    </widget>
-    <widget source="Title" render="Label" position="187,22" size="1350,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="30,16" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
-    <widget name="list" position="0,0" size="0,0" scrollbarMode="showNever" zPosition="1" />
-    <widget name="textpage" position="50,110" size="375,840" font="Regular;28" halign="left" zPosition="1" backgroundColor="background20" transparent="1" />
-    <widget name="picture" position="435,112" size="1050,787" alphatest="blend" zPosition="1" backgroundColor="background20" transparent="1" />
-    <widget name="label" position="center,960" size="900,66" font="Regular;28" backgroundColor="background20" halign="center" transparent="1" zPosition="2" foregroundColor="light_blue" />
-    <widget name="statuslabel" position="center,907" size="1070,40" font="Regular;28" foregroundColor="orange" halign="center" zPosition="1" backgroundColor="background20" transparent="1" />
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="30,10" size="141,75" pixmap="myNOVUM_FHD2/menu/tvspielfilm-hd.png" alphatest="blend" zPosition="1" />
+    <widget name="textpage" position="130,240" size="300,700" font="Regular; 25" halign="left" zPosition="1" backgroundColor="background20" transparent="1" />
+    <widget name="picture" position="510,240" size="900,643" alphatest="blend" zPosition="1" backgroundColor="background20" transparent="1" halign="center" />
+    <widget name="label" position="397,1010" size="1125,70" alphatest="blend" zPosition="2" backgroundColor="background" transparent="1" foregroundColor="orange" font="Regular; 25" halign="center" />
+    <widget name="pictext" position="460,920" size="1000,80" font="Regular; 28" foregroundColor="grey" halign="center" zPosition="2" backgroundColor="background" transparent="1" />
+    <widget name="picindex" position="1500,240" size="165,40" font="Regular; 25" halign="right" zPosition="2" transparent="1" />
   </screen>
   <screen name="tvMain" position="0,0" size="1920,1080" title="TV Spielfilm" flags="wfNoBorder" backgroundColor="transparent">
     <ePixmap pixmap="myNOVUM_FHD2/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
@@ -30374,7 +30484,7 @@ self.instance.move(ePoint(0,0))
       <convert type="ClockToText">Full</convert>
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/tvspielfilm.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <widget name="mainmenu" position="710,240" size="250,330" scrollbarMode="showNever" zPosition="2" backgroundColor="background20" transparent="1" />
     <widget name="secondmenu" position="710,240" size="250,510" scrollbarMode="showNever" zPosition="2" backgroundColor="background20" transparent="1" />
     <widget name="thirdmenu" position="710,240" size="250,510" scrollbarMode="showNever" zPosition="2" backgroundColor="background20" transparent="1" />
@@ -30396,7 +30506,7 @@ self.instance.move(ePoint(0,0))
       <convert type="ClockToText">Full</convert>
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/tvspielfilm.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <widget name="pagemenu" position="622,240" size="382,760" scrollbarMode="showNever" zPosition="1" backgroundColor="background2" transparent="1" />
   </screen>
   <screen name="showTVHeuteHelp" position="0,0" size="1920,1080" title="TV Spielfilm - Heute im TV - Hilfe" backgroundColor="transparent" flags="wfNoBorder">
@@ -30410,7 +30520,7 @@ self.instance.move(ePoint(0,0))
       <convert type="ClockToText">Full</convert>
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/tvspielfilm.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <ePixmap position="435,240" size="750,750" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/help/Heute_im_TV.png" zPosition="1" />
   </screen>
   <screen name="showTVProgrammHelp" position="0,0" size="1920,1080" title="TV Spielfilm - TV-Programm - Hilfe" backgroundColor="transparent" flags="wfNoBorder">
@@ -30424,7 +30534,7 @@ self.instance.move(ePoint(0,0))
       <convert type="ClockToText">Full</convert>
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/tvspielfilm.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <ePixmap position="435,240" size="750,750" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/help/TV-Programm.png" zPosition="1" />
   </screen>
   <screen name="showTVTippsHelp" position="0,0" size="1920,1080" title="TV Spielfilm - TV-Tipps - Hilfe" backgroundColor="transparent" flags="wfNoBorder">
@@ -30438,7 +30548,7 @@ self.instance.move(ePoint(0,0))
       <convert type="ClockToText">Full</convert>
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/tvspielfilm.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <ePixmap position="435,240" size="750,750" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/help/TV-Tipps.png" zPosition="1" />
   </screen>
   <screen name="showTVJetztHelp" position="0,0" size="1920,1080" title="TV Spielfilm - Jetzt im TV - Hilfe" backgroundColor="transparent" flags="wfNoBorder">
@@ -30452,7 +30562,7 @@ self.instance.move(ePoint(0,0))
       <convert type="ClockToText">Full</convert>
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/tvspielfilm.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <ePixmap position="435,240" size="750,750" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/help/Jetzt_im_TV.png" zPosition="1" />
   </screen>
   <screen name="showTVInfoHelp" position="0,0" size="1920,1080" title="TV Spielfilm - Sendungsinfo - Hilfe" backgroundColor="transparent" flags="wfNoBorder">
@@ -30466,7 +30576,7 @@ self.instance.move(ePoint(0,0))
       <convert type="ClockToText">Full</convert>
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/tvspielfilm.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <ePixmap position="435,240" size="750,750" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/help/Sendungsinfo.png" zPosition="1" />
   </screen>
   <screen name="tvsConfig" position="0,0" size="1920,1080" backgroundColor="transparent" title="TV Spielfilm Setup" flags="wfNoBorder">
@@ -30480,7 +30590,7 @@ self.instance.move(ePoint(0,0))
       <convert type="ClockToText">Full</convert>
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/tvspielfilm.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <widget name="config" position="210,240" size="1200,360" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" selectionPixmap="myNOVUM_FHD2/images/FocusBar.png" zPosition="1" backgroundColor="background2" transparent="1" />
     <widget name="folderlist" position="210,240" size="1200,360" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" selectionPixmap="myNOVUM_FHD2/images/FocusBar.png" zPosition="1" backgroundColor="background2" transparent="1" />
     <ePixmap pixmap="myNOVUM_FHD2/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
@@ -30499,7 +30609,7 @@ self.instance.move(ePoint(0,0))
       <convert type="ClockToText">Full</convert>
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/tvspielfilm.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1630,180" size="220,220" pixmap="myNOVUM_FHD2/menu/iconnovum.png" transparent="1" alphatest="blend" />
     <ePixmap position="755,550" size="127,48" pixmap="myNOVUM_FHD2/menu/info.png" transparent="1" alphatest="blend" zPosition="3" />
     <widget name="label" position="495,350" size="637,525" font="Regular;27" foregroundColor="white" backgroundColor="background2" halign="center" valign="center" transparent="1" zPosition="2" />
   </screen>
