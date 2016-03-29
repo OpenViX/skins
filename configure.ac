@@ -291,9 +291,7 @@ src/skins/1080/MetrixFHD/skin_default/icons/Makefile
 src/skins/1080/MetrixFHD/SkinDesign/Makefile
 
 src/skins/1080/myNOVUM_FHD2/Makefile
-src/skins/1080/myNOVUM_FHD2/busy/Makefile
 src/skins/1080/myNOVUM_FHD2/buttons/Makefile
-src/skins/1080/myNOVUM_FHD2/common_icons/Makefile
 src/skins/1080/myNOVUM_FHD2/countries/Makefile
 src/skins/1080/myNOVUM_FHD2/epg/Makefile
 src/skins/1080/myNOVUM_FHD2/extensions/Makefile
@@ -305,16 +303,12 @@ src/skins/1080/myNOVUM_FHD2/images/slider/Makefile
 src/skins/1080/myNOVUM_FHD2/menu/Makefile
 src/skins/1080/myNOVUM_FHD2/meta/Makefile
 src/skins/1080/myNOVUM_FHD2/mmp/Makefile
-src/skins/1080/myNOVUM_FHD2/skin_default/Makefile
-src/skins/1080/myNOVUM_FHD2/skin_default/buttons/Makefile
 src/skins/1080/myNOVUM_FHD2/SkinDesign/Makefile
 src/skins/1080/myNOVUM_FHD2/spinner/Makefile
 src/skins/1080/myNOVUM_FHD2/WeatherIcons/Makefile
 
 src/skins/1080/myNOVUM_FHD2_Black/Makefile
-src/skins/1080/myNOVUM_FHD2_Black/busy/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/buttons/Makefile
-src/skins/1080/myNOVUM_FHD2_Black/common_icons/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/countries/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/epg/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/extensions/Makefile
@@ -326,16 +320,12 @@ src/skins/1080/myNOVUM_FHD2_Black/images/slider/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/menu/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/meta/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/mmp/Makefile
-src/skins/1080/myNOVUM_FHD2_Black/skin_default/Makefile
-src/skins/1080/myNOVUM_FHD2_Black/skin_default/buttons/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/SkinDesign/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/spinner/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/WeatherIcons/Makefile
 
 src/skins/1080/NOVUM_FHD_Slim/Makefile
-src/skins/1080/NOVUM_FHD_Slim/busy/Makefile
 src/skins/1080/NOVUM_FHD_Slim/buttons/Makefile
-src/skins/1080/NOVUM_FHD_Slim/common_icons/Makefile
 src/skins/1080/NOVUM_FHD_Slim/countries/Makefile
 src/skins/1080/NOVUM_FHD_Slim/epg/Makefile
 src/skins/1080/NOVUM_FHD_Slim/extensions/Makefile
@@ -347,8 +337,6 @@ src/skins/1080/NOVUM_FHD_Slim/images/slider/Makefile
 src/skins/1080/NOVUM_FHD_Slim/menu/Makefile
 src/skins/1080/NOVUM_FHD_Slim/meta/Makefile
 src/skins/1080/NOVUM_FHD_Slim/mmp/Makefile
-src/skins/1080/NOVUM_FHD_Slim/skin_default/Makefile
-src/skins/1080/NOVUM_FHD_Slim/skin_default/buttons/Makefile
 src/skins/1080/NOVUM_FHD_Slim/SkinDesign/Makefile
 src/skins/1080/NOVUM_FHD_Slim/spinner/Makefile
 src/skins/1080/NOVUM_FHD_Slim/WeatherIcons/Makefile
