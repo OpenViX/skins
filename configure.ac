@@ -308,9 +308,7 @@ src/skins/1080/myNOVUM_FHD2/spinner/Makefile
 src/skins/1080/myNOVUM_FHD2/WeatherIcons/Makefile
 
 src/skins/1080/myNOVUM_FHD2_Black/Makefile
-src/skins/1080/myNOVUM_FHD2_Black/busy/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/buttons/Makefile
-src/skins/1080/myNOVUM_FHD2_Black/common_icons/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/countries/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/epg/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/extensions/Makefile
@@ -322,8 +320,6 @@ src/skins/1080/myNOVUM_FHD2_Black/images/slider/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/menu/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/meta/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/mmp/Makefile
-src/skins/1080/myNOVUM_FHD2_Black/skin_default/Makefile
-src/skins/1080/myNOVUM_FHD2_Black/skin_default/buttons/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/SkinDesign/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/spinner/Makefile
 src/skins/1080/myNOVUM_FHD2_Black/WeatherIcons/Makefile
