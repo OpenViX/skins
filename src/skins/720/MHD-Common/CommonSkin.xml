@@ -2,7 +2,7 @@
 <!--suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix -->
 <skin>
 
-	<!--	Common.skin Vs 6.12 Magic-HD-Night/Noire  	-->
+	<!--	Common.skin Vs 6.13 Magic-HD-Night/Noire  	-->
 	<!--	This skin is part of the skin Magic-HD-Night/Noire; the same license applies.	-->
 
 	<!-- Templates -->
@@ -645,14 +645,14 @@
 	</screen>
 	<!-- ## Channel, EPG, EventInfo ## -->
 	<screen name="ChannelSelection" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="BasicTemplate2"/>
+		<panel name="BasicTemplate"/>
 		<panel name="RGYB_Template"/>
 		<panel name="MenuTemplate"/>
 		<panel name="InfoTemplate"/>
-		<widget source="ServiceEvent" render="PiconBg" position="13,5" size="104,62" alphatest="blend" zPosition="1"/>
+		<!--<widget source="ServiceEvent" render="PiconBg" position="13,5" size="104,62" alphatest="blend" zPosition="1"/>
 		<widget source="ServiceEvent" render="Picon" position="15,6" size="100,60" alphatest="blend" backgroundColor="secondBG" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
-		</widget>
+		</widget>-->
 		<widget name="list" backgroundColor="background" position="520,90" size="755,570" itemHeight="30" serviceNumberFont="Regular;22" serviceInfoFont="Regular;20" serviceNameFont="Regular;22" serviceItemHeight="30" picServiceEventProgressbar="MHD-Common/window/progress.png" progressbarBorderWidth="1" colorServiceDescription="#DBB96E" colorEventProgressbarBorderSelected="white" transparent="1" foregroundColorServiceNotAvail="#00656565" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceEvent" render="Label" position="10,385" size="425,25" transparent="1" foregroundColor="secondFG" font="Regular;20" halign="left">
 			<convert type="EventName">NowName</convert>
@@ -731,14 +731,14 @@
 		</widget>
 	</screen>
 	<screen name="EPGSelection" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="BasicTemplate2"/>
+		<panel name="BasicTemplate"/>
 		<panel name="RGYB_Template"/>
 		<panel name="MenuTemplate"/>
 		<panel name="InfoTemplate"/>
-		<widget source="Service" render="PiconBg" position="13,5" size="104,62" alphatest="blend" zPosition="1"/>
+		<!--<widget source="Service" render="PiconBg" position="13,5" size="104,62" alphatest="blend" zPosition="1"/>
 		<widget source="Service" render="Picon" position="15,6" size="100,60" alphatest="blend" backgroundColor="secondBG" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
-		</widget>
+		</widget>-->
 		<widget name="list" position="520,90" size="755,570" itemHeight="30" font="Regular;22" transparent="0" scrollbarMode="showOnDemand"/>
 		<widget name="number" position="520,90" size="755,570" zPosition="5" backgroundColor="background" transparent="0" font="Regular;36" borderColor="black" borderWidth="1" valign="center" halign="center"/>
 		<widget source="Event" render="Label" position="10,385" size="477,25" zPosition="1" backgroundColor="secondBG" transparent="1" foregroundColor="yellow" font="Regular;20" valign="center">
@@ -761,14 +761,14 @@
 		</widget>
 	</screen>
 	<screen name="EventView" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="BasicTemplate2"/>
+		<panel name="BasicTemplate"/>
 		<panel name="RGYB_Template"/>
 		<panel name="MenuTemplate"/>
 		<panel name="InfoTemplate"/>
-		<widget source="Service" render="PiconBg" position="13,5" size="104,62" alphatest="blend" zPosition="1"/>
+		<!--<widget source="Service" render="PiconBg" position="13,5" size="104,62" alphatest="blend" zPosition="1"/>
 		<widget source="Service" render="Picon" position="15,6" size="100,60" alphatest="blend" backgroundColor="secondBG" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
-		</widget>
+		</widget>-->
 		<widget name="channel" position="15,400" size="460,50" transparent="1" foregroundColor="secondFG" font="Regular;21" halign="center"/>
 		<widget name="datetime" position="15,458" size="460,30" transparent="1" font="Regular;21" halign="center"/>
 		<widget name="duration" position="15,488" size="460,30" transparent="1" font="Regular;21" halign="center"/>
@@ -1614,14 +1614,14 @@ self.autoResize()
 		<panel name="VixLogo"/>
 	</screen>
 	<screen name="EPGSelectionMulti" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="BasicTemplate2"/>
+		<panel name="BasicTemplate"/>
 		<panel name="RGYB_Template"/>
 		<panel name="MenuTemplate"/>
 		<panel name="InfoTemplate"/>
-		<widget source="Service" render="PiconBg" position="13,5" size="104,62" alphatest="blend" zPosition="1"/>
+		<!--<widget source="Service" render="PiconBg" position="13,5" size="104,62" alphatest="blend" zPosition="1"/>
 		<widget source="Service" render="Picon" position="15,6" size="100,60" alphatest="blend" backgroundColor="secondBG" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
-		</widget>
+		</widget>-->
 		<widget name="date" position="750,85" size="250,24" transparent="1" font="Regular;20" valign="center" halign="center"/>
 		<widget name="bouquetlist" position="520,165" size="755,500" itemHeight="31" foregroundColor="white" backgroundColor="background" foregroundColorSelected="selectedFG" backgroundColorSelected="#001C252D" borderColor="background" scrollbarMode="showNever" zPosition="4" transparent="0"/>
 		<widget name="list" position="520,165" size="755,500" itemHeight="30" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1"/>
