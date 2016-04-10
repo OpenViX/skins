@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.8.9 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.9.0 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -15,8 +15,24 @@
 	</screen>
 	<screen name="SecondInfoBar" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="InfoBarPanel"/>
-		<widget source="session.CurrentService" render="Label" position="7,7" size="952,127" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+<!--		<widget source="session.CurrentService" render="Label" position="7,7" size="952,127" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
 			<convert type="PliExtraInfo">All</convert>
+		</widget>-->
+		<widget source="session.CurrentService" render="Label" position="7,7" size="952,30" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+			<convert type="PliExtraInfo">ServiceRef</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="7,40" size="952,30" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+			<convert type="PliExtraInfo">PIDInfo</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" position="7,73" size="125,30" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+			<convert type="PliExtraInfo">VideoCodec</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="135,73" size="800,30" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+			<convert type="PliExtraInfo">TunerType</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="7,106" size="952,30" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+			<convert type="PliExtraInfo">CryptoBar</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="7,135" size="954,33" font="menulist;30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" halign="left">
 			<convert type="CryptoInfo">VerboseInfo</convert>
@@ -43,6 +59,21 @@
 		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_off.png" position="1140,70" size="38,36" zPosition="1" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1200,75" size="100,30" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+			<convert type="PliExtraInfo">TransponderFrequency</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1310,75" size="20,30" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+			<convert type="PliExtraInfo">TransponderPolarization</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1340,75" size="100,30" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+			<convert type="PliExtraInfo">TransponderSymbolRate</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1450,75" size="60,30" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+			<convert type="PliExtraInfo">TransponderFEC</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1520,75" size="100,30" font="menulist;27" backgroundColor="transpBlack" transparent="1" zPosition="1" foregroundColor="grey" valign="top" halign="left">
+			<convert type="PliExtraInfo">TransponderModulation</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="7,180" size="937,36" font="menulist;33" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="selectedFG" noWrap="1" halign="left">
 					<convert type="EventName">NameNow</convert>
