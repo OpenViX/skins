@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Common Vs 0.4.4 	-->
+	<!--	Skin: Magic-FHD Common Vs 0.4.5 	-->
 	<!--	This skin is part of the skin Magic-HD; the same license applies.	-->
 
 	<!-- templates -->
@@ -232,8 +232,10 @@
 		<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1545,1042" size="180,33" font="Regular;28" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" text="DVB-S" halign="right">
-			<convert type="ServiceOrbitalPosition">
-			</convert>
+			<convert type="PliExtraInfo">OrbitalPositionOrTunerSystem</convert>">
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="510,1030" size="950,48" font="menulist;22" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" halign="right">
+			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,33" font="Regular;30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" valign="center" halign="right">
 			<convert type="ClockToText">ShortDate</convert>
