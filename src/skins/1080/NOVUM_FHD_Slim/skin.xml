@@ -1,6 +1,6 @@
 ﻿<!--suppress XmlUnboundNsPrefix -->
 <skin>
-  <!--	Skin: NOVUM_FHD_Slim vs.15.3 by Nashu  -->
+  <!--	Skin: NOVUM_FHD_Slim vs.15.6 by Nashu  -->
   <!--	This skin is a Freeware. Everyone can modify and use it in other images.		-->
   <!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!		-->
   <!--	Do whatever you want with this skin, but don't tell it's yours, or your idea! -->
@@ -11499,7 +11499,7 @@ self.instance.move(ePoint(0,0))
     <widget source="lab3" render="Label" position="210,860" size="975,60" font="Regular;28" backgroundColor="background2" transparent="1" zPosition="1" />
     <eLabel text="OPEN SOURCE" position="210,240" size="1200,50" font="Regular;32" backgroundColor="background2" transparent="1" halign="right" zPosition="1" />
     <widget name="AboutScrollLabel" position="210,390" size="1200,480" font="Regular;28" transparent="1" zPosition="1" scrollbarMode="showOnDemand" backgroundColor="background2" halign="left" />
-    <eLabel text="Skin NOVUM_FHD_Slim vs.15.3 by Nashu" position="210,1020" size="1200,45" backgroundColor="background2" foregroundColor="white" transparent="1" font="Regular;28" halign="left" />
+    <eLabel text="Skin NOVUM_FHD_Slim vs.15.6 by Nashu" position="210,1020" size="1200,45" backgroundColor="background2" foregroundColor="white" transparent="1" font="Regular;28" halign="left" />
   </screen>
   <screen name="SystemMemoryInfo" position="0,0" size="1920,1080" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
     <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
@@ -29490,6 +29490,640 @@ self.instance.move(ePoint(0,0))
     <widget name="config" scrollbarMode="showOnDemand" font="Regular;28" itemHeight="40" position="210,240" size="1200,440" transparent="1" enableWrapAround="1" backgroundColor="background2" />
     <widget name="extendLibMediaInfo" font="Regular;28" itemHeight="40" position="210,730" size="1200,280" transparent="1" foregroundColor="grey" backgroundColor="background2" />
   </screen>
+  <!-- SubsSupport -->
+  <screen name="SubsSupportSettings" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="menuList" position="210,240" size="1200,400" font="Regular; 28" itemHeight="40" backgroundColor="background2" transparent="1" />
+  </screen>
+  <screen name="MyLanguageSelection" position="0,0" size="1920,1080" title="Language selection" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="languages" render="Listbox" position="460,240" size="700,700" scrollbarMode="showOnDemand" backgroundColor="background2" transparent="1">
+      <convert type="TemplatedMultiContent">
+                {"template": [
+                        MultiContentEntryText(pos = (80, 3), size = (620, 44), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
+                        MultiContentEntryPixmap(pos = (0,5), size = (60, 40), png = 2), # index 2 is the pixmap
+                    ],
+                 "fonts": [gFont("Regular", 32)],
+                 "itemHeight": 50
+                }
+            </convert>
+    </widget>
+  </screen>
+  <screen name="CaptchDialog" position="0,0" size="1920,1080" title="Virtual keyboard" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="country" render="Pixmap" position="1350,240" size="60,60" alphatest="on" borderWidth="2" borderColor="unffcc00">
+      <convert type="ValueToPixmap">LanguageCode</convert>
+    </widget>
+    <widget name="header" position="210,240" size="1120,60" font="Regular; 28" transparent="1" noWrap="1" />
+    <widget name="captcha" position="210,330" size="1200,160" alphatest="blend" zPosition="-1" backgroundColor="background2" transparent="1" font="Regular; 28" />
+    <widget name="text" position="210,510" size="1200,60" font="Regular; 40" transparent="1" noWrap="1" halign="right" />
+    <widget name="list" position="210,590" size="1200,320" itemHeight="40" font="Regular;28" backgroundColor="background2" selectionDisabled="1" transparent="1" />
+  </screen>
+  <screen name="BaseMenuScreen" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="210,240" size="1200,600" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsSetupExternal" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="210,240" size="1200,600" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsSetupMainMisc" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="210,240" size="1200,600" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsSetupEmbedded" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="210,240" size="1200,600" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsSetupGeneral" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="210,240" size="1200,600" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsSupportSettings" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="menuList" position="210,240" size="1200,600" font="Regular;28" itemHeight="40" backgroundColor="background2" transparent="1" />
+  </screen>
+  <screen name="SubsStatusScreen" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="delay" render="Label" position="210,240" size="600,100" valign="center" halign="left" font="Regular;28" transparent="1" foregroundColor="white" backgroundColor="background2" />
+    <widget source="fps" render="Label" position="810,240" size="600,100" valign="center" halign="right" font="Regular;28" transparent="1" foregroundColor="light_blue" backgroundColor="background2" />
+  </screen>
+  <screen name="SubsMenu" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="title_label" position="210,240" size="1200,60" valign="center" halign="left" font="Regular; 32" transparent="1" foregroundColor="white" backgroundColor="background2" />
+    <widget name="subfile_label" position="210,330" size="1200,60" valign="center" halign="left" font="Regular;28" transparent="1" foregroundColor="white" backgroundColor="background2" />
+    <widget name="subfile_list" position="210,420" size="1200,40" halign="left" font="Regular;28" foregroundColor="lightgrey" backgroundColor="background2" transparent="1" />
+    <widget name="menu_list" position="210,490" size="1200,320" halign="left" scrollbarMode="showOnDemand" itemHeight="40" font="Regular;28" foregroundColor="lightgrey" backgroundColor="background2" transparent="1" />
+    <widget name="copyright" position="210,875" size="1200,50" valign="center" halign="left" font="Regular; 26" transparent="1" foregroundColor="white" backgroundColor="background2" />
+  </screen>
+  <screen name="SubsChooser" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="filename" render="Label" position="210,240" size="1200,60" valign="center" halign="left" font="Regular; 28" transparent="1" backgroundColor="background2" />
+    <widget name="file_list" position="210,330" size="1200,400" scrollbarMode="showOnDemand" itemHeight="40" font="Regular;28" foregroundColor="lightgrey" backgroundColor="background2" transparent="1" />
+    <widget name="menu_list" position="210,765" size="1200,120" scrollbarMode="showOnDemand" itemHeight="40" font="Regular;28" foregroundColor="lightgrey" backgroundColor="background2" transparent="1" />
+  </screen>
+  <screen name="InfoScreen" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="path" render="Label" position="210,240" size="1200,320" valign="center" halign="left" font="Regular;28" transparent="1" backgroundColor="background2" />
+  </screen>
+  <screen name="SubsDownloadedSelection" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="header_name" render="Label" position="210,240" size="500,60" font="Regular; 28" halign="left" foregroundColor="white" transparent="1" backgroundColor="background2" />
+    <widget source="header_provider" render="Label" position="730,240" size="380,60" font="Regular; 28" halign="left" foregroundColor="white" transparent="1" backgroundColor="background2" />
+    <widget source="header_date" render="Label" position="1130,240" size="280,60" font="Regular; 28" halign="left" foregroundColor="white" transparent="1" backgroundColor="background2" />
+    <widget source="subtitles" render="Listbox" scrollbarMode="showOnDemand" position="210,330" size="1200,400" zPosition="3" foregroundColor="lightgrey" backgroundColor="background2" transparent="1">
+      <convert type="TemplatedMultiContent">
+                {"templates":
+                    {"default": (40, [
+                        MultiContentEntryPixmapAlphaBlend(pos = (0, 8),   size = (24, 24), png=0), # key,
+                        MultiContentEntryText(pos = (30, 0),   size = (500, 40),  font = 0, flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text=1, color=0xFF000004), # name,
+                        MultiContentEntryText(pos = (520, 0),  size = (380, 40),  font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,  text = 2, color=0xFF000004), # provider,
+                        MultiContentEntryText(pos = (920, 0), size = (280, 40), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,  text = 3, color=0xFF000004), # date,
+                    ], True, "showOnDemand"),
+                    },
+                "fonts": [gFont("Regular", 28), gFont("Regular", 26)],
+                "itemHeight": 40
+                }
+            </convert>
+    </widget>
+    <widget source="entries_sum" render="Label" position="210,780" size="1200,50" font="Regular; 28" halign="left" backgroundColor="background2" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/info.png" position="1567,863" size="104,37" alphatest="blend" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget source="key_red" render="Label" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget source="key_blue" render="Label" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsDownloadedSubtitlesMenu" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="210,240" size="1200,600" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsEmbeddedSelection" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="streams" render="Listbox" scrollbarMode="showOnDemand" position="210,240" size="1200,600" zPosition="3" foregroundColor="lightgrey" backgroundColor="background2" transparent="1">
+      <convert type="TemplatedMultiContent">
+                {"templates":
+                    {"default": (40, [
+                        MultiContentEntryText(pos = (0, 0),   size = (120, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
+                        MultiContentEntryText(pos = (140, 0),  size = (200, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
+                        MultiContentEntryText(pos = (360, 0), size = (340, 40), font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
+                        MultiContentEntryText(pos = (720, 0), size = (420, 40), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
+                    ], True, "showNever"),
+                    },
+                "fonts": [gFont("Regular", 28), gFont("Regular", 26)],
+                "itemHeight": 40
+                }
+        </convert>
+    </widget>
+  </screen>
+  <screen name="SuggestionsListScreen" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="suggestionstitle" render="Label" position="210,240" size="1200,60" foregroundColor="lightgrey" font="Regular;28" halign="left" valign="center" transparent="1" />
+    <widget source="suggestionslist" render="Listbox" position="210,330" size="1200,400" scrollbarMode="showOnDemand" foregroundColor="lightgrey" backgroundColor="background2" transparent="1">
+      <convert type="TemplatedMultiContent">
+                {"templates":
+                        {"default": (40, [
+                            MultiContentEntryText(pos = (0, 0),   size = (1200, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 0), # title,
+                        ], True, "showOnDemand"),
+                        "notselected": (40, [
+                            MultiContentEntryText(pos = (0, 0),   size = (1200, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 0), # title,
+                        ], False, "showOnDemand")
+                        },
+                    "fonts": [gFont("Regular", 28), gFont("Regular", 26)],
+                    "itemHeight": 40
+                }
+      </convert>
+    </widget>
+  </screen>
+  <screen name="HistoryListScreen" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="suggestionstitle" render="Label" position="210,240" size="1200,60" foregroundColor="lightgrey" font="Regular;28" halign="left" valign="center" transparent="1" />
+    <widget source="suggestionslist" render="Listbox" position="210,330" size="1200,400" scrollbarMode="showOnDemand" foregroundColor="lightgrey" backgroundColor="background2" transparent="1">
+      <convert type="TemplatedMultiContent">
+                {"templates":
+                        {"default": (40, [
+                            MultiContentEntryText(pos = (0, 0),   size = (1200, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 0), # title,
+                        ], True, "showOnDemand"),
+                        "notselected": (40, [
+                            MultiContentEntryText(pos = (0, 0),   size = (1200, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 0), # title,
+                        ], False, "showOnDemand")
+                        },
+                    "fonts": [gFont("Regular", 28), gFont("Regular", 26)],
+                    "itemHeight": 40
+                }
+      </convert>
+    </widget>
+  </screen>
+  <screen name="SubsSearchDownloadOptions" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="fname" render="Label" position="210,725" size="1200,100" valign="center" halign="left" font="Regular;28" zPosition="1" backgroundColor="background2" transparent="1" />
+    <widget source="dpath" render="Label" position="210,855" size="1200,100" valign="center" halign="left" font="Regular; 28" zPosition="1" transparent="1" backgroundColor="background2" />
+    <widget name="config" position="210,240" size="1200,440" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget source="key_red" render="Label" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget source="key_green" render="Label" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget source="key_yellow" render="Label" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget source="key_blue" render="Label" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsSearchContextMenu" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="subtitle_release" render="Label" position="210,240" size="1200,60" valign="center" halign="left" font="Regular;28" zPosition="1" foregroundColor="lightgrey" backgroundColor="background2" transparent="1" />
+    <widget source="context_menu" render="Listbox" position="210,330" size="1200,400" scrollbarMode="showNever" zPosition="1" foregroundColor="lightgrey" backgroundColor="background2" transparent="1">
+      <convert type="TemplatedMultiContent">
+                {"templates":
+                    {"default": (40, [
+                        MultiContentEntryText(pos = (0, 0),   size = (1200, 40),  font = 0, color = 0xffffff, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,  text = 0), # langname,
+                    ], True, "showOnDemand"),
+                    },
+                "fonts": [gFont("Regular", 28)],
+                "itemHeight":40,
+                }
+      </convert>
+    </widget>
+  </screen>
+  <screen name="SubsSearch" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="search_info" render="Listbox" position="210,240" size="1200,320" scrollbarMode="showNever" zPosition="1" foregroundColor="lightgrey" backgroundColor="background2" transparent="1">
+      <convert type="TemplatedMultiContent">
+                {"templates":
+                    {"default": (40, [
+                        MultiContentEntryText(pos = (0, 0),   size = (1200, 40),  font = 0, color = 0xffffff, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,  text = 0), # langname,
+                    ], True, "showOnDemand"),
+                    },
+                "fonts": [gFont("Regular", 28)],
+                "itemHeight":40,
+                }
+      </convert>
+    </widget>
+    <widget source="header_country" render="Label" position="210,600" size="300,50" font="Regular; 28" halign="left" foregroundColor="unfcc000" transparent="1" backgroundColor="background2" />
+    <widget source="header_release" render="Label" position="530,600" size="500,50" font="Regular; 28" halign="left" foregroundColor="light_blue" transparent="1" backgroundColor="background2" />
+    <widget source="header_provider" render="Label" position="1050,600" size="300,50" font="Regular; 28" halign="left" foregroundColor="un20009f3c" transparent="1" backgroundColor="background2" />
+    <widget source="header_sync" render="Label" position="1370,600" size="40,50" font="Regular; 28" halign="left" foregroundColor="un32F902" transparent="1" backgroundColor="background2" />
+    <widget name="loadmessage" position="210,680" size="1200,320" valign="center" halign="left" font="Regular; 28" zPosition="4" transparent="1" backgroundColor="background2" />
+    <widget name="errormessage" position="210,680" size="1200,320" valign="center" halign="left" font="Regular; 28" zPosition="5" transparent="1" />
+    <widget source="subtitles" render="Listbox" scrollbarMode="showOnDemand" position="210,680" size="1200,320" zPosition="3" transparent="1">
+      <convert type="TemplatedMultiContent">
+                {"templates":
+                    {"default": (40, [
+                        MultiContentEntryPixmapAlphaBlend(pos = (0, 8),   size = (24, 24), png=0), # key,
+                        MultiContentEntryText(pos = (30, 0),   size = (270, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # language,
+                        MultiContentEntryText(pos = (320, 0),  size = (500, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # filename,
+                        MultiContentEntryText(pos = (840, 0), size = (200, 40), font = 0, flags = RT_HALIGN_LEFT,  text = 3), # size,
+                        MultiContentEntryPixmapAlphaBlend(pos = (1160, 0),   size = (24, 24), png=4), # syncPng,
+                    ], True, "showOnDemand"),
+                    "old": (40, [
+                        MultiContentEntryPixmapAlphaBlend(pos = (0, 8),   size = (24, 24), png=0), # key,
+                        MultiContentEntryText(pos = (30, 0),   size = (270, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # language,
+                        MultiContentEntryText(pos = (320, 0),  size = (500, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # filename,
+                        MultiContentEntryText(pos = (840, 0), size = (200, 40), font = 0, flags = RT_HALIGN_LEFT,  text = 3), # size,
+                        MultiContentEntryText(pos = (1060, 0), size = (140, 40), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # sync,
+                    ], True, "showOnDemand"),
+                    },
+                "fonts": [gFont("Regular", 28), gFont("Regular", 26)],
+                "itemHeight": 40
+                }
+      </convert>
+    </widget>
+    <widget source="key_menu_img" render="Pixmap" pixmap="NOVUM_FHD_Slim/buttons/menu.png" position="1567,863" size="104,37" transparent="1" alphatest="blend">
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget source="key_red" render="Label" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget source="key_green" render="Label" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget source="key_yellow" render="Label" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget source="key_blue" render="Label" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsSearchSettings" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="210,240" size="1200,320" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <widget source="header_name" render="Label" position="210,600" size="240,50" font="Regular; 28" halign="left" foregroundColor="unfcc000" transparent="1" backgroundColor="background2" />
+    <widget source="header_lang" render="Label" position="470,600" size="700,50" font="Regular; 28" halign="left" foregroundColor="light_blue" transparent="1" backgroundColor="background2" />
+    <widget source="header_state" render="Label" position="1190,600" size="200,50" font="Regular; 28" halign="right" foregroundColor="un20009f3c" transparent="1" backgroundColor="background2" />
+    <widget source="providers" render="Listbox" scrollbarMode="showOnDemand" position="210,680" size="1200,320" zPosition="3" transparent="1">
+      <convert type="TemplatedMultiContent">
+                {"templates":
+                    {"default": (40, [
+                        MultiContentEntryText(pos = (0, 0),   size = (240, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 0), # name,
+                        MultiContentEntryText(pos = (260, 0),  size = (700, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # lang,
+                        MultiContentEntryText(pos = (980, 0), size = (200, 40), font = 0, flags = RT_HALIGN_RIGHT, text = 2, color=0xFF000003) # enabled,
+                    ], True, "showOnDemand"),
+                    "notselected": (40, [
+                        MultiContentEntryText(pos = (0, 0),   size = (240, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 0), # name,
+                        MultiContentEntryText(pos = (260, 0),  size = (700, 40),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # lang,
+                        MultiContentEntryText(pos = (980, 0), size = (200, 40), font = 0, flags = RT_HALIGN_RIGHT,  text = 2, color=0xFF000003) # enabled,
+                    ], False, "showOnDemand")
+                    },
+                "fonts": [gFont("Regular", 28), gFont("Regular", 26)],
+                "itemHeight": 40
+                }
+      </convert>
+    </widget>
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsSearchParamsMenu" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget source="sourceTitleInfo" render="Label" position="210,240" size="1200,60" halign="left" font="Regular; 30" foregroundColor="white" backgroundColor="background2" transparent="1" />
+    <widget source="sourceTitle" render="Label" position="210,330" size="1200,80" halign="left" valign="center" font="Regular; 30" transparent="1" backgroundColor="background2" />
+    <widget source="searchTitleParams" render="Label" position="210,430" size="1200,60" halign="left" font="Regular; 30" foregroundColor="white" transparent="1" backgroundColor="background2" />
+    <widget name="config" position="210,510" size="1200,440" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <widget source="pressOkTitleInfo" render="Label" position="210,970" size="1200,50" halign="left" font="Regular; 28" transparent="1" backgroundColor="background2" />
+  </screen>
+  <screen name="SubsSearchProviderMenu" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="210,240" size="1200,600" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="SubsControllerDVB" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="subtitle" position="210,240" size="580,60" valign="center" halign="left" font="Regular; 28" transparent="1" foregroundColor="white" shadowColor="#40101010" shadowOffset="2,2" backgroundColor="background2" />
+    <widget name="subtitlesTime" position="210,330" size="580,60" valign="center" halign="left" font="Regular; 28" transparent="1" foregroundColor="white" shadowColor="#40101010" shadowOffset="2,2" backgroundColor="background2" />
+    <widget name="subtitlesPosition" position="210,410" size="580,60" valign="center" halign="left" font="Regular; 28" transparent="1" foregroundColor="white" shadowColor="#40101010" shadowOffset="2,2" backgroundColor="background2" />
+    <widget name="subtitlesFps" position="210,490" size="1200,60" valign="center" halign="left" font="Regular; 28" transparent="1" foregroundColor="white" shadowColor="#40101010" shadowOffset="2,2" backgroundColor="background2" />
+    <widget name="eventName" position="810,240" size="600,60" valign="center" halign="left" font="Regular; 28" transparent="1" foregroundColor="white" shadowColor="#40101010" shadowOffset="2,2" backgroundColor="background2" />
+    <widget name="eventTime" position="810,330" size="600,60" valign="center" halign="left" font="Regular; 28" transparent="1" foregroundColor="white" shadowColor="#40101010" shadowOffset="2,2" backgroundColor="background2" />
+    <widget name="eventDuration" position="810,410" size="600,60" valign="center" halign="left" font="Regular; 28" transparent="1" foregroundColor="white" shadowColor="#40101010" shadowOffset="2,2" backgroundColor="background2" />
+  </screen>
+  <screen name="SubsSetupDVBPlayer" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="210,240" size="1200,600" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
   <!-- SubtitlePlayer -->
   <screen name="Ubacitekst" position="0,0" size="1920,1080" flags="wfNoBorder" title="" backgroundColor="transparent">
     <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
@@ -29518,8 +30152,8 @@ self.instance.move(ePoint(0,0))
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
     <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/text.png" position="1590,855" size="75,37" alphatest="blend" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/info.png" alphatest="blend" position="1675,855" size="75,37" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/text.png" position="1567,826" size="104,37" alphatest="blend" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/info.png" position="1567,863" size="104,37" alphatest="blend" />
     <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
     <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
     <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
@@ -29562,8 +30196,8 @@ self.instance.move(ePoint(0,0))
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
     <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/key_1.png" alphatest="blend" position="1687,1005" size="37,37" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/key_2.png" alphatest="blend" position="1740,1005" size="37,37" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/key_1.png" alphatest="blend" position="1567,975" size="37,37" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/key_2.png" alphatest="blend" position="1567,1012" size="37,37" />
     <widget name="ntitle" position="210,240" size="1200,40" transparent="1" font="Regular;28" halign="left" foregroundColor="preTrans20" backgroundColor="background2" />
     <widget name="Mlist" scrollbarMode="showOnDemand" position="210,300" size="1200,320" font="Regular;28" itemHeight="40" transparent="1" foregroundColor="lightgrey" backgroundColor="background2" />
     <eLabel text="Also known as" position="210,640" size="1200,37" font="Regular;28" foregroundColor="ivorywhite" halign="left" transparent="1" backgroundColor="background2" />
@@ -32353,6 +32987,94 @@ self.instance.move(ePoint(0,0))
     <widget source="bouquet" render="Label" position="0,78" size="309,18" font="Regular;18" halign="left" foregroundColor="light_blue" transparent="1" />
   </screen>
   <!-- XMLTV EPG importer -->
+  <screen name="EPGImportConfig" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="config" position="210,240" size="1200,600" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <widget name="statusbar" position="210,980" size="1200,50" font="Regular;28" transparent="1" backgroundColor="background2" />
+    <widget name="status" position="210,870" size="1200,90" font="Regular;28" transparent="1" backgroundColor="background2" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/info.png" position="1567,826" size="104,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/menu.png" position="1567,863" size="104,37" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="EPGImportSources" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="list" position="210,240" size="1200,640" scrollbarMode="showOnDemand" itemHeight="40" font="Regular;28" backgroundColor="background2" foregroundColor="lightgrey" enableWrapAround="1" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="EPGImportLog" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="list" position="210,240" size="1200,640" scrollbarMode="showOnDemand" itemHeight="40" font="Regular;28" backgroundColor="background2" foregroundColor="lightgrey" enableWrapAround="1" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>
+  <screen name="EPGImportProfile" position="0,0" size="1920,1080" title="EPGImportProfile" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
+    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
+    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
+    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
+    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
+    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
+    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
+    <widget name="list" position="210,240" size="1200,640" scrollbarMode="showOnDemand" itemHeight="40" font="Regular;28" backgroundColor="background2" foregroundColor="lightgrey" enableWrapAround="1" transparent="1" />
+    <ePixmap name="red" pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
+    <ePixmap name="green" pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
+    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
+  </screen>  
   <screen name="EPGMainSetup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
     <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
     <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
@@ -32365,10 +33087,10 @@ self.instance.move(ePoint(0,0))
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
     <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
-    <widget name="config" scrollbarMode="showOnDemand" font="Regular;28" position="210,240" size="1200,480" transparent="1" itemHeight="40" enableWrapAround="1" backgroundColor="background2" />
-    <widget name="statusbar" position="210,870" size="1200,40" font="Regular;28" backgroundColor="background2" transparent="1" />
-    <widget name="status" position="210,760" size="1200,90" font="Regular;28" transparent="1" backgroundColor="background2" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/info.png" alphatest="blend" position="1567,863" size="104,37" />
+    <widget name="config" position="210,240" size="1200,600" scrollbarMode="showOnDemand" itemHeight="40" transparent="1" backgroundColor="background2" font="Regular;28" />
+    <widget name="statusbar" position="210,980" size="1200,50" font="Regular;28" transparent="1" backgroundColor="background2" />
+    <widget name="status" position="210,870" size="1200,90" font="Regular;28" transparent="1" backgroundColor="background2" />
+    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/info.png" position="1567,826" size="104,37" alphatest="blend" transparent="1" />
     <ePixmap name="red" pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
     <ePixmap name="green" pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
     <ePixmap name="yellow" pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
@@ -32377,51 +33099,7 @@ self.instance.move(ePoint(0,0))
     <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
     <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
     <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-  </screen>
-  <screen name="XMLTVImportSources" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
-    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
-    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
-    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
-    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
-    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
-      <convert type="ClockToText">Full</convert>
-    </widget>
-    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
-    <widget name="list" scrollbarMode="showOnDemand" itemHeight="40" font="Regular;28" position="210,240" size="1200,640" transparent="1" backgroundColor="background2" foregroundColor="lightgrey" enableWrapAround="1" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
-    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-  </screen>
-  <screen name="XMLTVImportLog" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
-    <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
-    <eLabel position="0,0" size="1920,141" backgroundColor="un181A1C" zPosition="-2" />
-    <eLabel position="0,141" size="1920,1" backgroundColor="background80" zPosition="-1" />
-    <eLabel position="0,141" size="1560,939" backgroundColor="background70" zPosition="-10" />
-    <eLabel position="60,180" size="1500,900" backgroundColor="background" zPosition="-2" />
-    <widget source="global.CurrentTime" render="Label" position="1560,78" size="360,57" font="scoutcondWide;36" foregroundColor="transpWhite" backgroundColor="un181A1C" halign="center" transparent="1">
-      <convert type="ClockToText">Full</convert>
-    </widget>
-    <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
-    <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
-    <widget name="list" scrollbarMode="showOnDemand" position="210,240" size="1200,640" transparent="1" itemHeight="40" font="Regular;28" backgroundColor="background2" foregroundColor="lightgrey" enableWrapAround="1" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/red.png" position="1567,900" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/green.png" position="1567,937" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/yellow.png" position="1567,975" size="37,37" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="NOVUM_FHD_Slim/buttons/blue.png" position="1567,1012" size="37,37" alphatest="blend" transparent="1" />
-    <widget name="key_red" position="1620,900" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_green" position="1620,937" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_yellow" position="1620,975" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-    <widget name="key_blue" position="1620,1012" size="300,30" zPosition="1" font="Regular;24" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd" />
-  </screen>
+  </screen>  
   <screen name="Main_Menu_set" flags="wfNoBorder" position="0,0" size="1920,1080" backgroundColor="transparent">
     <ePixmap pixmap="NOVUM_FHD_Slim/images/sidebar.png" position="1560,142" size="360,938" transparent="1" zPosition="-3" />
     <eLabel position="1560,142" size="1,939" backgroundColor="background80" zPosition="-1" />
@@ -32434,9 +33112,9 @@ self.instance.move(ePoint(0,0))
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
     <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
-    <widget source="menu" render="Listbox" scrollbarMode="showNever" font="Regular;28" position="210,240" size="1200,640" backgroundColor="background2" transparent="1" />
+    <widget source="menu" render="Listbox" scrollbarMode="showNever" position="210,240" size="1200,640" backgroundColor="background2" transparent="1" />
     <convert type="TemplatedMultiContent">
-					{"template": [	MultiContentEntryText(pos = (2,2),size = (1160,36),flags = RT_HALIGN_LEFT,text = 0)],
+					{"template": [	MultiContentEntryText(pos = (0,2),size = (1180,36),flags = RT_HALIGN_LEFT,text = 0)],
 					"fonts": [gFont("Regular", 28)],
 					"itemHeight": 40 }
 	</convert>
@@ -32453,9 +33131,9 @@ self.instance.move(ePoint(0,0))
     </widget>
     <widget source="Title" render="Label" position="105,66" size="1440,57" font="Regular;44" foregroundColor="transpWhite" backgroundColor="un181A1C" transparent="1" halign="left" />
     <ePixmap position="1630,180" size="220,220" pixmap="NOVUM_FHD_Slim/menu/iconnovum.png" transparent="1" alphatest="blend" />
-    <widget source="menu" render="Listbox" scrollbarMode="showNever" font="Regular;28" position="210,240" size="1200,640" backgroundColor="background2" transparent="1" />
+    <widget source="menu" render="Listbox" scrollbarMode="showNever" position="210,240" size="1200,640" backgroundColor="background2" transparent="1" />
     <convert type="TemplatedMultiContent">
-					{"template": [	MultiContentEntryText(pos = (2,2),size = (1160,36),flags = RT_HALIGN_LEFT,text = 0)],
+					{"template": [	MultiContentEntryText(pos = (0,2),size = (1180,36),flags = RT_HALIGN_LEFT,text = 0)],
 					"fonts": [gFont("Regular", 28)],
 					"itemHeight": 40 }
 	</convert>
