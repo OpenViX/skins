@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.8.5	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.8.6	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -497,13 +497,13 @@
 		<widget name="config" position="735,120" size="1150,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="introduction" render="Label" position="780,900" size="1132,33" zPosition="2" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 		<widget source="LibUSB" render="Label" position="793,945" size="112,30" zPosition="2" font="Regular;30" foregroundColor="secondFG" valign="center" halign="center"/>
-<!--		<widget source="Version" render="Label" position="780,975" size="715,30" zPosition="2" font="Regular;30" foregroundColor="secondFG" valign="center" halign="right"/>-->
-			<widget name="LCD1" position="0,525" size="900,480" zPosition="5" transparent="1" alphatest="on"/>
-			<widget name="LCD2" position="0,525" size="900,480" zPosition="5" transparent="1" alphatest="on"/>
-			<widget name="LCD3" position="0,525" size="900,480" zPosition="5" transparent="1" alphatest="on"/>
-			<widget source="LCD1text" render="Label" position="780,980" size="715,30" zPosition="5" font="Regular;27" halign="right" foregroundColor="secondFG" transparent="1"/>
-			<widget source="LCD3text" render="Label" position="780,980" size="715,30" zPosition="5" font="Regular;27" halign="right" foregroundColor="secondFG" transparent="1"/>
-			<widget source="LCD3text" render="Label" position="780,980" size="715,30" zPosition="5" font="Regular;27" halign="right" foregroundColor="secondFG" transparent="1"/>
+<!--	<widget source="Version" render="Label" position="780,975" size="715,30" zPosition="2" font="Regular;30" foregroundColor="secondFG" valign="center" halign="right"/>-->
+		<widget name="LCD1" position="0,525" size="900,480" zPosition="5" transparent="1" alphatest="on"/>
+		<widget name="LCD2" position="0,525" size="900,480" zPosition="5" transparent="1" alphatest="on"/>
+		<widget name="LCD3" position="0,525" size="900,480" zPosition="5" transparent="1" alphatest="on"/>
+		<widget source="LCD1text" render="Label" position="780,980" size="715,30" zPosition="5" font="Regular;27" halign="right" foregroundColor="secondFG" transparent="1"/>
+		<widget source="LCD3text" render="Label" position="780,980" size="715,30" zPosition="5" font="Regular;27" halign="right" foregroundColor="secondFG" transparent="1"/>
+		<widget source="LCD3text" render="Label" position="780,980" size="715,30" zPosition="5" font="Regular;27" halign="right" foregroundColor="secondFG" transparent="1"/>
 <!--	<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="7,600" size="1,1" transparent="1" zPosition="1" alphatest="on"/>-->
 	</screen>
 	<screen name="LCDdisplayMenu" position="fill" flags="wfNoBorder" title="LCD4linux - Config">
@@ -1164,20 +1164,6 @@
 		<widget source="Netmask" render="Label" position="375,765" size="360,31" font="menulist;33" foregroundColor="secondFG"/>
 		<widget source="Gateway_text" render="Label" position="82,810" size="285,31" font="menulist;33" foregroundColor="secondFG"/>
 		<widget source="Gateway" render="Label" position="375,810" size="360,31" font="menulist;33" foregroundColor="secondFG"/>
-	</screen>
-
-	<!-- ## RecInfoBar ## -->
-	<screen name="RecInfoBar" flags="wfNoBorder" position="0,245" size="1920,30" backgroundColor="transpBlack" zPosition="1">
-<!--	<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="7,10" size="30,30" zPosition="1" alphatest="on">
-			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>-->
-		<widget name="chTuner" position="37,3" size="30,29" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="blue" backgroundColor="black"/>
-		<widget name="chProv" position="70,3" size="375,29" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="yellow" backgroundColor="black"/>
-		<widget name="chBouq" position="450,3" size="370,29" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="yellow" backgroundColor="black"/>
-		<widget name="chNum" position="825,3" size="75,29" font="menulist;27" halign="right" transparent="1" zPosition="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
-		<widget name="chName" position="907,3" size="375,29" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
-		<widget name="timelen" position="1275,3" size="120,29" font="menulist;27" halign="right" transparent="1" zPosition="1" noWrap="1" foregroundColor="white" backgroundColor="black"/>
-		<widget name="recName" position="1400,3" size="500,29" font="menulist;27" halign="left" transparent="1" zPosition="1" noWrap="1" foregroundColor="grey" backgroundColor="black"/>
 	</screen>
 
 	<!-- ##Picture-Player## -->
@@ -1984,4 +1970,5 @@
 		<widget name="thumbnail" position="0,0" size="150,108" /> # Thumbnail size in list
 		<eLabel text="'OK'= Play trailer" backgroundColor="secondBG" position="652,1030" size="330,39" font="menulist;33" halign="left" transparent="1" zPosition="1"/>
 	</screen>
+
 </skin>
