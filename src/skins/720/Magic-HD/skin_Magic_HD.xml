@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-HD Vs 9.5 by Rob van der Does @www.world-of-satellite.com, based on Magic-EHD Vs 1.91.54	-->
+	<!--	Skin: Magic-HD Vs 9.6 by Rob van der Does @www.world-of-satellite.com, based on Magic-EHD Vs 1.91.54	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -615,7 +615,6 @@
 	</screen>
 	<screen name="ServiceInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="infolist" position="520,82" size="755,583" font="Regular;20" itemHeight="30" selectionDisabled="1" foregroundColor="grey"/>
 		<panel name="RedBPanel"/>
 		<widget name="red" position="15,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;20" halign="center"/>/>
 		<panel name="GreenBPanel"/>
@@ -624,6 +623,11 @@
 		<widget name="yellow" position="595,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;20" halign="center"/>
 		<panel name="BlueBPanel"/>
 		<widget name="blue" position="890,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;20" halign="center"/>
+		<widget name="infolist" position="520,82" size="755,450" font="Regular;20" itemHeight="30" selectionDisabled="1" foregroundColor="grey"/>
+		<eLabel text="HbbTV URL:" position="5,540" size="1100,30" font="Regular;22" foregroundColor="secondFG" halign="center" transparent="1" zPosition="1"/>
+		<widget source="session.CurrentService" render="Label" position="5,580" size="1100,50" font="Regular;20" halign="center" foregroundColor="grey" enableWrapAround="1">
+			<convert type="ServiceInfo">HasHBBTV</convert>
+		</widget>
 	</screen>
 	<screen name="SystemMemoryInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
