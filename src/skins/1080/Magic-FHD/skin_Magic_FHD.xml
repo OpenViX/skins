@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 0.9.8 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 0.9.9 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -1442,6 +1442,10 @@ self.autoResize()
 		<widget source="Adaptertext" render="Label" position="780,945" size="405,40" zPosition="10" font="Regular;36" foregroundColor="grey" halign="right"/>
 		<widget source="Adapter" render="Label" position="1200,945" size="600,40" zPosition="10" font="Regular;36" foregroundColor="grey" halign="left"/>
 		<widget source="introduction2" render="Label" position="7,900" size="715,36" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/vkey_icon.png" position="1875,1030" size="52,37">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="HelpWindow" pixmap="vkey_icon.png" position="22,600" size="1,1" zPosition="1"/>
 	</screen>
 	<screen name="NameserverSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2257,14 +2261,15 @@ self.autoResize()
 		<widget source="statusbar" render="Label" position="fill" font="Regular;34" valign="center" halign="center"/>
 		</screen>
 	<!-- ##Wizards## -->
-	<screen name="NetworkWizard" position="fill" flags="wfNoBorder">
+	<screen name="NetworkWizard" position="fill" flags="wfNoBorder" title="Network Wizard">
 		<panel name="BasicTemplate2"/>
-		<widget name="text" position="780,544" size="720,420" font="Regular;34"/>
+		<panel name="RedBPanel"/>
+		<widget name="languagetext" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<widget name="config" position="780,124" size="750,420" font="Regular;33" itemHeight="45" transparent="1" zPosition="1" scrollbarMode="showOnDemand"/>
+		<widget name="text" position="780,600" size="750,470" font="Regular;34"/>
 		<widget source="list" render="Listbox" position="22,577" size="670,375" scrollbarMode="showOnDemand">
 			<convert type="StringList"/>
 		</widget>
-		<widget name="config" position="780,124" size="720,420" transparent="1" zPosition="1" scrollbarMode="showOnDemand"/>
-		<widget name="languagetext" position="90,45" size="300,45" font="Regular;27"/>
 		<widget name="rc" position="1599,160" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
 		<widget name="arrowdown" pixmap="arrowdown.png" position="-150,-150" size="55,105" zPosition="11" alphatest="on"/>
 		<widget name="arrowdown2" pixmap="arrowdown.png" position="-150,-150" size="55,105" zPosition="11" alphatest="on"/>
