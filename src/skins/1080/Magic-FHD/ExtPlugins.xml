@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.8.9	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.9.0	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1532,7 +1532,7 @@
 			}
 			</convert>
 		</widget>
-		<widget source="menu" render="Listbox" position="7,600" size="715,240" backgroundColor="darkgrey" zPosition="3" selectionDisabled="1" foregroundColor="secondFG" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" position="7,600" size="715,240" zPosition="3" selectionDisabled="1" foregroundColor="secondFG" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 			{"template": [
 					MultiContentEntryText(pos = (0,0),size = (700,240),flags = RT_HALIGN_LEFT|RT_VALIGN_TOP|RT_WRAP,text = 2),# index 0 is the MenuText,
@@ -1995,4 +1995,83 @@
 		<widget name="thumbnail" position="0,0" size="150,108" /> # Thumbnail size in list
 		<eLabel text="'OK'= Play trailer" position="652,1030" size="330,39" font="menulist;33" halign="left" zPosition="1"/>
 	</screen>
+	<!-- ## WeerInfo ##-->
+	<screen name="weatherMenu" position="fill" flags="wfNoBorder" title="Weer Menu">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="955,120" size="957,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+	<screen name="weatherMenuSub1" position="fill" flags="wfNoBorder" title="Weer Menu">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="955,120" size="957,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+<!--
+class weatherMenu(Screen):
+#########################################
+    sz_w = getDesktop(0).size().width()
+    if sz_w > 1800: 
+        skin = """
+        <screen position="170,100" size="440,450" title="Weer Menu" >
+            <widget name="list" position="center,50" size="295,700" scrollbarMode="showOnDemand" font="Regular;34" itemHeight="42" />\n
+        </screen>-->
+		
+		
+ 	<screen name="lokaalTemp" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+<!--
+ class lokaalTemp(Screen):
+    sz_w = getDesktop(0).size().width()
+    if sz_w > 1800: 
+        skin = """
+        <screen position="center,100" size="1880,900" title="WeerInfo Lokaal" >
+            <widget name="list" position="center,50" size="1750,800" scrollbarMode="showOnDemand" font="Regular;38" itemHeight="42" />\n
+        </screen>-->
+		
+		
+	<screen name="lokaalTempSub" position="fill" flags="wfNoBorder" title="">
+		<widget source="global.CurrentTime" render="Label" position="1522,5" size="375,47" font="Regular;39" halign="right" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Format:%-H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" halign="right" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<ePixmap pixmap="~/Images/tempras.png" position="center,center" size="1000,350" zPosition="10" alphatest="on"/>
+	</screen>
+<!--
+class lokaalTempSub(Screen):
+    skin = """
+        <screen position="center,100" size="1180,500" title="WeerInfo Lokaal" >
+            <ePixmap pixmap="~/Images/tempras.png" position="center,50" size="1000,350" zPosition="10" alphatest="on" />
+        </screen>-->
+
+		
+	<screen name="View_Slideshow" position="fill" flags="wfNoBorder" title="">
+		<widget source="global.CurrentTime" render="Label" position="1522,5" size="375,47" font="Regular;39" halign="right" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Format:%-H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" halign="right" foregroundColor="grey" zPosition="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget name="pic" position="center,center" size="1080, 1005" zPosition="2" alphatest="on" />
+	</screen>
+<!--
+class View_Slideshow(Screen, InfoBarAspectSelection):
+    sz_w = getDesktop(0).size().width()
+    if sz_w > 1800:                
+        skin = """
+        <screen name="lieverZon" position="center,center" size="1920, 1080" flags="wfNoBorder"> 
+            <widget name="pic" position="center,center" size="1080, 1005" zPosition="2" alphatest="on" />
+            <ePixmap alphatest="on" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Weather/Images/ccclock.png" position="57,50" size="200,201" zPosition="1" />
+            <widget alphatest="on" foregroundColor="red" position="57,49" render="Watches" size="200,200" source="global.CurrentTime" zPosition="2">
+            <convert type="ExtraNumText">secHand</convert>
+            </widget>
+            <widget alphatest="on" foregroundColor="white" position="57,49" render="Watches" size="200,200" source="global.CurrentTime" zPosition="2">
+            <convert type="ExtraNumText">minHand</convert>
+            </widget>
+            <widget alphatest="on" foregroundColor="green" position="85,82" render="Watches" size="140,140" source="global.CurrentTime" zPosition="2">
+            <convert type="ExtraNumText">hourHand</convert>
+            </widget>
+        </screen>-->
+
 </skin>
