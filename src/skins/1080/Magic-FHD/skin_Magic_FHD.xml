@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 10.0.3 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 10.0.5 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -1036,9 +1036,9 @@
 	</screen>
 	<screen name="ChoiceBox" position="fill" zPosition="10" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="22,568" size="715,390" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 		<widget name="list" position="735,125" size="1177,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		</screen>
+		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
 	<screen name="RecordTimerQuestion" position="center,center" size="400,202" zPosition="5" flags="wfNoBorder">
 		<widget name="text" position="0,0" size="0,0" font="Regular;30"/>
 		<widget name="list" position="15,15" size="370,180" enableWrapAround="1"/>
@@ -1047,7 +1047,7 @@
 		<widget name="text" position="0,0" size="0,0" font="menulist;33"/>
 		<widget name="list" position="15,15" size="330,75" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
-self.autoResize()
+			self.autoResize()
 		</applet>
 	</screen>
 	<screen name="Scart" position="fill" backgroundColor="transparent"/>
@@ -1254,7 +1254,7 @@ self.autoResize()
 		<panel name="MenuBPanel"/>
 		<widget name="text" position="780,123" size="1132,52" font="Regular;39" halign="center"/>
 		<widget name="target" position="780,172" size="1132,45" font="Regular;34" itemHeight="45" halign="center"/>
-		<widget name="filelist" position="735,217" size="1177,757" itemHeight="55" font="FileList;34" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="filelist" position="735,217" size="1177,757" font="FileList;34" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="textbook" position="7,568" size="715,45" font="Regular;33" itemHeight="45" foregroundColor="secondFG" zPosition="2" valign="center" halign="center"/>
 		<widget name="booklist" position="7,609" size="715,360" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" zPosition="2" foregroundColor="grey" valign="center" halign="center"/>
 	</screen>
@@ -2547,9 +2547,9 @@ self.autoResize()
 		<widget source="menu" render="Listbox" position="780,123" size="1132,874" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (10,10), size = (1000,855), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
+				MultiContentEntryText(pos = (10,6), size = (1000,855), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
 				],
-				"fonts": [gFont("menulist",34)],
+				"fonts": [gFont("menulist",35)],
 				"itemHeight": 60
 				}
 		</convert>
@@ -2557,10 +2557,10 @@ self.autoResize()
 			<widget source="menu" render="Listbox" position="15,600" size="715,60" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="secondFG">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (0,0),size = (700,60),flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM|RT_WRAP,text = 2),# index 0 is the MenuText,
+				MultiContentEntryText(pos = (0,0),size = (700,60),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP,text = 2),# index 0 is the MenuText,
 				],
-				"fonts": [gFont("menulist",28)],
-				"itemHeight": 60
+				"fonts": [gFont("Regular",33)],
+				"itemHeight": 80
 				}
 			</convert>
 		</widget>
@@ -2569,7 +2569,7 @@ self.autoResize()
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
-		<widget name="config" position="780,123" size="1132,874" font="menulist;33" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="780,123" size="1132,874" font="Regular;33" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="VIXSwap" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2577,16 +2577,16 @@ self.autoResize()
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="autostart_off" position="885,274" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
-		<widget name="autostart_on" position="885,274" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
-		<widget name="lab1" position="960,270" size="600,67" font="menulist;30" valign="center" transparent="0"/>
-		<widget name="lab2" position="885,349" size="225,45" font="menulist;30" valign="center" transparent="0"/>
-		<widget name="labplace" position="1110,349" size="330,45" font="menulist;30" valign="center"/>
-		<widget name="lab3" position="885,394" size="225,45" font="menulist;30" valign="center" transparent="0"/>
-		<widget name="labsize" position="1110,394" size="330,45" font="menulist;30" valign="center"/>
-		<widget name="lab4" position="885,439" size="225,45" font="menulist;30" valign="center" transparent="0"/>
-		<widget name="inactive" position="1110,439" size="150,45" font="menulist;30" valign="center" halign="center" backgroundColor="red"/>
-		<widget name="active" position="1110,439" size="150,45" zPosition="1" font="menulist;30" valign="center" halign="center" backgroundColor="green"/>
+		<widget name="autostart_off" position="885,174" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
+		<widget name="autostart_on" position="885,174" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
+		<widget name="lab1" position="960,170" size="950,75" font="Regular;30"/>
+		<widget name="lab2" position="885,350" size="225,45" font="Regular;30" valign="center"/>
+		<widget name="labplace" position="1110,349" size="330,45" font="Regular;30" valign="center"/>
+		<widget name="lab3" position="885,394" size="225,45" font="Regular;30" valign="center"/>
+		<widget name="labsize" position="1110,394" size="330,45" font="Regular;30" valign="center"/>
+		<widget name="lab4" position="885,439" size="225,45" font="Regular;30" valign="center"/>
+		<widget name="inactive" position="1110,439" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
+		<widget name="active" position="1110,439" size="150,45" font="Regular;30" valign="center" zPosition="1" halign="center" backgroundColor="green"/>
 	</screen>
 <!-- ## ImageManager ## -->
 	<screen name="VIXImageManager" position="fill" flags="wfNoBorder">
@@ -2596,16 +2596,16 @@ self.autoResize()
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
-		<widget name="lab1" position="780,123" size="1132,75" font="menulist;33" zPosition="2" halign="center" foregroundColor="secondFG"/>
-		<widget name="list" position="780,217" size="1132,720" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="backupstatus" position="22,600" size="715,112" font="menulist;33" zPosition="5" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget name="lab1" position="780,123" size="1132,90" font="Regular;33" foregroundColor="secondFG" zPosition="2" halign="center" />
+		<widget name="list" position="780,225" size="1132,720" font="Regular;34" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="backupstatus" position="22,600" size="700,112" font="Regular;33" zPosition="5" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="ImageManagerDownload" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
-		<widget name="lab1" position="780,123" size="1132,75" font="menulist;30" foregroundColor="secondFG" zPosition="2" halign="center"/>
-		<widget name="list" position="780,210" size="1132,720" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand"/>
+		<widget name="lab1" position="780,123" size="1132,75" font="Regular;33" foregroundColor="secondFG" zPosition="2" halign="center"/>
+		<widget name="list" position="780,210" size="1132,720" font="Regular;34" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 <!-- ## BackUpManager ## -->
 	<screen name="VIXBackupManager" position="fill" flags="wfNoBorder">
@@ -2615,9 +2615,9 @@ self.autoResize()
 		<panel name="Yellow1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="lab1" position="780,123" size="1132,75" font="menulist;33" zPosition="2" foregroundColor="secondFG" halign="center"/>
-		<widget name="list" position="780,217" size="1132,765" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"/>
-		<widget name="backupstatus" position="22,652" size="675,105" font="menulist;33" zPosition="5" foregroundColor="secondFG"/>
+		<widget name="lab1" position="780,123" size="1132,90" font="Regular;33" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget name="list" position="780,225" size="1132,720" font="Regular;34" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"/>
+		<widget name="backupstatus" position="22,652" size="700,105" font="Regular;33" zPosition="5" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="VIXBackupManagerMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2626,7 +2626,7 @@ self.autoResize()
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="TextBPanel"/>
-		<widget name="config" position="780,123" size="1132,405" font="menulist;34" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,123" size="1132,405" font="Regular;34" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,600" zPosition="1" size="1,1"/>
 		<widget name="description" position="7,540" size="715,396" font="Regular;33"/>
 	</screen>
@@ -2639,24 +2639,23 @@ self.autoResize()
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<widget name="checkList" position="780,123" size="1132,855" font="menulist;34" itemHeight="45" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="checkList" position="780,123" size="1132,855" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="XtraPluginsSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
-		<widget name="checkList" position="780,123" size="1132,855" font="menulist;34" itemHeight="45" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="checkList" position="780,123" size="1132,855" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="VIXIPKInstaller" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
-		<widget name="lab1" position="780,123" size="1132,37" font="menulist;34" foregroundColor="secondFG" zPosition="2" transparent="0" halign="center"/>
-		<widget name="list" position="780,185" size="1132,810" font="menulist;34" transparent="0" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="lab1" position="780,123" size="1132,37" font="Regular;34" foregroundColor="secondFG" zPosition="2" halign="center"/>
+		<widget name="list" position="780,185" size="1132,810" font="Regular;34" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
-	self["list"].instance.setItemHeight(45)
+			self["list"].instance.setItemHeight(45)
 		</applet>
 	</screen>
 	<screen name="VIXDevicesPanel" position="fill" flags="wfNoBorder">
@@ -2665,56 +2664,56 @@ self.autoResize()
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget source="list" render="Listbox" position="780,123" size="1132,795" transparent="0" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="780,123" size="1132,795" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
-			{"template": [
+				{"template": [
 				MultiContentEntryText(pos = (120,0), size = (1000,35), font=0, text = 0),
-				MultiContentEntryText(pos = (150,40), size = (1000,60), font=1, flags = RT_VALIGN_TOP, text = 1),
+				MultiContentEntryText(pos = (150,40), size = (1000,85), font=1, flags = RT_VALIGN_TOP, text = 1),
 				MultiContentEntryPixmapAlphaBlend(pos = (5,10), size = (80,80), png = 2),
 				],
-				"fonts": [gFont("menulist", 34),gFont("menulist", 28)],
-				"itemHeight": 110
-			}
-	</convert>
+				"fonts": [gFont("Regular",33),gFont("Regular",28)],
+				"itemHeight": 130
+				}
+			</convert>
 		</widget>
-		<widget name="lab1" zPosition="2" position="780,918" size="1132,90" font="menulist;36" halign="center" transparent="0"/>
+		<widget name="lab1" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="VIXDevicePanelConf" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
-		<widget name="Linconn" position="735,940" size="1177,60" font="menulist;27" halign="center" valign="center"/>
-		<widget name="config" position="735,120" size="1177,810" font="menulist;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="Linconn" position="735,940" size="1177,60" font="Regular;33" foregroundColor="secondFG" halign="center" valign="center"/>
+		<widget name="config" position="735,120" size="1177,810" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="VIXPartitionPanelConf" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
-		<widget source="list" render="Listbox" position="735,120" size="1177,765" transparent="0" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="735,120" size="1177,765" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				 MultiContentEntryText(pos = (90,0), size = (675,30), font=0, text = 0),
 				 MultiContentEntryText(pos = (110,30), size = (675,50), font=1, flags = RT_VALIGN_TOP, text = 1),
 				 MultiContentEntryPixmapAlphaBlend(pos = (0,0), size = (80,80), png = 2),
 				],
-				"fonts": [gFont("menulist", 20),gFont("menulist", 20)],
+				"fonts": [gFont("Regular",20),gFont("Regular",20)],
 				"itemHeight": 85
 				}
 			</convert>
 		</widget>
-		<widget name="lab1" position="780,888" size="1132,105" font="menulist;36" zPosition="2" halign="center" transparent="0"/>
+		<widget name="lab1" position="780,888" size="1132,105" font="Regular;36" zPosition="2" halign="center" transparent="0"/>
 	</screen>
 	<screen name="LogManagerViewLog" position="fill" flags="wfNoBorder">
 		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget source="Title" render="Label" position="22,22" size="1050,82" font="menulist;37" foregroundColor="grey" zPosition="1" valign="center"/>
+		<widget source="Title" render="Label" position="22,22" size="1050,82" font="Regular;37" foregroundColor="grey" zPosition="1" valign="center"/>
 		<widget source="global.CurrentTime" render="Label" halign="right" position="1522,22" size="375,42" font="menulist;39" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Format:%-H:%M</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1522,67" size="375,37" font="menulist;30" halign="right" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<widget name="list" position="15,123" size="1890,832" font="menulist;24" scrollbarMode="showOnDemand" itemHeight="30" enableWrapAround="1"/>
+		<widget name="list" position="15,123" size="1890,832" font="Regular;24" scrollbarMode="showOnDemand" itemHeight="30" enableWrapAround="1"/>
 	</screen>
 	<screen name="LogManagerFb" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
