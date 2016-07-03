@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Common Vs 0.4.6 	-->
+	<!--	Skin: Magic-FHD Common Vs 0.4.7 	-->
 	<!--	This skin is part of the skin Magic-HD; the same license applies.	-->
 
 	<!-- templates -->
@@ -31,16 +31,7 @@
 	</screen>
 
 	<screen name="BasicTemplate">
-		<eLabel backgroundColor="background" position="fill" zPosition="-1"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget source="Title" render="Label" position="22,5" size="1500,100" font="Regular;37" foregroundColor="grey" zPosition="1" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" position="1522,5" size="375,47" font="Regular;39" halign="right"  zPosition="1">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" halign="right" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="BasicTemplate3"/>
 		<widget source="session.VideoPicture" render="Pig" position="0,115" size="723,409" backgroundColor="transparent" zPosition="1"/>
 		<widget source="session.CurrentService" render="Label" position="7,118" size="715,33" font="Regular;28" borderColor="black" borderWidth="2" foregroundColor="secondFG" backgroundColor="background" transparent="1" zPosition="1" noWrap="1" valign="center" halign="center">
 			<convert type="ServiceName">Name</convert>
@@ -48,16 +39,7 @@
 	</screen>
 
 	<screen name="BasicTemplate2">
-		<eLabel backgroundColor="background" position="fill" zPosition="-1"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget source="Title" render="Label" position="22,5" size="1500,100" font="Regular;37" foregroundColor="grey" zPosition="1" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" position="1522,5" size="375,47" font="Regular;39" halign="right" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" halign="right" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="BasicTemplate3"/>
 		<widget source="session.VideoPicture" render="Pig" position="0,115" size="723,409" backgroundColor="transparent" zPosition="1"/>
 		<widget source="session.CurrentService" render="Label" position="7,118" size="715,33" font="Regular;28" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" borderColor="black" valign="center" halign="center">
 			<convert type="ServiceName">Name</convert>
@@ -65,9 +47,13 @@
 	</screen>
 
 	<screen name="BasicTemplate3">
+		<panel name="BasicTemplate4"/>
 		<eLabel backgroundColor="background" position="fill" zPosition="-1"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
+	</screen>
+
+	<screen name="BasicTemplate4">
 		<widget source="Title" render="Label" position="22,5" size="1500,100" font="Regular;37" foregroundColor="grey" zPosition="1" valign="center"/>
 		<widget source="global.CurrentTime" render="Label" position="1522,5" size="375,47" font="Regular;39" halign="right" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Format:%-H:%M</convert>
@@ -126,43 +112,43 @@
 	</screen>
 
 	<screen name="Red1Panel">
-		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" zPosition="0" alphatest="blend"/>
-		<widget name="key_red" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="RedBPanel"/>
+		<panel name="RedT1Panel"/>
 	</screen>
 
 	<screen name="Green1Panel">
-		<ePixmap pixmap="buttons/green.png" position="457,1027" size="30,30" zPosition="0" alphatest="blend"/>
-		<widget name="key_green" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="GreenBPanel"/>
+		<panel name="GreenT1Panel"/>
 	</screen>
 
 	<screen name="Yellow1Panel">
-		<ePixmap pixmap="buttons/yellow.png" position="892,1027" size="30,30" zPosition="0" alphatest="blend"/>
-		<widget name="key_yellow" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="YellowBPanel"/>
+		<panel name="YellowT1Panel"/>
 	</screen>
 
 	<screen name="Blue1Panel">
-		<ePixmap pixmap="buttons/blue.png" position="1335,1027" size="30,30" zPosition="0" alphatest="blend"/>
-		<widget name="key_blue" position="1370,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="BlueBPanel"/>
+		<panel name="BlueT1Panel"/>
 	</screen>
 
 	<screen name="Red2Panel">
-		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" zPosition="0" alphatest="blend"/>
-		<widget source="key_red" render="Label" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" halign="left" zPosition="1"/>
+		<panel name="RedBPanel"/>
+		<panel name="RedT2Panel"/>
 	</screen>
 
 	<screen name="Green2Panel">
-		<ePixmap pixmap="buttons/green.png" position="457,1027" size="30,30" zPosition="0" alphatest="blend"/>
-		<widget source="key_green" render="Label" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" halign="left" zPosition="1"/>
+		<panel name="GreenBPanel"/>
+		<panel name="GreenT2Panel"/>
 	</screen>
 
 	<screen name="Yellow2Panel">
-		<ePixmap pixmap="buttons/yellow.png" position="892,1027" size="30,30" zPosition="0" alphatest="blend"/>
-		<widget source="key_yellow" render="Label" position="930,1020" size="400,39" foregroundColor="grey" font="Regular;33" halign="left" zPosition="1"/>
+		<panel name="YellowBPanel"/>
+		<panel name="YellowT2Panel"/>
 	</screen>
 
 	<screen name="Blue2Panel">
-		<ePixmap pixmap="buttons/blue.png" position="1335,1027" size="30,30" zPosition="0" alphatest="blend"/>
-		<widget source="key_blue" render="Label" position="1370,1020" size="400,39" foregroundColor="grey" font="Regular;33" halign="left" zPosition="1"/>
+		<panel name="BlueBPanel"/>
+		<panel name="BlueT2Panel"/>
 
 		</screen>
 	<screen name="OKBPanel">
