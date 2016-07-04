@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.9.2	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.9.3	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1999,17 +1999,18 @@
 	<!-- ## WeerInfo ##-->
 	<screen name="weatherMenu" position="fill" flags="wfNoBorder" title="Weer Menu">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="955,120" size="700,855" font="menulist;35" itemHeight="50" foregroundColor="grey"/>
+		<widget name="list" position="955,120" size="700,855" font="Regular;35" itemHeight="50" foregroundColor="grey"/>
 	</screen>
 	<screen name="weatherMenuSub1" position="fill" flags="wfNoBorder" title="Weer Menu">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="955,120" size="700,855" font="menulist;35" itemHeight="50" foregroundColor="grey"/>
+		<widget name="list" position="955,120" size="700,855" font="Regular;35" itemHeight="50" foregroundColor="grey"/>
 	</screen>
  	<screen name="lokaalTemp" position="fill" flags="wfNoBorder" title="WeerInfo">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="735,120" size="1177,855" font="menulist;25" itemHeight="35" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+		<widget name="label1" position="755,120" size="1147,55" font="Regular;36" itemHeight="50" foregroundColor="secondFG"/>
+		<widget name="list" position="755,180" size="1147,770" font="Regular;27" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 	</screen>
-<!--	<screen name="lokaalTempSub" position="fill" flags="wfNoBorder" title="">
+<!--<screen name="lokaalTempSub" position="fill" flags="wfNoBorder" title="">
 		<widget source="global.CurrentTime" render="Label" position="1522,5" size="375,47" font="Regular;39" halign="right" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Format:%-H:%M</convert>
 		</widget>
@@ -2021,15 +2022,6 @@
 	<screen name="View_Slideshow" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate4"/>
 		<widget name="pic" position="center,center" size="1080, 1005" zPosition="2" alphatest="on" />
-	</screen>
-	<screen name="testnew" position="fill" flags="wfNoBorder" title="WeerInfo">
-		<widget source="global.CurrentTime" render="Label" position="1522,5" size="375,47" font="Regular;39" halign="right" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" halign="right" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<widget name="picd" pixmap="/tmp/WeerInfo/00.png" position="center,center" size="1080, 1005" zPosition="2" alphatest="on" />
 	</screen>
 
 	<!-- ##Open-ATV specific screens## -->
