@@ -1,4 +1,4 @@
-<!--  Skin: ViX-Common Vs 3.2.52 by AndyBlac @ www.world-of-satellite.com  -->
+<!--  Skin: ViX-Common Vs 3.2.54 by AndyBlac @ www.world-of-satellite.com  -->
 <!--  This skin is a Freeware. Everyone can modify and use it in other images. , XmlUnboundNsPrefix -->
 <!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!! , XmlUnboundNsPrefix -->
 <!--  Do whatever you want with this skin, but don't tell it's yours, or your idea! , XmlUnboundNsPrefix -->
@@ -17,6 +17,7 @@
 		<ePixmap pixmap="screens/fs-bg-bot.png" position="0,680" size="1280,40" zPosition="-1"/>
 	</screen>
 	<screen name="FullscreenTitlePanel">
+		<widget source="menu_path_compressed" render="Label" position="20,10" size="540,38" font="Bold;15" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
 		<widget source="Title" render="Label" position="20,25" size="850,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
 	</screen>
 	<screen name="FullscreenPIGPanel">
@@ -60,6 +61,7 @@
 	</screen>
 
 	<screen name="MenuPanel">
+		<widget source="menu_path_compressed" render="Label" position="10,30" size="540,38" font="Bold;15" foregroundColor="menu-title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1"/>
 		<widget source="Title" render="Label" position="10,70" size="540,38" font="Bold;26" foregroundColor="menu-title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1"/>
 		<ePixmap pixmap="menu/bg.png" position="0,0" size="540,720" alphatest="on" zPosition="-1"/>
 		<widget source="global.CurrentTime" render="Label" position="200,8" size="300,28" font="Regular;24" foregroundColor="menu-title-frgrnd" backgroundColor="menu-time-bkgrnd" halign="right" transparent="1">
@@ -981,6 +983,7 @@
 	</screen>
 	<screen name="ChannelSelection" position="fill" backgroundColor="black" flags="wfNoBorder">
 		<panel name="FullscreenTopPanel"/>
+		<widget source="menu_path_compressed" render="Label" position="10,30" size="540,38" font="Bold;15" foregroundColor="menu-title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1"/>
 		<widget source="Title" render="Label" position="18,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
 		<panel name="FullscreenPIGPanel"/>
 		<widget name="list" position="10,82" size="660,565" selectionPixmap="ViX-Common/buttons/FocusBar_H36x660.png" backgroundColor="black"
@@ -2010,7 +2013,7 @@ self.autoResize()
 		<panel name="MenuRed1Panel"/>
 		<panel name="MenuGreen1Panel"/>
 	</screen>
-	<screen name="Standby" flags="wfNoBorder" position="fill" title="Standby" backgroundColor="black"/>
+	<screen name="Standby" flags="wfNoBorder" position="fill" backgroundColor="black"/>
 	<screen name="SubservicesQuickzap" position="124,470" size="512,200" title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
 		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="450,0" zPosition="2" size="14,14" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
