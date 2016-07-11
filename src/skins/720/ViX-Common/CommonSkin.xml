@@ -1,4 +1,4 @@
-<!--  Skin: ViX-Common Vs 3.2.59 by AndyBlac @ www.world-of-satellite.com  -->
+<!--  Skin: ViX-Common Vs 3.2.60 by AndyBlac @ www.world-of-satellite.com  -->
 <!--  This skin is a Freeware. Everyone can modify and use it in other images. , XmlUnboundNsPrefix -->
 <!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!! , XmlUnboundNsPrefix -->
 <!--  Do whatever you want with this skin, but don't tell it's yours, or your idea! , XmlUnboundNsPrefix -->
@@ -1548,7 +1548,7 @@ self.autoResize()
 	</screen>
 	<screen name="LogManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
-		<widget name="list" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="list" position="10,107" size="503,500" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<panel name="MenuRed1Panel"/>
 		<panel name="MenuGreen1Panel"/>
 		<panel name="MenuYellow1Panel"/>
@@ -1556,6 +1556,7 @@ self.autoResize()
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(25)
 		</applet>
+		<widget name="LogsSize" position="10,610" size="503,25" foregroundColor="window-fg" font="Regular;19" halign="center" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="NetworkSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
@@ -4273,10 +4274,11 @@ self.autoResize()
 	<!-- ButtonSetup -->
 	<screen name="ButtonSetup" position="fill" backgroundColor="black" flags="wfNoBorder">
 		<panel name="FullscreenTopPanel"/>
+		<widget source="menu_path_compressed" render="Label" position="20,5" size="540,38" font="Bold;15" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
 		<widget source="Title" render="Label" position="18,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
 		<panel name="FullscreenPIGPanel"/>
 		<widget name="list" position="10,82" size="330,570" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" zPosition="10" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<widget name="choosen" position="345,82" size="310,570" itemHeight="30" zPosition="10" font="Regular;21" backgroundColor="window-bg" halign="center" transparent="0" scrollbarMode="showOnDemand"/>
+		<widget name="choosen" position="345,82" size="310,570" itemHeight="30" zPosition="10" font="Regular;21" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="695,435" size="503,230" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
 	</screen>
 	<screen name="ButtonSetupSelect" position="fill" backgroundColor="black" flags="wfNoBorder">
@@ -4291,7 +4293,7 @@ self.autoResize()
 	</screen>
 		<!-- BufferIndicator -->
 	<screen name="BufferIndicator" title="Channel" position="c-100,45" size="200,35" backgroundColor="transparent" flags="wfNoBorder">
-		<widget name="status" position="0,0" size="200,35" backgroundColor="transparent" transparent="1" font="Regular;26" borderColor="black" borderWidth="2" valign="center" haligh="center" zPosition="100"/>
+		<widget name="status" position="0,0" size="200,35" backgroundColor="transparent" transparent="1" font="Regular;26" borderColor="black" borderWidth="2" valign="center" zPosition="100"/>
 	</screen>
 	<!-- ## Animations ## -->
 	<screen name="AnimationSetupScreen" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Animation Setup">
