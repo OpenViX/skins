@@ -1,106 +1,10 @@
-<!--  Skin: ViX-Common Vs 3.2.58 by AndyBlac @ www.world-of-satellite.com  -->
+<!--  Skin: ViX-Common Vs 3.2.59 by AndyBlac @ www.world-of-satellite.com  -->
 <!--  This skin is a Freeware. Everyone can modify and use it in other images. , XmlUnboundNsPrefix -->
 <!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!! , XmlUnboundNsPrefix -->
 <!--  Do whatever you want with this skin, but don't tell it's yours, or your idea! , XmlUnboundNsPrefix -->
 <!--  ## Head ## , XmlUnboundNsPrefix -->
 <!--suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix -->
 <skin>
-	<!-- template -->
-	<screen name="FullscreenTopPanel">
-		<ePixmap pixmap="screens/fs-bg-top.png" position="0,0" size="1280,70" zPosition="-1"/>
-		<widget source="global.CurrentTime" render="Label" position="1160,10" size="100,28" font="Regular;26" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="infobar-bkgrnd" halign="right" transparent="1" zPosition="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="910,40" size="350,25" font="Regular;20" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="infobar-bkgrnd" halign="right" transparent="1" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<ePixmap pixmap="screens/fs-bg-bot.png" position="0,680" size="1280,40" zPosition="-1"/>
-	</screen>
-	<screen name="FullscreenTitlePanel">
-		<widget source="menu_path_compressed" render="Label" position="20,5" size="540,38" font="Bold;15" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
-		<widget source="Title" render="Label" position="20,5" size="850,65" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" valign="bottom"/>
-	</screen>
-	<screen name="FullscreenPIGPanel">
-		<eLabel position="695,80" size="574,325" zPosition="2" backgroundColor="darkgrey" foregroundColor="window-bg"/>
-		<widget source="session.VideoPicture" render="Pig" position="697,82" size="570,321" zPosition="3" backgroundColor="#ff000000"/>
-		<widget source="session.CurrentService" render="Label" position="697,82" size="570,25" font="Boldit;22" foregroundColor="event-frgrnd" borderWidth="2" backgroundColor="#ff000000" transparent="1" valign="center" halign="center" noWrap="1" zPosition="5">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-	</screen>
-	<screen name="FullscreenRed1Panel">
-		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,686" size="25,25" alphatest="blend" transparent="1"/>
-		<widget name="key_red" position="130,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
-	<screen name="FullscreenGreen1Panel">
-		<ePixmap pixmap="ViX-Common/buttons/green.png" position="380,686" size="25,25" alphatest="blend" transparent="1"/>
-		<widget name="key_green" position="420,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
-	<screen name="FullscreenYellow1Panel">
-		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="670,686" size="25,25" alphatest="blend" transparent="1"/>
-		<widget name="key_yellow" position="710,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
-	<screen name="FullscreenBlue1Panel">
-		<ePixmap pixmap="ViX-Common/buttons/blue.png" position="960,686" size="25,25" alphatest="blend" transparent="1"/>
-		<widget name="key_blue" position="1000,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
-	<screen name="FullscreenRed2Panel">
-		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,686" size="25,25" alphatest="blend" transparent="1"/>
-		<widget source="key_red" render="Label" position="130,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
-	<screen name="FullscreenGreen2Panel">
-		<ePixmap pixmap="ViX-Common/buttons/green.png" position="380,686" size="25,25" alphatest="blend" transparent="1"/>
-		<widget source="key_green" render="Label" position="420,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
-	<screen name="FullscreenYellow2Panel">
-		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="670,686" size="25,25" alphatest="blend" transparent="1"/>
-		<widget source="key_yellow" render="Label" position="710,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
-	<screen name="FullscreenBlue2Panel">
-		<ePixmap pixmap="ViX-Common/buttons/blue.png" position="960,686" size="25,25" alphatest="blend" transparent="1"/>
-		<widget source="key_blue" render="Label" position="1000,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
-
-	<screen name="MenuPanel">
-		<widget source="menu_path_compressed" render="Label" position="10,30" size="520,38" font="Bold;15" foregroundColor="menu-title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1"/>
-		<widget source="Title" render="Label" position="10,30" size="520,58" font="Bold;26" foregroundColor="menu-title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1" valign="bottom"/>
-		<ePixmap pixmap="menu/bg.png" position="0,0" size="540,720" alphatest="on" zPosition="-1"/>
-		<widget source="global.CurrentTime" render="Label" position="200,8" size="300,28" font="Regular;24" foregroundColor="menu-title-frgrnd" backgroundColor="menu-time-bkgrnd" halign="right" transparent="1">
-			<convert type="ClockToText">Full</convert>
-		</widget>
-	</screen>
-	<screen name="MenuRed1Panel">
-		<ePixmap pixmap="ViX-Common/buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1"/>
-		<widget name="key_red" position="75,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
-	</screen>
-	<screen name="MenuGreen1Panel">
-		<ePixmap pixmap="ViX-Common/buttons/green.png" position="40,690" size="24,24" alphatest="blend" transparent="1"/>
-		<widget name="key_green" position="75,690" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2"/>
-	</screen>
-	<screen name="MenuYellow1Panel">
-		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="280,663" size="24,24" alphatest="blend" transparent="1"/>
-		<widget name="key_yellow" position="315,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
-	</screen>
-	<screen name="MenuBlue1Panel">
-		<ePixmap pixmap="ViX-Common/buttons/blue.png" position="280,690" size="24,24" alphatest="blend" transparent="1"/>
-		<widget name="key_blue" position="315,690" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2"/>
-	</screen>
-	<screen name="MenuRed2Panel">
-		<ePixmap pixmap="ViX-Common/buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1"/>
-		<widget source="key_red" render="Label" position="75,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
-	</screen>
-	<screen name="MenuGreen2Panel">
-		<ePixmap pixmap="ViX-Common/buttons/green.png" position="40,690" size="24,24" alphatest="blend" transparent="1"/>
-		<widget source="key_green" render="Label" position="75,690" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2"/>
-	</screen>
-	<screen name="MenuYellow2Panel">
-		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="280,663" size="24,24" alphatest="blend" transparent="1"/>
-		<widget source="key_yellow" render="Label" position="315,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
-	</screen>
-	<screen name="MenuBlue2Panel">
-		<ePixmap pixmap="ViX-Common/buttons/blue.png" position="280,690" size="24,24" alphatest="blend" transparent="1"/>
-		<widget source="key_blue" render="Label" position="315,690" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2"/>
-	</screen>
-
 
 <!-- System Menu's -->
 	<screen name="LanguageSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
