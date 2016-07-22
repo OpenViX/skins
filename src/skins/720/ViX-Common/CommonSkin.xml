@@ -1,4 +1,4 @@
-<!--  Skin: ViX-Common Vs 3.2.63 by AndyBlac @ www.world-of-satellite.com  -->
+<!--  Skin: ViX-Common Vs 3.2.64 by AndyBlac @ www.world-of-satellite.com  -->
 <!--  This skin is a Freeware. Everyone can modify and use it in other images. , XmlUnboundNsPrefix -->
 <!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!! , XmlUnboundNsPrefix -->
 <!--  Do whatever you want with this skin, but don't tell it's yours, or your idea! , XmlUnboundNsPrefix -->
@@ -3014,22 +3014,26 @@ self.autoResize()
 		<widget name="list" position="25,133" size="458,210" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="1"/>
 		<widget name="snr_db" position="80,355" size="120,22" halign="center" valign="center" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
 		<eLabel text="SNR:" position="25,380" size="50,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
-		<eLabel text="BER:" position="25,405" size="50,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
-		<eLabel text="Lock:" position="25,430" size="50,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
+		<widget name="snr_bar" position="80,380" size="120,20" backgroundColor="window-bg" transparent="0" borderWidth="1"/>
 		<widget name="snr_percentage" position="205,380" size="60,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
+		<eLabel text="BER:" position="25,405" size="50,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
+		<widget name="ber_bar" position="80,405" size="120,20" backgroundColor="window-bg" transparent="0" borderWidth="1"/>
 		<widget name="ber_value" position="205,405" size="60,22" font="Regular;20" backgroundColor="window-bg" transparent="0"/>
-		<widget name="lock_state" position="80,430" size="120,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
-		<widget name="snr_bar" position="80,380" size="120,22" backgroundColor="window-bg" transparent="0"/>
-		<widget name="ber_bar" position="80,405" size="120,22" backgroundColor="window-bg" transparent="0"/>
-		<eLabel text="Frequency:" position="275,380" size="105,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
+		<eLabel text="AGC:" position="25,430" size="50,20" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
+		<widget name="agc_bar" position="80,430" size="120,22" backgroundColor="window-bg" transparent="0" borderWidth="1"/>
+		<widget name="agc_percentage" position="205,430" size="60,22" font="Regular;20" backgroundColor="window-bg" transparent="0"/>
+		<eLabel text="Lock:" position="25,455" size="50,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
+		<widget name="lock_state" position="80,455" size="120,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
 		<eLabel text="Symbolrate:" position="275,405" size="105,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
-		<eLabel text="FEC:" position="275,430" size="105,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
-		<widget name="frequency_value" position="385,380" size="95,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
 		<widget name="symbolrate_value" position="385,405" size="95,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
+		<eLabel text="Frequency:" position="275,380" size="105,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
+		<widget name="frequency_value" position="385,380" size="95,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
+		<eLabel text="FEC:" position="275,430" size="105,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
 		<widget name="fec_value" position="385,430" size="95,22" font="Regular;21" backgroundColor="window-bg" transparent="0"/>
 		<eLabel text="Polarisation:" position="275,455" size="105,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
-		<widget name="polarisation" position="385,455" size="95,22" font="Regular;21" backgroundColor="window-bg" transparent="0"/>
-		<widget name="status_bar" position="25,600" size="458,24" foregroundColor="window-fg" backgroundColor="window-bg" zPosition="1" transparent="0" font="Regular;21"/>
+		<widget name="polarisation" position="385,455" size="105,22" font="Regular;21" backgroundColor="window-bg" transparent="0"/>
+		<widget name="rotorstatus" position="25,550" size="458,24" font="Regular;22" backgroundColor="window-bg" zPosition="1" transparent="0" halign="center"/>
+		<widget name="status_bar" position="25,600" size="458,24" font="Regular;22" foregroundColor="window-fg" backgroundColor="window-bg" zPosition="1" transparent="0" halign="center"/>
 	</screen>
 	<screen name="VideoEnhancementSetup" position="fill" backgroundColor="black" flags="wfNoBorder">
 		<panel name="FullscreenTopPanel"/>
@@ -4160,12 +4164,12 @@ self.autoResize()
 		<panel name="MenuPanel"/>
 		<panel name="MenuRed1Panel"/>
 		<panel name="MenuGreen1Panel"/>
-		<widget name="list" position="10,107" size="503,535" font="Regular;18" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="list" position="10,107" size="503,535" font="Regular;18" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="AutoBouquetsMaker_About" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
 		<panel name="MenuRed1Panel"/>
-		<widget name="about" position="10,107" size="503,430" font="Regular;19" itemHeight="28" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="about" position="10,107" size="503,430" font="Regular;19" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<widget name="oealogo" position="182,500" size="177,130" alphatest="on"/>
 	</screen>
 <!-- ## RemoteChannelStreamConverter ## -->
