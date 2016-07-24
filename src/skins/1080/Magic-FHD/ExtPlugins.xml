@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.9.6	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 0.9.7	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -166,31 +166,31 @@
 		<widget name="rytec_pix" position="300,630" size="105,105"/>
 		<widget name="krkadoni_pix" position="300,750" size="105,33"/>
 	</screen>
-	<screen name="CrossEPG_Downloader" position="fill" flags="wfNoBorder">
+	<screen name="CrossEPG_Downloader" position="0,0" size="1920,60" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="DownloadBar"/>
 	</screen>
 
-	<screen name="CrossEPG_Converter" position="fill" flags="wfNoBorder">
+	<screen name="CrossEPG_Converter" position="0,0" size="1920,60" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="DownloadBar"/>
 	</screen>
 	
-	<screen name="CrossEPG_Defragmenter" position="fill" flags="wfNoBorder">
+	<screen name="CrossEPG_Defragmenter" position="0,0" size="1920,60" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="DownloadBar"/>
 	</screen>
 
-	<screen name="CrossEPG_Downloader" position="fill" flags="wfNoBorder">
+	<screen name="CrossEPG_Downloader" position="0,0" size="1920,60" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="DownloadBar"/>
 	</screen>
-	<screen name="CrossEPG_Importer" position="fill" flags="wfNoBorder">
+	<screen name="CrossEPG_Importer" position="0,0" size="1920,60" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="DownloadBar"/>
 	</screen>
-	<screen name="CrossEPG_Loader" position="fill" flags="wfNoBorder">
+	<screen name="CrossEPG_Loader" position="0,0" size="1920,60" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="DownloadBar"/>
 	</screen>
-	<screen name="CrossEPG_Rytec_Update" position="fill" flags="wfNoBorder">
+	<screen name="CrossEPG_Rytec_Update" position="0,0" size="1920,60" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="DownloadBar"/>
 	</screen>
-	<screen name="CrossEPG_Xepgdb_Update" position="fill" flags="wfNoBorder">
+	<screen name="CrossEPG_Xepgdb_Update" position="0,0" size="1920,60" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="DownloadBar"/>
 	</screen>
 	<screen name="CrossEPG_Ordering" position="fill" flags="wfNoBorder">
@@ -596,15 +596,8 @@
 	</screen>
 
 	<!-- ## AutoBouquetsMaker ## -->
-	<screen name="AutoBouquetsMaker" position="0,0" size="1920,60" backgroundColor="transpWhite" flags="wfNoBorder">
-		<widget name="action" position="10,10" size="650,40" font="menulist;34" backgroundColor="transpWhite" borderWidth="3" borderColor="black"/>
-		<widget name="status" position="700,10" size="650,40" font="menulist;34" halign="center" backgroundColor="transpWhite" borderWidth="3" borderColor="black"/>
-		<widget source="progress_text" render="Label" position="1550,10" size="150,40" font="menulist;34" halign="right" backgroundColor="transpWhite" borderWidth="3" borderColor="black">
-			<convert type="ProgressToText">InText</convert>
-		</widget>
-		<widget source="progress_text" render="Label" position="1750,10" size="150,50" font="menulist;34" halign="left" backgroundColor="transpWhite" borderWidth="3" borderColor="black">
-			<convert type="ProgressToText">InPercent</convert>
-		</widget>
+	<screen name="AutoBouquetsMaker" position="0,0" size="1920,60" backgroundColor="transpBlack" flags="wfNoBorder">
+		<panel name="DownloadBar"/>
 	</screen>
 	<screen name="AutoBouquetsMaker_Menu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2005,14 +1998,14 @@
 		<widget name="list" position="780,123" size="1132,874" font="Regular;35" itemHeight="50" foregroundColor="grey"/>
 		<widget name="mess1" position="5,530" size="150,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
- 	<screen name="lokaalTemp" position="fill" flags="wfNoBorder" title="WeerInfo">
+ <!--	<screen name="lokaalTemp" position="fill" flags="wfNoBorder" title="WeerInfo">
 		<panel name="BasicTemplate"/>
 		<widget name="label1" position="850,120" size="120,55" font="Regular;36" foregroundColor="secondFG"/>
 		<widget name="label2" position="1200,120" size="300,55" font="Regular;36" foregroundColor="secondFG"/>
 		<widget name="label3" position="1600,120" size="130,55" font="Regular;36" foregroundColor="secondFG"/>
 		<widget name="label4" position="1720,120" size="330,55" font="Regular;36" foregroundColor="secondFG"/>
 		<widget name="list" position="755,180" size="1147,770" font="Regular;27" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
-	</screen>
+	</screen>-->
 	<!--<screen name="lokaalTempSub" position="fill" flags="wfNoBorder" title="">
 		<widget source="global.CurrentTime" render="Label" position="1522,5" size="375,47" font="Regular;39" halign="right" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Format:%-H:%M</convert>
@@ -2024,12 +2017,10 @@
 	</screen>-->
 	<screen name="favoritesscreen" position="fill" flags="wfNoBorder" title="Favoriete Plaatsen">
 		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<widget name="TextRed" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
-		<panel name="GreenBPanel"/>
-		<widget name="TextGreen" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
-		<panel name="YellowBPanel"/>
-		<widget name="TextYellow" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
 		<widget name="plaatsn" position="735,120" size="1177,50" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 		<widget name="list" position="755,175" size="1157,855" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
 	</screen>

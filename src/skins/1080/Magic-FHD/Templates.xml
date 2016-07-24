@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Common Vs 0.4.13 	-->
+	<!--	Skin: Magic-FHD Common Vs 0.4.14 	-->
 	<!--	This skin is part of the skin Magic-HD; the same license applies.	-->
 
 	<!-- templates -->
@@ -263,8 +263,8 @@
 		</widget>
 	</screen>
 
-<!-- ## Original smaal screen ##-->
-<!--	<screen name="DownloadBar">
+<!-- ## Original small screen ##
+	<screen name="DownloadBar">
 		<ePixmap pixmap="crossepg/background_hd.png" position="0,0" size="900,105" alphatest="blend" zPosition="1"/>
 		<widget name="action" position="100,15" size="780,30" font="menulist;27" halign="center" valign="center" zPosition="2" backgroundColor="#11000000"/>
 		<widget name="status" position="100,50" size="780,30" font="menulist;27" halign="center" valign="center" zPosition="2" backgroundColor="#11000000"/>
@@ -272,10 +272,14 @@
 	</screen>-->
 
 	<screen name="DownloadBar">
-		<panel name="BasicTemplate"/>
-		<widget name="action" position="885,205" size="1000,90" font="Regular;34"/>
-		<widget name="status" position="885,300" size="1000,90" font="Regular;31"/>
-		<widget name="progress" position="885,393" size="720,54" borderWidth="2" backgroundColor="un254f7497"/>
+		<widget name="action" position="10,10" size="650,40" font="menulist;34" backgroundColor="transpBlack" borderWidth="3" borderColor="black"/>
+		<widget name="status" position="700,10" size="650,40" font="menulist;34" halign="center" backgroundColor="transpBlack" borderWidth="3" borderColor="black"/>
+		<widget source="progress_text" render="Label" position="1500,10" size="200,40" font="menulist;34" halign="right" backgroundColor="transpBlack" borderWidth="3" borderColor="black">
+			<convert type="ProgressToText">InText</convert>
+		</widget>
+		<widget source="progress_text" render="Label" position="1750,10" size="150,40" font="menulist;34" halign="left" backgroundColor="transpBlack" borderWidth="3" borderColor="black">
+			<convert type="ProgressToText">InPercent</convert>
+		</widget>
 	</screen>
 
 	<!-- end of Templates -->
