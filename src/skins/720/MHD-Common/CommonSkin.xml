@@ -5505,24 +5505,12 @@ self.autoResize()
 		<panel name="VixLogo"/>
 	</screen>
 	<!-- ## OSD setup @@ -->
-	<screen flags="wfNoBorder" name="UserInterfacePositioner" position="0,0" size="1280,720">
-		<panel name="BasicTemplate"/>
+	<screen name="UserInterfacePositioner" position="0,0" size="e,e" backgroundColor="bluetransparent">
 		<panel name="RGY_Template 2"/>
-		<widget name="description" font="Regular;20" foregroundColor="greenlight" position="520,320" size="700,150" zPosition="10" halign="center" valign="center" transparent="1"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;22" position="520,120" size="700,200" transparent="1"/>
-		<eLabel text="Use arrows Up/Down to select" position="5,400" size="477,50" backgroundColor="secondBG" font="Regular;22" halign="center" transparent="1" zPosition="1"/>
-		<eLabel text="Use arrows Left/Right to adjust" position="5,450" size="477,50" backgroundColor="secondBG" font="Regular;22" halign="center" transparent="1" zPosition="1"/>
-		<panel name="VixLogo"/>
+		<widget name="config" position="c-175,c-75" size="350,130" foregroundColor="grey" font="Regular;22"/>
+		<ePixmap pixmap="div-h.png" position="c-200,e-200" zPosition="1" size="400,2"/>
+		<widget source="status" render="Label" position="c-300,e-190" size="700,80" zPosition="10" font="Regular;22" foregroundColor="grey" halign="center" valign="center" transparent="1"/>
 	</screen>
-	<!--	<screen flags="wfNoBorder" name="OSD3DSetupScreen" position="0,0" size="1280,720" title="OSD 3D-Setup">
-		<panel name="BasicTemplate"/>
-		<ePixmap pixmap="MHD-Common/buttons/red2.png" position="15,682" size="26,26" alphatest="on"/>
-		<ePixmap pixmap="MHD-Common/buttons/green2.png" position="305,682" size="26,26" alphatest="on"/>
-		<widget source="key_red" render="Label" position="50,682" size="220,26" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="left"/>
-		<widget source="key_green" render="Label" position="340,682" size="220,26" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="left"/>
-		<widget name="config" font="Regular;22" position="520,82" size="740,583" transparent="1"/>
-		<panel name="VixLogo"/>
-	</screen>-->
 	<screen flags="wfNoBorder" name="SortableMenu" position="0,0" size="1280,720" title="Sort Menu">
 		<panel name="BasicTemplate"/>
 		<ePixmap pixmap="MHD-Common/buttons/blue2.png" position="840,682" size="26,26" alphatest="on"/>
