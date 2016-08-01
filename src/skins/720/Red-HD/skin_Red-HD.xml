@@ -1217,7 +1217,7 @@ self.autoResize()
 		<widget name="key0" position="122,92" size="150,30" font="vmreg;18" halign="center" valign="center" transparent="1" />
 		<widget name="help2" position="262,92" size="130,30" font="vmreg;18" halign="center" valign="center" transparent="1" />
 	</screen>
-	<screen name="UserInterfacePositioner" position="0,0" size="1280,720" backgroundColor="black" flags="wfNoBorder" >
+<!--	<screen name="UserInterfacePositioner" position="0,0" size="1280,720" backgroundColor="black" flags="wfNoBorder" >
 		<panel name="MenuPanel" />
 		<panel name="MenuSetupText" />
 		<panel name="MenuCONFIGWidget" />
@@ -1225,7 +1225,16 @@ self.autoResize()
 		<panel name="FullScreenMenuRed2Panel" />
 		<panel name="FullScreenMenuGreen2Panel" />
 		<panel name="FullScreenMenuYellow2Panel" />
+	</screen>-->
+	<screen name="UserInterfacePositioner" position="0,0" size="e,e" backgroundColor="bluetransparent">
+		<panel name="FullScreenMenuRed2Panel" />
+		<panel name="FullScreenMenuGreen2Panel" />
+		<panel name="FullScreenMenuYellow2Panel" />
+		<widget name="config" position="c-175,c-75" size="350,130" foregroundColor="grey" font="Regular;22"/>
+		<ePixmap pixmap="div-h.png" position="c-200,e-200" zPosition="1" size="400,2"/>
+		<widget source="status" render="Label" position="c-300,e-190" size="700,80" zPosition="10" font="Regular;22" foregroundColor="grey" halign="center" valign="center" transparent="1"/>
 	</screen>
+
 	<screen name="ParentalControlChangePin" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel" />
 		<panel name="MenuSetupText" />
