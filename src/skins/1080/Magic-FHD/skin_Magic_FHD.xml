@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 11.0.9 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 11.1.0 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -2385,20 +2385,17 @@
 		<widget name="list" position="780,120" size="1132,855" font="menulist;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 <!-- ## Seekbar ##-->
-	<screen name="Seekbar" position="center,center" size="560,60" title="Seekbar" backgroundColor="transparent" flags="wfNoBorder">
-		<widget name="cursor" position="0,0" size="8,18" pixmap="dvr/position_arrow.png" alphatest="on"/>
-		<widget source="session.CurrentService" render="PositionGauge" position="150,30" size="270,10" zPosition="2" pointer="Magic-HD/dvr/position_pointer.png:540,0" transparent="1" foregroundColor="#20224f">
-			<convert type="ServicePosition">Gauge</convert>
-		</widget>
-		<widget name="time" position="40,15" size="100,35" font="Regular;30" halign="right" backgroundColor="#4e5a74" transparent="1" borderColor="black" borderWidth="3"/>
-		<widget source="session.CurrentService" render="Label" position="430,15" size="90,35" font="Regular;30" halign="left" backgroundColor="#4e5a74" transparent="1" borderColor="black" borderWidth="3">
-			<convert type="ServicePosition">Length</convert>
-		</widget>
+	<screen name="Seekbar" position="0,45" size="1920,187" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="PlayerPanel"/>
+		<widget name="cursor" position="192,80" size="1536,27" pixmap="dvr/position_arrow.png" zPosition="5" alphatest="on"/>
+		<widget name="time" position="800,110" size="1170,84" font="menulist;45" backgroundColor="transparent" zPosition="1" borderWidth="3"/>
+		<widget name="PositionGauge" position="192,88" size="1536,18"/>
 	</screen>
-	<screen name="MinuteInput" title="MinuteInput" position="center,center" size="810,52" backgroundColor="transparent" flags="wfNoBorder">
+
+	<screen name="MinuteInput" title="MinuteInput" position="center,center" size="810,65" backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel text="Jump" position="0,-300" size="330,52" backgroundColor="transparent" font="Regular;51" halign="right" borderColor="black" borderWidth="3" transparent="1" zPosition="1"/>
-		<widget name="minutes" position="345,-300" size="120,52" font="Regular;51" halign="center" borderColor="black" borderWidth="3" transparent="1" zPosition="1"/>
-		<eLabel text="minutes" position="480,-300" size="330,52" backgroundColor="transparent" font="Regular;51" halign="left" borderColor="black" borderWidth="3" transparent="1" zPosition="1"/>
+		<widget name="minutes" position="345,-300" size="120,65" font="Regular;51" halign="center" borderColor="black" borderWidth="3" transparent="1" zPosition="1"/>
+		<eLabel text="minutes" position="480,-300" size="330,65" backgroundColor="transparent" font="Regular;51" halign="left" borderColor="black" borderWidth="3" transparent="1" zPosition="1"/>
 	</screen>
 <!-- ## OSD setup ## -->
 	<screen name="UserInterfacePositioner" position="0,0" size="e,e" backgroundColor="bluetransparent">
