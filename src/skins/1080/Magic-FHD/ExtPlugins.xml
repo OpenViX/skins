@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 1.0.7	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 1.0.8	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -1056,12 +1056,14 @@
 	</screen>
 
 	<!-- ## VideoEnhancement## -->
-	<screen name="VideoEnhancementPreview" position="fill" title="VideoEnhancementPreview" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="VideoEnhancementPreview" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap alphatest="off" pixmap="infobar/hd.png" position="0,750" size="1920,330" zPosition="-1"/>
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<widget name="config" position="885,877" size="915,112" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" backgroundColor="secondBG" zPosition="1"/>
-		<widget source="introduction" render="Label" position="885,1027" size="915,34" font="menulist;30" zPosition="1" halign="center"/>
+		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" zPosition="0" alphatest="blend"/>
+		<widget source="key_red" render="Label" position="55,1020" size="400,45" font="Regular;33" borderWidth="2" borderColor="black" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<ePixmap pixmap="buttons/green.png" position="457,1027" size="30,30" zPosition="0" alphatest="blend"/>
+		<widget source="key_green" render="Label" position="490,1020" size="400,45" font="Regular;33" borderWidth="2" borderColor="black" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="config" position="1100,890" size="700,135" font="menulist;32" itemHeight="45" scrollbarMode="showOnDemand" backgroundColor="secondBG" zPosition="1"/>
+		<widget source="introduction" render="Label" position="885,1027" size="915,35" font="menulist;30" borderWidth="2" borderColor="black" zPosition="1" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="center"/>
 	</screen>
 	<screen name="VideoEnhancementSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
