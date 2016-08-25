@@ -34,14 +34,14 @@
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
 		<eLabel name="snr" text="	Quality:" position="1012,7" size="120,22" font="menulist;21" backgroundColor="transpBlack" halign="right" transparent="1"/>
-		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="1140,12" size="615,15" borderWidth="2" borderColor="uncccccc">
+		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="1140,12" size="615,15" borderWidth="2" borderColor="white">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<widget source="session.FrontendStatus" render="Label" position="1761,7" size="120,22" font="menulist;21" backgroundColor="transpBlack" transparent="1" halign="center">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<eLabel name="agc" text="	Signal:" position="1012,37" size="120,22" font="menulist;21" backgroundColor="transpBlack" halign="right" transparent="1"/>
-		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="1140,37" size="615,15" borderWidth="2" borderColor="uncccccc">
+		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="1140,37" size="615,15" borderWidth="2" borderColor="white">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<widget source="session.FrontendStatus" render="Label" font="menulist;21" position="1761,37" size="120,22" backgroundColor="transpBlack" transparent="1" halign="center">
@@ -484,7 +484,7 @@
 		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" font="Regular;30" valign="center" halign="center">
 			<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget source="Event" render="Progress" pixmap="infobar/pbar.png" position="270,919" size="1260,12" backgroundColor="un33333a" transparent="0" zPosition="2" borderWidth="0">
+		<widget source="Event" render="Progress" pixmap="infobar/pbar.png" position="270,919" size="1260,12" backgroundColor="secondBG" transparent="0" zPosition="2" borderWidth="0">
 		<convert type="EventTime">Progress</convert>
 		</widget>
 	</screen>
@@ -633,7 +633,7 @@
 			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
 		</widget>
 <!-- Related to live TV
-		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar2.png" position="0,168" size="716,8" backgroundColor="un33333a" transparent="0" zPosition="5" borderWidth="0">
+		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar2.png" position="0,168" size="716,8" backgroundColor="secondBG" transparent="0" zPosition="5" borderWidth="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="7,135" size="175,30" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;27" borderColor="black" valign="center" halign="left">
@@ -892,7 +892,7 @@
 		<panel name="BlueBPanel"/>
 		<widget source="job_name" render="Label" position="735,120" size="1177,90" font="Regular;42" foregroundColor="secondFG" halign="center" valign="top"/>
 		<widget source="job_task" render="Label" position="885,255" size="720,75" font="Regular;34"/>
-		<widget source="job_progress" render="Progress" position="885,393" size="720,54" borderWidth="2" backgroundColor="un254f7497"/>
+		<widget source="job_progress" render="Progress" position="885,393" size="720,54" borderWidth="2" backgroundColor="white"/>
 		<widget source="job_progress" render="Label" position="900,395" size="420,54" font="menulist;42" foregroundColor="black" zPosition="2" halign="left" transparent="1">
 			<convert type="ProgressToText"/>
 		</widget>
@@ -1213,7 +1213,7 @@
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar.png" position="330,157" size="1260,12" transparent="1" zPosition="2" borderWidth="2" borderColor="un33333a">
+		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar.png" position="330,157" size="1260,12" transparent="1" zPosition="2" borderWidth="2" borderColor="secondBG">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="RdsDecoder" render="Pixmap" pixmap="icons/rass_logo.png" position="90,90" size="150,90" zPosition="2" alphatest="on">
@@ -1774,15 +1774,15 @@
 		<widget name="labstop" position="1530,159" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
 		<widget name="labrun" position="1530,159" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
 		<widget name="username" position="945,274" size="225,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="labuser" position="1185,274" size="465,45" font="Regular;30" valign="center" backgroundColor="#4D5375"/>
+		<widget name="labuser" position="1185,274" size="465,45" font="Regular;30" valign="center" backgroundColor="bluegrey"/>
 		<widget name="iface" position="945,330" size="225,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="labiface" position="1185,330" size="465,45" font="Regular;30" valign="center" backgroundColor="#4D5375"/>
+		<widget name="labiface" position="1185,330" size="465,45" font="Regular;30" valign="center" backgroundColor="bluegrey"/>
 		<widget name="port" position="945,390" size="225,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="labport" position="1185,390" size="465,45" font="Regular;30" valign="center" backgroundColor="#4D5375"/>
+		<widget name="labport" position="1185,390" size="465,45" font="Regular;30" valign="center" backgroundColor="bluegrey"/>
 		<widget name="telnetport" position="945,450" size="225,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="labtelnetport" position="1185,450" size="465,45" font="Regular;30" valign="center" backgroundColor="#4D5375"/>
+		<widget name="labtelnetport" position="1185,450" size="465,45" font="Regular;30" valign="center" backgroundColor="bluegrey"/>
 		<widget name="sharedir" position="945,510" size="225,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="labsharedir" position="1185,510" size="465,45" font="Regular;30" valign="center" backgroundColor="#4D5375"/>
+		<widget name="labsharedir" position="1185,510" size="465,45" font="Regular;30" valign="center" backgroundColor="bluegrey"/>
 		<widget name="web" position="870,607" size="270,45" font="Regular;30" valign="center" transparent="1"/>
 		<widget name="webinactive" position="1200,607" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="webactive" position="1200,607" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
@@ -2079,7 +2079,7 @@
 		<panel name="BasicTemplate3"/>
 <!-- ##SNR## -->
 		<eLabel name="snr" text="SNR:" position="27,124" size="142,75"  font="Regular;55"/>
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,120" size="1500,75" borderWidth="2" borderColor="uncccccc">
+		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,120" size="1500,75" borderWidth="2" borderColor="white">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="1695,124" size="193,75" font="Regular;52">
@@ -2090,7 +2090,7 @@
 		</widget>
 <!-- ##AGC## -->
 		<eLabel name="agc" text="AGC:" position="27,202" size="142,75" font="Regular;55"/>
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,202" size="1500,75" borderWidth="2" borderColor="uncccccc">
+		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,202" size="1500,75" borderWidth="2" borderColor="white">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="1695,202" size="195,75" font="Regular;52">
@@ -2101,7 +2101,7 @@
 		</widget>
 <!-- ##BER## -->
 		<eLabel name="ber" text="BER:" position="27,285" size="142,75" font="Regular;55"/>
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,285" size="1500,75" borderWidth="2" borderColor="uncccccc">
+		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,285" size="1500,75" borderWidth="2" borderColor="white">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="1695,285" size="195,75" font="Regular;52">
@@ -2179,7 +2179,7 @@
 	<screen name="CableScanStatus" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
 		<widget name="scan_state" position="780,180" zPosition="2" size="600,45" font="Regular;27"/>
-		<widget name="scan_progress" position="780,232" size="600,22" pixmap="progress_big.png" borderWidth="2" borderColor="#cccccc"/>
+		<widget name="scan_progress" position="780,232" size="600,22" pixmap="progress_big.png" borderWidth="2" borderColor="grey"/>
 	</screen>
 	<screen name="SecParameterSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2767,7 +2767,7 @@
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<widget name="config" position="780,123" size="1132,765" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand"/>
-		<widget source="status" render="Label" position="780,903" size="1110,90" font="menulist;33" halign="center" zPosition="1" valign="center" backgroundColor="#a08500" transparent="1"/>
+		<widget source="status" render="Label" position="780,903" size="1110,90" font="menulist;33" halign="center" zPosition="1" valign="center"/>
 		<widget name="oldversion_label" position="7,600" size="290,40" font="menulist;33" foregroundColor="secondFG"/>
 		<widget name="oldversion" position="300,600" size="290,40" font="menulist;33" foregroundColor="secondFG"/>
 		<widget name="newversion_label" position="7,650" size="290,40" font="menulist;33" foregroundColor="secondFG"/>
@@ -2778,7 +2778,7 @@
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
 		<widget name="file_list" position="780,123" size="1132,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
-		<widget source="status" render="Label" position="780,903" zPosition="1" size="1110,90" font="Regular;33" halign="center" valign="center" backgroundColor="#a08500" transparent="1"/>
+		<widget source="status" render="Label" position="780,903" zPosition="1" size="1110,90" font="Regular;33" halign="center" valign="center"/>
 	</screen>
 	<screen name="UpgradeStatus" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
