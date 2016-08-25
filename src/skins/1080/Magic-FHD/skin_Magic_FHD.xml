@@ -222,7 +222,7 @@
 		<widget name="Tuner" position="7,342" size="90,30" zPosition="2" font="menulist;27" halign="left"/>
 		<widget name="tunerName" position="105,342" size="75,30" zPosition="2" font="menulist;27" halign="left"/>
 		<widget name="turnSpeed" position="7,375" size="90,30" zPosition="2" font="menulist;27" halign="left"/>
-		<widget source="session.FrontendStatus" render="Progress" position="7,412" size="180,15" pixmap="bar_snr.png" zPosition="10" borderWidth="2" borderColor="#cccccc">
+		<widget source="session.FrontendStatus" render="Progress" position="7,412" size="180,15" pixmap="bar_snr.png" zPosition="10" borderWidth="2" borderColor="white">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 	</screen>
@@ -522,33 +522,33 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="timeline_text" position="7,90" size="1905,45" foregroundColor="#00e5b243" backgroundColor="background" transparent="1"/>
-		<widget name="lab1" position="0,82" size="1920,727" font="Regular;36" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
+		<widget name="timeline_text" position="7,90" size="1905,40" font="menulist;30" foregroundColor="selectedFG"/>
+		<widget name="lab1" position="0,82" size="1920,727" font="menulist;36" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="list" position="7,135" size="1905,712" ServiceFontGraphical="channelselectionservice;30" EntryFontGraphical="channelselectionevent;30" EntryFontWrap="no" ServiceNamePadding="5"
 				ServiceBackgroundColor="bluetransparent" ServiceBackgroundColorNow="greentransparent" EntryBackgroundColor="bluetransparent" EntryBackgroundColorSelected="black"
 				EntryBackgroundColorNow="redtransparent" EntryBackgroundColorNowSelected="redtransparent" EntryFontAlignment="center" EntryForegroundColorSelected="selectedFG"
 				EntryForegroundColorNowSelected="selectedFG" RecordBackgroundColor="yellowtransparent" RecordBackgroundColorSelected="yellowtransparent"
 				RecordForegroundColorSelected="selectedFG" ZapBackgroundColor="white" ZapBackgroundColorSelected="white" ZapForegroundColorSelected="selectedFG" transparent="1"/>
-		<widget name="bouquetlist" position="7,135" size="1905,715" itemHeight="28" foregroundColor="white" backgroundColor="background" foregroundColorSelected="yellow" backgroundColorSelected="#001C252D" borderColor="background" zPosition="4" transparent="0"/>
+		<widget name="bouquetlist" position="200,135" size="1600,715" itemHeight="40" font="menulist;30" foregroundColorSelected="selectedFG" backgroundColorSelected="selectedBG" zPosition="4" transparent="0"/>
 		<widget name="timeline_now" position="7,135" zPosition="2" size="28,682" pixmap="window/timeline-now.png" alphatest="on"/>
-		<widget source="Event" render="Label" position="7,832" size="150,45" font="Regular;39" foregroundColor="#00e5b243" backgroundColor="background" shadowColor="#000000" halign="right" transparent="1">
+		<widget source="Event" render="Label" position="7,848" size="150,40" font="menulist;36" foregroundColor="selectedFG" halign="right">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="Event" render="Label" position="157,832" size="150,45" font="Regular;39" foregroundColor="#00e5b243" backgroundColor="background" shadowColor="#000000" halign="left" transparent="1">
+		<widget source="Event" render="Label" position="157,848" size="150,40" font="menulist;36" foregroundColor="selectedFG" halign="left">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="307,832" size="1605,45" font="Regular;39" foregroundColor="#00e5b243" backgroundColor="background" transparent="1" halign="left">
+		<widget source="Event" render="Label" position="307,848" size="1605,40" font="menulist;36" foregroundColor="selectedFG" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,877" zPosition="1" size="1905,109" font="Regular;33" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" shadowColor="#000000" transparent="1">
+		<widget source="Event" render="Label" position="7,890" size="1905,75" font="menulist;33" zPosition="1" halign="left" valign="center">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,990" size="1755,30" font="Regular;28" foregroundColor="blue" backgroundColor="background" transparent="1" halign="center">
+		<widget source="Event" render="Label" position="7,970" size="1700,35" font="menulist;30" foregroundColor="blue" halign="center">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="Event" render="Label" position="1762,990" size="150,30" font="Regular;28" foregroundColor="blue" backgroundColor="background" transparent="1" halign="right">
+		<widget source="Event" render="Label" position="1710,970" size="200,35" font="menulist;30" foregroundColor="blue" halign="left">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
 	</screen>
