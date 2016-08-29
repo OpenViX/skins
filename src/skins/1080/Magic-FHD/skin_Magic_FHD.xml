@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 11.1.4 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 11.1.5 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -2513,7 +2513,7 @@
 				{"template": [
 				MultiContentEntryText(pos = (10,6), size = (1000,855), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
 				],
-				"fonts": [gFont("menulist",35)],
+				"fonts": [gFont("Regular",35)],
 				"itemHeight": 60
 				}
 		</convert>
@@ -2600,7 +2600,7 @@
 	</screen>
 	<screen name="VIXBackupManagerLogView" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,874" font="menulist;33" foregroundColor="grey"/>
+		<widget name="list" position="780,123" size="1132,874" font="Regular;33" foregroundColor="grey"/>
 	</screen>
 	<screen name="BackupSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2620,7 +2620,7 @@
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
-		<widget name="lab1" position="780,123" size="1132,37" font="menulist;34" foregroundColor="secondFG" zPosition="2" halign="center"/>
+		<widget name="lab1" position="780,123" size="1132,45" font="Regular;34" foregroundColor="secondFG" zPosition="2" halign="center"/>
 		<widget name="list" position="780,185" size="1132,810" font="Regular;34" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(45)
@@ -2677,7 +2677,7 @@
 	</screen>
 	<screen name="LogManagerFb" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,874" font="menulist;33" scrollbarMode="showOnDemand" itemHeight="30" enableWrapAround="1"/>
+		<widget name="list" position="780,123" size="1132,874" font="Regular;33" scrollbarMode="showOnDemand" itemHeight="30" enableWrapAround="1"/>
 	</screen>
 <!-- ## ViX-Softcam ## -->
 	<screen name="VIXSoftcamMenu" position="fill" flags="wfNoBorder">
@@ -2694,9 +2694,9 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="lab2" position="885,135" size="255,40" font="menulist;34" halign="lef" zPosition="2" valign="center" foregroundColor="grey"/>
+		<widget name="lab2" position="885,135" size="255,45" font="Regular;34" halign="lef" zPosition="2" valign="center" foregroundColor="grey"/>
 		<widget name="list" position="1162,406" size="360,225" font="SelectionList;34" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="lab1" position="885,406" size="255,40" font="menulist;34" halign="left" zPosition="2" foregroundColor="grey"/>
+		<widget name="lab1" position="885,406" size="255,40" font="Regular;34" halign="left" zPosition="2" foregroundColor="grey"/>
 		<widget name="activecam" position="1162,135" size="360,225" font="Regular;30" halign="left" zPosition="2" noWrap="1" foregroundColor="grey"/>
 		<applet type="onLayoutFinish">
 		self["list"].instance.setItemHeight(50)
@@ -2735,14 +2735,15 @@
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<panel name="Blue2Panel"/>
-		<widget name="config" position="735,120" size="1177,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="description" position="7,570" size="715,247" font="menulist;30" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget name="text" position="7,550" size="715,63" font="menulist;30" zPosition="2" valign="center" halign="center"/>
-		<widget name="HelpTextHeader1" position="7,620" size="715,33" font="menulist;30" zPosition="2" foregroundColor="secondFG" halign="center"/>
-		<widget name="HelpText1" position="7,655" size="715,150" font="menulist;30" zPosition="2" valign="center" halign="center"/>
-		<widget name="HelpTextHeader2" position="7,815" size="715,33" font="menulist;30" zPosition="2" foregroundColor="secondFG" halign="center"/>
-		<widget name="HelpText2" position="7,855" size="715,100" font="menulist;30" zPosition="2" valign="center" halign="center"/>
+		<widget name="blue" pixmap="buttons/blue.png" position="1335,1027" size="30,30" zPosition="0" alphatest="blend"/>
+		<panel name="BlueT1Panel"/>
+		<widget name="config" position="755,120" size="1157,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="text" position="7,550" size="715,90" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="description" position="7,650" size="715,180" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+<!--	<widget name="HelpTextHeader1" position="7,620" size="715,40" font="Regular;30" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget name="HelpText1" position="7,655" size="715,150" font="Regular;30" zPosition="2" valign="center" halign="center"/>
+		<widget name="HelpTextHeader2" position="7,815" size="715,40" font="Regular;30" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget name="HelpText2" position="7,855" size="715,100" font="Regular;30" zPosition="2" valign="center" halign="center"/>-->
 	</screen>
 
 	<!-- ##Resolution label## -->
