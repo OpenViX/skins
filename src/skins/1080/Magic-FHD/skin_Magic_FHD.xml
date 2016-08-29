@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 11.1.5 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 11.1.6 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -891,13 +891,13 @@
 	<screen name="JobView" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="BlueBPanel"/>
-		<widget source="job_name" render="Label" position="735,120" size="1177,90" font="Regular;42" foregroundColor="secondFG" halign="center" valign="top"/>
-		<widget source="job_task" render="Label" position="885,255" size="720,75" font="Regular;34"/>
-		<widget source="job_progress" render="Progress" position="885,393" size="720,54" borderWidth="2" backgroundColor="white"/>
-		<widget source="job_progress" render="Label" position="900,395" size="420,54" font="menulist;42" foregroundColor="black" zPosition="2" halign="left" transparent="1">
+		<widget source="job_name" render="Label" position="885,120" size="720,90" font="Regular;42" foregroundColor="secondFG" halign="center"/>
+		<widget source="job_task" render="Label" position="885,220" size="720,75" font="Regular;34"/>
+		<widget source="job_progress" render="Progress" position="880,310" size="720,55" borderWidth="2" borderColor="grey"/>
+		<widget source="job_progress" render="Label" position="880,305" size="720,54" font="Regular;45" halign="center" foregroundColor="yellow" zPosition="2" transparent="1">
 			<convert type="ProgressToText"/>
 		</widget>
-		<widget source="job_status" render="Label" position="885,468" size="720,45" font="Regular;34"/>
+		<widget source="job_status" render="Label" position="885,370" size="720,45" font="Regular;34"/>
 		<widget name="config" position="885,600" size="720,195" font="Regular;34"/>
 		<widget source="cancelable" render="Pixmap" pixmap="buttons/red.png" position="22,1027" size="400,60" zPosition="-1" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
@@ -1161,7 +1161,9 @@
 		<widget name="key_green" backgroundColor="secondBG" font="Regular;33" halign="left" position="652,637" size="330,39" transparent="1" zPosition="1"/>
 		<widget name="key_yellow" backgroundColor="secondBG" font="Regular;33" halign="left" position="1087,637" size="330,39" transparent="1" zPosition="1"/>
 		<widget name="key_blue" backgroundColor="secondBG" font="Regular;33" halign="left" position="1522,637" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="list" position="780,123" size="1132,495" itemHeight="45" noWrap="1" serviceNumberFont="Regular;30" serviceInfoFont="Crs;22" serviceNameFont="Regular;22" serviceItemHeight="25" colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" foregroundColorServiceNotAvail="#656565" scrollbarMode="showOnDemand"/>
+		<widget name="list" position="780,123" size="1132,495" itemHeight="45" noWrap="1" serviceNumberFont="Regular;30" serviceInfoFont="Crs;22" serviceNameFont="Regular;22"
+				serviceItemHeight="25" colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" foregroundColorServiceNotAvail="#656565"
+				scrollbarMode="showOnDemand"/>
 		<widget source="session.Event_Now" render="Label" position="105,142" size="690,63" foregroundColor="secondFG" noWrap="1" font="Regular;33" halign="center" valign="center">
 		<convert type="EventName">Name</convert>
 		</widget>
