@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 1.1.1	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 1.1.2	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -995,7 +995,7 @@
 	</screen>
 
 	<!-- ## OFDb Plugin ## -->
-	<screen name="OFDB" position="fill" flags="wfNoBorder">
+	<screen name="OFDB" position="fill" flags="wfNoBorder" title="Online-Filmdatenbank Details Plugin">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
@@ -1012,13 +1012,6 @@
 		<widget name="menu" position="780,397" size="1132,585" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1" foregroundColor="grey"/>
 		<widget name="castlabel" position="780,412" size="1132,540" font="Regular;33" foregroundColor="grey"/>
 		<widget name="extralabel" position="780,123" size="1132,855" font="Regular;33" foregroundColor="grey"/>
-	</screen>
-	<screen name="OFDbLCDScreen" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget name="headline" position="735,568" size="1177,37" zPosition="2" font="menulist;33" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget source="session.Event_Now" render="Label" position="735,165" size="1132,882" font="menulist;33" transparent="1" foregroundColor="grey">
-			<convert type="EventName">Name</convert>
-		</widget>
 	</screen>
 
 	<!-- ## AC3LipSync	## -->
@@ -1924,17 +1917,17 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" position="223,570" size="315,31" zPosition="2" alphatest="blend"/>
-		<widget name="stars" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" position="223,570" size="315,31" zPosition="3" transparent="1"/>
-		<widget name="ratinglabel" position="7,615" size="765,75" font="menulist;30" foregroundColor="grey" halign="center"/>
-		<widget name="title" position="7,695" size="765,75" font="menulist;30" foregroundColor="secondFG" halign="center"/>
-		<widget name="statusbar" position="7,900" size="765,60" font="menulist;27" halign="center" valign="bottom"/>
-		<widget name="poster" position="780,123" size="165,270" alphatest="blend"/>
-		<widget name="detailslabel" position="960,123" size="945,270" font="Regular;30" halign="center"/>
-		<widget name="menu" position="780,397" size="1132,585" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1" foregroundColor="grey"/>
-		<widget name="castlabel" position="780,412" size="1132,540" font="Regular;33" foregroundColor="grey"/>
-		<widget name="extralabel" position="780,123" size="1132,855" font="Regular;33" foregroundColor="grey"/>
-		<widget name="voteslabel" position="75,660" size="600,36" font="Regular;30" foregroundColor="grey" halign="center"/>
+		<widget name="title" position="7,570" size="715,45" font="menulist;30" foregroundColor="secondFG" halign="center"/>
+		<widget name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" position="223,615" size="315,31" zPosition="2" alphatest="blend"/>
+		<widget name="stars" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" position="223,615" size="315,31" zPosition="3" transparent="1"/>
+		<widget name="ratinglabel" position="7,650" size="715,75" font="menulist;30" foregroundColor="grey" halign="center"/>
+		<widget name="voteslabel" position="7,730" size="715,36" font="Regular;30" foregroundColor="grey" halign="center"/>
+		<widget name="statusbar" position="7,950" size="715,45" font="menulist;30" halign="center" valign="bottom"/>
+		<widget name="poster" position="750,120" size="165,270" alphatest="blend"/>
+		<widget name="detailslabel" position="920,120" size="935,45" font="Regular;30" halign="center" foregroundColor="secondFG"/>
+		<widget name="menu" position="920,170" size="935,405" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" zPosition="3" enableWrapAround="1" foregroundColor="grey"/>
+		<widget name="castlabel" position="735,580" size="1177,395" font="Regular;33" foregroundColor="grey"/>
+		<widget name="extralabel" position="920,120" size="935,455" font="Regular;30" foregroundColor="grey"/>
 	</screen>
 	<screen name="TMBDSettings" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2384,5 +2377,6 @@
 		<panel name="BasicTemplate"/>
 		<widget name="menu" position="755,120" size="1000,855" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
 	</screen>
+
 
 </skin>
