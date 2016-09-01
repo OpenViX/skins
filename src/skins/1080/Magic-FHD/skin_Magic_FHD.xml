@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 11.1.8 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 11.1.9 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -727,11 +727,11 @@
 	<!-- ## Menus ## -->
 	<screen name="Menu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="menu" render="Listbox" position="780,123" size="1102,850" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
+		<widget source="menu" render="Listbox" position="780,123" size="1102,880" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
-				{"template": [	MultiContentEntryText(pos = (20,5), size = (1000,50), flags = RT_HALIGN_LEFT, text = 0	) ],
-				"fonts": [gFont("menulist",35)],
-				"itemHeight": 50
+				{"template": [	MultiContentEntryText(pos = (20,3), size = (1000,50), flags = RT_HALIGN_LEFT, text = 0	) ],
+				"fonts": [gFont("Regular",36)],
+				"itemHeight": 55
 				}
 			</convert>
 		</widget>
@@ -741,12 +741,12 @@
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,750" size="1,1" zPosition="1"/>
-		<widget name="config" position="780,120" size="1132,855" font="menulist;34" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<widget name="description" position="7,555" size="765,375" font="menulist;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="description" position="7,555" size="765,375" font="Regular;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1740,1020" zPosition="1" size="52,37">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget name="footnote" position="1125,1020" size="725,40" font="menulist;33" zPosition="1" foregroundColor="grey"/>
+		<widget name="footnote" position="1125,1020" size="725,45" font="Regular;33" zPosition="1" foregroundColor="grey"/>
 	</screen>
 <!-- About -->
 	<screen name="AboutOE" position="fill" flags="wfNoBorder">
@@ -754,19 +754,19 @@
 		<panel name="RedGreen1Panel"/>
 		<panel name="Green1Panel"/>
 		<panel name="InfoBPanel"/>
-		<eLabel text="Release notes = " position="1470,1020" size="330,39" font="menulist;33" halign="right" zPosition="1" foregroundColor="grey"/>
-		<widget source="lab1" render="Label" position="15,682" size="730,37" font="menulist;36" zPosition="2" foregroundColor="secondFG" halign="center"/>
-		<widget source="lab2" render="Label" position="15,720" size="730,30" font="Crs;30" zPosition="2" foregroundColor="grey" halign="center"/>
-		<widget source="lab3" render="Label" position="15,750" size="730,30" font="Crs;30" zPosition="1" foregroundColor="grey" halign="center"/>
-		<widget name="AboutScrollLabel" position="850,123" size="1032,874" font="menulist;33" foregroundColor="grey"/>
-		<eLabel text="Skin Magic-FHD  OE-A team skin by Rob van der Does" position="7,885" size="750,82" font="menulist;28" foregroundColor="grey" halign="center" zPosition="1"/>
+		<eLabel text="Release notes = " position="1470,1020" size="330,45" font="Regular;33" halign="right" zPosition="1" foregroundColor="grey"/>
+		<widget source="lab1" render="Label" position="15,600" size="730,46" font="Regular;36" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget source="lab2" render="Label" position="15,650" size="730,33" font="Regular;30" zPosition="2" foregroundColor="grey" halign="center"/>
+		<widget source="lab3" render="Label" position="15,690" size="730,33" font="Regular;30" zPosition="1" foregroundColor="grey" halign="center"/>
+		<widget name="AboutScrollLabel" position="850,123" size="1032,874" font="Regular;31" foregroundColor="grey"/>
+		<eLabel text="Skin Magic-FHD  OE-A team skin by Rob van der Does" position="7,885" size="750,82" font="Regular;28" foregroundColor="grey" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="TranslationInfo" position="fill" flags="wfNoBorder" title="Translation">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
-		<widget source="TranslationInfo" render="Label" position="780,127" size="1177,45" font="menulist;33" foregroundColor="secondFG"/>
-		<widget source="TranslatorName" render="Label" position="780,225" size="1177,150" font="menulist;33" foregroundColor="grey"/>
-		<widget name="text" position="7,568" size="715,396" zPosition="2" font="menulist;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="TranslationInfo" render="Label" position="780,127" size="1177,45" font="Regular;33" foregroundColor="secondFG"/>
+		<widget source="TranslatorName" render="Label" position="780,225" size="1177,150" font="Regular;33" foregroundColor="grey"/>
+		<widget name="text" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="StreamingClientsInfo" position="fill" flags="wfNoBorder" title="Streaming clients info">
 		<panel name="BasicTemplate"/>
@@ -774,20 +774,20 @@
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="TunerHeader" render="Label" position="735,187" size="1162,37" font="menulist;36" halign="center" zPosition="1" foregroundColor="secondFG"/>
-		<widget source="Tuner0" render="Label" position="735,245" size="1162,35" font="menulist;30" foregroundColor="grey" halign="center"/>
-		<widget source="Tuner1" render="Label" position="735,285" size="1162,35" font="menulist;30" foregroundColor="grey" halign="center"/>
-		<widget source="Tuner2" render="Label" position="735,315" size="1162,35" font="menulist;30" foregroundColor="grey" halign="center"/>
-		<widget source="Tuner3" render="Label" position="735,355" size="1162,35" font="menulist;30" foregroundColor="grey" halign="center"/>
-		<widget source="HDDHeader" render="Label" position="735,568" size="1162,37" font="menulist;36" halign="center" foregroundColor="secondFG"/>
-		<widget source="hdd" render="Label" position="835,627" size="1000,150" font="menulist;30" foregroundColor="grey" halign="left"/>
-		<widget source="MountsHeader" render="Label" position="735,799" size="1162,37" font="menulist;36" halign="center" foregroundColor="secondFG"/>
-		<widget source="mounts" render="Label" position="735,858" size="1162,117" font="menulist;30" foregroundColor="grey" halign="center"/>
+		<widget source="TunerHeader" render="Label" position="735,120" size="1162,50" font="Regular;36" halign="center" zPosition="1" foregroundColor="secondFG"/>
+		<widget source="Tuner0" render="Label" position="735,175" size="1162,40" font="Regular;30" foregroundColor="grey" halign="center"/>
+		<widget source="Tuner1" render="Label" position="735,220" size="1162,40" font="Regular;30" foregroundColor="grey" halign="center"/>
+		<widget source="Tuner2" render="Label" position="735,265" size="1162,40" font="Regular;30" foregroundColor="grey" halign="center"/>
+		<widget source="Tuner3" render="Label" position="735,310" size="1162,40" font="Regular;30" foregroundColor="grey" halign="center"/>
+		<widget source="HDDHeader" render="Label" position="735,370" size="1162,50" font="Regular;36" halign="center" foregroundColor="secondFG"/>
+		<widget source="hdd" render="Label" position="835,425" size="1000,200" font="Regular;30" foregroundColor="grey" halign="left"/>
+		<widget source="MountsHeader" render="Label" position="735,630" size="1162,50" font="Regular;36" halign="center" foregroundColor="secondFG"/>
+		<widget source="mounts" render="Label" position="735,685" size="1162,190" font="Regular;30" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="AboutReleaseNotes" position="fill" flags="wfNoBorder"	>
 		<panel name="BasicTemplate"/>
 		<widget name="list" font="Regular;33" position="780,123" size="1132,874" foregroundColor="grey"/>
-		<eLabel text="Skin Magic-FHD	 OE-A team skin by Rob van der Does" position="7,885" size="750,82" font="menulist;28" foregroundColor="grey" halign="center" zPosition="1"/>
+		<eLabel text="Skin Magic-FHD	 OE-A team skin by Rob van der Does" position="7,885" size="750,82" font="Regular;28" foregroundColor="grey" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="ServiceInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -799,7 +799,7 @@
 		<widget name="yellow" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<panel name="BlueBPanel"/>
 		<widget name="blue" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
-		<widget name="infolist" position="7,530" size="1900,475" font="menulist;30" itemHeight="35" selectionDisabled="1" foregroundColor="grey"/>
+		<widget name="infolist" position="7,530" size="1900,475" font="Regular;30" itemHeight="35" selectionDisabled="1" foregroundColor="grey"/>
 		<eLabel text="HbbTV URL:" position="735,150" size="1177,80" font="Regular;35" foregroundColor="secondFG" halign="center" zPosition="1"/>
 		<widget source="session.CurrentService" render="Label" position="735,240" size="1177,500" font="Regular;30" halign="center" foregroundColor="grey">
 			<convert type="ServiceInfo">HasHBBTV</convert>
@@ -811,37 +811,36 @@
 	</screen>
 	<screen name="SystemMemoryInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="lab1" render="Label" position="15,682" size="750,45" font="menulist;36" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget source="lab1" render="Label" position="15,682" size="750,45" font="Regular;36" zPosition="2" foregroundColor="secondFG" halign="center"/>
 		<widget source="lab2" render="Label" position="15,730" size="750,45" font="Crs;30" zPosition="2" foregroundColor="grey" halign="center"/>
-		<widget source="lab3" render="Label" position="15,780" size="750,45" font="menulist;30" zPosition="2" foregroundColor="grey" halign="center"/>
-		<widget name="AboutScrollLabel" position="780,123" size="1132,855" font="menulist;30" zPosition="1" foregroundColor="grey"/>
-
-		</screen>
+		<widget source="lab3" render="Label" position="15,780" size="750,45" font="Regular;30" zPosition="2" foregroundColor="grey" halign="center"/>
+		<widget name="AboutScrollLabel" position="780,123" size="1132,855" font="Regular;30" zPosition="1" foregroundColor="grey"/>
+	</screen>
 	<screen name="SystemNetworkInfo" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<widget name="AboutScrollLabel" position="780,135" size="687,712" font="menulist;30" halign="left" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="IFtext" render="Label" position="780,900" size="180,37" font="menulist;30" zPosition="10" halign="right" foregroundColor="grey"/>
-		<widget source="IF" render="Label" position="967,900" size="600,37" font="menulist;30" zPosition="10" halign="left" foregroundColor="grey"/>
-		<widget source="Statustext" render="Label" position="780,953" size="172,37" font="menulist;30" zPosition="10" halign="right" foregroundColor="grey"/>
+		<widget name="AboutScrollLabel" position="780,135" size="687,712" font="Regular;30" halign="left" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="IFtext" render="Label" position="780,900" size="180,37" font="Regular;30" zPosition="10" halign="right" foregroundColor="grey"/>
+		<widget source="IF" render="Label" position="967,900" size="600,37" font="Regular;30" zPosition="10" halign="left" foregroundColor="grey"/>
+		<widget source="Statustext" render="Label" position="780,953" size="172,37" font="Regular;30" zPosition="10" halign="right" foregroundColor="grey"/>
 		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="967,960" size="23,24" zPosition="10" alphatest="on"/>
 		<widget name="devicepic" pixmaps="icons/network_wired.png,icons/network_wireless.png" position="1010,950" size="54,54" zPosition="10" alphatest="on"/>
 	</screen>
 	<screen name="HarddiskSelection" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
-		<widget name="hddlist" position="780,123" size="1132,855" font="menulist;33" itemHeight="45"/>
+		<widget name="hddlist" position="780,123" size="1132,855" font="Regular;33" itemHeight="45"/>
 	</screen>
 	<screen name="HarddiskSetup" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
 		<panel name="RedBPanel"/>
-		<widget name="initializetext" position="55,1020" size="400,39" font="menulist;33" foregroundColor="grey" zPosition="1" halign="left"/>
-		<widget name="model" position="885,165" size="570,37" font="menulist;33"/>
-		<widget name="capacity" position="885,210" size="570,37" font="menulist;33"/>
-		<widget name="bus" position="885,255" size="570,37" font="menulist;33"/>
+		<widget name="initializetext" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<widget name="model" position="885,165" size="570,37" font="Regular;33"/>
+		<widget name="capacity" position="885,210" size="570,37" font="Regular;33"/>
+		<widget name="bus" position="885,255" size="570,37" font="Regular;33"/>
 	</screen>
 	<screen name="HarddiskWait" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
-		<widget name="wait" position="885,165" size="900,75" font="menulist;34"/>
+		<widget name="wait" position="885,165" size="900,75" font="Regular;34"/>
 	</screen>
 	<!-- ## Restart ## -->
 	<screen name="QuitMainloopScreen" position="fill" flags="wfNoBorder" backgroundColor="black">
@@ -1405,7 +1404,7 @@
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
-		<widget name="text" position="780,123" size="1132,874" font="menulist;33"/>
+		<widget name="text" position="780,123" size="1132,874" font="Regular;30"/>
 	</screen>
 	<screen name="SoftwareUpdateChoices" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2596,7 +2595,7 @@
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="TextBPanel"/>
-		<widget name="config" position="780,123" size="1132,405" font="Regular;34" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,123" size="1132,405" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,600" zPosition="1" size="1,1"/>
 		<widget name="description" position="7,540" size="715,396" font="Regular;33"/>
 	</screen>
