@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD Vs 11.1.9 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
+	<!--	Skin: Magic-FHD Vs 11.2.0 by Rob van der Does @www.world-of-satellite.com, based on Magic-HD	-->
 	<!--	This skin is a Freeware. Everyone can modify and use it in other images.	-->
 	<!--	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!	-->
 	<!--	Do whatever you want with this skin,but don't tell it's yours,or your idea, and leave the credentials in the "About-box" as they are	-->
@@ -689,7 +689,6 @@
 		<panel name="OKBPanel"/>
 		<eLabel text="Accept" position="520,1020" size="330,39" font="Regular;33" foregroundColor="grey" halign="left" zPosition="1"/>
 		<panel name="MenuBPanel"/>
-		<widget name="config" position="930,122" size="637,450" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" foregroundColor="grey"/>
 		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="855,125" size="52,37" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -702,7 +701,8 @@
 		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="855,260" size="52,37" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="streams" render="Listbox" position="755,330" size="1035,630" zPosition="3" foregroundColor="grey">
+		<widget name="config" position="930,122" size="637,450" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" foregroundColor="grey"/>
+		<widget source="streams" render="Listbox" position="755,400" size="1035,580" zPosition="3" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"templates":
 				{"default": (45, [
@@ -2522,7 +2522,7 @@
 			<widget source="menu" render="Listbox" position="15,600" size="715,60" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="secondFG">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (0,0),size = (700,60),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP,text = 2),# index 0 is the MenuText,
+				MultiContentEntryText(pos = (0,0),size = (700,80),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP,text = 2),# index 0 is the MenuText,
 				],
 				"fonts": [gFont("Regular",33)],
 				"itemHeight": 80
