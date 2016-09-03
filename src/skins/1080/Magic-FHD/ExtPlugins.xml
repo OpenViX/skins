@@ -1,6 +1,6 @@
 <!--suppress XmlUnboundNsPrefix -->
 <skin>
-	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 1.1.2	-->
+	<!--	Skin: Magic-FHD-ViX PlugIn-addition Vs 1.1.3	-->
 	<!--	This skin is part of the Magic-FHD-ViX MainSkin; the same license applies.	-->
 	<!--	## Head ##	-->
 	<!-- ##Wake on LAN## -->
@@ -896,6 +896,12 @@
 		<panel name="YellowBPanel"/>
 		<widget name="label" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget name="favmenu" position="800,120" size="1000,855" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+	<screen name="DownloadUpdate" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="name" position="735,120" size="1177,75" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget name="size" position="735,220" size="1177,75" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget name="slider" position="735,320" size="1177,30" zPosition="2"/>
 	</screen>
 
 	<!-- ## YouTube-VU ## -->
@@ -2378,5 +2384,106 @@
 		<widget name="menu" position="755,120" size="1000,855" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
 	</screen>
 
+	<!-- ## FritzCall ## -->
+	<screen name="FritzAbout" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="text" position="900,120" size="1000,250" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/FritzCall/images/fritz.png" position="900,500" size="150,110" alphatest="blend"/>
+		<widget name="url" position="7,600" size="715,45" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/FritzCall/images/website.png" position="250,700" size="175,175" alphatest="blend"/>
+	</screen>
+	<screen name="FritzDisplayPhonebook" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<widget source="entries" render="Listbox" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (0,0), size = (700,40), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 0 is the name, index 1 is shortname
+						MultiContentEntryText(pos = (710,0), size = (465,40), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is number
+					],
+				"fonts": [gFont("Regular",30)],
+				"itemHeight":45
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="AddScreen" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+	<screen name="FritzMenu" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<widget name="FBFInternet" position="810,170" size="1122,45" font="Regular;33" foregroundColor="grey"/>
+		<widget name="internet_inactive" position="755,170" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="internet_active" position="755,170" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="FBFDsl" position="810,220" size="1122,45" font="Regular;33" foregroundColor="grey"/>
+		<widget name="dsl_inactive" position="755,220" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="dsl_active" position="755,220" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="FBFWlan" position="810,270" size="1122,45" font="Regular;33" foregroundColor="grey"/>
+		<widget name="wlan_inactive" position="755,270" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="wlan_active" position="755,270" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="FBFMailbox" position="810,320" size="1122,45" font="Regular;33" foregroundColor="grey"/>
+		<widget name="mailbox_inactive" position="755,320" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="mailbox_active" position="755,320" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="FBFDect" position="810,370" size="1122,45" font="Regular;33" foregroundColor="grey"/>
+		<widget name="dect_inactive" position="755,370" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="dect_active" position="755,370" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="FBFFax" position="810,520" size="1122,45" font="Regular;33" foregroundColor="grey"/>
+		<widget name="fax_inactive" position="755,520" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="fax_active" position="755,520" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="FBFRufuml" position="810,570" size="1122,45" font="Regular;33" foregroundColor="grey"/>
+		<widget name="rufuml_inactive" position="755,570" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="rufuml_active" position="755,570" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="FBFGast" position="810,570" size="1122,45" font="Regular;33" foregroundColor="grey"/>
+		<widget name="gast_active" position="755,570" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="gast_active" position="755,570" size="50,45" transparent="1" alphatest="on"/>
+		<widget name="FBFInfo" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<screen name="FritzDisplayCalls" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<widget source="entries" render="Listbox" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryPixmapAlphaTest(pos = (0,50), size = (30,30), png = 2), # index 1 i direction pixmap
+						MultiContentEntryText(pos = (35,0), size = (500,45), font=1, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 5), # index 4 is my number/name for number
+						MultiContentEntryText(pos = (35,45), size = (200,45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 0 is the number, index 1 is date
+						MultiContentEntryText(pos = (240,45), size = (150,45), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # index 3 is length of call
+						MultiContentEntryText(pos = (395,45), size = (780,45), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 2 is remote name/number
+					],
+				"fonts": [gFont("Regular",30), gFont("Regular",28)],
+				"itemHeight":100
+				}
+			</convert>
+		</widget>
+		<widget name="statusbar" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<screen name="MessageBoxPixmap" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="text" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
+		<widget name="InfoPixmap" position="100,650" size="100,100" zPosition="2" alphatest="on"/>
+	</screen>
+	<screen name="FritzCallSetup" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="consideration" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
 
 </skin>
