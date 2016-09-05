@@ -362,7 +362,7 @@
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 -->	
-		<widget source="Event" render="Label" position="7,528" size="750,80" font="menulist;33" foregroundColor="secondFG" halign="center" valign="top">
+		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Event" render="Label" position="22,610" size="225,37" font="Regular;33" foregroundColor="yellow">
@@ -661,25 +661,25 @@
 		<widget source="Service" render="Label" position="780,960" size="225,35" font="Regular;30" foregroundColor="secondFG" halign="left">
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
-		<widget name="freeDiskSpace" position="1087,960" size="375,35" font="menulist;30" foregroundColor="secondFG" halign="center"/>
-		<widget name="TrashcanSize" position="1537,960" size="375,35" font="menulist;30" foregroundColor="secondFG" halign="right"/>
-		<widget source="Service" render="Label" position="277,532" size="465,37" font="Regular;33" foregroundColor="selectedFG" zPosition="1" halign="right">
-			<convert type="MovieInfo">RecordServiceName</convert>
-		</widget>
-		<widget source="Service" render="Label" position="22,532" size="120,36" font="Regular;30" foregroundColor="selectedFG" halign="left">
+		<widget name="freeDiskSpace" position="1087,960" size="375,40" font="Regular;30" foregroundColor="secondFG" halign="center"/>
+		<widget name="TrashcanSize" position="1537,960" size="375,40" font="Regular;30" foregroundColor="secondFG" halign="right"/>
+		<widget source="Service" render="Label" position="22,532" size="120,40" font="Regular;30" foregroundColor="selectedFG" halign="left">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget source="Service" render="Label" position="142,532" size="135,37" font="Regular;30" foregroundColor="selectedFG" halign="center">
+		<widget source="Service" render="Label" position="142,532" size="135,40" font="Regular;30" foregroundColor="selectedFG" halign="center">
 			<convert type="ServiceTime">StartTime</convert>
 			<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget name="DescriptionBorder" position="0,0" size="0,0"/>
+		<widget source="Service" render="Label" position="277,532" size="465,40" font="Regular;33" foregroundColor="selectedFG" zPosition="1" halign="right">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+<!--		<widget name="DescriptionBorder" position="0,0" size="0,0"/>-->
 	</screen>
 	<screen name="MovieListTags" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="22,568" size="715,390" font="menulist;33" zPosition="2" foregroundColor="secondFG"/>
-		<widget name="list" position="780,120" size="1132,855" font="menulist;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="text" position="22,568" size="715,390" font="Regular;33" zPosition="2" foregroundColor="secondFG"/>
+		<widget name="list" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<!-- Audio selection -->
 	<screen name="AudioSelection" position="fill" flags="wfNoBorder">
@@ -1079,7 +1079,7 @@
 						MultiContentEntryText(pos = (515,38), size = (1185,25), font = 3, flags = RT_HALIGN_LEFT, text = 4, color = 0x00999999, color_sel = 0x00999999),
 						MultiContentEntryPixmapAlphaBlend(pos=(2,9), size=(75,45), png=6, flags = BT_SCALE)
 					],
-				 "fonts": [gFont("menulist",33), gFont("channelselectionservice",30), gFont("channelselectionevent",25), gFont("menulist",24)],
+				 "fonts": [gFont("Regular",33), gFont("channelselectionservice",30), gFont("channelselectionevent",25), gFont("menulist",24)],
 				 "itemHeight":70
 				}
 			</convert>
@@ -1087,12 +1087,12 @@
 	</screen>
 	<screen name="Subtitles" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,855" font="menulist;33" itemHeight="45" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,123" size="1132,855" font="HistoryZapSelector;33" itemHeight="45" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="SubtitleDisplay" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="-1"/>
 	<screen name="QuickSubtitlesConfigMenu" position="75,75" size="720,385" backgroundColor="transpBlack" flags="wfNoBorder">
-		<widget name="config" position="8,8" size="705,363" font="menulist;27" itemHeight="30" zPosition="1" transparent="1"/>
-		<widget name="videofps" position="8,375" size="470,30" font="menulist;24" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center" halign="left" foregroundColor="blue"/>
+		<widget name="config" position="8,8" size="705,363" font="Regular;27" itemHeight="30" zPosition="1" transparent="1"/>
+		<widget name="videofps" position="8,375" size="470,30" font="Regular;24" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center" halign="left" foregroundColor="blue"/>
 	</screen>
 	<screen name="ChapterZap" position="center,center" size="420,90" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="chapter" position="0,-300" size="300,60" font="Regular;51" borderColor="black" borderWidth="4" backgroundColor="transparent" transparent="1" valign="center" halign="right"/>
@@ -1163,21 +1163,21 @@
 		<widget name="list" position="780,123" size="1132,495" itemHeight="45" noWrap="1" serviceNumberFont="Regular;30" serviceInfoFont="Crs;22" serviceNameFont="Regular;22"
 				serviceItemHeight="25" colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" foregroundColorServiceNotAvail="#656565"
 				scrollbarMode="showOnDemand"/>
-		<widget source="session.Event_Now" render="Label" position="105,142" size="690,63" foregroundColor="secondFG" noWrap="1" font="Regular;33" halign="center" valign="center">
+		<widget source="session.Event_Now" render="Label" position="105,142" size="690,63" font="Regular;33" foregroundColor="secondFG" noWrap="1" halign="center" valign="center">
 		<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="105,205" size="93,33" transparent="1" foregroundColor="foreground" font="Regular;28" halign="right">
+		<widget source="session.Event_Now" render="Label" position="105,205" size="93,33" font="Regular;28" transparent="1" foregroundColor="foreground" halign="right">
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Progress" pixmap="window/progress.png" position="225,215" size="285,18" transparent="1" borderWidth="1" borderColor="grey">
 		<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="540,205" size="93,33" foregroundColor="foreground" font="Regular;28">
+		<widget source="session.Event_Now" render="Label" position="540,205" size="93,33" font="Regular;28" foregroundColor="foreground">
 		<convert type="EventTime">EndTime</convert>
 		<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="22,244" size="772,360" foregroundColor="grey" font="Regular;27">
+		<widget source="session.Event_Now" render="Label" position="22,244" size="772,360" font="Regular;27" foregroundColor="grey">
 		<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		</screen>
