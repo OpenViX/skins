@@ -214,15 +214,15 @@
 	</screen>
 	<screen name="Dish" position="129,150" size="210,442" title="Dish" zPosition="10" backgroundColor="black" flags="wfNoBorder">
 		<widget name="Dishpixmap" position="0,30" size="195,240" zPosition="1" pixmap="icons/dish.png" transparent="1" alphatest="on"/>
-		<widget name="turnTime" position="7,0" size="180,30" zPosition="1" font="menulist;27" halign="right"/>
-		<widget name="From" position="7,276" size="90,30" zPosition="1" font="menulist;27" halign="left" text="From:"/>
-		<widget name="posFrom" position="105,276" size="105,30" zPosition="1" font="menulist;30" halign="left"/>
-		<widget name="Goto" position="7,307" size="90,30" zPosition="1" font="menulist;27" halign="left" text="Goto:"/>
-		<widget name="posGoto" position="105,307" size="105,30" zPosition="1" font="menulist;30" halign="left"/>
-		<widget name="Tuner" position="7,342" size="90,30" zPosition="2" font="menulist;27" halign="left"/>
-		<widget name="tunerName" position="105,342" size="75,30" zPosition="2" font="menulist;27" halign="left"/>
-		<widget name="turnSpeed" position="7,375" size="90,30" zPosition="2" font="menulist;27" halign="left"/>
-		<widget source="session.FrontendStatus" render="Progress" position="7,412" size="180,15" pixmap="bar_snr.png" zPosition="10" borderWidth="2" borderColor="white">
+		<widget name="turnTime" position="7,0" size="180,33" font="Regular;27" zPosition="1" foregroundColor="grey" halign="right"/>
+		<widget name="From" position="7,276" size="90,33" font="Regular;27" zPosition="1" foregroundColor="grey" halign="left" text="From:"/>
+		<widget name="Goto" position="7,307" size="90,33" font="Regular;27" zPosition="1" foregroundColor="grey" halign="left" text="Goto:"/>
+		<widget name="turnSpeed" position="7,375" size="90,33" font="Regular;27" zPosition="2" foregroundColor="grey" halign="left"/>
+		<widget name="Tuner" position="7,342" size="90,33" font="Regular;27" zPosition="2" foregroundColor="grey" halign="left"/>
+		<widget name="tunerName" position="105,342" size="75,33" font="Regular;27" zPosition="2" foregroundColor="grey" halign="left"/>
+		<widget name="posGoto" position="105,307" size="105,40" font="Regular;30" zPosition="1" foregroundColor="grey" halign="left"/>
+		<widget name="posFrom" position="105,276" size="105,40" font="Regular;30" zPosition="1" foregroundColor="grey" halign="left"/>
+		<widget source="session.FrontendStatus" render="Progress" position="7,412" size="180,15" pixmap="bar_snr.png" zPosition="10" borderWidth="2" borderColor="grey">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 	</screen>
@@ -246,9 +246,9 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="list" position="780,123" size="1132,750" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;32"
-				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" scrollbarMode="showOnDemand" zPosition="3"
-				backgroundColor="black" colorEventProgressbar="blue" foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
+		<widget name="list" position="780,123" size="1132,750" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
+				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" scrollbarMode="showOnDemand" zPosition="3" backgroundColor="black" 
+				colorEventProgressbar="blue" foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
 		<widget source="ServiceEvent" render="Label" position="780,877" size="937,40" font="Regular;31" foregroundColor="selectedFG" noWrap="1" zPosition="2" halign="left">
 			<convert type="EventName">NextName</convert>
 		</widget>
@@ -514,8 +514,8 @@
 		<widget name="timeline_now" position="0,112" zPosition="3" size="28,127" pixmap="epg/timeline-now.png" alphatest="on"/>
 	</screen>
 	<screen name="GraphicalEPG" position="fill">
-		<widget source="Title" render="Label" position="22,3" size="1500,90" font="menulist;37" foregroundColor="grey" valign="center" zPosition="1"/>
-		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,75" zPosition="1" font="Regular;30" valign="center" halign="right">
+		<widget source="Title" render="Label" position="22,3" size="1500,90" font="Regular;37" foregroundColor="grey" valign="center" zPosition="1"/>
+		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,75" font="Regular;30" foregroundColor="grey" zPosition="1" valign="center" halign="right">
 			<convert type="ClockToText">Full</convert>
 		</widget>
 		<panel name="Red1Panel"/>
@@ -524,33 +524,35 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="timeline_text" position="7,90" size="1905,40" TimelineFont="menulist;30" foregroundColor="selectedFG"/>
-		<widget name="lab1" position="0,82" size="1920,727" font="menulist;36" halign="center" valign="center" zPosition="20"/>
-		<widget name="list" position="7,135" size="1905,712" ServiceFontGraphical="channelselectionservice;30" EntryFontGraphical="channelselectionevent;30" EntryFontWrap="no" ServiceNamePadding="5"
-				ServiceBackgroundColor="bluetransparent" ServiceBackgroundColorNow="greentransparent" EntryBackgroundColor="bluetransparent" EntryBackgroundColorSelected="black"
-				EntryBackgroundColorNow="redtransparent" EntryBackgroundColorNowSelected="redtransparent" EntryFontAlignment="center" EntryForegroundColorSelected="selectedFG"
+		<widget name="timeline_text" position="7,93" size="1905,36" TimelineFont="Regular;29" foregroundColor="selectedFG"/>
+		<widget name="lab1" position="0,82" size="1920,727" font="Regular;36" halign="center" valign="center" zPosition="20"/>
+		<widget name="list" position="7,135" size="1905,712" ServiceFontGraphical="channelselectionservice;30" EntryFontGraphical="channelselectionevent;30"
+				EntryFontWrap="no" ServiceNamePadding="5" ServiceBackgroundColor="bluetransparent" ServiceBackgroundColorNow="greentransparent"
+				EntryBackgroundColor="bluetransparent" EntryBackgroundColorSelected="black" EntryBackgroundColorNow="redtransparent" 
+				EntryBackgroundColorNowSelected="redtransparent" EntryFontAlignment="center" EntryForegroundColorSelected="selectedFG"
 				EntryForegroundColorNowSelected="selectedFG" RecordBackgroundColor="yellowtransparent" RecordBackgroundColorSelected="yellowtransparent"
-				RecordForegroundColorSelected="selectedFG" ZapBackgroundColor="white" ZapBackgroundColorSelected="white" ZapForegroundColorSelected="selectedFG" transparent="1"/>
-		<widget name="bouquetlist" position="200,135" size="1600,720" itemHeight="40" font="menulist;30" foregroundColorSelected="selectedFG" backgroundColorSelected="selectedBG" zPosition="4" transparent="0"/>
-		<widget name="timeline_now" position="7,135" zPosition="2" size="28,682" pixmap="window/timeline-now.png" alphatest="on"/>
-		<widget source="Event" render="Label" position="7,848" size="150,40" font="menulist;36" foregroundColor="selectedFG" halign="right">
+				RecordForegroundColorSelected="selectedFG" ZapBackgroundColor="white" ZapBackgroundColorSelected="white" ZapForegroundColorSelected="selectedFG" 
+				transparent="1"/>
+		<widget name="bouquetlist" position="200,135" size="1600,720" itemHeight="40" font="Regular;30" foregroundColorSelected="selectedFG" backgroundColorSelected="selectedBG" zPosition="4" transparent="0"/>
+		<widget name="timeline_now" position="7,135" zPosition="2" size="28,712" pixmap="epg/timeline-now.png" alphatest="on"/>
+		<widget source="Event" render="Label" position="7,848" size="150,50" font="Regular;36" foregroundColor="selectedFG" halign="right">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="Event" render="Label" position="157,848" size="150,40" font="menulist;36" foregroundColor="selectedFG" halign="left">
+		<widget source="Event" render="Label" position="157,848" size="150,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="307,848" size="1605,40" font="menulist;36" foregroundColor="selectedFG" halign="left">
+		<widget source="Event" render="Label" position="307,848" size="1605,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,890" size="1905,75" font="menulist;33" zPosition="1" halign="left" valign="center">
+		<widget source="Event" render="Label" position="7,890" size="1905,90" font="Regular;33" zPosition="1" halign="left" valign="center">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,970" size="1700,35" font="menulist;30" foregroundColor="blue" halign="center">
+		<widget source="Event" render="Label" position="7,970" size="1700,40" font="Regular;30" foregroundColor="blue" halign="center">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="Event" render="Label" position="1710,970" size="200,35" font="menulist;30" foregroundColor="blue" halign="left">
+		<widget source="Event" render="Label" position="1710,970" size="200,40" font="Regular;30" foregroundColor="blue" halign="left">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
 	</screen>
@@ -569,35 +571,35 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget source="Event" render="Label" position="472,7" size="150,40" font="menulist;36" foregroundColor="selectedFG" halign="right">
+		<widget source="Event" render="Label" position="472,7" size="150,50" font="Regular;36" foregroundColor="selectedFG" halign="right">
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText"/>
 		</widget>
-		<widget source="Event" render="Label" position="634,7" size="150,40" font="menulist;36" foregroundColor="selectedFG" halign="left">
+		<widget source="Event" render="Label" position="634,7" size="150,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
 		<convert type="EventTime">EndTime</convert>
 		<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="795,7" size="720,40" font="menulist;36" foregroundColor="selectedFG" halign="left">
+		<widget source="Event" render="Label" position="795,7" size="720,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
 		<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="615,55" zPosition="1" size="1297,330" font="menulist;33" halign="left" valign="top">
+		<widget source="Event" render="Label" position="615,55" zPosition="1" size="1297,330" font="Regular;33" halign="left" valign="top">
 		<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="Event" render="Label" position="655,390" size="1060,35" font="menulist;30" foregroundColor="blue" halign="left">
+		<widget source="Event" render="Label" position="655,390" size="1060,40" font="Regular;30" foregroundColor="blue" halign="left">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="Event" render="Label" position="1720,390" size="200,35" font="menulist;30" foregroundColor="blue" halign="right">
+		<widget source="Event" render="Label" position="1720,390" size="200,40" font="Regular;30" foregroundColor="blue" halign="right">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget name="timeline_text" position="7,429" size="1912,45" TimelineFont="menulist;30" itemHeight="40" foregroundColor="selectedFG"/>
-		<widget name="lab1" position="7,469" size="1912,547" font="menulist;33" halign="center" valign="center" zPosition="20"/>
+		<widget name="timeline_text" position="7,429" size="1912,45" TimelineFont="Regular;30" itemHeight="40" foregroundColor="selectedFG"/>
+		<widget name="lab1" position="7,469" size="1912,547" font="Regular;33" halign="center" valign="center" zPosition="20"/>
 		<widget name="list" position="7,469" size="1912,547" ServiceFontGraphical="channelselectionservice;30" EntryFontGraphical="channelselectionevent;30" EntryFontWrap="no" ServiceNamePadding="5"
 				ServiceBackgroundColor="bluetransparent" ServiceBackgroundColorNow="greentransparent" EntryBackgroundColor="bluetransparent" EntryBackgroundColorSelected="black"
 				EntryBackgroundColorNow="redtransparent" EntryBackgroundColorNowSelected="redtransparent" EntryFontAlignment="center" EntryForegroundColorSelected="selectedFG"
 				EntryForegroundColorNowSelected="selectedFG" RecordBackgroundColor="yellowtransparent" RecordBackgroundColorSelected="yellowtransparent"
 				RecordForegroundColorSelected="selectedFG" ZapBackgroundColor="white" ZapBackgroundColorSelected="white" ZapForegroundColorSelected="selectedFG" transparent="1"/>
-		<widget name="bouquetlist" position="615,100" size="1297,320" itemHeight="40" font="menulist;33" foregroundColorSelected="selectedFG" backgroundColorSelected="selectedBG" zPosition="4" transparent="0"/>
-		<widget name="timeline_now" pixmap="window/timeline-now.png" position="7,469" size="28,547" zPosition="2" alphatest="on"/>
+		<widget name="bouquetlist" position="615,100" size="1297,320" itemHeight="45" font="Regular;33" foregroundColorSelected="selectedFG" backgroundColorSelected="selectedBG" zPosition="4" transparent="0"/>
+		<widget name="timeline_now" pixmap="epg/timeline-now-pig.png" position="7,469" size="28,547" zPosition="2" alphatest="on"/>
 	</screen>
 	<screen name="LogManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -648,11 +650,11 @@
 		</widget>-->
 		<widget name="movie_sort" position="1357,65" size="68,38" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" zPosition="10" transparent="1" alphatest="on"/>
 		<widget name="movie_off" position="1440,65" size="68,38" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png" zPosition="10" transparent="1" alphatest="on"/>
-		<widget name="waitingtext" position="780,123" size="1132,822" font="Regular;37" halign="center" valign="center" foregroundColor="grey" zPosition="4"/>
+		<widget name="waitingtext" position="780,123" size="1132,822" font="Regular;45" halign="center" valign="center" foregroundColor="grey" zPosition="4"/>
 		<widget name="chosenletter" position="780,123" size="1132,822" font="Regular;75" foregroundColor="yellow" halign="center" valign="center" zPosition="4"/>
-		<widget name="list" position="780,123" size="1132,820" font="channelselectionservice;30" itemHeight="50" pbarShift="15" pbarHeight="20" pbarLargeWidth="70" pbarColour="blue" 
-				pbarColourSeen="yellow" pbarColourRec="red" partIconeShift="7" spaceIconeText="8" iconsWidth="37" trashShift="7" dirShift="8" spaceRight="5" dateWidth="220" foregroundColor="white"
-				enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"/>
+		<widget name="list" position="780,123" size="1132,820" font="channelselectionservice;31" itemHeight="50" pbarShift="15" pbarHeight="20" pbarLargeWidth="70"
+				pbarColour="blue" pbarColourSeen="yellow" pbarColourRec="red" partIconeShift="7" spaceIconeText="8" iconsWidth="37" trashShift="7" dirShift="8"
+				spaceRight="5" dateWidth="220" foregroundColor="white" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"/>
 		<widget source="Service" render="Label" position="7,570" size="750,75" font="Regular;31" halign="center" foregroundColor="secondFG">
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
@@ -731,7 +733,7 @@
 		<widget source="menu" render="Listbox" position="780,123" size="1102,880" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [	MultiContentEntryText(pos = (20,3), size = (1000,50), flags = RT_HALIGN_LEFT, text = 0	) ],
-				"fonts": [gFont("Regular",36)],
+				"fonts": [gFont("Regular",37)],
 				"itemHeight": 55
 				}
 			</convert>
@@ -1137,7 +1139,7 @@
 		<widget source="country" render="Label" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<ePixmap pixmap="buttons/vkey_text.png" position="975,412" size="816,78" zPosition="-4" alphatest="on"/>
 		<widget name="header" position="978,358" size="750,39" noWrap="1" font="Regular;30"/>
-		<widget name="text" position="970,411" size="804,51" noWrap="1" font="Regular;38" valign="center" halign="right"/>
+		<widget name="text" position="735,411" size="1177,51" noWrap="1" font="Regular;38" foregroundColor="grey" halign="center"/>
 		<widget name="list" position="970,570" size="815,337" selectionDisabled="1"/>
 	</screen>
 	<screen name="SubservicesQuickzap" position="607,492" size="705,96" backgroundColor="transpBlack" flags="wfNoBorder">
@@ -1355,7 +1357,7 @@
 		<ePixmap pixmap="Magic-FHD/buttons/key_prev.png" position="1597,1027" size="53,38"/>
 		<ePixmap pixmap="Magic-FHD/buttons/key_next.png" position="1652,1027" size="53,38"/>
 		<ePixmap pixmap="Magic-FHD/buttons/key_0.png" position="1707,1027" size="53,38"/>
-		<widget name="list" position="780,121" size="1132,884" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="list" position="780,121" size="1132,836" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="PluginDownloadBrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1663,7 +1665,7 @@
 		<widget source="menu" render="Listbox" position="780,135" size="1132,862" zPosition="1" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{ "template": [	MultiContentEntryText(pos = (80,5),size = (990,100),flags = RT_HALIGN_LEFT,text = 0,border_width=1),
-				MultiContentEntryPixmapAlphaBlend(pos = (5,20),size = (64,64),png = 1)],"fonts": [gFont("menulist",18)],"itemHeight": 110 }
+				MultiContentEntryPixmapAlphaBlend(pos = (5,20),size = (64,64),png = 1)],"fonts": [gFont("Regular",18)],"itemHeight": 110 }
 			</convert>
 		</widget>
 	</screen>
@@ -1672,20 +1674,20 @@
 		<panel name="BasicTemplate"/>
 		<panel name="RedBPanel"/>
 		<panel name="RedT2Panel"/>
-		<widget source="IF" render="Label" position="780,135" size="1000,50" zPosition="1" halign="center" font="menulist;36" foregroundColor="secondFG"/>
-		<widget source="LabelBSSID" render="Label" position="885,200" size="375,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="BSSID" render="Label" position="1275,200" size="555,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="LabelESSID" render="Label" position="885,260" size="375,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="ESSID" render="Label" position="1275,260" size="555,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="LabelQuality" render="Label" position="885,315" size="375,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="quality" render="Label" position="1275,315" size="555,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="LabelSignal" render="Label" position="885,370" size="375,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="signal" render="Label" position="1275,370" size="555,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="LabelBitrate" render="Label" position="885,425" size="375,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="bitrate" render="Label" position="1275,425" size="555,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="LabelEnc" render="Label" position="885,480" size="375,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="enc" render="Label" position="1275,480" size="555,52" valign="center" font="menulist;30" foregroundColor="grey"/>
-		<widget source="Statustext" render="Label" position="930,900" size="525,42" font="menulist;30" halign="right" foregroundColor="grey"/>
+		<widget source="IF" render="Label" position="780,135" size="1000,50" zPosition="1" halign="center" font="Regular;36" foregroundColor="secondFG"/>
+		<widget source="LabelBSSID" render="Label" position="885,200" size="375,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="BSSID" render="Label" position="1275,200" size="555,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="LabelESSID" render="Label" position="885,260" size="375,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="ESSID" render="Label" position="1275,260" size="555,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="LabelQuality" render="Label" position="885,315" size="375,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="quality" render="Label" position="1275,315" size="555,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="LabelSignal" render="Label" position="885,370" size="375,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="signal" render="Label" position="1275,370" size="555,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="LabelBitrate" render="Label" position="885,425" size="375,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="bitrate" render="Label" position="1275,425" size="555,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="LabelEnc" render="Label" position="885,480" size="375,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="enc" render="Label" position="1275,480" size="555,52" valign="center" font="Regular;30" foregroundColor="grey"/>
+		<widget source="Statustext" render="Label" position="930,900" size="525,42" font="Regular;30" halign="right" foregroundColor="grey"/>
 		<widget name="statuspic" position="1462,900" size="37,36" pixmaps="icons/lock_on.png,icons/lock_error.png"/>
 	</screen>
 	<screen name="WlanScan" position="fill" flags="wfNoBorder">
@@ -1704,7 +1706,7 @@
 						MultiContentEntryText(pos = (800,5),size = (330,35),font=1,flags = RT_HALIGN_LEFT,text = 2),# index 0 is the signal
 						MultiContentEntryText(pos = (800,55),size = (330,35),font=1,flags = RT_HALIGN_LEFT,text = 3),# index 0 is the maxrate
 					],
-				"fonts": [gFont("menulist",36),gFont("menulist",30)],
+				"fonts": [gFont("Regular",36),gFont("Regular",30)],
 				"itemHeight": 100
 				}
 			</convert>
@@ -2421,7 +2423,7 @@
 				{"template": [
 				MultiContentEntryText(pos = (10,6), size = (1000,855), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
 				],
-				"fonts": [gFont("Regular",36)],
+				"fonts": [gFont("Regular",37)],
 				"itemHeight": 60
 				}
 		</convert>
