@@ -39,8 +39,8 @@
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="timerlist" position="735,127" size="1177,825"  scrollbarMode="showOnDemand" itemHeight="75" rowSplit="38" iconMargin="15" setEventNameFont="Regular;32"
-		setServiceNameFont="Regular;32" setFont="Regular;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="timerlist" position="735,127" size="1177,825" itemHeight="75" rowSplit="38" iconMargin="15" setEventNameFont="Regular;32"
+		setServiceNameFont="Regular;32" setFont="Regular;28" satPosLeft="300" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="7,568" size="715,390" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="RemoteTimerSetup" position="fill" flags="wfNoBorder" title="Remote-Timer settings">
@@ -59,19 +59,19 @@
 		<ePixmap pixmap="buttons/key_ok.png" position="22,1027" size="53,38" alphatest="on"/>
 		<eLabel text="Accept" position="80,1022" size="350,39" font="Regular;33" foregroundColor="grey" halign="left" zPosition="1"/>
 	</screen>
-	<screen name="PermanentClockScreen" position="0,0" size="205,50" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
-		<widget source="global.CurrentTime" render="Label" position="1,1" size="150,50" font="Regular;39" backgroundColor="transparent" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="right">
+	<screen name="PermanentClockScreen" position="0,0" size="205,48" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
+		<widget source="global.CurrentTime" render="Label" position="0,0" size="150,48" font="Regular;39" backgroundColor="transparent" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="right">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="152,15" size="50,45" font="Regular;22" backgroundColor="transparent" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="left">
+		<widget source="global.CurrentTime" render="Label" position="151,14" size="50,30" font="Regular;22" backgroundColor="transparent" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="left">
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>
 	</screen>
-	<screen name="PermanentClockPositioner" position="0,0" size="205,50" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
-		<widget source="global.CurrentTime" render="Label" position="1,1" size="150,50" font="Regular;39" backgroundColor="transparent" foregroundColor="grey" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="right">
+	<screen name="PermanentClockPositioner" position="0,0" size="205,48" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
+		<widget source="global.CurrentTime" render="Label" position="0,0" size="150,48" font="Regular;39" backgroundColor="transparent" foregroundColor="grey" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="right">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="152,15" size="50,45" font="Regular;22" backgroundColor="transparent" foregroundColor="grey" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="left">
+		<widget source="global.CurrentTime" render="Label" position="151,14" size="50,30" font="Regular;22" backgroundColor="transparent" foregroundColor="grey" transparent="1" zPosition="0" borderWidth="3" borderColor="black" halign="left">
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>
 	</screen>
