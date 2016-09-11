@@ -206,7 +206,7 @@
 	<screen name="Mute" position="45,30" size="50,50" zPosition="10" flags="wfNoBorder">
 		<ePixmap pixmap="infobar/mute.png" position="0,0" size="45,45" zPosition="0"/>
 		</screen>
-	<screen name="UnhandledKey" position="1000,30" size="34,45" zPosition="10" flags="wfNoBorder">
+	<screen name="UnhandledKey" position="950,5" size="34,45" zPosition="10" flags="wfNoBorder">
 		<widget name="UnhandledKeyPixmap" pixmap="icons/unhandled-key.png" position="0,0" size="34,45"/>
 	</screen>
 	<screen name="MoviePlayer" position="0,45" size="1920,187" backgroundColor="transparent" flags="wfNoBorder">
@@ -355,13 +355,9 @@
 		<widget name="list" position="755,123" size="1157,810" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"/>
 		<widget name="number" position="755,123" size="1157,810" font="Regular;54" zPosition="5" borderColor="black" borderWidth="1" valign="center" halign="center"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="1"/>
-		<widget source="Service" render="Label" position="780,967" size="1132,35" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
+		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
-<!--	<widget source="Service" render="Picon" position="170,670" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
-			<convert type="ServiceName">Reference</convert>
-		</widget>
--->	
 		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -377,7 +373,7 @@
 		<convert type="EventTime">EndTime</convert>
 		<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,650" size="750,357" font="Regular;33">
+		<widget source="Event" render="Label" position="5,650" size="730,357" font="Regular;33" foregroundColor="grey" halign="center" valign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 	</screen>
@@ -389,12 +385,11 @@
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="date" position="1125,135" size="375,36" font="Regular;30" valign="center" halign="right"/>
-		<widget name="list" position="780,247" size="1132,750" itemHeight="38" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+		<widget name="date" position="1125,120" size="375,50" font="Regular;36" halign="center" foregroundColor="secondFG"/>
+		<widget name="list" position="780,247" size="1132,722" EventFontSingle="Regular;30" itemHeight="38" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="bouquetlist" position="885,247" size="900,750" itemHeight="31" foregroundColor="white" foregroundColorSelected="selectedFG" backgroundColorSelected="#001C252D" borderColor="background" scrollbarMode="showNever" zPosition="4"/>
-		<widget source="Event" render="Label" position="22,555" size="727,450" foregroundColor="grey" font="Regular;30">
-			<convert type="EventName">ExtendedDescription</convert>
-		</widget>
+		<widget name="number" position="755,123" size="1157,810" font="Regular;54" zPosition="5" borderColor="black" borderWidth="1" valign="center" halign="center"/>
+		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="1"/>
 		<widget name="now_button" pixmap="border/epg_off.png" position="885,172" zPosition="2" size="270,60" alphatest="blend"/>
 		<widget name="now_button_sel" pixmap="border/epg_now_on.png" position="885,172" zPosition="3" size="270,60" alphatest="blend"/>
 		<widget name="now_text" position="885,172" size="270,60" backgroundColor="background" zPosition="4" transparent="1" text=" NOW" font="Regular;30" valign="center" halign="center"/>
@@ -404,6 +399,27 @@
 		<widget name="more_button" pixmap="border/epg_off.png" position="1440,172" zPosition="2" size="270,60" alphatest="blend"/>
 		<widget name="more_button_sel" pixmap="border/epg_next_on.png" position="1440,172" zPosition="3" size="270,60" alphatest="blend"/>
 		<widget name="more_text" position="1440,172" size="270,60" backgroundColor="background" zPosition="4" transparent="1" text="MORE" font="Regular;30" valign="center" halign="center"/>
+		<widget source="Service" render="Label" position="780,967" size="1132,35" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
+			<convert type="TransponderInfo"></convert>
+		</widget>
+		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="top">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="22,610" size="225,37" font="Regular;33" foregroundColor="yellow">
+		<convert type="EventTime">StartTime</convert>
+		<convert type="ClockToText">ShortDate</convert>
+		</widget>
+		<widget source="Event" render="Label" position="247,610" size="120,37" font="Regular;33" foregroundColor="yellow" halign="right">
+		<convert type="EventTime">StartTime</convert>
+		<convert type="ClockToText"/>
+		</widget>
+		<widget source="Event" render="Label" position="367,610" size="120,37" font="Regular;33" foregroundColor="yellow" halign="left">
+		<convert type="EventTime">EndTime</convert>
+		<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="5,650" size="730,357" font="Regular;33" foregroundColor="grey" halign="center" valign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 	</screen>
 	<screen name="SelectBouquet" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -416,13 +432,14 @@
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="channel" position="22,585" size="690,78" font="Regular;36" foregroundColor="selectedFG" halign="center"/>
-		<widget name="duration" position="22,739" size="690,45" font="Regular;33" halign="center"/>
-		<widget name="FullDescription" position="780,123" size="1132,874" font="Regular;33" foregroundColor="grey"/>
-		<widget source="session.Event_Now" render="Label" position="22,787" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
+		<widget name="FullDescription" position="780,123" size="1132,874" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget name="channel" position="22,585" size="690,100" font="Regular;36" foregroundColor="selectedFG" halign="center"/>
+		<widget name="datetime" position="22,690" size="690,45" font="Regular;33" halign="center"/>
+		<widget name="duration" position="22,740" size="690,45" font="Regular;33" halign="center"/>
+		<widget source="session.Event_Now" render="Label" position="22,790" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="22,847" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
+		<widget source="session.Event_Now" render="Label" position="22,840" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
 			<convert type="EventName">Rating</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="22,900" size="690,39" font="Regular;33" halign="center" foregroundColor="selectedFG">
@@ -436,14 +453,14 @@
 	<screen name="EventViewSimple" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
-		<widget name="FullDescription" position="780,123" size="1132,874" font="Regular;36"/>
-		<widget name="channel" position="22,585" size="690,78" font="Regular;36" foregroundColor="selectedFG" halign="center"/>
-		<widget name="datetime" position="22,694" size="690,45" font="Regular;33" halign="center"/>
-		<widget name="duration" position="22,739" size="690,45" font="Regular;33" halign="center"/>
-		<widget source="session.Event_Now" render="Label" position="22,787" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
+		<widget name="FullDescription" position="780,123" size="1132,874" font="Regular;33" foregroundColor="grey"/>
+		<widget name="channel" position="22,585" size="690,100" font="Regular;36" foregroundColor="selectedFG" halign="center"/>
+		<widget name="datetime" position="22,690" size="690,45" font="Regular;33" halign="center"/>
+		<widget name="duration" position="22,740" size="690,45" font="Regular;33" halign="center"/>
+		<widget source="session.Event_Now" render="Label" position="22,790" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="22,847" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
+		<widget source="session.Event_Now" render="Label" position="22,840" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
 			<convert type="EventName">Rating</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="22,900" size="690,39" font="Regular;33" halign="center" foregroundColor="selectedFG">
@@ -654,11 +671,11 @@
 		<widget name="chosenletter" position="780,123" size="1132,822" font="Regular;75" foregroundColor="yellow" halign="center" valign="center" zPosition="4"/>
 		<widget name="list" position="780,123" size="1132,820" font="channelselectionservice;31" itemHeight="50" pbarShift="15" pbarHeight="20" pbarLargeWidth="70"
 				pbarColour="blue" pbarColourSeen="yellow" pbarColourRec="red" partIconeShift="7" spaceIconeText="8" iconsWidth="37" trashShift="7" dirShift="8"
-				spaceRight="5" dateWidth="220" foregroundColor="white" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"/>
+				spaceRight="5" dateWidth="220" foregroundColor="grey" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"/>
 		<widget source="Service" render="Label" position="7,570" size="750,75" font="Regular;31" halign="center" foregroundColor="secondFG">
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="7,650" size="750,355" font="Regular;34" halign="center" valign="center">
+		<widget source="Service" render="Label" position="7,650" size="750,355" font="Regular;34" foregroundColor="grey" halign="center" valign="center">
 			<convert type="MovieInfo">MetaDescription</convert>
 		</widget>
 		<widget source="Service" render="Label" position="780,960" size="225,35" font="Regular;30" foregroundColor="secondFG" halign="left">
@@ -743,9 +760,9 @@
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="config" position="755,120" size="1155,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,755" size="1,1" zPosition="1"/>
-		<widget name="description" position="7,555" size="765,375" font="Regular;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget name="description" position="7,555" size="735,375" font="Regular;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1740,1020" zPosition="1" size="52,37">
 			<convert type="ConditionalShowHide"/>
 		</widget>
