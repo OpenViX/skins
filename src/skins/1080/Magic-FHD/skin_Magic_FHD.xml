@@ -247,8 +247,8 @@
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<widget name="list" position="780,123" size="1132,750" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
-				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" scrollbarMode="showOnDemand" zPosition="3" backgroundColor="black" 
-				colorEventProgressbar="blue" foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
+				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
+				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
 		<widget source="ServiceEvent" render="Label" position="780,877" size="937,40" font="Regular;31" foregroundColor="selectedFG" noWrap="1" zPosition="2" halign="left">
 			<convert type="EventName">NextName</convert>
 		</widget>
@@ -305,24 +305,24 @@
 		<ePixmap pixmap="buttons/green.png" alphatest="on" position="22,1017" size="30,30"/>
 		<ePixmap pixmap="buttons/yellow.png" alphatest="on" position="457,967" size="30,30"/>
 		<ePixmap pixmap="buttons/blue.png" alphatest="on" position="457,1017" size="30,30"/>
-		<widget name="key_red" backgroundColor="secondBG" font="Regular;30" halign="left" position="55,967" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_green" backgroundColor="secondBG" font="Regular;30" halign="left" position="55,1017" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_yellow" backgroundColor="secondBG" font="Regular;30" halign="left" position="490,967" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_blue" backgroundColor="secondBG" font="Regular;30" halign="left" position="490,1017" size="330,39" transparent="1" zPosition="1"/>
-		<widget source="Title" foregroundColor="blue" render="Label" position="22,7" size="825,45" transparent="1" zPosition="1" font="Regular;37" halign="center" valign="center"/>
+		<widget name="key_red" backgroundColor="secondBG" font="Regular;30" halign="left" position="55,965" size="330,39" transparent="1" zPosition="1"/>
+		<widget name="key_green" backgroundColor="secondBG" font="Regular;30" halign="left" position="55,1015" size="330,39" transparent="1" zPosition="1"/>
+		<widget name="key_yellow" backgroundColor="secondBG" font="Regular;30" halign="left" position="490,965" size="330,39" transparent="1" zPosition="1"/>
+		<widget name="key_blue" backgroundColor="secondBG" font="Regular;30" halign="left" position="490,1015" size="330,39" transparent="1" zPosition="1"/>
+		<widget source="Title" foregroundColor="blue" render="Label" position="2,3" size="825,45" transparent="1" zPosition="1" font="Regular;37" halign="center" valign="center"/>
 		<widget name="list" position="22,51" size="855,720" itemHeight="45" serviceNumberFont="Regular;33" serviceInfoFont="Crs;33" serviceNameFont="Regular;33" serviceItemHeight="35"
 				colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" transparent="1" foregroundColorServiceNotAvail="#656565" scrollbarMode="showOnDemand"/>
-		<widget source="ServiceEvent" render="Label" position="22,855" size="855,97" font="Regular;27" backgroundColor="black" foregroundColor="foreground" zPosition="2" transparent="1">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="22,817" zPosition="2" size="90,37" font="Regular;33" backgroundColor="black" halign="right" noWrap="1" foregroundColor="yellow" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="22,775" zPosition="2" size="90,37" font="Regular;33" backgroundColor="black" halign="right" noWrap="1" foregroundColor="yellow" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">
 			</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="127,817" zPosition="2" size="109,37" font="Regular;33" backgroundColor="black" noWrap="1" foregroundColor="yellow" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="127,775" zPosition="2" size="109,37" font="Regular;33" backgroundColor="black" noWrap="1" foregroundColor="yellow" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="22,820" size="855,133" font="Regular;27" backgroundColor="black" borderColor="black" borderWidth="3" foregroundColor="grey" zPosition="2" transparent="1">
+			<convert type="EventName">FullDescription</convert>
 		</widget>
 	</screen>
 	<screen name="ChannelContextMenu" position="fill" flags="wfNoBorder">
@@ -642,7 +642,7 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-<!--		<ePixmap pixmap="dvr/scale716.png" position="0,165" size="716,18" zPosition="1" alphatest="on"/>-->
+		<ePixmap pixmap="dvr/scale716.png" position="0,165" size="716,18" zPosition="1" alphatest="on"/>
 		<eLabel backgroundColor="transpBlack" position="0,179" size="723,10" zPosition="5"/>
 		<widget source="session.CurrentService" render="PositionGauge" position="0,179" size="715,10" pointer="Magic-FHD/dvr/position_pointer716.png:716,4" transparent="1" zPosition="6">
 			<convert type="ServicePosition">Gauge</convert>
@@ -864,7 +864,7 @@
 	</screen>
 	<!-- ## Restart ## -->
 	<screen name="QuitMainloopScreen" position="fill" flags="wfNoBorder" backgroundColor="black">
-		<widget name="text" position="200,300" size="1600,300" font="Fixed;50" foregroundColor="selectedBG" backgroundColor="black" transparent="1" halign="center" valign="center" zPosition="3"/>
+		<widget name="text" position="200,300" size="1600,300" font="Fixed;50" foregroundColor="selectedBG" halign="center" valign="center" zPosition="3"/>
 	</screen>
 	<!-- ## Input & Output Boxes ## -->
 	<screen name="SelectPath" position="fill" flags="wfNoBorder">
@@ -1067,9 +1067,9 @@
 		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
-	<screen name="RecordTimerQuestion" position="center,center" size="350,295" backgroundColor="black" zPosition="5" flags="wfNoBorder" >
+	<screen name="RecordTimerQuestion" position="center,center" size="350,295" zPosition="5" flags="wfNoBorder" >
 		<widget name="text" position="0,0" size="0,0" font="Regular;21" />
-		<widget name="list" position="15,15" size="330,150" backgroundColor="black" enableWrapAround="1" />
+		<widget name="list" position="15,15" size="330,150" enableWrapAround="1" />
 		<applet type="onLayoutFinish">
 			self.autoResize()
 		</applet>
@@ -1250,8 +1250,8 @@
 		</widget>
 	</screen>
 	<screen name="RdsInfoDisplay" position="22,90" size="1920,300" backgroundColor="transparent" zPosition="-2" flags="wfNoBorder">
-		<widget name="RadioText" position="0,0" size="1875,135" backgroundColor="transparent" zPosition="1" transparent="1" foregroundColor="secondFG" font="LCD;60" valign="center" halign="center" borderColor="black" borderWidth="4"/>
-		<widget name="RtpText" position="0,150" size="1875,135" backgroundColor="transparent" zPosition="1" transparent="1" foregroundColor="secondFG" font="LCD;60" valign="center" halign="center" borderColor="black" borderWidth="4"/>
+		<widget name="RadioText" position="0,0" size="1875,135" font="LCD;60" backgroundColor="transparent" zPosition="1" transparent="1" foregroundColor="secondFG" valign="center" halign="center" borderColor="black" borderWidth="4"/>
+		<widget name="RtpText" position="0,150" size="1875,135" font="LCD;60" backgroundColor="transparent" zPosition="1" transparent="1" foregroundColor="secondFG" valign="center" halign="center" borderColor="black" borderWidth="4"/>
 		<widget name="RassLogo" position="0,0" size="75,31"/>
 	</screen>
 	<screen name="RassInteractive" position="fill" title="RassInteractive" flags="wfNoBorder">
@@ -1459,13 +1459,13 @@
 	<screen name="AdapterSetupConfiguration" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" zPosition="10" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="description" render="Label" position="7,577" size="715,300" font="Regular;31" valign="center" halign="center" foregroundColor="secondFG"/>
-		<widget source="Statustext" render="Label" position="474,945" size="300,40" font="Regular;36" zPosition="10" halign="right" foregroundColor="grey"/>
-		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="787,958" size="23,24" zPosition="10" alphatest="on"/>
-		<widget name="devicepic" pixmaps="icons/network_wired.png,icons/network_wireless.png" position="840,945" size="54,54" zPosition="10" alphatest="on"/>
-		<widget source="IFtext" render="Label" position="885,945" size="249,40" font="Regular;36" zPosition="10" halign="right" foregroundColor="grey"/>
-		<widget source="IF" render="Label" position="1147,945" size="750,40" font="Regular;36" zPosition="10" halign="left" foregroundColor="grey"/>
+		<widget source="Statustext" render="Label" position="474,945" size="300,40" font="Regular;36" halign="right" foregroundColor="grey"/>
+		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="787,958" size="23,24" alphatest="on"/>
+		<widget name="devicepic" pixmaps="icons/network_wired.png,icons/network_wireless.png" position="840,945" size="54,54" alphatest="on"/>
+		<widget source="IFtext" render="Label" position="885,945" size="249,40" font="Regular;36" halign="right" foregroundColor="grey"/>
+		<widget source="IF" render="Label" position="1147,945" size="750,40" font="Regular;36" halign="left" foregroundColor="grey"/>
 	</screen>
 	<screen name="AdapterSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1473,20 +1473,20 @@
 		<panel name="Green2Panel"/>
 		<panel name="Blue2Panel"/>
 		<widget name="config" position="780,123" size="1132,405" itemHeight="50" font="Regular;36" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="DNS1text" render="Label" position="1252,675" size="285,37" zPosition="1" font="Regular;31" foregroundColor="grey" halign="left"/>
-		<widget source="DNS2text" render="Label" position="1252,720" size="285,37" zPosition="1" font="Regular;31" foregroundColor="grey" halign="left"/>
-		<widget source="DNS1" render="Label" position="1545,675" size="345,37" zPosition="1" font="Regular;30" foregroundColor="grey" halign="left"/>
-		<widget source="DNS2" render="Label" position="1545,720" size="345,37" zPosition="1" font="Regular;30" foregroundColor="grey" halign="left"/>
+		<widget source="DNS1text" render="Label" position="1252,675" size="285,37" font="Regular;31" foregroundColor="grey" halign="left"/>
+		<widget source="DNS2text" render="Label" position="1252,720" size="285,37" font="Regular;31" foregroundColor="grey" halign="left"/>
+		<widget source="DNS1" render="Label" position="1545,675" size="345,37" font="Regular;30" foregroundColor="grey" halign="left"/>
+		<widget source="DNS2" render="Label" position="1545,720" size="345,37" font="Regular;30" foregroundColor="grey" halign="left"/>
 		<widget source="introduction" render="Label" position="600,619" size="1230,40" font="Regular;31" foregroundColor="secondFG" halign="center"/>
-		<widget source="IPtext" render="Label" position="600,675" size="225,37" zPosition="1" font="Regular;31" foregroundColor="grey" halign="left"/>
-		<widget source="Netmasktext" render="Label" position="600,720" size="225,37" zPosition="1" font="Regular;31" foregroundColor="grey" halign="left"/>
-		<widget source="Gatewaytext" render="Label" position="600,765" size="225,37" zPosition="1" font="Regular;31" foregroundColor="grey" halign="left"/>
-		<widget source="IP" render="Label" position="840,675" size="300,37" zPosition="1" font="Regular;30" foregroundColor="grey"/>
-		<widget source="Mask" render="Label" position="840,720" size="300,37" zPosition="1" font="Regular;30" foregroundColor="grey"/>
-		<widget source="Gateway" render="Label" position="840,765" size="300,37" zPosition="1" font="Regular;30" foregroundColor="grey"/>
-		<widget source="Adaptertext" render="Label" position="780,945" size="405,40" zPosition="10" font="Regular;36" foregroundColor="grey" halign="right"/>
-		<widget source="Adapter" render="Label" position="1200,945" size="600,40" zPosition="10" font="Regular;36" foregroundColor="grey" halign="left"/>
-		<widget source="introduction2" render="Label" position="7,900" size="715,45" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="IPtext" render="Label" position="600,675" size="225,37" font="Regular;31" foregroundColor="grey" halign="left"/>
+		<widget source="Netmasktext" render="Label" position="600,720" size="225,37" font="Regular;31" foregroundColor="grey" halign="left"/>
+		<widget source="Gatewaytext" render="Label" position="600,765" size="225,37" font="Regular;31" foregroundColor="grey" halign="left"/>
+		<widget source="IP" render="Label" position="840,675" size="300,37" font="Regular;30" foregroundColor="grey"/>
+		<widget source="Mask" render="Label" position="840,720" size="300,37" font="Regular;30" foregroundColor="grey"/>
+		<widget source="Gateway" render="Label" position="840,765" size="300,37" font="Regular;30" foregroundColor="grey"/>
+		<widget source="Adaptertext" render="Label" position="780,945" size="405,45" font="Regular;36" foregroundColor="grey" halign="right"/>
+		<widget source="Adapter" render="Label" position="1200,945" size="600,45" font="Regular;36" foregroundColor="grey" halign="left"/>
+		<widget source="introduction2" render="Label" position="7,945" size="715,45" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/vkey_icon.png" position="1875,1030" size="52,37">
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -1499,42 +1499,42 @@
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
 		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"/>
-		<widget name="introduction" position="783,952" size="1132,100" font="Regular;31" zPosition="10" foregroundColor="grey" halign="left"/>
+		<widget name="introduction" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="NetworkAdapterTest" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<widget name="EditSettingsButton" pixmap="buttons/blue.png" position="1335,1027" size="400,60" zPosition="0" alphatest="blend"/>
-		<widget name="EditSettings_Text" position="1370,1020" size="400,39" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
-		<widget name="Adaptertext" position="630,690" size="375,34" zPosition="1" foregroundColors="#8c8c93,#1cff1c" font="Regular;31" halign="left"/>
-		<widget name="Adapter" position="1006,690" size="459,34" transparent="1" zPosition="2" foregroundColors="#8c8c93,#f23d21,#1cff1c" font="Regular;31" halign="center"/>
-		<widget name="AdapterInfo_Text" position="1530,690" size="300,34" transparent="1" zPosition="2" foregroundColors="#8c8c93,grey,#1cff1c" font="Regular;31"/>
-		<widget name="AdapterInfo" position="1530,690" size="300,34" transparent="1" zPosition="1"/>
-		<widget name="AdapterInfo_OK" pixmap="icons/lock_on.png" position="1467,684" size="57,46" zPosition="2" alphatest="on"/>
-		<widget name="Networktext" position="630,742" size="375,34" zPosition="1" foregroundColors="#8c8c93,#1cff1c" font="Regular;31" halign="left"/>
-		<widget name="Network" position="1006,742" size="459,34" transparent="1" zPosition="2" foregroundColors="#8c8c93,#f23d21,#1cff1c" font="Regular;31" halign="center"/>
-		<widget name="NetworkInfo_Text" position="1530,742" size="300,34" transparent="1" zPosition="2" foregroundColors="#8c8c93,grey,#1cff1c" font="Regular;31"/>
-		<widget name="NetworkInfo" position="1530,742" size="300,34" transparent="1" zPosition="1"/>
-		<widget name="NetworkInfo_Check" position="1467,736" size="57,46" zPosition="2" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
-		<widget name="Dhcptext" position="630,795" size="375,34" zPosition="1" foregroundColors="#8c8c93,#1cff1c" font="Regular;31" halign="left"/>
-		<widget name="Dhcp" position="1006,795" size="459,34" transparent="1" zPosition="2" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="background" font="Regular;31" halign="center"/>
-		<widget name="DhcpInfo" position="1530,795" size="300,34" transparent="1"/>
-		<widget name="DhcpInfo_Text" position="1530,795" size="300,34" transparent="1" zPosition="2" foregroundColors="#8c8c93,grey,#1cff1c" font="Regular;31"/>
-		<widget name="DhcpInfo_Check" position="1467,789" size="57,46" zPosition="2" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
-		<widget name="IPtext" position="630,847" size="375,34" zPosition="1" foregroundColors="#8c8c93,#1cff1c" font="Regular;31" halign="left"/>
-		<widget name="IP" position="1006,847" size="459,34" transparent="1" zPosition="2" foregroundColors="#8c8c93,#f23d21,#1cff1c" font="Regular;31" halign="center"/>
-		<widget name="IPInfo" position="1530,847" size="300,34" transparent="1" zPosition="1"/>
-		<widget name="IPInfo_Text" position="1530,847" size="300,34" transparent="1" zPosition="2" foregroundColors="#8c8c93,grey,#1cff1c" font="Regular;31"/>
-		<widget name="IPInfo_Check" position="1467,841" size="57,46" zPosition="2" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
-		<widget name="DNStext" position="630,900" size="375,34" zPosition="1" foregroundColors="#8c8c93,#1cff1c" font="Regular;31" halign="left"/>
-		<widget name="DNS" position="1006,900" size="459,34" transparent="1" zPosition="2" foregroundColors="#8c8c93,#f23d21,#1cff1c" font="Regular;31" halign="center"/>
-		<widget name="DNSInfo" position="1530,900" size="300,34" transparent="1" zPosition="1"/>
-		<widget name="DNSInfo_Text" position="1530,900" size="300,34" transparent="1" zPosition="2" foregroundColors="#8c8c93,grey,#1cff1c" font="Regular;31"/>
-		<widget name="DNSInfo_Check" position="1467,894" size="57,46" zPosition="2" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
-		<widget name="InfoText" position="780,123" size="1132,525" zPosition="25" font="Regular;31"/>
+		<widget name="EditSettingsButton" pixmap="buttons/blue.png" position="1335,1027" size="400,60" alphatest="blend"/>
+		<widget name="EditSettings_Text" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
+		<widget name="InfoText" position="780,123" size="1132,525" font="Regular;31"/>
 		<widget name="InfoTextBorder" position="780,123" size="1132,525"/>
+		<widget name="Adaptertext" position="630,690" size="375,40" foregroundColors="grey,green" font="Regular;31" halign="left"/>
+		<widget name="Adapter" position="1006,690" size="459,40" font="Regular;31" foregroundColors="grey,red,green" halign="center"/>
+		<widget name="AdapterInfo_Text" position="1530,690" size="300,40" font="Regular;31" foregroundColors="grey,grey,green"/>
+		<widget name="AdapterInfo_OK" position="1467,685" size="38,36" pixmap="icons/lock_on.png" alphatest="on"/>
+		<widget name="AdapterInfo" position="1530,690" size="300,40" />
+		<widget name="Networktext" position="630,742" size="375,40" font="Regular;31" foregroundColors="grey,green" halign="left"/>
+		<widget name="Network" position="1006,742" size="459,40" font="Regular;31" foregroundColors="grey,red,green" halign="center"/>
+		<widget name="NetworkInfo_Check" position="1467,737" size="38,36" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
+		<widget name="NetworkInfo_Text" position="1530,742" size="300,40" font="Regular;31" foregroundColors="grey,grey,green"/>
+		<widget name="NetworkInfo" position="1530,742" size="300,40"/>
+		<widget name="Dhcptext" position="630,795" size="375,40" font="Regular;31" foregroundColors="grey,green" halign="left"/>
+		<widget name="Dhcp" position="1006,795" size="459,40" font="Regular;31" foregroundColors="grey,red,green" backgroundColor="background" halign="center"/>
+		<widget name="DhcpInfo_Check" position="1467,790" size="38,36" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
+		<widget name="DhcpInfo" position="1530,795" size="300,40"/>
+		<widget name="DhcpInfo_Text" position="1530,795" size="300,40" font="Regular;31" foregroundColors="grey,grey,green"/>
+		<widget name="IPtext" position="630,847" size="375,40" font="Regular;31" foregroundColors="grey,green" halign="left"/>
+		<widget name="IP" position="1006,847" size="459,40" font="Regular;31" foregroundColors="grey,red,green" halign="center"/>
+		<widget name="IPInfo_Check" position="1467,842" size="38,36" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
+		<widget name="IPInfo" position="1530,847" size="300,40"/>
+		<widget name="IPInfo_Text" position="1530,847" size="300,40" font="Regular;31" foregroundColors="grey,grey,green"/>
+		<widget name="DNStext" position="630,900" size="375,40" font="Regular;31" foregroundColors="grey,green" halign="left"/>
+		<widget name="DNS" position="1006,900" size="459,40" font="Regular;31" foregroundColors="grey,red,green" halign="center"/>
+		<widget name="DNSInfo_Check" position="1467,895" size="38,36" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
+		<widget name="DNSInfo" position="1530,900" size="300,40"/>
+		<widget name="DNSInfo_Text" position="1530,900" size="300,40" font="Regular;31" foregroundColors="grey,grey,green"/>
 	</screen>
 	<screen name="NetworkMountsMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2320,7 +2320,7 @@
 		<panel name="PlayerPanel"/>
 		<widget name="cursor" position="192,80" size="1536,27" pixmap="dvr/position_arrow.png" zPosition="5" alphatest="on"/>
 		<widget name="time" position="800,110" size="1170,60" font="Regular;45" backgroundColor="transparent" zPosition="1" borderWidth="3"/>
-		<widget name="PositionGauge" position="192,88" size="1536,18"/>
+		<widget name="PositionGauge" position="192,88" size="1536,18" transparent="1" zPosition="4"/>
 	</screen>
 	<screen name="MinuteInput" title="MinuteInput" position="center,center" size="810,65" backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel text="Jump" position="0,-300" size="330,52" backgroundColor="transparent" font="Regular;51" halign="right" borderColor="black" borderWidth="3" transparent="1" zPosition="1"/>
