@@ -626,7 +626,7 @@
 		<panel name="Blue1Panel"/>
 		<widget name="list" position="780,123" size="1132,855" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
-						self["list"].instance.setItemHeight(45)
+			self["list"].instance.setItemHeight(45)
 		</applet>
 	<widget name="LogsSize" position="15,675" size="754,75" font="Regular;33" foregroundColor="secondFG" halign="center" valign="center"/>
 	</screen>
@@ -665,8 +665,8 @@
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>-->
-		<widget name="movie_sort" position="1357,65" size="68,38" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" zPosition="10" transparent="1" alphatest="on"/>
-		<widget name="movie_off" position="1440,65" size="68,38" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png" zPosition="10" transparent="1" alphatest="on"/>
+		<widget name="movie_sort" position="1357,65" size="68,38" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" zPosition="10" alphatest="on"/>
+		<widget name="movie_off" position="1440,65" size="68,38" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png" zPosition="10" alphatest="on"/>
 		<widget name="waitingtext" position="780,123" size="1132,822" font="Regular;45" halign="center" valign="center" foregroundColor="grey" zPosition="4"/>
 		<widget name="chosenletter" position="780,123" size="1132,822" font="Regular;75" foregroundColor="yellow" halign="center" valign="center" zPosition="4"/>
 		<widget name="list" position="780,123" size="1132,820" font="channelselectionservice;31" itemHeight="50" pbarShift="15" pbarHeight="20" pbarLargeWidth="70"
@@ -694,7 +694,7 @@
 		<widget source="Service" render="Label" position="277,532" size="465,40" font="Regular;33" foregroundColor="selectedFG" zPosition="1" halign="right">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-<!--		<widget name="DescriptionBorder" position="0,0" size="0,0"/>-->
+		<widget name="DescriptionBorder" position="0,0" size="0,0"/>
 	</screen>
 	<screen name="MovieListTags" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1107,12 +1107,12 @@
 	</screen>
 	<screen name="Subtitles" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,855" font="HistoryZapSelector;33" itemHeight="45" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="SubtitleDisplay" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="-1"/>
 	<screen name="QuickSubtitlesConfigMenu" position="75,75" size="720,385" backgroundColor="transpBlack" flags="wfNoBorder">
 		<widget name="config" position="8,8" size="705,363" font="Regular;27" itemHeight="30" zPosition="1" transparent="1"/>
-		<widget name="videofps" position="8,375" size="470,30" font="Regular;24" backgroundColor="secondBG" transparent="1" zPosition="1" valign="center" halign="left" foregroundColor="blue"/>
+		<widget name="videofps" position="8,375" size="470,30" font="Regular;24" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="ChapterZap" position="center,center" size="420,90" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="chapter" position="0,-300" size="300,60" font="Regular;51" borderColor="black" borderWidth="4" backgroundColor="transparent" transparent="1" valign="center" halign="right"/>
@@ -1163,71 +1163,72 @@
 		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="675,4" size="21,21" zPosition="2" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<eLabel position="0,0" size="705,30" backgroundColor="background" text="Subservices" font="Regular;19"/>
-		<widget name="CurrentSubserviceNumber" position="15,36" size="75,51" backgroundColor="transpBlack" font="Regular;33"/>
-		<widget source="session.CurrentService" render="Label" position="105,36" size="600,51" backgroundColor="transpBlack" font="Regular;33">
+		<eLabel position="0,0" size="705,30" font="Regular;19" backgroundColor="background" text="Subservices"/>
+		<widget name="CurrentSubserviceNumber" position="15,36" size="75,51" font="Regular;33" backgroundColor="transpBlack"/>
+		<widget source="session.CurrentService" render="Label" position="105,36" size="600,51" font="Regular;33" backgroundColor="transpBlack">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
 	<!-- ## Service Selectors ## -->
 	<screen name="ChannelSelectionRadio" position="0,0" size="1920,828" flags="wfNoBorder">
 		<panel name="BasicTemplate3"/>
-		<ePixmap pixmap="buttons/red.png" alphatest="on" position="150,634" size="39,39"/>
-		<ePixmap pixmap="buttons/green.png" alphatest="on" position="585,634" size="39,39"/>
-		<ePixmap pixmap="buttons/yellow.png" alphatest="on" position="1020,634" size="39,39"/>
-		<ePixmap pixmap="buttons/blue.png" alphatest="on" position="1455,634" size="39,39"/>
-		<widget name="key_red" backgroundColor="secondBG" font="Regular;33" halign="left" position="217,637" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_green" backgroundColor="secondBG" font="Regular;33" halign="left" position="652,637" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_yellow" backgroundColor="secondBG" font="Regular;33" halign="left" position="1087,637" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_blue" backgroundColor="secondBG" font="Regular;33" halign="left" position="1522,637" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="list" position="780,123" size="1132,495" itemHeight="45" noWrap="1" serviceNumberFont="Regular;30" serviceInfoFont="Crs;22" serviceNameFont="Regular;22"
-				serviceItemHeight="25" colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" foregroundColorServiceNotAvail="#656565"
-				scrollbarMode="showOnDemand"/>
-		<widget source="session.Event_Now" render="Label" position="105,142" size="690,63" font="Regular;33" foregroundColor="secondFG" noWrap="1" halign="center" valign="center">
+		<ePixmap pixmap="buttons/red.png" alphatest="on" position="150,672" size="30,30"/>
+		<ePixmap pixmap="buttons/green.png" alphatest="on" position="585,672" size="30,30"/>
+		<ePixmap pixmap="buttons/yellow.png" alphatest="on" position="1020,672" size="30,30"/>
+		<ePixmap pixmap="buttons/blue.png" alphatest="on" position="1455,672" size="30,30"/>
+		<widget name="key_red" backgroundColor="secondBG" position="184,665" size="330,40" font="Regular;33" foregroundColor="grey" transparent="1" zPosition="1" halign="left"/>
+		<widget name="key_green" backgroundColor="secondBG" position="619,665" size="330,40" font="Regular;33" foregroundColor="grey" transparent="1" zPosition="1" halign="left"/>
+		<widget name="key_yellow" backgroundColor="secondBG" position="1054,665" size="330,40" font="Regular;33" foregroundColor="grey" transparent="1" zPosition="1" halign="left"/>
+		<widget name="key_blue" backgroundColor="secondBG" position="1489,665" size="320,40" font="Regular;33" foregroundColor="grey" transparent="1" zPosition="1" halign="left"/>
+		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1810,672" size="52,37"/>
+		<ePixmap pixmap="buttons/key_info.png" alphatest="on" position="1865,672" size="52,37"/>
+		<widget name="list" position="780,123" size="1132,495" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
+				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
+				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
+		<widget source="ServiceEvent" render="Label" position="780,625" size="1132,35" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
+			<convert type="TransponderInfo"></convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="5,122" size="765,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="center">
 		<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="105,205" size="93,33" font="Regular;28" transparent="1" foregroundColor="foreground" halign="right">
+		<widget source="session.Event_Now" render="Label" position="105,205" size="93,40" font="Regular;33" transparent="1" foregroundColor="selectedFG" halign="right">
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Progress" pixmap="window/progress.png" position="225,215" size="285,18" transparent="1" borderWidth="1" borderColor="grey">
+		<widget source="session.Event_Now" render="Progress" pixmap="window/progress.png" position="225,222" size="285,12" transparent="1" borderWidth="2" borderColor="selectedFG">
 		<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="540,205" size="93,33" font="Regular;28" foregroundColor="foreground">
+		<widget source="session.Event_Now" render="Label" position="540,205" size="93,40" font="Regular;33" foregroundColor="selectedFG">
 		<convert type="EventTime">EndTime</convert>
 		<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="22,244" size="772,360" font="Regular;27" foregroundColor="grey">
+		<widget source="session.Event_Now" render="Label" position="10,244" size="765,357" font="Regular;27" foregroundColor="grey">
 		<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		</screen>
+	</screen>
 	<screen name="RadioInfoBar" title="InfoBar" position="0,762" size="1920,330" backgroundColor="background" flags="wfNoBorder">
-		<ePixmap pixmap="border/up_shadow.png" position="0,-3" size="1920,90" zPosition="-1" alphatest="off"/>
-		<widget source="session.CurrentService" render="Label" position="330,105" size="1260,48" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;39" halign="center">
+		<widget source="session.CurrentService" render="Label" position="330,105" size="1260,48" font="Regular;39" foregroundColor="grey" halign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="75,187" size="210,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="secondFG" font="Regular;42" valign="top" halign="right">
-			<convert type="ClockToText">ShortDate</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Label" position="330,180" size="105,45" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" halign="left">
+		<widget source="session.Event_Now" render="Label" position="10,180" size="105,45" font="Regular;36" foregroundColor="grey" halign="left">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="457,180" size="855,45" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="foreground" noWrap="1" font="Regular;36" halign="left">
+		<widget source="session.Event_Now" render="Label" position="127,180" size="1570,45" font="Regular;36" foregroundColor="grey" noWrap="1" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="1410,180" size="180,45" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" halign="right">
+		<widget source="session.Event_Now" render="Label" position="1720,180" size="180,45" font="Regular;34"  foregroundColor="grey" halign="right">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="330,225" size="105,45" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" halign="left">
+		<widget source="session.Event_Next" render="Label" position="10,225" size="105,45" font="Regular;36" foregroundColor="grey" halign="left">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="457,225" size="855,45" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="foreground" noWrap="1" font="Regular;36" halign="left">
+		<widget source="session.Event_Next" render="Label" position="127,225" size="1570,45" font="Regular;36" foregroundColor="grey" noWrap="1" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="1410,225" size="180,45" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" halign="right">
+		<widget source="session.Event_Next" render="Label" position="1720,225" size="180,45" font="Regular;34" foregroundColor="grey" halign="right">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
@@ -1235,7 +1236,7 @@
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar.png" position="330,157" size="1260,12" transparent="1" zPosition="2" borderWidth="2" borderColor="secondBG">
+		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar.png" position="330,160" size="1260,12" transparent="1" zPosition="2" borderWidth="2" borderColor="secondBG">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="RdsDecoder" render="Pixmap" pixmap="icons/rass_logo.png" position="90,90" size="150,90" zPosition="2" alphatest="on">
@@ -1512,34 +1513,34 @@
 		<widget name="InfoTextBorder" position="780,123" size="1132,525"/>
 		<widget name="Adaptertext" position="630,690" size="375,40" foregroundColors="grey,green" font="Regular;31" halign="left"/>
 		<widget name="Adapter" position="1006,690" size="459,40" font="Regular;31" foregroundColors="grey,red,green" halign="center"/>
-		<widget name="AdapterInfo_Text" position="1530,690" size="300,40" font="Regular;31" foregroundColors="grey,grey,green"/>
 		<widget name="AdapterInfo_OK" position="1467,685" size="38,36" pixmap="icons/lock_on.png" alphatest="on"/>
 		<widget name="AdapterInfo" position="1530,690" size="300,40" />
+		<widget name="AdapterInfo_Text" position="1530,690" size="300,40" font="Regular;31" foregroundColors="grey,grey,selectedFG"/>
 		<widget name="Networktext" position="630,742" size="375,40" font="Regular;31" foregroundColors="grey,green" halign="left"/>
 		<widget name="Network" position="1006,742" size="459,40" font="Regular;31" foregroundColors="grey,red,green" halign="center"/>
 		<widget name="NetworkInfo_Check" position="1467,737" size="38,36" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
-		<widget name="NetworkInfo_Text" position="1530,742" size="300,40" font="Regular;31" foregroundColors="grey,grey,green"/>
 		<widget name="NetworkInfo" position="1530,742" size="300,40"/>
+		<widget name="NetworkInfo_Text" position="1530,742" size="300,40" font="Regular;31" foregroundColors="grey,grey,selectedFG"/>
 		<widget name="Dhcptext" position="630,795" size="375,40" font="Regular;31" foregroundColors="grey,green" halign="left"/>
-		<widget name="Dhcp" position="1006,795" size="459,40" font="Regular;31" foregroundColors="grey,red,green" backgroundColor="background" halign="center"/>
+		<widget name="Dhcp" position="1006,795" size="459,40" font="Regular;31" foregroundColors="grey,red,green" halign="center"/>
 		<widget name="DhcpInfo_Check" position="1467,790" size="38,36" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
 		<widget name="DhcpInfo" position="1530,795" size="300,40"/>
-		<widget name="DhcpInfo_Text" position="1530,795" size="300,40" font="Regular;31" foregroundColors="grey,grey,green"/>
+		<widget name="DhcpInfo_Text" position="1530,795" size="300,40" font="Regular;31" foregroundColors="grey,grey,selectedFG"/>
 		<widget name="IPtext" position="630,847" size="375,40" font="Regular;31" foregroundColors="grey,green" halign="left"/>
 		<widget name="IP" position="1006,847" size="459,40" font="Regular;31" foregroundColors="grey,red,green" halign="center"/>
 		<widget name="IPInfo_Check" position="1467,842" size="38,36" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
 		<widget name="IPInfo" position="1530,847" size="300,40"/>
-		<widget name="IPInfo_Text" position="1530,847" size="300,40" font="Regular;31" foregroundColors="grey,grey,green"/>
+		<widget name="IPInfo_Text" position="1530,847" size="300,40" font="Regular;31" foregroundColors="grey,grey,selectedFG"/>
 		<widget name="DNStext" position="630,900" size="375,40" font="Regular;31" foregroundColors="grey,green" halign="left"/>
 		<widget name="DNS" position="1006,900" size="459,40" font="Regular;31" foregroundColors="grey,red,green" halign="center"/>
 		<widget name="DNSInfo_Check" position="1467,895" size="38,36" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="on"/>
 		<widget name="DNSInfo" position="1530,900" size="300,40"/>
-		<widget name="DNSInfo_Text" position="1530,900" size="300,40" font="Regular;31" foregroundColors="grey,grey,green"/>
+		<widget name="DNSInfo_Text" position="1530,900" size="300,40" font="Regular;31" foregroundColors="grey,grey,selectedFG"/>
 	</screen>
 	<screen name="NetworkMountsMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" zPosition="10" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="introduction" render="Label" position="7,577" size="715,300" font="Regular;31" valign="center" halign="center" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="NetworkBrowser" position="fill" flags="wfNoBorder">
@@ -1548,7 +1549,7 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget source="list" render="Listbox" position="780,127" size="1132,814" zPosition="10" scrollbarMode="showOnDemand" foregroundColor="grey">
+		<widget source="list" render="Listbox" position="780,127" size="1132,814" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 		{"template": [
 				MultiContentEntryPixmapAlphaBlend(pos = (0,0),size = (72,72),png = 1),# index 1 is the expandable/expanded/verticalline icon
@@ -1563,15 +1564,15 @@
 		}
 	</convert>
 		</widget>
-		<widget source="infotext" render="Label" position="7,750" size="715,105" font="Regular;33" zPosition="10" valign="center" halign="center" foregroundColor="grey"/>
+		<widget source="infotext" render="Label" position="7,750" size="715,105" font="Regular;33" valign="center" halign="center" foregroundColor="grey"/>
 	</screen>
 	<screen name="UserDialog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="735,600" size="1,1" zPosition="1"/>
-		<widget name="VKeyIcon" pixmap="buttons/key_text.png" position="1740,1020" zPosition="1" size="52,37"/>
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="735,600" size="1,1"/>
+		<widget name="VKeyIcon" pixmap="buttons/key_text.png" position="1740,1020" size="52,37"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="introduction" render="Label" position="7,568" size="715,396" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="introduction" render="Label" position="7,568" size="715,396" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="ScanIP" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1586,7 +1587,7 @@
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
-		<widget source="list" render="Listbox" position="780,123" size="1132,780" zPosition="10" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="780,123" size="1132,780" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (100,6),size = (900,40),font=0,flags = RT_HALIGN_LEFT|RT_VALIGN_TOP,text = 1),# index 1 is the interfacename
@@ -1599,16 +1600,16 @@
 				}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="22,907" size="1650,90" font="Regular;35" zPosition="10" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="introduction" render="Label" position="22,907" size="1650,90" font="Regular;35" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<!-- ##AutoMount## -->
 	<screen name="AutoMountView" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<widget source="legend1" render="Label" position="780,123" size="195,108" font="Regular;31" transparent="1" zPosition="1" valign="center" halign="center" foregroundColor="grey"/>
-		<widget source="legend2" render="Label" position="1027,123" size="517,108" font="Regular;31" transparent="1" zPosition="1" valign="center" halign="center" foregroundColor="grey"/>
-		<widget source="legend3" render="Label" position="1680,123" size="195,108" font="Regular;31" transparent="1" zPosition="1" valign="center" halign="center" foregroundColor="grey"/>
+		<widget source="legend1" render="Label" position="780,123" size="195,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
+		<widget source="legend2" render="Label" position="1027,123" size="517,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
+		<widget source="legend3" render="Label" position="1680,123" size="195,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
 		<widget source="config" render="Listbox" position="780,240" size="1132,720" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1624,13 +1625,13 @@
 				}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="1260,1020" size="630,45" font="Regular;33" zPosition="10" valign="center" halign="center" foregroundColor="grey"/>
+		<widget source="introduction" render="Label" position="1260,1020" size="630,45" font="Regular;33" valign="center" halign="center" foregroundColor="grey"/>
 	</screen>
 	<screen name="AutoMountManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<widget source="introduction" render="Label" position="780,1030" size="1132,40" font="Regular;33" zPosition="1" halign="center" foregroundColor="grey"/>
-		<widget source="config" render="Listbox" position="780,123" size="1100,832" transparent="1" scrollbarMode="showOnDemand" foregroundColor="grey">
+		<widget source="introduction" render="Label" position="780,1030" size="1132,40" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget source="config" render="Listbox" position="780,123" size="1100,832" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaBlend(pos = (10,5),size = (72,72),png = 3),# index 4 is the pixmap
@@ -1647,16 +1648,16 @@
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
-		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="50" zPosition="3" transparent="1" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" position="5,585" size="1,1" zPosition="1"/>
-		<widget source="introduction" render="Label" position="930,1030" size="982,45" font="Regular;33" zPosition="1" halign="center" foregroundColor="grey"/>
+		<widget source="introduction" render="Label" position="930,1030" size="982,45" font="Regular;33" halign="center" foregroundColor="grey"/>
 		<widget name="VKeyIcon" pixmap="buttons/key_text.png" position="1740,1020" size="52,37" zPosition="10"/>
 	</screen>
 	<screen name="UserManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<widget source="config" render="Listbox" position="780,120" size="832,882" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1">
+		<widget source="config" render="Listbox" position="780,120" size="832,882" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 		<convert type="TemplatedMultiContent">
 					{"template": [
 							MultiContentEntryText(pos = (80,15), size = (600,75), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -1667,7 +1668,7 @@
 					}
 				</convert>
 			</widget>
-		<widget source="introduction" render="Label" position="7,568" size="715,396" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="introduction" render="Label" position="7,568" size="715,396" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="devicesMount" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1679,7 +1680,7 @@
 		<panel name="GreenT1Panel"/>
 		<panel name="YellowT1Panel"/>
 		<panel name="BlueT1Panel"/>
-		<widget source="menu" render="Listbox" position="780,135" size="1132,862" zPosition="1" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="menu" render="Listbox" position="780,135" size="1132,862" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{ "template": [	MultiContentEntryText(pos = (80,5),size = (990,100),flags = RT_HALIGN_LEFT,text = 0,border_width=1),
 				MultiContentEntryPixmapAlphaBlend(pos = (5,20),size = (64,64),png = 1)],"fonts": [gFont("Regular",18)],"itemHeight": 110 }
@@ -1714,7 +1715,7 @@
 		<panel name="RedT2Panel"/>
 		<panel name="GreenT2Panel"/>
 		<widget source="info" render="Label" position="780,120" size="1132,50" zPosition="1" halign="center" font="Regular;36"/>
-		<widget source="list" render="Listbox" position="780,172" size="1132,825" zPosition="1" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="780,172" size="1132,825" zPosition="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (10,5),size = (770,40),font=0,flags = RT_HALIGN_LEFT,text = 0),# index 0 is the essid
@@ -1764,11 +1765,11 @@
 	</screen>
 	<screen name="NetworkInadynLog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="infotext" font="Regular;33" position="780,123" size="1132,874" transparent="1"/>
+		<widget name="infotext" font="Regular;33" position="780,123" size="1132,874"/>
 	</screen>
 	<screen name="NetworkVpnLog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="infotext" font="Regular;33" position="885,165" size="900,750" transparent="1"/>
+		<widget name="infotext" font="Regular;33" position="885,165" size="900,750"/>
 	</screen>
 	<screen name="NetworkServiceSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1869,14 +1870,14 @@
 	</screen>
 	<screen name="NetworkuShareLog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="infotext" position="780,123" size="1132,874" font="Regular;30" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="infotext" position="780,123" size="1132,874" font="Regular;30" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="uShareSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<panel name="Yellow2Panel"/>
-		<widget name="checkList" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874" transparent="1"/>
+		<widget name="checkList" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874"/>
 	</screen>
 	<screen name="NetworkTelnet" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1991,8 +1992,8 @@
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<eLabel position="121,657" size="525,108" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" zPosition="3" transparent="1" text="select CAId's" foregroundColor="grey" font="Regular;48"/>
-		<widget name="list" position="885,180" size="900,675" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget source="introduction" render="Label" position="885,900" size="900,40" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" zPosition="1" transparent="1" foregroundColor="white" font="Regular;36" halign="center"/>
+		<widget name="list" position="885,180" size="900,675" scrollbarMode="showOnDemand"/>
+		<widget source="introduction" render="Label" position="885,900" size="900,40" font="Regular;36" foregroundColor="grey" halign="center"/>
 	</screen>
 	<!-- ##TunerSetUp## -->
 	<screen name="AutoDiseqc" position="fill" title=" ">
@@ -2458,7 +2459,7 @@
 	</screen>
 	<screen name="VIXEPGBouquetSelector" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="menu" position="780,123" size="1132,855" font="Regular;33" ItemHeight="45" transparent="1"/>
+		<widget name="menu" position="780,123" size="1132,855" font="Regular;33" ItemHeight="45"/>
 	</screen>
 	<screen name="VIXSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2707,14 +2708,14 @@
 		<panel name="Yellow2Panel"/>
 		<panel name="Blue2Panel"/>
 		<widget name="file_list" position="780,123" size="1132,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
-		<widget source="status" render="Label" position="780,903" zPosition="1" size="1110,90" font="Regular;33" halign="center" valign="center"/>
+		<widget source="status" render="Label" position="780,903" size="1110,90" font="Regular;33" halign="center" valign="center"/>
 	</screen>
 	<screen name="UpgradeStatus" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="name" position="735,125" size="1177,45" font="Regular;33" foregroundColor="grey"/>
-		<widget name="status" position="735,540" size="715,45" font="Regular;33" zPosition="2" foregroundColor="selectedFG" halign="center"/>
-		<widget name="slider" position="735,600" size="715,30" borderWidth="3" borderColor="white" transparent="1" foregroundColor="grey"/>
-		<widget source="info" render="Label" position="15,600" size="715,100" font="Regular;33" zPosition="1" halign="center" valign="center" transparent="1" foregroundColor="secondFG"/>
+		<widget name="status" position="735,540" size="715,45" font="Regular;33" foregroundColor="selectedFG" halign="center"/>
+		<widget name="slider" position="735,600" size="715,30" borderWidth="3" borderColor="grey" foregroundColor="grey"/>
+		<widget source="info" render="Label" position="15,600" size="715,100" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="FUFilebrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
