@@ -1,1 +1,1 @@
-SUBDIRS = Halo Magic-FHD MetrixFHD myNOVUM_FHD2 myNOVUM_FHD2_Black NOVUM_FHD_Slim ViXBMC_1080 ViXBMC_1080_Bello ViXBMC_1080_Common ViXBMC_1080_Confluence YouViX-Blue YouViX-Common YouViX-Green YouViX-Purple YouViX-Red
+SUBDIRS = Halo iSkin-Light iSkin-Dark iSkin-Common Magic-FHD MetrixFHD myNOVUM_FHD2 myNOVUM_FHD2_Black NOVUM_FHD_Slim ViXBMC_1080 ViXBMC_1080_Bello ViXBMC_1080_Common ViXBMC_1080_Confluence YouViX-Blue YouViX-Common YouViX-Green YouViX-Purple YouViX-Red
