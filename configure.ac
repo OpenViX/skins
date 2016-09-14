@@ -283,7 +283,6 @@ src/skins/1080/iSkin-Common/buttons/Makefile
 src/skins/1080/iSkin-Common/fonts/Makefile
 src/skins/1080/iSkin-Common/icons/Makefile
 src/skins/1080/iSkin-Common/screens/Makefile
-src/skins/1080/iSkin-Common/icons/Makefile
 
 src/skins/1080/Magic-FHD/Makefile
 src/skins/1080/Magic-FHD/border/Makefile
