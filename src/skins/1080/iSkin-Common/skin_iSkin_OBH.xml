@@ -1,0 +1,416 @@
+<skin>
+	<!--  iSkin by rossi2000  -->
+	<!--  OBH FILE -->
+	<!--  This skin is Freeware. Anyone can modify it and use in other images.  -->
+	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
+	<!--  Do whatever you want with this skin, but don't say it's yours, or your idea!  -->
+
+	<screen name="DeliteBluePanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Blue Panel">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="lab2" position="20,51" size="949,45" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+		<widget name="lab1" position="20,51" size="944,45" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="right" valign="center" zPosition="2"/>
+		<ePixmap position="240,105" size="40,38" pixmap="icons/movie_play_backward.png" alphatest="blend" zPosition="2"/>
+		<widget name="list" position="290,100" size="400,45" font="DR;30" itemHeight="45" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+		<ePixmap position="700,105" size="40,38" pixmap="icons/movie_play.png" alphatest="blend" zPosition="2"/>
+		<!-- ><widget name="activecam" position="80,160" size="590,45" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" zPosition="2"/> --> 
+		<widget name="Ecmtext" position="80,200" size="850,450" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="top" zPosition="2"/>
+		<widget name="Ilab1" position="80,700" size="590,45" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget name="Ilab2" position="80,740" size="590,45" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget name="Ilab3" position="80,780" size="590,45" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget name="Ilab4" position="80,820" size="590,45" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget name="lab3" position="80,860" size="590,45" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="YellowButton" />
+		<panel name="BlueButton" />
+	</screen>
+	<screen name="Nab_DoStartCam" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Softcam Starting...">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="lab1" position="20,60" size="949,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="center" valign="center" zPosition="2"/>
+		<widget name="connect" position="450,150" size="100,100" pixmaps="spinner/wait1.png,spinner/wait2.png,spinner/wait3.png,spinner/wait4.png,spinner/wait5.png,spinner/wait6.png" transparent="1" alphatest="blend" zPosition="2" />
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+	</screen>
+	<screen name="BhsysInfo" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole System Info Panel">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="lab1" position="20,51" size="949,810" font="DR;30" itemHeight="45" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="top" transparent="1" scrollbarMode="showOnDemand" zPosition="2"/>
+		<panel name="MenuIconInfo" />
+		<panel name="PIG" />
+	</screen>
+	<screen name="DeliteSettings" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Extras Panel">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="list" render="Listbox" position="20,51" size="949,810" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (3,0), size = (800,45), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0 ) ],
+				"fonts": [gFont("DR",30)],
+				"itemHeight":45
+				}
+			</convert>
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+	</screen>
+	<screen name="BhEpgPanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole EPG Panel">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="list" render="Listbox" position="20,51" size="949,810" font="DR;30" itemHeight="45" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" >
+			<convert type="StringList" />
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+	</screen>
+	<screen name="DeliteDevicesPanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Device Manager">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="list" render="Listbox" position="20,51" size="949,810" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (170,5), size = (850,35), font=0, text = 0),
+				MultiContentEntryText(pos = (170,50), size = (850,55), font=1, flags = RT_VALIGN_TOP, text = 1),
+				MultiContentEntryPixmapAlphaBlend(pos = (20,5), size = (120,120), png = 2),
+				],
+				"fonts": [gFont("DR",32),gFont("DR",24)],
+				"itemHeight":130
+				}
+			</convert>
+		</widget>
+		<panel name="DescriptionBox" />
+		<widget name="lab1" position="1120,650" size="570,300" font="DL;26" foregroundColor="black" backgroundColor="description" transparent="1" halign="center" valign="center" zPosition="3"/>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="YellowButton" />
+	</screen>
+	<screen name="DeliteSetupDevicePanelConf" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Device Manager">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<panel name="ConfigWidget" />
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+	</screen>
+	<screen name="BhBackupSettings" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Device Manager">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="infotext" position="20,51" size="949,810" font="DR;30" itemHeight="45" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+	</screen>
+	<screen name="EGPSelectEPGSources" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Select EPG sources" >
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<panel name="ListWidget" />
+		<widget name="videoPicture" position="1120,650" size="570,300" zPosition="1" backgroundColor="transparent" />
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="GreenButton" />
+		<panel name="BlueButton" />
+	</screen>
+	<screen name="DeliteGreenPanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Green Panel">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="list" render="Listbox" position="20,51" size="949,770" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (180, 2), size = (670, 35), font=0, text = 0),
+				MultiContentEntryText(pos = (180, 35), size = (670, 30), font=1, text = 1),
+				MultiContentEntryPixmapAlphaTest(pos = (10, 4), size = (150, 60), png = 2),
+				],
+				"fonts": [gFont("DR",30),gFont("DR",24)],
+				"itemHeight": 70
+				}
+			</convert>
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+		<panel name="YellowButton" />
+		<panel name="BlueButton" />
+	</screen>
+	<screen name="DeliteScript" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Script Panel">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="list" render="Listbox" position="20,51" size="949,810" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (3, 0), size = (800, 45), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+				],
+				"fonts": [gFont("DR",30)],
+				"itemHeight": 45
+				}
+			</convert>
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="DescriptionBox" />
+		<widget name="statuslab" position="1120,650" size="570,300" font="DL;26" foregroundColor="black" backgroundColor="description" transparent="1" halign="center" valign="center" zPosition="3"/>
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+	</screen>
+	<screen name="DeliteAddons" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Addons Manager">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="list" render="Listbox" position="20,51" size="949,810" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (3,0), size = (800,45), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+				MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (1, 1), png = 1),
+				],
+				"fonts": [gFont("DR",30)],
+				"itemHeight": 45
+				}
+			</convert>
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+	</screen>
+	<screen name="Nab_downArea" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Downloads Manager">
+		<panel name="DeliteAddons" />
+	</screen>
+	<screen name="Nab_downCat" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Downloads Manager">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="list" render="Listbox" position="20,51" size="949,810" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (3, 0), size = (800, 45), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+				],
+				"fonts": [gFont("DR",30)],
+				"itemHeight": 45
+				}
+			</convert>
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+	</screen>
+	<screen name="Nab_ShowDownFile" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Package Details">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="infotext" position="20,51" size="949,810" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="top" transparent="1" zPosition="2"/>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="GreenButton" />
+		<panel name="YellowButton" />
+	</screen>
+	<screen name="Nab_downPanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Manual Install OBH Packages">
+		<panel name="Nab_downCat" />
+	</screen>
+	<screen name="Nab_downPanelIPK" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Manual Install IPK Packages">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="list" render="Listbox" position="20,51" size="949,810" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (3, 0), size = (800, 45), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+				],
+				"fonts": [gFont("DR",30)],
+				"itemHeight": 45
+				}
+			</convert>
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="DescriptionBox" />
+		<widget name="warntext" position="1120,650" size="570,300" font="DL;26" foregroundColor="black" backgroundColor="description" transparent="1" halign="center" valign="center" zPosition="3"/>
+	</screen>
+	<screen name="Nab_uninstPanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Uninstall Panel">
+		<panel name="Nab_downCat" />
+	</screen>
+	<screen name="Nab_downFeedCat" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Feeds Plugins">
+		<panel name="Nab_downCat" />
+	</screen>
+	<screen name="Nab_ShowFeedFile" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Package Details">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="infotext" position="20,51" size="949,810" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="top" transparent="1" zPosition="2"/>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="GreenButton" />
+		<panel name="YellowButton" />
+	</screen>
+	<screen name="Nab_Stats" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole E2 Statistics">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="infotext" position="20,51" size="949,810" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="top" transparent="1" zPosition="2"/>
+		<panel name="MenuIconInfo" />
+		<panel name="PIG" />
+	</screen>
+	<screen name="Nab_ConnectPop" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Connection in progress">
+		<panel name="Nab_DoStartCam" />
+	</screen>
+	<screen name="addonsParentalConfig" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Addons parental control setup">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<panel name="ConfigWidget" />
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+	</screen>
+	<screen name="DeliteSetupFp" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Fast Plugin Setup">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="list" render="Listbox" position="20,51" size="949,770" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (180, 2), size = (670, 35), font=0, text = 0),
+				MultiContentEntryText(pos = (180, 35), size = (670, 30), font=1, text = 1),
+				MultiContentEntryPixmapAlphaBlend(pos = (10, 4), size = (150, 60), png = 2),
+				],
+				"fonts": [gFont("DR",30),gFont("DR", 24)],
+				"itemHeight": 70
+				}
+			</convert>
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+	</screen>
+	
+	<screen name="BhSpeedUp" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Speed Up">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<panel name="ConfigWidget" />
+		<panel name="DescriptionBox" />
+		<widget name="lab1" position="1120,650" size="570,300" font="DL;26" foregroundColor="black" backgroundColor="description" transparent="1" halign="center" valign="center" zPosition="3"/>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+	</screen>
+	<screen name="Bp_UsbFormat" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Usb Format Wizard">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="lab1" position="20,51" size="949,810" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="top" transparent="1" zPosition="2"/>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+	</screen>
+	<screen name="BlackPoleSwap" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Swap File Manager">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="lab1" position="20,51" size="949,810" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="top" transparent="1" zPosition="2"/>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+		<panel name="YellowButton" />
+	</screen>
+	<screen name="BhNetBrowser" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Select Network Interface">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="list" render="Listbox" position="20,51" size="949,810" font="DR;30" itemHeight="45" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="StringList" />
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="YellowButton" />
+	</screen>
+	<screen name="ImageBackup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Image Backup">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="info-hdd" position="20,51" size="949,405" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="top" transparent="1" zPosition="2"/>
+		<widget name="info-usb" position="20,451" size="949,405" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="top" transparent="1" zPosition="2"/>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+		<ePixmap pixmap="iSkin-Common/buttons/yellow.png" position="960,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />
+		<panel name="BlueButton" />
+	</screen>
+	<screen name="DeliteInadyn" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Inadyn Manager">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="lab1" position="100,100" size="150,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="center" valign="center" transparent="1" zPosition="2"/>
+		<widget name="linactive" position="250,103" pixmap="icons/lock_off.png" size="35,35" alphatest="blend" zPosition="2"/>
+		<widget name="lactive" position="250,103" pixmap="icons/lock_on.png" size="35,35" alphatest="blend" zPosition="2"/>
+		<widget name="lab7" position="440,100" size="200,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="center" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labstop" position="650,100" size="150,35" font="DR;30" foregroundColor="black" backgroundColor="red" valign="center" halign="center" zPosition="1"/>
+		<widget name="labrun" position="650,100" size="150,35" font="DR;30" foregroundColor="black" backgroundColor="green" valign="center" halign="center" zPosition="2"/>
+		<widget name="lab2" position="80,250" size="300,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="right" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labtime" position="400,250" size="200,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget name="lab3" position="80,300" size="300,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="right" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labuser" position="400,300" size="310,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget name="lab4" position="80,350" size="300,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="right" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labpass" position="400,350" size="310,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget name="lab5" position="80,400" size="300,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="right" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labalias" position="400,400" size="310,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<widget name="sinactive" position="220,450" pixmap="icons/lock_off.png" size="35,35" alphatest="blend" zPosition="2"/>
+		<widget name="sactive" position="220,450" pixmap="icons/lock_on.png" size="35,35" alphatest="blend" zPosition="2"/>
+		<widget name="lab6" position="80,450" size="300,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="right" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labsys" position="400,450" size="310,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" zPosition="2"/>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+		<panel name="YellowButton" />
+	</screen>
+	<screen name="DeliteInaSetup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Inadyn Setup">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<panel name="ConfigWidget" />
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+		<eLabel text="Virtual Keyboard" position="730,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3"/>
+	</screen>
+	<screen name="DeliteInaLog" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole Inadyn Log">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="infotext" position="20,51" size="949,810" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="top" transparent="1" zPosition="2"/>
+		<panel name="MenuIconInfo" />
+		<panel name="PIG" />
+	</screen>
+	<screen name="DeliteOpenvpn" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="lab1" position="68,0" size="200,50" font="DB;34" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="lab1a" position="275,0" size="600,50" font="DB;34" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="3"/>
+		<widget name="lab2" position="170,139" size="200,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labactive" position="440,139" size="220,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="center" valign="center" transparent="1" zPosition="2"/>
+		<widget name="lab3" position="170,200" size="200,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" valign="center" transparent="1" zPosition="2" />
+		<widget name="labstop" position="450,200" size="200,35" font="DR;30" foregroundColor="black" backgroundColor="red" valign="center" halign="center" zPosition="3" />
+		<widget name="labrun" position="450,200" size="200,35" font="DR;30" foregroundColor="black" backgroundColor="green" valign="center" halign="center" zPosition="3" />
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+		<panel name="YellowButton" />
+		<panel name="BlueButton" />
+	</screen>
+	<screen name="DeliteVpnLog" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Open Black Hole OpenVpn Log">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget name="infotext" position="20,51" size="949,810" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="top" transparent="1" zPosition="2"/>
+		<panel name="MenuIconInfo" />
+		<panel name="PIG" />
+	</screen>
+</skin>
