@@ -274,8 +274,8 @@
 				setWindPict="410,43,42,42" setWindPictScale="1" setWind="470,22,150,30" setWindUnits="470,68,150,30"
 				text1Pos="615,15,500,35" text2Pos="615,50,500,35" text3Pos="615,80,500,35" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1"/>
 	</screen>
-	<screen name="ForecaPreviewCache" position="center,center" size="76,76" flags="wfNoBorder" backgroundColor="#000000">
-		<eLabel position="2,2" size="72,72" font="RegularSmall;18" zPosition="1" backgroundColor="#40000000"/>
+	<screen name="ForecaPreviewCache" position="center,center" size="76,76" flags="wfNoBorder" backgroundColor="black">
+		<eLabel position="2,2" size="72,72" font="RegularSmall;18" zPosition="1" backgroundColor="transpBlack"/>
 		<widget name="spinner" position="14,14" zPosition="4" size="48,48" alphatest="blend"/>
 	</screen>
 	<screen name="CityPanel" position="fill" title="CityPanel" flags="wfNoBorder">
@@ -1081,17 +1081,17 @@
 	<screen name="DiseqcTesterNimSelection" position="fill" flags="wfNoBorder" title="Choose Tuner">
 		<panel name="BasicTemplate"/>
 		<panel name="RedBPanel"/>
-		<eLabel text="Cancel" position="22,1032" size="400,39" font="RegularSmall;33" foregroundColor="grey" zPosition="1" halign="center"/>
+		<eLabel text="Cancel" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
 		<panel name="GreenBPanel"/>
-		<eLabel text="OK" position="457,1032" size="400,39" font="RegularSmall;33" foregroundColor="grey" zPosition="1" halign="center"/>
+		<eLabel text="OK" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
 		<widget source="nimlist" render="Listbox" position="735,120" size="1177,882" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (15,7), size = (1100,45), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
-						MultiContentEntryText(pos = (75,60), size = (1100,30), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+						MultiContentEntryText(pos = (5,2), size = (1100,45), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
+						MultiContentEntryText(pos = (25,50), size = (1150,35), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
 					],
-				 "fonts": [gFont("Regular", 33), gFont("Regular", 24)],
-				 "itemHeight": 105
+				 "fonts": [gFont("Regular",33), gFont("Regular",28)],
+				 "itemHeight":100
 				}
 			</convert>
 		</widget>
@@ -1099,31 +1099,61 @@
 
 		<screen name="DiseqcTester" position="fill" title="DiSEqC Tester">
 		<panel name="BasicTemplate"/>
-		<widget source="progress_list" render="Listbox" position="735,120" size="1177,700" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
+		<widget source="progress_list" render="Listbox" position="735,120" size="1177,740" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (5, 0), size = (500, 35), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the index name,
-						MultiContentEntryText(pos = (525, 0), size = (225, 35), flags = RT_HALIGN_RIGHT, text = 2) # index 2 is the status,
+						MultiContentEntryText(pos = (5,0), size = (915,35), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the index name,
+						MultiContentEntryText(pos = (925,0), size = (225,35), flags = RT_HALIGN_RIGHT, text = 2) # index 2 is the status,
 					],
-				 "fonts": [gFont("RegularSmall", 30)],
-				 "itemHeight": 37
+				 "fonts": [gFont("RegularSmall",30)],
+				 "itemHeight":37
 				}
 			</convert>
 		</widget>
-		<eLabel name="overall_progress" text="Overall progress:" position="1300,845" size="480,35" font="RegularSmall;30" foregroundColor="secondFG" halign="center"/>
-		<widget source="overall_progress" render="Progress" position="1300,890" size="480,20" borderWidth="3" backgroundColor="#254f7497"/>
-		<eLabel name="overall_progress" text="Progress:" position="1300,930" size="480,35" font="RegularSmall;30" foregroundColor="secondFG" halign="center"/>
-		<widget source="sub_progress" render="Progress" position="1300,975" size="480,20" borderWidth="3" backgroundColor="#254f7497"/>
-		<eLabel name="" text="Succeeded:" position="735,845" size="140,30" font="RegularSmall;25" halign="left" foregroundColor="yellow"/>
-		<widget source="succeeded_counter" render="Label" position="890,845" size="100,30" font="RegularSmall;25" foregroundColor="yellow"/>
-		<eLabel name="" text="Failed:" position="735,885" size="140,30" font="RegularSmall;25" halign="left" foregroundColor="yellow"/>
-		<widget source="failed_counter" render="Label" position="890,885" size="100,30" font="RegularSmall;25" foregroundColor="yellow"/>
-		<eLabel name="" text="With errors:" position="735,925" size="140,30" font="RegularSmall;25" halign="left" foregroundColor="yellow"/>
-		<widget source="witherrors_counter" render="Label" position="890,925" size="100,30" font="RegularSmall;25" foregroundColor="yellow"/>
-		<eLabel name="" text="Not tested:" position="735,965" size="140,30" font="RegularSmall;25" halign="left" foregroundColor="yellow"/>
-		<widget source="untestable_counter" render="Label" position="890,965" size="100,30" font="RegularSmall;25" foregroundColor="yellow"/>
-		<widget source="CmdText" render="Label" position="7,540" size="715,380" font="RegularSmall;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
-		</screen>
+		<eLabel name="snr" text="	Quality:" position="732,875" size="120,25" font="Regular;20" backgroundColor="transpBlack" borderColor="black" borderWidth="1" halign="right" transparent="1"/>
+		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="860,882" size="615,15" backgroundColor="transpBlack" borderWidth="1" borderColor="grey">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="1481,875" size="120,25" font="Regular;20" backgroundColor="transpBlack" borderColor="black" borderWidth="1" transparent="1" halign="left">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel name="agc" text="	Signal:" position="732,902" size="120,25" font="Regular;20" backgroundColor="transpBlack" borderColor="black" borderWidth="1" halign="right" transparent="1"/>
+		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="860,907" size="615,15" backgroundColor="transpBlack" borderWidth="1" borderColor="grey">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="1481,902" size="120,22" font="Regular;20" backgroundColor="transpBlack" borderColor="black" borderWidth="1" transparent="1" halign="left">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<eLabel name="ber" text="	BER:" position="732,929" size="120,25" font="Regular;20" backgroundColor="transpBlack" borderColor="black" borderWidth="1" halign="right" transparent="1"/>
+		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="860,932" size="615,15" backgroundColor="transpBlack" borderWidth="1" borderColor="grey">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="1481,929" size="120,22" font="Regular;20" backgroundColor="transpBlack" borderColor="black" borderWidth="1" transparent="1" halign="left">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<eLabel name="lock" text="Lock:" position="732,960" size="120,22" font="Regular;21" backgroundColor="transpBlack" halign="right" transparent="1" borderColor="black" borderWidth="1" zPosition="1"/>
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_on.png" position="865,955" size="38,36" backgroundColor="transpBlack" transparent="1" alphatest="blend">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_off.png" position="867,955" size="38,36" backgroundColor="transpBlack" transparent="1" zPosition="1" alphatest="blend">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<eLabel name="overall_progress" text="Overall progress:" position="5,540" size="480,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
+		<widget source="overall_progress" render="Progress" position="5,590" size="480,20" foregroundColor="yellow" borderWidth="1" borderColor="grey" zPosition="2" transparent="1"/>
+		<eLabel name="overall_progress" text="Progress:" position="5,630" size="480,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
+		<widget source="sub_progress" render="Progress" position="5,675" size="480,20" foregroundColor="yellow" borderWidth="1" borderColor="grey" zPosition="2" transparent="1"/>
+		<eLabel name="" text="Succeeded:" position="5,820" size="200,40" font="Regular;30" halign="right" foregroundColor="grey"/>
+		<widget source="succeeded_counter" render="Label" position="210,820" size="100,40" font="Regular;30" foregroundColor="grey"/>
+		<eLabel name="" text="Failed:" position="5,865" size="200,40" font="Regular;30" halign="right" foregroundColor="grey"/>
+		<widget source="failed_counter" render="Label" position="210,865" size="100,40" font="Regular;30" foregroundColor="grey"/>
+		<eLabel name="" text="With errors:" position="5,910" size="200,40" font="Regular;30" halign="right" foregroundColor="grey"/>
+		<widget source="witherrors_counter" render="Label" position="210,910" size="100,40" font="Regular;30" foregroundColor="grey"/>
+		<eLabel name="" text="Not tested:" position="5,955" size="200,40" font="Regular;30" halign="right" foregroundColor="grey"/>
+		<widget source="untestable_counter" render="Label" position="210,955" size="100,40" font="Regular;30" foregroundColor="grey"/>
+		<widget source="CmdText" render="Label" position="5,1020" size="1900,50" font="Regular;36" zPosition="2" foregroundColor="secondFG" halign="center"/>
+	</screen>
 
 		<!-- ## VU+ Wireless AP ## -->
 	<screen name="WirelessAccessPoint" position="fill" flags="wfNoBorder" title="Wireless Access Point">
@@ -1333,7 +1363,7 @@
 	</screen>
 	<screen	name="DLNAStreamPlayer"	position="6,45"	size="1920,150"	backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="PlayerPanel"/>
-		<widget	name="sidebar"	position="543,30" size="15,30" font="RegularSmall;27" halign="center" valign="center" backgroundColor="#4e5a74" transparent="1"/>
+		<widget	name="sidebar"	position="543,30" size="15,30" font="RegularSmall;27" halign="center" valign="center" backgroundColor="bluegrey" transparent="1"/>
 	</screen>
 	<screen name="SelectDirectoryWindow" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1395,7 +1425,7 @@
 		<widget source="session.CurrentService" render="Label" position="705,825" size="1185,37" font="RegularSmall;30" backgroundColor="black" zPosition="1" transparent="1" valign="center" halign="center">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
-		<widget name="Timeline" position="862,892" size="922,30" pointer="Magic-FHD/position_arrow.png:3,5" foregroundColor="black" backgroundColor="#505555"/>
+		<widget name="Timeline" position="862,892" size="922,30" pointer="Magic-FHD/position_arrow.png:3,5" foregroundColor="black" backgroundColor="bluegrey"/>
 		<eLabel text="'OK' = Menu" position="1455,1030" size="330,39" font="RegularSmall;30" backgroundColor="black" zPosition="1" transparent="1" halign="center"/>
 		<eLabel text="'o' = Mark" position="510,1030" size="330,39" font="RegularSmall;30" backgroundColor="black" zPosition="1" transparent="1" halign="center"/>
 	</screen>
@@ -1533,30 +1563,6 @@
 		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 		<widget source="introduction" render="Label" position="30,600" size="715,375" font="Regular;31" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
 	</screen>
-<!-- #Still to add??? #
-<screen name="SoftwareManagerInfo" position="center,center" size="560,440" title="SoftwareManager information">
-		<ePixmap pixmap="buttons/red.png" position="0,0" size="140,40" alphatest="on" />
-		<ePixmap pixmap="buttons/green.png" position="140,0" size="140,40" alphatest="on" />
-		<ePixmap pixmap="buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
-		<ePixmap pixmap="buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
-		<widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313"/>
-		<widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f"/>
-		<widget source="key_yellow" render="Label" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500"/>
-		<widget source="key_blue" render="Label" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#18188b"/>
-		<widget source="list" render="Listbox" position="5,50" size="550,340" scrollbarMode="showOnDemand" selectionDisabled="0">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (5, 0), size = (540, 26), font=0, flags = RT_HALIGN_LEFT | RT_HALIGN_CENTER, text = 0), # index 0 is the name
-					],
-				"fonts": [gFont("Regular", 24),gFont("Regular", 22)],
-				"itemHeight": 26
-				}
-			</convert>
-		</widget>
-		<ePixmap pixmap="div-h.png" position="0,400" zPosition="1" size="560,2" />
-		<widget source="introduction" render="Label" position="5,410" size="550,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
-	</screen>
--->
 	<screen name="PluginManagerInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
