@@ -1172,43 +1172,7 @@
 		</widget>
 	</screen>
 	<!-- ## Service Selectors ## -->
-	<screen name="ChannelSelectionRadio" position="0,0" size="1920,828" flags="wfNoBorder">
-		<panel name="BasicTemplate2"/>
-		<ePixmap pixmap="buttons/red.png" alphatest="on" position="150,672" size="30,30"/>
-		<ePixmap pixmap="buttons/green.png" alphatest="on" position="585,672" size="30,30"/>
-		<ePixmap pixmap="buttons/yellow.png" alphatest="on" position="1020,672" size="30,30"/>
-		<ePixmap pixmap="buttons/blue.png" alphatest="on" position="1455,672" size="30,30"/>
-		<widget name="key_red" backgroundColor="secondBG" position="184,665" size="330,40" font="Regular;33" foregroundColor="grey" transparent="1" zPosition="1" halign="left"/>
-		<widget name="key_green" backgroundColor="secondBG" position="619,665" size="330,40" font="Regular;33" foregroundColor="grey" transparent="1" zPosition="1" halign="left"/>
-		<widget name="key_yellow" backgroundColor="secondBG" position="1054,665" size="330,40" font="Regular;33" foregroundColor="grey" transparent="1" zPosition="1" halign="left"/>
-		<widget name="key_blue" backgroundColor="secondBG" position="1489,665" size="320,40" font="Regular;33" foregroundColor="grey" transparent="1" zPosition="1" halign="left"/>
-		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1810,672" size="52,37"/>
-		<ePixmap pixmap="buttons/key_info.png" alphatest="on" position="1865,672" size="52,37"/>
-		<widget name="list" position="780,123" size="1132,495" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
-				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
-				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
-		<widget source="ServiceEvent" render="Label" position="780,625" size="1132,35" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
-			<convert type="TransponderInfo"></convert>
-		</widget>
-		<widget source="session.Event_Now" render="Label" position="5,122" size="765,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="center">
-		<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Label" position="105,205" size="93,40" font="Regular;33" transparent="1" foregroundColor="selectedFG" halign="right">
-		<convert type="EventTime">StartTime</convert>
-		<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Progress" pixmap="window/progress.png" position="225,222" size="285,12" transparent="1" borderWidth="2" borderColor="selectedFG">
-		<convert type="EventTime">Progress</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Label" position="540,205" size="93,40" font="Regular;33" foregroundColor="selectedFG">
-		<convert type="EventTime">EndTime</convert>
-		<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Label" position="10,244" size="765,357" font="Regular;27" foregroundColor="grey">
-		<convert type="EventName">ExtendedDescription</convert>
-		</widget>
-	</screen>
-	<screen name="RadioInfoBar" title="InfoBar" position="0,762" size="1920,330" backgroundColor="background" flags="wfNoBorder">
+	<screen name="RadioInfoBar" title="InfoBar" position="0,750" size="1920,270" backgroundColor="background" flags="wfNoBorder">
 		<widget source="session.CurrentService" render="Label" position="330,105" size="1260,48" font="Regular;39" foregroundColor="grey" halign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -1245,11 +1209,32 @@
 			<convert type="RdsInfo">RasInteractiveAvailable</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="RdsDecoder" render="Label" position="0,7" size="1920,105" transparent="1" zPosition="5" foregroundColor="secondFG" font="LCD;45" valign="center" halign="center">
+		<widget source="session.CurrentService" render="Picon" position="35,112" size="115,70" alphatest="blend" backgroundColor="secondBG" transparent="1" zPosition="2">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	<widget source="RdsDecoder" render="Label" position="1,1" size="1915,110" zPosition="2" foregroundColor="selectedFG" font="LCD;50" valign="center" halign="center">
 			<convert type="RdsInfo">RadioText</convert>
 		</widget>
 		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="1762,126" size="30,30" zPosition="3" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+	<screen name="ChannelSelectionRadio" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate2"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<widget name="list" position="780,120" size="1132,595" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
+				serviceInfoFont="channelselectionevent;28" progressBarWidth="70" fieldMargins="10" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
+				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
+		<widget source="ServiceEvent" render="Label" position="780,715" size="1132,35" font="Regular;30" foregroundColor="secondFG" halign="center" noWrap="1" zPosition="1">
+			<convert type="TransponderInfo"></convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="10,120" size="765,623" font="Regular;28" foregroundColor="grey">
+		<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 	</screen>
 	<screen name="RdsInfoDisplay" position="22,90" size="1920,300" backgroundColor="transparent" zPosition="-2" flags="wfNoBorder">
