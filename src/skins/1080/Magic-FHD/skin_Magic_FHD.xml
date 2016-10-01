@@ -114,8 +114,13 @@
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide"	/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_ip.png" position="1341,145" size="30,30" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_ip.png" position="1325,145" size="30,30" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsStream</convert>
+			<convert type="ConditionalShowHide"	/>
+		</widget>
+		
+		<widget source="session.Event_Now" render="Pixmap" pixmap="infobar/ico_pdc.png" position="1360,145" size="40,25" zPosition="2" alphatest="on">
+			<convert type="EventName">Pdc</convert>
 			<convert type="ConditionalShowHide"	/>
 		</widget>
 		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S:" position="1410,135" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
@@ -493,7 +498,7 @@
 		<widget name="datetime" position="1275,15" size="375,45" font="Regular;39" borderColor="black" borderWidth="2" transparent="1" halign="left"/>
 		<widget name="duration" position="1650,15" size="225,45" font="Regular;39" borderColor="black" borderWidth="2" transparent="1" halign="left"/>
 	</screen>
-	<screen name="QuickEPG" position="fill" backgroundColor="transparent" flags="wfNoBorder" title="InfoBar">
+	<screen name="QuickEPG" position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
@@ -2169,7 +2174,7 @@
 		<panel name="Blue1Panel"/>
 		<widget name="list" position="735,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
-	<screen name="RotorNimSelection" position="fill" title="select Slot">
+	<screen name="RotorNimSelection" position="fill" title="Select Slot">
 		<panel name="BasicTemplate"/>
 		<widget name="nimlist" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
