@@ -491,42 +491,37 @@
 			<convert type="EventName">NameNext</convert>
 		</widget>
 	</screen>
-	<screen name="InfoBarEventView" position="0,0" size="1920,750" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap pixmap="infobar/hd.png" position="0,0" size="1920,75" zPosition="-1"/>
-		<widget name="FullDescription" position="15,97" size="1890,720" font="Regular;42" borderColor="black" borderWidth="2" foregroundColor="grey" backgroundColor="background" transparent="1" valign="top" halign="center" zPosition="2"/>
-		<widget name="channel" position="15,7" size="1275,75" font="Regular;45" borderColor="black" borderWidth="2" foregroundColor="secondFG" transparent="1" backgroundColor="background" halign="center"/>
+	<screen name="InfoBarEventView" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
+		<widget name="FullDescription" position="15,97" size="1890,720" font="Regular;42" borderColor="black" borderWidth="1" foregroundColor="white" backgroundColor="background" transparent="1" valign="top" halign="center" zPosition="2"/>
+		<widget source="Title" render="Label" position="15,7" size="1275,75" font="Regular;45" borderColor="black" borderWidth="2" foregroundColor="secondFG" transparent="1" backgroundColor="background" halign="center"/>
 		<widget name="datetime" position="1275,15" size="375,45" font="Regular;39" borderColor="black" borderWidth="2" transparent="1" halign="left"/>
 		<widget name="duration" position="1650,15" size="225,45" font="Regular;39" borderColor="black" borderWidth="2" transparent="1" halign="left"/>
 	</screen>
-	<screen name="QuickEPG" position="fill" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="QuickEPG" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
-		<ePixmap alphatest="off" pixmap="infobar/hd.png" position="0,750" size="1920,330" zPosition="-1"/>
-		<widget source="Event" render="Label" position="75,360" size="1770,450" font="Regular;31" borderColor="black" borderWidth="2" foregroundColor="secondFG" transparent="1" backgroundColor="background" valign="bottom" halign="center" zPosition="2">
+		<widget source="Event" render="Label" position="0,0" size="1920,750" font="Regular;42" borderWidth="1" borderColor="black" foregroundColor="white" backgroundColor="background" transparent="1" valign="bottom" halign="center" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget source="Service" render="Picon" position="67,832" size="150,90" alphatest="blend" transparent="1" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget name="list" position="270,937" size="1335,90" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground"/>
-		<widget source="Event" render="Label" position="1380,937" size="240,45" backgroundColor="secondBG" transparent="1" zPosition="10" foregroundColor="foreground" font="Regular;36" halign="center">
-			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">InMinutes</convert>
-		</widget>
-		<widget source="Service" render="Label" position="382,862" size="1485,54" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" valign="center" halign="left">
+		<widget source="Service" render="Label" position="382,832" size="1485,50" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="yellow" font="Regular;36" valign="center" halign="left">
 		<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="30,967" size="180,45" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" font="Regular;36" valign="center" halign="center">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" font="Regular;30" valign="center" halign="center">
+		<widget name="list" position="270,882" size="1335,145" EventFontInfobar="Regular;30" backgroundColor="secondBG" foregroundColor="foreground" transparent="1" zPosition="1"/>
+		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,36" font="Regular;30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" halign="center">
 			<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget source="Event" render="Progress" pixmap="infobar/pbar.png" position="270,919" size="1260,12" backgroundColor="secondBG" transparent="0" zPosition="2" borderWidth="1">
-		<convert type="EventTime">Progress</convert>
+		<widget source="global.CurrentTime" render="Label" position="30,967" size="180,45" font="Regular;36" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" halign="center">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="Event" render="Label" position="1630,937" size="240,45" backgroundColor="secondBG" transparent="1" zPosition="10" foregroundColor="foreground" font="Regular;36" halign="center">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="0,780" size="1920,300" backgroundColor="transparent" transparent="0" flags="wfNoBorder">

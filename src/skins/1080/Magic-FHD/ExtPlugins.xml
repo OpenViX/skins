@@ -2110,17 +2110,17 @@
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1635,1023" size="52,39"/>
-		<eLabel text="Install" backgroundColor="secondBG" font="Regular;33" halign="left" position="1687,1030" size="330,39" zPosition="1"/>
-			<widget source="list" render="Listbox" position="735,120" size="1177,858" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
+		<eLabel text="Install" position="1687,1020" size="330,45" backgroundColor="secondBG" font="Regular;33" foregroundColor="grey" transparent="1" halign="left"/>
+			<widget source="list" render="Listbox" position="735,120" size="1177,850" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 				<convert type="TemplatedMultiContent">
 					{"template": [
-							MultiContentEntryText(pos = (5, 1), size = (540, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-							MultiContentEntryText(pos = (5, 26), size = (540, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-							MultiContentEntryPixmapAlphaBlend(pos = (545, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
-							MultiContentEntryPixmapAlphaBlend(pos = (5, 50), size = (510, 2), png = 5), # index 4 is the div pixmap
+							MultiContentEntryText(pos = (5,1), size = (800,45), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+							MultiContentEntryText(pos = (15,45), size = (785,30), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+							MultiContentEntryPixmapAlphaBlend(pos = (845,2), size = (48,48), png = 4), # index 4 is the status pixmap
+							MultiContentEntryPixmapAlphaBlend(pos = (5,80), size = (1170,2), png = 5), # index 4 is the div pixmap
 						],
-					"fonts": [gFont("Regular", 22),gFont("Regular", 14)],
-					"itemHeight": 52
+					"fonts": [gFont("Regular",33),gFont("Regular",21)],
+					"itemHeight": 85
 					}
 				</convert>
 			</widget>
