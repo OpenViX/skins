@@ -241,6 +241,16 @@
 		<widget name="statusicon" position="112,0" size="75,75" pixmaps="icons/play_large.png,icons/pause_large.png,icons/stop_large.png,icons/forward_large.png,icons/backward_large.png,icons/slow_large.png" zPosition="5" alphatest="on"/>
 		<widget name="speed" position="0,0" size="112,75" font="Regular;45" halign="left" valign="center" backgroundColor="transparent" borderWidth="2" borderColor="black" transparent="1" zPosition="5"/>
 	</screen>
+	<screen name="DVDPlayer" position="0,45" size="1920,322" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="PlayerPanel"/>
+		<widget name="chapterLabel" position="192,120" size="570,52" font="Regular;30" halign="left" valign="center" noWrap="1" borderColor="black" borderWidth="2" backgroundColor="transparent" zPosition="3"/>
+		<eLabel text="Audio:	" position="192,172" size="135,52" backgroundColor="secondBG" transparent="1" font="Regular;30" borderColor="black" borderWidth="2" valign="center" halign="left"/>
+		<widget name="audioLabel" position="327,172" size="435,52" font="Regular;30" halign="left" valign="center" noWrap="1" borderColor="black" borderWidth="2" backgroundColor="transparent" zPosition="3"/>
+		<eLabel text="Subtitle:	" position="192,225" size="135,52" backgroundColor="secondBG" transparent="1" borderColor="black" borderWidth="2" font="Regular;30" valign="center" halign="left"/>
+		<widget name="subtitleLabel" position="327,225" size="435,52" font="Regular;30" halign="left" valign="center" noWrap="1" borderColor="black" borderWidth="2" backgroundColor="transparent" zPosition="3"/>
+		<widget name="anglePix" position="1110,192" size="39,24" pixmap="icons/icon_view.png" zPosition="3" alphatest="on"/>
+		<widget name="angleLabel" position="1170,183" size="300,33" font="Regular;31" backgroundColor="black" zPosition="3" transparent="1"/>
+	</screen>
 	<screen name="Dish" position="129,150" size="210,442" zPosition="10" backgroundColor="transpBlack" flags="wfNoBorder">
 		<widget name="Dishpixmap" position="0,30" size="195,240" zPosition="1" pixmap="icons/dish.png" transparent="1" alphatest="on"/>
 		<widget name="turnTime" position="7,0" size="180,33" font="Regular;27" zPosition="1" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="right"/>
@@ -254,16 +264,6 @@
 		<widget source="session.FrontendStatus" render="Progress" position="7,412" size="180,15" pixmap="bar_snr.png" zPosition="10" backgroundColor="transpBlack" transparent="1" borderWidth="2" borderColor="grey">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-	</screen>
-	<screen name="DVDPlayer" position="0,45" size="1920,322" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="PlayerPanel"/>
-		<widget name="chapterLabel" position="192,120" size="570,52" font="Regular;30" halign="left" valign="center" noWrap="1" borderColor="black" borderWidth="2" backgroundColor="transparent" zPosition="3"/>
-		<eLabel text="Audio:	" position="192,172" size="135,52" backgroundColor="secondBG" transparent="1" font="Regular;30" borderColor="black" borderWidth="2" valign="center" halign="left"/>
-		<widget name="audioLabel" position="327,172" size="435,52" font="Regular;30" halign="left" valign="center" noWrap="1" borderColor="black" borderWidth="2" backgroundColor="transparent" zPosition="3"/>
-		<eLabel text="Subtitle:	" position="192,225" size="135,52" backgroundColor="secondBG" transparent="1" borderColor="black" borderWidth="2" font="Regular;30" valign="center" halign="left"/>
-		<widget name="subtitleLabel" position="327,225" size="435,52" font="Regular;30" halign="left" valign="center" noWrap="1" borderColor="black" borderWidth="2" backgroundColor="transparent" zPosition="3"/>
-		<widget name="anglePix" position="1110,192" size="39,24" pixmap="icons/icon_view.png" zPosition="3" alphatest="on"/>
-		<widget name="angleLabel" position="1170,183" size="300,33" font="Regular;31" backgroundColor="black" zPosition="3" transparent="1"/>
 	</screen>
 	<screen name="ChannelSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -300,7 +300,7 @@
 			<convert type="EventTime">ThirdEndTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="780,967" size="1132,35" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
+		<widget source="ServiceEvent" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="7,524" size="765,40" font="Regular;32" foregroundColor="secondFG" halign="center" valign="top">
@@ -380,7 +380,7 @@
 		<widget name="list" position="755,123" size="1157,810" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"/>
 		<widget name="number" position="755,123" size="1157,810" font="Regular;54" zPosition="5" valign="center" halign="center"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="1"/>
-		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
+		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="top">
@@ -423,7 +423,7 @@
 		<widget name="more_button" pixmap="epg/epg_off.png" position="1440,172" zPosition="2" size="270,60" alphatest="blend"/>
 		<widget name="more_button_sel" pixmap="epg/epg_next_on.png" position="1440,172" zPosition="3" size="270,60" alphatest="blend"/>
 		<widget name="more_text" position="1440,172" size="270,60" backgroundColor="background" zPosition="4" transparent="1" text="MORE" font="Regular;30" valign="center" halign="center"/>
-		<widget source="Service" render="Label" position="780,967" size="1132,35" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
+		<widget source="Service" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="top">
@@ -456,7 +456,10 @@
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget name="FullDescription" position="780,123" size="1132,874" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget name="FullDescription" position="780,123" size="1132,825" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget source="session.CurrentService" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1" zPosition="1">
+			<convert type="TransponderInfo"></convert>
+		</widget>
 		<widget name="channel" position="22,585" size="690,100" font="Regular;36" foregroundColor="selectedFG" halign="center"/>
 		<widget name="datetime" position="22,690" size="690,45" font="Regular;33" halign="center"/>
 		<widget name="duration" position="22,740" size="690,45" font="Regular;33" halign="center"/>
@@ -1233,7 +1236,7 @@
 		<widget name="list" position="780,120" size="1132,595" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
 				serviceInfoFont="channelselectionevent;28" progressBarWidth="70" fieldMargins="10" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
 				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
-		<widget source="ServiceEvent" render="Label" position="780,715" size="1132,35" font="Regular;30" foregroundColor="secondFG" halign="center" noWrap="1" zPosition="1">
+		<widget source="ServiceEvent" render="Label" position="780,715" size="1132,35" font="Regular;30" foregroundColor="secondFG" halign="right" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="10,120" size="765,623" font="Regular;28" foregroundColor="grey">
