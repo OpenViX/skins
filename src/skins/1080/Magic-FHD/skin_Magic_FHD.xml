@@ -251,17 +251,17 @@
 		<widget name="anglePix" position="1110,192" size="39,24" pixmap="icons/icon_view.png" zPosition="3" alphatest="on"/>
 		<widget name="angleLabel" position="1170,183" size="300,33" font="Regular;31" backgroundColor="black" zPosition="3" transparent="1"/>
 	</screen>
-	<screen name="Dish" position="129,150" size="210,442" zPosition="10" backgroundColor="transpBlack" flags="wfNoBorder">
-		<widget name="Dishpixmap" position="0,30" size="195,240" zPosition="1" pixmap="icons/dish.png" transparent="1" alphatest="on"/>
-		<widget name="turnTime" position="7,0" size="180,33" font="Regular;27" zPosition="1" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="right"/>
+	<screen name="Dish" position="129,150" size="205,400" zPosition="10" backgroundColor="transpBlack" flags="wfNoBorder">
+		<widget name="turnSpeed" position="2,0" size="90,33" font="Regular;27" zPosition="2" backgroundColor="transpBlack" transparent="1" foregroundColor="grey"/>
+		<widget name="turnTime" position="95,0" size="108,33" font="Regular;27" zPosition="1" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="right"/>
+		<widget name="Dishpixmap" position="0,35" size="195,240" zPosition="1" pixmap="icons/dish.png" transparent="1" alphatest="on"/>
 		<widget name="From" position="7,276" size="90,33" font="Regular;27" zPosition="1" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="left" text="From:"/>
+		<widget name="posFrom" position="100,276" size="100,40" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="left"/>
 		<widget name="Goto" position="7,307" size="90,33" font="Regular;27" zPosition="1" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="left" text="Goto:"/>
-		<widget name="turnSpeed" position="7,375" size="90,33" font="Regular;27" zPosition="2" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="left"/>
+		<widget name="posGoto" position="100,307" size="100,40" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="left"/>
 		<widget name="Tuner" position="7,342" size="90,33" font="Regular;27" zPosition="2" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="left"/>
-		<widget name="tunerName" position="105,342" size="75,33" font="Regular;27" zPosition="2" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="left"/>
-		<widget name="posGoto" position="105,307" size="105,40" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="left"/>
-		<widget name="posFrom" position="105,276" size="105,40" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="left"/>
-		<widget source="session.FrontendStatus" render="Progress" position="7,412" size="180,15" pixmap="bar_snr.png" zPosition="10" backgroundColor="transpBlack" transparent="1" borderWidth="2" borderColor="grey">
+		<widget name="tunerName" position="100,342" size="100,33" font="Regular;27" zPosition="2" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" halign="left"/>
+		<widget source="session.FrontendStatus" render="Progress" position="7,380" size="180,15" pixmap="bar_snr.png" zPosition="10" backgroundColor="transpBlack" transparent="1" borderWidth="2" borderColor="grey">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 	</screen>
