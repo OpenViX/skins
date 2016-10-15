@@ -1558,10 +1558,12 @@
 	<screen name="UserDialog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
-		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="735,600" size="1,1"/>
-		<widget name="VKeyIcon" pixmap="buttons/key_text.png" position="1740,1020" size="52,37"/>
-		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="introduction" render="Label" position="7,568" size="715,396" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="HelpWindow" position="5,585" size="1,1" zPosition="1"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1740,1027" size="52,37" zPosition="10">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="introduction" render="Label" position="930,1020" size="982,45" font="Regular;33" halign="center" foregroundColor="grey"/>
 	</screen>
 	<screen name="ScanIP" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
