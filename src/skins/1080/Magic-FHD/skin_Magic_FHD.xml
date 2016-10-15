@@ -1638,8 +1638,10 @@
 		<panel name="Green2Panel"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" position="5,585" size="1,1" zPosition="1"/>
-		<widget source="introduction" render="Label" position="930,1030" size="982,45" font="Regular;33" halign="center" foregroundColor="grey"/>
-		<widget name="VKeyIcon" pixmap="buttons/key_text.png" position="1740,1020" size="52,37" zPosition="10"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1740,1027" size="52,37" zPosition="10">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="introduction" render="Label" position="930,1020" size="982,45" font="Regular;33" halign="center" foregroundColor="grey"/>
 	</screen>
 	<screen name="UserManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
