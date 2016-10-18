@@ -459,6 +459,11 @@
 	<screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" >
 		<panel name="ChannelSelection" />
 	</screen>
+    <screen name="RadioInfoBar" position="1045,130" size="800,400" flags="wfNoBorder">
+        <widget source="RdsDecoder" render="Label" position="5,5" size="790,390" zPosition="4" font="DT;35" valign="center" halign="center">
+            <convert type="RdsInfo">RadioText</convert>
+    </widget>
+    </screen>
 	<screen name="SimpleChannelSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
 		<panel name="TopBar" />
 		<panel name="SetupScreen" />
