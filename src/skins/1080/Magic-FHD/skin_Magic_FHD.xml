@@ -928,13 +928,13 @@
 	<screen name="JobView" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="BlueBPanel"/>
-		<widget source="job_name" render="Label" position="885,120" size="720,90" font="Regular;42" foregroundColor="secondFG" halign="center"/>
-		<widget source="job_task" render="Label" position="885,220" size="720,75" font="Regular;34"/>
-		<widget source="job_progress" render="Progress" position="880,310" size="720,55" borderWidth="2" borderColor="grey"/>
-		<widget source="job_progress" render="Label" position="880,305" size="720,54" font="Regular;45" halign="center" foregroundColor="yellow" zPosition="2" transparent="1">
+		<widget source="job_name" render="Label" position="735,120" size="1177,110" font="Regular;42" foregroundColor="secondFG" halign="center"/>
+		<widget source="job_task" render="Label" position="735,235" size="1177,85" font="Regular;34" halign="center"/>
+		<widget source="job_progress" render="Progress" position="880,330" size="720,55" borderWidth="2" borderColor="grey"/>
+		<widget source="job_progress" render="Label" position="880,325" size="720,54" font="Regular;45" halign="center" foregroundColor="yellow" zPosition="2" transparent="1">
 			<convert type="ProgressToText"/>
 		</widget>
-		<widget source="job_status" render="Label" position="885,370" size="720,45" font="Regular;34"/>
+		<widget source="job_status" render="Label" position="885,400" size="720,45" font="Regular;34" halign="center"/>
 		<widget name="config" position="885,600" size="720,195" font="Regular;34"/>
 		<widget source="cancelable" render="Pixmap" pixmap="buttons/red.png" position="22,1027" size="400,60" zPosition="-1" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
@@ -1180,14 +1180,14 @@
 		<widget source="session.CurrentService" render="Label" position="330,105" size="1260,48" font="Regular;39" foregroundColor="grey" halign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="10,180" size="105,45" font="Regular;36" foregroundColor="foregroundColor" halign="left">
+		<widget source="session.Event_Now" render="Label" position="10,180" size="105,45" font="Regular;36" foregroundColor="foreground" halign="left">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="127,180" size="1570,45" font="Regular;36" foregroundColor="foregroundColor" noWrap="1" halign="left">
+		<widget source="session.Event_Now" render="Label" position="127,180" size="1570,45" font="Regular;36" foregroundColor="foreground" noWrap="1" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="1720,180" size="180,45" font="Regular;34"  foregroundColor="foregroundColor" halign="right">
+		<widget source="session.Event_Now" render="Label" position="1720,180" size="180,45" font="Regular;34"  foregroundColor="foreground" halign="right">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -1209,20 +1209,21 @@
 		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar.png" position="330,160" size="1260,12" transparent="1" zPosition="2" borderWidth="2" borderColor="secondBG">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="RdsDecoder" render="Pixmap" pixmap="icons/rass_logo.png" position="90,90" size="150,90" zPosition="2" alphatest="on">
+		<widget source="RdsDecoder" render="Pixmap" pixmap="skin_default/icons/rass_logo.png" position="90,90" size="150,90" zPosition="2" alphatest="on">
 			<convert type="RdsInfo">RasInteractiveAvailable</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.CurrentService" render="Picon" position="35,112" size="115,70" alphatest="blend" backgroundColor="secondBG" transparent="1" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-	<widget source="RdsDecoder" render="Label" position="1,1" size="1915,110" zPosition="2" foregroundColor="selectedFG" font="LCD;50" valign="center" halign="center">
+		<widget source="RdsDecoder" render="Label" position="1,1" size="1915,110" zPosition="2" foregroundColor="selectedFG" font="LCD;50" valign="center" halign="center">
 			<convert type="RdsInfo">RadioText</convert>
 		</widget>
 		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="1762,126" size="30,30" zPosition="3" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
+
 	<screen name="ChannelSelectionRadio" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
 		<panel name="Red1Panel"/>
