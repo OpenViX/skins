@@ -1,4 +1,4 @@
-<!--  Skin: ViX-Common Vs 3.2.67 by AndyBlac @ www.world-of-satellite.com  -->
+<!--  Skin: ViX-Common by AndyBlac @ www.world-of-satellite.com  -->
 <!--  This skin is a Freeware. Everyone can modify and use it in other images. , XmlUnboundNsPrefix -->
 <!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!! , XmlUnboundNsPrefix -->
 <!--  Do whatever you want with this skin, but don't tell it's yours, or your idea! , XmlUnboundNsPrefix -->
@@ -55,11 +55,15 @@
 		<widget source="session.CurrentService" render="Label" position="44,6" size="625,34" font="Boldit;30" foregroundColor="infobar_service_frgrnd" backgroundColor="infobar-bkgrnd" transparent="1" valign="top" halign="left" noWrap="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<ePixmap pixmap="icons/icon_update_off.png" position="650,12" size="20,20" zPosition="0" alphatest="blend"/>
-		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/icon_stableupdate.png" position="650,12" size="20,20" zPosition="1" alphatest="blend">
+		<ePixmap pixmap="icons/icon_update_off.png" position="634,12" size="20,20" zPosition="0" alphatest="blend"/>
+		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/icon_stableupdate.png" position="634,12" size="20,20" zPosition="1" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/icon_unstableupdate.png" position="650,12" size="20,20" zPosition="1" alphatest="blend">
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/icon_unstableupdate.png" position="634,12" size="20,20" zPosition="1" alphatest="blend">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/ico_stream.png" position="656,14" size="15,15" zPosition="1" alphatest="blend">
+			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<ePixmap pixmap="icons/icon_rec_off.png" position="673,13" size="31,17" zPosition="0" alphatest="blend"/>
@@ -200,14 +204,18 @@
 		<widget source="session.CurrentService" render="Picon" position="45,247" size="100,60" transparent="0" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="460,172" size="60,20" font="Bold;17" foregroundColor="infobar-frgrnd-on" backgroundColor="infobar-bkgrnd" transparent="1" halign="center">
+		<widget source="session.CurrentService" render="Label" position="444,172" size="60,20" font="Bold;17" foregroundColor="infobar-frgrnd-on" backgroundColor="infobar-bkgrnd" transparent="1" halign="center">
 			<convert type="PliExtraInfo">OrbitalPosition</convert>
 		</widget>
-		<ePixmap pixmap="icons/icon_update_off.png" position="520,171" size="20,20" zPosition="0" alphatest="blend"/>
-		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/icon_stableupdate.png" position="520,171" size="20,20" zPosition="1" alphatest="blend">
+		<ePixmap pixmap="icons/icon_update_off.png" position="506,171" size="20,20" zPosition="0" alphatest="blend"/>
+		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/icon_stableupdate.png" position="506,171" size="20,20" zPosition="1" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/icon_unstableupdate.png" position="520,171" size="20,20" zPosition="1" alphatest="blend">
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/icon_unstableupdate.png" position="506,171" size="20,20" zPosition="1" alphatest="blend">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/ico_stream.png" position="528,173" size="15,15" zPosition="1" alphatest="blend">
+			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<ePixmap pixmap="icons/icon_rec_off.png" position="545,172" size="31,17" zPosition="0" alphatest="blend"/>
