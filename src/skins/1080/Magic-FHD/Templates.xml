@@ -224,9 +224,15 @@
 		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/icon_unstableupdate.png" position="7,832" size="48,48" zPosition="10" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="1869,832" size="30,30" zPosition="3" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_rec.png" position="1869,832" size="20,20" zPosition="3" alphatest="on">
 		<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_stream.png" position="1895,832" size="20,20" zPosition="3" alphatest="on">
+			<convert type="ClientsStreaming"/>
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+
+
 		<widget source="session.CurrentService" render="Label" position="270,831" size="750,26" font="Regular;21" backgroundColor="secondBG" transparent="1" noWrap="1" halign="left">
 			<convert type="ServiceName">Provider</convert>
 		</widget>
