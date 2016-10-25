@@ -1219,7 +1219,11 @@
 		<widget source="RdsDecoder" render="Label" position="1,1" size="1915,110" zPosition="2" foregroundColor="selectedFG" font="LCD;50" valign="center" halign="center">
 			<convert type="RdsInfo">RadioText</convert>
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="1762,126" size="30,30" zPosition="3" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_rec.png" position="1762,126" size="20,20" zPosition="3" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_stream.png" position="1790,126" size="20,20" zPosition="3" alphatest="on">
+			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>

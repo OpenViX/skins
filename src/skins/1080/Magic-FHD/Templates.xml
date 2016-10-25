@@ -170,11 +170,15 @@
 			<convert type="ServiceInfo">IsHD</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4k.png" position="1650,109" size="60,31" zPosition="6" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4k.png" position="1635,109" size="60,31" zPosition="6" alphatest="on">
 			<convert type="ServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="1750,109" size="30,30" zPosition="3" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_rec.png" position="1660,109" size="20,20" zPosition="3" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_stream.png" position="1685,109" size="20,20" zPosition="3" alphatest="on">
+			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
