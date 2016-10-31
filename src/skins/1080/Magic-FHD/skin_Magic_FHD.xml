@@ -273,33 +273,11 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget name="list" position="780,123" size="1132,750" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
+		<widget name="list" position="780,120" size="1132,700" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
 				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
 				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
-		<widget source="ServiceEvent" render="Label" position="780,877" size="937,40" font="Regular;31" foregroundColor="selectedFG" noWrap="1" zPosition="2" halign="left">
-			<convert type="EventName">NextName</convert>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="1717,877" size="93,38" font="Regular;31" foregroundColor="selectedFG" halign="right">
-			<convert type="EventTime">NextStartTime</convert>
-			<convert type="ClockToText"/>
-		</widget>
-		<eLabel text="-" foregroundColor="selectedFG" position="1812,877" size="33,37" font="Regular;33" halign="center" zPosition="1"/>
-		<widget source="ServiceEvent" render="Label" position="1842,877" size="93,38" font="Regular;31" foregroundColor="selectedFG">
-			<convert type="EventTime">NextEndTime</convert>
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="780,922" size="937,40" font="Regular;31" foregroundColor="selectedFG" noWrap="1" zPosition="2" halign="left">
-			<convert type="EventName">ThirdName</convert>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="1717,922" size="93,38" font="Regular;31" foregroundColor="selectedFG" halign="right">
-			<convert type="EventTime">ThirdStartTime</convert>
-			<convert type="ClockToText"/>
-		</widget>
-		<eLabel text="-" foregroundColor="selectedFG" position="1812,922" size="33,37" font="Regular;33" halign="center" zPosition="1"/>
-		<widget source="ServiceEvent" render="Label" position="1842,922" size="93,38" font="Regular;31" foregroundColor="selectedFG">
-			<convert type="EventTime">ThirdEndTime</convert>
-			<convert type="ClockToText"/>
-		</widget>
+		<widget source="ServiceEvent" render="NextEpgInfo" position="780,821" size="1132,145" transparent="1" foregroundColor="selectedFG" noWrap="1" font="RegularSmall;30" NumberOfItems="3"/>		
+		
 		<widget source="ServiceEvent" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
