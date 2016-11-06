@@ -2771,6 +2771,23 @@
 	<screen name="TVTippsView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic"/>
 		<panel name="TVPanel"/>
+	<widget name="tvinfo1" position="1095,75" size="135,90" alphatest="blend" zPosition="1" />
+	<widget name="tvinfo2" position="1095,165" size="135,90" alphatest="blend" zPosition="1" />
+	<widget name="tvinfo3" position="1095,255" size="135,90" alphatest="blend" zPosition="1" />
+	<widget name="tvinfo4" position="1095,345" size="135,90" alphatest="blend" zPosition="1" />
+	<widget name="tvinfo5" position="1095,435" size="135,90" alphatest="blend" zPosition="1" />
+	<widget name="tvinfo6" position="1095,525" size="135,90" alphatest="blend" zPosition="1" />
+	</screen>
+	<screen name="tvTipps" position="7,540" size="1900,470" flags="wfNoBorder" backgroundColor="transparent">
+		<widget name="picture" position="20,0" size="387,270" alphatest="blend"/>
+		<widget name="label4" position="55,271" size="150,35" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#CD006C" halign="center" valign="center"/>
+		<widget name="label5" position="210,271" size="150,35" font="Regular;28" foregroundColor="#CD006C" backgroundColor="#FFFFFF" halign="center" valign="center"/>
+		<widget name="label" position="5,307" size="1800,45" font="Regular;33" foregroundColor="secondFG"/>
+		<widget name="label2" position="5,353" size="1800,45" font="Regular;33" foregroundColor="secondFG"/>
+		<widget name="label3" position="5,399" size="1800,70" font="Regular;33" foregroundColor="secondFG"/>
+		<widget name="elabel" position="420,0" size="150,150" font="Regular;28" zPosition="1"/>
+		<widget name="elabel3" position="420,150" size="353,125" font="Regular;28" zPosition="1"/>
+		<widget name="elabel2" position="575,0" size="100,100" font="Regular;28" zPosition="1"/>
 	</screen>
 	<screen name="TVProgrammView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic2"/>
@@ -2896,7 +2913,86 @@
 		<widget name="searchtext" position="10,130" size="1900,100" font="Regular;36" foregroundColor="secondFG" halign="center"/>
 		<widget name="searchmenu" position="250,235" size="1250,600" font="Regular;33" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 	</screen>
+<!-- Screens not yet used: -->
+<!--class getNumber(Screen):
+    skin = '\n\t\t\t
+	<screen position="center,center" size="175,70" backgroundColor="#000000" flags="wfNoBorder" title=" ">\n\t\t\t\t
+	<widget name="number" position="0,0" size="175,70" font="{font};40" halign="center" valign="center" transparent="1" zPosition="1"/>\n\t\t\t
+	</screen>-->
+<!--
+class TVNewsPicShow(Screen):
+    skinHD = '\n\t\t\t
+	<screen position="center,{position}" size="1240,640" title="Fotostrecke - TV Spielfilm">\n\t\t\t\t
+	<ePixmap position="0,0" size="1240,60" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/tvspielfilmHD.png" alphatest="blend" zPosition="1" />\n\t\t\t\t
+	<widget name="label" position="364,10" size="512,44" font="{font};18" foregroundColor="#697279" backgroundColor="#FFFFFF" halign="center" transparent="1" zPosition="2" />\n\t\t\t\t
+	<widget render="Label" source="global.CurrentTime" position="1000,0" size="225,60" font="{font};26" foregroundColor="#697279" backgroundColor="#FFFFFF" halign="right" valign="center" zPosition="2">\n\t\t\t\t\t
+	<convert type="ClockToText">Format:%H:%M:%S</convert>\n\t\t\t\t</widget>\n\t\t\t\t<widget name="picture" position="175,70" size="889,500" alphatest="blend" zPosition="1" />\n\t\t\t\t
+	<widget name="picindex" position="1065,70" size="165,24" font="{font};{fontsize}" halign="right" zPosition="1" />\n\t\t\t\t
+	<widget name="pictext" position="10,577" size="1220,63" font="{font};{fontsize}" halign="center" zPosition="1" />\n\t\t\t</screen>-->
+<!--
+class TVPicShow(Screen):
+    skinHD = '\n\t\t\t
+	<screen position="center,{position}" size="1240,640" title="Fotostrecke - TV Spielfilm">\n\t\t\t\t
+	<ePixmap position="0,0" size="1240,60" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/tvspielfilmHD.png" alphatest="blend" zPosition="1" />\n\t\t\t\t
+	<widget name="label" position="364,10" size="512,44" font="{font};18" foregroundColor="#697279" backgroundColor="#FFFFFF" halign="center" transparent="1" zPosition="2" />\n\t\t\t\t
+	<widget render="Label" source="global.CurrentTime" position="1000,0" size="225,60" font="{font};26" foregroundColor="#697279" backgroundColor="#FFFFFF" halign="right" valign="center" zPosition="2">\n\t\t\t\t\t
+	<convert type="ClockToText">Format:%H:%M:%S</convert>\n\t\t\t\t</widget>\n\t\t\t\t
+	<widget name="infotext" position="10,70" size="250,25" font="{font};{fontsize}" foregroundColor="#AAB2BA" halign="left" zPosition="1" />\n\t\t\t\t
+	<widget name="infotext2" position="10,105" size="250,25" font="{font};{fontsize}" foregroundColor="#AAB2BA" halign="left" zPosition="1" />\n\t\t\t\t
+	<widget name="infotext3" position="10,140" size="250,25" font="{font};{fontsize}" foregroundColor="#AAB2BA" halign="left" zPosition="1" />\n\t\t\t\t
+	<widget name="infotext4" position="10,175" size="250,25" font="{font};{fontsize}" foregroundColor="#AAB2BA" halign="left" zPosition="1" />\n\t\t\t\t
+	<widget name="picture" position="270,70" size="700,525" alphatest="blend" zPosition="1" />\n\t\t\t\t
+	<widget name="picindex" position="1110,70" size="120,22" font="{font};{fontsize2}" foregroundColor="#AAB2BA" halign="right" zPosition="1" />\n\t\t\t\t
+	<widget name="pictext" position="10,595" size="1220,48" font="{font};{fontsize2}" halign="center" valign="center" zPosition="1" />\n\t\t\t</screen>-->
+<!--
+class PicShowFull(Screen):
+    skin = '\n\t\t\t
+	<screen position="center,center" size="1024,576" flags="wfNoBorder" title="  " >\n\t\t\t\t
+	<eLabel position="0,0" size="1024,576" backgroundColor="#000000" zPosition="1" />\n\t\t\t\t
+	<widget name="picture" position="0,0" size="1024,576" alphatest="blend" zPosition="2" />\n\t\t\t\t
+	<widget name="picindex" position="5,5" size="100,20" font="{font};{fontsize}" foregroundColor="#A5ACAE" halign="left" transparent="1" zPosition="3" />\n\t\t\t
+	</screen>'
+    skinHD = '\n\t\t\t<screen position="center,center" size="1280,720" flags="wfNoBorder" title="  " >\n\t\t\t\t
+	<eLabel position="0,0" size="1280,720" backgroundColor="#000000" zPosition="1" />\n\t\t\t\t
+	<widget name="picture" position="0,0" size="1280,720" alphatest="blend" zPosition="2" />\n\t\t\t\t
+	<widget name="picindex" position="10,10" size="120,22" font="{font};{fontsize}" foregroundColor="#A5ACAE" halign="left" transparent="1" zPosition="3" />\n\t\t\t
+	</screen>-->
+<!--
+class FullScreen(Screen):
+    skinHD = '\n\t\t\t
+	<screen position="center,center" size="1280,720" flags="wfNoBorder" title="  " >\n\t\t\t\t
+	<eLabel position="0,0" size="1280,720" backgroundColor="#000000" zPosition="1" />\n\t\t\t\t
+	<widget name="picture" position="160,0" size="960,720" alphatest="blend" zPosition="2" />\n\t\t\t
+	</screen>-->
+<!--
+class infoScreenTVSpielfilm(Screen):
+    skin = '\n\t\t\t\t
+	<screen position="center,center" size="425,425" title=" " >\n\t\t\t\t\t
+	<ePixmap position="0,0" size="425,425" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/info.png" zPosition="1"/>\n\t\t\t\t\t
+	<widget name="label" position="0,72" size="425,350" font="{font};18" foregroundColor="#000000" backgroundColor="#FFFFFF" halign="center" valign="center" transparent="1" zPosition="2" />\n\t\t\t\t
+	</screen>-->
+<!--
+class tvEvent(Screen):
+    skin = '\n\t\t\t\t
+	<screen position="0,0" size="0,0" >\n\t\t\t\t
+	</screen>-->
 
+<!--
+class FolderSelection(Screen):
+    skin = '\n\t\t\t
+	<screen position="center,center" size="545,510" backgroundColor="#20000000" title="TV Spielfilm Setup">\n\t\t\t\t
+	<ePixmap position="0,0" size="545,50" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/tvspielfilm.png" alphatest="blend" zPosition="1" />\n\t\t\t\t
+	<ePixmap position="10,59" size="525,1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/setup/seperator.png" alphatest="off" zPosition="1" />\n\t\t\t\t<
+	widget name="folderlist" position="10,60" size="525,100" itemHeight="25" scrollbarMode="showNever" zPosition="1" />\n\t\t\t\t
+	<ePixmap position="10,161" size="525,1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/setup/seperator.png" alphatest="off" zPosition="1" />\n\t\t\t\t
+	<ePixmap position="125,171" size="18,18" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/buttons/green.png" alphatest="blend" zPosition="1" />\n\t\t\t\t
+	<ePixmap position="350,171" size="18,18" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/buttons/red.png" alphatest="blend" zPosition="1" />\n\t\t\t\t
+	<eLabel position="150,170" size="180,20" font="{font};18" halign="left" text="Speichern" transparent="1" zPosition="1" />\n\t\t\t\t
+	<eLabel position="375,170" size="180,20" font="{font};18" halign="left" text="Abbrechen" transparent="1" zPosition="1" />\n\t\t\t\t
+	<widget name="plugin" position="10,200" size="525,300" alphatest="blend" zPosition="1" />\n\t\t\t</screen>-->
+
+
+	
 	<!-- ## xbmcWetter ## -->
 	<screen name="xbmcWetterConfig" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
