@@ -3238,12 +3238,32 @@ class FolderSelection(Screen):
 		<panel name="RedBPanel"/>
 		<eLabel text="Cancel" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 		<panel name="GreenBPanel"/>
-		<eLabel text="OK" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<eLabel text="Save" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 		<panel name="YellowBPanel"/>
 		<widget source="archiveButton" render="Label" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget source="help" render="Label" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 
+	<!-- ## PiconsUpdater ## -->
+	<screen name="PiconsUpdaterView" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<eLabel text="Cancel" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<panel name="GreenBPanel"/>
+		<eLabel text="Save" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<panel name="YellowBPanel"/>
+		<eLabel text="Download Picons" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget name="config" position="755,120" size="1157,500" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="backgroundImage" position="7,550" size="500,300" zPosition="1" alphatest="blend" transparent="1" backgroundColor="transparent"/>
+		<widget name="previewImage" position="510,550" size="450,270" zPosition="1" alphatest="blend" transparent="1" backgroundColor="transparent"/>
+		<widget name="foregroundImage" position="970,550" size="500,300" zPosition="1" alphatest="blend" transparent="1" backgroundColor="transparent"/>
+	</screen>
+	<screen name="JobProgressView" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget source="titleText" render="Label" position="900,120" size="700,50" font="Regular;36" foregroundColor="secondFG" halign="center"/>
+		<widget name="downloadProgress" position="900,200" size="700,50" borderWidth="2" borderColor="grey"/>
+		<widget source="downloadProgressText" render="Label" position="900,200" size="700,50" font="Regular;35" halign="center" transparent="1" zPosition="2" foregroundColor="selectedFG"/>
+	</screen>
 
 </skin>
