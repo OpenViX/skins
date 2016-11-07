@@ -3328,21 +3328,29 @@ class FolderSelection(Screen):
 	</screen>
 
 	<!-- ## Pravos TV ## -->
-	<screen name="PravosMenu" position="fill" flags="wfNoBorder" title="">
+	<screen name="PravosMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<widget source="menu" render="Listbox" position="800,120" size="600,855" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
-				<convert type="TemplatedMultiContent">
-					{"template": [
-							MultiContentEntryPixmapAlphaTest(pos = (5,10), size =(100,60), png = 0),
-							MultiContentEntryText(pos = (120,10), size = (420,45), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 1),
-						],
-					"fonts": [gFont("Regular",33)],
-					"itemHeight":90
-					}
-				</convert>
-			</widget>
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryPixmapAlphaTest(pos = (5,10), size =(100,60), png = 0),
+						MultiContentEntryText(pos = (120,10), size = (420,45), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 1),
+					],
+				"fonts": [gFont("Regular",33)],
+				"itemHeight":90
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<!-- ## SpinnerSelector## -->
+	<screen name="SpinnerSelectionBox" position="fill" flags="wfNoBorder" title="SpinnerSelector">
+		<panel name="BasicTemplate"/>
+		<widget name="text" position="735,120" size="1177,60" font="Regular;36" foregroundColor="secondFG" halign="center"/>
+		<widget name="list" position="735,200" size="1177,765" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="bild" position="200,700" size="300,200" transparent="1"/>
 	</screen>
 
 </skin>
