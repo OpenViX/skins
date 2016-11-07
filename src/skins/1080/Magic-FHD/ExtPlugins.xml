@@ -3069,5 +3069,33 @@ class FolderSelection(Screen):
 		<widget name="list_right" position="1310,120" size="560,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 
+		<!-- ## DreamMediathek ## -->
+	<screen name="dreamMediathekStationsScreen" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+		<widget source="streamlist" render="Listbox" position="755,120" size="1157,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (100,[
+						MultiContentEntryText(pos =(5,0), size =(1152,45), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # provider, title, streamurl
+						MultiContentEntryText(pos = (15, 50), size = (1142,45), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0), # provider, title, streamurl
+					]),
+				"state": (140,[
+						MultiContentEntryText(pos = (10,0), size = (1147,45), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (20,22), size = (1137,90), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 2 is the description
+					])
+				},
+				"fonts": [gFont("Regular", 22),gFont("Regular",27),gFont("Regular",33),gFont("Regular",30)],
+				"itemHeight":100
+			}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="dreamMediathekPlayer" position="0,45" size="1920,187" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="PlayerPanel"/>
+	</screen>
 
 </skin>
