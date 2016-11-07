@@ -3300,7 +3300,7 @@ class FolderSelection(Screen):
 		<panel name="Green1Panel"/>
 		<panel name="Yellow1Panel"/>
 		<panel name="Blue1Panel"/>
-		<widget source="list" render="Listbox" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
+		<widget source="list" render="Listbox" position="735,120" size="1177,855" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 			{"templates":
 				{"default": (100,[
@@ -3325,6 +3325,24 @@ class FolderSelection(Screen):
 		<widget name="count" position="735,960" zPosition="5" size="300,45" font="Regular;33"/>
 		<widget name="page" position="1050,960" zPosition="5" size="300,45" font="Regular;33"/>
 		<widget name="currentnumbers" position="1400,960" zPosition="5" size="300,45" font="Regular;33"/>
+	</screen>
+
+	<!-- ## Pravos TV ## -->
+	<screen name="PravosMenu" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<widget source="menu" render="Listbox" position="800,120" size="600,855" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
+				<convert type="TemplatedMultiContent">
+					{"template": [
+							MultiContentEntryPixmapAlphaTest(pos = (5,10), size =(100,60), png = 0),
+							MultiContentEntryText(pos = (120,10), size = (420,45), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 1),
+						],
+					"fonts": [gFont("Regular",33)],
+					"itemHeight":90
+					}
+				</convert>
+			</widget>
 	</screen>
 
 </skin>
