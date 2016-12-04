@@ -3626,8 +3626,8 @@ class FolderSelection(Screen):
 	<!-- ## BlurayPlayer ## -->
 	<screen name="BlurayMain" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="Red1Panel"/>
-		<panel name="Green1Panel"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
 		<widget name="name" position="735,120" size="1177,110" halign="center" font="Regular;45" foregroundColor="secondFG"/>
 		<widget source="list" render="Listbox" position="735,230" size="1177,720" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent" >
@@ -3640,6 +3640,41 @@ class FolderSelection(Screen):
 			</convert>
 		</widget>
 		<widget name="thumbnail" position="7,600" size="715,475" transparent="1" alphatest="on" />
+	</screen>
+	<screen name="BlurayPlayerDirBrowser" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<widget name="filelist" position="780,123" size="1132,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
+	</screen>
+	<screen name="BlurayAudioSelection" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<widget name="config" position="930,122" size="637,495" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" foregroundColor="grey"/>
+		<widget name="streams" position="755,500" size="1035,480" zPosition="3" foregroundColor="grey"/>
+<!--			<convert type="TemplatedMultiContent">
+				{"templates":
+				{"default": (45, [
+					MultiContentEntryText(pos = (0, 0), size = (90, 45), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
+					MultiContentEntryText(pos = (95, 0), size = (300, 45), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
+					MultiContentEntryText(pos = (400, 0), size = (600, 45), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+					MultiContentEntryText(pos = (1005, 0), size = (25, 45), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
+				], True, "showOnDemand"),
+				"notselected": (45, [
+					MultiContentEntryText(pos = (0, 0), size = (90, 45), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
+					MultiContentEntryText(pos = (95, 0), size = (300, 45), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
+					MultiContentEntryText(pos = (400, 0), size = (600, 45), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+					MultiContentEntryText(pos = (1005, 0), size = (25, 45), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
+				], False, "showOnDemand")
+				},
+			"fonts": [gFont("Regular",33), gFont("Regular",33)],
+			"itemHeight": 45
+				}
+				</convert>
+		</widget>-->
 	</screen>
 
 </skin>
