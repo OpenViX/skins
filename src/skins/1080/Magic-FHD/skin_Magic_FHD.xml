@@ -81,134 +81,203 @@
 		<widget source="session.Event_Next" render="Label" position="975,270" size="930,562" font="Regular;30" backgroundColor="secondBG" zPosition="1" transparent="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_sub_on.png" position="975,145" size="54,36" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_sub_on.png" position="975,125" size="54,36" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_crypt_on.png" position="1030,145" size="40,21" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_crypt_on.png" position="1030,125" size="40,21" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1081,145" size="60,24" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1081,125" size="60,24" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_txt_on.png" position="1152,145" size="40,24" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_txt_on.png" position="1152,125" size="40,24" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<ePixmap pixmap="infobar/ico_format_4-3.png" position="1203,148" size="40,21" zPosition="1" alphatest="on"/>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_16-9.png" position="1203,148" size="40,21" zPosition="2" alphatest="on">
+		<ePixmap pixmap="infobar/ico_format_4-3.png" position="1203,128" size="40,21" zPosition="1" alphatest="on"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_16-9.png" position="1203,128" size="40,21" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_hd.png" position="1203,148" size="40,21" zPosition="4" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_hd.png" position="1203,128" size="40,21" zPosition="4" alphatest="on">
 			<convert type="ServiceInfo">IsHD</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4k.png" position="1203,148" size="40,21" zPosition="6" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4k.png" position="1203,128" size="40,21" zPosition="6" alphatest="on">
 			<convert type="ServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_hbbtv_on.png" position="1255,145" size="64,24" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_hbbtv_on.png" position="1255,125" size="64,24" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide"	/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_ip.png" position="1325,145" size="30,30" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_ip.png" position="1325,125" size="30,30" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsStream</convert>
 			<convert type="ConditionalShowHide"	/>
 		</widget>
-		
-		<widget source="session.Event_Now" render="Pixmap" pixmap="infobar/ico_pdc.png" position="1360,145" size="40,25" zPosition="2" alphatest="on">
+		<widget source="session.Event_Now" render="Pixmap" pixmap="infobar/ico_pdc.png" position="1360,125" size="40,25" zPosition="2" alphatest="on">
 			<convert type="EventName">Pdc</convert>
 			<convert type="ConditionalShowHide"	/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S:" position="1410,135" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S:" position="1410,115" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C:" position="1410,135" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C:" position="1410,115" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T:" position="1410,135" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" borderColor="black" borderWidth="1" transparent="1">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T:" position="1410,115" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" borderColor="black" borderWidth="1" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" position="1537,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" text="A" foregroundColor="orange">
+		<widget source="session.TunerInfo" render="FixedLabel" text="A" position="1537,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">1</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" position="1537,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" text="A" foregroundColor="green" halign="left">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="A" position="1537,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
 			<convert type="FrontendInfo">NUMBER</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" position="1575,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" text="B" foregroundColor="orange">
+		<widget source="session.TunerInfo" render="FixedLabel" text="B" position="1575,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">2</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" position="1575,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" text="B" foregroundColor="green" halign="left">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="B" position="1575,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
 			<convert type="FrontendInfo">NUMBER</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" position="1612,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" text="C" foregroundColor="orange">
+		<widget source="session.TunerInfo" render="FixedLabel" text="C" position="1612,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">4</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" position="1612,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" text="C" foregroundColor="green" halign="left">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="C" position="1612,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
 			<convert type="FrontendInfo">NUMBER</convert>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" position="1650,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" text="D" foregroundColor="orange">
+		<widget source="session.TunerInfo" render="FixedLabel" text="D" position="1650,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">8</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" position="1650,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" text="D" foregroundColor="green" halign="left">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="D" position="1650,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
 			<convert type="FrontendInfo">NUMBER</convert>
 			<convert type="ValueRange">3,3</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" position="1687,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" text="E" foregroundColor="orange">
+		<widget source="session.TunerInfo" render="FixedLabel" text="E" position="1687,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">16</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" position="1687,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" text="E" foregroundColor="green" halign="left">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="E" position="1687,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
 			<convert type="FrontendInfo">NUMBER</convert>
 			<convert type="ValueRange">4,4</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" position="1725,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" text="F" foregroundColor="orange">
+		<widget source="session.TunerInfo" render="FixedLabel" text="F" position="1725,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">32</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" position="1725,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" text="F" foregroundColor="green" halign="left">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="F" position="1725,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
 			<convert type="FrontendInfo">NUMBER</convert>
 			<convert type="ValueRange">5,5</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" position="1762,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" text="G" foregroundColor="orange">
+		<widget source="session.TunerInfo" render="FixedLabel" text="G" position="1762,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">64</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" position="1762,135" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" text="G" foregroundColor="green" halign="left">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="G" position="1762,105" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
 			<convert type="FrontendInfo">NUMBER</convert>
 			<convert type="ValueRange">6,6</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Label"  text="	Signal:" position="1800,135" size="120,55" font="Regular;21" backgroundColor="transpBlack" transparent="1">
+		<widget source="session.TunerInfo" render="FixedLabel" text="H" position="1537,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">128</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="H" position="1537,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">7,7</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="I" position="1575,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">256</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="I" position="1575,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">8,8</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="J" position="1612,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">512</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="J" position="1612,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">9,9</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="K" position="1650,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1024</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="K" position="1650,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">10,10</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="L" position="1687,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2048</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="L" position="1687,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">11,11</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="M" position="1725,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4096</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="M" position="1725,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">12,12</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="N" position="1762,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8192</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="N" position="1762,145" size="30,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="3" foregroundColor="green" halign="left">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">13,13</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Label"  text="	Signal:" position="1800,115" size="120,55" font="Regular;21" backgroundColor="transpBlack" transparent="1">
 			<convert type="RotorPosition"/>
 		</widget>
 	</screen>
