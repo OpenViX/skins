@@ -1741,6 +1741,17 @@
 			<convert type="ValueBitTest">131072</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<eLabel text="S" position="938,254" size="20,35" font="DR;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="center" valign="center" transparent="1" zPosition="2" />
+		<widget source="session.FrontendInfo" render="FixedLabel" text="S" position="938,254" size="20,35" font="DR;30" foregroundColor="blue" backgroundColor="topbarbackground" halign="center" valign="center" transparent="1" zPosition="4">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">18,18</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="S" position="938,254" size="20,35" font="DR;30" foregroundColor="red" backgroundColor="topbarbackground" halign="center" valign="center" transparent="1" zPosition="3">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">131072</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<ePixmap pixmap="screens/2infobar2.png" position="980,51" size="920,200" alphatest="blend" transparent="1" zPosition="-1"/>
 		<widget source="session.CurrentService" render="Picon" position="1000,58" size="220,132" transparent="0" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
