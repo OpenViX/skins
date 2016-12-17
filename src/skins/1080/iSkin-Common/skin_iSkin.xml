@@ -358,6 +358,71 @@
 		<panel name="BlueButton" />
 	</screen>
 	
+	<!-- ## BLUETOOTH SETUP ## -->
+	<screen name="BluetoothSetup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Bluetooth Setup">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="deviceList" render="Listbox" position="20,51" size="949,810" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+			{"template":
+				[
+					MultiContentEntryText(pos = (80, 0), size = (490, 42), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 0 is Name
+					MultiContentEntryText(pos = (80, 42), size = (200, 24), font=2, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is Type
+					MultiContentEntryText(pos = (280, 42), size = (200, 24), font=2, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 1 is status
+					MultiContentEntryPixmapAlphaBlend(pos = (10, 10), size = (50, 50), png = 4), # index 4 is bt_icon
+				],
+				"fonts": [gFont("DR", 32), gFont("DR", 28) ,gFont("DR", 22), gFont("DR", 16)],
+				"itemHeight": 70
+			}
+			</convert>
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="MenuButton" />
+		<panel name="PIG" />
+		<ePixmap pixmap="screens/descriptionbox.png" position="1100,640" size="620,360" alphatest="blend" transparent="1" zPosition="1"/>
+		<widget source="description" render="Label" position="1120,650" size="570,300" font="DL;26" foregroundColor="menuforeground" backgroundColor="description" transparent="1" halign="center" valign="center" zPosition="3" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+		<panel name="YellowButton" />
+		<panel name="BlueButton" />
+	</screen>
+	<screen name="BluetoothSetupConfig" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Bluetooth Setup">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<panel name="ConfigWidget" />
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="BottomBar" />
+		<panel name="RedButtonSource" />
+		<panel name="GreenButtonSource" />
+	</screen>
+	<screen name="BluetoothDiscovery" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" title="Bluetooth Setup">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<widget source="deviceList" render="Listbox" position="20,51" size="949,810" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+			{"template":
+				[
+					MultiContentEntryText(pos = (80, 0), size = (490, 70), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 0 is Name
+					MultiContentEntryPixmapAlphaBlend(pos = (10, 10), size = (50, 50), png = 1), # index 1 is bt_icon
+				],
+				"fonts": [gFont("DR", 40), gFont("DR", 28) ,gFont("DR", 22), gFont("DR", 16)],
+				"itemHeight": 70
+			}
+			</convert>
+		</widget>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<ePixmap pixmap="screens/descriptionbox.png" position="1100,640" size="620,360" alphatest="blend" transparent="1" zPosition="1"/>
+		<widget source="description" render="Label" position="1120,650" size="570,300" font="DL;26" foregroundColor="menuforeground" backgroundColor="description" transparent="1" halign="center" valign="center" zPosition="3" />
+		<panel name="BottomBar" />
+		<panel name="RedButtonSource" />
+		<panel name="GreenButtonSource" />
+		<panel name="YellowButtonSource" />
+		<panel name="BlueButtonSource" />
+	</screen>
+	
 	<!-- ## BUFFER INDICATOR ## -->
 	<screen name="BufferIndicator" position="0,0" size="1920,51" flags="wfNoBorder" backgroundColor="transparent" zPosition="3">
 		<panel name="InfoBarTopBar" />
