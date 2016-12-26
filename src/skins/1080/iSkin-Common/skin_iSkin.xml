@@ -1895,6 +1895,60 @@
 		</widget>
 	</screen>
 
+	<!-- ## KODI MOVIE PLAYER ## -->
+	<screen name="XBMCMoviePlayer" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="KodiMoviePlayer">
+		<panel name="InfoBarTopBarMinusTitle" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/icon_crypt.png" position="110,6" size="34,34" alphatest="blend" zPosition="2">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="150,0" size="700,50" font="DB;34" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2">
+			<convert type="ServiceName">NameOnly</convert>
+		</widget>
+		<ePixmap pixmap="screens/moviebar.png" position="13,51" size="670,100" alphatest="blend" transparent="1" zPosition="-1"/>
+		<widget name="statusicon" position="45,56" size="25,25" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png,icons/blank.png" alphatest="blend" zPosition="2" />
+		<widget name="speed" position="85,52" size="150,30" font="DR;24" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" zPosition="2" />
+		<widget source="session.CurrentService" render="Label" position="427,48" size="100,35" font="DR;28" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="right" valign="center" zPosition="2">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel text="/" font="DR;28" position="537,48" size="25,35" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" transparent="1" zPosition="2"/>
+		<widget source="session.CurrentService" render="Label" position="555,48" size="120,35" font="DR;28" foregroundColor="blue" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" zPosition="2">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<ePixmap pixmap="iSkin-Common/screens/progressbarbackground.png" position="35,85" size="630,5" alphatest="blend" transparent="1" zPosition="1"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="35,85" size="630,10" pointer="iSkin-Common/screens/progressbar.png:630,0" transparent="1" zPosition="2">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="25,90" size="160,35" font="DR;22" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" zPosition="2">
+			<convert type="PliExtraInfo">VideoCodec</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="25,115" size="200,35" font="DR;22" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" zPosition="2">
+			<convert type="VAudioInfo">AudioCodec</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="270,115" size="200,35" font="DR;22" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="right" valign="center" transparent="1" zPosition="2">
+			<convert type="PliExtraInfo">ResolutionString</convert>
+		</widget>
+		<ePixmap pixmap="icons/ipstream_off.png" position="487,114" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ipstream_off.png" position="487,114" size="30,30" alphatest="blend" transparent="1" zPosition="3">
+			<convert type="ServiceInfo">IsStream</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap pixmap="icons/dolbybackground.png" position="527,114" size="50,30" alphatest="blend" zPosition="2"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/dolbydigital.png" position="527,114" size="50,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap pixmap="icons/resbackground.png" position="585,114" size="78,30" alphatest="blend" transparent="1" zPosition="2"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hdres.png" position="585,114" size="78,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hd4kres.png" position="585,114" size="78,30" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
 	<!-- ## LANGUAGE SELECTION ## -->
 	<screen name="LanguageSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
 		<panel name="TopBar" />
