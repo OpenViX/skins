@@ -480,7 +480,7 @@
 		<panel name="TopBar" />
 		<panel name="SetupScreen" />
 		<widget name="list" position="20,51" size="949,810" backgroundColor="topbarbackground" foregroundColorEvent="blue" foregroundColorEventSelected="menuforeground" foregroundColorService="menuforeground" foregroundColorServiceSelected="menuforeground" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="blue" serviceItemHeight="45" serviceNumberFont="DR;30" serviceNameFont="DR;30" serviceInfoFont="DR;28" progressBarWidth="100" colorEventProgressbar="menuforeground" colorEventProgressbarSelected="menuforeground" colorEventProgressbarBorder="menuforeground" colorEventProgressbarBorderSelected="menuforeground" fieldMargins="13" transparent="1" scrollbarMode="showOnDemand" zPosition="3"/>
-		<widget source="ServiceEvent" render="Label" position="80,858" size="800,50" font="DT;24" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
+		<widget source="ServiceEvent" render="Label" position="80,858" size="800,50" font="DT;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<panel name="PIG" />
@@ -525,17 +525,29 @@
 		<panel name="YellowButton" />
 		<panel name="BlueButton" />
 	</screen>
-	<screen name="SlimChannelSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
-		<panel name="ChannelSelection" />
+	<screen name="SlimChannelSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="InfoBarTopBar" />
+		<panel name="SetupScreen" />
+		<widget name="list" position="20,51" size="949,810" backgroundColor="topbarbackground" foregroundColorEvent="blue" foregroundColorEventSelected="menuforeground" foregroundColorService="menuforeground" foregroundColorServiceSelected="menuforeground" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="blue" serviceItemHeight="45" serviceNumberFont="DR;30" serviceNameFont="DR;30" serviceInfoFont="DR;28" progressBarWidth="100" colorEventProgressbar="menuforeground" colorEventProgressbarSelected="menuforeground" colorEventProgressbarBorder="menuforeground" colorEventProgressbarBorderSelected="menuforeground" fieldMargins="13" transparent="1" scrollbarMode="showOnDemand" zPosition="3"/>
+		<widget source="ServiceEvent" render="Label" position="80,858" size="800,50" font="DT;30" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="3">
+			<convert type="TransponderInfo"></convert>
+		</widget>
+		<panel name="MenuButton" />
+		<panel name="MenuIconTV" />
+		<panel name="BottomBar" />
+		<panel name="RedButton" />
+		<panel name="GreenButton" />
+		<panel name="YellowButton" />
+		<panel name="BlueButton" />
 	</screen>
 	<screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black" >
 		<panel name="ChannelSelection" />
 	</screen>
-    <screen name="RadioInfoBar" position="1045,130" size="800,400" flags="wfNoBorder">
-        <widget source="RdsDecoder" render="Label" position="5,5" size="790,390" zPosition="4" font="DT;35" valign="center" halign="center">
-            <convert type="RdsInfo">RadioText</convert>
-    </widget>
-    </screen>
+	<screen name="RadioInfoBar" position="1045,130" size="800,400" flags="wfNoBorder">
+		<widget source="RdsDecoder" render="Label" position="5,5" size="790,390" zPosition="4" font="DT;35" valign="center" halign="center">
+			<convert type="RdsInfo">RadioText</convert>
+		</widget>
+	</screen>
 	<screen name="SimpleChannelSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
 		<panel name="TopBar" />
 		<panel name="SetupScreen" />
