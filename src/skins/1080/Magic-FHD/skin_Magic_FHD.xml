@@ -356,18 +356,14 @@
 		<widget source="ServiceEvent" render="Label" position="7,524" size="765,40" font="Regular;32" foregroundColor="secondFG" halign="center" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="7,564" size="78,35" font="Regular;31" foregroundColor="selectedFG" halign="right">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText"/>
+		<widget source="ServiceEvent" render="Label" position="7,564" size="180,35" font="Regular;31" foregroundColor="selectedFG" halign="right">
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText">Default,Default</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="387,564" size="78,35" font="Regular;31" foregroundColor="selectedFG">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="ServiceEvent" render="Progress" pixmap="window/progress.png" position="95,580" size="285,12" borderWidth="1" borderColor="selectedFG">
+		<widget source="ServiceEvent" render="Progress" pixmap="window/progress.png" position="195,580" size="285,12" borderWidth="1" borderColor="selectedFG">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="510,564" size="180,35" font="Regular;31" halign="right" foregroundColor="selectedFG">
+		<widget source="ServiceEvent" render="Label" position="490,564" size="200,35" font="Regular;31" halign="left" foregroundColor="selectedFG">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -388,14 +384,9 @@
 		<widget source="Title" foregroundColor="blue" render="Label" position="2,3" size="825,45" transparent="1" zPosition="1" font="Regular;37" halign="center" valign="center"/>
 		<widget name="list" position="22,51" size="855,720" itemHeight="45" serviceNumberFont="Regular;33" serviceInfoFont="Crs;33" serviceNameFont="Regular;33" serviceItemHeight="35"
 				colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" transparent="1" foregroundColorServiceNotAvail="#656565" scrollbarMode="showOnDemand"/>
-		<widget source="ServiceEvent" render="Label" position="22,775" zPosition="2" size="90,37" font="Regular;33" backgroundColor="black" halign="right" noWrap="1" foregroundColor="yellow" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">
-			</convert>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="127,775" zPosition="2" size="109,37" font="Regular;33" backgroundColor="black" noWrap="1" foregroundColor="yellow" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:- %H:%M</convert>
+		<widget source="ServiceEvent" render="Label" position="22,775" zPosition="2" size="200,37" font="Regular;33" backgroundColor="black" halign="right" noWrap="1" foregroundColor="yellow" transparent="1">
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText">Default,Default</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="22,820" size="855,133" font="Regular;27" backgroundColor="black" borderColor="black" borderWidth="2" foregroundColor="grey" zPosition="2" transparent="1">
 			<convert type="EventName">FullDescription</convert>
@@ -436,17 +427,9 @@
 		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="22,610" size="225,37" font="Regular;33" foregroundColor="yellow">
-		<convert type="EventTime">StartTime</convert>
-		<convert type="ClockToText">ShortDate</convert>
-		</widget>
-		<widget source="Event" render="Label" position="247,610" size="120,37" font="Regular;33" foregroundColor="yellow" halign="right">
-		<convert type="EventTime">StartTime</convert>
-		<convert type="ClockToText"/>
-		</widget>
-		<widget source="Event" render="Label" position="367,610" size="120,37" font="Regular;33" foregroundColor="yellow" halign="left">
-		<convert type="EventTime">EndTime</convert>
-		<convert type="ClockToText">Format:- %H:%M</convert>
+		<widget source="Event" render="Label" position="7,610" size="750,40" font="Regular;33" foregroundColor="yellow" halign="center">
+		<convert type="EventTime">Times</convert>
+		<convert type="ClockToText">LongFullDate,Default</convert>
 		</widget>
 		<widget source="Event" render="Label" position="5,650" size="730,357" font="Regular;33" foregroundColor="grey" halign="center" valign="center">
 			<convert type="EventName">FullDescription</convert>
@@ -479,17 +462,9 @@
 		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="22,610" size="225,37" font="Regular;33" foregroundColor="yellow">
-		<convert type="EventTime">StartTime</convert>
-		<convert type="ClockToText">ShortDate</convert>
-		</widget>
-		<widget source="Event" render="Label" position="247,610" size="120,37" font="Regular;33" foregroundColor="yellow" halign="right">
-		<convert type="EventTime">StartTime</convert>
-		<convert type="ClockToText"/>
-		</widget>
-		<widget source="Event" render="Label" position="367,610" size="120,37" font="Regular;33" foregroundColor="yellow" halign="left">
-		<convert type="EventTime">EndTime</convert>
-		<convert type="ClockToText">Format:- %H:%M</convert>
+		<widget source="Event" render="Label" position="7,610" size="750,40" font="Regular;33" foregroundColor="yellow" halign="center">
+		<convert type="EventTime">Times</convert>
+		<convert type="ClockToText">LongFullDate,Default</convert>
 		</widget>
 		<widget source="Event" render="Label" position="5,650" size="730,357" font="Regular;33" foregroundColor="grey" halign="center" valign="center">
 			<convert type="EventName">FullDescription</convert>
@@ -516,9 +491,12 @@
 		<widget source="Service" render="Label" position="7,585" size="715,100" font="Regular;36" foregroundColor="selectedFG" halign="center">
 		<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget name="datetime" position="7,690" size="715,45" font="Regular;33" halign="center" foregroundColor="grey" />
-		<widget name="duration" position="7,740" size="715,45" font="Regular;33" halign="center" foregroundColor="grey" />
-		<widget source="session.Event_Now" render="Label" position="7,790" size="715,45" font="Regular;33" foregroundColor="secondFG" halign="center">
+		<widget source="Event" render="Label" position="7,690" size="715,45" font="Regular;33" foregroundColor="grey" halign="center"> 
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText">LongFullDate,Default</convert>
+		</widget>
+		<widget name="duration" position="7,740" size="715,45" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget source="Event" render="Label" position="7,790" size="715,45" font="Regular;33" foregroundColor="secondFG" halign="center">
 			<convert type="EventName">Genre</convert>
 		</widget>
 		<widget source="Event" render="Label" position="7,840" size="715,45" font="Regular;33" foregroundColor="secondFG" halign="center">
@@ -539,12 +517,12 @@
 		<widget source="Service" render="Label" position="7,585" size="715,100" font="Regular;36" foregroundColor="selectedFG" halign="center">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="7,585" size="715,100" font="Regular;36" foregroundColor="selectedFG" halign="center">
-			<convert type="MovieInfo">RecordServiceName</convert>
+		<widget source="Event" render="Label" position="7,690" size="715,45" font="Regular;33" foregroundColor="grey" halign="center"> 
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText">LongFullDate,Default</convert>
 		</widget>
-		<widget name="datetime" position="22,690" size="690,45" font="Regular;33" halign="center" foregroundColor="grey" />
-		<widget name="duration" position="22,740" size="690,45" font="Regular;33" halign="center" foregroundColor="grey" />
-		<widget source="session.Event_Now" render="Label" position="22,790" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
+		<widget name="duration" position="22,740" size="690,45" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget source="Event" render="Label" position="22,790" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
 			<convert type="EventName">Genre</convert>
 		</widget>
 		<widget source="Event" render="Label" position="22,840" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
@@ -556,9 +534,9 @@
 	</screen>
 	<screen name="InfoBarEventView" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
 		<widget name="FullDescription" position="15,97" size="1890,720" font="Regular;42" borderColor="black" borderWidth="1" foregroundColor="white" backgroundColor="background" transparent="1" valign="top" halign="center" zPosition="2"/>
-		<widget source="Title" render="Label" position="15,7" size="1275,75" font="Regular;45" borderColor="black" borderWidth="2" foregroundColor="secondFG" transparent="1" backgroundColor="background" halign="center"/>
-		<widget name="datetime" position="1275,15" size="375,45" font="Regular;39" borderColor="black" borderWidth="2" transparent="1" halign="left"/>
-		<widget name="duration" position="1650,15" size="225,45" font="Regular;39" borderColor="black" borderWidth="2" transparent="1" halign="left"/>
+		<widget source="Title" render="Label" position="5,7" size="1100,75" font="Regular;40" borderColor="black" borderWidth="2" foregroundColor="secondFG" transparent="1" backgroundColor="background" halign="center"/>
+		<widget name="datetime" position="1110,15" size="575,45" font="Regular;36" borderColor="black" borderWidth="2" transparent="1" halign="center"/>
+		<widget name="duration" position="1690,15" size="225,45" font="Regular;34" borderColor="black" borderWidth="2" transparent="1" halign="center"/>
 	</screen>
 	<screen name="QuickEPG" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="Red1Panel"/>
@@ -589,10 +567,8 @@
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="0,780" size="1920,300" backgroundColor="transparent" transparent="0" flags="wfNoBorder">
 		<ePixmap alphatest="off" pixmap="infobar/hd.png" position="0,-10" size="1920,330" zPosition="-1"/>
-		<widget source="global.CurrentTime" render="Label" position="1650,0" size="225,45" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="right">
-		<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1425,32" size="450,45" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="right">		<convert type="ClockToText">Date</convert>
+		<widget source="global.CurrentTime" render="Label" position="1000,0" size="915,45" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" transparent="1" zPosition="1" font="Regular;36" halign="right">
+		<convert type="ClockToText">LongDate</convert>
 		</widget>
 		<ePixmap pixmap="buttons/red.png" position="22,260" size="30,30" zPosition="-1" alphatest="blend"/>
 		<ePixmap pixmap="buttons/green.png" position="457,260" size="30,30" zPosition="-1" alphatest="blend"/>
@@ -614,7 +590,7 @@
 	<screen name="GraphicalEPG" position="fill">
 		<widget source="Title" render="Label" position="22,3" size="1500,90" font="Regular;37" foregroundColor="grey" valign="center" zPosition="1"/>
 		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,75" font="Regular;30" foregroundColor="grey" zPosition="1" valign="center" halign="right">
-			<convert type="ClockToText">Full</convert>
+			<convert type="ClockToText">LongFullDate</convert>
 		</widget>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
@@ -631,15 +607,11 @@
 				RecordForegroundColorSelected="selectedFG" ZapBackgroundColor="white" ZapBackgroundColorSelected="white" ZapForegroundColorSelected="selectedFG" transparent="1"/>
 		<widget name="bouquetlist" position="200,135" size="1600,720" itemHeight="40" font="Regular;30" foregroundColorSelected="selectedFG" backgroundColorSelected="selectedBG" zPosition="4" transparent="0"/>
 		<widget name="timeline_now" position="7,135" zPosition="2" size="28,712" pixmap="epg/timeline-now.png" alphatest="on"/>
-		<widget source="Event" render="Label" position="7,848" size="150,50" font="Regular;36" foregroundColor="selectedFG" halign="right">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText"/>
+		<widget source="Event" render="Label" position="7,848" size="300,50" font="Regular;36" foregroundColor="selectedFG" halign="right">
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText">Default,Default</convert>
 		</widget>
-		<widget source="Event" render="Label" position="157,848" size="150,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:- %H:%M</convert>
-		</widget>
-		<widget source="Event" render="Label" position="307,848" size="1605,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
+		<widget source="Event" render="Label" position="330,848" size="1585,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Event" render="Label" position="7,890" size="1905,90" font="Regular;33" zPosition="1" halign="left" valign="center">
@@ -667,13 +639,9 @@
 		<panel name="Blue1Panel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget source="Event" render="Label" position="472,7" size="150,50" font="Regular;36" foregroundColor="selectedFG" halign="right">
-		<convert type="EventTime">StartTime</convert>
-		<convert type="ClockToText"/>
-		</widget>
-		<widget source="Event" render="Label" position="634,7" size="150,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
-		<convert type="EventTime">EndTime</convert>
-		<convert type="ClockToText">Format:- %H:%M</convert>
+		<widget source="Event" render="Label" position="472,7" size="300,50" font="Regular;36" foregroundColor="selectedFG" halign="right">
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText">Default,Default</convert>
 		</widget>
 		<widget source="Event" render="Label" position="795,7" size="720,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
 		<convert type="EventName">Name</convert>
@@ -750,13 +718,7 @@
 		<widget name="chosenletter" position="780,123" size="1132,822" font="Regular;75" foregroundColor="yellow" halign="center" valign="center" zPosition="4"/>
 		<widget name="list" position="780,123" size="1132,820" font="channelselectionservice;31" itemHeight="50" pbarShift="15" pbarHeight="20" pbarLargeWidth="70"
 				pbarColour="blue" pbarColourSeen="yellow" pbarColourRec="red" partIconeShift="7" spaceIconeText="8" iconsWidth="37" trashShift="7" dirShift="8"
-				spaceRight="5" dateWidth="220" foregroundColor="grey" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"/>
-		<widget source="Service" render="Label" position="7,570" size="750,75" font="Regular;31" halign="center" foregroundColor="secondFG">
-			<convert type="MovieInfo">ShortDescription</convert>
-		</widget>
-		<widget source="Service" render="Label" position="7,650" size="750,355" font="Regular;34" foregroundColor="grey" halign="center" valign="center">
-			<convert type="MovieInfo">MetaDescription</convert>
-		</widget>
+				spaceRight="5" dateWidth="250" foregroundColor="grey" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"/>
 		<widget source="Service" render="Label" position="780,960" size="225,35" font="Regular;30" foregroundColor="secondFG" halign="left">
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
@@ -772,6 +734,12 @@
 		</widget>
 		<widget source="Service" render="Label" position="277,532" size="465,40" font="Regular;33" foregroundColor="selectedFG" zPosition="1" halign="right">
 			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="7,570" size="750,75" font="Regular;31" halign="center" foregroundColor="secondFG">
+			<convert type="MovieInfo">ShortDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position="7,650" size="750,355" font="Regular;34" foregroundColor="grey" halign="center" valign="center">
+			<convert type="MovieInfo">MetaDescription</convert>
 		</widget>
 		<widget name="DescriptionBorder" position="0,0" size="0,0" transparent="1"/>
 	</screen>
