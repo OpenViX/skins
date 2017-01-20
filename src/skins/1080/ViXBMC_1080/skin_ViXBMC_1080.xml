@@ -117,9 +117,10 @@
 		<widget name="AboutScrollLabel" position="420,210" size="1080,660" font="menulist;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="5" />
 		<widget source="lab2" render="Label" position="420,850" size="1080,60" font="screentitle;40" foregroundColor="thirdcolour" backgroundColor="menubackground" halign="center" transparent="1" zPosition="2" />
 		<widget source="lab3" render="Label" position="420,900" size="1080,60" font="screentitle;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" transparent="1" zPosition="2" />
-		<panel name="SetupMenuInfoButton" />
+		<panel name="SetupMenuRedButtonSource" />
 		<panel name="SetupMenuGreenButtonSource" />
 		<panel name="SetupMenuYellowButtonSource" />
+		<panel name="SetupMenuBlueButtonSource" />
 	</screen>
 	<screen name="SoftwareUpdateChanges" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -179,16 +180,16 @@
 				{"templates":
 				{"default": (60, [
 				MultiContentEntryText(pos = (0, 0), size = (35, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # key,
-				MultiContentEntryText(pos = (10, 0), size = (50, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
-				MultiContentEntryText(pos = (80, 0), size = (300, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
-				MultiContentEntryText(pos = (380, 0), size = (400, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+				MultiContentEntryText(pos = (10, 0), size = (80, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
+				MultiContentEntryText(pos = (110, 0), size = (300, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
+				MultiContentEntryText(pos = (400, 0), size = (400, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
 				MultiContentEntryText(pos = (1045, 0), size = (25, 60), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
 				], True, "showNever"),
 				"notselected": (60, [
 				MultiContentEntryText(pos = (0, 0), size = (35, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # key,
-				MultiContentEntryText(pos = (10, 0), size = (50, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
-				MultiContentEntryText(pos = (80, 0), size = (300, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
-				MultiContentEntryText(pos = (380, 0), size = (400, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+				MultiContentEntryText(pos = (10, 0), size = (80, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
+				MultiContentEntryText(pos = (110, 0), size = (300, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
+				MultiContentEntryText(pos = (400, 0), size = (400, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
 				MultiContentEntryText(pos = (1045, 0), size = (25, 60), font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 5), # selection,
 				], False, "showNever")
 				},
@@ -278,7 +279,7 @@
 	<screen name="BufferIndicator" title="Channel" position="center,50" size="300,60" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="status" position="0,0" size="300,60" font="infobar;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="0" halign="center" valign="center" zPosition="100"/>
 	</screen>
-	
+
 	<!-- ## BUTTON SETUP ## -->
 	<screen name="ButtonSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -296,7 +297,21 @@
 		<panel name="SetupMenuRedButtonSource2" />
 		<panel name="SetupMenuGreenButtonSource2" />
 	</screen>
-	
+
+	<!-- ## CABLE SCAN ## -->
+	<screen name="CableScanScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Cable Scan">
+		<panel name="SetupMenuPanel3" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<panel name="SetupMenuConfigWidget" />
+		<panel name="SetupMenuIntroductionWidget" />
+	</screen>
+	<screen name="CableScanStatus" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Cable Scan">
+		<panel name="SetupMenuPanel3" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<widget name="scan_state" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="top" valign="center" zPosition="2" />
+		<widget name="scan_progress" position="460,873" size="1040,5" backgroundColor="blue" transparent="0" zPosition="1"/>
+	</screen>
+
 	<!-- ## CCCAM INFO ## -->
 	<screen name="CCcamInfoMain" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel3" />
@@ -427,7 +442,7 @@
 		<panel name="FullScreenGreenButton" />
 		<panel name="FullScreenYellowButton" />
 		<panel name="FullScreenBlueButton" />
-    </screen>
+	</screen>
 	<screen name="SlimChannelSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 	    <panel name="ChannelSelection" />
 	</screen>
@@ -447,7 +462,7 @@
 		<panel name="SetupMenuMenuWidget3" />
 	</screen>
 	<screen name="SimpleChannelSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="SetupMenuPanel3" />
+		<panel name="SetupMenuPanel2" />
 		<panel name="SetupMenuMenuWindowIcon" />
 		<panel name="SetupMenuListWidget3" />
 		<panel name="SetupMenuRedButtonSource2" />
@@ -541,7 +556,10 @@
 		<panel name="SetupMenuPanel3" />
 		<panel name="SetupMenuMenuWindowIcon" />
 		<widget source="TunerHeader" render="Label" position="420,210" size="1080,50" font="screentitle;42" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="top" transparent="1" zPosition="2" />
-		<widget source="nims" render="Label" position="420,265" size="1080,250" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="top" transparent="1" enableWrapAround="0" zPosition="2"/>
+		<widget source="Tuner0" render="Label" position="420,265" size="1080,45" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3" />
+		<widget source="Tuner1" render="Label" position="420,310" size="1080,45" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3" />
+		<widget source="Tuner2" render="Label" position="420,355" size="1080,45" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3" />
+		<widget source="Tuner3" render="Label" position="420,400" size="1080,45" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="3" />
 		<widget source="HDDHeader" render="Label" position="420,520" size="1080,50" font="screentitle;42" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="top" transparent="1" zPosition="2" />
 		<widget source="hdd" render="Label" position="420,575" size="1080,150" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="top" transparent="1" enableWrapAround="0" zPosition="2"/>
 		<widget source="MountsHeader" render="Label" position="420,725" size="1080,50" font="screentitle;42" foregroundColor="secondcolour" backgroundColor="menubackground" halign="left" valign="top" transparent="1" zPosition="2" />
@@ -694,7 +712,7 @@
 		</widget>
 		<widget source="Event" render="Label" position="1730,173" font="menulist;38" size="170,60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2" >
 			<convert type="EventTime">Remaining</convert>
-            <convert type="RemainingToText">InMinutes</convert>
+			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget source="Event" render="RunningText" position="10,230" size="1900,170" font="infobar;36" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=11000,wrap" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="top" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
@@ -716,7 +734,58 @@
 	<screen name="GraphicalEPGPIG" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
 		<panel name="GraphicalEPG" />
 	</screen>
-	
+
+	<!-- ## EPG IMPORTER ## -->
+	<screen name="EPGImportConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<panel name="SetupMenuConfigWidget" />
+		<widget name="status" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<widget name="statusbar" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<panel name="SetupMenuInfoButton" />
+		<panel name="SetupMenuMenuButton" />
+		<panel name="SetupMenuRedButtonSource2" />
+		<panel name="SetupMenuGreenButtonSource2" />
+		<panel name="SetupMenuYellowButtonSource2" />
+		<panel name="SetupMenuBlueButtonSource2" />
+	</screen>
+	<screen name="EPGImportSources" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<panel name="SetupMenuListWidget3" />
+		<panel name="SetupMenuRedButtonSource2" />
+		<panel name="SetupMenuGreenButtonSource2" />
+	</screen>
+	<screen name="EPGImportLog" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<panel name="SetupMenuListLogWidget3" />
+		<panel name="SetupMenuMenuButton" />
+		<panel name="SetupMenuRedButtonSource2" />
+		<panel name="SetupMenuBlueButtonSource2" />
+	</screen>
+
+	<!-- ## EPG REFRESH ## -->
+	<screen name="EPGRefreshConfiguration" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<panel name="SetupMenuConfigWidget" />
+		<widget source="help" render="Label" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<panel name="SetupMenuRedButtonSource2" />
+		<panel name="SetupMenuGreenButtonSource2" />
+		<panel name="SetupMenuYellowButtonSource2" />
+		<panel name="SetupMenuBlueButtonSource2" />
+	</screen>
+	<screen name="EPGRefreshServiceEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<panel name="SetupMenuConfigWidget" />
+		<panel name="SetupMenuRedButtonSource2" />
+		<panel name="SetupMenuGreenButtonSource2" />
+		<panel name="SetupMenuYellowButtonSource2" />
+		<panel name="SetupMenuBlueButtonSource2" />
+	</screen>
+
 	<!-- ## EVENTVIEW ## -->
 	<screen name="EventView" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
 		<eLabel position="407,76" size="1106,697" backgroundColor="outlinemenubackground" zPosition="-1" />
@@ -743,7 +812,7 @@
 		</widget>
 		<widget source="key_red" render="Label" position="420,773" size="270,60" font="buttons;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2" />
 		<widget source="key_green" render="Label" position="690,773" size="270,60" font="buttons;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2" />
-        <widget source="key_yellow" render="Label" position="960,773" size="270,60" font="buttons;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2" />
+		<widget source="key_yellow" render="Label" position="960,773" size="270,60" font="buttons;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2" />
 		<widget source="key_blue" render="Label" position="1230,773" size="270,60" font="buttons;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="EventViewSimple" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
@@ -787,7 +856,7 @@
 		<eLabel position="410,205" size="1100,565" backgroundColor="menubackground" zPosition="-1" />
 		<widget name="menu" position="420,220" size="1080,540" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
 	</screen>
-	
+
 	<!-- ## EXECUTE ## -->
 	<screen name="Execute" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -796,7 +865,7 @@
 		<panel name="SetupMenuYellowButton2" />
 		<panel name="SetupMenuBlueButton2" />
 	</screen>
-	
+
 	<!-- ## HDMI-CEC ## -->
 	<screen name="HdmiCECSetupScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -806,10 +875,10 @@
 		<widget source="fixed_address" render="Label" position="420,880" size="1080,50" font="screentitle;34" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 		<panel name="SetupMenuRedButtonSource2" />
 		<panel name="SetupMenuGreenButtonSource2" />
-        <panel name="SetupMenuYellowButtonSource2" />
+		<panel name="SetupMenuYellowButtonSource2" />
 		<panel name="SetupMenuBlueButtonSource2" />
 	</screen>
-	
+
 	<!-- ## HELP SCREEN ## -->
 	<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -822,7 +891,7 @@
 		<panel name="WizardRemoteArrowUp2" />
 		<widget name="long_key" position="150,800" size="160,50" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="0" halign="center" valign="center" zPosition="2" />
 	</screen>
-	
+
 	<!-- ## HISTORY ZAP ## -->
 	<screen name="HistoryZapSelector" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel3" />
@@ -843,7 +912,7 @@
 			</convert>
 		</widget>
 	</screen>
-	
+
 	<!-- ## IMDB ## -->
 	<screen name="IMDB" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -860,10 +929,10 @@
 		<widget name="poster" position="1550,320" size="335,427" alphatest="blend"  zPosition="2" />
 		<panel name="SetupMenuRedButton2" />
 		<panel name="SetupMenuGreenButton2" />
-        <panel name="SetupMenuYellowButton2" />
+		<panel name="SetupMenuYellowButton2" />
 		<panel name="SetupMenuBlueButton2" />	
 	</screen>
-	
+
 	<!-- ## INPUT BOX ## -->
 	<screen name="InputBox" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel3" />
@@ -871,7 +940,7 @@
 		<widget name="text" position="420,210" size="1080,660" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 		<widget name="input" position="420,900" size="1080,60" font="screentitle;40" />
 	</screen>
-	
+
 	<!-- ## INPUT DEVICES ## -->
 	<screen name="InputDeviceSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -890,7 +959,7 @@
 		<widget name="introduction" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 		<panel name="SetupMenuRedButtonSource2" />
 		<panel name="SetupMenuGreenButtonSource2" />
-        <panel name="SetupMenuYellowButtonSource2" />
+		<panel name="SetupMenuYellowButtonSource2" />
 		<panel name="SetupMenuBlueButtonSource2" />
 	</screen>
 	<screen name="InputDeviceSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -900,10 +969,10 @@
 		<widget name="introduction" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 		<panel name="SetupMenuRedButtonSource2" />
 		<panel name="SetupMenuGreenButtonSource2" />
-        <panel name="SetupMenuYellowButtonSource2" />
+		<panel name="SetupMenuYellowButtonSource2" />
 		<panel name="SetupMenuBlueButtonSource2" />
 	</screen>
-	
+
 	<!-- ## JOB VIEW ## -->
 	<screen name="JobView" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 	    <panel name="SetupMenuPanel3" />
@@ -935,7 +1004,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
-	
+
 	<!-- ## LANGUAGES ## -->
 	<screen name="LanguageSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -954,7 +1023,7 @@
 		<panel name="SetupMenuRedButton2" />
 		<panel name="SetupMenuGreenButton2" />
 	</screen>
-	
+
 	<!-- ## LOCATION BOX ## -->
 	<screen name="LocationBox" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -964,12 +1033,12 @@
 		<widget name="filelist" position="420,310" size="1080,420" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" zPosition="2"/>
 		<widget name="textbook" position="420,730" size="1080,60" font="screentitle;36" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" zPosition="2"/>
 		<widget name="booklist" position="420,790" size="1080,180" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" zPosition="2"/>
-	    <panel name="SetupMenuRedButton2" />
+		<panel name="SetupMenuRedButton2" />
 		<panel name="SetupMenuGreenButton2" />
-        <panel name="SetupMenuYellowButton2" />
+		<panel name="SetupMenuYellowButton2" />
 		<panel name="SetupMenuBlueButton2" />
 	</screen>
-	
+
 	<!-- ## LOG MANAGER ## -->
 	<screen name="LogManager" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -978,7 +1047,7 @@
 		<widget name="LogsSize" position="420,880" size="1080,60" font="screentitle;36" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
 		<panel name="SetupMenuRedButton2" />
 		<panel name="SetupMenuGreenButton2" />
-        <panel name="SetupMenuYellowButton2" />
+		<panel name="SetupMenuYellowButton2" />
 		<panel name="SetupMenuBlueButton2" />
 	</screen>
 	<screen name="LogManagerViewLog" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -992,10 +1061,10 @@
 		<widget name="list" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
 		<panel name="SetupMenuRedButton2" />
 		<panel name="SetupMenuGreenButton2" />
-        <panel name="SetupMenuYellowButton2" />
+		<panel name="SetupMenuYellowButton2" />
 		<panel name="SetupMenuBlueButton2" />
 	</screen>
-	
+
 	<!-- ## MANUAL SCAN  ## -->
 	<screen name="ScanSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -1005,7 +1074,7 @@
 		<panel name="SetupMenuRedButtonSource" />
 		<panel name="SetupMenuGreenButtonSource" />
 	</screen>
-	
+
 	<!-- ## MEMORY INFO ## -->
 	<screen name="SystemMemoryInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<eLabel position="407,66" size="1106,897" backgroundColor="outlinemenubackground" zPosition="-1" />
@@ -1025,21 +1094,21 @@
 		<widget source="lab2" render="Label" position="420,850" size="1080,60" font="screentitle;40" foregroundColor="thirdcolour" backgroundColor="menubackground" halign="center" transparent="1" zPosition="2" />
 		<widget source="lab3" render="Label" position="420,900" size="1080,60" font="screentitle;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" transparent="1" zPosition="2" />
 	</screen>
-	
+
 	<!-- ## MENU ## -->
 	<screen name="Menu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="SetupMenuPanel3" />
+		<panel name="SetupMenuPanel3" />
 		<panel name="SetupMenuMenuWindowIcon" />
-        <widget source="menu" render="Listbox" position="420,210" size="1080,720" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2">
-            <convert type="TemplatedMultiContent">
-                {"template": [ MultiContentEntryText(pos = (10,0), size = (1070,60), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0 ) ],
-                "fonts": [gFont("menulist",40)],
-                "itemHeight": 60
-                }
-            </convert>
-        </widget>
-    </screen>
-	
+		<widget source="menu" render="Listbox" position="420,210" size="1080,720" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (10,0), size = (1070,60), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0 ) ],
+				"fonts": [gFont("menulist",40)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+	</screen>
+
 	<!-- ## MESSAGEBOX ## -->
 	<screen name="MessageBox" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 	    <eLabel position="407,66" size="1106,962" backgroundColor="outlinemenubackground" zPosition="-1" />
@@ -1169,7 +1238,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
-	
+
 	<!-- ## MOVIESELECTION ## -->
 	<screen name="MovieSelection" position="fill" backgroundColor="transparent" flags="wfNoBorder" >
 		<eLabel position="fill" backgroundColor="outlinemenubackground" zPosition="-1" />
@@ -1179,7 +1248,7 @@
 		<ePixmap position="1790,0" size="130,123" pixmap="menuicons/movieselection.png" alphatest="blend" zPosition="2"/>
 		<panel name="FullScreenMiddleBoxes" />
 		<widget name="waitingtext" position="10,140" size="940,800" font="infobar;36" foregroundColor="secondcolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2" />
-		<widget name="list" position="10,140" size="940,800" font="channelselectionevent;30" itemHeight="60" pbarShift="14" pbarHeight="20" pbarLargeWidth="70" pbarColour="secondcolour" pbarColourSeen="yellow" pbarColourRec="red" partIconeShift="2" spaceIconeText="10" iconsWidth="37" trashShift="5" dirShift="5" spaceRight="5" columns="270,300" foregroundColor="maincolour" backgroundColor="menubackground" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"  />
+		<widget name="list" position="10,140" size="940,800" font="channelselectionevent;34" itemHeight="60" pbarShift="14" pbarHeight="20" pbarLargeWidth="70" pbarColour="secondcolour" pbarColourSeen="yellow" pbarColourRec="red" partIconeShift="2" spaceIconeText="10" iconsWidth="37" trashShift="5" dirShift="5" spaceRight="5" dateWidth="230" foregroundColor="maincolour" backgroundColor="menubackground" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"  />
 		<eLabel text="STORAGE" position="20,956" size="250,60" font="screentitle;42" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 		<widget name="freeDiskSpace" position="240,958" size="690,60" font="infobar;40" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2" />
 		<eLabel text="INFORMATION" position="970,140" size="940,60" font="screentitle;44" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2"/>
@@ -1197,7 +1266,7 @@
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
 		<eLabel text="DETAILS" position="970,380" size="200,60" font="screentitle;42" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
-      	<widget source="Service" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="970,440" size="940,210" font="infobar;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2">
+		<widget source="Service" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" position="970,440" size="940,210" font="infobar;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2">
 			<convert type="MovieInfo">MetaDescription</convert>
 		</widget>
 		<widget name="TrashcanSize" position="970,670" size="940,60" font="screentitle;42" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
@@ -1214,7 +1283,7 @@
 		<panel name="FullScreenYellowButton" />
 		<panel name="FullScreenBlueButton" />
 	</screen>
-	
+
 	<!-- ## MUTE ## -->
 	<screen name="Mute" position="center,20" size="200,120" flags="wfNoBorder" backgroundColor="transparent" title="Mute" zPosition="10">
 		<ePixmap position="0,0" size="200,120" pixmap="icons/mute.png" transparent="1" alphatest="blend" />
@@ -1245,7 +1314,31 @@
 		<panel name="SetupMenuGreenButtonSource2" />
 		<panel name="SetupMenuBlueButtonSource2" />
 	</screen>
-	
+
+	<!-- ## NETWORK ## - DEVICE SETUP ## -->
+	<screen name="NetworkAdapterSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<widget source="list" render="Listbox" position="420,210" size="1080,700" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (160,0),size = (750,50),font=0,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 1),# index 1 is the interfacename
+					MultiContentEntryText(pos = (160,50),size = (750,50),font=1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 2),# index 2 is the description
+					MultiContentEntryPixmapAlphaBlend(pos = (70,7),size = (55,55),png = 3),# index 3 is the interface pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (20,20),size = (40,30),png = 4),# index 4 is the default pixmap
+				],
+				"fonts": [gFont("menulist",48),gFont("screentitle",38)],
+				"itemHeight":100
+				}
+			</convert>
+		</widget>
+		<panel name="SetupMenuIntroductionWidget" />
+		<panel name="SetupMenuRedButtonSource2" />
+		<panel name="SetupMenuGreenButtonSource2" />
+		<panel name="SetupMenuYellowButtonSource2" />
+		<panel name="SetupMenuBlueButtonSource2" />
+	</screen>
+
 	<!-- ## NETWORK - ADAPTER TEST ## -->
 	<screen name="NetworkAdapterTest" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -1288,21 +1381,9 @@
 		<widget source="IF" render="Label" position="950,790" size="600,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" transparent="1" zPosition="2" />
 		<widget source="Statustext" render="Label" position="750,850" size="200,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" transparent="1" zPosition="2"/>
 		<widget name="statuspic" pixmaps="buttons/key_green.png,buttons/key_red.png" position="950,850" size="67,48" transparent="1" alphatest="blend" zPosition="10"/>
-	    <panel name="SetupMenuRedButtonSource2" />
+		<panel name="SetupMenuRedButtonSource2" />
 	</screen>
-	
-	<!-- ## NETWORK - FTP ## -->
-	<screen name="NetworkFtp" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="SetupMenuPanel2" />
-		<panel name="SetupMenuMenuWindowIcon" />
-		<widget name="lab1" position="420,210" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<widget name="lab2" position="520,300" size="400,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2" />
-		<widget name="labstop" position="1020,300" size="200,60" font="menulist;40" backgroundColor="red" valign="center" halign="center" zPosition="2" />
-		<widget name="labrun" position="1020,300" size="200,60" font="menulist;40" backgroundColor="green" valign="center" halign="center" zPosition="3" />
-		<panel name="SetupMenuRedButton2" />
-		<panel name="SetupMenuGreenButton2" />
-	</screen>
-	
+
 	<!-- ## NETWORK - INADYN ## -->
 	<screen name="NetworkInadyn" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -1512,7 +1593,7 @@
 		<panel name="SetupMenuMenuWindowIcon" />
 		<widget name="lab1" position="640,210" size="250,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2" />
 		<widget name="labactive" position="910,210" size="200,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
-		<widget name="lab2" position="640,270" size="250,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2" />
+		<widget name="lab2" position="550,270" size="340,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2" />
 		<widget name="labstop" position="910,270" size="200,60" font="menulist;40" backgroundColor="red" valign="center" halign="center" zPosition="2" />
 		<widget name="labrun" position="910,270" size="200,60" font="menulist;40" backgroundColor="green" valign="center" halign="center" zPosition="3" />
 		<panel name="SetupMenuRedButtonSource2" />
@@ -1525,10 +1606,16 @@
 		<panel name="SetupMenuLogsWindowIcon" />
 		<widget name="infotext" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
 	</screen>
-	
-	<!-- ## NETWORK - TELNET ## -->
-	<screen name="NetworkTelnet" position="fill" flags="wfNoBorder" title="" backgroundColor="transparent">
-		<panel name="NetworkFtp" />
+
+	<!-- ## NETWORK ## PASSWORD SETUP ## -->
+	<screen name="NetworkSetPassword" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuSetupWindowIcon" />
+		<widget name="passwd" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
+		<panel name="SetupMenuRedButtonSource2" />
+		<panel name="SetupMenuGreenButtonSource2" />
+		<panel name="SetupMenuYellowButtonSource2" />
+		<panel name="SetupMenuBlueButtonSource2" />
 	</screen>
 	
 	<!-- ## NETWORK - USER MANAGER ## -->
@@ -1636,7 +1723,7 @@
 		<panel name="SetupMenuMenuWindowIcon" />
 		<widget name="AboutScrollLabel" position="420,210" size="1080,600" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="2" />
 		<widget source="Statustext" render="Label" position="420,790" size="200,38" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
-		<widget name="statuspic" pixmaps="buttons/key_green.png,buttons/key_red.png" position="640,790" size="67,48" transparent="1" alphatest="blend" zPosition="3"/>
+		<widget name="statuspic" pixmaps="buttons/key_green.png,buttons/key_red.png" position="620,790" size="67,48" transparent="1" alphatest="blend" zPosition="3"/>
 		<widget source="IFtext" render="Label" position="420,850" size="200,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<widget source="IF" render="Label" position="640,850" size="600,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 	</screen>
@@ -1777,7 +1864,7 @@
 		<panel name="SetupMenuYellowButton2" />
 		<panel name="SetupMenuBlueButton2" />
 	</screen>
-	
+
 	<!-- ## REMOTE CONTROL CODE ## -->
 	<screen name="RemoteControlCode" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -1793,12 +1880,19 @@
 		<widget name="cancel" position="420,963" size="270,60" font="buttons;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 		<widget name="ok" position="690,963" size="270,60" font="buttons;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
-	
+
 	<!-- ## RESTART SCREEN ## -->
 	<screen name="QuitMainloopScreen" position="fill" flags="wfNoBorder" backgroundColor="black">
-		<widget name="text" position="450,770" size="1000,300" font="infobar;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
+		<widget name="text" position="0,770" size="1920,300" font="infobar;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 	</screen>
-	
+
+	<!-- ## SATELLITE EQUIPMENT CONTROL ## -->
+	<screen name="SecParameterSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Satellite equipment setup">
+		<panel name="SetupMenuPanel3" />
+		<panel name="SetupMenuMenuWindowIcon" />
+		<panel name="SetupMenuConfigWidget3" />
+	</screen>
+
 	<!-- ## SAT DISH ## -->
 	<screen name="Dish" flags="wfNoBorder" position="0,0" size="600,290" backgroundColor="transparent" zPosition="-1">
 		<eLabel position="0,0" size="600,290" backgroundColor="outlinemenubackground" zPosition="-1" />
@@ -1823,7 +1917,7 @@
 	<screen name="Satfinder" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel3" />
 		<panel name="SetupMenuMenuWindowIcon" />
-		<ePixmap pixmap="icons/dish_scan.png" position="420,260" size="179,165" transparent="1" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="icons/dish_scan.png" position="420,230" size="179,165" transparent="1" alphatest="blend" zPosition="2" />
 		<eLabel name="lock" text="LOCK" position="410,437" size="120,50" font="menulist;40" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="right" zPosition="2"/>
 		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="550,435" size="50,50" alphatest="blend" zPosition="2">
 			<convert type="FrontendInfo">LOCK</convert>
@@ -1840,21 +1934,21 @@
 		<widget source="Frontend" render="Progress" position="755,270" size="500,20" pixmap="icons/snr_bar.png" borderWidth="2" borderColor="white" zPosition="1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="1275,258" size="80,50" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" >
+		<widget source="Frontend" render="Label" position="1275,258" size="100,50" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" >
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<eLabel name="agc" text="AGC" position="630,303" size="100,50" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="2" />
 		<widget source="Frontend" render="Progress" position="755,315" size="500,20" pixmap="icons/agc_bar.png" borderWidth="2" borderColor="white" zPosition="1">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="1275,303" size="80,50" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" >
+		<widget source="Frontend" render="Label" position="1275,303" size="100,50" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" >
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<eLabel name="ber" text="BER" position="630,348" size="100,50" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="2" />
 		<widget source="Frontend" render="Progress" position="755,360" size="500,20" pixmap="icons/snr_bar.png" borderWidth="2" borderColor="white" zPosition="1">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="1275,348" size="80,50" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" >
+		<widget source="Frontend" render="Label" position="1275,348" size="100,50" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" >
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="420,450" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
@@ -1904,15 +1998,15 @@
 	    <panel name="SetupMenuPanel3" />
 		<panel name="SetupMenuMenuWindowIcon" />
 		<widget name="infolist" position="420,210" size="1080,540" font="menulist;36" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" selectionDisabled="1" zPosition="2"/>
+		<panel name="SetupMenuRedButtonSource" />
 	</screen>
 	<screen name="ServiceInfo" position="fill" backgroundColor="transparent" flags="wfNoBorder" title="Service info">
 		<panel name="SetupMenuPanel2" />
 		<panel name="SetupMenuMenuWindowIcon" />
 		<widget name="infolist" position="420,210" size="1080,540" font="menulist;36" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" selectionDisabled="1" zPosition="2"/>
-		<panel name="SetupMenuRedButtonSource2" />
-		<panel name="SetupMenuGreenButtonSource2" />
-		<panel name="SetupMenuYellowButtonSource2" />
-		<panel name="SetupMenuBlueButtonSource2" />
+		<panel name="SetupMenuRedButtonSource" />
+		<panel name="SetupMenuYellowButtonSource" />
+		<panel name="SetupMenuBlueButtonSource" />
 	</screen>
 	
 	<!-- ## SERVICE SCAN ## -->
@@ -2022,7 +2116,7 @@
 		<widget name="text" position="420,830" size="1080,120" font="screentitle;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2" />
 		<panel name="FeedsStatus" />
 	</screen>
-	
+
 	<!-- ## STORAGE DEVICES ## -->
 	<screen name="HarddiskSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel3" />
@@ -2037,7 +2131,15 @@
 		<widget name="bus" position="420,330" size="1080,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" halign="left" transparent="1" zPosition="2" />
 		<widget source="initializetext" render="Label" position="420,963" size="270,60" font="buttons;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
-	
+
+	<!-- ## STREAMING CLIENTS INFO SCREEN ## -->
+	<screen name="StreamingClientsInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Streaming clients info">
+		<panel name="SetupMenuPanel2" />
+		<panel name="SetupMenuLogsWindowIcon" />
+		<widget name="ScrollLabel" position="420,210" size="1080,720" font="menulist;40" itemHeight="60" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
+		<panel name="SetupMenuRedButtonSource2" />
+	</screen>
+
 	<!-- ## SUBTITLES ## -->
 	<screen name="Subtitles" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
@@ -2184,7 +2286,7 @@
 		</applet>
 	</screen>
 		
-	<!-- ## Unhandled Key ## -->
+	<!-- ## UNHANDLED KEY ## -->
 	<screen name="UnhandledKey" position="1730,30" size="147,132" flags="wfNoBorder" zPosition="100" backgroundColor="transparent">
 		<widget name="UnhandledKeyPixmap" position="0,0" size="147,132" pixmap="icons/unhandled-key.png" alphatest="blend" backgroundColor="transparent" />
 	</screen>
@@ -2363,16 +2465,18 @@
 	<screen name="VIXSwap" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
 		<panel name="SetupMenuMenuWindowIcon" />
-		<widget name="autostart_off" position="700,222" pixmap="icons/lock_off.png" size="50,50" alphatest="blend" zPosition="2" />
-		<widget name="autostart_on" position="700,222" pixmap="icons/lock_on.png" size="50,50" alphatest="blend" zPosition="3" />
-		<widget name="lab1" position="780,200" size="700,100" font="menulist;40" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2" />
-		<widget name="lab2" position="620,400" size="200,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
-		<widget name="labplace" position="850,402" size="400,60" font="menulist;40" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<widget name="lab3" position="620,470" size="200,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="2" zPosition="2" />
-		<widget name="labsize" position="850,472" size="400,60" font="menulist;40" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<widget name="lab4" position="620,540" size="200,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
-		<widget name="inactive" position="850,542" size="400,60" font="menulist;40" backgroundColor="red" halign="center" valign="center" zPosition="2" />
-		<widget name="active" position="850,542" size="400,60" font="menulist;40" backgroundColor="green" halign="center" valign="center" zPosition="3" />
+		<widget name="autostart_off" position="700,205" pixmap="icons/lock_off.png" size="50,50" alphatest="blend" zPosition="2" />
+		<widget name="autostart_on" position="700,205" pixmap="icons/lock_on.png" size="50,50" alphatest="blend" zPosition="3" />
+		<widget name="lab1" position="780,200" size="700,60" font="menulist;40" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2" />
+		
+		<widget name="lab2" position="570,400" size="270,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2" />
+		<widget name="labplace" position="870,400" size="420,60" font="menulist;40" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		
+		<widget name="lab3" position="640,470" size="200,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="right" valign="center" transparent="2" zPosition="2" />
+		<widget name="labsize" position="870,470" size="400,60" font="menulist;40" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<widget name="lab4" position="640,540" size="200,60" font="menulist;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2" />
+		<widget name="inactive" position="870,540" size="400,60" font="menulist;40" backgroundColor="red" halign="center" valign="center" zPosition="2" />
+		<widget name="active" position="870,540" size="400,60" font="menulist;40" backgroundColor="green" halign="center" valign="center" zPosition="3" />
 		<panel name="SetupMenuRedButton2" />
 		<panel name="SetupMenuGreenButton2" />
 		<panel name="SetupMenuYellowButton2" />
@@ -2385,5 +2489,4 @@
 		<widget render="VolumeText" source="global.CurrentTime" font="menulist;40" position="87,32" size="95,60" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="101" />
 	</screen>
 
-	
 </skin>
