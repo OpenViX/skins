@@ -206,6 +206,7 @@ src/skins/720/ViXBMC_Metropolis/window/Makefile
 
 src/skins/720/ViX-Common/Makefile
 src/skins/720/ViX-Common/buttons/Makefile
+src/skins/720/ViX-Common/menu/Makefile
 
 src/skins/720/ViX-Day-HD/Makefile
 src/skins/720/ViX-Day-HD/crossepg/Makefile
