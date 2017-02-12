@@ -495,17 +495,17 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<eLabel text="Duration:" position="994,732" size="200,35" font="DR;24" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" noWrap="1" zPosition="2"/>
-		<widget source="ServiceEvent" render="Label" position="980,732" size="210,35" font="DR;24" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
-			<convert type="EventTime">Duration</convert>
-			<convert type="ClockToText">InMinutes</convert>
-		</widget>
 		<panel name="PiconChannelSelection" />
 		<widget source="ServiceEvent" render="Label" position="1254,670" size="650,35" font="DB;26" foregroundColor="menuforeground" backgroundColor="windowbackground" noWrap="1" transparent="1" halign="left" valign="center" zPosition="3">
 			<convert type="EventName">NowName</convert>
 		</widget>
-		<widget source="ServiceEvent" render="RunningText" position="1204,705" size="678,145" font="DR;24" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="menuforeground" backgroundColor="windowbackground" transparent="1" halign="left" valign="top" zPosition="3">
+		<widget source="ServiceEvent" render="Label" position="1204,705" size="678,125" font="DR;24" foregroundColor="menuforeground" backgroundColor="windowbackground" transparent="1" halign="left" valign="top" zPosition="3">
 			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<eLabel text="Duration:" position="1250,825" size="200,35" font="DR;24" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" noWrap="1" zPosition="2"/>
+		<widget source="ServiceEvent" render="Label" position="1360,825" size="210,35" font="DR;24" foregroundColor="menuforeground" backgroundColor="topbarbackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<ePixmap pixmap="iSkin-Common/screens/progressbarbackground.png" position="1230,865" size="630,5" alphatest="blend" transparent="1" zPosition="3"/>
 		<widget source="ServiceEvent" render="Progress" position="1230,865" size="630,5" pixmap="iSkin-Common/screens/progressbar.png" backgroundColor="transparent" transparent="1" zPosition="4">
@@ -1100,16 +1100,16 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<eLabel text="Remain:" position="195,170" size="200,35" font="DR;24" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" noWrap="1" zPosition="2"/>
-		<widget source="Event" render="Label" position="180,170" size="210,35" font="DR;24" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="right" valign="center" transparent="1" zPosition="2" >
-			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">InMinutes</convert>
-		</widget>
 		<widget source="Event" render="Label" position="454,112" size="650,35" font="DB;26" foregroundColor="menuforeground" backgroundColor="windowbackground" noWrap="1" transparent="1" halign="left" valign="center" zPosition="3" >
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="RunningText" position="404,145" size="678,145" font="DR;24" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="menuforeground" backgroundColor="windowbackground" transparent="1" halign="left" valign="top" zPosition="3">
+		<widget source="Event" render="RunningText" position="404,145" size="678,125" font="DR;24" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="menuforeground" backgroundColor="windowbackground" transparent="1" halign="left" valign="top" zPosition="3">
 			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<eLabel text="Remaining:" position="450,265" size="200,35" font="DR;24" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" noWrap="1" zPosition="2"/>
+		<widget source="Event" render="Label" position="580,265" size="210,35" font="DR;24" foregroundColor="menuforeground" backgroundColor="topbarbackground" halign="left" valign="center" transparent="1" zPosition="2" >
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<ePixmap pixmap="iSkin-Common/screens/progressbarbackground.png" position="430,305" size="630,5" alphatest="blend" transparent="1" zPosition="3"/>
 		<widget source="Event" render="Progress" position="430,305" size="630,5" pixmap="iSkin-Common/screens/progressbar.png" backgroundColor="transparent" transparent="1" zPosition="4">
