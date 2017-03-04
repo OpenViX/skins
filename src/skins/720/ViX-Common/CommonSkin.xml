@@ -48,7 +48,38 @@
 		</widget>
 		<widget name="footnote" position="800,686" size="300,20" zPosition="1" font="Regular;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" halign="left" transparent="1" valign="top"/>
 	</screen>
-
+	<screen name="Setup3buttons" position="fill" backgroundColor="black" flags="wfNoBorder"><!-- This is a generic screen for when the setup screen would be good but 3 colour buttons are needed -->
+		<panel name="FullscreenTopPanel"/>
+		<panel name="FullscreenTitlePanel"/>
+		<panel name="FullscreenPIGPanel"/>
+		<widget name="config" position="10,82" size="670,575" selectionPixmap="ViX-Common/buttons/FocusBar_H25x670.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="695,440" size="575,200" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="60,440" zPosition="1" size="541,720" transparent="1" alphatest="on"/>
+		<panel name="FullscreenRed2Panel"/>
+		<panel name="FullscreenGreen2Panel"/>
+		<panel name="FullscreenYellow2Panel"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1200,686" zPosition="1" size="35,25" transparent="1" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="footnote" position="800,686" size="300,20" zPosition="1" font="Regular;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" halign="left" transparent="1" valign="top"/>
+	</screen>
+	<screen name="Setup4buttons" position="fill" backgroundColor="black" flags="wfNoBorder"><!-- This is a generic screen for when the setup screen would be good but 4 colour buttons are needed -->
+		<panel name="FullscreenTopPanel"/>
+		<panel name="FullscreenTitlePanel"/>
+		<panel name="FullscreenPIGPanel"/>
+		<widget name="config" position="10,82" size="670,575" selectionPixmap="ViX-Common/buttons/FocusBar_H25x670.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="695,440" size="575,200" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="60,440" zPosition="1" size="541,720" transparent="1" alphatest="on"/>
+		<panel name="FullscreenRed2Panel"/>
+		<panel name="FullscreenGreen2Panel"/>
+		<panel name="FullscreenYellow2Panel"/>
+		<panel name="FullscreenBlue2Panel"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1200,686" zPosition="1" size="35,25" transparent="1" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="footnote" position="800,686" size="300,20" zPosition="1" font="Regular;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" halign="left" transparent="1" valign="top"/>
+	</screen>
+	
 <!-- InfoBar's -->
 	<screen name="InfoBar" flags="wfNoBorder" position="center,562" size="974,148" title="InfoBar" backgroundColor="transparent">
 		<ePixmap position="0,0" size="974,148" pixmap="infobar/1stinfobar.png" alphatest="on" zPosition="-1"/>
@@ -1769,21 +1800,6 @@ self.autoResize()
 		<widget name="footer" position="10,565" size="503,40" font="Regular;20" halign="center"/>
 		<panel name="MenuRed2Panel"/>
 		<panel name="MenuGreen2Panel"/>
-	</screen>
-	<screen name="ChannelsImporterScreen" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
-		<panel name="FullscreenPIGPanel"/>
-		<widget name="config" position="10,82" size="670,575" selectionPixmap="ViX-Common/buttons/FocusBar_H25x670.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget name="description" position="695,440" size="575,200" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
-		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="60,440" zPosition="1" size="541,720" transparent="1" alphatest="on"/>
-		<panel name="FullscreenRed2Panel"/>
-		<panel name="FullscreenGreen2Panel"/>
-		<panel name="FullscreenYellow2Panel"/>
-		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1200,686" zPosition="1" size="35,25" transparent="1" alphatest="on">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget name="footnote" position="800,686" size="300,20" zPosition="1" font="Regular;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" halign="left" transparent="1" valign="top"/>
 	</screen>
 	<screen name="DeleteBouquets" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
