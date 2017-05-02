@@ -49,6 +49,7 @@
 		<ePixmap pixmap="infobar/infobar.png" position="0,870" size="1920,215" zPosition="-1"/>
 		<panel name="InfobarClock"/>
 		<panel name="InfobarUpArrow"/>
+		<panel name="InfobarClients"/>
 		<panel name="InfobarLeftArrow"/>
 		<panel name="InfobarChannelName"/>
 		<panel name="InfobarProgramNowStartTime"/>
@@ -116,6 +117,13 @@
 		<ePixmap pixmap="infobar/infobar.png" position="0,870" size="1920,215" zPosition="-1"/>
 		<panel name="InfobarClock"/>
 		<panel name="InfobarUpArrow"/>
+		<widget source="session.CurrentService" render="Label" position="1430,880" size="140,38" font="youvix-r;26" foregroundColor="green" backgroundColor="menubackground" halign="right" valign="center" transparent="1" noWrap="1" zPosition="2">
+			<convert type="VNetSpeedInfo">RC</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1565,880" size="140,38" font="youvix-r;26" foregroundColor="red" backgroundColor="menubackground" halign="right" valign="center" transparent="1" noWrap="1" zPosition="2">
+			<convert type="VNetSpeedInfo">TM</convert>
+		</widget>
+		<panel name="InfobarClients"/>
 		<panel name="InfobarLeftArrow"/>
 		<panel name="InfobarChannelName"/>
 		<panel name="InfobarProgramNowStartTime"/>

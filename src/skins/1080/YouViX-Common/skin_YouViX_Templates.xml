@@ -68,6 +68,12 @@
 	<screen name="InfobarUpArrow">
 		<ePixmap position="442,880" size="50,32" pixmap="icons/arrow-up.png" alphatest="blend" zPosition="1"/>
 	</screen>
+	<screen name="InfobarClients">
+		<eLabel text="Clients:" position="1730,880" size="100,38" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2" />
+		<widget source="session.RecordState" render="Label" position="1840,880" size="35,38" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2">
+			<convert type="ClientsStreaming">NUMBER</convert>
+		</widget>
+	</screen>
 	<screen name="InfobarLeftArrow">
 		<ePixmap position="15,950" size="32,48" pixmap="icons/arrow-left.png" alphatest="blend" zPosition="1"/>
 	</screen>
@@ -149,12 +155,12 @@
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-        <!-- <ePixmap pixmap="icons/hbbtv.png" position="1540,975" size="103,40" zPosition="1" alphatest="blend" /> -->
+		<ePixmap pixmap="YouViX-Common/icons/hbbtv.png" position="1540,975" size="103,40" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/hbbtv.png" position="1540,975" size="103,40" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
- 		<!-- <ePixmap pixmap="buttons/green.png" position="1665,982" size="35,35" zPosition="1" alphatest="blend" /> -->
+		<ePixmap pixmap="buttons/green.png" position="1665,982" size="35,35" zPosition="1" alphatest="blend" />
 		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="buttons/green.png" position="1665,982" size="35,35" zPosition="1" alphatest="blend" >
 			<convert type="ConditionalShowHide">Blink,1000</convert>
 		</widget>
