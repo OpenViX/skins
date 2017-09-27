@@ -1743,50 +1743,60 @@ self.autoResize()
 	</screen>
 	<screen name="Satfinder" position="fill" flags="wfNoBorder">
 <!-- ##SNR## -->
-		<eLabel text="SNR:" position="18,83" size="95,50" font="Regular;30" transparent="1"/>
-		<widget source="Frontend" render="Progress" position="115,80" size="1000,50" foregroundColor="yellow" borderWidth="2" borderColor="window-fg">
+		<eLabel text="SNR:" position="48,40" size="95,50" font="Regular;30" transparent="1"/>
+		<widget source="Frontend" render="Progress" position="145,37" size="1000,50" foregroundColor="yellow" borderWidth="2" borderColor="window-fg">
 		<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="1130,83" size="129,50" font="Regular;35" backgroundColor="window-bg" transparent="0">
+		<widget source="Frontend" render="Label" position="1160,40" size="129,50" font="Regular;35" backgroundColor="window-bg" transparent="0">
 		<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="0,230" size="500,170" font="Regular;140" backgroundColor="window-bg" transparent="0" halign="right" valign="center">
+		<widget source="Frontend" render="Label" position="0,255" size="500,150" font="Regular;140" backgroundColor="window-bg" transparent="0" halign="right" valign="top">
 		<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 		<!-- ##AGC## -->
-		<eLabel text="AGC:" position="18,135" size="95,50" font="Regular;30" transparent="0"/>
-		<widget source="Frontend" render="Progress" position="115,135" size="1000,50" foregroundColor="yellow" borderWidth="2" borderColor="window-fg">
+		<eLabel text="AGC:" position="48,100" size="95,50" font="Regular;30" transparent="0"/>
+		<widget source="Frontend" render="Progress" position="145,97" size="1000,50" foregroundColor="yellow" borderWidth="2" borderColor="window-fg">
 		<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="1130,135" size="130,50" font="Regular;35" backgroundColor="window-bg" transparent="0">
+		<widget source="Frontend" render="Label" position="1160,100" size="130,50" font="Regular;35" backgroundColor="window-bg" transparent="0">
 		<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="0,380" size="500,170" font="Regular;140" backgroundColor="window-bg" transparent="0" halign="right" valign="center">
+		<widget source="Frontend" render="Label" position="0,380" size="500,150" font="Regular;140" backgroundColor="window-bg" transparent="0" halign="right" valign="top">
 		<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<!-- ##BER## -->
-		<eLabel text="BER:" position="18,190" size="95,50" font="Regular;30" transparent="0"/>
-		<widget source="Frontend" render="Progress" position="115,190" size="1000,50" foregroundColor="yellow" borderWidth="2" borderColor="window-fg">
+		<eLabel text="BER:" position="48,160" size="95,50" font="Regular;30" transparent="0"/>
+		<widget source="Frontend" render="Progress" position="145,157" size="1000,50" foregroundColor="yellow" borderWidth="2" borderColor="window-fg">
 		<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="1130,190" size="130,50" font="Regular;35" backgroundColor="window-bg" transparent="0">
+		<widget source="Frontend" render="Label" position="1160,160" size="130,50" font="Regular;35" backgroundColor="window-bg" transparent="0">
 		<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="0,540" size="500,170" font="Regular;140" backgroundColor="window-bg" transparent="0" halign="right" valign="center">
+		<widget source="Frontend" render="Label" position="0,505" size="500,150" font="Regular;140" backgroundColor="window-bg" transparent="0" halign="right" valign="top">
 		<convert type="FrontendInfo">BER</convert>
 		</widget>
-	<!-- ##Lock## -->
-		<eLabel text="Lock:" position="515,245" size="120,28" font="Regular;24" transparent="1" halign="left"/>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="600,244" size="38,31" alphatest="on">
+		<!-- ##Lock## -->
+		<eLabel text="Lock:" position="48,225" size="95,50" font="Regular;30" transparent="0" />
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="145,225" size="50,50" alphatest="on">
 		<convert type="FrontendInfo">LOCK</convert>
 		<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="600,244" size="38,31" alphatest="on">
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="145,225" size="50,50" alphatest="on">
 		<convert type="FrontendInfo">LOCK</convert>
 		<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
-		<widget name="config" position="500,280" size="740,380" itemHeight="27" font="Regular;22" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<!-- ##Config List## -->
+		<widget name="config" position="580,280" size="640,350" itemHeight="38" font="Regular;22" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<!-- ##TSID ONID ORB ## -->
+		<eLabel text="TSID:" position="310,225" size="100,50" font="Regular;30" transparent="0" halign="right"/>
+		<widget source="tsid" render="Label" position="420,225" size="100,50" font="Regular;30" foregroundColor="yellow" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" zPosition="1"/>
+		<eLabel text="ONID:" position="615,225" size="100,50" font="Regular;30" transparent="0" halign="right"/>
+		<widget source="onid" render="Label" position="725,225" size="100,50" font="Regular;30" foregroundColor="yellow" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" zPosition="1"/>
+		<eLabel text="Orb Pos:" position="920,225" size="130,50" font="Regular;30" transparent="0" halign="right"/>
+		<widget source="pos" render="Label" position="1060,225" size="100,50" font="Regular;30" foregroundColor="yellow" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" zPosition="1"/>
+<!--
 		<widget name="introduction" position="535,10" size="735,40" font="Regular;35" foregroundColor="yellow" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" zPosition="1"/>
+-->
 		<panel name="FullscreenRed2Panel"/>
 		<panel name="FullscreenGreen2Panel"/>
 		<panel name="FullscreenYellow2Panel"/>
