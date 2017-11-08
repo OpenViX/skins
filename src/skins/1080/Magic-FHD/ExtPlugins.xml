@@ -682,7 +682,7 @@
 	</screen>
 
 	<!-- ## VU BLUETOOTH SETUP ## -->
-	<screen name="BluetoothSetup" position="fill" flags="wfNoBorder" title="">
+	<screen name="BluetoothSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
@@ -704,13 +704,13 @@
 		</widget>
 		<widget source="description" render="Label" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
-	<screen name="BluetoothSetupConfig" position="fill" flags="wfNoBorder" title="">
+	<screen name="BluetoothSetupConfig" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
-	<screen name="BluetoothDiscovery" position="fill" flags="wfNoBorder" title="">
+	<screen name="BluetoothDiscovery" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
@@ -1063,7 +1063,7 @@
 		<widget name="episodes" position="1012,349" size="810,600" scrollbarMode="showOnDemand" zPosition="21" />
 		<widget name="seasons" position="1012,349" size="810,600" scrollbarMode="showOnDemand" zPosition="20" />
 	</screen>
-	<screen name="movieDatabase" position="fill" flags="wfNoBorder" title="">
+	<screen name="movieDatabase" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,120" size="700,855" font="Regular;33" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="list2" position="780,120" size="700,855" font="Regular;33" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
@@ -1306,11 +1306,11 @@
 		<widget name="config" position="755,120" size="1157,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="plugin" position="100,630" size="600,375" alphatest="blend"/>
 	</screen>
-	<screen name="xbmcCities" position="fill" flags="wfNoBorder" title="">
+	<screen name="xbmcCities" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
-	<screen name="mapsList" position="fill" flags="wfNoBorder" title="">
+	<screen name="mapsList" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="800,120" size="700,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
@@ -1471,8 +1471,23 @@
 		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 
+	<!-- ## ChannelsImporter## -->
+	<screen name="ChannelsImporterScreen" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="description" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="HelpWindow" pixmap="vkey_icon.png" position="735,700" size="1,1" zPosition="1"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1762,1025" size="53,38" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="footnote" position="1225,965" size="725,45" font="Regular;33" zPosition="1" foregroundColor="grey"/>
+	</screen>
+
 	<!-- ## BitrateViewer## -->
-	<screen name="BitrateViewer" backgroundColor="transparent" position="fill" flags="wfNoBorder">
+	<screen name="BitrateViewerExtra" backgroundColor="transparent" position="fill" flags="wfNoBorder">
 		<eLabel text="Video" position="885,225" size="120,39" font="RegularSmall;33" zPosition="1" backgroundColor="transparent" borderColor="black" borderWidth="3" transparent="1"/>
 		<eLabel text="min" position="885,270" size="120,39" font="RegularSmall;33" zPosition="1" backgroundColor="transparent" borderColor="black" borderWidth="3" transparent="1"/>
 		<widget name="vmin" position="885,315" size="120,39" font="RegularSmall;33" backgroundColor="transparent" borderColor="black" borderWidth="3" transparent="1"/>
@@ -1491,6 +1506,14 @@
 		<widget name="aavg" position="1110,450" size="120,39" font="RegularSmall;33" backgroundColor="transparent" borderColor="black" borderWidth="3" transparent="1"/>
 		<eLabel text="current" position="1260,412" size="165,39" font="RegularSmall;33" zPosition="1" backgroundColor="transparent" borderColor="black" borderWidth="3" transparent="1"/>
 		<widget name="acur" position="1260,450" size="120,39" font="RegularSmall;33" backgroundColor="transparent" borderColor="black" borderWidth="3" transparent="1"/>
+	</screen>
+	<screen name="BitrateViewerSetup" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<eLabel text="Cancel" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
+		<panel name="GreenBPanel"/>
+		<eLabel text="OK" position="490,1020" size="400,45" foregroundColor="grey" font="Regular;33" halign="left"/>
+		<widget name="config" position="755,120" size="1137,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 
 	<!-- ## OFDb Plugin ## -->
@@ -1927,7 +1950,7 @@
 		<widget source="session.CurrentService" render="Label" position="705,825" size="1185,37" font="RegularSmall;30" backgroundColor="black" zPosition="1" transparent="1" valign="center" halign="center">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
-		<widget name="Timeline" position="862,892" size="922,30" pointer="dvr/position_arrow.png" foregroundColor="black" backgroundColor="bluegrey"/>
+		<widget name="Timeline" position="862,892" size="922,30" pointer="dvr/position_arrow.png:3,5" foregroundColor="black" backgroundColor="bluegrey"/>
 		<eLabel text="'OK' = Menu" position="1455,1030" size="330,39" font="RegularSmall;30" backgroundColor="black" zPosition="1" transparent="1" halign="center"/>
 		<eLabel text="'o' = Mark" position="510,1030" size="330,39" font="RegularSmall;30" backgroundColor="black" zPosition="1" transparent="1" halign="center"/>
 	</screen>
@@ -2808,14 +2831,13 @@
 		<widget name="log8" position="0,0" size="0,0" font="RegularSmall;16" foregroundColor="#000000" backgroundColor="#FAFAFA" halign="left" zPosition="2"/>
 		<widget name="log9" position="0,0" size="0,0" font="RegularSmall;16" foregroundColor="#000000" backgroundColor="#FAFAFA" halign="left" zPosition="2"/>
 	</screen>
-	<screen name="oscamConfig" position="fill" flags="wfNoBorder">
+	<screen name="oscamConfig" position="fill" flags="wfNoBorder" title="OSCam Status View Setup">
 		<panel name="BasicTemplate"/>
 		<panel name="RedBPanel"/>
 		<eLabel text="Cancel" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
 		<panel name="GreenBPanel"/>
 		<eLabel text="OK" position="490,1020" size="400,45" foregroundColor="grey" font="Regular;33" halign="left"/>
-		<widget name="config" position="755,120" size="1157,450" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<widget name="plugin" position="1000,700" size="533,300" alphatest="blend"/>
+		<widget name="config" position="755,120" size="1157,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 
 	<!-- ## SeriesPlugin ## -->
@@ -2887,6 +2909,45 @@
 		<widget name="headertext" position="735,120" size="1177,45" font="Regular;36" itemHeight="45" halign="center" foregroundColor="selectedFG"/>
 		<widget name="list" position="735,170" size="1177,765"  font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="grey"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+	<screen name="IPTVSetupMainWidget" position="fill" flags="wfNoBorder" title="IPTVPlayer setup">
+		<panel name="BasicTemplate"/>
+		<panel name="RedBPanel"/>
+		<eLabel text="Cancel" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
+		<eLabel text="'OK' = Accept" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
+		<widget name="info_field" position="755,120" size="1137,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="sub_title" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<screen name="IPTVUpdateMainWindow" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="sub_title" position="755,120" size="1137,45" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="list" position="755,170" size="1137,810" font="Regular;33" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="console" position="7,530" size="715,475" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
+	</screen>
+	<screen name="IPTVUpdateWindow" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="sub_title" position="755,120" size="1137,45" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="list" position="755,170" size="1137,810" font="Regular;33" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="console" position="7,530" size="715,475" font="Regular;33" foregroundColor="grey"/>
+	</screen>
+	<screen name="ConfigMenu" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+	<screen name="ConfigHostsMenu" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="text" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<screen name="ArticleView" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="text" position="755,120" size="1137,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 
 	<!-- ## FileBrowser ## -->
@@ -3180,7 +3241,7 @@
 	</screen>
 
 	<!-- ## MSNWeather ## -->
-	<screen name="MSNWeatherPluginEntriesListConfigScreen" position="fill" flags="wfNoBorder" title="">
+	<screen name="MSNWeatherPluginEntriesListConfigScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
@@ -3190,7 +3251,7 @@
 		<widget source="degreetype" render="Label" position="1305,120" size="560,50" font="Regular;36" foregroundColor="secondFG" halign="center"/>
 		<widget name="entrylist" position="1000,175" size="900,810" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
-	<screen name="MSNWeatherPluginEntryConfigScreen" position="fill" flags="wfNoBorder" title="">
+	<screen name="MSNWeatherPluginEntryConfigScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
@@ -3198,7 +3259,7 @@
 		<panel name="Blue2Panel"/>
 		<widget name="config" position="755,120" size="1157,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
-	<screen name="MSNWeatherPluginSearch" position="fill" flags="wfNoBorder" title="">
+	<screen name="MSNWeatherPluginSearch" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red1Panel"/>
 		<panel name="Green1Panel"/>
@@ -3368,7 +3429,7 @@
 	</screen>
 
 	<!-- ## VPS ## -->
-	<screen name="VPS_Setup" position="fill" flags="wfNoBorder" title="">
+	<screen name="VPS_Setup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>

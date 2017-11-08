@@ -138,49 +138,49 @@
 	</screen>
 
 	<screen name="PlayerPanel">
-		<widget source="session.CurrentService" render="Label" position="360,0" size="1170,84" font="Regular;40" backgroundColor="transparent" zPosition="1" borderWidth="3" borderColor="black" valign="center" halign="center">
+		<widget source="session.CurrentService" render="Label" position="192,0" size="1300,104" font="RegularSmall;40" backgroundColor="transparent" zPosition="1" borderWidth="3" borderColor="black" valign="center" halign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget name="speed" position="0,120" size="110,55" font="Regular;45" backgroundColor="transparent" foregroundColor="grey" halign="right" borderWidth="3" borderColor="black" transparent="1" zPosition="5"/>
-		<widget name="statusicon" position="112,125" size="50,50" pixmaps="Magic-FHD/icons/play_large.png,icons/pause_large.png,icons/stop_large.png,icons/forward_large.png,icons/backward_large.png,icons/slow_large.png" zPosition="5" alphatest="on"/>
-		<eLabel backgroundColor="infobarBG" position="180,88" size="1560,19" zPosition="0"/>
-		<ePixmap pixmap="dvr/scale1536.png" position="192,94" size="1536,6" zPosition="1"/>
-		<widget source="session.CurrentService" render="PositionGauge" position="192,88" size="1536,18" pointer="Magic-FHD/dvr/position_pointer1536.png:1536,0" transparent="1" zPosition="4">
+		<widget name="speed" position="0,120" size="110,75" font="Regular;45" backgroundColor="transparent" foregroundColor="grey" halign="right" borderWidth="3" borderColor="black" transparent="1" zPosition="5"/>
+		<widget name="statusicon" position="112,145" size="50,50" pixmaps="Magic-FHD/icons/play_large.png,icons/pause_large.png,icons/stop_large.png,icons/forward_large.png,icons/backward_large.png,icons/slow_large.png" zPosition="5" alphatest="on"/>
+		<eLabel backgroundColor="infobarBG" position="180,108" size="1560,19" zPosition="0"/>
+		<ePixmap pixmap="dvr/scale1536.png" position="192,113" size="1536,6" zPosition="1"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="192,108" size="1536,18" pointer="Magic-FHD/dvr/position_pointer1536.png:1536,0" transparent="1" zPosition="4">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="60,34" size="300,50" font="Regular;36" backgroundColor="transparent" zPosition="4" borderWidth="3" borderColor="black" valign="center" halign="left">
+		<widget source="session.CurrentService" render="Label" position="60,54" size="300,50" font="Regular;36" backgroundColor="transparent" zPosition="4" borderWidth="3" borderColor="black" valign="center" halign="left">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1537,34" size="180,50" font="Regular;36" backgroundColor="transparent" transparent="1" borderWidth="3" borderColor="black" valign="center" halign="left">
+		<widget source="session.CurrentService" render="Label" position="1537,54" size="180,50" font="Regular;36" backgroundColor="transparent" transparent="1" borderWidth="3" borderColor="black" valign="center" halign="left">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1717,34" size="180,50" font="Regular;36" backgroundColor="transparent" transparent="1" borderWidth="3" borderColor="black" valign="center" halign="left">
+		<widget source="session.CurrentService" render="Label" position="1717,54" size="180,50" font="Regular;36" backgroundColor="transparent" transparent="1" borderWidth="3" borderColor="black" valign="center" halign="left">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1479,114" size="90,36" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1479,134" size="90,36" alphatest="on">
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<ePixmap pixmap="infobar/ico_format_4-3.png" position="1572,114" size="40,21" zPosition="1" alphatest="on"/>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_16-9.png" position="1572,114" size="40,21" zPosition="2" alphatest="on">
+		<ePixmap pixmap="infobar/ico_format_4-3.png" position="1572,134" size="40,21" zPosition="1" alphatest="on"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_16-9.png" position="1572,134" size="40,21" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_hd.png" position="1572,114" size="40,21" zPosition="4" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_hd.png" position="1572,134" size="40,21" zPosition="4" alphatest="on">
 			<convert type="ServiceInfo">IsHD</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4k.png" position="1572,114" size="40,21" zPosition="6" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4k.png" position="1572,134" size="40,21" zPosition="6" alphatest="on">
 			<convert type="ServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1615,105" size="240,40" font="Regular;27" backgroundColor="transparent" transparent="1" borderWidth="3" borderColor="black">
+		<widget source="session.CurrentService" render="Label" position="1615,125" size="240,40" font="Regular;27" backgroundColor="transparent" transparent="1" borderWidth="3" borderColor="black">
 			<convert type="PliExtraInfo">ResolutionString</convert>
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_rec.png" position="1857,114" size="20,20" zPosition="3" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_rec.png" position="1857,134" size="20,20" zPosition="3" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_stream.png" position="1880,114" size="20,20" zPosition="3" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_stream.png" position="1880,134" size="20,20" zPosition="3" alphatest="on">
 			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
