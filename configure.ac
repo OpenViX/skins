@@ -146,16 +146,16 @@ src/skins/720/MHD-Common/infobar/Makefile
 src/skins/720/MHD-Common/logos/Makefile
 src/skins/720/MHD-Common/window/Makefile
 
-src/skins/720/PLi-Full-HD-Night/Makefile
-src/skins/720/PLi-Full-HD-Night/border/Makefile
-src/skins/720/PLi-Full-HD-Night/buttons/Makefile
-src/skins/720/PLi-Full-HD-Night/dvr/Makefile
-src/skins/720/PLi-Full-HD-Night/epg/Makefile
-src/skins/720/PLi-Full-HD-Night/icons/Makefile
-src/skins/720/PLi-Full-HD-Night/infobar/Makefile
-src/skins/720/PLi-Full-HD-Night/logos/Makefile
-src/skins/720/PLi-Full-HD-Night/meta/Makefile
-src/skins/720/PLi-Full-HD-Night/window/Makefile
+src/skins/720/PLi-HD-Night/Makefile
+src/skins/720/PLi-HD-Night/border/Makefile
+src/skins/720/PLi-HD-Night/buttons/Makefile
+src/skins/720/PLi-HD-Night/dvr/Makefile
+src/skins/720/PLi-HD-Night/epg/Makefile
+src/skins/720/PLi-HD-Night/icons/Makefile
+src/skins/720/PLi-HD-Night/infobar/Makefile
+src/skins/720/PLi-HD-Night/logos/Makefile
+src/skins/720/PLi-HD-Night/meta/Makefile
+src/skins/720/PLi-HD-Night/window/Makefile
 
 src/skins/720/Red-HD/Makefile
 src/skins/720/Red-HD/buttons/Makefile
