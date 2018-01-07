@@ -3257,10 +3257,16 @@
 		<widget source="initializetext" render="Label" position="120,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
 	</screen>
 
-	<!-- Sat Finder ## -->
+	<!-- ## Signal Finder ## -->
 	<screen name="Satfinder" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
+		<eLabel text="TSID:" position="690,270" size="130,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" zPosition="1"/>
+		<widget source="tsid" render="Label" position="830,270" size="150,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" zPosition="1"/>
+		<eLabel text="ONID:" position="690,310" size="130,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" zPosition="1"/>
+		<widget source="onid" render="Label" position="830,310" size="150,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" zPosition="1"/>
+		<eLabel text="Orb Pos:" position="690,350" size="130,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" zPosition="1"/>
+		<widget source="pos" render="Label" position="830,350" size="150,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" zPosition="1"/>
 		<ePixmap pixmap="YouViX-Common/icons/dish_scan.png" position="980,238" size="179,165" transparent="1" alphatest="blend" zPosition="1" />
 		<widget source="Frontend" render="Label" position="1255,227" size="250,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" >
 			<convert type="FrontendInfo">SNRdB</convert>
