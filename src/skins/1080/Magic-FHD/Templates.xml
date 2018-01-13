@@ -30,51 +30,51 @@
 	</screen>
 
 	<screen name="RedBPanel">
-		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" alphatest="blend"/>
+		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" conditional="key_red" alphatest="blend"/>
 	</screen>
 
 	<screen name="RedT1Panel">
-		<widget name="key_red" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget name="key_red" position="55,1020" size="400,45" conditional="key_red" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="RedT2Panel">
-		<widget source="key_red" render="Label" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget source="key_red" render="Label" position="55,1020" size="400,45" conditional="key_red" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="GreenBPanel">
-		<ePixmap pixmap="buttons/green.png" position="457,1027" size="30,30" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="457,1027" size="30,30" conditional="key_green" alphatest="blend"/>
 	</screen>
 
 	<screen name="GreenT1Panel">
-		<widget name="key_green" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget name="key_green" position="490,1020" size="400,45" conditional="key_green" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="GreenT2Panel">
-		<widget source="key_green" render="Label" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget source="key_green" render="Label" position="490,1020" size="400,45" conditional="key_green" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="YellowBPanel">
-		<ePixmap pixmap="buttons/yellow.png" position="892,1027" size="30,30" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="892,1027" size="30,30" conditional="key_yellow" alphatest="blend"/>
 	</screen>
 
 	<screen name="YellowT1Panel">
-		<widget name="key_yellow" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget name="key_yellow" position="930,1020" size="400,45" conditional="key_yellow" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="YellowT2Panel">
-		<widget source="key_yellow" render="Label" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget source="key_yellow" render="Label" position="930,1020" size="400,45" conditional="key_yellow" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="BlueBPanel">
-		<ePixmap pixmap="buttons/blue.png" position="1335,1027" size="30,30" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="1335,1027" size="30,30" conditional="key_blue" alphatest="blend"/>
 	</screen>
 
 	<screen name="BlueT1Panel">
-		<widget name="key_blue" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget name="key_blue" position="1370,1020" size="400,45" conditional="key_blue" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="BlueT2Panel">
-		<widget source="key_blue" render="Label" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget source="key_blue" render="Label" position="1370,1020" size="400,45" conditional="key_blue" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="Red1Panel">
@@ -116,7 +116,22 @@
 		<panel name="BlueBPanel"/>
 		<panel name="BlueT2Panel"/>
 	</screen>
+	
+	<screen name="Button1Panel">
+		<panel name="Red1Panel"/>
+		<panel name="Green1Panel"/>
+		<panel name="Yellow1Panel"/>
+		<panel name="Blue1Panel"/>
+	</screen>
+	
+	<screen name="Button2Panel">
+		<panel name="Red2Panel"/>
+		<panel name="Green2Panel"/>
+		<panel name="Yellow2Panel"/>
+		<panel name="Blue2Panel"/>
+	</screen>
 
+	
 	<screen name="OKBPanel">
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="457,1025"	size="52,37"/>
 	</screen>
