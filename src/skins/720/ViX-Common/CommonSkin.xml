@@ -1996,6 +1996,30 @@ self.autoResize()
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
 		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
+	<screen name="PluginDownloadBrowserWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
+		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
+			<convert type="ClockToText"/>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget name="text" position="10,110" size="503,533" font="Regular;20" foregroundColor="window-fg" backgroundColor="black" halign="center" valign="center" transparent="0" zPosition="1"/>
+		<widget name="list" position="10,110" size="503,528" itemHeight="48" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1"/>
+		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
+	</screen>
+	<screen name="SkinSelectorWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
+		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
+			<convert type="ClockToText"/>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget name="Preview" position="200,230" size="280,210" alphatest="on" zPosition="0"/>
+		<widget name="SkinList" position="600,230" size="450,240" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="3"/>
+		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
+	</screen>
 	<screen name="NetworkWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
 		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
 		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
