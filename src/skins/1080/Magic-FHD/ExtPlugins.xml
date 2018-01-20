@@ -287,14 +287,6 @@
 	</screen>
 	<screen name="FanControl2Plugin" position="fill" flags="wfNoBorder" title="Fan Control 2">
 		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
-		<widget source="red" render="Label" position="55,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
-		<panel name="GreenBPanel"/>
-		<widget source="green" render="Label" position="490,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
-		<panel name="YellowBPanel"/>
-		<widget source="yellow" render="Label" position="930,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
-		<panel name="BlueBPanel"/>
-		<widget source="blue" render="Label" position="1370,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<widget source="Version" render="Label" position="200,800" size="800,50" font="Regular;36" foregroundColor="secondFG"/>
@@ -506,7 +498,6 @@
 	<!-- ## FastScan## -->
 	<screen name="FastScanScreen" position="fill" flags="wfNoBorder" title="FastScan">
 		<panel name="BasicTemplate"/>
-		<panel name="ButtonPanel"/>
 		<eLabel text="Cancel" position="55,1020" size="400,39" font="RegularSmall;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<panel name="OKCancelPanel"/>
 		<eLabel text="Save" position="490,1020" size="400,39" font="RegularSmall;33" foregroundColor="grey" zPosition="1" halign="left"/>
@@ -523,6 +514,10 @@
 	<!-- ## DreamExplorer ## -->
 	<screen name="DreamExplorerII" position="fill" flags="wfNoBorder" title="Dream-Explorer">
 		<panel name="BasicTemplate"/>
+		<panel name="RedBuPanel"/>
+		<panel name="GreenBuPanel"/>
+		<panel name="YellowBuPanel"/>
+		<panel name="BlueBuPanel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<eLabel text="Delete" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" halign="left"/>
@@ -544,14 +539,14 @@
 	<screen name="SoftLinkScreen" position="fill" flags="wfNoBorder" title="Make a softlink...">
 		<panel name="BasicTemplate"/>
 		<eLabel text="Set name" position="22,1032" size="400,39" foregroundColor="grey" font="Regular;33" halign="center"/>
-		<panel name="YellowBPanel"/>
+		<ePixmap pixmap="buttons/yellow.png" position="892,1027" size="30,30" alphatest="blend"/>
 		<eLabel text="Make a softlink" position="892,1032" size="400,39" font="Regular;33" foregroundColor="grey" halign="center"/>
 		<widget name="File" position="735,120" size="1177,150" font="Regular;39" foregroundColor="secondFG" valign="center" halign="center" enableWrapAround="1"/>
 		<widget name="SLto" position="735,277" size="1177,675" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"/>
 	</screen>
 	<screen name="CPmaniger" position="fill" flags="wfNoBorder" title="Select Copy/Move location...">
 		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
+		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" alphatest="blend"/>
 		<eLabel text="MOVE" position="75,1032" size="330,39" font="Regular;33" foregroundColor="grey" halign="center"/>
 		<eLabel text="COPY" position="921,1032" size="330,39" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" halign="center"/>
 		<widget name="File" position="735,120" size="1177,297" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center" zPosition="2"/>
@@ -626,26 +621,33 @@
 	</screen>
 	<screen name="wikiSearch_en" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="YellowBuPanel"/>
 		<eLabel text="Search" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
-		<panel name="BlueBPanel"/>
+		<panel name="BlueBuPanel"/>
 		<eLabel text="Hide" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
 		<widget name="list" position="755,120" size="1100,885" scrollbarMode="showOnDemand" itemHeight="26" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="wikiSearch_es" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="YellowBPanel"/>
 		<eLabel text="Search" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
+		<panel name="BlueBuPanel"/>
 		<eLabel text="Hide" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
 		<widget name="list" position="755,120" size="1100,885" scrollbarMode="showOnDemand" itemHeight="26" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="wikiSearch" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="YellowBPanel"/>
 		<eLabel text="Search" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
+		<panel name="BlueBuPanel"/>
 		<eLabel text="Hide" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
 		<widget name="list" position="755,120" size="1100,885" scrollbarMode="showOnDemand" itemHeight="26" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="wikiConfig" position="fill" flags="wfNoBorder" title="Wikipedia Setup">
 		<panel name="BasicTemplate"/>
+		<panel name="RedBuPanel"/>
 		<widget name="cancel" position="55,1020" size="400,39" foregroundColor="grey" zPosition="1" font="RegularSmall;33" halign="left"/>
+		<panel name="GreenBuPanel"/>
 		<widget name="save" position="490,1020" size="400,39" foregroundColor="grey" zPosition="1" font="RegularSmall;33" halign="left"/>
 		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showNever" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="plugin" position="7,530" size="715,475" alphatest="blend" zPosition="2"/>
@@ -658,8 +660,11 @@
 	</screen>
 	<screen name="wikiArtikel_en" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="RedBuPanel"/>
 		<widget name="label4" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="GreenBuPanel"/>
 		<widget name="label3" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="YellowBuPanel"/>
 		<widget name="label2" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
@@ -675,8 +680,11 @@
 	</screen>
 	<screen name="wikiArtikel_es" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="RedBuPanel"/>
 		<widget name="label4" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="GreenBuPanel"/>
 		<widget name="label3" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="YellowBuPanel"/>
 		<widget name="label2" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
@@ -692,8 +700,11 @@
 	</screen>
 	<screen name="wikiArtikel" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="RedBuPanel"/>
 		<widget name="label4" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="GreenBuPanel"/>
 		<widget name="label3" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="YellowBuPanel"/>
 		<widget name="label2" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
@@ -709,19 +720,25 @@
 	</screen>
 	<screen name="wikiFav_en" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="RedBuPanel"/>
 		<widget name="label2" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="YellowBuPanel"/>
 		<widget name="label" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget name="favmenu" position="800,120" size="500,855" itemHeight="26" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="wikiFav_es" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="RedBuPanel"/>
 		<widget name="label2" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="YellowBuPanel"/>
 		<widget name="label" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget name="favmenu" position="800,120" size="500,855" itemHeight="26" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="wikiFav" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="RedBuPanel"/>
 		<widget name="label2" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="YellowBuPanel"/>
 		<widget name="label" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget name="favmenu" position="800,120" size="500,855" itemHeight="26" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
@@ -735,7 +752,9 @@
 	<!-- ## EPG Translator# -->
 	<screen name="translatorMain" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="YellowBuPanel"/>
 		<widget name="label2" position="930,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
+		<panel name="BlueBuPanel"/>
 		<widget name="label" position="1370,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
@@ -744,7 +763,9 @@
 	</screen>
 	<screen name="translatorConfig" position="fill" flags="wfNoBorder" title="PG Translator Setup">
 		<panel name="BasicTemplate"/>
+		<panel name="RedBuPanel"/>
 		<eLabel text="Cancel" position="55,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
+		<panel name="GreenBuPanel"/>
 		<eLabel text="Save" position="490,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
 		<widget name="config" position="793,120" size="1050,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
@@ -754,7 +775,9 @@
 	</screen>
 	<screen name="searchYouTube" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="YellowBuPanel"/>
 		<widget name="label2" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="BlueBuPanel"/>
 		<widget name="label" position="1370,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<widget name="list" position="1020,120" size="755,500" scrollbarMode="showOnDemand" foregroundColor="grey"/>
@@ -1302,9 +1325,9 @@
 	</screen>
 	<screen name="BitrateViewerSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="RedBPanel"/>
+		<panel name="RedBuPanel"/>
 		<eLabel text="Cancel" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
-		<panel name="GreenBPanel"/>
+		<panel name="GreenBuPanel"/>
 		<eLabel text="OK" position="490,1020" size="400,45" foregroundColor="grey" font="Regular;33" halign="left"/>
 		<widget name="config" position="755,120" size="1137,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
