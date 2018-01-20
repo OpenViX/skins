@@ -8,7 +8,7 @@
 
 <!-- System Menu's -->
 	<screen name="LanguageSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="languages" render="Listbox" position="10,107" size="503,530" selectionPixmap="ViX-Common/buttons/FocusBar_H45x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -20,10 +20,9 @@
 				}
 			</convert>
 		</widget>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="Menu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="menu" render="Listbox" position="10,107" size="503,533" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [	MultiContentEntryText(pos = (20,0), size = (465,38), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	) ],
@@ -710,7 +709,7 @@
 	</screen>
 
 	<screen name="MediaPlayer" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
+		<panel name="FullscreenTemplatePanel"/>
 		<eLabel name="Filelist" position="20,75" size="110,22" text="File List" font="Italic;22" foregroundColor="infobar_service_frgrnd" transparent="1"/>
 		<eLabel position="18,100" size="604,556" zPosition="0" backgroundColor="menu-title-frgrnd"/>
 		<widget name="filelist" position="20,102" size="600,552" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H25x600.png" foregroundColor="window-fg" backgroundColor="black" transparent="0"/>
@@ -745,32 +744,26 @@
 		<widget name="speed" position="0,60" size="80,15" font="Regular;17" halign="right" foregroundColor="infobar-frgrnd" backgroundColor="infobar_sunken" transparent="1" zPosition="4"/>
 	</screen>
 	<screen name="AboutOE" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton2Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="lab1" render="Label" position="30,133" size="458,25" font="Boldit;24" transparent="0" zPosition="2"/>
 		<widget source="lab2" render="Label" position="30,158" size="458,25" font="Italic;19" transparent="0" zPosition="2"/>
 		<widget source="lab3" render="Label" position="30,183" size="458,25" font="Italic;19" transparent="0" zPosition="1"/>
 		<widget name="AboutScrollLabel" position="30,225" size="458,400" font="Regular;20" transparent="0" zPosition="1"/>
 	</screen>
 	<screen name="CommitInfo" position="fill" flags="wfNoBorder" backgroundColor="black">
-		<panel name="FullscreenTopPanel"/>
-		<widget source="Title" render="Label" position="20,5" size="850,65" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" valign="bottom"/>
-		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenTemplateWithPIGPanel"/>
 		<widget name="AboutScrollLabel" position="10,82" size="670,575" font="Regular;22" transparent="0" zPosition="1"/>
 		<widget name="HintText" position="695,440" size="575,200" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
-		<panel name="FullscreenButton1Panel"/>
 	</screen>
 	<screen name="SystemMemoryInfo" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButto2Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="lab1" render="Label" position="30,133" size="458,25" font="Boldit;24" transparent="0" zPosition="2"/>
 		<widget source="lab2" render="Label" position="30,158" size="458,25" font="Italic;19" transparent="0" zPosition="2"/>
 		<widget source="lab3" render="Label" position="30,183" size="458,25" font="Italic;19" transparent="0" zPosition="1"/>
 		<widget name="AboutScrollLabel" position="30,225" size="458,400" font="Regular;20" transparent="0" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton2Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="AboutScrollLabel" position="30,133" size="458,425" font="Regular;20" transparent="0" zPosition="1"/>
 		<ePixmap pixmap="div-h.png" position="10,590" zPosition="1" size="507,2"/>
 		<widget source="IFtext" render="Label" position="30,595" size="120,21" zPosition="10" font="Regular;20" halign="left" transparent="0"/>
@@ -779,13 +772,11 @@
 		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="130,620" zPosition="10" size="15,16" transparent="0" alphatest="on"/>
 	</screen>
 	<screen name="StreamingClientsInfo" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton2Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="ScrollLabel" position="20,130" size="460,450" font="Regular;20" transparent="0" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton2Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="TunerHeader" render="Label" position="30,107" size="458,36" font="Bold;20" transparent="0" zPosition="1"/>
 		<widget source="nims" render="Label" position="30,132" size="458,100" font="Regular;18" transparent="0" zPosition="1"/>
 		<widget source="HDDHeader" render="Label" position="30,274" size="458,36" font="Bold;20" transparent="0" zPosition="1"/>
@@ -794,16 +785,15 @@
 		<widget source="mounts" render="Label" position="30,499" size="458,143" font="Regular;18" transparent="0" zPosition="1"/>
 	</screen>
 	<screen name="AboutReleaseNotes" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,526" font="Regular;15" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="NetworkSetPassword" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton2Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="passwd" position="30,107" size="458,36" font="Bold;20" transparent="0" zPosition="1"/>
 	</screen>
 	<screen name="AdapterSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="95,150" size="320,150" transparent="0" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H25x322.png"/>
 		<eLabel text=" " position="75,318" zPosition="1" size="360,2" backgroundColor="#008c8c8c"/>
 		<widget source="DNS1text" render="Label" position="95,328" size="180,21" zPosition="1" font="Regular;19" transparent="0" backgroundColor="window-bg"/>
@@ -826,14 +816,12 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="60,399" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="AdapterSetupConfiguration" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="menulist" position="10,107" size="503,380" itemHeight="36" font="Regular;28" transparent="0" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H36x503.png"/>
 		<ePixmap pixmap="div-h.png" position="10,570" zPosition="1" size="503,2"/>
 		<widget source="description" render="Label" position="10,575" size="503,70" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton2Panel"/>
 		<widget source="Statustext" render="Label" position="75,694" size="190,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" backgroundColor="menu-buttons-bkgrnd1" foregroundColor="menu-buttons-frgrnd"/>
 		<widget name="statuspic" pixmaps="ViX-Common/buttons/green.png,ViX-Common/buttons/button_off.png" zPosition="10" position="40,690" size="24,24" alphatest="blend" transparent="1"/>
 		<widget source="IFtext" render="Label" position="180,665" size="100,20" zPosition="1" font="Regular;20" halign="right" transparent="1" valign="top" backgroundColor="menu-buttons-bkgrnd2" foregroundColor="menu-buttons-frgrnd"/>
@@ -879,23 +867,20 @@
 		</widget>
 	</screen>
 	<screen name="AudioEffect" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,400" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
 		<widget source="description" render="Label" position="10,545" size="503,100" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="BouquetSelector" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="menu" position="10,107" size="503,512" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="ChannelContextMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="menu" position="10,107" size="503,480" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="ChannelSelection" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<widget source="Title" render="Label" position="20,5" size="850,65" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" valign="bottom"/>
-		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenTemplateWithPIGPanel"/>
 		<widget name="list" position="10,82" size="660,565" selectionPixmap="ViX-Common/buttons/FocusBar_H36x660.png" backgroundColor="black" foregroundColorEvent="event-frgrnd"
 				foregroundColorEventSelected="#00202020" foregroundColorServiceNotAvail="verydarkgrey" serviceItemHeight="36" serviceNumberFont="Regular;25" serviceNameFont="Regular;25"
 				serviceInfoFont="Bold;22" transparent="1" zPosition="3" scrollbarMode="showOnDemand" backgroundColorMarkedSelected="red"/>
@@ -922,10 +907,9 @@
 			<convert type="EventTime">NextTimes</convert>
 			<convert type="ClockToText"></convert>
 		</widget>
-		<panel name="FullscreenButton1Panel"/>
 	</screen>
 	<screen name="SlimChannelSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,420" backgroundColor="black" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColorEvent="event-frgrnd" foregroundColorEventSelected="#00202020" foregroundColorServiceNotAvail="verydarkgrey" serviceItemHeight="30" serviceNumberFont="Regular;24" serviceNameFont="Regular;24" serviceInfoFont="Bold;21" transparent="1" zPosition="3" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceEvent" render="Label" position="10,530" zPosition="2" size="135,25" font="Bold;22" backgroundColor="black" halign="right" noWrap="1" valign="top" foregroundColor="orange" transparent="1">
 			<convert type="EventTime">Times</convert>
@@ -934,7 +918,6 @@
 		<widget source="ServiceEvent" render="Label" position="15,555" size="503,90" font="Regular;19" backgroundColor="black" foregroundColor="window-fg" valign="top" zPosition="2" transparent="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="ChannelSelectionRadio" position="center,100" size="660,400" backgroundColor="window-bg" transparent="0">
 		<widget name="list" position="0,0" size="660,324" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="window-fg" backgroundColor="window-bg" selectionPixmap="ViX-Common/buttons/FocusBar_H36x660.png" foregroundColorEvent="darkgrey" foregroundColorEventSelected="menu-title-frgrnd" foregroundColorServiceNotAvail="#2c2c2c" serviceItemHeight="36" serviceNumberFont="Regular;24" serviceNameFont="Regular;24" serviceInfoFont="Regular;21" transparent="0"/>
@@ -972,7 +955,7 @@ self.autoResize()
 		<widget name="bottom" position="10,230" size="430,25" font="Regular;23" transparent="0"/>
 	</screen>
 	<screen name="CiSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="text" position="10,133" size="430,25" font="Regular;23" transparent="0"/>
 		<widget name="entries" position="10,173" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" scrollbarMode="showOnDemand" transparent="0" enableWrapAround="1"/>
 	</screen>
@@ -994,29 +977,31 @@ self.autoResize()
 <!-- EPG Screens -->
 	<screen name="EPGSelection" position="fill" backgroundColor="black" transparent="0" flags="wfNoBorder">
 		<panel name="FullscreenTopPanel"/>
+		<widget source="Title" render="Label" position="135,5" size="800,62" font="Boldit;30" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" valign="center"/>
+		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenButtonPanel"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="20,686" size="35,25" alphatest="blend" transparent="1" zPosition="1"/>
 		<widget source="Service" render="PiconBg" position="18,8" size="104,63" zPosition="5" alphatest="blend" backgroundColor="fullscreen-topbar-bkgrnd" />
 		<widget source="Service" render="Picon" position="20,9" size="100,60" zPosition="5" alphatest="blend" backgroundColor="fullscreen-topbar-bkgrnd">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="Title" render="Label" position="135,5" size="800,62" font="Boldit;30" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" valign="center"/>
-		<panel name="FullscreenPIGPanel"/>
 		<widget name="lab1" position="20,82" size="660,592" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="number" position="20,82" size="660,592" zPosition="5" backgroundColor="transparent" transparent="0" font="Regular;48" borderColor="black" borderWidth="2" valign="center" halign="center"/>
 		<widget name="list" position="20,82" size="660,592" selectionPixmap="ViX-Common/buttons/FocusBar_H36x660.png" zPosition="3" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget source="Event" render="Label" position="695,410" size="575,250" font="Regular;22" backgroundColor="black" foregroundColor="window-fg" transparent="0" valign="top" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<ePixmap pixmap="buttons/key_menu.png" position="20,686" size="35,25" alphatest="blend" transparent="1" zPosition="1"/>
-		<panel name="FullscreenButton1Panel"/>
 	</screen>
 	<screen name="EPGSelectionMulti" position="fill" backgroundColor="black" transparent="0" flags="wfNoBorder">
 		<panel name="FullscreenTopPanel"/>
+		<widget source="Title" render="Label" position="135,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
+		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenButtonPanel"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="20,686" size="35,25" alphatest="blend" transparent="1" zPosition="1"/>
 		<widget source="Service" render="PiconBg" position="18,8" size="104,63" zPosition="5" alphatest="blend" backgroundColor="fullscreen-topbar-bkgrnd" />
 		<widget source="Service" render="Picon" position="20,9" size="100,60" zPosition="5" alphatest="blend" backgroundColor="fullscreen-topbar-bkgrnd">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="Title" render="Label" position="135,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
-		<panel name="FullscreenPIGPanel"/>
 		<widget name="bouquetlist" position="20,130" size="660,540" foregroundColor="window-fg" backgroundColor="window-bg" foregroundColorSelected="window-sel-fg" backgroundColorSelected="window-sel-bg" borderColor="black" scrollbarMode="showNever" zPosition="4" transparent="0"/>
 		<widget name="lab1" position="20,130" size="660,540" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="list" position="20,130" size="660,540" selectionPixmap="ViX-Common/buttons/FocusBar_H36x660.png" zPosition="3" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
@@ -1033,23 +1018,19 @@ self.autoResize()
 		<widget source="Event" render="Label" position="695,410" size="575,250" font="Regular;22" backgroundColor="black" foregroundColor="window-fg" transparent="0" valign="top" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<ePixmap pixmap="buttons/key_menu.png" position="20,686" size="35,25" alphatest="blend" transparent="1" zPosition="1"/>
-		<panel name="FullscreenButton1Panel"/>
 	</screen>
 	<screen name="GraphicalEPG" position="fill" backgroundColor="black" transparent="0" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
+		<panel name="FullscreenTemplatePanel"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="20,686" size="35,25" alphatest="blend" transparent="1" zPosition="1"/>
 		<widget name="lab1" position="0,70" size="1280,620" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="timeline_text" position="0,70" size="1280,30" backgroundColor="black" foregroundColor="orange" transparent="1" zPosition="0"/>
 		<widget name="bouquetlist" position="0,95" size="1280,590" foregroundColorSelected="black" scrollbarMode="showNever" zPosition="4" transparent="0"/>
 		<widget name="list" position="0,95" size="1280,590" backgroundColor="black" EntryForegroundColorSelected="black" EntryForegroundColorNowSelected="black" RecordForegroundColorSelected="black" ZapForegroundColorSelected="black" scrollbarMode="showNever" zPosition="1" transparent="0"/>
 		<widget name="timeline_now" position="0,95" zPosition="3" size="19,590" pixmap="epg/timeline-now.png" alphatest="on"/>
-		<ePixmap pixmap="buttons/key_menu.png" position="20,686" size="35,25" alphatest="blend" transparent="1" zPosition="1"/>
-		<panel name="FullscreenButton1Panel"/>
 	</screen>
 	<screen name="GraphicalEPGPIG" position="fill" backgroundColor="black" transparent="0" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
+		<panel name="FullscreenTemplatePanel"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="20,686" size="35,25" alphatest="blend" transparent="1" zPosition="1"/>
 		<eLabel position="878,73" size="382,215" zPosition="2" backgroundColor="darkgrey" foregroundColor="window-bg"/>
 		<widget source="session.VideoPicture" render="Pig" position="880,75" size="378,211" zPosition="3" backgroundColor="#ff000000"/>
 		<eLabel position="880,75" size="378,25" zPosition="4" backgroundColor="pig-channel-name"/>
@@ -1077,8 +1058,6 @@ self.autoResize()
 		<widget name="bouquetlist" position="0,73" size="877,217" foregroundColorSelected="black" scrollbarMode="showNever" zPosition="4" transparent="0"/>
 		<widget name="list" position="0,317" size="1280,360" backgroundColor="black" EntryForegroundColorSelected="black" EntryForegroundColorNowSelected="black" RecordForegroundColorSelected="black" ZapForegroundColorSelected="black" scrollbarMode="showNever" zPosition="1" transparent="0"/>
 		<widget name="timeline_now" position="0,317" zPosition="3" size="19,360" pixmap="epg/timeline-now-pig.png" alphatest="on"/>
-		<ePixmap pixmap="buttons/key_menu.png" position="20,686" size="35,25" alphatest="blend" transparent="1" zPosition="1"/>
-		<panel name="FullscreenButton1Panel"/>
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="0,520" size="1280,200" backgroundColor="black" transparent="0" flags="wfNoBorder">
 		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,50" zPosition="-1"/>
@@ -1141,7 +1120,7 @@ self.autoResize()
 		<widget name="FullDescription" position="10,55" size="1260,380" font="Regular;22" foregroundColor="infobar-frgrnd" backgroundColor="infobar_sunken" transparent="1"/>
 	</screen>
 	<screen name="EventViewContextMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="menu"  render="Listbox" position="10,107" size="503,533" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [	MultiContentEntryText(pos = (20,0), size = (465,38), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	) ],
@@ -1152,7 +1131,7 @@ self.autoResize()
 		</widget>
 	</screen>
 	<screen name="HarddiskSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="hddlist" itemHeight="45" selectionPixmap="ViX-Common/buttons/FocusBar_H45x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,533" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="HarddiskSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -1160,6 +1139,7 @@ self.autoResize()
 		<widget name="model" position="40,133" size="380,25" font="Regular;23" transparent="0"/>
 		<widget name="capacity" position="40,168" size="380,25" font="Regular;23" transparent="0"/>
 		<widget name="bus" position="40,203" size="380,25" font="Regular;23" transparent="0"/>
+		<!-- To do -->
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1"/>
 		<widget name="initializetext" position="75,663" size="190,24" zPosition="1" font="Regular;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" valign="center"/>
 	</screen>
@@ -1175,11 +1155,10 @@ self.autoResize()
 		<widget name="long_key" position="760,600" size="180,40" font="Regular;20" halign="right" foregroundColor="yellow" transparent="0"/>
 	</screen>
 	<screen name="HdmiCECSetupScreen" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,496" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget source="current_address" render="Label" position="10,585" size="503,30" zPosition="10" font="Regular;21" halign="left" valign="center"/>
 		<widget source="fixed_address" render="Label" position="10,615" size="503,30" zPosition="10" font="Regular;21" halign="left" valign="center"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="InputBox" position="center,center" size=" 600, 95">
 		<widget name="text" position="10,10" size="580,30" font="Regular;24"/>
@@ -1192,13 +1171,12 @@ self.autoResize()
 		<widget name="slider" position="10,100" size="530,15" pixmap="progress_big.png" borderWidth="2" borderColor="window-fg"/>
 	</screen>
 	<screen name="LocationBox" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="text" position="10,110" size="503,38" font="Regular;26" backgroundColor="menu-title-bkgrnd" transparent="1" noWrap="1"/>
 		<widget name="target" position="10,140" size="503,22" valign="center" font="Regular;22" transparent="0"/>
 		<widget name="filelist" position="10,165" zPosition="1" size="503,225" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="0"/>
 		<widget name="textbook" position="10,405" size="503,22" font="Regular;22" transparent="0"/>
 		<widget name="booklist" position="10,435" zPosition="2" size="503,190" scrollbarMode="showOnDemand" transparent="0"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="MessageBoxTemplate">
 		<widget name="text" position="65,8" size="520,0" font="Regular;22"/>
@@ -1217,7 +1195,7 @@ self.autoResize()
 		 <panel name= "MessageBoxTemplate"/>
 	</screen>
 	<screen name="InputDeviceSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" position="10,107" size="503,496" selectionPixmap="ViX-Common/buttons/FocusBar_H70x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 							{"template": [
@@ -1230,21 +1208,17 @@ self.autoResize()
 			</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="10,585" size="503,30" zPosition="10" font="Regular;21" halign="center" valign="center"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="InputDeviceSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,480" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget source="introduction" render="Label" position="10,570" size="503,45" zPosition="10" font="Regular;21" halign="center" valign="center"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="MinuteInput" position="center,center" size="280,60">
 		<widget name="minutes" position="80,15" size="160,25" halign="right" font="Regular;23" transparent="1"/>
 	</screen>
 	<screen name="MovieSelection" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
-		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenTemplateWithPIGPanel"/>
 		<widget name="waitingtext" position="20,82" size="660,590" font="Regular;21" halign="center" valign="center" transparent="0" foregroundColor="window-fg" backgroundColor="black" zPosition="4"/>
 		<widget name="list" position="20,82" size="660,590" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H36x660.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" enableWrapAround="1"/>
 		<widget name="chosenletter" position="20,82" size="660,576" foregroundColor="yellow" font="Regular;50" halign="center" valign="center" transparent="1" zPosition="4"/>
@@ -1261,12 +1235,11 @@ self.autoResize()
 		</widget>
 		<widget name="freeDiskSpace" position="870,660" size="400,20" font="Regular;18" backgroundColor="window-sel-fg" valign="center" halign="right" zPosition="2" transparent="1"/>
 		<widget name="TrashcanSize" position="695,660" size="400,20" font="Regular;18" backgroundColor="window-sel-fg" valign="center" halign="left" zPosition="2" transparent="1"/>
-		<panel name="FullscreenButton1Panel"/>
 		<widget name="movie_sort" position="1150,690" size="35,20" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" zPosition="10" transparent="1" alphatest="on"/>
 		<widget name="movie_off" position="1190,690" size="35,20" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png,icons/rep.png" zPosition="10" transparent="1" alphatest="on"/>
 	</screen>
 	<screen name="MovieSelectionSlim" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="freeDiskSpace" position="10,30" size="410,28" font="Regular;22" halign="right" transparent="1" foregroundColor="menu-title-frgrnd" backgroundColor="menu-time-bkgrnd"/>
 		<widget name="waitingtext" position="10,107" size="503,520" font="Regular;21" halign="center" valign="center" transparent="0" foregroundColor="window-fg" backgroundColor="window-bg" zPosition="4"/>
 		<widget name="list" position="10,107" size="503,520" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H25x630.png" foregroundColor="window-fg" backgroundColor="black" transparent="1" enableWrapAround="1"/>
@@ -1281,25 +1254,23 @@ self.autoResize()
 		<widget source="Service" render="Label" position="10,555" size="498,90" font="Regular;19" backgroundColor="black" foregroundColor="window-fg" valign="top" zPosition="1" transparent="1">
 			<convert type="MovieInfo">MetaDescription</convert>
 		</widget>
-		<panel name="MenuButton1Panel"/>
 		<widget name="movie_sort" position="3,665" size="35,20" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" zPosition="10" transparent="1" alphatest="on"/>
 		<widget name="movie_off" position="3,692" size="35,20" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png,icons/rep.png" zPosition="10" transparent="1" alphatest="on"/>
 	</screen>
 	<screen name="MovieListTags" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,536" itemHeight="25" font="Regular;22" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="Mute" position="92,40" zPosition="10" size="90,80" backgroundColor="transparent" title="Mute" flags="wfNoBorder">
 		<ePixmap position="0,0" size="90,80" pixmap="screens/mute.png" transparent="1" alphatest="on"/>
 	</screen>
 	<screen name="NameserverSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,250" itemHeight="25" zPosition="3" scrollbarMode="showOnDemand" transparent="0" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png"/>
 		<widget name="introduction" position="10,596" size="503,30" zPosition="10" font="Regular;21" backgroundColor="window-bg" halign="center" transparent="0"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="NetworkAdapterSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" selectionPixmap="ViX-Common/buttons/FocusBar_H70x503.png" position="10,107" size="503,250" zPosition="10" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1315,10 +1286,9 @@ self.autoResize()
 		</widget>
 		<ePixmap pixmap="div-h.png" position="10,585" zPosition="1" size="503,2"/>
 		<widget name="introduction" position="10,596" size="503,30" zPosition="10" font="Regular;21" backgroundColor="window-bg" halign="center" transparent="0"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="NetworkAdapterTest" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="Adaptertext" position="10,176" size="120,26" zPosition="1" font="Italic;21" backgroundColor="window-bg" foregroundColors="#cccccc,#5d984d" transparent="1"/>
 		<widget name="Adapter" position="130,176" size="200,26" zPosition="1" font="Italic;21" halign="right" foregroundColors="#cccccc,#a72c25,#5d984d" backgroundColor="window-bg" transparent="1"/>
 		<widget name="AdapterInfo_Text" position="385,176" size="150,26" zPosition="2" font="Regular;21" backgroundColor="window-bg" transparent="1" foregroundColors="#18000000,#cccccc,#446bb7" text="Info"/>
@@ -1342,10 +1312,9 @@ self.autoResize()
 		<widget name="EditSettingsButton" pixmaps="ViX-Common/buttons/button_bluekey.png,ViX-Common/buttons/button_bluekey.png" position="250,531" zPosition="1" size="222,36" transparent="1" alphatest="blend"/>
 		<widget name="EditSettings_Text" position="280,540" size="160,26" zPosition="2" font="Regular;24" backgroundColor="#00868686" halign="center" transparent="1" foregroundColors="#1c1c1c,#1c1c1c,#07255d"/>
 		<widget name="InfoText" position="10,160" size="503,430" zPosition="25" backgroundColor="black" font="Regular;21"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="WlanScan" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" selectionPixmap="ViX-Common/buttons/FocusBar_H70x503.png" position="10,107" size="503,250" zPosition="10" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1362,23 +1331,20 @@ self.autoResize()
 		</widget>
 		<ePixmap pixmap="div-h.png" position="10,585" zPosition="1" size="503,2"/>
 		<widget source="info" render="Label" position="10,596" size="503,30" zPosition="10" font="Regular;21" backgroundColor="window-bg" halign="center" transparent="0"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="NetworkMountsMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="menulist" position="10,107" size="503,400" itemHeight="38" font="Regular;28" transparent="0" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png"/>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
 		<widget source="introduction" render="Label" position="10,615" size="503,30" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="ScanIP" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,450" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png"/>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="NetworkBrowser" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" position="10,107" size="503,450" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1396,28 +1362,25 @@ self.autoResize()
 		</widget>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
 		<widget source="infotext" render="Label" position="10,615" size="503,30" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="UserDialog" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,250" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png"/>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
 		<widget source="introduction" render="Label" position="10,615" size="503,30" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
 		<widget name="VKeyIcon" pixmap="buttons/key_text.png" position="280,663" zPosition="1" size="35,25" transparent="1" alphatest="on"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="100,450" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="AutoMountEdit" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,250" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png"/>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
 		<widget source="introduction" render="Label" position="10,615" size="503,30" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
 		<widget name="VKeyIcon" pixmap="buttons/key_text.png" position="280,663" zPosition="1" size="35,25" transparent="1" alphatest="on"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="100,450" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="UserManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="config" render="Listbox" selectionPixmap="ViX-Common/buttons/FocusBar_H70x503.png" position="10,107" size="503,250" zPosition="10" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 					{"template": [
@@ -1431,10 +1394,9 @@ self.autoResize()
 		</widget>
 		<ePixmap pixmap="div-h.png" position="10,585" zPosition="1" size="503,2"/>
 		<widget source="introduction" render="Label" position="10,596" size="503,30" zPosition="10" font="Regular;21" backgroundColor="window-bg" halign="center" transparent="0"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="AutoMountManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="config" render="Listbox" position="10,107" size="503,450" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1449,10 +1411,9 @@ self.autoResize()
 		</widget>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
 		<widget source="introduction" render="Label" position="10,615" size="503,30" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="AutoMountView" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="legend1" render="Label" position="10,133" zPosition="1" size="130,40" font="Regular;18" halign="center" valign="center" backgroundColor="window-bg" transparent="0"/>
 		<widget source="legend2" render="Label" position="145,133" zPosition="1" size="303,40" font="Regular;18" halign="center" valign="center" backgroundColor="window-bg" transparent="0"/>
 		<widget source="legend3" render="Label" position="410,133" zPosition="1" size="100,40" font="Regular;18" halign="center" valign="center" backgroundColor="window-bg" transparent="0"/>
@@ -1474,23 +1435,21 @@ self.autoResize()
 		</widget>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
 		<widget source="introduction" render="Label" position="10,615" size="503,30" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="LogManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,500" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<panel name="MenuButton1Panel"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(25)
 		</applet>
 		<widget name="LogsSize" position="10,610" size="503,25" foregroundColor="window-fg" font="Regular;19" halign="center" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="NetworkSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="menu" position="10,107" size="503,250" itemHeight="30" zPosition="3" scrollbarMode="showOnDemand" transparent="0" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png"/>
 	</screen>
 	<screen name="NimSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="nimlist" render="Listbox" selectionPixmap="ViX-Common/buttons/FocusBar_H85x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,533" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1502,7 +1461,6 @@ self.autoResize()
 				}
 			</convert>
 		</widget>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="NimSetup" position="fill" backgroundColor="black" flags="wfNoBorder">
 		<panel name="FullscreenConfigBasicWithDescriptionPanel"/>
@@ -1519,7 +1477,7 @@ self.autoResize()
 		<widget name="servicename" position="0,40" size="434,60" backgroundColor="transparent" transparent="1" font="Regular;30" borderColor="black" borderWidth="2" valign="center" halign="center"/>
 	</screen>
 	<screen name="HistoryZapSelector" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="menu" render="Listbox" position="10,107" size="503,530" selectionPixmap="ViX-Common/buttons/FocusBar_H106x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1563,23 +1521,22 @@ self.autoResize()
 		<widget source="status" render="Label" position="340,530" size="700,80" zPosition="10" font="Regular;22" foregroundColor="grey" halign="center" valign="center" transparent="1"/>
 	</screen>
 	<screen name="ParentalControlChangePin" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,132" size="503,495" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="ParentalControlEditor" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="servicelist" position="10,107" size="503,526" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="ParentalControlSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,132" size="503,495" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="PictureInPicture" position="400,60" zPosition="-1" size="240,192" flags="wfNoBorder">
 		<widget name="video" position="0,0" size="240,192" backgroundColor="transparent"/>
 	</screen>
 	<screen name="PinInput" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="service" position="10,107" size="503,25" font="Regular;20" transparent="0"/>
 		<widget name="text" position="10,190" size="503,25" font="Regular;20" halign="center"/>
 		<widget name="tries" position="10,220" size="503,25" font="Regular;20" halign="center"/>
@@ -1595,13 +1552,12 @@ self.autoResize()
 		<widget name="text" position="0,0" size="600,150" font="Regular;23"/>
 	</screen>
 	<screen name="PluginBrowser" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,528" itemHeight="48" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<ePixmap pixmap="buttons/key_menu.png" position="470,663" size="35,25" alphatest="blend" transparent="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="PluginDownloadBrowser" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="text" position="10,107" size="503,533" zPosition="1" font="Regular;20" halign="center" valign="center" transparent="0"/>
 		<widget name="list" position="10,107" size="503,528" itemHeight="48" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1"/>
 	</screen>
@@ -1630,7 +1586,7 @@ self.autoResize()
 		<widget name="subpages_9" position="35,250" size="36,20" alphatest="on"/>
 	</screen>
 	<screen name="Satfinder" position="fill" flags="wfNoBorder">
-<!-- ##SNR## -->
+		<!-- ##SNR## -->
 		<eLabel text="SNR:" position="48,40" size="95,50" font="Regular;30" transparent="1"/>
 		<widget source="Frontend" render="Progress" position="145,37" size="1000,50" foregroundColor="yellow" borderWidth="2" borderColor="window-fg">
 		<convert type="FrontendInfo">SNR</convert>
@@ -1685,23 +1641,27 @@ self.autoResize()
 <!--
 		<widget name="introduction" position="535,10" size="735,40" font="Regular;35" foregroundColor="yellow" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" zPosition="1"/>
 -->
-		<panel name="FullscreenButton3Panel"/>
+		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,686" size="25,25" alphatest="blend" transparent="1"/>
+		<widget source="key_red" render="Label" position="130,686" size="240,25" zPosition="1" font="Regular;22" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="window-frgrnd" backgroundColor="window-bg"/>		
+		<ePixmap pixmap="ViX-Common/buttons/green.png" position="380,686" size="25,25" alphatest="blend" transparent="1"/>
+		<widget source="key_green" render="Label" position="420,686" size="240,25" zPosition="1" font="Regular;22" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="window-frgrnd" backgroundColor="window-bg"/>
+		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="670,686" size="25,25" alphatest="blend" transparent="1"/>		
+		<widget source="key_yellow" render="Label" position="710,686" size="240,25" zPosition="1" font="Regular;22" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="window-frgrnd" backgroundColor="window-bg"/>		
+		<ePixmap pixmap="ViX-Common/buttons/blue.png" position="960,686" size="25,25" alphatest="blend" transparent="1"/>
+		<widget source="key_blue" render="Label" position="420,686" size="240,25" zPosition="1" font="Regular;22" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="window-frgrnd" backgroundColor="window-bg"/>		
 	</screen>
 	<screen name="ScanSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,490" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="introduction" position="10,600" size="500,30" font="Regular;20" halign="center"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="ScanSimple" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,250" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="footer" position="10,565" size="503,40" font="Regular;20" halign="center"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="DeleteBouquets" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" position="10,107" size="503,535" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1">
 				<convert type="TemplatedMultiContent">
 					{"template": [
@@ -1716,9 +1676,8 @@ self.autoResize()
 		</widget>
 	</screen>
 	<screen name="RemoteControlCode" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,495" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="RCSetupScreen" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
@@ -1729,13 +1688,12 @@ self.autoResize()
 		<widget name="ok" position="75,690" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2"/>
 	</screen>
 	<screen name="FPGAUpgrade" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="status" render="Label" position="20,107" size="503,40" zPosition="1" font="Regular;18" halign="left" valign="center" transparent="1"/>
 		<widget name="file_list" position="10,147" size="503,495" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="ManualFancontrol" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,395" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget source="current" render="Label" position="20,490" size="503,40" zPosition="1" font="Regular;18" halign="center" valign="center" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1"/>
 			<widget source="SensorTempText0" render="Label" position="10,560" zPosition="1" size="120,40" font="Regular;20" halign="right" valign="top" transparent="1"/>
@@ -1746,31 +1704,26 @@ self.autoResize()
 			<widget source="SensorFan0" render="Label" position="145,590" zPosition="1" size="150,20" font="Regular;20" halign="left">
 				<convert type="SensorToText"/>
 			</widget>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="FanSetupConfiguration" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,495" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="LED_GigaSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="GigaBlue LED Setup">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="20,107" size="490,495" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="TunerServer" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="lab1" position="10,100" size="503,510" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" enableWrapAround="1" font="Regular;20" scrollbarMode="showOnDemand"/>
 		<widget name="lab2" position="10,610" size="200,30" font="Regular;20" valign="center" halign="right" transparent="0"/>
 		<widget name="labstop" position="220,610" size="260,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="220,610" size="260,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="OpenWebifConfig" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="lab1" position="10,107" halign="center" size="503,30" zPosition="1" font="Regular;24" valign="top" transparent="0"/>
 		<widget name="config" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,147" size="503,493" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="Scart" position="fill" backgroundColor="transparent"/>
 	<screen name="ServiceInfoSimple" position="center,center" size="650,300" title="Service info">
@@ -1788,8 +1741,7 @@ self.autoResize()
 		<widget name="blue" position="618,325" size="150,20" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="window-bg" transparent="1"/>
 	</screen>
 	<screen name="ServiceScan" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-s.png" position="45,135" size="64,64" transparent="1" alphatest="blend">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
@@ -1813,22 +1765,19 @@ self.autoResize()
 		<widget name="servicelist" position="50,265" size="400,360" selectionDisabled="1"/>
 	</screen>
 	<screen name="SimpleChannelSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,533" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColorEvent="event-frgrnd" foregroundColorEventSelected="#00202020" foregroundColorServiceNotAvail="verydarkgrey" backgroundColor="window-bg" transparent="0" enableWrapAround="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="SkinSelector" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="SkinList" position="15,355" size="495,240" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="Preview" position="117,138" size="280,210" alphatest="on" zPosition="0"/>
-		<panel name="MenuButton2Panel"/>
 		<widget source="introduction" render="Label" position="10,604" size="503,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" backgroundColor="window-bg"/>
 	</screen>
 	<screen name="SleepTimerEdit" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,464" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<widget name="current_status" position="52,570" size="400,30" valign="center" font="Regular;20" transparent="0"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="Standby" flags="wfNoBorder" position="fill" backgroundColor="black"/>
 	<screen name="SubservicesQuickzap" position="124,470" size="512,200" title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
@@ -1842,7 +1791,7 @@ self.autoResize()
 		</widget>
 	</screen>
 	<screen name="Subtitles" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,494" itemHeight="36" selectionPixmap="ViX-Common/buttons/FocusBar_H36x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="SubtitleDisplay" position="fill" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent"/>
@@ -1882,7 +1831,7 @@ self.autoResize()
 		<widget name="config" position="10,40" transparent="0" size="380,150"/>
 	</screen>
 	<screen name="CronTimers" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="lab1" position="10,139" size="100,24" font="Regular;20" valign="center" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<widget name="labdisabled" position="110,136" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
 		<widget name="labactive" position="110,136" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
@@ -1893,14 +1842,12 @@ self.autoResize()
 			<convert type="StringList"/>
 		</widget>
 		<widget name="key" position="10,605" size="503,25" font="Regular;20" halign="center" transparent="1" valign="center" backgroundColor="window-bg"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="CronTimersConfig" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,435" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="100,490" zPosition="1" size="541,720" transparent="1" alphatest="on"/>
 		<ePixmap pixmap="buttons/key_text.png" position="280,663" zPosition="4" size="35,25" alphatest="on" transparent="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="TimerEdit" position="70,130" size="590,335">
 		<widget name="description" position="10,10" size="580,40" font="Regular;25" transparent="1"/>
@@ -1911,13 +1858,10 @@ self.autoResize()
 		<widget name="apply" position="10,240" size="250,35" transparent="1"/>
 	</screen>
 	<screen name="TimerEditList" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<widget source="Title" render="Label" position="20,5" size="850,65" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" valign="bottom"/>
-		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenTemplateWithPIGPanel"/>
+		<panel name="FullscreenInfoButtonPanel"/>
 		<widget name="timerlist" position="10,82" size="660,576" itemHeight="48" selectionPixmap="ViX-Common/buttons/FocusBar_H50x660.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="description" position="695,435" size="503,230" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
-		<panel name="FullscreenButton1Panel"/>
-		<ePixmap pixmap="buttons/key_info.png" position="1250,686" size="35,25" alphatest="blend" transparent="1"/>
 	</screen>
 	<screen name="TimerEntry" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
@@ -1948,14 +1892,13 @@ self.autoResize()
 		<widget name="list" position="10,0" size="825,520" font="Regular;20"/>
 	</screen>
 	<screen name="TimerSanityConflict" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="timer1" position="10,107" size="503,50" selectionDisabled="1" scrollbarMode="showNever"/>
 		<widget name="timer2" position="10,213" size="503,50" selectionDisabled="1" scrollbarMode="showNever"/>
 		<widget name="list" position="10,303" size="503,325" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="TimerSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="timerlist" selectionPixmap="ViX-Common/buttons/FocusBar_H70x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,533" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="Volume" position="950,10" zPosition="1" size="320,68" title="Volume" flags="wfNoBorder" backgroundColor="transparent">
@@ -1963,9 +1906,8 @@ self.autoResize()
 		<widget name="Volume" pixmap="screens/volume_up.png" position="62,14" zPosition="1" size="240,34" transparent="1"/>
 	</screen>
 	<screen name="WebIfConfigScreen" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,533" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="VirtualKeyBoard" position="center,center" size="560,350" zPosition="99">
 		<ePixmap pixmap="buttons/vkey_text.png" position="9,35" zPosition="-4" size="542,52" alphatest="on"/>
@@ -2267,7 +2209,7 @@ self.autoResize()
 	</screen>
 	<!-- Software Manger Screens -->
 	<screen name="UpdatePluginMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="menu" render="Listbox" position="10,107" size="503,200" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -2288,22 +2230,21 @@ self.autoResize()
 				}
 			</convert>
 		</widget>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="SoftwareUpdateChanges" position="fill" backgroundColor="black" flags="wfNoBorder">
 		<panel name="FullscreenTopPanel"/>
 		<widget source="Title" render="Label" position="20,5" size="850,65" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" valign="bottom"/>
+		<panel name="FullscreenButtonPanel"/>
 		<widget name="text" position="20,82" size="1240,590" font="Regular;21" backgroundColor="black" transparent="0"/>
-		<panel name="FullscreenButton1Panel"/>
 	</screen>
 	<screen name="SoftwareUpdateChoices" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,200" itemHeight="28" font="Regular;22" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="text" position="15,400" size="495,250" font="Regular;22" foregroundColor="window-fg" backgroundColor="window-bg" halign="center" transparent="0"/>
 		<ePixmap pixmap="buttons/key_menu.png" position="470,663" size="35,25" alphatest="blend" transparent="1"/>
 	</screen>
 	<screen name="PluginManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" selectionPixmap="ViX-Common/buttons/FocusBar_H52x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,450" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"templates":
@@ -2325,10 +2266,9 @@ self.autoResize()
 			</convert>
 		</widget>
 		<widget source="status" render="Label" position="10,600" size="503,25" font="Regular;20"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="PluginManagerInfo" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" transparent="0" position="10,107" size="503,450" scrollbarMode="showOnDemand" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -2343,10 +2283,9 @@ self.autoResize()
 			</convert>
 		</widget>
 		<widget source="status" render="Label" position="10,600" size="503,25" font="Regular;20"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="PluginManagerHelp" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" transparent="0" position="10,132" size="503,450" scrollbarMode="showOnDemand" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -2361,18 +2300,16 @@ self.autoResize()
 			</convert>
 		</widget>
 		<widget source="status" render="Label" position="10,600" size="503,25" font="Regular;20"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="PluginDetails" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="author" render="Label" position="10,140" size="350,25" zPosition="10" font="Regular;21" transparent="0"/>
 		<widget name="statuspic" position="450,133" size="48,48" alphatest="on" zPosition="0"/>
 		<widget name="screenshot" position="117,180" size="280,210" alphatest="on" zPosition="0"/>
 		<widget name="detailtext" position="10,400" size="503,225" transparent="0" font="Regular;20"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="UpdatePlugin" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="activityslider" position="10,140" size="503,5"/>
 		<widget source="package" render="Label" position="10,160" size="503,20" font="Regular;18" halign="center" valign="center" backgroundColor="window-bg" transparent="0"/>
 		<widget source="status" render="Label" position="10,190" size="503,95" font="Regular;20" halign="center" valign="center" backgroundColor="window-bg" transparent="0"/>
@@ -2380,17 +2317,15 @@ self.autoResize()
 		<widget name="feedStatusMSG" render="Label" position="10,500" size="503,30" font="Regular;22" backgroundColor="window-bg" transparent="1" halign="center" valign="center" zPosition="1" />
 	</screen>
 	<screen name="IPKGMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="filelist" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="IPKGSource" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="text" position="10,107" size="503,25" font="Regular;20" transparent="0"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="PacketManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H52x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -2404,29 +2339,24 @@ self.autoResize()
 				}
 			</convert>
 		</widget>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="IpkgInstaller" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,165" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
 		<widget source="introduction" render="Label" position="10,107" size="503,25" font="Regular;20" zPosition="2" transparent="0" halign="center"/>
-		<panel name="MenuButton2Panel"/>
 		<ePixmap pixmap="buttons/key_menu.png" position="470,663" size="35,25" alphatest="blend" transparent="1"/>
 	</screen>
 	<screen name="BackupSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="checkList" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="XtraPluginsSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="checkList" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="RestoreMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="filelist" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<!-- Misc Screens -->
 	<screen name="JobView" position="center,center" size="520,250">
@@ -2458,14 +2388,11 @@ self.autoResize()
 		</widget>
 	</screen>
 	<screen name="FileBrowser" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
+		<panel name="FullscreenTemplatePanel"/>
 		<widget name="filelist" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H52x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
-		<panel name="FullscreenButton2Panel"/>
 	</screen>
 	<screen name="CutListEditor" position="center,center" size="1280,720" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
+		<panel name="FullscreenTemplatePanel"/>
 		<eLabel position="50,123" size="394,504" zPosition="1" backgroundColor="menu-title-frgrnd" foregroundColor="window-bg"/>
 		<eLabel position="52,125" size="390,500" zPosition="2" backgroundColor="black" foregroundColor="window-bg"/>
 		<widget source="cutlist" render="Listbox" position="52,125" zPosition="3" size="390,500" scrollbarMode="showOnDemand" backgroundColor="window-bg" transparent="1">
@@ -2491,6 +2418,7 @@ self.autoResize()
 		<eLabel text="OK = Menu" position="50,661" size="140,22" zPosition="1" font="Regular;20" backgroundColor="#00868686" transparent="1" foregroundColor="foreground"/>
 	</screen>
 	<screen name="DVDToolbox" position="center,120" size="560,420" title="DVD media toolbox">
+		<!-- To do -->
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="0,0" size="140,40" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/green.png" position="140,0" size="140,40" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="280,0" size="140,40" alphatest="blend"/>
@@ -2503,6 +2431,7 @@ self.autoResize()
 		<widget source="space_label" render="Label" position="20,394" size="520,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="black"/>
 	</screen>
 	<screen name="ProjectSettings" position="center,120" size="560,420" title="Collection settings">
+		<!-- To do -->
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="0,0" size="140,40" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/green.png" position="140,0" size="140,40" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="280,0" size="140,40" alphatest="blend"/>
@@ -2516,8 +2445,7 @@ self.autoResize()
 		<widget source="info" render="Label" position="10,340" size="550,80" font="Regular;18" halign="center" valign="center"/>
 	</screen>
 	<screen name="TitleCutter" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
+		<panel name="FullscreenTemplatePanel"/>
 		<eLabel position="50,123" size="394,504" zPosition="1" backgroundColor="menu-title-frgrnd" foregroundColor="window-bg"/>
 		<eLabel position="52,125" size="390,500" zPosition="2" backgroundColor="black" foregroundColor="window-bg"/>
 		<widget source="cutlist" render="Listbox" position="52,125" zPosition="3" size="390,500" scrollbarMode="showOnDemand" backgroundColor="window-bg" transparent="1">
@@ -2543,6 +2471,7 @@ self.autoResize()
 		<eLabel text="OK = Menu" position="50,661" size="140,22" zPosition="1" font="Regular;20" backgroundColor="#00868686" transparent="1" foregroundColor="foreground"/>
 	</screen>
 	<screen name="TitleList" position="center,center" size="560,470" title="DVD Tool">
+		<!-- To do -->
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="0,0" size="140,40" alphatest="on"/>
 		<ePixmap pixmap="ViX-Common/buttons/green.png" position="140,0" size="140,40" alphatest="on"/>
 		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="280,0" size="140,40" alphatest="on"/>
@@ -2577,7 +2506,7 @@ self.autoResize()
 		<widget source="space_label_dual" render="Label" position="10,449" size="540,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="black"/>
 	</screen>
 	<screen name="DVDMovieSelection" position="0,0" size="541,720" title="Select a movie" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="waitingtext" position="10,107" size="503,375" zPosition="4" font="Regular;22" halign="center" valign="center"/>
 		<widget name="list" position="10,107" size="503,355" zPosition="2" scrollbarMode="showOnDemand"/>
 		<widget name="DescriptionBorder" pixmap="border_eventinfo.png" position="10,506" zPosition="1" size="503,103" transparent="1" alphatest="on"/>
@@ -2595,9 +2524,9 @@ self.autoResize()
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget name="freeDiskSpace" position="10,605" size="503,20" font="Regular;19" valign="center" halign="right"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="TitleProperties" position="center,120" size="560,425" title="Properties of current title">
+		<!-- to do -->
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="0,0" size="140,40" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/green.png" position="140,0" size="140,40" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/blue.png" position="420,0" size="140,40" alphatest="blend"/>
@@ -2642,6 +2571,7 @@ self.autoResize()
 		</widget>
 	</screen>
 	<screen name="ModemSetup" position="180,100" size="320,300">
+		<!-- to do -->
 		<ePixmap pixmap="ViX-Common/buttons/green.png" position="10,10" size="140,40" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="160,10" size="140,40" alphatest="blend"/>
 		<widget name="key_green" position="30,10" zPosition="1" size="115,40" font="Regular;20" halign="center" valign="center" backgroundColor="#009f1313" transparent="1"/>
@@ -2651,16 +2581,13 @@ self.autoResize()
 	</screen>
 	<!-- ## PicturePlayer ## -->
 	<screen name="picshow" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="label" render="Label" position="200,132" size="100,160" font="Regular;19" transparent="0"/>
 		<widget name="thn" position="10,107" size="180,160" alphatest="on"/>
 		<widget name="filelist" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,267" size="503,373" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="Pic_Exif" position="0,0" size="541,720">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton2Panel"/>
-		<widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#009f1313" transparent="1"/>-->
+		<panel name="HalfscreenTemplate"/>
 		<widget source="menu" render="Listbox" position="10,107" size="503,450" scrollbarMode="showOnDemand" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -2680,20 +2607,18 @@ self.autoResize()
 		<widget source="file" render="Label" position="70,15" size="600,25" zPosition="3" font="Regular;22" halign="left" noWrap="1" transparent="1" foregroundColor="yellow" backgroundColor="black"/>
 	</screen>
 	<screen name="CIselectMainMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="CiList" position="10,107" size="503,450" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png"/>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="CIconfigMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="CAidList_desc" render="Label" position="10,298" size="503,22" font="Regular;20" backgroundColor="#27d9dee2" transparent="1"/>
 		<widget source="CAidList" render="Label" position="10,318" size="503,45" font="Regular;20" backgroundColor="#27d9dee2" transparent="1"/>
 		<widget source="ServiceList_desc" render="Label" position="10,338" size="503,22" font="Regular;20" zPosition="1" backgroundColor="#27d9dee2" transparent="1"/>
 		<widget name="ServiceList" position="10,197" size="503,360" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png"/>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
 		<widget source="infotext" render="Label" position="10,615" size="503,30" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="easyCIconfigMenu" position="209,48" size="865,623" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="Bg_EPG_view.png" zPosition="-1" position="0,0" size="865,623" alphatest="on"/>
@@ -2714,25 +2639,22 @@ self.autoResize()
 		<widget source="ServiceList_info" render="Label" position="155,230" size="550,300" zPosition="2" font="Regular;20" backgroundColor="#27d9dee2" transparent="1"/>
 	</screen>
 	<screen name="CAidSelect" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,450" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png"/>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
 		<widget source="introduction" render="Label" position="10,615" size="503,30" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="myProviderSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,450" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png"/>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
 		<widget source="introduction" render="Label" position="10,615" size="503,30" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="myChannelSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,450" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png"/>
 		<ePixmap pixmap="div-h.png" position="10,610" zPosition="1" size="503,2"/>
 		<widget source="introduction" render="Label" position="10,615" size="503,30" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="DefaultServiceScan" position="150,115" size="420,390">
 		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-s.png" position="5,5" size="64,64" transparent="1" alphatest="blend">
@@ -2848,6 +2770,7 @@ self.autoResize()
 		<widget name="list_left" position="30,120" size="600,525" scrollbarMode="showOnDemand" transparent="1" backgroundColor="black"/>
 		<eLabel position="639,102" size="2,550" zPosition="5" transparent="0" backgroundColor="fullscreen-topbar-frgrnd"/>
 		<widget name="list_right" position="650,120" size="600,525" scrollbarMode="showOnDemand" transparent="1" backgroundColor="black"/>
+		<!-- To do: look at templating this if it repeats, wierd button names -->
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,686" size="25,25" alphatest="blend" transparent="1"/>
 		<ePixmap pixmap="ViX-Common/buttons/green.png" position="380,686" size="25,25" alphatest="blend" transparent="1"/>
 		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="670,686" size="25,25" alphatest="blend" transparent="1"/>
@@ -2865,6 +2788,7 @@ self.autoResize()
 		<widget name="config" position="50,150" size="660,450" zPosition="3" scrollbarMode="showOnDemand" transparent="1"/>
 		<eLabel position="732,135" size="2,475" backgroundColor="black" zPosition="5"/>
 		<eLabel position="730,135" size="2,475" zPosition="5" backgroundColor="menu-title-frgrnd"/>
+		<!-- To do: look at templating this if it repeats, wierd button names -->
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,686" size="25,25" alphatest="blend" transparent="1"/>
 		<ePixmap pixmap="ViX-Common/buttons/green.png" position="380,686" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="buttonred" position="130,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
@@ -2874,21 +2798,19 @@ self.autoResize()
 		<widget source="Canvas" render="Canvas" position="280,70" size="720,576"/>
 	</screen>
 	<screen name="RecordPathsSettings" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,533" itemHeight="36" selectionPixmap="ViX-Common/buttons/FocusBar_H36x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="SatNimSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="nimlist" position="10,107" size="503,533" itemHeight="45" selectionPixmap="ViX-Common/buttons/FocusBar_H45x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="RotorNimSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="nimlist" position="10,107" size="503,533" itemHeight="45" selectionPixmap="ViX-Common/buttons/FocusBar_H45x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="PositionerSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Positioner setup">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="25,133" size="458,210" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="1"/>
 		<widget name="snr_db" position="80,355" size="120,22" halign="center" valign="center" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
 		<eLabel text="SNR:" position="25,380" size="50,22" font="Regular;19" backgroundColor="window-bg" transparent="0"/>
@@ -2914,15 +2836,13 @@ self.autoResize()
 		<widget name="status_bar" position="25,600" size="458,24" font="Regular;22" foregroundColor="window-fg" backgroundColor="window-bg" zPosition="1" transparent="0" halign="center"/>
 	</screen>
 	<screen name="VideoEnhancementSetup" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
-		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenTemplateWithPIGPanel"/>
 		<widget name="config" position="10,82" size="670,575" selectionPixmap="ViX-Common/buttons/FocusBar_H25x670.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="695,440" size="575,200" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
-		<panel name="FullscreenButton2Panel"/>
 		<widget name="footnote" position="800,686" size="300,20" zPosition="1" font="Regular;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" halign="left" transparent="1" valign="top"/>
 	</screen>
 	<screen name="VideoEnhancementPreview" position="center,360" size="560,170">
+		<!-- to do -->
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="0,10" size="25,25" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/green.png" position="280,10" size="25,25" alphatest="blend"/>
 		<widget source="key_red" render="Label" position="35,10" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1"/>
@@ -3060,9 +2980,8 @@ self.autoResize()
 		</widget>
 	</screen>
 	<screen name="FancontrolConfiguration" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,132" size="503,495" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="FactoryTest" position="300,100" size="660,550">
 		<widget name="testlist" position="10,0" size="440,455" font="Regular;30" itemHeight="35"/>
@@ -3101,7 +3020,7 @@ self.autoResize()
 		<widget name="text2" position="10,60" size="330,40" font="Regular;30"/>
 	</screen>
 	<screen name="VIXMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="menu" render="Listbox" position="10,107" size="503,420" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -3122,24 +3041,21 @@ self.autoResize()
 				}
 			</convert>
 		</widget>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="VIXPowerManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" scrollbarMode="showOnDemand"/>
 		<widget name="standbystatus" position="10,520" size="250,55" font="Regular;20" zPosition="5"/>
 		<widget name="deepstandbystatus" position="10,575" size="250,55" font="Regular;20" zPosition="5"/>
 		<widget name="guirestartstatus" position="260,520" size="250,55" font="Regular;20" zPosition="6"/>
 		<widget name="rebootstatus" position="260,575" size="250,55" font="Regular;20" zPosition="6"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="VIXSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="VIXSwap" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="autostart_off" position="40,183" zPosition="1" pixmap="icons/lock_off.png" size="32,32" alphatest="on"/>
 		<widget name="autostart_on" position="40,183" zPosition="2" pixmap="icons/lock_on.png" size="32,32" alphatest="on"/>
 		<widget name="lab1" position="90,183" size="400,30" font="Regular;20" valign="center" transparent="0" backgroundColor="window-bg"/>
@@ -3150,79 +3066,70 @@ self.autoResize()
 		<widget name="lab4" position="40,293" size="150,30" font="Regular;20" valign="center" transparent="0"/>
 		<widget name="inactive" position="190,293" size="100,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="active" position="190,293" size="100,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="VIXSoftcamManager" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="lab1" position="40,270" size="170,20" font="Regular;22" halign="right" zPosition="2" backgroundColor="window-bg" transparent="0" valign="center"/>
 		<widget name="list" position="225,271" size="240,150" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="lab2" position="40,140" size="170,20" font="Regular;22" halign="right" zPosition="2" backgroundColor="window-bg" transparent="0"/>
 		<widget name="activecam" position="225,142" size="240,75" font="Regular;20" halign="left" zPosition="2" backgroundColor="window-bg" transparent="0" noWrap="1"/>
 		<ePixmap pixmap="buttons/key_menu.png" position="470,663" size="35,25" alphatest="blend" transparent="1"/>
 		<ePixmap pixmap="buttons/key_info.png" position="470,690" size="35,25" alphatest="blend" transparent="1"/>
-		<panel name="MenuButton1Panel"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(25)
 		</applet>
 	</screen>
 	<screen name="VIXSoftcamLog" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,526" font="Regular;14" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="VIXAutoStartCam" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="connect" position="220,220" size="64,64" zPosition="2" pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy24.png" transparent="1" alphatest="blend"/>
 		<widget name="lab1" position="10,133" halign="center" size="503,60" zPosition="1" font="Regular;20" valign="top" transparent="0"/>
 	</screen>
 	<screen name="VIXSoftcamMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="VIXStartCam" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="connect" position="220,220" size="64,64" zPosition="2" pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy24.png" transparent="1" alphatest="blend"/>
 		<widget name="lab1" position="10,133" halign="center" size="503,60" zPosition="1" font="Regular;20" valign="top" transparent="0"/>
 	</screen>
 	<screen name="VIXStopCam" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="connect" position="220,220" size="64,64" zPosition="2" pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy24.png" transparent="1" alphatest="blend"/>
 		<widget name="lab1" position="10,133" halign="center" size="503,60" zPosition="1" font="Regular;20" valign="top" transparent="0"/>
 	</screen>
 	<screen name="VIXBackupManager" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
-		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenTemplateWithPIGPanel"/>
+		<panel name="FullscreenMenuButtonPanel"/>
+		<panel name="FullscreenInfoButtonPanel"/>
 		<widget name="lab1" position="10,107" size="670,50" font="Regular;20" zPosition="2" transparent="0" halign="center"/>
 		<widget name="list" position="10,190" size="670,400" selectionPixmap="ViX-Common/buttons/FocusBar_H25x670.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="backupstatus" position="12,608" size="503,20" font="Regular;20" zPosition="5" valign="top"/>
-		<panel name="FullscreenButton1Panel"/>
-		<ePixmap pixmap="buttons/key_menu.png" position="1000,686" size="35,25" alphatest="blend" transparent="1"/>
-		<ePixmap pixmap="buttons/key_info.png" position="1050,686" size="35,25" alphatest="blend" transparent="1"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(25)
 		</applet>
 	</screen>
 	<screen name="VIXBackupManagerLogView" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,526" font="Regular;15" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="VIXImageManager" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
-		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenTemplateWithPIGPanel"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="1200,686" size="35,25" alphatest="blend" transparent="1"/>
 		<widget name="lab1" position="10,107" size="670,50" font="Regular;20" zPosition="2" transparent="0" halign="center"/>
 		<widget name="list" position="10,190" size="670,400" selectionPixmap="ViX-Common/buttons/FocusBar_H25x670.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="backupstatus" position="12,608" size="503,20" font="Regular;20" zPosition="5" valign="top"/>
-		<panel name="FullscreenButton1Panel"/>
-		<ePixmap pixmap="buttons/key_menu.png" position="1200,686" size="35,25" alphatest="blend" transparent="1"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(25)
 		</applet>
 	</screen>
 
 	<screen name="ImageManagerDownload" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="lab1" position="10,107" size="503,50" font="Regular;20" zPosition="2" transparent="0" halign="center"/>
 		<widget name="list" position="10,190" size="503,435" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<panel name="MenuButton1Panel"/>
@@ -3231,16 +3138,15 @@ self.autoResize()
 		</applet>
 	</screen>
 	<screen name="NetworkServiceSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="lab1" position="70,190" size="150,30" font="Regular;20" valign="center" transparent="0"/>
 		<widget name="labactive" position="230,190" size="250,30" font="Regular;20" valign="center" transparent="0"/>
 		<widget name="lab2" position="70,260" size="150,30" font="Regular;20" valign="center" transparent="0"/>
 		<widget name="labstop" position="230,260" size="100,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="230,260" size="100,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="NetworkInadyn" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="autostart" position="10,139" size="100,24" font="Regular;20" valign="center" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<widget name="labdisabled" position="110,136" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
 		<widget name="labactive" position="110,136" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
@@ -3260,37 +3166,33 @@ self.autoResize()
 		<widget name="system" position="50,383" size="100,30" font="Regular;20" valign="center" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<widget name="labsys" position="160,383" size="310,30" font="Regular;20" valign="center" backgroundColor="#274D5375"/>
 		<ePixmap pixmap="buttons/key_menu.png" position="470,663" size="35,25" alphatest="blend" transparent="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="NetworkInadynSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,435" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="100,490" zPosition="1" size="541,720" transparent="1" alphatest="on"/>
 		<ePixmap pixmap="buttons/key_text.png" position="280,663" zPosition="4" size="35,25" alphatest="on" transparent="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="NetworkInadynLog" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="infotext" position="10,107" size="503,533" font="Regular;18"/>
 	</screen>
 	<screen name="NetworkTelnet" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="lab1" position="70,140" size="363,80" font="Regular;20" valign="center" transparent="0"/>
 		<widget name="lab2" position="70,260" size="150,30" font="Regular;20" valign="center" transparent="0"/>
 		<widget name="labstop" position="230,260" size="100,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="230,260" size="100,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="NetworkFtp" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="lab1" position="70,140" size="363,80" font="Regular;20" valign="center" transparent="0"/>
 		<widget name="lab2" position="70,260" size="150,30" font="Regular;20" valign="center" transparent="0"/>
 		<widget name="labstop" position="230,260" size="100,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="230,260" size="100,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="NetworkMiniDLNA" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="autostart" position="10,139" size="100,24" font="Regular;20" valign="center" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<widget name="labdisabled" position="110,136" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
 		<widget name="labactive" position="110,136" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
@@ -3317,10 +3219,9 @@ self.autoResize()
 		<widget name="dlnainactive" position="230,520" zPosition="1" pixmap="icons/lock_off.png" size="32,32" alphatest="on"/>
 		<widget name="dlnaactive" position="230,520" zPosition="2" pixmap="icons/lock_on.png" size="32,32" alphatest="on"/>
 		<ePixmap pixmap="buttons/key_menu.png" position="470,663" size="35,25" alphatest="blend" transparent="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="NetworkuShare" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="autostart" position="10,139" size="100,24" font="Regular;20" valign="center" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<widget name="labdisabled" position="110,136" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
 		<widget name="labactive" position="110,136" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
@@ -3350,7 +3251,6 @@ self.autoResize()
 		<widget name="dlnainactive" position="230,560" zPosition="1" pixmap="icons/lock_off.png" size="32,32" alphatest="on"/>
 		<widget name="dlnaactive" position="230,560" zPosition="2" pixmap="icons/lock_on.png" size="32,32" alphatest="on"/>
 		<ePixmap pixmap="buttons/key_menu.png" position="470,663" size="35,25" alphatest="blend" transparent="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="NetworkuShareSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
@@ -3360,51 +3260,46 @@ self.autoResize()
 		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="uShareSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" zPosition="3">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="checkList" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="EPGImportConfig" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,300" scrollbarMode="showOnDemand"/>
 		<widget name="statusbar" position="10,420" size="380,20" font="Regular;18"/>
 		<widget name="status" position="10,350" size="503,60" font="Regular;20"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="EPGImportSources" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,510" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="EPGImportLog" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,526"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="EPGImportProfile" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,526" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="PPanel" position="0,0" size="541,720" title="PPanels" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="nodelist" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,450"/>
 		<widget name="helptext" position="10,600" size="503,30" valign="center" halign="left" font="Regular;20"/>
 	</screen>
 	<screen name="CCcamInfoMain" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="menu" position="10,107" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="CCcamInfoEcmInfoSelection" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="CCcamInfoInfoScreen" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="text" position="10,107" size="503,450" font="Console;17" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="CCcamShareViewMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,370" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<eLabel text="" position="10,522" size="503,2" font="Regular;14" backgroundColor="white"/>
 		<widget name="uphops" position="10,540" size="240,25" font="Regular;20"/>
@@ -3414,19 +3309,19 @@ self.autoResize()
 		<widget name="title" position="10,600" size="480,20" halign="center" font="Regular;20"/>
 	</screen>
 	<screen name="CCcamInfoSubMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,250" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<eLabel text="" position="10,387" size="503,2" font="Regular;14" backgroundColor="white"/>
 		<widget name="info" position="10,395" size="503,165" font="Regular;16" transparent="0"/>
 	</screen>
 	<screen name="CCcamInfoServerMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,250" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<eLabel text="" position="10,387" size="503,2" font="Regular;14" backgroundColor="white"/>
 		<widget name="info" position="10,395" size="503,165" font="Regular;16" transparent="0"/>
 	</screen>
 	<screen name="CCcamInfoConfigMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,150" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="CCcamInfoRemoteBoxMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -3435,22 +3330,19 @@ self.autoResize()
 		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="CCcamInfoShareInfo" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H60x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="CCcamInfoConfigSwitcher" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H60x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="CCcamInfoMenuConfig" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="OscamInfoMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="mainmenu" position="10,107" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		</screen>
 		<screen name="oscECMInfo" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -3461,19 +3353,17 @@ self.autoResize()
 		<panel name="MenuPanel"/>
 		<widget name="config" position="10,107" size="503,250" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" scrollbarMode="showOnDemand" transparent="0"/>
 		<widget name="status" position="10,390" size="503,240" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="VIXIPKInstaller" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="lab1" position="10,107" size="503,25" font="Regular;20" zPosition="2" transparent="0" halign="center"/>
 		<widget name="list" position="10,165" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton1Panel"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(30)
 		</applet>
 	</screen>
 	<screen name="VIXDevicesPanel" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H85x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -3487,7 +3377,6 @@ self.autoResize()
 			</convert>
 		</widget>
 		<widget name="lab1" zPosition="2" position="10,140" size="503,60" font="Regular;22" halign="center" transparent="0"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="VIXDevicePanelConf" position="center,center" size="902,340">
 		<widget name="config" position="30,10" size="840,275" scrollbarMode="showOnDemand"/>
@@ -3498,7 +3387,7 @@ self.autoResize()
 		<widget name="key_green" position="495,316" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" backgroundColor="window-bg"/>
 	</screen>
 	<screen name="VIXPartitionPanelConf" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H85x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -3512,10 +3401,9 @@ self.autoResize()
 			</convert>
 		</widget>
 		<widget name="lab1" zPosition="2" position="10,140" size="503,60" font="Regular;24" halign="center" transparent="0"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="IMDB" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Internet Movie Database Details Plugin">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="titellabel" position="10,133" size="330,45" valign="center" font="Regular;22"/>
 		<widget name="detailslabel" position="115,183" size="383,140" font="Regular;18"/>
 		<widget name="castlabel" position="10,328" size="503,272" font="Regular;18"/>
@@ -3526,18 +3414,18 @@ self.autoResize()
 		<widget name="menu" position="10,208" size="503,390" zPosition="3" scrollbarMode="showOnDemand"/>
 		<widget name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" position="250,133" zPosition="0" size="210,21" transparent="1" alphatest="on"/>
 		<widget name="stars" position="250,133" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" transparent="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="File" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="progress" position="10,107" size="503,100"/>
 	</screen>
 	<screen name="Tarball" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="progress" position="10,107" size="503,100"/>
 	</screen>
 	<screen name="Execute" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
+		<!-- to do -->
 		<widget name="linelist" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,450"/>
 		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="40,640" size="24,24" alphatest="blend" transparent="1"/>
 		<ePixmap pixmap="ViX-Common/buttons/blue.png" position="40,670" size="24,24" alphatest="blend" transparent="1"/>
@@ -3545,18 +3433,14 @@ self.autoResize()
 		<widget name="key_blue" position="75,674" size="190,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" backgroundColor="#00868686" foregroundColor="foreground"/>
 	</screen>
 	<screen name="AutoTimerHelp" position="fill" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
-		<panel name="FullscreenTitlePanel"/>
-		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenTemplateWithPIGPanel"/>
 		<widget name="detailtext" position="50,122" size="630,525" zPosition="3" font="Regular;21" backgroundColor="black" transparent="0" halign="left" valign="top"/>
-		<panel name="FullscreenButton2Panel"/>
 	</screen>
 	<screen name="AutoTimerOverview" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="entries" position="10,107" size="503,525" itemHeight="75" selectionPixmap="ViX-Common/buttons/FocusBar_H85x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1"/>
 		<ePixmap pixmap="buttons/key_menu.png" position="36,663" size="35,25" alphatest="blend" transparent="1"/>
 		<eLabel text="Setup" position="75,665" size="190,24" zPosition="1" font="Regular;20" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" valign="top"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="AutoTimerEditor" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
@@ -3565,46 +3449,38 @@ self.autoResize()
 		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="AutoTimerSettings" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,400" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1"/>
 		<widget source="help" render="Label" position="10,557" size="503,70" font="Regular;18" transparent="0" backgroundColor="window-bg" zPosition="1"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="AutoTimerImporter" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="AutoTimerFilterEditor" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="60,440" zPosition="1" size="541,720" transparent="1" alphatest="on"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="AutoTimerServiceEditor" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="MultiQuickButton" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="QuickButton" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,526" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="AC3LipSyncSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,450" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2"/>
 		<widget name="PluginInfo" position="10,597" size="503,30" font="Regular;18" transparent="0" backgroundColor="window-bg" zPosition="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="CrossEPG_Menu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,533" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -3617,14 +3493,13 @@ self.autoResize()
 		</widget>
 	</screen>
 	<screen name="CrossEPG_Setup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,370" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<ePixmap pixmap="div-h.png" position="10,570" zPosition="1" size="503,2"/>
 		<widget name="information" position="10,575" size="503,75" font="Regular;19" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="CrossEPG_Info" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="version" position="50,133" size="448,25" font="Regular;20"/>
 		<widget name="create" position="50,163" size="448,25" font="Regular;20"/>
 		<widget name="last_update" position="50,193" size="448,25" font="Regular;20"/>
@@ -3636,15 +3511,13 @@ self.autoResize()
 		<widget name="channels_count" position="50,373" size="448,25" font="Regular;20"/>
 		<widget name="events_count" position="50,403" size="448,25" font="Regular;20"/>
 		<widget name="hashes_count" position="50,433" size="448,25" font="Regular;20"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="CrossEPG_Extra" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="menu" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,526" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="CrossEPG_Providers" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,526" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -3656,10 +3529,9 @@ self.autoResize()
 				}
 			</convert>
 		</widget>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="CrossEPG_Ordering" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="10,107" size="503,526" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -3671,17 +3543,15 @@ self.autoResize()
 				}
 			</convert>
 		</widget>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="downloader" position="0,0" size="1280,35" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="DownloadBar"/>
 	</screen>
 	<screen name="CrossEPG_About" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="about" position="10,143" size="503,360" font="Regular;16"/>
 		<widget name="rytec_pix" position="235,525" size="70,70"/>
 		<widget name="krkadoni_pix" position="235,600" size="70,22"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen position="340,640" size="600,70" title="CrossEPG" flags="wfNoBorder">
 		<widget name="background" position="0,0" size="600,70" zPosition="-1"/>
@@ -3690,7 +3560,6 @@ self.autoResize()
 		<widget name="progress" position="65,55" size="520,5" borderWidth="1" backgroundColor="#11000000"/>
 	</screen>
 	<screen name="SherlockII" position="center,center" size="1280,720" backgroundColor="black" flags="wfNoBorder">
-		<panel name="FullscreenTopPanel"/>
 		<panel name="FullscreenTitlePanel"/>
 		<eLabel position="529,120" size="711,380" zPosition="2" backgroundColor="darkgrey" foregroundColor="window-bg"/>
 		<widget source="session.VideoPicture" render="Pig" position="531,122" size="707,378" zPosition="3" backgroundColor="#ff000000"/>
@@ -3741,46 +3610,41 @@ self.autoResize()
 		<panel name="FullscreenTopPanel"/>
 		<widget source="Title" render="Label" position="18,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
 		<panel name="FullscreenPIGPanel"/>
+		<panel name="FullscreenButtonPanel"/>
 		<widget name="timerlist" position="10,82" size="660,576" itemHeight="48" selectionPixmap="ViX-Common/buttons/FocusBar_H50x660.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="text" position="695,435" size="503,230" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
-		<panel name="FullscreenButton1Panel"/>
 	</screen>
 	<screen name="RemoteTimerSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,536" itemHeight="48" font="Regular;22" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<panel name="MenuButton1Panel"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="15,440" zPosition="1" size="541,720" transparent="1" alphatest="on"/>
 	</screen>
 	<screen name="RemoteTimer" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="text" position="10,107" size="503,533" font="Regular;20" halign="center" valign="center"/>
 		<widget name="timerlist" position="10,107" size="503,533" selectionPixmap="ViX-Common/buttons/FocusBar_H70x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" zPosition="2"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="RemoteTimerBouquetList" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="text" position="10,107" size="503,480" font="Regular;20" halign="center" valign="center" transparent="0"/>
 		<widget name="bouquetlist" position="10,107" size="503,480" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2"/>
 	</screen>
 	<screen name="RemoteTimerChannelList" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="text" position="10,107" size="503,526" font="Regular;20" halign="center" valign="center" transparent="0"/>
 		<widget name="channellist" position="10,107" size="503,526" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" enableWrapAround="1" zPosition="2"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="RemoteTimerEPGList" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="text" position="10,107" size="503,526" font="Regular;20" halign="center" valign="center" transparent="0"/>
 		<widget name="epglist" position="10,107" size="503,480" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="RemoteTimerEventView" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="epg_description" position="10,107" size="503,450" font="Regular;22"/>
 		<widget name="datetime" position="10,595" size="130,25" font="Regular;22"/>
 		<widget name="duration" position="140,595" size="100,25" font="Regular;22"/>
 		<widget name="channel" position="240,595" size="270,25" font="Regular;22" halign="right"/>
-		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="RemoteTimerEntry" position="256,140" size="765,440" backgroundColor="window-bg" transparent="0">
 		<widget name="config" position="10,0" selectionPixmap="ViX-Common/buttons/FocusBar_H25x740.png" transparent="1" backgroundColor="window-bg" size="740,280" scrollbarMode="showOnDemand"/>
@@ -3804,13 +3668,12 @@ self.autoResize()
 		<widget name="IP" position="495,75" size="180,24" font="Regular;22" noWrap="1" foregroundColor="infobar-frgrnd" backgroundColor="infobar_sunken" transparent="1" halign="right"/>
 	</screen>
 	<screen name="PermanentClockMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,536" itemHeight="48" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 <!-- ## AutoBouquetsMaker ## -->
 	<screen name="AutoBouquetsMaker_Menu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" position="10,107" size="503,535" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [	MultiContentEntryText(pos = (20,0), size = (465,38), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1 ) ],
@@ -3821,15 +3684,13 @@ self.autoResize()
 		</widget>
 	</screen>
 	<screen name="AutoBouquetsMaker_Setup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,450" font="Regular;22" itemHeight="28" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="description" position="10,558" size="503,82" font="Regular;19" halign="center" valign="center" transparent="0" zPosition="1"/>
 		<widget name="pleasewait" position="10,107" size="503,535" font="Regular;22" halign="center" valign="center" transparent="0" zPosition="5"/>
 	</screen>
 	<screen name="AutoBouquetsMaker_Ordering" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" position="10,107" size="503,535" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -3843,8 +3704,7 @@ self.autoResize()
 		<widget name="pleasewait" position="10,107" size="503,535" font="Regular;22" halign="center" valign="center" transparent="0" zPosition="5"/>
 	</screen>
 	<screen name="AutoBouquetsMaker3ColumnPanel">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget source="list" render="Listbox" position="10,107" size="503,535" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -3865,13 +3725,11 @@ self.autoResize()
 		<panel name="AutoBouquetsMaker3ColumnPanel"/>
 	</screen>
 	<screen name="AutoBouquetsMaker_Log" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,535" font="Regular;18" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="AutoBouquetsMaker_About" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton1Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="about" position="10,107" size="503,430" font="Regular;19" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<widget name="oealogo" position="182,500" size="177,130" alphatest="on"/>
 	</screen>
@@ -3884,10 +3742,9 @@ self.autoResize()
 	</screen>
 <!-- ## RemoteChannelStreamConverter ## -->
 	<screen name="StreamingChannelFromServerScreen" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,476" itemHeight="28" font="Regular;22" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget source="statusbar" render="Label" position="20,607" size="495,30" font="Regular;22" foregroundColor="window-fg" backgroundColor="window-bg" halign="center" transparent="0"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 	<screen name="ServerEditor" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
@@ -3908,12 +3765,12 @@ self.autoResize()
 	</screen>
 	<!-- ## FastScan ## -->
 	<screen name="FastScanScreen" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,485" itemHeight="28" font="Regular;22" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="introduction" position="20,590" size="495,45" font="Regular;22" foregroundColor="window-fg" backgroundColor="window-bg" halign="center" transparent="0"/>
 	</screen>
 	<screen name="FastScanStatus" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="scan_state" position="10,107" size="503,500" foregroundColor="window-fg" backgroundColor="window-bg" font="Regular;22" transparent="0"/>
 		<widget name="scan_progress" position="30,607" size="400,15" pixmap="progress_big.png" borderWidth="2" borderColor="black"/>
 	</screen>
@@ -3940,47 +3797,39 @@ self.autoResize()
 	</screen>
 	<!-- ##Transcoding## -->
 	<screen name="TranscodingSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,420" font="Regular;20" zPosition="2" transparent="1" scrollbarMode="showOnDemand" halign="center"/>
 		<widget name="description" position="10,540" size="503,60" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="text" position="10,608" size="503,20" font="Regular;20" zPosition="5" valign="top"/>
-		<panel name="MenuRed2Panel"/><!-- mixed button types in the plugin -->
-		<panel name="MenuGreen2Panel"/><!-- mixed button types in the plugin -->
-		<panel name="MenuYellow2Panel"/><!-- mixed button types in the plugin -->
-		<panel name="MenuBlue1Panel"/><!-- mixed button types in the plugin -->
 	</screen>
 	<!-- ##FirmwareUpgrade## -->
 	<screen name="FirmwareUpgrade" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Firmware Upgrade">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,435" font="Regular;20" zPosition="2" transparent="1" scrollbarMode="showOnDemand" halign="center"/>
 		<widget name="oldversion_label" position="10,545" size="290,25" font="Regular;20" foregroundColor="secondFG"/>
 		<widget name="oldversion" position="300,545" size="100,25" font="Regular;20" foregroundColor="secondFG"/>
 		<widget name="newversion_label" position="10,575" size="290,25" font="Regular;20" foregroundColor="secondFG"/>
 		<widget name="newversion" position="300,575" size="100,25" font="Regular;20" foregroundColor="secondFG"/>
 		<widget source="status" render="Label" position="10,608" size="503,20" font="Regular;20" zPosition="5" valign="top"/>
-		<panel name="MenuButton2Panel"/>
 	</screen>
 
 	<screen name="Filebrowser" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Firmware Upgrade">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="file_list" position="10,107" size="503,490" font="Regular;20" zPosition="2" transparent="1" scrollbarMode="showOnDemand" halign="center"/>
 		<widget source="status" render="Label" position="10,608" size="503,20" font="Regular;20" zPosition="5" valign="top"/>
 		<panel name="MenuYellow2Panel"/>
-		<panel name="MenuBlue2Panel"/>
 	</screen>
 	<screen name="FUFilebrowser" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Firmware Upgrade">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="file_list" position="10,107" size="503,420" font="Regular;20" zPosition="2" transparent="1" scrollbarMode="showOnDemand" halign="center"/>
 		<widget source="status" render="Label" position="10,608" size="503,20" font="Regular;20" zPosition="5" valign="top"/>
-		<panel name="MenuBlue2Panel"/>
 	</screen>
 	<!-- Mac-adress -->
 	<screen name="NetworkMacSetup" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,420" font="Regular;20" zPosition="2" transparent="1" scrollbarMode="showOnDemand" halign="center"/>
 		<ePixmap pixmap="div-h.png" position="10,590" zPosition="1" size="507,2"/>
 		<widget source="introduction" render="Label" position="10,600" size="503,30" foregroundColor="window-fg" backgroundColor="window-bg" font="Regular;22" halign="center" valign="center" transparent="0"/>
-		<panel name="MenuButton2Panel"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="100,399" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
 	</screen>
 	<!-- ButtonSetup -->
@@ -3999,7 +3848,6 @@ self.autoResize()
 		<widget name="list" position="10,82" size="330,570" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" zPosition="10" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="choosen" position="345,82" size="310,570" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" zPosition="10" font="Regular;21" backgroundColor="window-bg" halign="center" transparent="0" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="695,435" size="503,230" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
-		<panel name="FullscreenButton2Panel"/>
 	</screen>
 		<!-- BufferIndicator -->
 	<screen name="BufferIndicator" title="Channel" position="540,45" size="200,35" backgroundColor="transparent" flags="wfNoBorder">
@@ -4007,14 +3855,12 @@ self.autoResize()
 	</screen>
 	<!-- ## Animations ## -->
 	<screen name="AnimationSetupScreen" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Animation Setup">
-		<panel name="MenuPanel"/>
-		<panel name="MenuButton2Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="list" position="10,107" size="503,450" font="Regular;22" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget source="introduction" render="Label" position="10,558" size="503,82" font="Regular;19" halign="center" valign="center" transparent="0" zPosition="1"/>
 	</screen>
 	<screen name="AnimationSetupConfig" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent" title="Animation Settings">
-		<panel name="MenuPanel"/>
-		<panel name="MenuRButton2Panel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="20,107" size="503,450" font="Regular;22" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 </skin>
