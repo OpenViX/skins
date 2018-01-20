@@ -468,8 +468,7 @@
 				serviceItemHeight="60" foregroundColorServiceNotAvail="#656565" foregroundColorEventSelected="yellow" foregroundColorMarkedSelected="blue" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="EPGSelection" position="fill" flags="wfNoBorder" title="EPG-Selection">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<panel name="InfoBPanel"/>
 		<panel name="MenuBPanel"/>
 		<widget name="list" position="755,123" size="1157,810" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"/>
@@ -801,10 +800,6 @@
 	</screen>
 	<screen name="AudioSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate1"/>
-		<panel name="ExitBPanel"/>
-		<eLabel text="Cancel" position="80,1020" size="330,39" font="Regular;33" foregroundColor="grey" halign="left" zPosition="1"/>
-		<panel name="OKBPanel"/>
-		<eLabel text="Accept" position="520,1020" size="330,39" font="Regular;33" foregroundColor="grey" halign="left" zPosition="1"/>
 		<panel name="MenuBPanel"/>
 		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="855,125" size="52,37" alphatest="on">
 			<convert type="ConditionalShowHide"/>
@@ -940,8 +935,7 @@
 		<widget name="hddlist" position="780,123" size="1132,855" font="Regular;33" itemHeight="45"/>
 	</screen>
 	<screen name="HarddiskSetup" flags="wfNoBorder" position="fill">
-		<panel name="BasicTemplate1"/>
-		<panel name="RedBPanel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="initializetext" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget name="model" position="885,165" size="570,37" font="Regular;33"/>
 		<widget name="capacity" position="885,210" size="570,37" font="Regular;33"/>
@@ -986,8 +980,7 @@
 		<eLabel text="OK" position="490,1020" size="330,39" font="Regular;33" halign="left" zPosition="1"/>
 	</screen>
 	<screen name="JobView" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="BlueBPanel"/>
+		<panel name="BasicTemplate"/>
 		<widget source="job_name" render="Label" position="735,120" size="1177,110" font="Regular;42" foregroundColor="secondFG" halign="center"/>
 		<widget source="job_task" render="Label" position="735,235" size="1177,85" font="Regular;34" halign="center"/>
 		<widget source="job_progress" render="Progress" position="880,330" size="720,55" borderWidth="2" borderColor="grey"/>
@@ -1035,10 +1028,9 @@
 		<panel name="ExitBPanel"/>
 	</screen>
 	<screen name="MessageBox" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="RedBPanel"/>
+		<panel name="BasicTemplate"/>
+		<panel name="OKCancelPanel"/>
 		<eLabel text="Cancel" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
-		<panel name="GreenBPanel"/>
 		<eLabel text="OK" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="760,150" size="81,81" alphatest="on"/>
@@ -1204,12 +1196,12 @@
 		<widget name="help2" position="498,183" size="180,60" font="RegularSmall;30" valign="center" halign="center"/>
 	</screen>
 	<screen name="VirtualKeyBoard" position="4,0" size="1920,1080" zPosition="99" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="RedBPanel"/>
+		<panel name="BasicTemplate"/>
+		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="457,1027" size="30,30" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="892,1027" size="30,30" alphatest="blend"/>
 		<eLabel text="Delete" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
-		<panel name="GreenBPanel"/>
 		<eLabel text="OK" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
-		<panel name="YellowBPanel"/>
 		<widget source="country" render="Label" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<ePixmap pixmap="buttons/vkey_text.png" position="975,412" size="816,78" zPosition="-4" alphatest="on"/>
 		<widget name="header" position="978,358" size="750,39" noWrap="1" font="Regular;30"/>
@@ -1335,12 +1327,9 @@
 				setServiceNameFont="Regular;32" setFont="Regular;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="TimerEntry" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="RedBPanel"/>
-		<panel name="GreenBPanel"/>
+		<panel name="BasicTemplate"/>
+		<panel name="OKCancelPanel"/>
 		<widget name="config" position="780,120" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="canceltext" position="55,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33"/>
-		<widget name="oktext" position="490,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33"/>
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1800,1030" size="52,37" zPosition="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -1375,8 +1364,7 @@
 		<widget name="timer1" position="7,568" size="715,375" itemHeight="75" setEventNameFont="Regular;30" rowSplit="35" setServiceNameFont="Regular;30" setFont="Regular;30" satPosLeft="170" scrollbarMode="showNever" zPosition="2"/>
 	</screen>
 	<screen name="CronTimers" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="lab1" position="52,720" size="225,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="labdisabled" position="315,720" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labactive" position="315,720" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
@@ -1699,8 +1687,7 @@
 		</widget>
 	</screen>
 	<screen name="NetworkInadyn" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<widget name="autostart" position="915,208" size="225,45" font="Regular;30" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="0"/>
 		<widget name="labdisabled" position="1140,204" size="225,45" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
@@ -1722,8 +1709,7 @@
 		<widget name="labsys" position="1290,574" size="465,45" font="Regular;30" valign="center" backgroundColor="background"/>
 	</screen>
 	<screen name="NetworkInadynSetup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="22,600" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
 		<panel name="TextBPanel"/>
 		<widget name="config" position="780,123" size="1132,652" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
@@ -1737,8 +1723,7 @@
 		<widget name="infotext" font="Regular;33" position="885,165" size="900,750"/>
 	</screen>
 	<screen name="NetworkServiceSetup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="labactive" position="1170,210" size="375,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab1" position="930,210" size="225,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,45" font="Regular;30" valign="top" transparent="0"/>
@@ -1746,8 +1731,7 @@
 		<widget name="labrun" position="1170,390" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="NetworkuShare" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<widget name="autostart" position="945,163" size="150,36" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="labdisabled" position="1095,159" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
@@ -1779,8 +1763,7 @@
 		<widget name="dlnaactive" position="1200,840" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 	</screen>
 	<screen name="NetworkMiniDLNA" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<widget name="autostart" position="945,163" size="150,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="labdisabled" position="1095,159" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
@@ -1809,15 +1792,13 @@
 		<widget name="dlnaactive" position="1275,840" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 	</screen>
 	<screen name="NetworkMiniDLNASetup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="22,600" zPosition="1" size="1,1"/>
 		<panel name="TextBPanel"/>
 		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874"/>
 	</screen>
 	<screen name="NetworkuShareSetup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<panel name="TextBPanel"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="22,600" zPosition="1" size="1,1"/>
 		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
@@ -1827,21 +1808,18 @@
 		<widget name="infotext" position="780,123" size="1132,874" font="Regular;30" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="uShareSelection" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="checkList" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874"/>
 	</screen>
 	<screen name="NetworkTelnet" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="lab1" position="930,210" size="544,120" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,105" font="Regular;30" valign="top" transparent="0"/>
 		<widget name="labstop" position="1170,390" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="1170,390" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="NetworkFtp" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="lab1" position="930,210" size="544,120" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,105" font="Regular;30" valign="top" transparent="0"/>
 		<widget name="labstop" position="1170,390" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
@@ -2009,7 +1987,8 @@
 	</screen>
 	<screen name="Satfinder" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
-<!-- ##SNR## -->
+		<panel name="ButtonPanel"/>
+		<!-- ##SNR## -->
 		<eLabel name="snr" text="SNR:" position="27,124" size="142,75" font="Regular;55"/>
 		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="172,120" size="1500,75" borderWidth="1" borderColor="grey">
 			<convert type="FrontendInfo">SNR</convert>
@@ -2061,8 +2040,6 @@
 		<widget source="onid" render="Label" position="915,385" size="150,50" font="Regular;40" foregroundColor="selectedFG" halign="left"/>
 		<eLabel text="Orb Pos:" position="1125,385" size="180,50" font="Regular;40" halign="right"/>
 		<widget source="pos" render="Label" position="1310,385" size="150,50" font="Regular;40" foregroundColor="selectedFG" halign="left"/>
-<!--	<widget name="introduction" position="802,1020" size="480,39" font="Regular;33" foregroundColor="secondFG" halign="left" zPosition="1"/>-->
-
 	</screen>
 	<screen name="ServicesFound" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -2105,7 +2082,7 @@
 	</screen>
 	<screen name="TunerScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
+		<panel name="OKPanel"/>
 		<widget name="config" position="735,123" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="CableScanScreen" position="fill" flags="wfNoBorder">
@@ -2119,8 +2096,8 @@
 		<widget name="scan_progress" position="780,232" size="600,22" pixmap="progress_big.png" borderWidth="1" borderColor="grey"/>
 	</screen>
 	<screen name="NetworkWizard" position="fill" flags="wfNoBorder" title="Network Wizard">
-		<panel name="BasicTemplate1"/>
-		<panel name="RedBPanel"/>
+		<panel name="BasicTemplate"/>
+		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" alphatest="blend"/>
 		<widget name="languagetext" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget name="config" position="780,124" size="750,420" font="Regular;33" itemHeight="45" foregroundColor="grey" zPosition="1" scrollbarMode="showOnDemand"/>
 		<widget name="text" position="780,600" size="750,470" font="Regular;34"/>
@@ -2203,9 +2180,7 @@
 		<eLabel text="minutes" position="480,-300" size="330,65" backgroundColor="transparent" font="Regular;51" halign="left" borderColor="black" borderWidth="2" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="UserInterfacePositioner" position="0,0" size="e,e" backgroundColor="bluetransparent">
-		<panel name="Red2Panel"/>
-		<panel name="Green2Panel"/>
-		<panel name="Yellow2Panel"/>
+		<panel name="ButtonPanel"/>
 		<widget name="config" position="c-262,c-112" size="525,225" font="Regular;30" itemHeight="45" backgroundColor="bluetransparent" foregroundColor="grey"/>
 		<ePixmap pixmap="div-h.png" position="c-300,e-300" zPosition="1" size="600,3"/>
 		<widget source="status" render="Label" position="c-450,e-285" size="900,135" zPosition="10" font="Regular;33" foregroundColor="grey" halign="center" valign="center" transparent="1"/>
@@ -2227,19 +2202,13 @@
 		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="RCSetupScreen" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="RedBPanel"/>
-		<panel name="GreenBPanel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="cancel" position="22,1032" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="center"/>
 		<widget name="ok" position="457,1032" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="center"/>
 		<widget name="config" position="780,135" size="1132,855" font="Regular;33" itemHeight="45" enableWrapAround="1"/>
 	</screen>
 	<screen name="TempFanControl" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="RedBPanel"/>
-		<panel name="GreenBPanel"/>
-		<widget source="red" render="Label" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
-		<widget source="green" render="Label" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,180" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="SensorTempText0" render="Label" position="780,315" size="135,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top" foregroundColor="grey"/>
 		<widget source="SensorTemp0" render="Label" position="915,315" size="150,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
@@ -2311,7 +2280,7 @@
 		<widget name="config" position="780,135" size="1132,855" font="Regular;23" itemHeight="45" enableWrapAround="1"/>
 	</screen>
 	<screen name="FanControlScreen" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="BasicTemplate1"/>
 		<panel name="GreenBPanel"/>
 		<widget name="myGreenBtn" position="780,123" size="1132,874" font="Regular;33"/>
 		<eLabel text="Change setting" position="510,1030" size="330,39" font="Regular;33" halign="left" zPosition="1"/>
@@ -2325,9 +2294,7 @@
 		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="FanSetupScreen" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="RedBPanel"/>
-		<panel name="GreenBPanel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="cancel" position="55,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
 		<widget name="ok" position="490,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
 		<widget name="hddtemp" position="1370,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
@@ -2610,8 +2577,7 @@
 
 	<!-- ##Open-ATV specific screens## -->
 	<screen name="NetworkNfs" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="labactive" position="1170,210" size="375,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab1" position="930,210" size="225,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,45" font="Regular;30" valign="top" transparent="0"/>
@@ -2619,8 +2585,7 @@
 		<widget name="labrun" position="1170,390" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="NetworkOpenvpn" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="labactive" position="1170,210" size="375,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab1" position="930,210" size="225,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,45" font="Regular;30" valign="top" transparent="0"/>
@@ -2628,8 +2593,7 @@
 		<widget name="labrun" position="1170,390" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="NetworkSABnzbd" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="labactive" position="1170,210" size="375,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab1" position="930,210" size="225,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,45" font="Regular;30" valign="top" transparent="0"/>
@@ -2637,8 +2601,7 @@
 		<widget name="labrun" position="1170,390" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="NetworkSamba" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="labactive" position="1170,210" size="375,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab1" position="930,210" size="225,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,45" font="Regular;30" valign="top" transparent="0"/>
@@ -2646,8 +2609,7 @@
 		<widget name="labrun" position="1170,390" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="NetworkAfp" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="labactive" position="1170,210" size="375,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab1" position="930,210" size="225,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,45" font="Regular;30" valign="top" transparent="0"/>
@@ -2660,8 +2622,7 @@
 		<widget name="label1" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="CronManager" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="lab1" position="52,720" size="225,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="labdisabled" position="315,720" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labactive" position="315,720" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
@@ -2675,16 +2636,14 @@
 		<eLabel text="'OK' = Show details" foregroundColor="grey" font="Regular;33" halign="left" position="1582,975" size="360,39" zPosition="1"/>
 	</screen>
 	<screen name="SetupCronConf" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<panel name="TextBPanel"/>
 		<widget name="HelpWindow" pixmap="vkey_icon.png" position="22,600" size="1,1" zPosition="1"/>
 		<widget name="config" position="735,120" size="1177,876" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="DevicePanelConf" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate1"/>
-		<panel name="Button1Panel"/>
+		<panel name="BasicTemplate"/>
 		<widget name="Linconn" position="735,940" size="1177,60" font="Regular;27" halign="center" valign="center"/>
 		<widget name="config" position="735,120" size="1177,825" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
