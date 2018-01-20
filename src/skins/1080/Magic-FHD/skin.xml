@@ -392,23 +392,6 @@
 		<widget source="ServiceEvent" render="Label" position="780,967" size="1132,35" font="Regular;30" foregroundColor="secondFG" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
-
-
-
-<!--
-		<widget name="list" position="780,120" size="1138,686" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
-				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
-				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="780,804" size="1140,3" zPosition="3"/>
-		<widget source="ServiceEvent" render="NextEpgInfo" position="780,810" size="560,190" foregroundColor="selectedFG" noWrap="1" font="RegularSmall;30" NumberOfItems="4"/>
-		<ePixmap pixmap="window/rechts.png" alphatest="on" position="1343,850" size="10,100"/>
-		<eLabel position="1355,615" size="560,192" font="RegularSmall;18" zPosition="2" backgroundColor="black"/>
-		<widget source="ServiceEvent" render="NextEpgInfo" position="1355,615" size="560,350" zPosition="1" foregroundColor="selectedFG" noWrap="1" font="RegularSmall;30" NumberOfItems="8"/>
-		<widget source="ServiceEvent" render="Label" position="1355,967" size="560,35" font="Regular;27" halign="right" foregroundColor="secondFG" noWrap="1" zPosition="1">
-			<convert type="TransponderInfo"></convert>
-		</widget>
--->
-
 		<widget source="ServiceEvent" render="Label" position="7,524" size="765,40" font="Regular;32" foregroundColor="secondFG" halign="center" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -1057,10 +1040,7 @@
 	</screen>
 	<screen name="TimeDateInput" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="cancel" pixmap="buttons/red.png" position="22,1027" size="400,60" zPosition="-1" alphatest="blend"/>
-		<widget name="ok" pixmap="buttons/green.png" position="457,1027" size="400,60" zPosition="-1" alphatest="blend"/>
-		<widget name="canceltext" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
-		<widget name="oktext" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<panel name="OKCancelPanel"/>
 		<widget name="config" position="780,123" size="1132,874" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="LanguageSelection" position="fill" flags="wfNoBorder">
@@ -1197,9 +1177,9 @@
 	</screen>
 	<screen name="VirtualKeyBoard" position="4,0" size="1920,1080" zPosition="99" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" alphatest="blend"/>
-		<ePixmap pixmap="buttons/green.png" position="457,1027" size="30,30" alphatest="blend"/>
-		<ePixmap pixmap="buttons/yellow.png" position="892,1027" size="30,30" alphatest="blend"/>
+		<panel name="RedBuPanel"/>
+		<panel name="GreenBuPanel"/>
+		<panel name="YellowBuPanel"/>
 		<eLabel text="Delete" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<eLabel text="OK" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget source="country" render="Label" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
@@ -2097,7 +2077,7 @@
 	</screen>
 	<screen name="NetworkWizard" position="fill" flags="wfNoBorder" title="Network Wizard">
 		<panel name="BasicTemplate"/>
-		<ePixmap pixmap="buttons/red.png" position="22,1027" size="30,30" alphatest="blend"/>
+		<panel name="RedBuPanel"/>
 		<widget name="languagetext" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget name="config" position="780,124" size="750,420" font="Regular;33" itemHeight="45" foregroundColor="grey" zPosition="1" scrollbarMode="showOnDemand"/>
 		<widget name="text" position="780,600" size="750,470" font="Regular;34"/>
@@ -2281,7 +2261,7 @@
 	</screen>
 	<screen name="FanControlScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate1"/>
-		<panel name="GreenBPanel"/>
+		<panel name="GreenBuPanel"/>
 		<widget name="myGreenBtn" position="780,123" size="1132,874" font="Regular;33"/>
 		<eLabel text="Change setting" position="510,1030" size="330,39" font="Regular;33" halign="left" zPosition="1"/>
 		<ePixmap pixmap="buttons/key_ok.png" position="22,1027" size="52,39" alphatest="on"/>
@@ -2490,7 +2470,6 @@
 	</screen>
 	<screen name="TranscodingSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="blue" pixmap="buttons/blue.png" position="1335,1027" size="30,30" zPosition="0" alphatest="blend"/>
 		<widget name="config" position="755,120" size="1157,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="7,550" size="715,90" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 		<widget name="description" position="7,650" size="715,180" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
