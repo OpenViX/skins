@@ -1796,7 +1796,7 @@ self.autoResize()
 	</screen>
 	<screen name="SubtitleDisplay" position="fill" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent"/>
 	<screen name="TempFanControl" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
+		<panel name="HalfscreenTemplate"/>
 		<widget name="config" position="10,107" size="503,120" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget source="SensorTempText0" render="Label" position="10,250" zPosition="1" size="90,40" font="Regular;20" halign="left"/>
 		<widget source="SensorTemp0" render="Label" position="100,250" zPosition="1" size="100,20" font="Regular;19" halign="right">
@@ -1818,10 +1818,6 @@ self.autoResize()
 		<widget source="SensorFan1" render="Label" position="380,270" zPosition="1" size="130,20" font="Regular;19" halign="right">
 			<convert type="SensorToText"/>
 		</widget>
-		<ePixmap pixmap="ViX-Common/buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1"/>
-		<widget source="red" render="Label" position="75,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
-		<ePixmap pixmap="ViX-Common/buttons/green.png" position="40,690" size="24,24" alphatest="blend" transparent="1"/>
-		<widget source="green" render="Label" position="75,690" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2"/>
 	</screen>
 	<screen name="TimeDateInput" position="center,center" size="400,200">
 		<widget name="cancel" pixmap="ViX-Common/buttons/red.png" position="10,0" size="24,24" alphatest="blend"/>
@@ -1916,7 +1912,7 @@ self.autoResize()
 		<widget name="list" position="10,100" size="540,225" selectionDisabled="1" foregroundColor="window-fg" backgroundColor="#001c2c5c" transparent="1"/>
 		<ePixmap pixmap="ViX-Common/buttons/yellow.png" position="334,330" size="24,24" alphatest="blend" transparent="1"/>
 		<widget source="country" render="Label" position="360,330" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="window-frgrnd" backgroundColor="window-bg"/>
-	</screen>
+ 	</screen>
 	<!-- Wizzard's -->
 	<screen name="StartWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
 		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
@@ -3728,11 +3724,11 @@ self.autoResize()
 	</screen>
 	<screen name="AutoBouquetsMaker_Log" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="list" position="10,107" size="503,535" font="Regular;18" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="list" position="10,107" size="503,535" font="Regular;20" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="AutoBouquetsMaker_About" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="about" position="10,107" size="503,430" font="Regular;19" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="about" position="10,107" size="503,430" font="Regular;20" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<widget name="oealogo" position="182,500" size="177,130" alphatest="on"/>
 	</screen>
 	<screen name="AutoBouquetsMaker" position="0,0" size="1280,35" backgroundColor="transpBlack" flags="wfNoBorder">
