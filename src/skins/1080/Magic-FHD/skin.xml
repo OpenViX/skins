@@ -1012,24 +1012,19 @@
 		<widget name="text" position="735,120" size="1177,870" font="Regular;30" foregroundColor="grey"/>
 		<panel name="ExitBPanel"/>
 	</screen>
-	<screen name="MessageBox" position="fill" flags="wfNoBorder">
+	<screen name="MessageBoxTemplate">
 		<panel name="BasicTemplate"/>
-		<panel name="OKCancelPanel"/>
-		<eLabel text="Cancel" position="55,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
-		<eLabel text="OK" position="490,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="text" position="845,120" size="1070,877" font="Regular;30" foregroundColor="grey"/>
 		<widget name="list" position="7,530" size="715,475" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
 	</screen>
+	<screen name="MessageBox" position="fill" flags="wfNoBorder">
+		<panel name="MessageBoxTemplate"/>
+	</screen>
 	<screen name="MessageBoxSimple" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="760,150" size="81,81" alphatest="on"/>
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="760,150" size="81,81" alphatest="on"/>
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="760,150" size="81,81" alphatest="on"/>
-		<widget name="text" position="845,120" size="1070,855" font="Regular;33" foregroundColor="grey"/>
-		<widget name="list" position="7,530" size="715,475" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
+		<panel name="MessageBoxTemplate"/>
 	</screen>
 	<screen name="MessageBoxWizard" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
