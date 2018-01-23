@@ -37,82 +37,45 @@
 	</screen>
 
 	<screen name="RedBPanel">
-		<ePixmap pixmap="buttons/red.png" conditional="key_red" objecttypes="Label,Button" position="22,1027" size="30,30" alphatest="blend"/>
-		<widget source="key_red" render="Pixmap" conditional="key_red" objecttypes="StaticText" pixmap="buttons/red.png" position="22,1027" size="30,30" alphatest="blend">
+		<ePixmap pixmap="buttons/red.png" objectTypesDepends="key_red" objectTypes="Label,Button" position="22,1027" size="30,30" alphatest="blend"/>
+		<widget source="key_red" render="Pixmap" objectTypes="StaticText" pixmap="buttons/red.png" position="22,1027" size="30,30" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="red" render="Pixmap" conditional="red" objecttypes="StaticText" pixmap="buttons/red.png" position="22,1027" size="30,30" alphatest="blend">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-	</screen>
-
-	<screen name="RedTPanel">
-		<widget name="key_red" conditional="key_red" objecttypes="Label,Button" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget source="key_red" render="Label" conditional="key_red" objecttypes="StaticText" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget name="red" conditional="red"  objecttypes="Label,Button" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget source="red" render="Label" conditional="red" objecttypes="StaticText" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget name="key_red" objectTypes="Label,Button" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget source="key_red" render="Label" objectTypes="StaticText" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="GreenBPanel">
-		<ePixmap pixmap="buttons/green.png" conditional="key_green" objecttypes="Label,Button" position="457,1027" size="30,30" alphatest="blend"/>
-		<widget source="key_green" render="Pixmap" conditional="key_green" objecttypes="StaticText" pixmap="buttons/green.png" position="457,1027" size="30,30" alphatest="blend">
+		<ePixmap pixmap="buttons/green.png" objectTypesDepends="key_green" objectTypes="Label,Button" position="457,1027" size="30,30" alphatest="blend"/>
+		<widget source="key_green" render="Pixmap" objectTypes="StaticText" pixmap="buttons/green.png" position="457,1027" size="30,30" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="green" render="Pixmap" conditional="green" objecttypes="StaticText" pixmap="buttons/green.png" position="457,1027" size="30,30" alphatest="blend">
-			<convert type="ConditionalShowHide"/>
-		</widget>
+		<widget name="key_green" objectTypes="Label,Button" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget source="key_green" render="Label" objectTypes="StaticText" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
-
-	<screen name="GreenTPanel">
-		<widget name="key_green" conditional="key_red" objecttypes="Label,Button" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget source="key_green" render="Label" conditional="key_red" objecttypes="StaticText" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget name="green" conditional="red"  objecttypes="Label,Button" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget source="green" render="Label" conditional="red" objecttypes="StaticText" position="490,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-	</screen>
-
 	<screen name="YellowBPanel">
-		<ePixmap pixmap="buttons/yellow.png" conditional="key_yellow" objecttypes="Label,Button" position="892,1027" size="30,30" alphatest="blend"/>
-		<widget source="key_yellow" render="Pixmap" conditional="key_yellow" objecttypes="StaticText" pixmap="buttons/yellow.png" position="892,1027" size="30,30" alphatest="blend">
+		<ePixmap pixmap="buttons/yellow.png" objectTypesDepends="key_yellow" objectTypes="Label,Button" position="892,1027" size="30,30" alphatest="blend"/>
+		<widget source="key_yellow" render="Pixmap" objectTypes="StaticText" pixmap="buttons/yellow.png" position="892,1027" size="30,30" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="yellow" render="Pixmap" conditional="yellow" objecttypes="StaticText" pixmap="buttons/yellow.png" position="892,1027" size="30,30" alphatest="blend">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-	</screen>
-
-	<screen name="YellowTPanel">
-		<widget name="key_yellow" conditional="key_red" objecttypes="Label,Button" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget source="key_yellow" render="Label" conditional="key_red" objecttypes="StaticText" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget name="yellow" conditional="red"  objecttypes="Label,Button" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget source="yellow" render="Label" conditional="red" objecttypes="StaticText" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget name="key_yellow" objectTypes="Label,Button" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget source="key_yellow" render="Label" objectTypes="StaticText" position="930,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="BlueBPanel">
-		<ePixmap pixmap="buttons/blue.png" conditional="key_blue" objecttypes="Label,Button" position="1335,1027" size="30,30" alphatest="blend"/>
-		<widget source="key_blue" render="Pixmap" conditional="key_blue" objecttypes="StaticText" pixmap="buttons/blue.png" position="1335,1027" size="30,30" alphatest="blend">
+		<ePixmap pixmap="buttons/blue.png" objectTypesDepends="key_blue" objectTypes="Label,Button" position="1335,1027" size="30,30" alphatest="blend"/>
+		<widget source="key_blue" render="Pixmap" objectTypes="StaticText" pixmap="buttons/blue.png" position="1335,1027" size="30,30" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="blue" render="Pixmap" conditional="blue" objecttypes="StaticText" pixmap="buttons/blue.png" position="1335,1027" size="30,30" alphatest="blend">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-	</screen>
-
-	<screen name="BlueTPanel">
-		<widget name="key_blue" conditional="key_red" objecttypes="Label,Button" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget source="key_blue" render="Label" conditional="key_red" objecttypes="StaticText" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget name="blue" conditional="red"  objecttypes="Label,Button" position="1370,1020" size="400,45"  font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
-		<widget source="blue" render="Label" conditional="red" objecttypes="StaticText" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget name="key_blue" objectTypes="Label,Button" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget source="key_blue" render="Label" objectTypes="StaticText" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" backgroundColor="secondBG" transparent="1" halign="left"/>
 	</screen>
 
 	<screen name="ButtonPanel">
-		<panel name="RedBPanel"/>
-		<panel name="RedTPanel"/>
-		<panel name="GreenBPanel"/>
-		<panel name="GreenTPanel"/>
-		<panel name="YellowBPanel"/>
-		<panel name="YellowTPanel"/>
-		<panel name="BlueBPanel"/>
-		<panel name="BlueTPanel"/>
+		<panel name="RedBPanel" conditional="key_red"/>
+		<panel name="GreenBPanel" conditional="key_green"/>
+		<panel name="YellowBPanel" conditional="key_yellow"/>
+		<panel name="BlueBPanel" conditional="key_blue"/>
 	</screen>
 
 	<!-- ## Some (hopefully) temporarily unconditional buttons for legacy purposes ## -->
