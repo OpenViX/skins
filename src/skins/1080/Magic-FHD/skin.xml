@@ -1022,6 +1022,7 @@
 	</screen>
 	<screen name="InputDeviceSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="introductionPanel"/>
 		<widget source="list" render="Listbox" position="780,123" size="1132,804" zPosition="10" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 							{"template": [
@@ -1033,12 +1034,11 @@
 							}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="InputDeviceSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="introductionPanel"/>
 		<widget name="config" position="780,123" size="1132,824" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"/>
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="Console" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1350,10 +1350,10 @@
 	</screen>
 	<screen name="SkinSelector" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="introductionPanel"/>
 		<panel name="InfoBPanel"/>
 		<widget name="SkinList" position="780,135" size="450,805" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="Preview" position="1377,165" size="420,315" alphatest="on"/>
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="UpdatePlugin" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1433,8 +1433,8 @@
 	</screen>
 	<screen name="NameserverSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="introductionPanel"/>
 		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"/>
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="NetworkAdapterTest" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1507,6 +1507,7 @@
 	</screen>
 	<screen name="NetworkAdapterSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="introductionPanel"/>
 		<widget source="list" render="Listbox" position="780,123" size="1132,780" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1520,10 +1521,10 @@
 				}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="AutoMountView" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="introductionPanel"/>
 		<widget source="legend1" render="Label" position="735,123" size="240,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
 		<widget source="legend2" render="Label" position="1027,123" size="517,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
 		<widget source="legend3" render="Label" position="1680,123" size="195,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
@@ -1542,10 +1543,10 @@
 				}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="AutoMountManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="introductionPanel"/>
 		<widget source="config" render="Listbox" position="780,123" size="1100,832" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1558,19 +1559,19 @@
 				}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="AutoMountEdit" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="introductionPanel"/>
 		<widget name="config" position="735,120" size="1177,805" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" position="5,585" size="1,1" zPosition="1"/>
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1740,1027" size="52,37" zPosition="10">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="UserManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="introductionPanel"/>
 		<widget source="config" render="Listbox" position="780,120" size="832,804" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 		<convert type="TemplatedMultiContent">
 					{"template": [
@@ -1582,7 +1583,6 @@
 					}
 				</convert>
 			</widget>
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="devicesMount" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1838,9 +1838,9 @@
 	</screen>
 	<screen name="CAidSelect" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="introductionPanel"/>
 		<eLabel position="121,657" size="525,108" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" zPosition="3" transparent="1" text="select CAId's" foregroundColor="grey" font="Regular;48"/>
 		<widget name="list" position="885,180" size="900,675" scrollbarMode="showOnDemand"/>
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="AutoDiseqc" position="fill">
 
