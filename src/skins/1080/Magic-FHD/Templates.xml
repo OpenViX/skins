@@ -75,6 +75,7 @@
 		<panel name="GreenBPanel" conditional="key_green"/>
 		<panel name="YellowBPanel" conditional="key_yellow"/>
 		<panel name="BlueBPanel" conditional="key_blue"/>
+		<panel name="VKeyIconPanel"/>
 	</screen>
 
 	<screen name="CancelPanel">
@@ -95,19 +96,25 @@
 	</screen>
 
 	<screen name="MenuBPanel">
-		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1762,1025" size="52,37"/>
+		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1700,1025" size="52,37"/>
 	</screen>
 
 	<screen name="InfoBPanel">
-		<ePixmap pixmap="buttons/key_info.png" alphatest="on" position="1822,1025" size="52,37"/>
+		<ePixmap pixmap="buttons/key_info.png" alphatest="on" position="1755,1025" size="52,37"/>
 	</screen>
 
 	<screen name="ExitBPanel">
-		<ePixmap pixmap="buttons/key_exit.png" alphatest="on" position="22,1025" size="52,37"/>
+		<ePixmap pixmap="buttons/key_exit.png" alphatest="on" position="1810,1025" size="52,37"/>
 	</screen>
 
 	<screen name="TextBPanel">
-		<ePixmap pixmap="buttons/key_text.png" alphatest="on" position="1874,1025" size="52,37"/>
+		<ePixmap pixmap="buttons/key_text.png" alphatest="on" position="1865,1025" size="52,37"/>
+	</screen>
+
+	<screen name="VKeyIconPanel">
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1865,1025" size="52,37" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
 
 	<screen name="IntroductionPanel">
