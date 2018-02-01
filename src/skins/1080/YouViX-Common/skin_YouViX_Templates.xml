@@ -534,38 +534,52 @@
 		<!-- <ePixmap pixmap="buttons/key_ok.png" position="1857,280" size="53,38" alphatest="blend" transparent="1" zPosition="1"/> -->
 		<eLabel text="OK" position="1848,320" size="68,38" font="youvix-r;22" foregroundColor="white" backgroundColor="darkcolour" halign="center" valign="center" transparent="0" zPosition="1"/>
 	</screen>
-	<screen name="MenuButtonBar">
+	<screen name="ColorButtons">
 		<!-- Red button -->
 		<ePixmap conditional="key_red" objectTypes="Button,Label" objectTypesDepends="key_red" pixmap="buttons/red.png" position="80,986" size="35,35" alphatest="blend" transparent="1" />
 		<widget conditional="key_red" objectTypes="StaticText" source="key_red" render="Pixmap" pixmap="buttons/red.png" position="80,986" size="35,35" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget conditional="key_red" objectTypes="Label,Button" name="key_red" position="120,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
-		<widget conditional="key_red" objectTypes="StaticText" source="key_red" render="Label" position="120,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
 
 		<!-- Green button -->
 		<ePixmap conditional="key_green" objectTypes="Button,Label" objectTypesDepends="key_green" pixmap="buttons/green.png" position="80,1031" size="35,35" alphatest="blend" transparent="1" />
 		<widget conditional="key_green" objectTypes="StaticText" source="key_green" render="Pixmap" pixmap="buttons/green.png" position="80,1031" size="35,35" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget conditional="key_green" objectTypes="Label,Button" name="key_green" position="120,1033" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
-		<widget conditional="key_green" objectTypes="StaticText" source="key_green" render="Label" position="120,1033" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
-	
+
 		<!-- Yellow button -->
 		<ePixmap conditional="key_yellow" objectTypes="Button,Label" objectTypesDepends="key_yellow" pixmap="buttons/yellow.png" position="635,986" size="35,35" alphatest="blend" transparent="1" />	
 		<widget conditional="key_yellow" objectTypes="StaticText" source="key_yellow" render="Pixmap" pixmap="buttons/yellow.png" position="635,986" size="35,35" alphatest="blend" transparent="1">	
 	    	<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget conditional="key_yellow" objectTypes="Label,Button" name="key_yellow" position="363,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="1" zPosition="1" />
-	    <widget conditional="key_yellow" objectTypes="StaticText" source="key_yellow" render="Label" position="363,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="1" zPosition="1" />
-	
+
 		<!-- Blue button -->
 		<ePixmap conditional="key_blue" objectTypes="Button,Label" objectTypesDepends="key_blue" pixmap="buttons/blue.png" position="635,1031" size="35,35" alphatest="blend" transparent="1" />
 		<widget conditional="key_blue" objectTypes="StaticText" source="key_blue" render="Pixmap" pixmap="buttons/blue.png" position="635,1031" size="35,35" alphatest="blend" transparent="1">
 	    	<convert type="ConditionalShowHide"/>
 		</widget>
+		
+	</screen>
+	<screen name="ColorButtonTexts">
+		<!-- Red button text -->
+		<widget conditional="key_red" objectTypes="Label,Button" name="key_red" position="120,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
+		<widget conditional="key_red" objectTypes="StaticText" source="key_red" render="Label" position="120,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
+
+		<!-- Green button text -->
+		<widget conditional="key_green" objectTypes="Label,Button" name="key_green" position="120,1033" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
+		<widget conditional="key_green" objectTypes="StaticText" source="key_green" render="Label" position="120,1033" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
+	
+		<!-- Yellow button text -->
+		<widget conditional="key_yellow" objectTypes="Label,Button" name="key_yellow" position="363,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="1" zPosition="1" />
+	    <widget conditional="key_yellow" objectTypes="StaticText" source="key_yellow" render="Label" position="363,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="1" zPosition="1" />
+	
+		<!-- Blue button text -->
 		<widget conditional="key_blue" objectTypes="Label,Button" name="key_blue" position="363,1031" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="1" zPosition="1" />
 	    <widget conditional="key_blue" objectTypes="StaticText" source="key_blue" render="Label" position="363,1031" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="1" zPosition="1" />
+	</screen>
+	<screen name="MenuButtonBar">
+		<panel name="ColorButtons" />
+		<panel name="ColorButtonTexts" />
 	</screen>
 	
 	<!-- ## ONDEMAND TEMPLATES ## -->
