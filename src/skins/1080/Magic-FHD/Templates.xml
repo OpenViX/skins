@@ -28,11 +28,15 @@
 		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" halign="right" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<widget source="menu_path_compressed" render="Label" position="22,1" size="1500,29" font="RegularSmall;24" foregroundColor="secondFG" zPosition="2"/>
 		<widget source="Title" render="Label" position="22,3" size="1500,90" font="RegularSmall;37" foregroundColor="grey" valign="bottom" zPosition="1"/>
+		<panel name="menu_path_Template" conditional="menu_path_compressed"/>
 		<eLabel backgroundColor="background" position="fill" zPosition="-1"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
+	</screen>
+
+	<screen name="menu_path_Template">
+		<widget source="menu_path_compressed" render="Label" position="22,1" size="1500,29" font="RegularSmall;24" foregroundColor="secondFG" zPosition="2"/>
 	</screen>
 
 	<screen name="RedBPanel">
