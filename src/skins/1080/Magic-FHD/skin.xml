@@ -805,12 +805,20 @@
 			</convert>
 		</widget>
 	</screen>
+
+	<screen name="descriptionTemplate">
+		<widget name="description" position="7,555" size="735,375" font="Regular;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
+	</screen>
+	<screen name="footnoteTemplate">
+		<widget name="footnote" position="1125,1020" size="630,45" font="Regular;33" zPosition="1" foregroundColor="grey"/>
+	</screen>
+
 	<screen name="Setup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="755,120" size="1155,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,755" size="1,1" zPosition="1"/>
-		<widget name="description" position="7,555" size="735,375" font="Regular;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
-		<widget name="footnote" position="1125,1020" size="630,45" font="Regular;33" zPosition="1" foregroundColor="grey"/>
+		<panel name="descriptionTemplate" conditional="description"/>
+		<panel name="footnoteTemplate" conditional="footnote"/>
 	</screen>
 	<screen name="AboutOE" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -824,7 +832,6 @@
 		<panel name="BasicTemplate"/>
 		<widget source="TranslationInfo" render="Label" position="780,127" size="1177,45" font="Regular;33" foregroundColor="secondFG"/>
 		<widget source="TranslatorName" render="Label" position="780,225" size="1177,150" font="Regular;33" foregroundColor="grey"/>
-		<widget name="text" position="7,568" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="StreamingClientsInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
