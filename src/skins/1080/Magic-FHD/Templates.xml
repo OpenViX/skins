@@ -28,8 +28,8 @@
 		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" halign="right" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<widget source="Title" render="Label" position="22,3" size="1500,90" font="RegularSmall;37" foregroundColor="grey" valign="bottom" zPosition="1"/>
 		<panel name="menu_path_Template" conditional="menu_path_compressed"/>
+		<widget source="Title" render="Label" position="22,3" size="1500,90" font="RegularSmall;37" foregroundColor="grey" valign="bottom" zPosition="1"/>
 		<eLabel backgroundColor="background" position="fill" zPosition="-1"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
@@ -108,6 +108,18 @@
 		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey" halign="center"/>
 	</screen>
 
+	<screen name="descriptionTemplate">
+		<widget name="description" position="7,555" size="735,375" font="Regular;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
+	</screen>
+
+	<screen name="footnoteTemplate">
+		<widget name="footnote" position="1125,1020" size="630,45" font="Regular;33" zPosition="1" foregroundColor="grey"/>
+	</screen>
+
+	<screen name="HelpWindowTemplate">
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,755" size="1,1" zPosition="1"/>
+	</screen>
+	
 	<screen name="PlayerPanel">
 		<widget source="session.CurrentService" render="Label" position="192,0" size="1300,104" font="RegularSmall;40" backgroundColor="transparent" zPosition="1" borderWidth="3" borderColor="black" valign="center" halign="center">
 			<convert type="ServiceName">Name</convert>
