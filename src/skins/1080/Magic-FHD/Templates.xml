@@ -11,6 +11,7 @@
 	<screen name="BasicTemplate">
 		<panel name="BasicTemplate1"/>
 		<panel name="ButtonPanel"/>
+		<panel name="footnoteTemplate" conditional="footnote"/>
 	</screen>
 
 	<screen name="BasicTemplate1">
@@ -110,11 +111,12 @@
 	</screen>
 
 	<screen name="descriptionTemplate">
-		<widget name="description" position="7,555" size="735,375" font="Regular;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget name="description" conditional="description" objectTypes="Button,Label" position="7,555" size="735,375" font="Regular;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget source="description" render="Label" conditional="description" objectTypes="StaticText" position="7,555" size="735,375" font="Regular;33" zPosition="10" halign="center" valign="center" foregroundColor="secondFG"/>
 	</screen>
 
 	<screen name="footnoteTemplate">
-		<widget name="footnote" position="1125,1020" size="630,45" font="Regular;33" zPosition="1" foregroundColor="grey"/>
+		<widget name="footnote" position="1125,965" size="630,45" font="Regular;33" zPosition="1" foregroundColor="grey"/>
 	</screen>
 
 	<screen name="HelpWindowTemplate">
