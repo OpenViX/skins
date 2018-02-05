@@ -17,6 +17,7 @@
 		<font name="RegularSmall" filename="/usr/share/enigma2/Magic-FHD/fonts/OpenSans-Regular.ttf" scale="94"/>
 		<font name="channelselectionservice" filename="/usr/share/enigma2/Magic-FHD/fonts/OpenSans-Regular.ttf" scale="95"/>
 		<font name="channelselectionevent" filename="/usr/share/enigma2/Magic-FHD/fonts/OpenSans-Italic.ttf" scale="90"/>
+		<font name="buttons" filename="/usr/share/enigma2/Magic-FHD/fonts/FreeSans.ttf" scale="100" />
 		<alias name="ChoiceList" font="Regular" size="33" height="45"/>
 		<alias name="Dreamexplorer" font="Regular" size="30" height="45"/>
 		<alias name="FileList" font="Regular" size="33" height="48"/>
@@ -109,6 +110,10 @@
 		<color name="blue" value="#00879ce1"/>
 		<color name="bluetransparent" value="#08001e4b"/>
 		<color name="bluegrey" value="#4D5375"/>
+		<color name="buttonred" value="#00f50808" />
+		<color name="buttongreen" value="#0004c81b" />
+		<color name="buttonyellow" value="#00edf506" />
+		<color name="buttonblue" value="#00077cf5" />
 		<color name="darkgrey" value="#00555556"/>
 		<color name="foreground" value="#00f0f0f0"/>
 		<color name="green" value="#0056c856"/>
@@ -412,14 +417,10 @@
 	</screen>
 	<screen name="SlimChannelSelection" flags="wfNoBorder" position="0,0" size="885,1080" backgroundColor="transparent">
 		<eLabel position="0,0" size="885,1080" backgroundColor="transpBlack" zPosition="-50"/>
-		<ePixmap pixmap="buttons/red.png" alphatest="on" position="22,967" size="30,30"/>
-		<ePixmap pixmap="buttons/green.png" alphatest="on" position="22,1017" size="30,30"/>
-		<ePixmap pixmap="buttons/yellow.png" alphatest="on" position="457,967" size="30,30"/>
-		<ePixmap pixmap="buttons/blue.png" alphatest="on" position="457,1017" size="30,30"/>
-		<widget name="key_red" backgroundColor="secondBG" font="Regular;30" halign="left" position="55,965" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_green" backgroundColor="secondBG" font="Regular;30" halign="left" position="55,1015" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_yellow" backgroundColor="secondBG" font="Regular;30" halign="left" position="490,965" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_blue" backgroundColor="secondBG" font="Regular;30" halign="left" position="490,1015" size="330,39" transparent="1" zPosition="1"/>
+		<widget name="key_red" foregroundColor="buttonred" backgroundColor="secondBG" font="buttons;30" halign="left" position="55,965" size="330,39" transparent="1" zPosition="1"/>
+		<widget name="key_green" foregroundColor="buttongreen" backgroundColor="secondBG" font="buttons;30" halign="left" position="55,1015" size="330,39" transparent="1" zPosition="1"/>
+		<widget name="key_yellow" foregroundColor="buttonyellow" backgroundColor="secondBG" font="buttons;30" halign="left" position="490,965" size="330,39" transparent="1" zPosition="1"/>
+		<widget name="key_blue" foregroundColor="buttonblue" backgroundColor="secondBG" font="buttons;30" halign="left" position="490,1015" size="330,39" transparent="1" zPosition="1"/>
 		<widget source="Title" foregroundColor="blue" render="Label" position="2,3" size="825,45" transparent="1" zPosition="1" font="Regular;37" halign="center" valign="center"/>
 		<widget name="list" position="22,51" size="855,720" itemHeight="45" serviceNumberFont="Regular;33" serviceInfoFont="Crs;33" serviceNameFont="Regular;33" serviceItemHeight="35"
 				colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" transparent="1" foregroundColorServiceNotAvail="#656565" scrollbarMode="showOnDemand"/>
@@ -566,7 +567,7 @@
 		<widget source="Service" render="Label" position="382,832" size="1485,50" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="yellow" font="Regular;36" valign="center" halign="left">
 		<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget name="list" position="270,882" size="1335,145" EventFontInfobar="Regular;30" backgroundColor="secondBG" foregroundColor="foreground" transparent="1" zPosition="1"/>
+		<widget name="list" position="270,882" size="1235,145" EventFontInfobar="Regular;30" backgroundColor="secondBG" foregroundColor="foreground" transparent="1" zPosition="1"/>
 		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,36" font="Regular;30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" halign="center">
 			<convert type="ClockToText">ShortDate</convert>
 		</widget>
@@ -585,14 +586,10 @@
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1425,32" size="450,45" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="right">		<convert type="ClockToText">Date</convert>
 		</widget>
-		<ePixmap pixmap="buttons/red.png" position="22,260" size="30,30" zPosition="-1" alphatest="blend"/>
-		<ePixmap pixmap="buttons/green.png" position="457,260" size="30,30" zPosition="-1" alphatest="blend"/>
-		<ePixmap pixmap="buttons/yellow.png" position="892,260" size="30,30" zPosition="-1" alphatest="blend"/>
-		<ePixmap pixmap="buttons/blue.png" position="1335,260" size="30,30" zPosition="-1" alphatest="blend"/>
-		<widget name="key_red" position="55,250" size="400,45" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
-		<widget name="key_green" position="490,250" size="400,45" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
-		<widget name="key_yellow" position="930,250" size="400,45" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
-		<widget name="key_blue" position="1370,250" size="400,45" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="key_red" position="55,250" size="400,45" foregroundColor="buttonred" backgroundColor="secondBG" transparent="1" zPosition="1" font="buttons;33" halign="left"/>
+		<widget name="key_green" position="490,250" size="400,45" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1" zPosition="1" font="buttons;33" halign="left"/>
+		<widget name="key_yellow" position="930,250" size="400,45" foregroundColor="buttonyellow" backgroundColor="secondBG" transparent="1" zPosition="1" font="buttons;33" halign="left"/>
+		<widget name="key_blue" position="1370,250" size="400,45" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1" zPosition="1" font="buttons;33" halign="left"/>
 		<ePixmap pixmap="buttons/key_menu.png" position="1777,250" size="52,37" alphatest="on"/>
 		<ePixmap pixmap="buttons/key_info.png" position="1830,250" size="52,37" alphatest="on"/>
 		<widget source="Title" render="Label" position="30,15" size="1275,50" font="Regular;36" transparent="1" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" zPosition="1"/>
@@ -930,22 +927,13 @@
 		</widget>
 		<widget source="job_status" render="Label" position="885,400" size="720,45" font="Regular;34" halign="center"/>
 		<widget name="config" position="885,600" size="720,195" font="Regular;34"/>
-		<widget source="cancelable" render="Pixmap" pixmap="buttons/red.png" position="22,1027" size="400,60" zPosition="-1" alphatest="blend">
+		<widget source="cancelable" render="FixedLabel" text="Cancel" position="75,1020" size="330,45" font="buttons;33" foregroundColor="buttongreen" halign="left">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="cancelable" render="FixedLabel" text="Cancel" position="75,1020" size="330,45" font="Regular;30" halign="left">
+		<widget source="finished" render="FixedLabel" text="OK" position="510,1020" size="330,45" font="buttons;33" foregroundColor="buttongreen" zPosition="1" halign="left">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="finished" render="Pixmap" pixmap="buttons/green.png" position="457,1027" size="400,60" zPosition="-1" alphatest="blend">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="finished" render="FixedLabel" text="OK" position="510,1020" size="330,45" font="Regular;33" zPosition="1" halign="left">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="backgroundable" render="Pixmap" pixmap="buttons/blue.png" position="1335,1027" size="400,60" zPosition="-1" alphatest="blend">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left">
+		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" zPosition="1" halign="left">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
@@ -1123,7 +1111,7 @@
 	</screen>
 	<screen name="VirtualKeyBoard" position="4,0" size="1920,1080" zPosition="99" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="country" render="Label" position="930,1020" size="400,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<widget source="country" render="Label" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" zPosition="1" halign="left"/>
 		<widget name="header" position="978,358" size="750,39" noWrap="1" font="Regular;30"/>
 		<widget name="text" position="735,411" size="1177,51" noWrap="1" font="Regular;38" foregroundColor="grey" halign="center"/>
 		<widget name="list" position="970,570" size="815,337" selectionDisabled="1"/>
@@ -1292,7 +1280,7 @@
 		<widget source="list" render="Listbox" position="780,195" size="1132,585" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" transparent="1" enableWrapAround="1">
 			<convert type="StringList"/>
 		</widget>
-		<eLabel text="'OK' = Show details" position="1582,1020" size="360,39" font="Regular;33" foregroundColor="grey" halign="left" zPosition="1"/>
+		<eLabel text="'OK' = Show details" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey"/>
 	</screen>
 	<screen name="PluginBrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1407,8 +1395,7 @@
 	</screen>
 	<screen name="NetworkAdapterTest" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="EditSettingsButton" pixmap="buttons/blue.png" position="1335,1027" size="400,60" alphatest="blend"/>
-		<widget name="EditSettings_Text" position="1370,1020" size="400,45" font="Regular;33" foregroundColor="grey" halign="left"/>
+		<widget name="EditSettings_Text" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" halign="left"/>
 		<widget name="InfoText" position="780,123" size="1132,525" font="Regular;31"/>
 		<widget name="InfoTextBorder" position="780,123" size="1132,525"/>
 		<widget name="Adaptertext" position="630,690" size="375,40" foregroundColors="grey,green" font="Regular;31" halign="left"/>
@@ -1980,7 +1967,7 @@
 	</screen>
 	<screen name="NetworkWizard" position="fill" flags="wfNoBorder" title="Network Wizard">
 		<panel name="BasicTemplate"/>
-		<widget name="languagetext" position="55,1020" size="400,45" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<widget name="languagetext" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
 		<widget name="config" position="780,124" size="750,420" font="Regular;33" itemHeight="45" foregroundColor="grey" zPosition="1" scrollbarMode="showOnDemand"/>
 		<widget name="text" position="780,600" size="750,470" font="Regular;34"/>
 		<widget source="list" render="Listbox" position="22,577" size="670,375" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand">
@@ -2155,7 +2142,7 @@
 	</screen>
 	<screen name="FanSetupScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="hddtemp" position="1370,1020" size="400,39" foregroundColor="grey" zPosition="1" font="Regular;33" halign="left"/>
+		<widget name="hddtemp" position="1235,1023" size="400,39" foregroundColor="buttonblue" zPosition="1" font="buttons;33" halign="left"/>
 		<widget name="config" position="780,120" size="1125,720" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="powerstatus" position="750,900" size="375,33" halign="right" font="Regular;30" zPosition="1" transparent="1" foregroundColor="grey"/>
 		<widget name="daemon0" pixmap="buttons/button_green_off.png" position="1140,910" size="22,24" zPosition="10" alphatest="on" transparent="1"/>
