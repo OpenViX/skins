@@ -202,9 +202,8 @@
 	<screen name="FullscreenConfigPanel">
 		<panel name="FullscreenTemplateWithPIGPanel"/>
 		<widget name="config" position="10,82" size="670,560" itemHeight="28" font="Regular;22" selectionPixmap="ViX-Common/buttons/FocusBar_H25x670.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<!-- As this is a common panel "conditional" is used to stop the nag messages in the debug log for python files that do not contain these items -->
-		<widget name="description" conditional="description" objectTypes="Button,Label" position="695,440" size="575,200" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
-		<widget source="description" render="Label" conditional="description" objectTypes="StaticText" position="695,440" size="575,200" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
+		<widget name="description" objectTypes="description,Button,Label" position="695,440" size="575,200" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
+		<widget source="description" render="Label" objectTypes="description,StaticText" position="695,440" size="575,200" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
 		<widget name="HelpWindow" conditional="HelpWindow" pixmap="buttons/vkey_icon.png" position="60,440" zPosition="1" size="541,720" transparent="1" alphatest="on"/>
 		<widget source="VKeyIcon" conditional="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1200,686" zPosition="1" size="35,25" transparent="1" alphatest="on">
 			<convert type="ConditionalShowHide"/>
