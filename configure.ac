@@ -376,6 +376,20 @@ src/skins/1080/NOVUM_FHD_Slim/SkinDesign/Makefile
 src/skins/1080/NOVUM_FHD_Slim/spinner/Makefile
 src/skins/1080/NOVUM_FHD_Slim/WeatherIcons/Makefile
 
+src/skins/1080/Simple_Ten_Eight/Makefile
+src/skins/1080/Simple_Ten_Eight/border/Makefile
+src/skins/1080/Simple_Ten_Eight/buttons/Makefile
+src/skins/1080/Simple_Ten_Eight/dvr/Makefile
+src/skins/1080/Simple_Ten_Eight/epg/Makefile
+src/skins/1080/Simple_Ten_Eight/extensions/Makefile
+src/skins/1080/Simple_Ten_Eight/fonts/Makefile
+src/skins/1080/Simple_Ten_Eight/icons/Makefile
+src/skins/1080/Simple_Ten_Eight/infobar/Makefile
+src/skins/1080/Simple_Ten_Eight/skin_default/Makefile
+src/skins/1080/Simple_Ten_Eight/skin_default/buttons/Makefile
+src/skins/1080/Simple_Ten_Eight/skin_default/icons/Makefile
+src/skins/1080/Simple_Ten_Eight/window/Makefile
+
 src/skins/1080/ViXBMC_1080/Makefile
 src/skins/1080/ViXBMC_1080/buttons/Makefile
 src/skins/1080/ViXBMC_1080/countries/Makefile
