@@ -68,10 +68,14 @@
 	</screen>
 
 	<screen name="FullscreenTitlePanel">
-		<widget source="menu_path_compressed" render="Label" position="20,5" size="540,38" font="Bold;15" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
+		<panel name="menu_path_compressed_FullScreen" conditional="menu_path_compressed"/>
 		<widget source="Title" render="Label" position="20,5" size="850,65" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" valign="bottom"/>
 	</screen>
-	
+
+	<screen name="menu_path_compressed_FullScreen">
+		<widget source="menu_path_compressed" render="Label" position="20,5" size="540,38" font="Bold;15" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
+	</screen>
+
 	<screen name="FullscreenTemplatePanel">
 		<panel name="FullscreenTopPanel"/>
 		<panel name="FullscreenTitlePanel"/>
@@ -102,7 +106,7 @@
 		<!-- Half screen -->
 
 	<screen name="MenuPanel">
-		<widget source="menu_path_compressed" render="Label" position="10,30" size="520,38" font="Bold;15" foregroundColor="menu-title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1"/>
+		<panel name="menu_path_compressed_HalfScreen" conditional="menu_path_compressed"/>
 		<widget source="Title" render="Label" position="10,30" size="520,58" font="Bold;26" foregroundColor="menu-title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1" valign="bottom"/>
 		<ePixmap pixmap="menu/bg.png" position="0,0" size="540,720" alphatest="on" zPosition="-1"/>
 		<widget source="global.CurrentTime" render="Label" position="200,8" size="300,28" font="Regular;24" foregroundColor="menu-title-frgrnd" backgroundColor="menu-time-bkgrnd" halign="right" transparent="1">
@@ -110,6 +114,11 @@
 		</widget>
 	</screen>
 
+	<screen name="menu_path_compressed_HalfScreen">
+		<widget source="menu_path_compressed" render="Label" position="10,30" size="520,38" font="Bold;15" foregroundColor="menu-title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1"/>
+	</screen>
+
+	
 	<screen name="MenuRedPanel">
 		<ePixmap objectTypes="key_red,Button,Label" pixmap="ViX-Common/buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1"/>
 		<widget source="key_red" objectTypes="key_red,StaticText" render="Pixmap" pixmap="ViX-Common/buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1">
