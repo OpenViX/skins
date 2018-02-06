@@ -217,7 +217,6 @@
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="450,510" size="1,1" transparent="1" alphatest="on" zPosition="1"/>
 	</screen>
 
-	
 	<!-- ## BUTTONS ## -->
 	<screen name="TextButton">
 		<ePixmap pixmap="buttons/text.png" position="804,865" size="53,38" alphatest="blend" transparent="1" zPosition="3"/>
@@ -231,7 +230,42 @@
 	<screen name="BottomBar">
 		<ePixmap pixmap="screens/bottombar.png" position="center,1020" size="1160,60" alphatest="blend" transparent="1" zPosition="1"/>
 	</screen>
-	
+
+	<screen name="MenuButtonBar">
+		<panel name="ColorButtons" />
+		<panel name="ColorButtonTexts" />
+	</screen>
+
+	<screen name="ColorButtons">
+		<ePixmap objectTypes="key_red,Label,Button" pixmap="iSkin-Common/buttons/red.png" position="380,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Pixmap" pixmap="iSkin-Common/buttons/red.png" position="380,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_green,Label,Button" pixmap="iSkin-Common/buttons/green.png" position="670,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Pixmap" pixmap="iSkin-Common/buttons/green.png" position="670,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_yellow,Label,Button" pixmap="iSkin-Common/buttons/yellow.png" position="960,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />	
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Pixmap" pixmap="iSkin-Common/buttons/yellow.png" position="960,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2">	
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_blue,Label,Button" pixmap="iSkin-Common/buttons/blue.png" position="1250,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Pixmap" pixmap="iSkin-Common/buttons/blue.png" position="1250,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<screen name="ColorButtonTexts">
+		<widget objectTypes="key_red,Label,Button" name="key_red" position="440,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="440,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
+		<widget objectTypes="key_green,Label,Button" name="key_green" position="730,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="730,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="1020,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="1020,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="1310,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="1310,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
+	</screen>
+
 	<screen name="RedButton">
 		<ePixmap pixmap="iSkin-Common/buttons/red.png" position="380,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />
 		<widget name="key_red" position="440,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
@@ -264,56 +298,7 @@
 		<ePixmap pixmap="iSkin-Common/buttons/blue.png" position="1250,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />
 		<widget source="key_blue" render="Label" position="1310,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
 	</screen>
-	
-	<screen name="ColorButtons">
-		<!-- Red button -->
-		<ePixmap objectTypes="key_red,Label,Button" pixmap="iSkin-Common/buttons/red.png" position="380,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />
-		<widget objectTypes="key_red,StaticText" source="key_red" render="Pixmap" pixmap="iSkin-Common/buttons/red.png" position="380,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2">
-			<convert type="ConditionalShowHide"/>
-		</widget>
 
-		<!-- Green button -->
-		<ePixmap objectTypes="key_green,Label,Button" pixmap="iSkin-Common/buttons/green.png" position="670,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />
-		<widget objectTypes="key_green,StaticText" source="key_green" render="Pixmap" pixmap="iSkin-Common/buttons/green.png" position="670,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-
-		<!-- Yellow button -->
-		<ePixmap objectTypes="key_yellow,Label,Button" pixmap="iSkin-Common/buttons/yellow.png" position="960,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />	
-		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Pixmap" pixmap="iSkin-Common/buttons/yellow.png" position="960,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2">	
-	    	<convert type="ConditionalShowHide"/>
-		</widget>
-
-		<!-- Blue button -->
-		<ePixmap objectTypes="key_blue,Label,Button" pixmap="iSkin-Common/buttons/blue.png" position="1250,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2" />
-		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Pixmap" pixmap="iSkin-Common/buttons/blue.png" position="1250,1020" size="60,60" alphatest="blend" transparent="1" zPosition="2">
-	    	<convert type="ConditionalShowHide"/>
-		</widget>
-	</screen>
-	<screen name="ColorButtonTexts">
-		<!-- Red button text -->
-		<widget objectTypes="key_red,Label,Button" name="key_red" position="440,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
-		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="440,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
-
-		<!-- Green button text -->
-		<widget objectTypes="key_green,Label,Button" name="key_green" position="730,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
-		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="730,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
-	
-		<!-- Yellow button text -->
-		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="1020,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
-	    <widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="1020,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
-	
-		<!-- Blue button text -->
-		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="1310,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
-	    <widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="1310,1020" size="230,60" font="TM;24" foregroundColor="white" backgroundColor="bottombar" transparent="1" halign="left" valign="center" noWrap="0" zPosition="3" />
-	</screen>
-	<screen name="MenuButtonBar">
-		<panel name="ColorButtons" />
-		<panel name="ColorButtonTexts" />
-	</screen>
-	
-	
-	
 	<!-- WIZARD TEMPLATES -->
 	<screen name="WizardRemote">
 		<widget name="rc" pixmaps="rc.png,rcold.png" position="800,220" size="158,620" alphatest="blend" transparent="1" zPosition="2" />
