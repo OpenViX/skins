@@ -3,15 +3,18 @@
 	<!--	Skin: Magic-FHD templates 	-->
 	<!--	This skin is part of the skin Magic-fHD; the same license applies.	-->
 
-	<screen name="BasicTemplateIntroduction">
-		<panel name="BasicTemplate"/>
-		<panel name="IntroductionPanel"/>
-	</screen>
-
 	<screen name="BasicTemplate">
 		<panel name="BasicTemplate1"/>
 		<panel name="ButtonPanel"/>
-		<panel name="footnoteTemplate" conditional="footnote"/>
+		<widget name="footnote" conditional="footnote" position="1125,965" size="630,45" font="Regular;33" zPosition="1" foregroundColor="grey"/>
+		<widget source="introduction" render="Label" conditional="introduction" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey"/>
+		<widget name="introduction" conditional="introduction" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey"/>
+		<widget name="description" objectTypes="description,Button,Label" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget source="description" render="Label" objectTypes="description,StaticText" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget name="HelpWindow" conditional="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,755" size="1,1" zPosition="1"/>
+		<widget source="VKeyIcon" render="Pixmap" conditional="VKeyIcon" pixmap="buttons/key_text.png" position="1865,1028" size="52,37" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
 
 	<screen name="BasicTemplate1">
@@ -29,15 +32,11 @@
 		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" halign="right" foregroundColor="grey" zPosition="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<panel name="menu_path_Template" conditional="menu_path_compressed"/>
+		<widget source="menu_path_compressed" render="Label" conditional="menu_path_compressed" position="22,1" size="1500,29" font="RegularSmall;24" foregroundColor="secondFG" zPosition="2"/>
 		<widget source="Title" render="Label" position="22,3" size="1500,90" font="RegularSmall;37" foregroundColor="grey" valign="bottom" zPosition="1"/>
 		<eLabel backgroundColor="background" position="fill" zPosition="-1"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-	</screen>
-
-	<screen name="menu_path_Template">
-		<widget source="menu_path_compressed" render="Label" position="22,1" size="1500,29" font="RegularSmall;24" foregroundColor="secondFG" zPosition="2"/>
 	</screen>
 
 	<screen name="RedPanel">
@@ -82,29 +81,6 @@
 
 	<screen name="TextBPanel">
 		<ePixmap pixmap="buttons/key_text.png" alphatest="on" position="1810,1028" size="52,37"/>
-	</screen>
-
-	<screen name="VKeyIconPanel">
-		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1865,1028" size="52,37" alphatest="on">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-	</screen>
-
-	<screen name="IntroductionPanel">
-		<widget source="introduction" render="Label" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey"/>
-	</screen>
-
-	<screen name="descriptionTemplate">
-		<widget name="description" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
-		<widget source="description" render="Label" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
-	</screen>
-
-	<screen name="footnoteTemplate">
-		<widget name="footnote" position="1125,965" size="630,45" font="Regular;33" zPosition="1" foregroundColor="grey"/>
-	</screen>
-
-	<screen name="HelpWindowTemplate">
-		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,755" size="1,1" zPosition="1"/>
 	</screen>
 	
 	<screen name="PlayerPanel">

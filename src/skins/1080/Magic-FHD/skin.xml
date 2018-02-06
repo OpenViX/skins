@@ -804,8 +804,6 @@
 	<screen name="Setup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="755,120" size="1155,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<panel name="descriptionTemplate" conditional="description"/>
-		<panel name="HelpWindowTemplate" conditional="HelpWindow"/>
 	</screen>
 	<screen name="AboutOE" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -994,7 +992,7 @@
 		</widget>
 	</screen>
 	<screen name="InputDeviceSelection" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget source="list" render="Listbox" position="780,123" size="1132,804" zPosition="10" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 							{"template": [
@@ -1008,7 +1006,7 @@
 		</widget>
 	</screen>
 	<screen name="InputDeviceSetup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,824" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="Console" position="fill" flags="wfNoBorder">
@@ -1237,7 +1235,6 @@
 	</screen>
 	<screen name="TimerEntry" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="descriptionTemplate"/>
 		<widget name="config" position="780,120" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="5,755" size="1,1" zPosition="1" alphatest="on"/>
 	</screen>
@@ -1253,7 +1250,6 @@
 	<screen name="TimerEditList" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="InfoBPanel"/>
-		<panel name="descriptionTemplate"/>
 		<widget name="timerlist" position="735,124" size="1177,880" itemHeight="80" rowSplit="40" iconMargin="15" setEventNameFont="Regular;32"
 		setServiceNameFont="Regular;32" setFont="Regular;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 	</screen>
@@ -1311,7 +1307,7 @@
 		<widget name="activityslider" position="66,891" size="1791,9" pixmap="window/slider.png"/>
 	</screen>
 	<screen name="SkinSelector" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<panel name="InfoBPanel"/>
 		<widget name="SkinList" position="780,135" size="450,805" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="Preview" position="1377,165" size="420,315" alphatest="on"/>
@@ -1362,7 +1358,6 @@
 	</screen>
 	<screen name="AdapterSetupConfiguration" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="descriptionTemplate"/>
 		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="Statustext" render="Label" position="474,945" size="300,40" font="Regular;36" halign="right" foregroundColor="grey"/>
 		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="787,958" size="23,24" alphatest="on"/>
@@ -1390,7 +1385,7 @@
 		<widget name="HelpWindow" pixmap="vkey_icon.png" position="22,600" size="1,1" zPosition="1"/>
 	</screen>
 	<screen name="NameserverSetup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="NetworkAdapterTest" position="fill" flags="wfNoBorder">
@@ -1425,7 +1420,7 @@
 		<widget name="DNSInfo_Text" position="1530,900" size="300,40" font="Regular;31" foregroundColors="grey,grey,selectedFG"/>
 	</screen>
 	<screen name="NetworkMountsMenu" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="NetworkBrowser" position="fill" flags="wfNoBorder">
@@ -1448,7 +1443,7 @@
 		<widget source="infotext" render="Label" position="7,750" size="715,105" font="Regular;33" valign="center" halign="center" foregroundColor="grey"/>
 	</screen>
 	<screen name="UserDialog" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" position="5,585" size="1,1" zPosition="1"/>
 	</screen>
@@ -1457,7 +1452,7 @@
 		<widget name="config" position="885,165" size="900,150" font="Regular;33" itemHeight="45"/>
 	</screen>
 	<screen name="NetworkAdapterSelection" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget source="list" render="Listbox" position="780,123" size="1132,780" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1473,7 +1468,7 @@
 		</widget>
 	</screen>
 	<screen name="AutoMountView" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget source="legend1" render="Label" position="735,123" size="240,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
 		<widget source="legend2" render="Label" position="1027,123" size="517,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
 		<widget source="legend3" render="Label" position="1680,123" size="195,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
@@ -1494,7 +1489,7 @@
 		</widget>
 	</screen>
 	<screen name="AutoMountManager" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget source="config" render="Listbox" position="780,123" size="1100,832" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1509,12 +1504,12 @@
 		</widget>
 	</screen>
 	<screen name="AutoMountEdit" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget name="config" position="735,120" size="1177,805" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" position="5,585" size="1,1" zPosition="1"/>
 	</screen>
 	<screen name="UserManager" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget source="config" render="Listbox" position="780,120" size="832,804" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 		<convert type="TemplatedMultiContent">
 					{"template": [
@@ -1727,7 +1722,7 @@
 		<widget source="introduction" render="Label" font="Regular;33" position="780,937" size="1132,60" foregroundColor="grey"/>
 	</screen>
 	<screen name="myProviderSelection" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,123" size="1132,810" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="MMIDialog" position="fill" flags="wfNoBorder">
@@ -1773,7 +1768,7 @@
 		<widget source="ServiceList_info" render="Label" position="885,255" size="900,600" backgroundColor="background" zPosition="2" transparent="1" font="Regular;33"/>
 	</screen>
 	<screen name="CAidSelect" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<eLabel position="121,657" size="525,108" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" zPosition="3" transparent="1" text="select CAId's" foregroundColor="grey" font="Regular;48"/>
 		<widget name="list" position="885,180" size="900,675" scrollbarMode="showOnDemand"/>
 	</screen>
@@ -1799,7 +1794,6 @@
 	</screen>
 	<screen name="NimSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="descriptionTemplate"/>
 		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="SelectSatsEntryScreen" position="fill" flags="wfNoBorder">
@@ -1957,7 +1951,7 @@
 		<widget name="nimlist" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="CableScanScreen" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,810" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="CableScanStatus" position="fill" flags="wfNoBorder">
@@ -2217,7 +2211,6 @@
 	</screen>
 	<screen name="VIXBackupManagerMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="descriptionTemplate"/>
 		<widget name="config" position="780,123" size="1132,405" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,600" zPosition="1" size="1,1"/>
 	</screen>  
@@ -2331,7 +2324,6 @@
 	</screen>
 	<screen name="TranscodingSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="descriptionTemplate"/>
 		<widget name="config" position="755,120" size="1157,815" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="7,550" size="715,90" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
@@ -2340,7 +2332,7 @@
 		<widget name="restxt" position="7,39" size="480,33" font="Regular;30" borderWidth="2" borderColor="black" transparent="1"/>
 	</screen>
 	<screen name="NetworkMacSetup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,120" size="1132,826" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="50" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="HelpWindow" pixmap="vkey_icon.png" position="22,600" size="1,1" zPosition="1"/>
 	</screen>
@@ -2378,7 +2370,6 @@
 	</screen>
 	<screen name="ButtonSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="descriptionTemplate"/>
 		<ePixmap pixmap="buttons/key-exit.png" position="57,1027" size="53,38" zPosition="0" alphatest="blend"/>
 		<eLabel text="Exit" position="115,1022" size="330,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
 		<widget name="list" position="735,120" size="577,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
@@ -2388,7 +2379,6 @@
 	</screen>
 	<screen name="ButtonSetupSelect" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="descriptionTemplate"/>
 		<ePixmap pixmap="Magic-FHD/buttons/key_prev.png" position="1597,1027" size="53,38"/>
 		<ePixmap pixmap="Magic-FHD/buttons/key_next.png" position="1652,1027" size="53,38"/>
 		<widget name="list" position="735,120" size="577,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
@@ -2406,7 +2396,7 @@
 		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="AnimationSetupScreen" position="0,0" size="1920,1080" flags="wfNoBorder" title="Animation Setup">
-		<panel name="BasicTemplateIntroduction"/>
+		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,120" size="1132,815" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<!-- ## Oscam Info ##-->
