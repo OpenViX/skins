@@ -9,51 +9,38 @@
 	<!-- Templates -->
 	<!-- Full screen -->
 
-	<!-- If key_XXX is not assigned in the python file no button PNG will show -->
-	<screen name="FullscreenRedPanel">
-		<!-- Button PNG that will be used if the button text is created with Button or Label. This does not hide automatically when the text field is empty (current behaviour in all skins). -->
+	<screen name="FullscreenButtonPanel">
+		<!-- Red button -->
 		<ePixmap objectTypes="key_red,Button,Label" pixmap="ViX-Common/buttons/red.png" position="90,686" size="25,25" alphatest="blend" transparent="1"/>
-		<!-- Button PNG that will be used if the button text is created with StaticText. This hides automatically when the text field is empty. -->
 		<widget source="key_red" objectTypes="key_red,StaticText" render="Pixmap" pixmap="ViX-Common/buttons/red.png" position="90,686" size="25,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<!-- Selecting between name and source based on object type ensures button text always updates correctly if SetText is called in the python file -->
 		<widget name="key_red" objectTypes="key_red,Label,Button" position="130,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-		<widget source="key_red" render="Label" objectTypes="key_red,StaticText" position="130,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
 
-	<screen name="FullscreenGreenPanel">
+		<!-- Green button -->
+		<widget source="key_red" render="Label" objectTypes="key_red,StaticText" position="130,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
 		<ePixmap objectTypes="key_green,Button,Label" pixmap="ViX-Common/buttons/green.png" position="380,686" size="25,25" alphatest="blend" transparent="1"/>
 		<widget source="key_green" objectTypes="key_green,StaticText" render="Pixmap" pixmap="ViX-Common/buttons/green.png" position="380,686" size="25,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget name="key_green" objectTypes="key_green,Label,Button" position="420,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
 		<widget source="key_green" render="Label" objectTypes="key_green,StaticText" position="420,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
 
-	<screen name="FullscreenYellowPanel">
+		<!-- Yellow button -->
 		<ePixmap objectTypes="key_yellow,Button,Label" pixmap="ViX-Common/buttons/yellow.png" position="670,686" size="25,25" alphatest="blend" transparent="1"/>
 		<widget source="key_yellow" objectTypes="key_yellow,StaticText" render="Pixmap" pixmap="ViX-Common/buttons/yellow.png" position="670,686" size="25,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget name="key_yellow" objectTypes="key_yellow,Label,Button" position="710,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
 		<widget source="key_yellow" render="Label" objectTypes="key_yellow,StaticText" position="710,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
 
-	<screen name="FullscreenBluePanel">
+		<!-- Blue button -->
 		<ePixmap objectTypes="key_blue,Button,Label" pixmap="ViX-Common/buttons/blue.png" position="960,686" size="25,25" alphatest="blend" transparent="1"/>
 		<widget source="key_blue" objectTypes="key_blue,StaticText" render="Pixmap" pixmap="ViX-Common/buttons/blue.png" position="960,686" size="25,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget name="key_blue" objectTypes="key_blue,Label,Button" position="1000,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
 		<widget source="key_blue" render="Label" objectTypes="key_blue,StaticText" position="1000,686" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-	</screen>
-
-	<screen name="FullscreenButtonPanel">
-		<panel name="FullscreenRedPanel" conditional="key_red"/>
-		<panel name="FullscreenGreenPanel" conditional="key_green"/>
-		<panel name="FullscreenYellowPanel" conditional="key_yellow"/>
-		<panel name="FullscreenBluePanel" conditional="key_blue"/>
 	</screen>
 
 	<screen name="FullscreenTopPanel">
@@ -117,36 +104,33 @@
 	<screen name="menu_path_compressed_HalfScreen">
 		<widget source="menu_path_compressed" render="Label" position="10,30" size="520,38" font="Bold;15" foregroundColor="menu-title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1"/>
 	</screen>
-
 	
-	<screen name="MenuRedPanel">
+	<screen name="MenuButtonPanel">
+		<!-- Red button -->
 		<ePixmap objectTypes="key_red,Button,Label" pixmap="ViX-Common/buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1"/>
 		<widget source="key_red" objectTypes="key_red,StaticText" render="Pixmap" pixmap="ViX-Common/buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget name="key_red" objectTypes="key_red,Label,Button" position="75,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
 		<widget source="key_red" render="Label" objectTypes="key_red,StaticText" position="75,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
-	</screen>
 
-	<screen name="MenuGreenPanel">
+		<!-- Green button -->
 		<ePixmap objectTypes="key_green,Button,Label" pixmap="ViX-Common/buttons/green.png" position="40,690" size="24,24" alphatest="blend" transparent="1"/>
 		<widget source="key_green" objectTypes="key_green,StaticText" render="Pixmap" pixmap="ViX-Common/buttons/green.png" position="40,690" size="24,24" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget name="key_green" objectTypes="key_green,Label,Button" position="75,690" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2"/>
 		<widget source="key_green" render="Label" objectTypes="key_green,StaticText" position="75,690" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2"/>
-	</screen>
 
-	<screen name="MenuYellowPanel">
+		<!-- Yellow button -->
 		<ePixmap objectTypes="key_yellow,Button,Label" pixmap="ViX-Common/buttons/yellow.png" position="280,663" size="24,24" alphatest="blend" transparent="1"/>
 		<widget source="key_yellow" objectTypes="key_yellow,StaticText" render="Pixmap" pixmap="ViX-Common/buttons/yellow.png" position="280,663" size="24,24" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget name="key_yellow" objectTypes="key_yellow,Label,Button" position="315,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
 		<widget source="key_yellow" render="Label" objectTypes="key_yellowStaticText" position="315,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
-	</screen>
-
-	<screen name="MenuBluePanel">
+	
+		<!-- Blue button -->
 		<ePixmap objectTypes="key_blue,Button,Label" pixmap="ViX-Common/buttons/blue.png" position="280,690" size="24,24" alphatest="blend" transparent="1"/>
 		<widget source="key_blue" objectTypes="key_blue,StaticText" render="Pixmap" pixmap="ViX-Common/buttons/blue.png" position="280,690" size="24,24" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
@@ -155,13 +139,6 @@
 		<widget source="key_blue" render="Label" objectTypes="key_blue,StaticText" position="315,690" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2"/>
 	</screen>
 
-	<screen name="MenuButtonPanel">
-		<panel name="MenuRedPanel" conditional="key_red"/>
-		<panel name="MenuGreenPanel" conditional="key_green"/>
-		<panel name="MenuYellowPanel" conditional="key_yellow"/>
-		<panel name="MenuBluePanel" conditional="key_blue"/>
-	</screen>
-	
 	<screen name="HalfscreenTemplate">
 		<panel name="MenuPanel"/>
 		<panel name="MenuButtonPanel"/>
