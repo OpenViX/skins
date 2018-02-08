@@ -31,6 +31,15 @@
 	</screen>
 
 	<screen name="BasicTemplate">
+		<panel name="BasicTemplate1"/>
+		<panel name="ButtonPanel"/>
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" conditional="HelpWindow" position="520,500" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
+		<widget source="VKeyIcon" render="Pixmap" conditional="VKeyIcon" pixmap="buttons/key_text.png" position="1160,682" zPosition="1" size="35,25" transparent="1" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+	
+	<screen name="BasicTemplate1">
 		<ePixmap pixmap="border/top2_bg.png" position="0,0" size="1280,75"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,675" size="1280,2"/>
 		<widget source="Title" render="Label" foregroundColor="grey"	position="15,15" size="700,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;25" valign="center"/>
@@ -74,52 +83,31 @@
 		</widget>
 	</screen>
 
-	<screen name="RedBPanel">
-		<ePixmap pixmap="buttons/big-red.png" position="15,682" size="284,40 " zPosition="0" alphatest="blend"/>
-	</screen>
-
-	<screen name="RedT1Panel">
-		<widget name="key_red" position="15,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="RedT2Panel">
-		<widget source="key_red" render="Label" position="15,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="GreenBPanel">
-		<ePixmap pixmap="buttons/big-green.png" position="305,682" size="284,40 " zPosition="0" alphatest="blend"/>
-	</screen>
-
-	<screen name="GreenT1Panel">
-		<widget name="key_green" position="305,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="GreenT2Panel">
-		<widget source="key_green" render="Label" position="305,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="YellowBPanel">
-		<ePixmap pixmap="buttons/big-yellow.png" position="595,682" size="284,40 " zPosition="0" alphatest="blend"/>
-	</screen>
-
-	<screen name="YellowT1Panel">
-		<widget name="key_yellow" position="595,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="YellowT2Panel">
-		<widget source="key_yellow" render="Label" position="595,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="BlueBPanel">
-		<ePixmap pixmap="buttons/big-blue.png" position="890,682" size="284,40 " zPosition="0" alphatest="blend"/>
-	</screen>
-
-	<screen name="BlueT1Panel">
-		<widget name="key_blue" position="890,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="BlueT2Panel">
-		<widget source="key_blue" render="Label" position="890,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
+	<screen name="ButtonPanel">
+		<ePixmap pixmap="buttons/big-red.png" objectTypes="key_red,Button,Label" position="15,682" size="284,40 " zPosition="0" alphatest="blend"/>
+		<widget source="key_red" render="Pixmap" pixmap="buttons/big-red.png" objectTypes="key_red,StaticText" position="15,682" size="284,40 " zPosition="0" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="key_red" objectTypes="key_red,Label,Button" position="15,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
+		<widget source="key_red" render="Label" objectTypes="key_red,Label,StaticText" position="15,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
+		<ePixmap pixmap="buttons/big-green.png" objectTypes="key_green,Button,Label" position="305,682" size="284,40" zPosition="0" alphatest="blend"/>
+		<widget source="key_green" render="Pixmap" pixmap="buttons/big-green.png" objectTypes="key_green,StaticText" position="305,682" size="284,40 " zPosition="0" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="key_green" objectTypes="key_green,Label,Button" position="305,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
+		<widget source="key_green" render="Label" objectTypes="key_green,StaticText" position="305,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
+		<ePixmap pixmap="buttons/big-yellow.png" objectTypes="key_yellow,Button,Label" position="595,682" size="284,40 " zPosition="0" alphatest="blend"/>
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/big-yellow.png" objectTypes="key_red,StaticText" position="595,682" size="284,40 " zPosition="0" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="key_yellow" objectTypes="key_yellow,Label,Button" position="595,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
+		<widget source="key_yellow" render="Label" objectTypes="key_yellow,StaticText" position="595,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
+		<ePixmap pixmap="buttons/big-blue.png" objectTypes="key_blue,Button,Label" position="890,682" size="284,40 " zPosition="0" alphatest="blend"/>
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/big-blue.png" objectTypes="key_red,StaticText" position="890,682" size="284,40 " zPosition="0" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="key_blue" objectTypes="key_blue,Label,Button" position="890,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
+		<widget source="key_blue" render="Label" objectTypes="key_blue,StaticText" position="890,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
 	</screen>
 
 	<screen name="MenuBPanel">
@@ -132,46 +120,6 @@
 
 	<screen name="TextBPanel">
 		<ePixmap pixmap="buttons/key_text.png" alphatest="on" position="1250,687" size="35,25"/>
-	</screen>
-
-	<screen name="Red1Panel">
-		<ePixmap pixmap="buttons/big-red.png" position="15,682" size="284,40" zPosition="0" alphatest="blend"/>
-		<widget name="key_red" position="15,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="Green1Panel">
-		<ePixmap pixmap="buttons/big-green.png" position="305,682" size="284,40 " zPosition="0" alphatest="blend"/>
-		<widget name="key_green" position="305,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="Yellow1Panel">
-		<ePixmap pixmap="buttons/big-yellow.png" position="595,682" size="284,40 " zPosition="0" alphatest="blend"/>
-		<widget name="key_yellow" position="595,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="Blue1Panel">
-		<ePixmap pixmap="buttons/big-blue.png" position="890,682" size="284,40 " zPosition="0" alphatest="blend"/>
-		<widget name="key_blue" position="890,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;22" halign="center"/>
-	</screen>
-
-	<screen name="Red2Panel">
-		<ePixmap pixmap="buttons/big-red.png" position="15,682" size="284,40 " zPosition="0" alphatest="blend"/>
-		<widget source="key_red" render="Label" position="15,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" font="Regular;22" halign="center" transparent="1" zPosition="1"/>
-	</screen>
-
-	<screen name="Green2Panel">
-		<ePixmap pixmap="buttons/big-green.png" position="305,682" size="284,40 " zPosition="0" alphatest="blend"/>
-		<widget source="key_green" render="Label" position="305,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" font="Regular;22" halign="center" transparent="1" zPosition="1"/>
-	</screen>
-
-	<screen name="Yellow2Panel">
-		<ePixmap pixmap="buttons/big-yellow.png" position="595,682" size="284,40 " zPosition="0" alphatest="blend"/>
-		<widget source="key_yellow" render="Label" position="595,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" font="Regular;22" halign="center" transparent="1" zPosition="1"/>
-	</screen>
-
-	<screen name="Blue2Panel">
-		<ePixmap pixmap="buttons/big-blue.png" position="890,682" size="284,40 " zPosition="0" alphatest="blend"/>
-		<widget source="key_blue" render="Label" position="890,688" size="284,26" foregroundColor="grey" backgroundColor="secondBG" font="Regular;22" halign="center" transparent="1" zPosition="1"/>
 	</screen>
 
 	<screen name="PlayerPanel">
