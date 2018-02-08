@@ -2804,19 +2804,7 @@
 	</screen>
 	<!-- ##LCD4linux## -->
 	<screen name="LCDdisplayConfig" position="fill" flags="wfNoBorder" title="">
-		<ePixmap pixmap="border/top2_bg.png" position="0,0" size="1280,75"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,675" size="1280,2"/>
-		<widget source="Title" foregroundColor="grey" render="Label" position="15,15" size="700,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;25" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;26" halign="right" position="1015,15" size="250,28" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;20" halign="right" position="1015,45" size="250,25" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<widget source="session.VideoPicture" render="Pig" position="0,77" size="482,273" backgroundColor="transparent" zPosition="1"/>
-		<widget source="session.CurrentService" render="Label" position="5,85" size="477,20" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" font="Regular;19" borderColor="black" valign="center" halign="center">
-			<convert type="ServiceName">Name</convert>
-		</widget>
+		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<widget name="config" position="600,80" size="665,504" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="introduction" render="Label" position="520,600" size="755,22" zPosition="2" font="Regular;22" foregroundColor="secondFG" halign="center"/>
