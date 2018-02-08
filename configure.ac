@@ -89,6 +89,7 @@ src/skins/720/Magic-HD/fonts/Makefile
 src/skins/720/Magic-HD/icons/Makefile
 src/skins/720/Magic-HD/infobar/Makefile
 src/skins/720/Magic-HD/meta/Makefile
+src/skins/720/Magic-HD/menu/Makefile
 src/skins/720/Magic-HD/window/Makefile
 
 src/skins/720/Magic-HD-Night/Makefile
