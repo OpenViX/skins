@@ -1695,8 +1695,8 @@
 	<!-- ## VCS Video ClipModes Switcher ## -->
 	<screen name="VcsSetupScreen" position="fill" flags="wfNoBorder" title="VCS Configuration">
 		<panel name="BasicTemplate"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" position="520,82" size="755,170" transparent="1" foregroundColor="grey"/>
-		<widget source="profiles" render="Listbox" position="520,260" size="755,400" scrollbarMode="showOnDemand" itemHeight="28" foregroundColor="grey" zPosition="1">
+		<widget name="config" scrollbarMode="showOnDemand" position="520,82" size="755,364" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="grey"/>
+		<widget source="profiles" render="Listbox" position="520,450" size="755,200" scrollbarMode="showOnDemand" itemHeight="28" foregroundColor="grey" zPosition="1">
 			<convert type="TemplatedMultiContent">
 				{"templates":
 					{"default": (45, [
@@ -1717,9 +1717,10 @@
 			</convert>
 		</widget>
 	</screen>
-	<screen name="VcsProfileSetup" position="center,center" size="550,500" title="%s" backgroundColor="transparent" flags="wfNoBorder">
-		<widget source="header" render="Label" position="0,0" zPosition="1" size="550,80" halign="center" valign="center" noWrap="1" font="Regular;28" foregroundColor="secondFG" backgroundColor="background" borderWidth="2" transparent="1"/>
-		<widget name="config" position="0,100" size="550,300" font="Regular;28" itemHeight="32" scrollbarMode="showOnDemand" zPosition="1" foregroundColor="white" backgroundColor="transparent" borderWidth="2"/>
+	<screen name="VcsProfileSetup" position="fill" flags="wfNoBorder" title="VCS Profile Setup">
+		<panel name="BasicTemplate"/>
+		<widget name="config" position="490,80" size="785,584" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+		<widget source="header" render="Label" position="5,379" size="477,264" zPosition="2" font="Regular;22" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="VcsMessageBox" position="center,50" size="720,100" zPosition="10" flags="wfNoBorder" backgroundColor="transparent" title=" ">
 		<widget source="message" render="Label" position="0,0" zPosition="1" size="720,100" halign="center" valign="center" noWrap="1" font="Regular;28" foregroundColor="secondFG" backgroundColor="transparent" borderWidth="2" transparent="1"/>
