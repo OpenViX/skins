@@ -41,15 +41,15 @@
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,135" size="1132,855" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
 		<ePixmap pixmap="buttons/key-exit.png" position="425,1027" size="53,38" zPosition="0" alphatest="blend"/>
-		<eLabel text="Cancel" position="515,1023" size="330,39" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
+		<eLabel text="Cancel" position="515,1023" size="330,39" font="buttons;33" foregroundColor="buttonred" halign="left"/>
 		<ePixmap pixmap="buttons/key_ok.png" position="22,1027" size="53,38" alphatest="on"/>
-		<eLabel text="Accept" position="80,1023" size="350,39" font="buttons;33" foregroundColor="buttongreen" halign="left" zPosition="1"/>
+		<eLabel text="Accept" position="80,1023" size="350,39" font="buttons;33" foregroundColor="buttongreen" halign="left"/>
 	</screen>
 
 	<!-- ## PluginHider ## -->
 	<screen name="PluginHiderSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget pixmaps="Magic-FHD/epg/epg_now.png,Magic-FHD/epg/epg_next.png,Magic-FHD/epg/epg_more.png" position="795,135" size="480,37" alphatest="on" zPosition="1" name="tabbar"/>
+		<widget pixmaps="Magic-FHD/epg/epg_now.png,Magic-FHD/epg/epg_next.png,Magic-FHD/epg/epg_more.png" position="795,135" size="480,37" alphatest="on" name="tabbar"/>
 		<widget source="plugins" render="Label" position="795,135" size="162,33" font="Regular;27" transparent="1" zPosition="2" halign="center"/>
 		<widget source="extensions" render="Label" position="954,135" size="162,33" font="Regular;27" transparent="1" zPosition="2" halign="center"/>
 		<widget source="eventinfo" render="Label" position="1111,135" size="162,33" font="Regular;27" transparent="1" zPosition="2" halign="center"/>
@@ -59,7 +59,7 @@
 	<!-- ## MenuSort ## -->
 	<screen name="SortableMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<eLabel text="Hide" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" zPosition="1" halign="left"/>
+		<eLabel text="Hide" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" halign="left"/>
 		<widget name="menu" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 
@@ -272,8 +272,8 @@
 	</screen>
 	<screen name="youtubeConfig" position="fill" flags="wfNoBorder" title="YouTube Configuration">
 		<panel name="BasicTemplate"/>
-		<eLabel text="Cancel" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<eLabel text="Save" position="425,1023" size="400,39" foregroundColor="buttongreen" zPosition="1" font="buttons;33" halign="left"/>
+		<eLabel text="Cancel" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<eLabel text="Save" position="425,1023" size="400,39" foregroundColor="buttongreen" font="buttons;33" halign="left"/>
 		<widget name="config" position="755,120" size="1157,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<!-- ## FanControl 2 ##-->
@@ -287,11 +287,11 @@
 		<panel name="InfoBPanel"/>
 		<widget source="Version" render="Label" position="200,800" size="800,50" font="Regular;36" foregroundColor="secondFG"/>
 		<widget name="config" position="780,123" size="1132,360" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
-		<widget source="TxtTemp" render="Label" position="780,622" size="300,37" font="Regular;25" halign="right" valign="center" foregroundColor="grey" zPosition="1"/>
-		<widget source="TxtZielRPM" render="Label" position="780,675" size="300,37" font="Regular;25" halign="right" valign="center" foregroundColor="grey" zPosition="1"/>
-		<widget source="TxtRPM" render="Label" position="780,727" size="300,37" font="Regular;25" halign="right" valign="center" foregroundColor="grey" zPosition="1"/>
-		<widget source="TxtVLT" render="Label" position="780,780" size="300,37" font="Regular;25" halign="right" valign="center" foregroundColor="grey" zPosition="1"/>
-		<widget source="TxtPWM" render="Label" position="780,847" size="300,37" font="Regular;25" halign="right" valign="center" foregroundColor="grey" zPosition="1"/>
+		<widget source="TxtTemp" render="Label" position="780,622" size="300,37" font="Regular;25" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtZielRPM" render="Label" position="780,675" size="300,37" font="Regular;25" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtRPM" render="Label" position="780,727" size="300,37" font="Regular;25" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtVLT" render="Label" position="780,780" size="300,37" font="Regular;25" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtPWM" render="Label" position="780,847" size="300,37" font="Regular;25" halign="right" valign="center" foregroundColor="grey"/>
 		<widget source="PixTemp" render="Progress" position="1110,637" size="562,7" borderWidth="1"/>
 		<widget source="PixZielRPM" render="Progress" position="1110,690" size="562,7" borderWidth="1"/>
 		<widget source="PixRPM" render="Progress" position="1110,742" size="562,7" borderWidth="1"/>
@@ -300,19 +300,19 @@
 		</screen>
 	<screen name="FanControl2Monitor" position="fill" flags="wfNoBorder" title="Fan Control 2 - Monitor">
 		<panel name="BasicTemplate"/>
-		<widget source="TxtTemp0" render="Label" position="832,270" size="375,37" zPosition="1" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
-		<widget source="TxtTemp1" render="Label" position="832,315" size="375,37" zPosition="1" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
-		<widget source="TxtTemp2" render="Label" position="832,360" size="375,37" zPosition="1" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
-		<widget source="TxtTemp3" render="Label" position="832,405" size="375,37" zPosition="1" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
-		<widget source="TxtTemp4" render="Label" position="832,450" size="375,37" zPosition="1" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
-		<widget source="TxtTemp5" render="Label" position="832,495" size="375,37" zPosition="1" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
-		<widget source="TxtTemp6" render="Label" position="832,540" size="375,37" zPosition="1" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
-		<widget source="TxtTemp7" render="Label" position="832,585" size="375,37" zPosition="1" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
-		<widget source="TxtHDD" render="Label" position="757,630" size="450,37" zPosition="1" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
-		<widget source="TxtFan" render="Label" position="832,675" size="375,37" zPosition="1" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
-		<widget name="TxtMinTemp" position="1230,225" size="75,37" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="grey"/>
-		<widget source="TxtFC2Temp" render="Label" position="1440,210" size="75,45" zPosition="1" font="Regular;37" halign="center" valign="center" foregroundColor="yellow"/>
-		<widget name="TxtMaxTemp" position="1650,225" size="75,37" zPosition="1" font="Regular;30" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtTemp0" render="Label" position="832,270" size="375,37" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtTemp1" render="Label" position="832,315" size="375,37" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtTemp2" render="Label" position="832,360" size="375,37" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtTemp3" render="Label" position="832,405" size="375,37" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtTemp4" render="Label" position="832,450" size="375,37" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtTemp5" render="Label" position="832,495" size="375,37" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtTemp6" render="Label" position="832,540" size="375,37" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtTemp7" render="Label" position="832,585" size="375,37" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtHDD" render="Label" position="757,630" size="450,37" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
+		<widget source="TxtFan" render="Label" position="832,675" size="375,37" font="Regular;33" halign="right" valign="center" foregroundColor="grey"/>
+		<widget name="TxtMinTemp" position="1230,225" size="75,37" font="Regular;30" halign="left" valign="center" foregroundColor="grey"/>
+		<widget source="TxtFC2Temp" render="Label" position="1440,210" size="75,45" font="Regular;37" halign="center" valign="center" foregroundColor="yellow"/>
+		<widget name="TxtMaxTemp" position="1650,225" size="75,37" font="Regular;30" halign="right" valign="center" foregroundColor="grey"/>
 		<widget source="ProTemp0" render="Progress" position="1237,285" size="487,7" borderWidth="1"/>
 		<widget source="ProTemp1" render="Progress" position="1237,330" size="487,7" borderWidth="1"/>
 		<widget source="ProTemp2" render="Progress" position="1237,375" size="487,7" borderWidth="1"/>
@@ -398,7 +398,7 @@
   <!-- ##Open-WEB-IF## -->
 	<screen name="OpenWebifConfig" position="fill" flags="wfNoBorder" title="OpenWebif Configuration">
 		<panel name="BasicTemplate"/>
-		<widget name="lab1" position="780,123" size="1132,90" font="RegularSmall;40" halign="center" valign="top" zPosition="1"/>
+		<widget name="lab1" position="780,123" size="1132,90" font="RegularSmall;40" halign="center" valign="top"/>
 		<widget name="config" position="780,225" size="1110,765" font="RegularSmall;34" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 
@@ -619,84 +619,84 @@
 	</screen>
 	<screen name="wikiConfig" position="fill" flags="wfNoBorder" title="Wikipedia Setup">
 		<panel name="BasicTemplate"/>
-		<widget name="cancel" position="22,1023" size="400,39" foregroundColor="buttonred" zPosition="1" font="buttons;33" halign="left"/>
-		<widget name="save" position="425,1023" size="400,39" foregroundColor="buttongreen" zPosition="1" font="buttons;33" halign="left"/>
+		<widget name="cancel" position="22,1023" size="400,39" foregroundColor="buttonred" font="buttons;33" halign="left"/>
+		<widget name="save" position="425,1023" size="400,39" foregroundColor="buttongreen" font="buttons;33" halign="left"/>
 		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showNever" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="plugin" position="7,530" size="715,475" alphatest="blend" zPosition="2"/>
 		</screen>
 	<screen name="wikiFullScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<eLabel text="WiKi-photo" foregroundColor="grey" position="22,10" size="1050,82" font="Regular;37" zPosition="1" valign="center"/>
+		<eLabel text="WiKi-photo" foregroundColor="grey" position="22,10" size="1050,82" font="Regular;37" valign="center"/>
 		<widget name="picture" position="735,220" size="1177,755" alphatest="blend"/>
 		<widget name="picindex" position="7,540" size="715,396" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<screen name="wikiArtikel_en" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="label4" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<widget name="label3" position="425,1023" size="400,39" font="buttons;33" foregroundColor="buttongreen" zPosition="1" halign="left"/>
-		<widget name="label2" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" zPosition="1" halign="left"/>
+		<widget name="label4" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<widget name="label3" position="425,1023" size="400,39" font="buttons;33" foregroundColor="buttongreen" halign="left"/>
+		<widget name="label2" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1335,1028" size="52,37"/>
-		<eLabel text="= Photo" position="1390,1020" size="200,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<eLabel text="= Photo" position="1390,1020" size="200,39" font="Regular;33" foregroundColor="grey" halign="left"/>
 		<widget name="textpage" position="785,120" size="1127,855" font="Regular;33" foregroundColor="grey"/>
-		<widget name="pic1" position="0,550" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic2" position="0,750" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic3" position="220,550" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic4" position="220,750" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic5" position="450,550" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic6" position="450,750" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic1" position="0,550" size="200,150" alphatest="blend"/>
+		<widget name="pic2" position="0,750" size="200,150" alphatest="blend"/>
+		<widget name="pic3" position="220,550" size="200,150" alphatest="blend"/>
+		<widget name="pic4" position="220,750" size="200,150" alphatest="blend"/>
+		<widget name="pic5" position="450,550" size="200,150" alphatest="blend"/>
+		<widget name="pic6" position="450,750" size="200,150" alphatest="blend"/>
 	</screen>
 	<screen name="wikiArtikel_es" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="label4" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<widget name="label3" position="425,1023" size="400,39" font="buttons;33" foregroundColor="buttongreen" zPosition="1" halign="left"/>
-		<widget name="label2" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" zPosition="1" halign="left"/>
+		<widget name="label4" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<widget name="label3" position="425,1023" size="400,39" font="buttons;33" foregroundColor="buttongreen" halign="left"/>
+		<widget name="label2" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1335,1028" size="52,37"/>
-		<eLabel text="= Photo" position="1390,1020" size="200,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<eLabel text="= Photo" position="1390,1020" size="200,39" font="Regular;33" foregroundColor="grey" halign="left"/>
 		<widget name="textpage" position="785,120" size="1127,855" font="Regular;33" foregroundColor="grey"/>
-		<widget name="pic1" position="0,550" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic2" position="0,750" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic3" position="220,550" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic4" position="220,750" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic5" position="450,550" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic6" position="450,750" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic1" position="0,550" size="200,150" alphatest="blend"/>
+		<widget name="pic2" position="0,750" size="200,150" alphatest="blend"/>
+		<widget name="pic3" position="220,550" size="200,150" alphatest="blend"/>
+		<widget name="pic4" position="220,750" size="200,150" alphatest="blend"/>
+		<widget name="pic5" position="450,550" size="200,150" alphatest="blend"/>
+		<widget name="pic6" position="450,750" size="200,150" alphatest="blend"/>
 	</screen>
 	<screen name="wikiArtikel" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="label4" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<widget name="label3" position="425,1023" size="400,39" font="buttons;33" foregroundColor="buttongreen" zPosition="1" halign="left"/>
-		<widget name="label2" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" zPosition="1" halign="left"/>
+		<widget name="label4" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<widget name="label3" position="425,1023" size="400,39" font="buttons;33" foregroundColor="buttongreen" halign="left"/>
+		<widget name="label2" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1335,1028" size="52,37"/>
-		<eLabel text="= Photo" position="1390,1020" size="200,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<eLabel text="= Photo" position="1390,1020" size="200,39" font="Regular;33" foregroundColor="grey" halign="left"/>
 		<widget name="textpage" position="785,120" size="1127,855" font="Regular;33" foregroundColor="grey"/>
-		<widget name="pic1" position="0,550" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic2" position="0,750" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic3" position="220,550" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic4" position="220,750" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic5" position="450,550" size="200,150" alphatest="blend" zPosition="1"/>
-		<widget name="pic6" position="450,750" size="200,150" alphatest="blend" zPosition="1"/>
+		<widget name="pic1" position="0,550" size="200,150" alphatest="blend"/>
+		<widget name="pic2" position="0,750" size="200,150" alphatest="blend"/>
+		<widget name="pic3" position="220,550" size="200,150" alphatest="blend"/>
+		<widget name="pic4" position="220,750" size="200,150" alphatest="blend"/>
+		<widget name="pic5" position="450,550" size="200,150" alphatest="blend"/>
+		<widget name="pic6" position="450,750" size="200,150" alphatest="blend"/>
 	</screen>
 	<screen name="wikiFav_en" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="label2" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<widget name="label" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" zPosition="1" halign="left"/>
+		<widget name="label2" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<widget name="label" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" halign="left"/>
 		<widget name="favmenu" position="800,120" size="500,855" itemHeight="26" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="wikiFav_es" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="label2" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<widget name="label" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" zPosition="1" halign="left"/>
+		<widget name="label2" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<widget name="label" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" halign="left"/>
 		<widget name="favmenu" position="800,120" size="500,855" itemHeight="26" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="wikiFav" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="label2" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<widget name="label" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" zPosition="1" halign="left"/>
+		<widget name="label2" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<widget name="label" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" halign="left"/>
 		<widget name="favmenu" position="800,120" size="500,855" itemHeight="26" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="DownloadUpdate" position="fill" flags="wfNoBorder">
@@ -709,8 +709,8 @@
 	<!-- ## EPG Translator# -->
 	<screen name="translatorMain" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="label2" position="830,1023" size="400,39" foregroundColor="buttonyellow" zPosition="1" font="buttons;33" halign="left"/>
-		<widget name="label" position="1235,1023" size="400,39" foregroundColor="buttonblue" zPosition="1" font="buttons;33" halign="left"/>
+		<widget name="label2" position="830,1023" size="400,39" foregroundColor="buttonyellow" font="buttons;33" halign="left"/>
+		<widget name="label" position="1235,1023" size="400,39" foregroundColor="buttonblue" font="buttons;33" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<widget name="text" position="735,120" size="1177,420" font="Regular;33" foregroundColor="grey"/>
@@ -718,8 +718,8 @@
 	</screen>
 	<screen name="translatorConfig" position="fill" flags="wfNoBorder" title="PG Translator Setup">
 		<panel name="BasicTemplate"/>
-		<eLabel text="Cancel" position="22,1023" size="400,39" foregroundColor="buttonred" zPosition="1" font="buttons;33" halign="left"/>
-		<eLabel text="Save" position="425,1023" size="400,39" foregroundColor="buttongreen" zPosition="1" font="button;33" halign="left"/>
+		<eLabel text="Cancel" position="22,1023" size="400,39" foregroundColor="buttonred" font="buttons;33" halign="left"/>
+		<eLabel text="Save" position="425,1023" size="400,39" foregroundColor="buttongreen" font="button;33" halign="left"/>
 		<widget name="config" position="793,120" size="1050,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="infoTranslator" position="fill" flags="wfNoBorder" title="PG Translator Info">
@@ -728,14 +728,14 @@
 	</screen>
 	<screen name="searchYouTube" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="label2" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" zPosition="1" halign="left"/>
-		<widget name="label" position="1235,1023" size="400,39" font="buttons;33" foregroundColor="buttonblue" zPosition="1" halign="left"/>
+		<widget name="label2" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow" halign="left"/>
+		<widget name="label" position="1235,1023" size="400,39" font="buttons;33" foregroundColor="buttonblue" halign="left"/>
 		<panel name="MenuBPanel"/>
 		<widget name="list" position="1020,120" size="755,500" scrollbarMode="showOnDemand" foregroundColor="grey"/>
-		<widget name="poster1" position="780,120" size="215,120" alphatest="blend" zPosition="1"/>
-		<widget name="poster2" position="780,245" size="215,120" alphatest="blend" zPosition="1"/>
-		<widget name="poster3" position="780,370" size="215,120" alphatest="blend" zPosition="1"/>
-		<widget name="poster4" position="780,500" size="215,120" alphatest="blend" zPosition="1"/>
+		<widget name="poster1" position="780,120" size="215,120" alphatest="blend"/>
+		<widget name="poster2" position="780,245" size="215,120" alphatest="blend"/>
+		<widget name="poster3" position="780,370" size="215,120" alphatest="blend"/>
+		<widget name="poster4" position="780,500" size="215,120" alphatest="blend"/>
 	</screen>
 
 	<!-- ## BlueRay ## -->
@@ -804,15 +804,15 @@
 	<!-- ## MovieBrowser ## -->
 	<screen name="movieBrowserConfig" position="fill" flags="wfNoBorder" title="Movie Browser Setup">
 		<panel name="BasicTemplate"/>
-		<widget name="cancel" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<widget name="save" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" zPosition="1" halign="left"/>
+		<widget name="cancel" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<widget name="save" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" halign="left"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="plugin" position="7,568" size="715,396" zPosition="2" alphatest="blend"/>
 	</screen>
 	<screen name="FolderSelection" position="fill" flags="wfNoBorder" title="Movie Browser Setup">
 		<panel name="BasicTemplate"/>
-		<widget name="cancel" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<widget name="save" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" zPosition="1" halign="left"/>
+		<widget name="cancel" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<widget name="save" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" halign="left"/>
 		<widget name="folderlist" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="plugin" position="7,568" size="715,396" zPosition="2" alphatest="blend"/>
 	</screen>
@@ -945,12 +945,12 @@
 	<screen name="TVTippsView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic1"/>
 		<panel name="TVPanel"/>
-	<widget name="tvinfo1" position="1095,75" size="135,90" alphatest="blend" zPosition="1"/>
-	<widget name="tvinfo2" position="1095,165" size="135,90" alphatest="blend" zPosition="1"/>
-	<widget name="tvinfo3" position="1095,255" size="135,90" alphatest="blend" zPosition="1"/>
-	<widget name="tvinfo4" position="1095,345" size="135,90" alphatest="blend" zPosition="1"/>
-	<widget name="tvinfo5" position="1095,435" size="135,90" alphatest="blend" zPosition="1"/>
-	<widget name="tvinfo6" position="1095,525" size="135,90" alphatest="blend" zPosition="1"/>
+	<widget name="tvinfo1" position="1095,75" size="135,90" alphatest="blend"/>
+	<widget name="tvinfo2" position="1095,165" size="135,90" alphatest="blend"/>
+	<widget name="tvinfo3" position="1095,255" size="135,90" alphatest="blend"/>
+	<widget name="tvinfo4" position="1095,345" size="135,90" alphatest="blend"/>
+	<widget name="tvinfo5" position="1095,435" size="135,90" alphatest="blend"/>
+	<widget name="tvinfo6" position="1095,525" size="135,90" alphatest="blend"/>
 	</screen>
 	<screen name="tvTipps" position="7,540" size="1900,470" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="picture" position="20,0" size="387,270" alphatest="blend"/>
@@ -994,7 +994,7 @@
 		<eLabel text="Hide" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1" halign="left"/>
 		<widget name="previewtext" position="735,120" size="1177,695" font="Regular;33" foregroundColor="grey"/>
 		<widget name="menu" position="735,820" size="1177,185" font="RegularSmall;33" foregroundColor="grey"/>
-		<widget name="picture" position="7,120" size="600,400" alphatest="blend" zPosition="1"/>
+		<widget name="picture" position="7,120" size="600,400" alphatest="blend"/>
 		<widget name="topictext" position="7,525" size="600,45" font="Regular;33" foregroundColor="grey"/>
 		<widget name="picturetext" position="7,575" size="600,90" font="Regular;33" foregroundColor="grey"/>
 	</screen>
@@ -1193,9 +1193,9 @@
 	<screen name="SHOUTcastWidget" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
 		<panel name="MenuBPanel"/>
-		<widget name="headertext" position="22,22" size="1050,82" font="Regular;33" zPosition="1" valign="center"/>
+		<widget name="headertext" position="22,22" size="1050,82" font="Regular;33" valign="center"/>
 		<widget name="statustext" position="7,123" size="990,855" font="Regular;25" valign="center" halign="center"/>
-		<widget name="statustext" position="22,892" size="975,112" font="Regular;25" zPosition="1" valign="center" halign="center"/>
+		<widget name="statustext" position="22,892" size="975,112" font="Regular;25" valign="center" halign="center"/>
 		<widget name="list" position="7,123" size="990,770" font="Regular;33" zPosition="2" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 		<widget name="cover" position="1020,273" size="850,720" alphatest="blend"/>
 		<widget name="titel" position="1020,123" size="874,75" font="Regular;30" foregroundColor="secondFG" halign="center"/>
@@ -1308,7 +1308,7 @@
 		<widget name="lab1" position="780,120" size="1125,675" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="lab2" position="675,930" size="375,45" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 		<widget name="labstop" position="1050,930" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
-		<widget name="labrun" position="1050,930" size="375,45" font="Regular;30" zPosition="1" valign="center" halign="center" backgroundColor="green"/>
+		<widget name="labrun" position="1050,930" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 
 	<!-- ## VideoEnhancement## -->
@@ -1409,7 +1409,7 @@
 	</screen>
 
 	<!-- ## RecInfoBar ## -->
-	<screen name="RecInfoBar" flags="wfNoBorder" position="0,0" size="1920,50" backgroundColor="transpBlack" zPosition="1">
+	<screen name="RecInfoBar" flags="wfNoBorder" position="0,0" size="1920,50" backgroundColor="transpBlack">
 		<widget name="chTuner" position="0,2" size="270,27" font="Regular;27" halign="left" transparent="1" noWrap="1" foregroundColor="blue" backgroundColor="transparent"/>
 		<widget name="chProv" position="280,2" size="375,27" font="Regular;27" halign="left" transparent="1" noWrap="1" foregroundColor="yellow" backgroundColor="transparent"/>
 		<widget name="chBouq" position="675,2" size="450,27" font="Regular;27" halign="left" transparent="1" noWrap="1" foregroundColor="yellow" backgroundColor="transparent"/>
@@ -1427,7 +1427,7 @@
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<widget name="label" position="22,577" size="723,420" zPosition="2" transparent="1" font="FileList;30"/>
-		<widget name="thn" position="7,540" size="715,396" zPosition="1" alphatest="blend"/>
+		<widget name="thn" position="7,540" size="715,396" alphatest="blend"/>
 		<widget name="filelist" position="735,120" size="1177,880" font="FileList;36" itemHeight="55" scrollbarMode="showOnDemand" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="Pic_Exif" position="fill" flags="wfNoBorder">
@@ -1462,10 +1462,10 @@
 	<screen name="AtmoLightConfigScreen" position="fill" title="AtmoLight configuration">
 		<panel name="BasicTemplate"/>
 		<panel name="InfoBPanel"/>
-		<widget name="key_r" position="22,1023" size="400,39" foregroundColor="buttonred" zPosition="1" font="buttons;33" halign="left"/>
-		<widget name="key_g" position="425,1023" size="400,39" foregroundColor="buttongreen" zPosition="1" font="buttons;33" halign="left"/>
-		<widget name="key_y" position="830,1023" size="400,39" foregroundColor="buttonyellow" zPosition="1" font="buttons;33" halign="left"/>
-		<widget name="key_b" position="1235,1023" size="400,39" foregroundColor="buttonblue" zPosition="1" font="buttons;33" halign="left"/>
+		<widget name="key_r" position="22,1023" size="400,39" foregroundColor="buttonred" font="buttons;33" halign="left"/>
+		<widget name="key_g" position="425,1023" size="400,39" foregroundColor="buttongreen" font="buttons;33" halign="left"/>
+		<widget name="key_y" position="830,1023" size="400,39" foregroundColor="buttonyellow" font="buttons;33" halign="left"/>
+		<widget name="key_b" position="1235,1023" size="400,39" foregroundColor="buttonblue" font="buttons;33" halign="left"/>
 		<widget name="config" position="825,123" size="1050,810" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="label_layout" position="300,562" size="240,37" font="RegularSmall;33" halign="center" foregroundColor="grey"/>
 		<widget name="label_tl" position="285,637" size="30,30" font="Regular;22" valign="center" halign="center" transparent="1"/>
@@ -1571,7 +1571,7 @@
 	</screen>
 	<screen name="DLNAImageViewer" position="fill" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="0" size="1920,1080" backgroundColor="secondBG"/>
-		<widget name="image" position="fill" zPosition="1" alphatest="on"/>
+		<widget name="image" position="fill" alphatest="on"/>
 		<eLabel position="37,22" size="45,37" zPosition="2" backgroundColor="secondBG" transparent="1"/>
 		<widget name="status" position="40,25" size="31,31" zPosition="3" pixmap="icons/epgclock.png" alphatest="on"/>
 		<widget name="icon" position="45,30" size="24,24" zPosition="3" pixmap="icons/ico_mp_play.png" alphatest="on"/>
@@ -1704,7 +1704,7 @@
 	</screen>
 	<screen name="PluginDetails" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<eLabel text="Status:" position="435,945" size="210,36" font="RegularSmall;33" foregroundColor="grey" halign="right" zPosition="1"/>
+		<eLabel text="Status:" position="435,945" size="210,36" font="RegularSmall;33" foregroundColor="grey" halign="right"/>
 		<widget name="statuspic" position="660,945" size="72,72" alphatest="on"/>
 		<widget source="author" render="Label" position="780,125" size="1132,45" font="RegularSmall;39" zPosition="10" halign="center" foregroundColor="grey"/>
 		<widget name="screenshot" position="780,180" size="1132,825" alphatest="on"/>
@@ -1762,8 +1762,8 @@
 	<!-- ## Channel selection navigator ##-->
 	<screen name="CSNOpenSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="cancel" position="22,1023" size="426,39" font="buttons;33" foregroundColor="buttonred" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
-		<widget name="ok" position="425,1023" size="400,39" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1" zPosition="1" halign="left"/>
+		<widget name="cancel" position="22,1023" size="426,39" font="buttons;33" foregroundColor="buttonred" backgroundColor="secondBG" transparent="1" halign="left"/>
+		<widget name="ok" position="425,1023" size="400,39" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1" halign="left"/>
 		<widget name="config" position="755,120" size="1147,855" font="Regular;33" itemHeight="45" transparent="1" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="help" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
@@ -1852,7 +1852,7 @@
 			</convert>
 		</widget>
 		<widget name="thumbnail" position="0,0" size="150,108"/> # Thumbnail size in list
-		<eLabel text="'OK'= Play trailer" position="652,1030" size="330,39" font="RegularSmall;33" halign="left" zPosition="1"/>
+		<eLabel text="'OK'= Play trailer" position="652,1030" size="330,39" font="RegularSmall;33" halign="left"/>
 	</screen>
 	<screen name="MovielistProfileList" position="fill" flags="wfNoBorder" title="Select Profile">
 		<panel name="BasicTemplate"/>
@@ -1862,7 +1862,7 @@
 	<!-- ## Het weer ## -->
 	<screen name="startScreen" position="fill" flags="wfNoBorder" title="Weer info">
 		<panel name="BasicTemplate"/>
-		<widget name="titles" position="22,15" size="1500,78" font="RegularSmall;37" foregroundColor="grey" valign="bottom" zPosition="1"/>
+		<widget name="titles" position="22,15" size="1500,78" font="RegularSmall;37" foregroundColor="grey" valign="bottom"/>
 		<widget name="list" position="780,123" size="1132,874" font="Regular;35" itemHeight="50" foregroundColor="grey"/>
 		<widget name="mess1" position="5,530" size="150,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
@@ -1877,7 +1877,7 @@
 	</screen>
 	<screen name="localcityscreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="favor" position="22,15" size="1500,78" font="RegularSmall;37" foregroundColor="grey" valign="bottom" zPosition="1"/>
+		<widget name="favor" position="22,15" size="1500,78" font="RegularSmall;37" foregroundColor="grey" valign="bottom"/>
 		<widget name="plaatsn" position="735,120" size="1177,50" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 		<widget name="list" position="755,175" size="1157,855" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
 	</screen>
@@ -1885,8 +1885,8 @@
 	<!-- ## ScreenGrabber ## -->
 	<screen name="sgrabberFilesScreen" position="fill" flags="wfNoBorder" title="Screenshot Files">
 		<panel name="BasicTemplate"/>
-		<widget name="ButtonYellowtext" position="830,1023" size="400,45" font="buttons;33" foregroundColor="buttonyellow" zPosition="1" halign="left"/>
-		<widget name="ButtonBluetext" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" zPosition="1" halign="left"/>
+		<widget name="ButtonYellowtext" position="830,1023" size="400,45" font="buttons;33" foregroundColor="buttonyellow" halign="left"/>
+		<widget name="ButtonBluetext" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" halign="left"/>
 		<widget name="menu" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="50" position="780,123" size="1132,874" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="info" position="7,622" zPosition="4" size="750,300" font="Regular;33" foregroundColor="secondFG" transparent="1" halign="center" valign="center"/>
 	</screen>
@@ -1904,9 +1904,9 @@
 	<!-- ## ShootYourScreen ## -->
 	<screen name="ShootYourScreenConfig" position="fill" flags="wfNoBorder" title="ShootYourScreen">
 		<panel name="BasicTemplate"/>
-		<widget name="buttonred" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<widget name="buttongreen" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" zPosition="1" halign="left"/>
-		<widget name="buttonyellow" position="830,1023" size="400,45" font="buttons;33" foregroundColor="buttonyellow" zPosition="1" halign="left"/>
+		<widget name="buttonred" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<widget name="buttongreen" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" halign="left"/>
+		<widget name="buttonyellow" position="830,1023" size="400,45" font="buttons;33" foregroundColor="buttonyellow" halign="left"/>
 		<widget name="config" position="755,120" size="1157,882" font="Regular;33" itemHeight="45"	scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 
@@ -2099,8 +2099,8 @@
 	</screen>
 	<screen name="MyMessageBox" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<eLabel text="Cancel" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<eLabel text="OK" position="425,1023" size="400,39" font="buttons;33" foregroundColor="buttongreen" zPosition="1" halign="left"/>
+		<eLabel text="Cancel" position="22,1023" size="400,39" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<eLabel text="OK" position="425,1023" size="400,39" font="buttons;33" foregroundColor="buttongreen" halign="left"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="760,150" size="81,81" alphatest="on"/>
@@ -2431,7 +2431,7 @@
 		<widget name="input" position="22,250" size="900,75" font="Regular;34"/>
 		<widget name="infotext" position="22,345" size="900,90" font="Regular;30"/>
 		<widget name="list" position="975,125" size="920,400"/>
-		<widget name="preview" position="22,570" size="915,450" zPosition="1" alphatest="blend"/>
+		<widget name="preview" position="22,570" size="915,450" alphatest="blend"/>
 		<widget name="previewo" position="975,570" size="900,450" zPosition="2" alphatest="blend"/>
 	</screen>
 	
@@ -2459,9 +2459,9 @@
 		<eLabel text="Save" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1" halign="left"/>
 		<eLabel text="Download Picons" position="830,1023" size="400,45" font="buttons;33" foregroundColor="buttonyellow" backgroundColor="secondBG" transparent="1" halign="left"/>
 		<widget name="config" position="755,120" size="1157,500" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<widget name="backgroundImage" position="7,550" size="500,300" zPosition="1" alphatest="blend" transparent="1" backgroundColor="transparent"/>
-		<widget name="previewImage" position="510,550" size="450,270" zPosition="1" alphatest="blend" transparent="1" backgroundColor="transparent"/>
-		<widget name="foregroundImage" position="970,550" size="500,300" zPosition="1" alphatest="blend" transparent="1" backgroundColor="transparent"/>
+		<widget name="backgroundImage" position="7,550" size="500,300" alphatest="blend" transparent="1" backgroundColor="transparent"/>
+		<widget name="previewImage" position="510,550" size="450,270" alphatest="blend" transparent="1" backgroundColor="transparent"/>
+		<widget name="foregroundImage" position="970,550" size="500,300" alphatest="blend" transparent="1" backgroundColor="transparent"/>
 	</screen>
 	<screen name="JobProgressView" position="fill" flags="wfNoBorder" title="Download picons">
 		<panel name="BasicTemplate"/>
@@ -2608,7 +2608,7 @@
 		<widget render="Label" source="weekday4_temp" position="1070,814" size="284,158" halign="center" valign="bottom" font="Regular;33" foregroundColor="grey" transparent="1"/>
 		<widget render="Label" source="weekday5" position="1396,645" size="284,105" halign="center" valign="center" font="Regular;33" foregroundColor="grey" transparent="1"/>
 		<widget name="weekday5_icon" position="1463,750" size="149,119" alphatest="blend"/>
-		<widget render="Label" source="weekday5_temp" position="1396,814" zPosition="1" size="284,158" halign="center" valign="bottom" font="Regular;33" foregroundColor="grey" transparent="1"/>
+		<widget render="Label" source="weekday5_temp" position="1396,814" size="284,158" halign="center" valign="bottom" font="Regular;33" foregroundColor="grey" transparent="1"/>
 		<widget render="Label" source="statustext" position="0,0" size="1800,900" font="Regular;54" halign="center" valign="center" foregroundColor="grey" transparent="1"/>
 		</screen>
 

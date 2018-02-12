@@ -176,27 +176,27 @@
 		<panel name="InfoBarPanel"/>
 		<ePixmap pixmap="infobar/hd.png" position="0,754" size="1920,330" zPosition="-1" alphatest="off"/>
 	</screen>
-	<screen name="SecondInfoBar" position="fill" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="1">
+	<screen name="SecondInfoBar" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="InfoBarPanel"/>
 		<eLabel backgroundColor="black" position="0,0" size="1920,2" zPosition="5"/>
-		<widget source="session.CurrentService" render="Label" position="7,7" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack" zPosition="1" halign="left">
+		<widget source="session.CurrentService" render="Label" position="7,7" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack" halign="left">
 			<convert type="PliExtraInfo">ServiceRef</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="7,38" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack" zPosition="1" halign="left">
+		<widget source="session.CurrentService" render="Label" position="7,38" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack" halign="left">
 			<convert type="PliExtraInfo">PIDInfo</convert>
 		</widget>
-		<eLabel text="VideoCodec:  " position="2,70" size="160,30" font="Regular;27" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack"/>
-		<widget source="session.CurrentService" render="Label" position="165,70" size="225,30" font="Regular;27" transparent="1" zPosition="1" backgroundColor="transpBlack" halign="left">
+		<eLabel text="VideoCodec:  " position="2,70" size="160,30" font="Regular;27" halign="right" transparent="1" backgroundColor="transpBlack"/>
+		<widget source="session.CurrentService" render="Label" position="165,70" size="225,30" font="Regular;27" transparent="1" backgroundColor="transpBlack" halign="left">
 			<convert type="PliExtraInfo">VideoCodec</convert>
 		</widget>
-		<eLabel text="Resolution:  " position="325,70" size="160,30" font="Regular;27" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack"/>
-		<widget source="session.CurrentService" render="Label" position="480,70" size="952,30" font="Regular;27" transparent="1" zPosition="1" backgroundColor="transpBlack" halign="left">
+		<eLabel text="Resolution:  " position="325,70" size="160,30" font="Regular;27" halign="right" transparent="1" backgroundColor="transpBlack"/>
+		<widget source="session.CurrentService" render="Label" position="480,70" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack" halign="left">
 			<convert type="PliExtraInfo">ResolutionString</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="7,103" size="952,27" font="Regular;25" transparent="1" zPosition="1" backgroundColor="transpBlack" halign="left">
+		<widget source="session.CurrentService" render="Label" position="7,103" size="952,27" font="Regular;25" transparent="1" backgroundColor="transpBlack" halign="left">
 			<convert type="PliExtraInfo">CryptoInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="7,130" size="954,57" font="Regular;22" transparent="1" zPosition="1" backgroundColor="transpBlack" halign="left">
+		<widget source="session.CurrentService" render="Label" position="7,130" size="954,57" font="Regular;22" transparent="1" backgroundColor="transpBlack" halign="left">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
 		<eLabel name="snr" text="	Quality:" position="1012,5" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1"/>
@@ -213,38 +213,38 @@
 		<widget source="session.FrontendStatus" render="Label" position="1761,32" size="120,22" font="Regular;20" backgroundColor="transpBlack" transparent="1" halign="left">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<eLabel name="lock" text="Lock:" position="1012,75" size="120,22" font="Regular;21" backgroundColor="transpBlack" halign="right" transparent="1" zPosition="1"/>
+		<eLabel name="lock" text="Lock:" position="1012,75" size="120,22" font="Regular;21" backgroundColor="transpBlack" halign="right" transparent="1"/>
 		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_on.png" position="1140,70" size="38,36" backgroundColor="transpBlack" transparent="1" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_off.png" position="1140,70" size="38,36" backgroundColor="transpBlack" transparent="1" zPosition="1" alphatest="blend">
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_off.png" position="1140,70" size="38,36" backgroundColor="transpBlack" transparent="1" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1200,75" size="700,33" font="Regular;27" transparent="1" zPosition="1" backgroundColor="transpBlack" halign="left">
+		<widget source="session.CurrentService" render="Label" position="1200,75" size="700,33" font="Regular;27" transparent="1" backgroundColor="transpBlack" halign="left">
 			<convert type="PliExtraInfo">TransponderInfo</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="7,190" size="937,45" font="Regular;33" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="selectedFG" noWrap="1" halign="left">
+		<widget source="session.Event_Now" render="Label" position="7,190" size="937,45" font="Regular;33" backgroundColor="secondBG" transparent="1" foregroundColor="selectedFG" noWrap="1" halign="left">
 			<convert type="EventName">NameNow</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="157,230" size="787,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1" zPosition="1">
+		<widget source="session.Event_Now" render="Label" position="157,230" size="787,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="7,230" size="150,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1" zPosition="1">
+		<widget source="session.Event_Now" render="Label" position="7,230" size="150,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget name="epg_description" position="7,270" size="937,562" font="Regular;30" backgroundColor="secondBG" zPosition="1" transparent="1"/>
-		<widget source="session.Event_Next" render="Label" position="975,190" size="930,45" font="Regular;33" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="selectedFG" noWrap="1" halign="left">
+		<widget name="epg_description" position="7,270" size="937,562" font="Regular;30" backgroundColor="secondBG" transparent="1"/>
+		<widget source="session.Event_Next" render="Label" position="975,190" size="930,45" font="Regular;33" backgroundColor="secondBG" transparent="1" foregroundColor="selectedFG" noWrap="1" halign="left">
 			<convert type="EventName">NameNext</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="1125,230" size="787,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1" zPosition="1">
+		<widget source="session.Event_Next" render="Label" position="1125,230" size="787,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="975,230" size="150,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1" zPosition="1">
+		<widget source="session.Event_Next" render="Label" position="975,230" size="150,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="975,270" size="930,562" font="Regular;30" backgroundColor="secondBG" zPosition="1" transparent="1">
+		<widget source="session.Event_Next" render="Label" position="975,270" size="930,562" font="Regular;30" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_sub_on.png" position="975,125" size="54,36" zPosition="2" alphatest="on">
@@ -416,12 +416,12 @@
 		</widget>
 	</screen>
 	<screen name="SlimChannelSelection" flags="wfNoBorder" position="0,0" size="885,1080" backgroundColor="transparent">
-		<eLabel position="0,0" size="885,1080" backgroundColor="transpBlack" zPosition="-50"/>
-		<widget name="key_red" foregroundColor="buttonred" backgroundColor="secondBG" font="buttons;30" halign="left" position="55,965" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_green" foregroundColor="buttongreen" backgroundColor="secondBG" font="buttons;30" halign="left" position="55,1015" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_yellow" foregroundColor="buttonyellow" backgroundColor="secondBG" font="buttons;30" halign="left" position="490,965" size="330,39" transparent="1" zPosition="1"/>
-		<widget name="key_blue" foregroundColor="buttonblue" backgroundColor="secondBG" font="buttons;30" halign="left" position="490,1015" size="330,39" transparent="1" zPosition="1"/>
-		<widget source="Title" foregroundColor="blue" render="Label" position="2,3" size="825,45" transparent="1" zPosition="1" font="Regular;37" halign="center" valign="center"/>
+		<eLabel position="0,0" size="885,1080" backgroundColor="transpBlack" zPosition="-1"/>
+		<widget name="key_red" foregroundColor="buttonred" backgroundColor="secondBG" font="buttons;30" halign="left" position="55,965" size="330,39" transparent="1"/>
+		<widget name="key_green" foregroundColor="buttongreen" backgroundColor="secondBG" font="buttons;30" halign="left" position="55,1015" size="330,39" transparent="1"/>
+		<widget name="key_yellow" foregroundColor="buttonyellow" backgroundColor="secondBG" font="buttons;30" halign="left" position="490,965" size="330,39" transparent="1"/>
+		<widget name="key_blue" foregroundColor="buttonblue" backgroundColor="secondBG" font="buttons;30" halign="left" position="490,1015" size="330,39" transparent="1"/>
+		<widget source="Title" foregroundColor="blue" render="Label" position="2,3" size="825,45" transparent="1" font="Regular;37" halign="center" valign="center"/>
 		<widget name="list" position="22,51" size="855,720" itemHeight="45" serviceNumberFont="Regular;33" serviceInfoFont="Crs;33" serviceNameFont="Regular;33" serviceItemHeight="35"
 				colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" transparent="1" foregroundColorServiceNotAvail="#656565" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceEvent" render="Label" position="22,775" zPosition="2" size="200,37" font="Regular;33" backgroundColor="black" halign="right" noWrap="1" foregroundColor="yellow" transparent="1">
@@ -449,7 +449,7 @@
 		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"/>
 		<widget name="number" position="755,123" size="1157,810" font="Regular;54" zPosition="5" valign="center" halign="center"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="1"/>
-		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1" zPosition="1">
+		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="7,610" size="750,40" font="Regular;33" foregroundColor="yellow" halign="center">
@@ -478,7 +478,7 @@
 		<widget name="more_button" pixmap="epg/epg_off.png" position="1440,172" zPosition="2" size="270,60" alphatest="blend"/>
 		<widget name="more_button_sel" pixmap="epg/epg_next_on.png" position="1440,172" zPosition="3" size="270,60" alphatest="blend"/>
 		<widget name="more_text" position="1440,172" size="270,60" backgroundColor="background" zPosition="4" transparent="1" text="MORE" font="Regular;30" valign="center" halign="center"/>
-		<widget source="Service" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1" zPosition="1">
+		<widget source="Service" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="top">
@@ -500,7 +500,7 @@
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<widget name="FullDescription" position="780,123" size="1132,825" font="Regular;33" halign="center" foregroundColor="grey"/>
-		<widget source="session.CurrentService" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1" zPosition="1">
+		<widget source="session.CurrentService" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="Service" render="Label" position="7,530" size="715,50" font="Regular;36" foregroundColor="selectedFG" halign="center">
@@ -581,27 +581,27 @@
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="0,780" size="1920,300" backgroundColor="transparent" transparent="0" flags="wfNoBorder">
 		<ePixmap alphatest="off" pixmap="infobar/hd.png" position="0,-10" size="1920,330" zPosition="-1"/>
-		<widget source="global.CurrentTime" render="Label" position="1650,0" size="225,45" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="right">
+		<widget source="global.CurrentTime" render="Label" position="1650,0" size="225,45" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" transparent="1" font="Regular;36" valign="center" halign="right">
 		<convert type="ClockToText">Format:%-H:%M</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1425,32" size="450,45" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="right">		<convert type="ClockToText">Date</convert>
+		<widget source="global.CurrentTime" render="Label" position="1425,32" size="450,45" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" transparent="1" font="Regular;24" valign="center" halign="right">		<convert type="ClockToText">Date</convert>
 		</widget>
-		<widget name="key_red" position="55,250" size="400,45" foregroundColor="buttonred" backgroundColor="secondBG" transparent="1" zPosition="1" font="buttons;33" halign="left"/>
-		<widget name="key_green" position="490,250" size="400,45" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1" zPosition="1" font="buttons;33" halign="left"/>
-		<widget name="key_yellow" position="930,250" size="400,45" foregroundColor="buttonyellow" backgroundColor="secondBG" transparent="1" zPosition="1" font="buttons;33" halign="left"/>
-		<widget name="key_blue" position="1370,250" size="400,45" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1" zPosition="1" font="buttons;33" halign="left"/>
+		<widget name="key_red" position="55,250" size="400,45" foregroundColor="buttonred" backgroundColor="secondBG" transparent="1" font="buttons;33" halign="left"/>
+		<widget name="key_green" position="490,250" size="400,45" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1" font="buttons;33" halign="left"/>
+		<widget name="key_yellow" position="930,250" size="400,45" foregroundColor="buttonyellow" backgroundColor="secondBG" transparent="1" font="buttons;33" halign="left"/>
+		<widget name="key_blue" position="1370,250" size="400,45" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1" font="buttons;33" halign="left"/>
 		<ePixmap pixmap="buttons/key_menu.png" position="1777,250" size="52,37" alphatest="on"/>
 		<ePixmap pixmap="buttons/key_info.png" position="1830,250" size="52,37" alphatest="on"/>
-		<widget source="Title" render="Label" position="30,15" size="1275,50" font="Regular;36" transparent="1" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" zPosition="1"/>
+		<widget source="Title" render="Label" position="30,15" size="1275,50" font="Regular;36" transparent="1" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2"/>
 		<widget name="lab1" position="0,75" size="1920,172" font="Regular;33" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="timeline_text" position="0,75" size="1920,45" itemHeight="45" TimelineFont="Regular;30" backgroundColor="black" foregroundColor="orange" transparent="1" zPosition="0"/>
-		<widget name="list" position="0,120" size="1920,127" ServiceFontGraphical="Regular;30" EntryFontGraphical="Regular;30" EventNamePadding="10" backgroundColor="black" scrollbarMode="showNever" zPosition="1" transparent="0"/>
+		<widget name="list" position="0,120" size="1920,127" ServiceFontGraphical="Regular;30" EntryFontGraphical="Regular;30" EventNamePadding="10" backgroundColor="black" scrollbarMode="showNever" transparent="0"/>
 		<widget name="bouquetlist" position="0,112" size="1920,127" itemHeight="40" font="Regular;30" backgroundColor="black" foregroundColorSelected="yellow" scrollbarMode="showNever" zPosition="4" transparent="0"/>
 		<widget name="timeline_now" position="0,112" zPosition="3" size="28,127" pixmap="epg/timeline-now.png" alphatest="on"/>
 	</screen>
 	<screen name="GraphicalEPG" position="fill">
-		<widget source="Title" render="Label" position="22,3" size="1500,90" font="Regular;37" foregroundColor="grey" valign="center" zPosition="1"/>
-		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,75" font="Regular;30" foregroundColor="grey" zPosition="1" valign="center" halign="right">
+		<widget source="Title" render="Label" position="22,3" size="1500,90" font="Regular;37" foregroundColor="grey" valign="center"/>
+		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,75" font="Regular;30" foregroundColor="grey" valign="center" halign="right">
 			<convert type="ClockToText">Full</convert>
 		</widget>
 		<panel name="ButtonPanel"/>
@@ -627,7 +627,7 @@
 		<widget source="Event" render="Label" position="307,848" size="1605,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,890" size="1905,90" font="Regular;33" zPosition="1" halign="left" valign="center">
+		<widget source="Event" render="Label" position="7,890" size="1905,90" font="Regular;33" halign="left" valign="center">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget source="Event" render="Label" position="7,970" size="1700,40" font="Regular;30" foregroundColor="blue" halign="center">
@@ -638,12 +638,12 @@
 		</widget>
 	</screen>
 	<screen name="GraphicalEPGPIG" position="fill" flags="wfNoBorder">
-		<widget source="Title" foregroundColor="grey" render="Label" position="1,1" size="465,80" font="Regular;33" zPosition="1" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,45" font="Regular;30" zPosition="1" valign="center" halign="right">
+		<widget source="Title" foregroundColor="grey" render="Label" position="1,1" size="465,80" font="Regular;33" valign="center"/>
+		<widget source="global.CurrentTime" render="Label" position="1522,7" size="375,45" font="Regular;30" valign="center" halign="right">
 		<convert type="ClockToText">Full</convert>
 		</widget>
-		<widget source="session.VideoPicture" render="Pig" position="0,90" size="597,331" backgroundColor="transparent" zPosition="1"/>
-		<widget source="session.CurrentService" render="Label" position="7,93" size="589,30" font="Regular;28" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" borderColor="black" valign="center" halign="center">
+		<widget source="session.VideoPicture" render="Pig" position="0,90" size="597,331" backgroundColor="transparent"/>
+		<widget source="session.CurrentService" render="Label" position="7,93" size="589,30" font="Regular;28" backgroundColor="background" transparent="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" borderColor="black" valign="center" halign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<panel name="ButtonPanel"/>
@@ -660,7 +660,7 @@
 		<widget source="Event" render="Label" position="795,7" size="720,50" font="Regular;36" foregroundColor="selectedFG" halign="left">
 		<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="615,57" zPosition="1" size="1300,330" font="Regular;32" foregroundColor="grey" halign="left" valign="top">
+		<widget source="Event" render="Label" position="615,57" size="1300,330" font="Regular;32" foregroundColor="grey" halign="left" valign="top">
 		<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget source="Event" render="Label" position="655,390" size="1060,40" font="Regular;30" foregroundColor="blue" halign="left">
@@ -742,7 +742,7 @@
 			<convert type="ServiceTime">StartTime</convert>
 			<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget source="Service" render="Label" position="277,530" size="465,40" font="Regular;33" foregroundColor="selectedFG" zPosition="1" halign="right">
+		<widget source="Service" render="Label" position="277,530" size="465,40" font="Regular;33" foregroundColor="selectedFG" halign="right">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
 		<widget name="DescriptionBorder" position="0,0" size="0,0" transparent="1"/>
@@ -811,7 +811,7 @@
 		<widget source="lab2" render="Label" position="15,730" size="750,45" font="Crs;30" zPosition="2" foregroundColor="grey" halign="center"/>
 		<widget source="lab3" render="Label" position="15,780" size="750,45" font="Regular;30" zPosition="2" foregroundColor="grey" halign="center"/>
 		<widget name="AboutScrollLabel" position="850,123" size="1032,874" font="Regular;31" foregroundColor="grey"/>
-		<eLabel text="Skin Magic-FHD  OE-A team skin by Rob van der Does" position="7,885" size="750,82" font="Regular;28" foregroundColor="grey" halign="center" zPosition="1"/>
+		<eLabel text="Skin Magic-FHD  OE-A team skin by Rob van der Does" position="7,885" size="750,82" font="Regular;28" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="TranslationInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -824,7 +824,7 @@
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="TunerHeader" render="Label" position="735,120" size="1177,50" font="Regular;36" foregroundColor="secondFG" halign="center" zPosition="1"/>
+		<widget source="TunerHeader" render="Label" position="735,120" size="1177,50" font="Regular;36" foregroundColor="secondFG" halign="center"/>
 		<widget source="nims" render="Label" position="735,175" size="1177,190"	font="Regular;30" foregroundColor="grey" halign="center"/>
 		<widget source="Tuner0" render="Label" position="735,175" size="1177,40" font="Regular;30" foregroundColor="grey" halign="center"/>
 		<widget source="Tuner1" render="Label" position="735,215" size="1177,40" font="Regular;30" foregroundColor="grey" halign="center"/>
@@ -838,19 +838,18 @@
 	<screen name="AboutReleaseNotes" position="fill" flags="wfNoBorder"	>
 		<panel name="BasicTemplate"/>
 		<widget name="list" font="Regular;33" position="780,123" size="1132,874" foregroundColor="grey"/>
-		<eLabel text="Skin Magic-FHD	 OE-A team skin by Rob van der Does" position="7,885" size="750,82" font="Regular;28" foregroundColor="grey" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="ServiceInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="infolist" position="735,120" size="1177,775" font="Regular;31" itemHeight="35" selectionDisabled="1" foregroundColor="grey"/>
-		<eLabel text="HbbTV URL:" position="7,895" size="1950,45" font="Regular;35" foregroundColor="secondFG" halign="center" zPosition="1"/>
+		<eLabel text="HbbTV URL:" position="7,895" size="1950,45" font="Regular;35" foregroundColor="secondFG" halign="center"/>
 		<widget source="session.CurrentService" render="Label" position="7,940" size="1950,50" font="Regular;30" halign="center" foregroundColor="grey">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 		</widget>
 		</screen>
 	<screen name="ServiceInfoSimple" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<eLabel text="HbbTV URL:" position="735,150" size="1177,80" font="Regular;35" foregroundColor="secondFG" halign="center" zPosition="1"/>
+		<eLabel text="HbbTV URL:" position="735,150" size="1177,80" font="Regular;35" foregroundColor="secondFG" halign="center"/>
 		<widget source="session.CurrentService" render="Label" position="735,240" size="1177,500" font="Regular;30" halign="center" foregroundColor="grey">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 		</widget>
@@ -928,10 +927,10 @@
 		<widget source="cancelable" render="FixedLabel" text="Cancel" position="75,1020" size="330,45" font="buttons;33" foregroundColor="buttongreen" halign="left">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="finished" render="FixedLabel" text="OK" position="510,1020" size="330,45" font="buttons;33" foregroundColor="buttongreen" zPosition="1" halign="left">
+		<widget source="finished" render="FixedLabel" text="OK" position="510,1020" size="330,45" font="buttons;33" foregroundColor="buttongreen" halign="left">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" zPosition="1" halign="left">
+		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" halign="left">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
@@ -1085,8 +1084,8 @@
 	</screen>
 	<screen name="SubtitleDisplay" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="-1"/>
 	<screen name="QuickSubtitlesConfigMenu" position="75,75" size="720,385" backgroundColor="transpBlack" flags="wfNoBorder">
-		<widget name="config" position="5,0" size="710,400" font="Regular;27" itemHeight="38" zPosition="1" transparent="1"/>
-		<widget name="videofps" position="5,405" size="710,30" font="Regular;27" itemHeight="38" transparent="1" zPosition="1"/>
+		<widget name="config" position="5,0" size="710,400" font="Regular;27" itemHeight="38" transparent="1"/>
+		<widget name="videofps" position="5,405" size="710,30" font="Regular;27" itemHeight="38" transparent="1"/>
 	</screen>
 	<screen name="ChapterZap" position="center,center" size="420,90" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="chapter" position="0,-300" size="300,60" font="Regular;51" borderColor="black" borderWidth="3" backgroundColor="transparent" transparent="1" valign="center" halign="right"/>
@@ -1186,7 +1185,7 @@
 		<widget name="list" position="780,120" size="1132,595" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
 				serviceInfoFont="channelselectionevent;28" progressBarWidth="70" fieldMargins="10" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
 				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
-		<widget source="ServiceEvent" render="Label" position="780,715" size="1132,35" font="Regular;30" foregroundColor="secondFG" halign="right" noWrap="1" zPosition="1">
+		<widget source="ServiceEvent" render="Label" position="780,715" size="1132,35" font="Regular;30" foregroundColor="secondFG" halign="right" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="10,120" size="765,623" font="Regular;28" foregroundColor="grey">
@@ -1270,10 +1269,10 @@
 		<panel name="BasicTemplate"/>
 		<widget name="lab1" position="52,720" size="225,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="labdisabled" position="315,720" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
-		<widget name="labactive" position="315,720" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
+		<widget name="labactive" position="315,720" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 		<widget name="lab2" position="52,825" size="225,39" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="labstop" position="315,825" size="375,39" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
-		<widget name="labrun" position="315,825" size="375,39" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
+		<widget name="labrun" position="315,825" size="375,39" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 		<widget name="key" position="780,123" size="1132,37" font="Regular;30" halign="center" transparent="1" valign="center" backgroundColor="background"/>
 		<widget source="list" render="Listbox" position="780,195" size="1132,585" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" transparent="1" enableWrapAround="1">
 			<convert type="StringList"/>
@@ -1321,10 +1320,10 @@
 		<widget name="slider" position="891,441" size="978,25" zPosition="2"/>
 		<widget name="activityslider" position="73,913" size="1791,9" pixmap="window/slider.png"/>
 		<widget name="feedStatusMSG" position="7,568" size="715,45" font="Regular;33" zPosition="2" foregroundColor="secondFG" halign="center"/>
-		<widget name="tl_off" pixmap="Magic-FHD/icons/aoff.png" position="350,632" zPosition="1" size="36,97" alphatest="on"/>
-		<widget name="tl_red" pixmap="Magic-FHD/icons/ared.png" position="350,632" zPosition="1" size="36,97" alphatest="on"/>
-		<widget name="tl_yellow" pixmap="Magic-FHD/icons/ayellow.png" position="350,632" zPosition="1" size="36,97" alphatest="on"/>
-		<widget name="tl_green" pixmap="Magic-FHD/icons/agreen.png" position="350,632" zPosition="1" size="36,97" alphatest="on"/>
+		<widget name="tl_off" pixmap="Magic-FHD/icons/aoff.png" position="350,632" size="36,97" alphatest="on"/>
+		<widget name="tl_red" pixmap="Magic-FHD/icons/ared.png" position="350,632" size="36,97" alphatest="on"/>
+		<widget name="tl_yellow" pixmap="Magic-FHD/icons/ayellow.png" position="350,632" size="36,97" alphatest="on"/>
+		<widget name="tl_green" pixmap="Magic-FHD/icons/agreen.png" position="350,632" size="36,97" alphatest="on"/>
 		</screen>
 	<screen name="SoftwareUpdateChanges" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1336,10 +1335,10 @@
 		<widget name="list" position="780,123" size="1132,495" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="735,800" size="1177,200" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="bottom"/>
 		<widget name="feedStatusMSG" position="7,568" size="715,45" font="Regular;33" zPosition="2" foregroundColor="secondFG" halign="center"/>
-		<widget name="tl_off" pixmap="Magic-FHD/icons/aoff.png" position="350,632" zPosition="1" size="36,97" alphatest="on"/>
-		<widget name="tl_red" pixmap="Magic-FHD/icons/ared.png" position="350,632" zPosition="1" size="36,97" alphatest="on"/>
-		<widget name="tl_yellow" pixmap="Magic-FHD/icons/ayellow.png" position="350,632" zPosition="1" size="36,97" alphatest="on"/>
-		<widget name="tl_green" pixmap="Magic-FHD/icons/agreen.png" position="350,632" zPosition="1" size="36,97" alphatest="on"/>
+		<widget name="tl_off" pixmap="Magic-FHD/icons/aoff.png" position="350,632" size="36,97" alphatest="on"/>
+		<widget name="tl_red" pixmap="Magic-FHD/icons/ared.png" position="350,632" size="36,97" alphatest="on"/>
+		<widget name="tl_yellow" pixmap="Magic-FHD/icons/ayellow.png" position="350,632" size="36,97" alphatest="on"/>
+		<widget name="tl_green" pixmap="Magic-FHD/icons/agreen.png" position="350,632" size="36,97" alphatest="on"/>
 	</screen>
 	<screen name="MPHelp" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1568,10 +1567,10 @@
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<widget name="autostart" position="915,208" size="225,45" font="Regular;30" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="0"/>
-		<widget name="labdisabled" position="1140,204" size="225,45" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
+		<widget name="labdisabled" position="1140,204" size="225,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labactive" position="1140,208" size="225,45" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
 		<widget name="status" position="1372,208" size="270,45" font="Regular;30" halign="right" foregroundColor="foreground" backgroundColor="background" transparent="0"/>
-		<widget name="labstop" position="1672,204" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
+		<widget name="labstop" position="1672,204" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="1672,208" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
 		<widget name="time" position="915,274" size="480,45" font="Regular;30" valign="center" transparent="1"/>
 		<widget name="labtime" position="1395,274" size="150,45" font="Regular;30" valign="center" backgroundColor="background"/>
@@ -1581,7 +1580,7 @@
 		<widget name="labpass" position="1290,424" size="465,45" font="Regular;30" valign="center" backgroundColor="background"/>
 		<widget name="alias" position="915,499" size="225,45" font="Regular;30" valign="center" transparent="1"/>
 		<widget name="labalias" position="1290,499" size="465,45" font="Regular;30" valign="center" backgroundColor="background"/>
-		<widget name="sinactive" position="915,574" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
+		<widget name="sinactive" position="915,574" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="sactive" position="915,574" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 		<widget name="system" position="975,574" size="150,45" font="Regular;30" valign="center" transparent="1"/>
 		<widget name="labsys" position="1290,574" size="465,45" font="Regular;30" valign="center" backgroundColor="background"/>
@@ -1604,16 +1603,16 @@
 		<widget name="lab1" position="930,210" size="225,45" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,45" font="Regular;30" valign="top" transparent="0"/>
 		<widget name="labstop" position="1170,390" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
-		<widget name="labrun" position="1170,390" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
+		<widget name="labrun" position="1170,390" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="NetworkuShare" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<widget name="autostart" position="945,163" size="150,36" font="Regular;30" valign="center" transparent="0"/>
-		<widget name="labdisabled" position="1095,159" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
+		<widget name="labdisabled" position="1095,159" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labactive" position="1095,159" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
 		<widget name="status" position="1290,163" size="225,36" font="Regular;30" valign="center" transparent="0"/>
-		<widget name="labstop" position="1530,159" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
+		<widget name="labstop" position="1530,159" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="1530,159" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
 		<widget name="username" position="945,274" size="225,45" font="Regular;30" valign="center" transparent="1"/>
 		<widget name="labuser" position="1185,274" size="465,45" font="Regular;30" valign="center" backgroundColor="bluegrey"/>
@@ -1626,26 +1625,26 @@
 		<widget name="sharedir" position="945,510" size="225,45" font="Regular;30" valign="center" transparent="1"/>
 		<widget name="labsharedir" position="1185,510" size="465,45" font="Regular;30" valign="center" backgroundColor="bluegrey"/>
 		<widget name="web" position="870,607" size="270,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="webinactive" position="1200,607" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
+		<widget name="webinactive" position="1200,607" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="webactive" position="1200,607" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 		<widget name="telnet" position="870,682" size="270,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="telnetinactive" position="1200,682" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
+		<widget name="telnetinactive" position="1200,682" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="telnetactive" position="1200,682" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 		<widget name="xbox" position="870,765" size="300,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="xboxinactive" position="1200,765" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
+		<widget name="xboxinactive" position="1200,765" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="xboxactive" position="1200,765" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 		<widget name="dlna" position="870,840" size="300,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="dlnainactive" position="1200,840" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
+		<widget name="dlnainactive" position="1200,840" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="dlnaactive" position="1200,840" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 	</screen>
 	<screen name="NetworkMiniDLNA" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<widget name="autostart" position="945,163" size="150,45" font="Regular;30" valign="center" transparent="0"/>
-		<widget name="labdisabled" position="1095,159" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
+		<widget name="labdisabled" position="1095,159" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labactive" position="1095,159" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
 		<widget name="status" position="1290,163" size="225,45" font="Regular;30" valign="center" transparent="0"/>
-		<widget name="labstop" position="1530,159" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
+		<widget name="labstop" position="1530,159" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="1530,159" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
 		<widget name="username" position="945,274" size="225,45" font="Regular;30" valign="center" transparent="1"/>
 		<widget name="labuser" position="1185,274" size="465,45" font="Regular;30" valign="center" backgroundColor="background"/>
@@ -1658,13 +1657,13 @@
 		<widget name="sharedir" position="945,510" size="225,45" font="Regular;30" valign="center" transparent="1"/>
 		<widget name="labsharedir" position="1185,495" size="720,123" font="Regular;30" valign="top" backgroundColor="background"/>
 		<widget name="inotify" position="945,607" size="270,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="inotifyinactive" position="1275,607" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
+		<widget name="inotifyinactive" position="1275,607" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="inotifyactive" position="1275,607" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 		<widget name="tivo" position="945,682" size="270,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="tivoinactive" position="1275,682" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
+		<widget name="tivoinactive" position="1275,682" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="tivoactive" position="1275,682" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 		<widget name="dlna" position="945,840" size="300,45" font="Regular;30" valign="center" transparent="1"/>
-		<widget name="dlnainactive" position="1275,840" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
+		<widget name="dlnainactive" position="1275,840" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="dlnaactive" position="1275,840" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 	</screen>
 	<screen name="NetworkuShareSetup" position="fill" flags="wfNoBorder">
@@ -1684,14 +1683,14 @@
 		<widget name="lab1" position="930,210" size="544,120" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,105" font="Regular;30" valign="top" transparent="0"/>
 		<widget name="labstop" position="1170,390" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
-		<widget name="labrun" position="1170,390" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
+		<widget name="labrun" position="1170,390" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="NetworkFtp" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="lab1" position="930,210" size="544,120" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="lab2" position="930,390" size="225,105" font="Regular;30" valign="top" transparent="0"/>
 		<widget name="labstop" position="1170,390" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
-		<widget name="labrun" position="1170,390" size="375,45" zPosition="1" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
+		<widget name="labrun" position="1170,390" size="375,45" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="ScSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1744,7 +1743,7 @@
 		<widget source="ServiceList_desc" render="Label" position="825,397" size="990,45" font="Regular;36"/>
 		<eLabel position="825,456" size="990,3" backgroundColor="black"/>
 		<eLabel position="825,459" size="990,3" backgroundColor="grey"/>
-		<widget name="ServiceList" position="885,472" size="900,450" zPosition="1" scrollbarMode="showOnDemand"/>
+		<widget name="ServiceList" position="885,472" size="900,450" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceList_info" render="Label" position="825,472" size="990,450" font="Regular;33" zPosition="2"/>
 	</screen>
 	<screen name="easyCIconfigMenu" position="fill" flags="wfNoBorder">
@@ -1754,9 +1753,9 @@
 		<widget source="ServiceList_desc" render="Label" position="885,397" size="900,45" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1" font="Regular;36"/>
 		<eLabel position="885,456" size="900,3" backgroundColor="black"/>
 		<eLabel position="885,459" size="900,3" backgroundColor="grey"/>
-		<widget name="ServiceList" position="885,472" size="900,450" backgroundColor="background" zPosition="1" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="ServiceList" position="885,472" size="900,450" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceList_info" render="Label" position="885,472" size="900,450" backgroundColor="background" zPosition="2" transparent="1" font="Regular;33"/>
-		<widget name="ServiceList" position="885,255" size="900,600" backgroundColor="background" zPosition="1" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="ServiceList" position="885,255" size="900,600" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceList_info" render="Label" position="885,255" size="900,600" backgroundColor="background" zPosition="2" transparent="1" font="Regular;33"/>
 	</screen>
 	<screen name="CAidSelect" position="fill" flags="wfNoBorder">
@@ -1953,10 +1952,10 @@
 	</screen>
 	<screen name="NetworkWizard" position="fill" flags="wfNoBorder" title="Network Wizard">
 		<panel name="BasicTemplate"/>
-		<widget name="languagetext" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" zPosition="1" halign="left"/>
-		<widget name="config" position="780,124" size="750,420" font="Regular;33" itemHeight="45" foregroundColor="grey" zPosition="1" scrollbarMode="showOnDemand"/>
+		<widget name="languagetext" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" halign="left"/>
+		<widget name="config" position="780,124" size="750,420" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 		<widget name="text" position="780,600" size="750,470" font="Regular;34"/>
-		<widget source="list" render="Listbox" position="22,577" size="670,375" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="22,577" size="670,360" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand">
 			<convert type="StringList"/>
 		</widget>
 		<widget name="rc" position="1599,160" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
@@ -2031,7 +2030,7 @@
 	<screen name="UserInterfacePositioner" position="0,0" size="e,e" backgroundColor="bluetransparent">
 		<panel name="ButtonPanel"/>
 		<widget name="config" position="c-262,c-112" size="525,225" font="Regular;30" itemHeight="45" backgroundColor="bluetransparent" foregroundColor="grey"/>
-		<ePixmap pixmap="div-h.png" position="c-300,e-300" zPosition="1" size="600,3"/>
+		<ePixmap pixmap="div-h.png" position="c-300,e-300" size="600,3"/>
 		<widget source="status" render="Label" position="c-450,e-285" size="900,135" zPosition="10" font="Regular;33" foregroundColor="grey" halign="center" valign="center" transparent="1"/>
 	</screen>
 	<screen name="PictureInPictureZapping" position="870,90" size="180,39" flags="wfNoBorder" backgroundColor="transparent" zPosition="2">
@@ -2051,68 +2050,68 @@
 	<screen name="TempFanControl" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,180" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="SensorTempText0" render="Label" position="780,315" size="135,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top" foregroundColor="grey"/>
-		<widget source="SensorTemp0" render="Label" position="915,315" size="150,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorTempText0" render="Label" position="780,315" size="135,70" font="RegularSmall;30" halign="left" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTemp0" render="Label" position="915,315" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText0" render="Label" position="1200,315" size="180,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top" foregroundColor="grey"/>
-		<widget source="SensorFan0" render="Label" position="1380,315" size="225,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorFanText0" render="Label" position="1200,315" size="180,70" font="RegularSmall;30" halign="left" valign="top" foregroundColor="grey"/>
+		<widget source="SensorFan0" render="Label" position="1380,315" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText1" render="Label" position="780,390" size="135,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top" foregroundColor="grey"/>
-		<widget source="SensorTemp1" render="Label" position="915,390" size="150,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorTempText1" render="Label" position="780,390" size="135,70" font="RegularSmall;30" halign="left" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTemp1" render="Label" position="915,390" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText1" render="Label" position="1200,390" size="180,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top"	foregroundColor="grey"/>
-		<widget source="SensorFan1" render="Label" position="1380,390" size="225,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorFanText1" render="Label" position="1200,390" size="180,70" font="RegularSmall;30" halign="left" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFan1" render="Label" position="1380,390" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText2" render="Label" position="780,465" size="135,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top" foregroundColor="grey"/>
-		<widget source="SensorTemp2" render="Label" position="915,465" size="150,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorTempText2" render="Label" position="780,465" size="135,70" font="RegularSmall;30" halign="left" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTemp2" render="Label" position="915,465" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText2" render="Label" position="1200,465" size="180,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top"	foregroundColor="grey"/>
-		<widget source="SensorFan2" render="Label" position="1380,465" size="225,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorFanText2" render="Label" position="1200,465" size="180,70" font="RegularSmall;30" halign="left" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFan2" render="Label" position="1380,465" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText3" render="Label" position="780,540" size="135,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top" foregroundColor="grey"/>
-		<widget source="SensorTemp3" render="Label" position="915,540" size="150,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorTempText3" render="Label" position="780,540" size="135,70" font="RegularSmall;30" halign="left" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTemp3" render="Label" position="915,540" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText3" render="Label" position="1200,540" size="180,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top"	foregroundColor="grey"/>
-		<widget source="SensorFan3" render="Label" position="1380,540" size="225,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorFanText3" render="Label" position="1200,540" size="180,70" font="RegularSmall;30" halign="left" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFan3" render="Label" position="1380,540" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText4" render="Label" position="780,615" size="135,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top" foregroundColor="grey"/>
-		<widget source="SensorTemp4" render="Label" position="915,615" size="150,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorTempText4" render="Label" position="780,615" size="135,70" font="RegularSmall;30" halign="left" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTemp4" render="Label" position="915,615" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText4" render="Label" position="1200,615" size="180,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top"	foregroundColor="grey"/>
-		<widget source="SensorFan4" render="Label" position="1380,615" size="225,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorFanText4" render="Label" position="1200,615" size="180,70" font="RegularSmall;30" halign="left" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFan4" render="Label" position="1380,615" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText5" render="Label" position="780,690" size="135,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top" foregroundColor="grey"/>
-		<widget source="SensorTemp5" render="Label" position="915,690" size="150,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorTempText5" render="Label" position="780,690" size="135,70" font="RegularSmall;30" halign="left" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTemp5" render="Label" position="915,690" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText5" render="Label" position="1200,690" size="180,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top"	foregroundColor="grey"/>
-		<widget source="SensorFan5" render="Label" position="1380,690" size="225,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorFanText5" render="Label" position="1200,690" size="180,70" font="RegularSmall;30" halign="left" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFan5" render="Label" position="1380,690" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText6" render="Label" position="780,765" size="135,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top" foregroundColor="grey"/>
-		<widget source="SensorTemp6" render="Label" position="915,765" size="150,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorTempText6" render="Label" position="780,765" size="135,70" font="RegularSmall;30" halign="left" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTemp6" render="Label" position="915,765" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText6" render="Label" position="1200,765" size="180,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top"	foregroundColor="grey"/>
-		<widget source="SensorFan6" render="Label" position="1380,765" size="225,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorFanText6" render="Label" position="1200,765" size="180,70" font="RegularSmall;30" halign="left" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFan6" render="Label" position="1380,765" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText7" render="Label" position="780,840" size="135,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top" foregroundColor="grey"/>
-		<widget source="SensorTemp7" render="Label" position="915,840" size="150,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorTempText7" render="Label" position="780,840" size="135,70" font="RegularSmall;30" halign="left" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTemp7" render="Label" position="915,840" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText7" render="Label" position="1200,840" size="180,70" font="RegularSmall;30" zPosition="1" halign="left" valign="top"	foregroundColor="grey"/>
-		<widget source="SensorFan7" render="Label" position="1380,840" size="225,35" font="RegularSmall;30" zPosition="1" halign="right" foregroundColor="grey">
+		<widget source="SensorFanText7" render="Label" position="1200,840" size="180,70" font="RegularSmall;30" halign="left" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFan7" render="Label" position="1380,840" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
 	</screen>
@@ -2126,9 +2125,9 @@
 	</screen>
 	<screen name="FanSetupScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="hddtemp" position="1235,1023" size="400,39" foregroundColor="buttonblue" zPosition="1" font="buttons;33" halign="left"/>
+		<widget name="hddtemp" position="1235,1023" size="400,39" foregroundColor="buttonblue" font="buttons;33" halign="left"/>
 		<widget name="config" position="780,120" size="1125,720" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="powerstatus" position="750,900" size="375,33" halign="right" font="Regular;30" zPosition="1" transparent="1" foregroundColor="grey"/>
+		<widget name="powerstatus" position="750,900" size="375,33" halign="right" font="Regular;30" transparent="1" foregroundColor="grey"/>
 		<widget name="daemon0" pixmap="buttons/button_green_off.png" position="1140,910" size="22,24" zPosition="10" alphatest="on" transparent="1"/>
 		<widget name="daemon1" pixmap="buttons/button_green.png" position="1140,910" size="23,24" zPosition="10" alphatest="on" transparent="1"/>
 		<widget name="hddTemp" position="7,568" size="715,45" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
@@ -2168,7 +2167,7 @@
 	</screen>
 	<screen name="VIXSwap" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="autostart_off" position="885,174" zPosition="1" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
+		<widget name="autostart_off" position="885,174" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="autostart_on" position="885,174" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
 		<widget name="lab1" position="960,170" size="950,75" font="Regular;30"/>
 		<widget name="lab2" position="885,350" size="225,45" font="Regular;30" valign="center"/>
@@ -2177,7 +2176,7 @@
 		<widget name="labsize" position="1110,394" size="330,45" font="Regular;30" valign="center"/>
 		<widget name="lab4" position="885,439" size="225,45" font="Regular;30" valign="center"/>
 		<widget name="inactive" position="1110,439" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
-		<widget name="active" position="1110,439" size="150,45" font="Regular;30" valign="center" zPosition="1" halign="center" backgroundColor="green"/>
+		<widget name="active" position="1110,439" size="150,45" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="VIXImageManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2294,21 +2293,21 @@
 		<widget name="connect" position="1155,330" size="96,96" zPosition="2"
 		pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy24.png"
 		transparent="1" alphatest="blend"/>
-		<widget name="lab1" position="840,199" halign="center" size="754,90" zPosition="1" font="Regular;30" valign="top"/>
+		<widget name="lab1" position="840,199" halign="center" size="754,90" font="Regular;30" valign="top"/>
 	</screen>
 	<screen name="VIXStartCam" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="connect" position="1155,330" size="96,96" zPosition="2"
 		pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy24.png"
 		transparent="1" alphatest="blend"/>
-		<widget name="lab1" position="840,199" halign="center" size="754,90" zPosition="1" font="Regular;30" valign="top"/>
+		<widget name="lab1" position="840,199" halign="center" size="754,90" font="Regular;30" valign="top"/>
 	</screen>
 	<screen name="VIXStopCam" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="connect" position="1155,330" size="96,96" zPosition="2"
 		pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy24.png"
 		transparent="1" alphatest="blend"/>
-		<widget name="lab1" position="840,199" halign="center" size="754,90" zPosition="1" font="Regular;30" valign="top"/>
+		<widget name="lab1" position="840,199" halign="center" size="754,90" font="Regular;30" valign="top"/>
 	</screen>
 	<screen name="TranscodingSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2326,7 +2325,7 @@
 	<screen name="FirmwareUpgrade" position="0,0" size="1920,1080" flags="wfNoBorder" title="Firmware Upgrade">
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
-		<widget source="status" render="Label" position="780,903" size="1110,90" font="Regular;33" halign="center" zPosition="1" valign="center"/>
+		<widget source="status" render="Label" position="780,903" size="1110,90" font="Regular;33" halign="center" valign="center"/>
 		<widget name="oldversion_label" position="7,600" size="290,45" font="Regular;33" foregroundColor="secondFG"/>
 		<widget name="oldversion" position="300,600" size="290,45" font="Regular;33" foregroundColor="secondFG"/>
 		<widget name="newversion_label" position="7,650" size="290,45" font="Regular;33" foregroundColor="secondFG"/>
@@ -2347,7 +2346,7 @@
 	<screen name="FUFilebrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="file_list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="status" render="Label" position="15,555" size="715,300" font="Regular;33" zPosition="1" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget source="status" render="Label" position="15,555" size="715,300" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="HdmiCECSetupScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2358,11 +2357,11 @@
 	<screen name="ButtonSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<ePixmap pixmap="buttons/key-exit.png" position="57,1027" size="53,38" zPosition="0" alphatest="blend"/>
-		<eLabel text="Exit" position="115,1022" size="330,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<eLabel text="Exit" position="115,1022" size="330,39" font="Regular;33" foregroundColor="grey" halign="left"/>
 		<widget name="list" position="735,120" size="577,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="choosen" position="1320,120" size="577,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="secondFG"/>
 		<ePixmap pixmap="buttons/key-exit.png" position="57,1027" size="53,38" zPosition="0" alphatest="blend"/>
-		<eLabel text="Exit" position="115,1022" size="330,39" font="Regular;33" foregroundColor="grey" zPosition="1" halign="left"/>
+		<eLabel text="Exit" position="115,1022" size="330,39" font="Regular;33" foregroundColor="grey" halign="left"/>
 	</screen>
 	<screen name="ButtonSetupSelect" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2469,7 +2468,7 @@
 	<screen name="OscamInfoConfigScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
-		<widget name="status" render="Label" position="22,600" zPosition="1" size="715,300" font="Regular;24" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget name="status" render="Label" position="22,600" size="715,300" font="Regular;24" halign="center" valign="center" foregroundColor="secondFG"/>
 	</screen>
 	<screen name="oscInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2512,11 +2511,11 @@
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="info" position="22,600" size="715,360" font="Regular;33" foregroundColor="secondFG"/>
-		<eLabel text="" position="515,1020" size="330,39" font="Regular;33" halign="left" backgroundColor="secondBG" zPosition="1"/>
+		<eLabel text="" position="515,1020" size="330,39" font="Regular;33" halign="left" backgroundColor="secondBG"/>
 	</screen>
 	<screen name="CCcamInfoServerMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<eLabel text="" position="515,1020" size="330,39" font="Regular;33" halign="left" zPosition="1"/>
+		<eLabel text="" position="515,1020" size="330,39" font="Regular;33" halign="left"/>
 		<widget name="list" position="780,123" size="1132,450" itemHeight="50" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="info" position="780,680" size="1132,435" font="Regular;33" foregroundColor="grey"/>
 	</screen>
