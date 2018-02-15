@@ -895,25 +895,25 @@
 	<screen name="MovieSelection" title="Movie Selection" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<panel name="KeyMenuInfoTemplate"/>
-		<ePixmap pixmap="Simple_Ten_Eighty/dvr/scale1024.png" position="30,538" size="720,12" zPosition="1"/>
-		<widget source="session.CurrentService" render="PositionGauge" position="30,535" size="720,18" transparent="1" zPosition="4" pointer="Simple_Ten_Eighty/dvr/position_pointer1.png:720,4">
+		<ePixmap pixmap="Simple_Ten_Eighty/dvr/scale1024.png" position="30,565" size="720,12" zPosition="1"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="30,562" size="720,18" zPosition="4" transparent="1" pointer="Simple_Ten_Eighty/dvr/position_pointer1.png:720,4">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="30,562" size="240,30" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;27" borderColor="black" valign="center" halign="left">
+		<widget source="session.CurrentService" render="Label" position="30,530" size="720,27" foregroundColor="foreground" font="Regular;27" halign="left" transparent="1">
 			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
-		<widget source="Service" render="Label" position="271,562" size="240,30" backgroundColor="transparent" foregroundColor="grey" font="Regular;30" transparent="1" halign="center">
-			<convert type="ServiceTime">Duration</convert>
-			<convert type="ClockToText">AsLength</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="511,562" size="240,30" backgroundColor="transparent" transparent="1" zPosition="4" foregroundColor="grey" borderWidth="2" font="Regular;27" borderColor="black" valign="center" halign="right">
+		<widget source="session.CurrentService" render="Label" position="30,530" size="720,27" foregroundColor="foreground" font="Regular;27" halign="right" transparent="1">
 			<convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
 		</widget>
-		<widget source="Service" render="Label" position="30,600" size="160,37" font="Regular;30" foregroundColor="grey" halign="left" transparent="1">
+		<widget source="Service" render="Label" position="30,585" size="720,30" foregroundColor="foreground" font="Regular;30" halign="left" transparent="1">
 			<convert type="ServiceTime">StartTime</convert>
 			<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget source="Service" render="Label" position="382,600" size="367,37" zPosition="1" foregroundColor="grey" font="Regular;30" halign="right">
+		<widget source="Service" render="Label" position="30,585" size="720,30" foregroundColor="foreground" font="Regular;30" halign="center" transparent="1">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="30,585" size="720,30" foregroundColor="foreground" font="Regular;30" halign="right" transparent="1">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
 
@@ -922,7 +922,8 @@
 		<widget name="list" position="780,108" size="1110,900" scrollbarMode="showOnDemand" itemHeights="100,75,45" font="Regular;30" dateWidth="245" fontSizesCompact="36,28" fontSizesMinimal="34,30"
 						pbarShift="17" pbarHeight="20" pbarLargeWidth="72" spaceRight="3" columnsOriginal="270,300" columnsCompactDescription="240,220,240" compactColumn="300"
 						treeDescription="250" partIconeShiftMinimal="8" partIconeShiftCompact="2" partIconeShiftOriginal="3" iconsWidth="33" spaceIconeText="6" trashShift="4" dirShift="3"/>
-		<widget source="Service" render="Label" position="30,640" size="720,288" foregroundColor="secondFG" font="Regular;31" valign="center">
+
+		<widget source="Service" render="Label" position="30,635" size="720,330" foregroundColor="secondFG" font="Regular;31" halign="block" valign="center">
 			<convert type="MovieInfo">FullDescription</convert>
 		</widget> 
 		<widget source="Service" render="Label" position="30,975" size="180,34" transparent="1" foregroundColor="grey" font="Regular;30">
