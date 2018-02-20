@@ -5,24 +5,15 @@
 
 	<screen name="BasicTemplate">
 		<panel name="BasicTemplate1"/>
-		<panel name="ButtonPanel"/>
 		<widget name="footnote" conditional="footnote" position="750,687" size="350,20" zPosition="1" font="Regular;22" transparent="1" foregroundColor="grey"/>
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" conditional="HelpWindow" position="520,500" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
 		<widget source="VKeyIcon" render="Pixmap" conditional="VKeyIcon" pixmap="buttons/key_text.png" position="1172,686" zPosition="1" size="35,25" transparent="1" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
-	
+
 	<screen name="BasicTemplate1">
-		<ePixmap pixmap="border/top2_bg.png" position="0,0" size="1280,75"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,675" size="1280,2"/>
-		<widget source="Title" render="Label" foregroundColor="grey"	position="15,15" size="700,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;25" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;26" halign="right" position="1015,15" size="250,28" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;20" halign="right" position="1015,45" size="250,25" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="BasicTemplate2"/>
 		<widget source="session.VideoPicture" render="Pig" position="0,77" size="482,273" backgroundColor="transparent" zPosition="1"/>
 		<widget source="session.CurrentService" render="Label" position="5,80" size="477,20" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" font="Regular;19" borderColor="black" valign="center" halign="center">
 			<convert type="ServiceName">Name</convert>
@@ -30,22 +21,7 @@
 	</screen>
 
 	<screen name="BasicTemplate2">
-		<ePixmap pixmap="border/top2_bg.png" position="0,0" size="1280,75"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,675" size="1280,2"/>
-		<widget source="Title" render="Label" foregroundColor="grey"	position="15,15" size="700,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;25" valign="center"/>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;26" halign="right" position="1015,15" size="250,28" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" backgroundColor="secondBG" font="Regular;20" halign="right" position="1015,45" size="250,25" transparent="1" foregroundColor="grey" zPosition="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<widget source="session.VideoPicture" render="Pig" position="0,77" size="482,273" backgroundColor="transparent" zPosition="1"/>
-		<widget source="session.CurrentService" render="Label" position="5,80" size="477,20" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" font="Regular;19" borderColor="black" valign="center" halign="center">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-	</screen>
-
-	<screen name="BasicTemplate3">
+		<panel name="ButtonPanel"/>
 		<ePixmap pixmap="border/top2_bg.png" position="0,0" size="1280,75"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,675" size="1280,2"/>
 		<widget source="Title" render="Label" foregroundColor="grey"	position="15,15" size="700,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;25" valign="center"/>
