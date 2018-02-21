@@ -416,13 +416,13 @@
 		<widget source="menu" render="Listbox" position="780,120" size="1110,787" foregroundColor="window-fg" backgroundColor="window-bg" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryPixmapAlphaBlend(pos=(0, 5), size=(110, 60), png=6, flags = BT_SCALE), #picon
 						MultiContentEntryText(pos = (120, 0), size = (15, 45), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), #arrow
 						MultiContentEntryText(pos = (145, 0), size = (350, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = 0x00ffffff, color_sel = 0x00ffc000), #service name
 						MultiContentEntryText(pos = (425, 0), size = (450, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = 0x00ffffff, color_sel = 0x00ffc000), #event name
 						MultiContentEntryText(pos = (145, 30), size = (350, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 7, color = 0x00ffffff, color_sel = 0x00ffc000), #orbital position
 						MultiContentEntryText(pos = (425, 30), size = (450, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 5, color = 0x00ffffff, color_sel = 0x00ffc000), #duration
-						MultiContentEntryText(pos = (0, 70), size = (1110, 90), font = 4, flags = RT_HALIGN_LEFT|RT_WRAP, text = 4, color = 0x00ffffff, color_sel = 0x00ffc000) #epg
+						MultiContentEntryText(pos = (0, 70), size = (1110, 90), font = 4, flags = RT_HALIGN_LEFT|RT_WRAP, text = 4, color = 0x00ffffff, color_sel = 0x00ffc000), #epg
+						MultiContentEntryPixmapAlphaBlend(pos=(0, 5), size=(110, 60), png=6, flags = BT_SCALE) #picon must be last otherwise won't work
 						],
 				 "fonts": [gFont("Regular", 24), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16), gFont("Regular", 26)],
 				 "itemHeight": 170
