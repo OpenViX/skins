@@ -481,7 +481,21 @@
 	</screen>
 	<screen name="MovieSelectionFileManagerList" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="495,85" size="775,565" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="config" position="495,85" size="775,535" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="Service" render="Label" position="495,630" size="410,28"  font="Regular;22" foregroundColor="selectedFG">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="910,630" size="100,28" font="Regular;22" foregroundColor="selectedFG" halign="right">
+			<convert type="ServiceTime">StartTime</convert>
+			<convert type="ClockToText">ShortDate</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1015,630" size="100,28" font="Regular;22" foregroundColor="selectedFG" halign="left">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1120,630" size="150,28" font="Regular;22" foregroundColor="selectedFG" halign="right">
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
 		<widget name="description" position="5,379" size="477,264" zPosition="2" font="Regular;22" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 	<!-- Audio selection -->
