@@ -207,11 +207,16 @@
 		<panel name="KeyInfoTemplate"/>
 	</screen>
 
+<!-- Config and list template. Some people use "config" and others use "list" -->
+	<screen name="ConfigTemplate">
+		<widget name="config" conditional="config" position="780,105" size="1110,900" itemHeight="50" font="Regular;33" scrollbarMode="showOnDemand"/>
+		<widget name="list" conditional="list" position="780,100" size="1110,900" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand"/>
+	</screen>
+
 <!-- Setup Panel PIG template -->
 	<screen name="SetupPanelPIG">
 		<panel name="PigTemplate"/>
-		<widget name="config" conditional="config" position="780,100" size="1110,900" itemHeight="50" font="Regular;33" scrollbarMode="showOnDemand"/>
-		<widget name="list" conditional="list" position="780,100" size="1110,900" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand"/>
+		<panel name="ConfigTemplate"/>
 		<widget name="description" objectTypes="description,Button,Label" position="30,570" size="720,300" font="Regular;32" valign="top" halign="block"/>
 		<widget source="description" render="Label" objectTypes="description,StaticText" position="30,570" size="720,300" font="Regular;32" valign="top" halign="block"/>
 		<widget name="HelpWindow" conditional="HelpWindow" pixmap="skin_default/vkey_icon.png" position="3,310" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
