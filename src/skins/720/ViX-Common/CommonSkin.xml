@@ -1254,8 +1254,15 @@ self.autoResize()
 	</screen>
 	<screen name="MovieSelectionFileManagerList" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="config" position="10,107" size="503,484" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget name="description" position="10,595" size="503,40" font="Regular;18" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
+		<widget name="config" position="10,107" size="503,454" selectionPixmap="ViX-Common/buttons/FocusBar_H38x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget source="Service" render="Label" position="15,570" size="350,25" zPosition="2" halign="left" foregroundColor="orange" backgroundColor="window-bg" font="Bold;22" noWrap="1" transparent="0">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="365,570" size="130,25" zPosition="2" halign="right" foregroundColor="orange" backgroundColor="window-bg" font="Bold;22" transparent="0">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget name="description" position="10,595" size="503,40" font="Regular;18" halign="center" backgroundColor="window-bg" transparent="1"/>
 	</screen>
 	<screen name="Mute" position="92,40" zPosition="10" size="90,80" backgroundColor="transparent" title="Mute" flags="wfNoBorder">
 		<ePixmap position="0,0" size="90,80" pixmap="screens/mute.png" transparent="1" alphatest="on"/>
