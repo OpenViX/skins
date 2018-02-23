@@ -514,7 +514,7 @@
 	</screen>
 
 	<screen name="GraphMultiEPGList" title="Electronic Program Guide" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<panel name="KeyInfoTemplate"/>
 		<widget source="Event" render="Label" position="30,105" size="1860,37" backgroundColor="background" transparent="1" foregroundColor="secondFG" font="Regular;34" valign="top">
@@ -596,7 +596,7 @@
 	<!-- Service Scan -->
 
 	<screen name="ServiceScan" title="Service scan" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="30,105" size="96,96" zPosition="2" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
@@ -627,7 +627,7 @@
 	</screen>
 
 	<screen name="FastScanStatus" title="Fast Scan" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="frontend" pixmap="skin_default/icons/scan-s.png" position="30,105" size="96,96" zPosition="2" transparent="1" alphatest="on"/>
 		<widget name="scan_state" position="30,270" zPosition="2" size="810,45" valign="center" font="Regular;30" transparent="1"/>
 		<widget name="scan_progress" position="30,322" size="810,22" pixmap="skin_default/progress_big.png" borderWidth="2" borderColor="#cccccc"/>
@@ -717,7 +717,7 @@
 	<!-- Console -->
 
 	<screen name="Console" title="Command execution" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="text" position="30,100" size="1860,912" itemHeight="38" font="Fixed;28" transparent="1" foregroundColor="white" scrollbarMode="showOnDemand"/>
 	</screen>
 
@@ -754,7 +754,7 @@
 	<!-- Radio Stuff -->
 
 	<screen name="ChannelSelectionRadio" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<panel name="KeyInfoTemplate"/>
 		<widget source="session.CurrentService" render="Picon" position="30,907" size="150,90" alphatest="blend" backgroundColor="secondBG" transparent="1" zPosition="1">
@@ -1737,7 +1737,7 @@
 	</screen>
 
 	<screen flags="wfNoBorder" name="Execute" position="fill" title="PPanel Entry">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="linelist" position="30,100" size="1860,912" itemHeight="38" font="Fixed;28" transparent="1" foregroundColor="white" scrollbarMode="showOnDemand"/>
 	</screen>
 
@@ -1751,7 +1751,7 @@
 	</screen>
 
 	<screen name="TextBoxPigLess" title="Message" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="KeyExit"/>
 		<widget name="text" position="30,105" size="1860,910" font="Regular;24"/>
 		<eLabel text="Leave message" position="251,1030" size="370,38" backgroundColor="secondBG" font="Regular;34" halign="left" transparent="1" zPosition="1"/>
@@ -1873,7 +1873,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	<!-- AutoDiseqC -->
 
 	<screen name="AutoDiseqc" title="Auto DiseqC" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<ePixmap pixmap="skin_default/icons/scan-s.png" position="30,105" size="96,96" zPosition="2" transparent="1" alphatest="on"/>
 		<widget source="statusbar" render="Label" position="150,105" size="600,96" zPosition="10" halign="left" valign="center" font="Regular;33" transparent="1" shadowColor="black" shadowOffset="-1,-1"/>
 		<widget source="tunerstatusbar" render="Label" position="30,240" size="720,45" zPosition="10" halign="left" valign="center" font="Regular;33" transparent="1" shadowColor="black" shadowOffset="-1,-1"/>
@@ -1943,7 +1943,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	<!-- Signal finder -->
 
 	<screen name="Satfinder" title="Satfinder" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 
 		<widget source="Frontend" render="Progress" pixmap="Simple_Ten_Eighty/infobar/bar_big.png" position="30,150" size="1860,75" borderWidth="1" borderColor="un808888">
 			<convert type="FrontendInfo">SNR</convert>
@@ -2056,14 +2056,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	</screen>
 	 <!-- Commit Info -->
 	<screen name="CommitInfo" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<ePixmap pixmap="Simple_Ten_Eighty/buttons/left.png" position="1064,1030" size="34,34" alphatest="blend"/>
 		<ePixmap pixmap="Simple_Ten_Eighty/buttons/right.png" position="1500,1030" size="34,34" alphatest="blend"/>
 		<widget name="AboutScrollLabel" font="Regular;26" position="30,100" size="1860,912" zPosition="2" halign="left"/>
 	</screen>
 	 <!-- Troubleshoot -->
 	<screen name="Troubleshoot" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<ePixmap pixmap="Simple_Ten_Eighty/buttons/left.png" position="1064,1030" size="34,34" alphatest="blend"/>
 		<ePixmap pixmap="Simple_Ten_Eighty/buttons/right.png" position="1500,1030" size="34,34" alphatest="blend"/>
 		<widget name="AboutScrollLabel" font="Fixed;26" position="30,100" size="1860,912" zPosition="2" halign="left"/>
