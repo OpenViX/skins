@@ -2172,4 +2172,27 @@
 		<widget name="about" position="780,120" size="1110,890" font="Regular;33"/>
 	</screen>
 
+	<!-- OpenMultiBoot Manager -->	
+	<screen name="OMBManagerList" position="fill" flags="wfNoBorder">
+		<panel name="SetupPanelPIG"/>
+		<widget source="label1" render="Label" position="25,630" size="750,45" font="Regular;36" zPosition="2" foregroundColor="foreground" halign="center"/>
+		<widget source="label2" render="Label" position="25,680" size="750,45" font="Regular;36" zPosition="2" foregroundColor="orange" halign="center"/>
+		<widget source="list" render="Listbox" position="780,105" size="1110,900" zPosition="3" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1">
+			<convert type="StringList"/>
+		</widget>
+	</screen>
+
+	<screen name="OMBManagerInstall" position="fill" flags="wfNoBorder">
+		<panel name="SetupPanelPIG"/>
+		<widget source="info" render="Label" position="25,630" size="750,45" font="Regular;36" zPosition="2" foregroundColor="foreground" halign="center"/>
+		<widget source="list" render="Listbox" position="780,105" size="1110,900" zPosition="3" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1">
+			<convert type="StringList"/>
+		</widget>
+	</screen>
+
+	<screen name="OMBManagerAbout" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<widget name="about" position="780,120" size="1110,890" font="Regular;33"/>
+	</screen>
+
 </skin>
