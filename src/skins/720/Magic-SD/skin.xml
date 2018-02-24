@@ -634,6 +634,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="BasicTemplate2"/>
 		<panel name="Red2Panel"/>
 		<panel name="Green2Panel"/>
+		<widget source="key_yellow" objectTypes="key_yellow,StaticText" render="Pixmap" pixmap="buttons/yellow.png" position="280,0" size="140,40" alphatest="blend" transparent="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_yellow" render="Label" objectTypes="key_yellow,StaticText" font="Regular;20" halign="center" position="280,1" size="140,40" transparent="1" valign="center" zPosition="10"/>
+		<widget source="key_blue" objectTypes="key_blue,StaticText" render="Pixmap" pixmap="buttons/blue.png" position="420,0" size="140,40" alphatest="blend" transparent="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_blue" render="Label" objectTypes="key_blue,StaticText" font="Regular;20" halign="center" position="280,1" size="140,40" transparent="1" valign="center" zPosition="10"/>
 		<widget name="config" position="3,45" size="554,300" source="menu" scrollbarMode="showOnDemand" transparent="1" font="Enigma;16" itemHeight="20" enableWrapAround="1" zPosition="1"/>
 		<widget name="description" position="3,360" size="554,65" zPosition="10" font="Enigma;16" halign="center" valign="center" transparent="0" foregroundColor="secondFG"/>
 		<widget name="footnote" position="215,435" size="260,19" zPosition="20" font="Regular;18" transparent="1"/>
