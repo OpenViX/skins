@@ -326,6 +326,20 @@
 		<widget name="key_green" position="590,160" size="150,25" zPosition="1" font="vmreg;22" foregroundColor="white" backgroundColor="vmdarkred" halign="left" transparent="1" valign="center" noWrap="1" />
 	    <widget name="green" position="590,160" size="150,25" zPosition="1" font="vmreg;22" foregroundColor="white" backgroundColor="vmdarkred" halign="left" transparent="1" valign="center" noWrap="1" />
 	</screen>
+	<screen name="SetupButtonPanel">
+		<ePixmap pixmap="buttons/red.png" position="140,160" size="35,25" alphatest="blend" transparent="1"/>
+		<widget source="key_red" render="Label" position="180,160" size="60,25" zPosition="1" font="vmreg;22" foregroundColor="white" backgroundColor="vmdarkred" halign="left" transparent="1" valign="center" noWrap="1"/>
+		<ePixmap pixmap="buttons/green.png" position="245,160" size="35,25" alphatest="blend" transparent="1"/>
+		<widget source="key_green" render="Label" position="285,160" size="60,25" zPosition="1" font="vmreg;22" foregroundColor="white" backgroundColor="vmdarkred" halign="left" transparent="1" valign="center" noWrap="1"/>
+		<widget source="key_yellow" objectTypes="key_yellow,StaticText" render="Pixmap" pixmap="buttons/yellow.png" position="350,160" size="35,25" alphatest="blend" transparent="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_yellow" render="Label" position="390,160" size="60,30" objectTypes="key_yellow,StaticText" zPosition="1" font="vmreg;22" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="white" backgroundColor="vmdarkred"/>
+		<widget source="key_blue" objectTypes="key_blue,StaticText" render="Pixmap" pixmap="buttons/blue.png" position="430,160" size="35,25" alphatest="blend" transparent="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_blue" render="Label" position="480,160" size="60,30" objectTypes="key_blue,StaticText" zPosition="1" font="vmreg;22" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="white" backgroundColor="vmdarkred"/>
+	</screen>
 	<screen name="MenuMenuButton">
 		<ePixmap pixmap="buttons/key_menu.png" position="85,190" size="35,25" alphatest="blend" transparent="1" zPosition="3" />
 	</screen>
