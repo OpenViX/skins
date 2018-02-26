@@ -2039,12 +2039,24 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="ViXBMC_HD-Common/menu/ico_menu_Setup.png" position="426,10" size="88,88" alphatest="blend"/>
 		<widget source="Title" render="Label" position="10,60" size="415,38" font="Bold;38" foregroundColor="menu_title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1"/>
 		<widget name="config" position="10,107" size="503,526" selectionPixmap="ViXBMC_HD-Common/images/FocusBar_H25x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget name="HelpWindow" pixmap="ViXBMC_HD-Common/buttons/vkey_icon.png" position="100,490" zPosition="1" size="623,720" transparent="1" alphatest="on"/>
-		<ePixmap pixmap="ViXBMC_HD-Common/buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1"/>
-		<ePixmap pixmap="ViXBMC_HD-Common/buttons/green.png" position="40,690" size="24,24" alphatest="blend" transparent="1"/>
+		<widget name="HelpWindow" pixmap="ViXBMC_HD-Common/buttons/vkey_icon.png" position="700,490" zPosition="1" size="623,720" transparent="1" alphatest="on"/>
+		<ePixmap pixmap="buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1"/>
+		<ePixmap pixmap="buttons/green.png" position="40,690" size="24,24" alphatest="blend" transparent="1"/>
 		<widget source="key_red" render="Label" position="75,667" size="190,20" zPosition="1" font="Regular;20" backgroundColor="menu-buttons-bkgrnd" foregroundColor="menu-buttons-frgrnd" halign="left" transparent="1" valign="top"/>
 		<widget source="key_green" render="Label" position="75,694" size="190,20" zPosition="1" font="Regular;20" backgroundColor="menu-buttons-bkgrnd" foregroundColor="menu-buttons-frgrnd" halign="left" transparent="1" valign="top"/>
-		<widget source="VKeyIcon" render="Pixmap" pixmap="skin_default/buttons/key_text.png" position="150,662" zPosition="10" size="35,25" transparent="1" alphatest="on">
+		<ePixmap pixmap="buttons/yellow.png" objectTypes="key_yellow,Button,Label" position="270,663" size="24,24" alphatest="blend" transparent="1"/>
+		<widget source="key_yellow" objectTypes="key_yellow,StaticText" render="Pixmap" pixmap="buttons/yellow.png" position="270,663" size="24,24" alphatest="blend" transparent="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_yellow" render="Label" objectTypes="key_yellow,StaticText" position="300,667" size="190,20" zPosition="1" font="Regular;20" backgroundColor="menu-buttons-bkgrnd" foregroundColor="menu-buttons-frgrnd" halign="left" transparent="1" valign="top"/>
+		<widget name="key_yellow" objectTypes="key_yellow,Label,Button" position="300,667" size="190,20" zPosition="1" font="Regular;20" backgroundColor="menu-buttons-bkgrnd" foregroundColor="menu-buttons-frgrnd" halign="left" transparent="1" valign="top"/>
+		<ePixmap pixmap="buttons/blue.png" objectTypes="key_blue,Button,Label" position="270,690" size="24,24" alphatest="blend" transparent="1"/>
+		<widget source="key_blue" objectTypes="key_yellow,StaticText" render="Pixmap" pixmap="buttons/blue.png" position="270,690" size="24,24" alphatest="blend" transparent="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_blue" render="Label" objectTypes="key_blue,StaticText" position="300,694" size="190,20" zPosition="1" font="Regular;20" backgroundColor="menu-buttons-bkgrnd" foregroundColor="menu-buttons-frgrnd" halign="left" transparent="1" valign="top"/>
+		<widget name="key_blue" objectTypes="key_blue,Label,Button" position="300,694" size="190,20" zPosition="1" font="Regular;20" backgroundColor="menu-buttons-bkgrnd" foregroundColor="menu-buttons-frgrnd" halign="left" transparent="1" valign="top"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="skin_default/buttons/key_text.png" position="510,690" zPosition="10" size="35,25" transparent="1" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
