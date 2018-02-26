@@ -47,10 +47,12 @@
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="60,440" zPosition="1" size="541,720" transparent="1" alphatest="on" />
 		<panel name="FullscreenRed2Panel" />
 		<panel name="FullscreenGreen2Panel" />
-		<ePixmap pixmap="buttons/yellow.png" objectTypes="key_yellow,StaticText" position="280,688" size="25,25" alphatest="blend" transparent="1">
+		<ePixmap pixmap="buttons/yellow.png" objectTypes="key_yellow,Button,Label" position="280,688" size="25,25" alphatest="blend" transparent="1"/>
+		<widget source="key_yellow" objectTypes="key_yellow,StaticText" render="Pixmap" pixmap="buttons/yellow.png" position="280,688" size="25,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide"/>
-		</ePixmap>
+		</widget>
 		<widget source="key_yellow" render="Label" objectTypes="key_yellow,StaticText" position="310,688" size="240,25" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
+		<widget name="key_yellow" objectTypes="key_yellow,Label,Button" position="310,688" size="240,25" zPosition="1" font="skyreg;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
 	</screen>
 
 <!-- InfoBar's -->
