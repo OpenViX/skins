@@ -703,8 +703,8 @@
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 <!--		<ePixmap pixmap="dvr/scale716.png" position="0,175" size="716,18" zPosition="1" alphatest="on"/>
-		<eLabel backgroundColor="transpBlack" position="0,179" size="723,10" zPosition="5"/>
--->		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="Magic-FHD/dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
+		<eLabel backgroundColor="transpBlack" position="0,179" size="723,10" zPosition="5"/>-->
+		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="Magic-FHD/dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="0,135" size="135,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="left">
@@ -712,7 +712,7 @@
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="540,135" size="175,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="right">
 			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
-		</widget>		
+		</widget>
 <!--Related to live TV
 		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar2.png" position="0,168" size="716,8" backgroundColor="secondBG" transparent="0" zPosition="5" borderWidth="0">
 			<convert type="EventTime">Progress</convert>
@@ -756,7 +756,15 @@
 	</screen>
 	<screen name="MovieSelectionFileManagerList" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="735,120" size="1177,810" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="Magic-FHD/dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="0,135" size="135,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="left">
+			<convert type="ServicePosition">Position,ShowHours</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="540,135" size="175,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="right">
+			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+		</widget>		<widget name="config" position="735,120" size="1177,810" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget source="Service" render="Label" position="735,930" size="465,40" font="Regular;30" foregroundColor="selectedFG">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>

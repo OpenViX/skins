@@ -423,8 +423,8 @@
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-<!--		<ePixmap pixmap="dvr/scale2.png" position="0,110" size="477,12" zPosition="1" alphatest="on"/>-->
-		<eLabel backgroundColor="transpBlack" position="0,110" size="482,12" zPosition="5"/>
+<!--		<ePixmap pixmap="dvr/scale2.png" position="0,110" size="477,12" zPosition="1" alphatest="on"/>
+		<eLabel backgroundColor="transpBlack" position="0,110" size="482,12" zPosition="5"/>-->
 		<widget source="session.CurrentService" render="Label" position="0,90" size="90,20" backgroundColor="transparent" transparent="1" zPosition="4" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="left">
 			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
@@ -481,6 +481,16 @@
 	</screen>
 	<screen name="MovieSelectionFileManagerList" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
+<!--	<eLabel backgroundColor="transpBlack" position="0,110" size="482,12" zPosition="5"/>-->
+		<widget source="session.CurrentService" render="Label" position="0,90" size="90,20" backgroundColor="transparent" transparent="1" zPosition="4" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="left">
+			<convert type="ServicePosition">Position,ShowHours</convert>
+		</widget>
+		<widget source="session.CurrentService" render="PositionGauge" position="0,110" size="477,12" transparent="1" zPosition="6" pointer="Magic-HD/dvr/position_pointer2.png:477,0">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="365,90" size="117,20" backgroundColor="transparent" transparent="1" zPosition="4" borderWidth="2" font="Regular;18" borderColor="black" valign="center" halign="right">
+			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+		</widget>
 		<widget name="config" position="495,80" size="775,532" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="Service" render="Label" position="495,617" size="360,28" font="Regular;22" foregroundColor="selectedFG">
 			<convert type="MovieInfo">RecordServiceName</convert>
