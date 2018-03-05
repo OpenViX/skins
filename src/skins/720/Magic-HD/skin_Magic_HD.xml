@@ -209,6 +209,21 @@
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 	</screen>
+	<screen name="Dishpip" flags="wfNoBorder" position="86,100" size="130,295" title="Dish" zPosition="10" backgroundColor="black">
+		<widget source="Dishpixmap" render="Pixmap" position="0,20" size="130,160" zPosition="1" pixmap="icons/dish.png" transparent="1" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget name="turnTime" position="5,0" size="120,20" zPosition="1" font="Regular;18" halign="right" foregroundColor="white" transparent="1"/>
+		<widget name="From" position="5,184" size="60,20" zPosition="1" font="Regular;18" halign="left" foregroundColor="white" transparent="1" text="From:"/>
+		<widget name="posFrom" position="70,184" size="70,20" zPosition="1" font="Regular;20" halign="left" foregroundColor="white" transparent="1"/>
+		<widget name="Goto" position="5,205" size="60,20" zPosition="1" font="Regular;18" halign="left" foregroundColor="white" transparent="1" text="Goto:"/>
+		<widget name="posGoto" position="70,205" size="70,20" zPosition="1" font="Regular;20" halign="left" foregroundColor="white" transparent="1"/>
+		<widget name="tunerName" position="70,228" size="50,20" zPosition="2" font="Regular;18" halign="left" foregroundColor="white" transparent="1" />
+		<widget name="turnSpeed" position="5,250" size="60,20" zPosition="2" font="Regular;18" halign="left" foregroundColor="white" transparent="1"/>
+		<widget source="Frontend" render="Progress" position="5,275" size="120,10" pixmap="bar_snr.png" zPosition="10" borderWidth="2" borderColor="#cccccc">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+	</screen>
 <!-- ## DvD-Player ## -->
 	<screen name="DVDPlayer" position="0,30" size="1280,215" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="PlayerPanel"/>
