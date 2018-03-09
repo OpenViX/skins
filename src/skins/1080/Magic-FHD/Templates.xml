@@ -113,12 +113,6 @@
 	</screen>
 
 	<screen name="InfoBarPanel">
-<!--  ## Dummy key-pixs to prevent skin warnings in debuglog if key-pixmaps are left out ## -->
-		<widget name="key_red" conditional="key_red" position="0,0" size="0,0" transparent="1"/>
-		<widget name="key_green" conditional="key_green" position="0,0" size="0,0" transparent="1"/>
-		<widget name="key_yellow" conditional="key_yellow" position="0,0" size="0,0" transparent="1"/>
-		<widget name="key_blue" conditional="key_blue" position="0,0" size="0,0" transparent="1"/>
-<!--  ## End of dummy keys ## -->
 		<widget source="session.CurrentService" render="Picon" position="67,832" size="150,90" alphatest="blend" backgroundColor="secondBG" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
@@ -182,6 +176,21 @@
 		<widget source="progress_text" render="Label" position="1750,5" size="150,45" font="Regular;34" halign="left" backgroundColor="transpBlack">
 			<convert type="ProgressToText">InPercent</convert>
 		</widget>
+	</screen>
+	<screen name="Network1Panel" position="fill" flags="wfNoBorder">
+		<widget name="autostart" position="870,163" size="150,45" font="Regular;30" valign="center" transparent="0"/>
+		<widget name="labdisabled" position="1025,163" size="220,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
+		<widget name="labactive" position="1025,163" size="220,45" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
+		<widget name="status" position="1330,163" size="225,45" font="Regular;30" valign="center" transparent="0"/>
+		<widget name="labstop" position="1560,159" size="220,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
+		<widget name="labrun" position="1560,159" size="220,45" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
+	</screen>
+	<screen name="Network2Panel" position="fill" flags="wfNoBorder">
+		<widget name="lab1" position="870,163" size="150,45" font="Regular;30" valign="center" transparent="0"/>
+		<widget name="labactive" position="1025,163" size="220,45" font="Regular;30" valign="center" transparent="0"/>
+		<widget name="lab2" position="1330,163" size="225,45" font="Regular;30" valign="top" transparent="0"/>
+		<widget name="labstop" position="1560,159" size="220,45" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
+		<widget name="labrun" position="1560,159" size="220,45" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
 	</screen>
 
 </skin>
