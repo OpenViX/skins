@@ -1177,6 +1177,12 @@
 		<widget source="status" render="Label" position="780,163" size="1110,70" backgroundColor="darkgrey" transparent="1" font="Regular;32"/>
 		<widget name="slider" position="780,440" size="1110,20" zPosition="2" transparent="1"/>
 		<widget name="activityslider" position="30,1024" size="1860,6" pixmap="Simple_Ten_Eighty/window/slider100.png" transparent="1" zPosition="2"/>
+		<widget name="feedStatusMSG" position="7,568" size="715,45" font="Regular;33" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget name="text" position="735,800" size="1177,200" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="bottom"/>
+		<widget name="tl_off" pixmap="icons/aoff.png" position="350,632" size="36,97" alphatest="on"/>
+		<widget name="tl_red" pixmap="icons/ared.png" position="350,632" size="36,97" alphatest="on"/>
+		<widget name="tl_yellow" pixmap="icons/ayellow.png" position="350,632" size="36,97" alphatest="on"/>
+		<widget name="tl_green" pixmap="icons/agreen.png" position="350,632" size="36,97" alphatest="on"/>
 	</screen>
 
 	<screen name="UpdatePluginMenu" title="Softwaremanager" position="fill" flags="wfNoBorder">
@@ -2282,13 +2288,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	<!-- Common interface - selection -->
 	<screen name="CiSelection" position="fill" title="Common Interface">
 		<panel name="PigTemplate"/>
-		<widget name="text" position="780,105" size="1100,35" font="Regular;33" />
-		<widget name="entries" position="780,160" size="1100,570" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" />
-	</screen>
-
-	<screen name="CIselectMainMenu" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
-		<widget name="CiList" position="780,105" size="1100,570" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
+		<widget name="text" position="780,105" size="1100,35" font="Regular;32" />
+		<widget name="entries" position="780,160" size="1100,570" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
 	</screen>
 
 	<screen name="CIselectMainMenu" position="fill" flags="wfNoBorder">
