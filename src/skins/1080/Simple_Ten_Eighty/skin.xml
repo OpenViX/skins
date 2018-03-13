@@ -413,7 +413,7 @@
 		<widget source="Event" render="Label" position="100,902" size="150,45" font="Regular;24" backgroundColor="secondBG" zPosition="1" transparent="1" foregroundColor="foreground" halign="left">
 			<convert type="EventName">PdcTime</convert>
 		</widget -->
-		<widget source="session.Event_Next" render="Label" position="30,975" size="720,35" font="Regular;30" halign="left" foregroundColor="secondFG" transparent="1">
+		<widget source="session.Event_Next" render="Label" position="30,975" size="720,35" font="Regular;33" halign="left" foregroundColor="secondFG" transparent="1">
 			<convert type="EventName">NameNext</convert>
 		</widget>
 	</screen>
@@ -429,7 +429,7 @@
 		<widget name="date" position="780,100" size="1110,38" font="Regular;34" transparent="1" valign="center" halign="center"/>
 		<widget name="list" position="780,210" size="1110,798" itemHeight="38" setEventItemFont="Regular;28" setEventTimeFont="Regular;22"
 						setColWidths="350,150" setColGap="20" setTimeWidth="135" setIconDistance="10" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget source="Event" render="Label" position="30,562" size="720,450" backgroundColor="background" transparent="1" font="Regular;30" halign="block">
+		<widget source="Event" render="Label" position="30,562" size="720,450" backgroundColor="background" transparent="1" font="Regular;33" halign="block">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget name="now_button" pixmap="Simple_Ten_Eighty/border/epg_off.png" position="810,145" zPosition="2" size="225,50" alphatest="blend"/>
@@ -489,7 +489,7 @@
 		<widget source="Event" render="Progress" pixmap="Simple_Ten_Eighty/infobar/pbar.png" position="780,147" size="1110,12" transparent="0" borderWidth="0" backgroundColor="un33333a">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="Event" render="Label" position="780,165" size="1110,320" backgroundColor="background" transparent="1" font="Regular;28" halign="block">
+		<widget source="Event" render="Label" position="780,165" size="1110,320" backgroundColor="background" transparent="1" font="Regular;33" halign="block">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget source="Event" render="Label" position="780,510" size="1110,30" foregroundColor="blue" backgroundColor="background" transparent="1" font="Regular;27" halign="left">
@@ -870,7 +870,7 @@
 		<widget source="ServiceEvent" render="Label" position="30,528" size="720,30" font="Regular;30" foregroundColor="secondFG" halign="center" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="30,120" size="765,623" font="Regular;28" foregroundColor="grey">
+		<widget source="session.Event_Now" render="Label" position="30,120" size="765,623" font="Regular;33" foregroundColor="grey">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget source="RdsDecoder" render="Pixmap" pixmap="skin_default/icons/rass_logo.png" position="30,575" size="150,90" zPosition="2" alphatest="on">
@@ -2284,6 +2284,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 		<panel name="PigTemplate"/>
 		<widget name="text" position="780,105" size="1100,35" font="Regular;33" />
 		<widget name="entries" position="780,160" size="1100,570" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" />
+	</screen>
+
+	<screen name="CIselectMainMenu" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<widget name="CiList" position="780,105" size="1100,570" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="CIselectMainMenu" position="fill" flags="wfNoBorder">
