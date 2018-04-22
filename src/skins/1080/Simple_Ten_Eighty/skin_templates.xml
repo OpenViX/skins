@@ -81,58 +81,114 @@
 		</widget>
 	</screen>
 
-	<!-- Button Templates -->
+	<!-- VKeyIconPanel -->
+	<screen name="VKeyIconPanel">
+		<widget source="VKeyIcon" conditional="VKeyIcon" render="Pixmap" pixmap="skin_default/buttons/key_text.png" alphatest="blend" position="30,1031" size="52,38">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
 
-	<screen name="ButtonGraphicTemplate">
-		<!-- Red button png -->
+	<!-- Button Graphic Templates -->
+
+	<!-- Red button png -->
+	<screen name="ButtonGraphicRed">
 		<widget objectTypes="key_red,StaticText" source="key_red" render="Pixmap" pixmap="Simple_Ten_Eighty/buttons/red.png" position="192,1032" size="34,34" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<ePixmap objectTypes="key_red,Button,Label" pixmap="Simple_Ten_Eighty/buttons/red.png" position="192,1032" size="34,34" alphatest="blend"/>
-		
-		<!-- Green button png -->
+	</screen>
+
+	<!-- Green button png -->
+	<screen name="ButtonGraphicGreen">
 		<widget objectTypes="key_green,StaticText" source="key_green" render="Pixmap" pixmap="Simple_Ten_Eighty/buttons/green.png" position="628,1032" size="34,34" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<ePixmap objectTypes="key_green,Button,Label" pixmap="Simple_Ten_Eighty/buttons/green.png" position="628,1032" size="34,34" alphatest="blend"/>
-		
-		<!--Yellow button png -->
+	</screen>
+
+	<!--Yellow button png -->
+	<screen name="ButtonGraphicYellow">
 		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Pixmap" pixmap="Simple_Ten_Eighty/buttons/yellow.png" position="1064,1032" size="34,34" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<ePixmap objectTypes="key_yellow,Button,Label" pixmap="Simple_Ten_Eighty/buttons/yellow.png" position="1064,1032" size="34,34" alphatest="blend"/>
-		
-		<!-- Blue button png -->
+	</screen>
+
+	<!-- Blue button png -->
+	<screen name="ButtonGraphicBlue">
 		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Pixmap" pixmap="Simple_Ten_Eighty/buttons/blue.png" position="1500,1032" size="34,34" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<ePixmap objectTypes="key_blue,Button,Label" pixmap="Simple_Ten_Eighty/buttons/blue.png" position="1500,1032" size="34,34" alphatest="blend"/>
 	</screen>
 
-	<screen name="ButtonTextTemplate">
-		<!-- Red button text -->
+	<!-- Red button text -->
+	<screen name="ButtonTextRed">
 		<widget objectTypes="key_red,Label,Button" name="key_red" position="242,1030" size="370,38" backgroundColor="black" zPosition="1" transparent="1" font="Regular;34" halign="left"/>
 		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="242,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34" halign="left"/>
+	</screen>
 
-		<!-- Green button text -->
+	<!-- Green button text -->
+	<screen name="ButtonTextGreen">
 		<widget objectTypes="key_green,Label,Button" name="key_green" position="678,1030" size="370,38" backgroundColor="black" zPosition="1" transparent="1" font="Regular;34" halign="left"/>
 		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="678,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34" halign="left"/>
+	</screen>
 
-		<!-- Yellow button text -->
+	<!-- Yellow button text -->
+	<screen name="ButtonTextYellow">
 		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="1114,1030" size="370,38" backgroundColor="black" zPosition="1" transparent="1" font="Regular;34" halign="left"/>
 		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="1114,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34" halign="left"/>
-
-		<!-- Blue button text -->
+	</screen>
+	<!-- Blue button text -->
+	<screen name="ButtonTextBlue">
 		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="1550,1030" size="370,38" backgroundColor="black" zPosition="1" transparent="1" font="Regular;34" halign="left"/>
 		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="1550,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34" halign="left"/>
 	</screen>
-	
+
+	<!-- Individual Button Templates -->
+	<screen name="ButtonRed">
+		<panel name="ButtonGraphicRed"/>
+		<panel name="ButtonTextRed"/>
+	</screen>
+
+	<screen name="ButtonGreen">
+		<panel name="ButtonGraphicGreen"/>
+		<panel name="ButtonTextGreen"/>
+	</screen>
+
+	<screen name="ButtonYellow">
+		<panel name="ButtonGraphicYellow"/>
+		<panel name="ButtonTextYellow"/>
+	</screen>
+
+	<screen name="ButtonBlue">
+		<panel name="ButtonGraphicBlue"/>
+		<panel name="ButtonTextBlue"/>
+	</screen>
+
+	<!-- Button Template -->
 	<screen name="ButtonTemplate">
-		<panel name="ButtonGraphicTemplate"/>
-		<panel name="ButtonTextTemplate"/>
+		<panel name="ButtonRed"/>
+		<panel name="ButtonGreen"/>
+		<panel name="ButtonYellow"/>
+		<panel name="ButtonBlue"/>
 		<panel name="KeyMenuAutoTemplate"/>
 		<panel name="KeyInfoAutoTemplate"/>
 		<panel name="VKeyIconPanel"/>
+	</screen>
+
+	<screen name="ButtonGraphicTemplate">
+		<panel name="ButtonGraphicRed"/>
+		<panel name="ButtonGraphicGreen"/>
+		<panel name="ButtonGraphicYellow"/>
+		<panel name="ButtonGraphicBlue"/>
+	</screen>
+
+	<screen name="ButtonTextTemplate">
+		<panel name="ButtonTextRed"/>
+		<panel name="ButtonTextGreen"/>
+		<panel name="ButtonTextYellow"/>
+		<panel name="ButtonTextBlue"/>
 	</screen>
 
 	<screen name="KeyMenuAutoTemplate"><!-- show with Components.Sources.Boolean -->
@@ -222,13 +278,6 @@
 		<widget name="HelpWindow" conditional="HelpWindow" pixmap="skin_default/vkey_icon.png" position="3,310" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
 		<widget name="introduction" conditional="introduction" position="0,0" size="0,0"/><!-- Hidden -->
 		<!-- VKeyIcon is imported with buttonbar -->
-	</screen>
-
-<!-- VKeyIconPanel -->
-	<screen name="VKeyIconPanel">
-		<widget source="VKeyIcon" conditional="VKeyIcon" render="Pixmap" pixmap="skin_default/buttons/key_text.png" alphatest="blend" position="30,1031" size="52,38">
-			<convert type="ConditionalShowHide"/>
-		</widget>
 	</screen>
 
 <!-- Hideable buttons -->
