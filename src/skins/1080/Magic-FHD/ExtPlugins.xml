@@ -164,6 +164,26 @@
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
+	<screen name="filtersServicesSetup" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="OKBPanel"/>
+		<widget source="list" render="Listbox" position="735,120" size="1177,855" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 5), size = (420, 23), font = 0, flags = RT_HALIGN_LEFT, text = 0),
+						MultiContentEntryText(pos = (50, 25), size = (380, 20), font = 1, flags = RT_HALIGN_LEFT, text = 1),
+						MultiContentEntryText(pos = (100, 47), size = (400, 17), font = 2, flags = RT_HALIGN_LEFT, text = 2),
+					],
+				 "fonts": [gFont("Regular", 21), gFont("Regular", 19), gFont("Regular", 16)],
+				 "itemHeight": 65
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="filtersServicesSelection" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
 
 	<!-- ## Foreca Weather forecast ## -->
 	<!--Templates-->
