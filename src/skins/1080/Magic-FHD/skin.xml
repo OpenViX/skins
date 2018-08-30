@@ -184,6 +184,7 @@
 	<screen name="SecondInfoBar" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
 		<panel name="InfoBarPanel"/>
 		<panel name="ButtonPanel"/>
+		<panel name="HelpBPanel"/>
 		<eLabel backgroundColor="black" position="0,0" size="1920,2" zPosition="5"/> # Permanent hiding of VBI-lines
 		<widget source="session.CurrentService" render="Label" position="7,7" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack" halign="left">
 			<convert type="PliExtraInfo">ServiceRef</convert>
@@ -468,6 +469,7 @@
 		<panel name="BasicTemplate"/>
 		<panel name="InfoBPanel"/>
 		<panel name="MenuBPanel"/>
+		<panel name="HelpBPanel"/>
 		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"/>
 		<widget name="number" position="755,123" size="1157,810" font="Regular;54" zPosition="5" valign="center" halign="center"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="1"/>
@@ -611,9 +613,10 @@
 		<widget name="key_red" position="55,250" size="400,45" foregroundColor="buttonred" backgroundColor="secondBG" transparent="1" font="buttons;33" halign="left"/>
 		<widget name="key_green" position="490,250" size="400,45" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1" font="buttons;33" halign="left"/>
 		<widget name="key_yellow" position="930,250" size="400,45" foregroundColor="buttonyellow" backgroundColor="secondBG" transparent="1" font="buttons;33" halign="left"/>
-		<widget name="key_blue" position="1370,250" size="400,45" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1" font="buttons;33" halign="left"/>
-		<ePixmap pixmap="buttons/key_menu.png" position="1777,250" size="52,37" alphatest="on"/>
-		<ePixmap pixmap="buttons/key_info.png" position="1830,250" size="52,37" alphatest="on"/>
+		<widget name="key_blue" position="1370,250" size="390,45" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1" font="buttons;33" halign="left"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="1762,250" size="52,37" alphatest="on"/>
+		<ePixmap pixmap="buttons/key_info.png" position="1815,250" size="52,37" alphatest="on"/>
+		<ePixmap pixmap="buttons/key_help.png" position="1868,250" size="52,37" alphatest="on"/>
 		<widget source="Title" render="Label" position="30,15" size="1275,50" font="Regular;36" transparent="1" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2"/>
 		<widget name="lab1" position="0,75" size="1920,172" font="Regular;33" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="timeline_text" position="0,75" size="1920,45" itemHeight="45" TimelineFont="Regular;30" backgroundColor="black" foregroundColor="orange" transparent="1" zPosition="0"/>
@@ -629,6 +632,7 @@
 		<panel name="ButtonPanel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
+		<panel name="HelpBPanel"/>
 		<widget name="timeline_text" position="7,93" size="1905,36" TimelineFont="Regular;29" foregroundColor="selectedFG"/>
 		<widget name="lab1" position="0,82" size="1920,727" font="Regular;36" halign="center" valign="center" zPosition="20"/>
 		<widget name="list" position="7,135" size="1905,712" ServiceFontGraphical="channelselectionservice;30" EntryFontGraphical="channelselectionevent;30"
@@ -672,6 +676,7 @@
 		<panel name="ButtonPanel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
+		<panel name="HelpBPanel"/>
 		<widget source="Event" render="Label" position="472,7" size="150,50" font="Regular;36" foregroundColor="selectedFG" halign="right">
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText"/>
@@ -718,6 +723,7 @@
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
+		<panel name="HelpBPanel"/>
 <!--		<ePixmap pixmap="dvr/scale716.png" position="0,175" size="716,18" zPosition="1" alphatest="on"/>
 		<eLabel backgroundColor="transpBlack" position="0,179" size="723,10" zPosition="5"/>-->
 		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
@@ -1168,7 +1174,7 @@
 		<widget name="key0" position="183,183" size="315,60" font="RegularSmall;30" valign="center" halign="center"/>
 		<widget name="help2" position="498,183" size="180,60" font="RegularSmall;30" valign="center" halign="center"/>
 	</screen>
-	<screen name="VirtualKeyBoard" position="fill" zPosition="99" flags="wfNoBorder">
+ 	<screen name="VirtualKeyBoard" position="fill" zPosition="99" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="header" position="978,125" size="750,39" transparent="1" noWrap="1" font="Regular;30"/>
 		<widget name="text" position="980,420" size="800,51" noWrap="1" font="Regular;40" foregroundColor="grey" halign="center" valign="center"/>
@@ -1413,6 +1419,7 @@
 	</screen>
 	<screen name="AdapterSetupConfiguration" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="HelpBPanel"/>
 		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="Statustext" render="Label" position="474,945" size="300,40" font="Regular;36" halign="right" foregroundColor="grey"/>
 		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="787,958" size="23,24" alphatest="on"/>
@@ -1422,6 +1429,7 @@
 	</screen>
 	<screen name="AdapterSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="HelpBPanel"/>
 		<widget name="config" position="780,123" size="1132,405" itemHeight="50" font="Regular;36" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="DNS1text" render="Label" position="1252,575" size="285,37" font="Regular;31" foregroundColor="grey" halign="left"/>
 		<widget source="DNS2text" render="Label" position="1252,620" size="285,37" font="Regular;31" foregroundColor="grey" halign="left"/>
@@ -1438,6 +1446,7 @@
 	</screen>
 	<screen name="NameserverSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<panel name="HelpBPanel"/>
 		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="NetworkAdapterTest" position="fill" flags="wfNoBorder">
@@ -2005,6 +2014,8 @@
 	<screen name="AutoTimerOverview" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
+		<panel name="OKBPanel"/>
+		<panel name="HelpBPanel"/>
 		<widget name="entries" position="735,124" size="1177,880" itemHeight="80" rowSplit1="40" rowSplit2="40" rowHeight="35" iconMargin="5" EventNameFont="Regular;32"
 		ServiceNameFont="Regular;32" DayNameFont="Regular;28" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2" foregroundColor="grey"/>
 	</screen>
