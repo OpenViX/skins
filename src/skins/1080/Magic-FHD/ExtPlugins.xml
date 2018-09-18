@@ -829,6 +829,76 @@
 		<widget name="plugin" position="1000,700" size="533,300" alphatest="blend"/>
 	</screen>
 
+	<!-- ## MovieManager ## -->
+	<screen name="MovieManager" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="MenuBPanel"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="0,135" size="135,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="left">
+			<convert type="ServicePosition">Position,ShowHours</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="540,135" size="175,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="right">
+			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+		</widget>
+		<widget name="config" position="735,120" size="1177,765" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget source="Service" render="Label" position="735,888" size="465,40" font="Regular;30" foregroundColor="selectedFG">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1205,888" size="230,40" font="Regular;30" foregroundColor="selectedFG" halign="right">
+			<convert type="ServiceTime">StartTime</convert>
+			<convert type="ClockToText">ShortDate</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1445,888" size="200,40" font="Regular;30" foregroundColor="selectedFG" halign="left">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1775,888" size="125,40" font="Regular;30" foregroundColor="selectedFG" halign="right">
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
+		<widget name="number" position="1340,928" size="250,40" font="Regular;30" foregroundColor="secondFG" halign="right"/>
+		<widget name="size" position="1600,928" size="300,40" font="Regular;30" foregroundColor="secondFG" halign="right"/>
+		<widget source="Service" render="Label" position="735,968" size="1177,45" font="Regular;33" foregroundColor="selectedFG" halign="center">
+			<convert type="MovieInfo">ShortDescription</convert>
+		</widget>
+	</screen>
+
+	<!-- ## MovieManager ## -->
+	<screen name="MovieManager" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="MenuBPanel"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="0,135" size="135,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="left">
+			<convert type="ServicePosition">Position,ShowHours</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="540,135" size="175,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="right">
+			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+		</widget>
+		<widget name="config" position="735,120" size="1177,765" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget source="Service" render="Label" position="735,888" size="465,40" font="Regular;30" foregroundColor="selectedFG">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1205,888" size="230,40" font="Regular;30" foregroundColor="selectedFG" halign="right">
+			<convert type="ServiceTime">StartTime</convert>
+			<convert type="ClockToText">ShortDate</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1445,888" size="200,40" font="Regular;30" foregroundColor="selectedFG" halign="left">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1775,888" size="125,40" font="Regular;30" foregroundColor="selectedFG" halign="right">
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
+		<widget name="number" position="1340,928" size="250,40" font="Regular;30" foregroundColor="secondFG" halign="right"/>
+		<widget name="size" position="1600,928" size="300,40" font="Regular;30" foregroundColor="secondFG" halign="right"/>
+		<widget source="Service" render="Label" position="735,968" size="1177,45" font="Regular;33" foregroundColor="selectedFG" halign="center">
+			<convert type="MovieInfo">ShortDescription</convert>
+		</widget>
+	</screen>
+
 	<!-- ## MovieBrowser ## -->
 	<screen name="movieBrowserConfig" position="fill" flags="wfNoBorder" title="Movie Browser Setup">
 		<panel name="BasicTemplate"/>
