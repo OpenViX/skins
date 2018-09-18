@@ -868,6 +868,8 @@
 	<screen name="MovieManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<panel name="HelpBPanel"/>
 		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
@@ -877,7 +879,7 @@
 		<widget source="session.CurrentService" render="Label" position="540,135" size="175,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="right">
 			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
 		</widget>
-		<widget name="config" position="735,120" size="1177,765" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="config" position="735,120" size="1177,765" font="Regular;31" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget source="Service" render="Label" position="735,888" size="465,40" font="Regular;30" foregroundColor="selectedFG">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
@@ -897,6 +899,39 @@
 		<widget source="Service" render="Label" position="735,968" size="1177,45" font="Regular;33" foregroundColor="selectedFG" halign="center">
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
+	</screen>
+	<screen name="MovieManagerClearBookmarks" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="HelpBPanel"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;31" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="description" position="7,530" size="715,475" font="Regular;31" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+<!--	<screen name="MovieManagerFileInfo" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="name" position="735,120" size="1177,45" font="Regular;31"/>
+		<widget name="path" position="735,170" size="1177,45" font="Regular;31" foregroundColor="green"/>
+		<widget source="service" render="Label" position="735,220" size="500,45" font="Regular;31" foregroundColor="grey">
+			<convert type="ServiceTime">StartTime</convert>
+			<convert type="ClockToText">Format:%a %d.%m.%Y, %H:%M</convert>
+		</widget>
+		<widget source="service" render="Label" position="1240,220" size="675,45" font="Regular;31" foregroundColor="grey">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget name="size" position="735,270" size="200,45" font="Regular;31" foregroundColor="blue"/>
+		<widget source="service" render="Label" position="940,270" size="200,45" foregroundColor="grey" font="Regular;31">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLengthHours</convert>
+		</widget>
+		<widget source="service" render="Label" position="1150,270" size="200,45" foregroundColor="grey" font="Regular;31">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget name="play" position="1355,270" size="100,45" font="Regular;31" foregroundColor="yellow"/>
+	</screen>-->
+	<screen name="MovieManagerCfg" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="HelpBPanel"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;31" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 
 	<!-- ## MovieBrowser ## -->
