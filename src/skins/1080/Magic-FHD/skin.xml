@@ -31,6 +31,7 @@
 		<alias name="ServiceInfo" font="Regular" size="33" height="50"/>
 		<alias name="SelectionList" font="Regular" size="33" height="40"/>
 		<alias name="VirtualKeyboard" font="buttons" size="36" height="68"/>
+		<alias name="VirtualKeyBoard" font="buttons" size="36" height="68"/>
 	</fonts>
 
 	<parameters>
@@ -103,6 +104,9 @@
 <!--	- the pixel width of letter-pic(A)??-->
 <!--	- the pixel height of letter-pic(B)-->
 		<parameter name="VirtualKeyboard" value="68,68"/>
+		<parameter name="VirtualKeyBoard" value="68,68"/>
+<!--	<parameter name="VirtualKeyBoardShiftColors" value="white,blue,orange,green"/>
+		colors of the 4 shift-levels -->
 	</parameters>
 
 	<!--	## Colors ## -->
@@ -1145,6 +1149,19 @@
 		<ePixmap pixmap="buttons/vkey_text.png" position="970,410" size="816,78" alphatest="on"/>
 		<widget name="list" position="970,500" size="816,338" transparent="1" selectionDisabled="1"/>
 	</screen>
+<!--	<screen name="VirtualKeyBoard" position="fill" zPosition="99" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<panel name="HelpBPanel"/>
+		<widget name="prompt" position="870,200" size="952,45" noWrap="1" font="Regular;33" foregroundColor="grey" halign="center" valign="center"/>
+		<ePixmap pixmap="buttons/vkey_text.png" position="866,410" size="960,50" alphatest="on"/>
+		<widget name="text" position="870,410" size="952,50" noWrap="1" font="Regular;35" foregroundColor="grey" halign="center" valign="center"/>
+		<widget name="list" position="870,500" size="952,340" selectionDisabled="1"/>
+		<widget name="mode" position="870,900" size="952,45" font="Regular;33" foregroundColor="selectedFG" valign="center" halign="center"/>
+		<widget name="locale" position="7,880" size="715,45" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="language" position="7,930" size="715,45" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>-->
 	<screen name="SubservicesQuickzap" position="607,492" size="705,96" backgroundColor="transpBlack" flags="wfNoBorder">
 		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="675,4" size="21,21" zPosition="2" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
