@@ -35,6 +35,7 @@
 		<alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38"/>
 		<alias name="PartnerBoxChannelEPGList1" font="Regular" size="24"/>
 		<alias name="VirtualKeyboard" font="Regular" size="42" height="68"/>
+		<alias name="VirtualKeyBoard" font="Regular" size="42" height="68"/>
 		<alias name="HelpMenuList" font="Regular" size="30" height="45"/>
 		<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
 		<alias name="HelpMenuListExt1" font="Regular" size="28"/>
@@ -92,6 +93,7 @@
 		<parameter name="FallbackReceiverListName" value="8,2,225,38"/>
 		<parameter name="FallbackReceiverListIP" value="300,2,225,38"/>
 		<parameter name="VirtualKeyboard" value="68,68"/>
+		<parameter name="VirtualKeyBoard" value="68,68"/>
 		<parameter name="PluginBrowserIcon" value="3,0,150,65"/>
 		<parameter name="PluginBrowserName" value="180,0,39"/>
 		<parameter name="PluginBrowserDescr" value="180,35,30"/>
@@ -2095,10 +2097,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 
 	<screen name="VirtualKeyBoard" position="fill" zPosition="99" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<ePixmap pixmap="skin_default/vkey_text.png" position="927,235" size="816,78" zPosition="-4" alphatest="on"/>
-		<widget name="header" position="930,120" size="810,39" transparent="1" noWrap="1" font="Regular;33" valign="top"/>
-		<widget name="text" position="930,255" size="804,51" transparent="1" noWrap="1" font="Regular;38" valign="center" halign="right"/>
-		<widget name="list" position="930,375" size="816,343" selectionDisabled="1" transparent="1"/>
+		<widget name="prompt" position="930,120" size="810,39" font="Regular;33" noWrap="1" transparent="1" valign="top"/>
+		<ePixmap pixmap="buttons/vkey_text.png" position="926,235" size="960,50" alphatest="on" zPosition="-4"/>
+		<widget name="text" position="930,236" size="952,48" font="Regular;38" halign="right" noWrap="1" transparent="1" valign="center"/>
+		<widget name="list" position="930,375" size="952,340" selectionDisabled="1" transparent="1"/>
+		<widget name="locale" position="930,800" size="800,39" font="Regular;33" foregroundColor="#a08500" transparent="1"/>
+		<widget name="mode" position="1782,740" size="100,39" font="Regular;33" halign="right" transparent="1" valign="center"/>
+		<widget name="language" position="0,0" size="0,0" font="Regular;33" foregroundColor="#a08500" halign="right" transparent="1"/>
 	</screen>
 
 	<!-- AC3LipSyncSetup -->
