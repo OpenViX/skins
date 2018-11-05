@@ -213,6 +213,7 @@ src/skins/720/ViX-Day-HD/Makefile
 src/skins/720/ViX-Day-HD/crossepg/Makefile
 src/skins/720/ViX-Day-HD/epg/Makefile
 src/skins/720/ViX-Day-HD/icons/Makefile
+src/skins/720/ViX-Day-HD/buttons/Makefile
 src/skins/720/ViX-Day-HD/infobar/Makefile
 src/skins/720/ViX-Day-HD/menu/Makefile
 src/skins/720/ViX-Day-HD/meta/Makefile
@@ -222,6 +223,7 @@ src/skins/720/ViX-Night-HD/Makefile
 src/skins/720/ViX-Night-HD/crossepg/Makefile
 src/skins/720/ViX-Night-HD/epg/Makefile
 src/skins/720/ViX-Night-HD/icons/Makefile
+src/skins/720/ViX-Night-HD/buttons/Makefile
 src/skins/720/ViX-Night-HD/menu/Makefile
 src/skins/720/ViX-Night-HD/meta/Makefile
 
