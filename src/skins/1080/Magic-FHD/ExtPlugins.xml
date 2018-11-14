@@ -534,7 +534,12 @@
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="755,120" size="1155,630" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="Frontend" position="755,755" size="1155,45" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-	</screen>
+<!--
+		<widget source="session.FrontendStatus" render="Progress" position="755,755" size="180,15" pixmap="bar_snr.png" zPosition="10" backgroundColor="transpBlack" transparent="1" borderWidth="2" borderColor="grey">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+-->
+		</screen>
 	<!-- ## DreamExplorer ## -->
 	<screen name="DreamExplorerII" position="fill" flags="wfNoBorder" title="Dream-Explorer">
 		<panel name="BasicTemplate"/>
@@ -586,7 +591,7 @@
 	</screen>
 
 	<!-- ## VU BLUETOOTH SETUP ## -->
-	<screen name="BluetoothSetup" position="fill" flags="wfNoBorder">
+	<screen name="BluetoothSetupScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget source="deviceList" render="Listbox" position="735,120" size="1177,855" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
@@ -594,7 +599,7 @@
 				[
 					MultiContentEntryText(pos = (120,0), size = (1100,65), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 0 is Name
 					MultiContentEntryText(pos = (120,65), size = (300,40), font=2, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is Type
-					MultiContentEntryText(pos = (420,65), size = (300,40), font=2, flas = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 1 is status
+					MultiContentEntryText(pos = (420,65), size = (300,40), font=2, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 1 is status
 					MultiContentEntryPixmapAlphaTest(pos = (5,15), size = (75,75), png = 4), # index 4 is bt_icon
 				],
 				"fonts": [gFont("Regular",40), gFont("Regular",33) ,gFont("Regular",30), gFont("Regular",24)],
@@ -607,7 +612,7 @@
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
-	<screen name="BluetoothDiscovery" position="fill" flags="wfNoBorder">
+	<screen name="BluetoothDiscoveryScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget source="deviceList" render="Listbox" position="735,120" size="1177,855" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
@@ -621,6 +626,19 @@
 			}
 			</convert>
 		</widget>
+	</screen>
+	<screen name="BluetoothRCUSetup" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="deviceList" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+	<screen name="VuRcuOtaUpdate" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="battery_check" position="735,120" size="600,50" font="Regular;33" foregroundColor="grey"/>
+		<widget name="app_version" position="735,180" size="600,50" font="Regular;33" foregroundColor="grey"/>
+		<widget name="new_app_version" position="735,240" size="600,50" font="Regular;33" foregroundColor="grey"/>
+		<widget name="text" position="735,300" size="600,100" font="Regular;33" foregroundColor="grey"/>
+		<widget name="progress" position="735,500" size="600,50" borderWidth="3" borderColor="white" />
 	</screen>
 
 	<!-- ## BUFFER INDICATOR ## -->
