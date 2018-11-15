@@ -1463,7 +1463,10 @@
 
 	<screen name="BlindscanScreen" title="Blind scan" position="fill" flags="wfNoBorder"><!-- OpenViX version -->
 		<panel name="SetupPanelPIG"/>
-		<!-- add FrontendState here -->
+		<widget text="LOCK" source="Frontend" render="FixedLabel" position="810,950" size="160,50" font="Regular;46" zPosition="1" halign="left" foregroundColor="green" backgroundColor="darkgrey" transparent="1" >
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
 
 	<screen name="Blindscan" position="fill" title="Blind scan"><!-- OpenPLi version -->
