@@ -532,14 +532,12 @@
 	</screen>
 	<screen name="BlindscanScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="755,120" size="1155,630" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<widget name="Frontend" position="755,755" size="1155,45" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-<!--
-		<widget source="session.FrontendStatus" render="Progress" position="755,755" size="180,15" pixmap="bar_snr.png" zPosition="10" backgroundColor="transpBlack" transparent="1" borderWidth="2" borderColor="grey">
-			<convert type="FrontendInfo">SNR</convert>
+		<widget name="config" position="755,120" size="1155,765" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget text="LOCK" source="Frontend" render="FixedLabel" position="755,890" size="1155,60" font="Regular;46" halign="center" foregroundColor="green">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide"/>
 		</widget>
--->
-		</screen>
+	</screen>
 	<!-- ## DreamExplorer ## -->
 	<screen name="DreamExplorerII" position="fill" flags="wfNoBorder" title="Dream-Explorer">
 		<panel name="BasicTemplate"/>
