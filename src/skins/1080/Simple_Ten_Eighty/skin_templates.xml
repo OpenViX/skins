@@ -274,11 +274,17 @@
 		<widget source="description" render="Label" objectTypes="description,StaticText" position="30,570" size="720,300" font="Regular;32" valign="top" halign="block"/>
 	</screen>
 
+	<screen name="FootnoteTemplate">
+		<widget name="footnote" objectTypes="footnote,Button,Label" position="30,880" zPosition="1000" size="720,100" font="Regular;32" valign="top" halign="block"/>
+		<widget source="footnote" render="Label" objectTypes="footnote,StaticText" position="30,880" zPosition="1" size="720,100" font="Regular;32" valign="top" halign="block"/>
+	</screen>
+
 <!-- Setup Panel PIG template -->
 	<screen name="SetupPanelPIG">
 		<panel name="PigTemplate"/>
 		<panel name="ConfigTemplate"/>
 		<panel name="DescriptionTemplate"/>
+		<panel name="FootnoteTemplate"/>
 		<widget name="HelpWindow" conditional="HelpWindow" pixmap="skin_default/vkey_icon.png" position="3,310" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
 		<widget name="introduction" conditional="introduction" position="0,0" size="0,0"/><!-- Hidden -->
 		<!-- VKeyIcon is imported with buttonbar -->
