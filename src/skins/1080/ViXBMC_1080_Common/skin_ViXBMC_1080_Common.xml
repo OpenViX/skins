@@ -2094,7 +2094,6 @@
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenDescriptionWidget" />
 		<panel name="FullScreenHelpwindowWidget" />
-		<panel name="SetupMenuVirtualKeyboardVkey" />
 		<widget name="canceltext" position="0,1020" size="480,60" font="menulist;40" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2"/>
 		<widget name="oktext" position="480,1020" size="480,60" font="menulist;40" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2"/>	
 	</screen>
@@ -2184,12 +2183,15 @@
 	</screen>
 
 	<!-- ## VIRTUAL KEYBOARD ## -->
-	<screen name="VirtualKeyBoard" position="center,center" size="850,440" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
-		<ePixmap pixmap="ViXBMC_1080_Common/infobar/keyboard.png" position="0,0" size="850,440" alphatest="blend" zPosition="1"/>
-		<widget name="header" position="20,10" size="825,20" font="menulist;20" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" zPosition="2" />
-		<widget name="text" position="20,16" size="825,60" font="screentitle;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" zPosition="2" />
-		<widget name="list" position="15,78" size="830,470" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" selectionDisabled="1" zPosition="2" />
-	</screen>
+        <screen name="VirtualKeyBoard" position="fill" flags="wfNoBorder" zPosition="99">
+                <ePixmap pixmap="ViXBMC_1080_Common/infobar/keyboard.png" position="501,332" size="978,440" alphatest="blend" zPosition="1"/>
+                <widget name="prompt" position="514,290" size="952,39" font="menulist;33" noWrap="1" transparent="1" valign="top"/>
+                <widget name="text" position="514,360" size="952,60" font="screentitle;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" zPosition="2" />
+                <widget name="list" position="514,420" size="952,340" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" selectionDisabled="1" zPosition="2" />
+                <widget name="locale" position="514,780" size="800,39" font="menulist;33" foregroundColor="#a08500" transparent="1"/>
+                <widget name="language" position="514,820" size="800,39" font="menulist;33" foregroundColor="#a08500" transparent="1"/>
+                <widget name="mode" position="1400,800" size="68,39" font="menulist;33" halign="right" transparent="1" valign="center"/>
+        </screen>
 
 	<!-- ## ViX MENU ## -->
 	<screen name="VIXMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
