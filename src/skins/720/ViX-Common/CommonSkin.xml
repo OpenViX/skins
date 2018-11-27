@@ -690,11 +690,21 @@ self.autoResize()
 		<panel name="FullscreenTitlePanel"/>
 		<widget name="list" position="60,80" size="503,560" transparent="0" selectionPixmap="ViX-Common/buttons/FocusBar_H60x503.png" scrollbarMode="showOnDemand"/>
 		<widget name="rc" pixmaps="rc.png,rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend" transparent="0"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="long_key" position="760,600" size="180,40" font="Regular;20" halign="right" foregroundColor="yellow" transparent="0"/>
+		<!--+ For the key indicator pixmaps, "position" is used for
+		    | the position of the pixmap "hotspot".
+		    | The screen positions the pixmap relative to the
+		    | hotspot, not the pixmap's top left corner
+		    +-->
+		<widget alphatest="blend" name="indicator_u0" pixmap="ViX-Common/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u1" pixmap="ViX-Common/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u2" pixmap="ViX-Common/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u3" pixmap="ViX-Common/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l0" pixmap="ViX-Common/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l1" pixmap="ViX-Common/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l2" pixmap="ViX-Common/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l3" pixmap="ViX-Common/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget name="longshift_key0" position="660,600" size="280,25" font="Regular;20" halign="right" foregroundColor="yellow" transparent="0"/>
+		<widget name="longshift_key1" position="660,625" size="280,25" font="Regular;20" halign="right" foregroundColor="yellow" transparent="0"/>
 	</screen>
 	<screen name="InputBox" position="center,center" size=" 600, 95">
 		<widget name="text" position="10,10" size="580,30" font="Regular;24"/>
