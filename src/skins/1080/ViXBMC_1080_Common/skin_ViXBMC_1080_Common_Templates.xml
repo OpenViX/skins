@@ -199,7 +199,7 @@
 		<widget name="VKeyIcon" pixmap="buttons/key_text.png" position="900,290" size="67,48" alphatest="blend" transparent="1" zPosition="3" />
 	</screen>
 	<screen name="FullScreenTextButtonVKeySource">
-		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="900,290" size="67,48" alphatest="blend" transparent="1" zPosition="3" >
+		<widget source="VKeyIcon" conditional="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="900,290" size="67,48" alphatest="blend" transparent="1" zPosition="3" >
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
@@ -255,7 +255,7 @@
 		<widget name="footnote" position="570,950" size="300,50" font="screentitle;28" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="3" />
 	</screen>
 	<screen name="FullScreenHelpwindowWidget">
-		<widget name="HelpWindow" position="1220,750" size="541,720" backgroundColor="menubackground" transparent="0" alphatest="blend" zPosition="3" />
+		<widget name="HelpWindow" conditional="HelpWindow" position="1220,750" size="541,720" backgroundColor="menubackground" transparent="0" alphatest="blend" zPosition="3" />
 	</screen>
 	<screen name="FullScreenRedButton">
 		<widget name="key_red" position="0,1020" size="480,60" font="menulist;40" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="3" />
