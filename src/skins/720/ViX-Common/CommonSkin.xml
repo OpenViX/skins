@@ -688,7 +688,45 @@ self.autoResize()
 	<screen name="HelpMenu" position="fill" flags="wfNoBorder">
 		<panel name="FullscreenTopPanel"/>
 		<panel name="FullscreenTitlePanel"/>
-		<widget name="list" position="60,80" size="503,560" transparent="0" selectionPixmap="ViX-Common/buttons/FocusBar_H60x503.png" scrollbarMode="showOnDemand"/>
+		<widget source="list" render="Listbox" position="60,80" size="503,560" transparent="0" selectionPixmap="ViX-Common/buttons/FocusBar_H60x503.png" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{
+				  "templates": {
+				    # Template for simple string help items
+				    # For headings data[1:] = [heading, None, None]
+				    # For the help entries:
+				    #     data[1:] = [None, helpText, None] for non-indented text
+				    # and data[1:] = [None, None, helpText] for indented text
+				    "default": [
+				      38,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(483, 32), font=0, text=1),
+					MultiContentEntryText(pos=(0, 0), size=(503, 28), font=1, text=2),
+					MultiContentEntryText(pos=(20, 0), size=(483, 28), font=1, text=3),
+				      ],
+				    ],
+				    # Template "extended" for list/tuple help items
+				    # For headings data[1:6] = [heading, None, None, None, None]
+				    # For the help entries:
+				    #     data[1] = None
+				    # and data[2:] = [helpText, None, extText, None] for non-indented text
+				    # and data[2:] = [None, helpText, None, extText] for indented text
+				    "extended": [
+				      50,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 9), size=(503, 32), font=0, text=1),
+					MultiContentEntryText(pos=(0, 0), size=(503, 26), font=1, text=2),
+					MultiContentEntryText(pos=(20, 0), size=(483, 26), font=1, text=3),
+					MultiContentEntryText(pos=(0, 28), size=(503, 20), color=0x009e9fa4, font=2, text=4),
+					MultiContentEntryText(pos=(20, 28), size=(483, 20), color=0x009e9fa4, font=2, text=5),
+				      ],
+				    ],
+				  },
+				  "fonts": [gFont("Regular", 28), gFont("Regular", 24), gFont("Regular", 18)],
+				  "itemHeight": 38
+				}
+			</convert>
+		</widget>
 		<widget name="rc" pixmaps="rc.png,rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend" transparent="0"/>
 		<!--+ For the key indicator pixmaps, "position" is used for
 		    | the position of the pixmap "hotspot".
