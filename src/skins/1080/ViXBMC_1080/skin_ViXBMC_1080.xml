@@ -880,37 +880,26 @@
 	</screen>
 
 	<!-- ## HELP SCREEN ## -->
-	<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="HelpMenu" position="fill" flags="wfNoBorder">
+		<panel name="__HelpMenuOld__" conditional="arrowdown"/>
+		<panel name="__HelpMenuNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__HelpMenuOld__" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel2" />
 		<panel name="SetupMenuMenuWindowIcon" />
 		<panel name="SetupMenuListWidget3" />
-		<panel name="WizardRemote" />
-		<panel name="WizardRemoteArrowDown" />
-		<panel name="WizardRemoteArrowDown2" />
-		<panel name="WizardRemoteArrowUp" />
-		<panel name="WizardRemoteArrowUp2" />
+		<panel name="WizardRemoteTemplate" />
 		<widget name="long_key" position="150,800" size="160,50" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="0" halign="center" valign="center" zPosition="2" />
 	</screen>
-
-	<!-- ## HISTORY ZAP ## -->
-	<screen name="HistoryZapSelector" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="SetupMenuPanel3" />
+	<screen name="__HelpMenuNew__" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SetupMenuPanel2" />
 		<panel name="SetupMenuMenuWindowIcon" />
-		<widget source="menu" render="Listbox" position="420,210" size="1080,600" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (265, 2), size = (10, 61), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
-						MultiContentEntryText(pos = (285, 0), size = (270, 35), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff),
-						MultiContentEntryText(pos = (665, 30), size = (450, 35), font = 2, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3, color = 0x003499cc, color_sel = 0x00ffffff),
-						MultiContentEntryText(pos = (285, 32), size = (290, 35), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 5, color = 0x003499cc, color_sel = 0x00ffffff),
-						MultiContentEntryText(pos = (285, 68), size = (840, 72), font = 3, flags = RT_HALIGN_LEFT|RT_WRAP, text = 4, color = 0x00ffffff, color_sel = 0x00ffffff),
-						MultiContentEntryPixmapAlphaBlend(pos=(10, 10), size=(220, 132), png=6, flags = BT_SCALE)
-					],
-				 "fonts": [gFont("menulist", 32), gFont("menulist", 28), gFont("screentitle", 28), gFont("screentitle", 22)],
-				 "itemHeight": 150
-				}
-			</convert>
-		</widget>
+		<panel name="SetupMenuListWidget3" />
+		<panel name="HelpMenuListWidget" />
+		<panel name="HelpMenuDescriptionWidget" />
+		<panel name="WizardRemoteTemplate" />
+		<widget name="longshift_key0" position="80,800" size="300,90" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="0" halign="center" valign="center" zPosition="2" />
+		<widget name="longshift_key1" position="80,890" size="300,90" font="screentitle;30" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="0" halign="center" valign="center" zPosition="2" />
 	</screen>
 
 	<!-- ## IMDB ## -->
@@ -1705,11 +1694,7 @@
 	<screen name="NetworkWizard" flags="wfNoBorder" position="fill" title="Network Wizard" backgroundColor="transparent" >
 		<panel name="SetupMenuPanel2" />
 		<panel name="SetupMenuMenuWindowIcon" />		
-        <panel name="WizardRemote" />
-		<panel name="WizardRemoteArrowDown" />
-		<panel name="WizardRemoteArrowDown2" />
-		<panel name="WizardRemoteArrowUp" />
-		<panel name="WizardRemoteArrowUp2" />
+		<panel name="WizardRemoteTemplate" />
 		<panel name="WizardDescriptionWidget" />	
         <panel name="WizardConfigWidget" />		
 		<panel name="WizardStringList" />

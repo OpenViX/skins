@@ -694,14 +694,191 @@ self.autoResize()
 		<widget name="initializetext" position="75,663" size="190,24" zPosition="1" font="skyreg;20" foregroundColor="white" backgroundColor="skydarkblue" halign="left" transparent="1" valign="center" />
 	</screen>
 	<screen name="HelpMenu" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="__HelpMenuOld__" conditional="arrowdown"/>
+		<panel name="__HelpMenuNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__HelpMenuOld__" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="MenuPanel" />
 		<widget name="list" position="10,107" size="503,531" font="skyreg;22" transparent="1" selectionPixmap="buttons/FocusBar_H50x503.png" scrollbarMode="showOnDemand" />
+		<panel name="RcPanel"/>
+		<widget name="long_key" position="760,600" size="180,40" font="skyreg;20" halign="right" foregroundColor="yellow" transparent="0" />
+	</screen>
+	<screen name="__HelpMenuNew__" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="MenuPanel" />
+		<!--
+			To display the extended help for the current
+			item in a description widget instead of in
+			a second line in the help list, change the
+			size of the description wizard to something
+			appropriate (e.g. "405,110") and change over
+			to the commented out "extended" template
+			below.
+		-->
+		<widget name="description" position="535,482" size="0,0" font="skyreg;20" halign="right" valign="center" transparent="0"/>
+		<widget source="list" render="Listbox" position="10,107" size="503,531" transparent="0" selectionPixmap="buttons/FocusBar_H50x503.png" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{
+				  "templates": {
+				    # Simple help with no headings ("flat")
+				    # data[1:] = [helpText]
+				    "default": [
+				      38,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(503, 28), font=1, text=1),
+				      ]
+				    ],
+				    # Simple help with headings
+				    # data[1:] = [heading, None]  # For heading entries
+				    # data[1:] = [None, helpText]  # For help entries
+				    "default+headings": [  # data[1:] = [helpText]
+				      38,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(503, 32), font=0, text=1),
+					MultiContentEntryText(pos=(20, 0), size=(483, 28), font=1, text=2),
+				      ]
+				    ],
+				    # Extended help with no headings
+				    # data[1:] = [helpText, extendedHelpText]
+				    "extended": [
+				      50,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(503, 26), font=1, text=1),
+					MultiContentEntryText(pos=(0, 28), size=(503, 20), color=0x009e9fa4, font=2, text=2),
+				      ],
+				    ],
+				    # Extended help with headings
+				    # data[1:] = [heading, None, None]  # For heading entries
+				    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				    "extended+headings": [
+				      50,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 9), size=(503, 32), font=0, text=1),
+					MultiContentEntryText(pos=(20, 0), size=(483, 26), font=1, text=2),
+					MultiContentEntryText(pos=(20, 28), size=(483, 20), color=0x009e9fa4, font=2, text=3),
+				      ],
+				    ],
+				  },
+				  "fonts": [gFont("skyreg", 28), gFont("skyreg", 24), gFont("skyreg", 18)],
+				  "itemHeight": 38
+				}
+				#{
+				# Template for use when "description" is used
+				#  "templates": {
+				#    # Simple help with no headings ("flat")
+				#    # data[1:] = [helpText]
+				#    "default": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 28), font=1, text=1),
+				#      ]
+				#    ],
+				#    # Simple help with headings
+				#    # data[1:] = [heading, None]  # For heading entries
+				#    # data[1:] = [None, helpText]  # For help entries
+				#    "default+headings": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 32), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(483, 28), font=1, text=2),
+				#      ]
+				#    ],
+				#    # Extended help with no headings
+				#    # data[1:] = [helpText, extendedHelpText]
+				#    "extended": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 28), font=1, text=1),
+				#      ]
+				#    ],
+				#    # Extended help with headings
+				#    # data[1:] = [heading, None, None]  # For heading entries
+				#    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				#    "extended+headings": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 32), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(483, 28), font=1, text=2),
+				#      ]
+				#    ],
+				#  },
+				#  "fonts": [gFont("skyreg", 28), gFont("skyreg", 24), gFont("skyreg", 18)],
+				#  "itemHeight": 38
+				#}
+				# Compact template for use when "description" is used
+				#{ "templates": dict(
+				#    dict.fromkeys(("default", "extended"), [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 28), font=1, text=1),
+				#      ]
+				#    ]).items() +
+				#    dict.fromkeys(("default+headings", "extended+headings"), [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 32), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(483, 28), font=1, text=2),
+				#      ]
+				#    ]).items()
+				#  ),
+				#  "fonts": [gFont("skyreg", 28), gFont("skyreg", 24), gFont("skyreg", 18)],
+				#  "itemHeight": 38
+				#}
+			</convert>
+		</widget>
+		<panel name="RcPanel"/>
+		<widget name="longshift_key0" position="760,592" size="180,24" font="skyreg;20" halign="right" foregroundColor="yellow" transparent="0" />
+		<widget name="longshift_key1" position="760,616" size="180,24" font="skyreg;20" halign="right" foregroundColor="yellow" transparent="0" />
+	</screen>
+	<screen name="RcPanel" position="fill" flags="wfNoBorder">
+		<panel name="__RcPanelOld__" conditional="arrowdown"/>
+		<panel name="__RcPanelNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__RcPanelOld__" position="fill" flags="wfNoBorder">
 		<widget name="rc" pixmaps="rc.png,rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend" transparent="1" />
 		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
 		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
 		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
-		<widget name="long_key" position="760,600" size="180,40" font="skyreg;20" halign="right" foregroundColor="yellow" transparent="0" />
+	</screen>
+	<screen name="__RcPanelNew__" position="fill" flags="wfNoBorder">
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend" transparent="1" />
+		<!--+ For the key indicator pixmaps, "position" is used for
+		    | the position of the pixmap "hotspot".
+		    | The screen positions the pixmap relative to the
+		    | hotspot, not the pixmap's top left corner
+		    +-->
+		<widget alphatest="blend" name="indicator_u0" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u1" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u2" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u3" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u4" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u5" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u6" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u7" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u8" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u9" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u10" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u11" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u12" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u13" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u14" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u15" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l0" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l1" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l2" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l3" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l4" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l5" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l6" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l7" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l8" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l9" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l10" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l11" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l12" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l13" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l14" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l15" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
 	</screen>
 	<screen name="HdmiCECSetupScreen" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel" />

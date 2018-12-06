@@ -31,7 +31,7 @@
 	
 	<!-- CROSSEPG TEMPLATES -->
 	<screen name="CrossEPGDownloadBar">
-		<ePixmap pixmap="YouViX-Common/screens/crossepgdownloadbox.png" position="center,965" size="800,115" zPosition="-1"/>
+		<ePixmap pixmap="YouyouViX-Common/screens/crossepgdownloadbox.png" position="center,965" size="800,115" zPosition="-1"/>
 		<widget name="action" position="center,975" size="520,30" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
 		<eLabel text="In progress" position="1020,970" size="320,30" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" transparent="1"/>
 		<widget name="status" position="center,1010" size="520,30" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
@@ -48,10 +48,10 @@
 	
 	<!-- FEEDS STATUS TEMPLATE -->
 	<screen name="FeedsStatus">
-		<widget name="tl_off" pixmap="YouViX-Common/icons/tl_off.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
-		<widget name="tl_red" pixmap="YouViX-Common/icons/tl_red.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
-		<widget name="tl_yellow" pixmap="YouViX-Common/icons/tl_yellow.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
-		<widget name="tl_green" pixmap="YouViX-Common/icons/tl_green.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
+		<widget name="tl_off" pixmap="YouyouViX-Common/icons/tl_off.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
+		<widget name="tl_red" pixmap="YouyouViX-Common/icons/tl_red.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
+		<widget name="tl_yellow" pixmap="YouyouViX-Common/icons/tl_yellow.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
+		<widget name="tl_green" pixmap="YouyouViX-Common/icons/tl_green.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
 		<widget name="feedStatusMSG" position="220,850" size="313,38" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" />
 	</screen>
 	
@@ -60,7 +60,7 @@
 		<widget source="global.CurrentTime" render="Label" position="23,880" size="180,38" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="1">
 			<convert type="ClockToText">Format:%a %e %b</convert>
 		</widget>
-		<ePixmap position="218,887" size="24,24" pixmap="YouViX-Common/icons/clock.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="218,887" size="24,24" pixmap="YouyouViX-Common/icons/clock.png" alphatest="blend" zPosition="1"/>
 		<widget source="global.CurrentTime" render="Label" position="255,880" size="80,38" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
@@ -89,7 +89,7 @@
 		</widget>
 	</screen>
 	<screen name="InfobarNowPlayingIcon">
-		<ePixmap position="780,937" size="30,30" pixmap="YouViX-Common/icons/nowplaying.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="780,937" size="30,30" pixmap="YouyouViX-Common/icons/nowplaying.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="InfobarRecIcon">
 <!--	    <ePixmap pixmap="icons/record.png" position="740,937" size="30,30" zPosition="0" alphatest="blend" />  -->
@@ -109,54 +109,54 @@
 		</widget>
 	</screen>
 	<screen name="InfobarInfoIcon">
-		<ePixmap position="1665,933" size="35,35" pixmap="YouViX-Common/icons/info.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="1665,933" size="35,35" pixmap="YouyouViX-Common/icons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="InfobarOnNowIcon">
 		<eLabel text="ON NOW" position="607,983" size="150,35" font="youvix-b;28" foregroundColor="white" backgroundColor="lightcolour" halign="left" valign="center" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="InfobarStatusIcons">
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/encrypted.png" position="778,982" size="35,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/encrypted.png" position="778,982" size="35,35" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/hd4k.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/hd4k.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/hd1080.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/hd1080.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">Is1080</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/hd720.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/hd720.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">Is720</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/sd576.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/sd576.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">Is576</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/sd480.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/sd480.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">Is480</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/178.png" position="943,962" size="83,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/178.png" position="943,962" size="83,75" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/133.png" position="943,962" size="83,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/133.png" position="943,962" size="83,75" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">IsNotWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/dolbyprologic.png" position="1039,983" size="100,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/dolbyprologic.png" position="1039,983" size="100,35" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">IsStereo</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/dolbydigital.png" position="1039,983" size="139,34" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/dolbydigital.png" position="1039,983" size="139,34" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<!-- ><ePixmap pixmap="YouViX-Common/icons/hbbtv.png" position="1540,975" size="103,40" zPosition="1" alphatest="blend" /> -->
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Common/icons/hbbtv.png" position="1540,975" size="103,40" zPosition="1" alphatest="blend">
+		<!-- ><ePixmap pixmap="YouyouViX-Common/icons/hbbtv.png" position="1540,975" size="103,40" zPosition="1" alphatest="blend" /> -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouyouViX-Common/icons/hbbtv.png" position="1540,975" size="103,40" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -204,10 +204,10 @@
 	
 	 <!-- LOGOS -->
 	<screen name="OEA-Logo">
-		<ePixmap position="200,210" size="384,384" pixmap="YouViX-Common/logos/oea-logo.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="200,210" size="384,384" pixmap="YouyouViX-Common/logos/oea-logo.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="BigYouVix-Logo">
-		<ePixmap position="180,210" size="384,384" pixmap="YouViX-Common/logos/youvix-big.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="180,210" size="384,384" pixmap="YouyouViX-Common/logos/youvix-big.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	
 	<!-- MENU TEMPLATES -->
@@ -256,7 +256,7 @@
 		<widget source="global.CurrentTime" render="Label" position="1622,0" size="140,50" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="1">
 			<convert type="ClockToText">Format:%a %e %b</convert>
 		</widget>
-		<ePixmap position="1780,12" size="24,24" pixmap="YouViX-Common/icons/clock.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="1780,12" size="24,24" pixmap="YouyouViX-Common/icons/clock.png" alphatest="blend" zPosition="1"/>
 		<widget source="global.CurrentTime" render="Label" position="1820,0" size="100,50" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
@@ -269,61 +269,61 @@
 	</screen>
 	<screen name="MenuMySetupText">
 		<eLabel text="MySetup" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
+	    <ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyInfoText">
 		<eLabel text="MyInfo" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/info.png" alphatest="blend" zPosition="1"/>
+	    <ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyCommitInfoText">
 		<eLabel text="MyCommitInfo" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/info.png" alphatest="blend" zPosition="1"/>
+	    <ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyGuideText">
 		<eLabel text="MyGuide" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyIMDBText">
 		<eLabel text="MyIMDB" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,250" size="256,256" pixmap="YouViX-Common/menuicons/imdb.png" alphatest="blend" zPosition="1"/>
+	    <ePixmap position="250,250" size="256,256" pixmap="YouyouViX-Common/menuicons/imdb.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyAudioText">
 		<eLabel text="MyAudio" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/audio.png" alphatest="blend" zPosition="1"/>
+	    <ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/audio.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyViewText">
 		<eLabel text="MyView" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyPluginsText">
 		<eLabel text="MyPlugins" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/plugins.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/plugins.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyTimersText">
 		<eLabel text="MyTimers" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/timers.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/timers.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyNetworkText">
 		<eLabel text="MyNetwork" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/network.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/network.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMySkinsText">
 		<eLabel text="MySkins" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/skins.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/skins.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMySoftcamsText">
 		<eLabel text="MySoftcams" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/softcam.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/softcam.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyCamsText">
 		<eLabel text="MyCams" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/cam.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/cam.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyUpdatesText">
 		<eLabel text="MyUpdates" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/updates.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/updates.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyTunersText">
 		<eLabel text="MyTuners" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/tuners.png" alphatest="blend" zPosition="1"/>
+	    <ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/tuners.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyViXText">
 		<eLabel text="MyViX" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
@@ -331,19 +331,19 @@
 	</screen>
 	<screen name="MenuMyJobsText">
 		<eLabel text="MyJobs" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/info.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyFansText">
 		<eLabel text="MyFans" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/fan.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/fan.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyHDMIText">
 		<eLabel text="MyHDMI" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/hdmicec.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/hdmicec.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyRemotesText">
 		<eLabel text="MyRemotes" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/remotecontrol.png" alphatest="blend" zPosition="1"/>
+	    <ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/remotecontrol.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyOnDemandText">
 		<eLabel text="MyOnDemand" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
@@ -368,53 +368,53 @@
 	</screen>
 	<screen name="MenuMyConsoleText">
 		<eLabel text="MyConsole" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/console.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/console.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyLanguagesText">
 		<eLabel text="MyLanguages" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/languages.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/languages.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyRuyaText">
 		<eLabel text="MyRuya" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/ruya.png" alphatest="blend" zPosition="1"/>
+	    <ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/ruya.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMySundtekText">
 		<eLabel text="MySundtek" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyFritzText">
 		<eLabel text="MyFritz" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/fritz.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/fritz.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyMultiBootText">
 		<eLabel text="MyMultiBoot" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyOBHBluePanelText">
 		<eLabel text="MyBluePanel" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyOBHEPGPanelText">
 		<eLabel text="MyEPGPanel" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyOBHSystemPanelText">
 		<eLabel text="MySystemInfo" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/info.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyOBHAppsPanelText">
 		<eLabel text="MyApps" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyOBHDevicesPanelText">
 		<eLabel text="MyDevices" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyOBHBackupPanelText">
 		<eLabel text="MyBackups" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyHRTunerProxyText">
 		<eLabel text="MyDVR" position="85,5" size="300,45" font="youvix-r;40" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
-		<ePixmap position="250,210" size="256,256" pixmap="YouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="YouyouViX-Common/menuicons/setup.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuForwardArrow">
 		<eLabel text=">" position="95,53" size="35,38" font="youvix-r;32" foregroundColor="darkcolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
@@ -589,31 +589,31 @@
 		<widget name="list" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="117" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />	
 	</screen>
 	<screen name="OnDemandBBCiPlayerLogo">
-		<ePixmap pixmap="YouViX-Common/ondemand/bbciplayer.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="YouyouViX-Common/ondemand/bbciplayer.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
 	</screen>
 	<screen name="OnDemandITVPlayerLogo">
-		<ePixmap pixmap="YouViX-Common/ondemand/itvplayer.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="YouyouViX-Common/ondemand/itvplayer.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
 	</screen>
 	<screen name="OnDemand4ODLogo">
-		<ePixmap pixmap="YouViX-Common/ondemand/4od.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="YouyouViX-Common/ondemand/4od.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
 	</screen>
 	<screen name="OnDemand3PlayerLogo">
-		<ePixmap pixmap="YouViX-Common/ondemand/3player.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="YouyouViX-Common/ondemand/3player.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
 	</screen>
 	<screen name="OnDemandIVIEWPlayerLogo">
-		<ePixmap pixmap="YouViX-Common/ondemand/iviewplayer.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="YouyouViX-Common/ondemand/iviewplayer.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
 	</screen>
 	<screen name="OnDemandRTEPlayerLogo">
-		<ePixmap pixmap="YouViX-Common/ondemand/rteplayer.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="YouyouViX-Common/ondemand/rteplayer.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
 	</screen>
 	<screen name="OnDemandiRadioPlayerLogo">
-		<ePixmap pixmap="YouViX-Common/ondemand/iradioplayer.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="YouyouViX-Common/ondemand/iradioplayer.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
 	</screen>
 	<screen name="OnDemandShoutcastLogo">
-		<ePixmap pixmap="YouViX-Common/ondemand/shoutcast.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="YouyouViX-Common/ondemand/shoutcast.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
 	</screen>
 	<screen name="OnDemandTuneINLogo">
-		<ePixmap pixmap="YouViX-Common/ondemand/tunein.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
+		<ePixmap pixmap="YouyouViX-Common/ondemand/tunein.png" position="100,200" size="551,60" transparent="0" alphatest="blend" zPosition="1" />
 	</screen>
 	
 	<!-- WIZARD TEMPLATES -->
@@ -646,5 +646,176 @@
 	<screen name="WizardRedButton">
 		<ePixmap pixmap="buttons/red.png" position="80,986" size="35,35" alphatest="blend" transparent="1" />
 		<widget name="languagetext" render="Label" position="120,987" size="268,35" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="1" zPosition="1" />
-	</screen>	
+	</screen>
+
+	<screen name="WizardRemoteTemplate" position="fill" flags="wfNoBorder">
+		<panel name="__WizardRemoteTemplateOld__" conditional="arrowdown"/>
+		<panel name="__WizardRemoteTemplateNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__WizardRemoteTemplateOld__" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="WizardRemote" />
+		<panel name="WizardRemoteArrowDown" />
+		<panel name="WizardRemoteArrowDown2" />
+		<panel name="WizardRemoteArrowUp" />
+		<panel name="WizardRemoteArrowUp2" />
+	</screen>
+	<screen name="__WizardRemoteTemplateNew__" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="WizardRemote" />
+		<panel name="WizardIndicatorWidget" />
+	</screen>
+	<screen name="WizardIndicatorWidget">
+		<widget alphatest="blend" name="indicator_u0" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u1" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u2" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u3" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u4" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u5" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u6" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u7" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u8" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u9" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u10" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u11" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u12" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u13" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u14" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u15" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l0" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l1" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l2" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l3" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l4" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l5" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l6" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l7" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l8" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l9" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l10" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l11" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l12" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l13" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l14" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l15" pixmap="yellow_circle23x23.png" position="310,220" offset="11,11" size="23,23" zPosition="11"/>
+	</screen>
+
+	<!-- HELP TEMPLATES -->
+	<screen name="HelpMenuListWidget">
+		<widget source="list" render="Listbox" position="680,165" size="1160,750" font="youvix-r;28" selectionPixmap="selectionbars/SelectionBar_H50x1160.png" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1">
+			<convert type="TemplatedMultiContent">
+				{
+				  # Template for use when "description" is not used
+				  "templates": {
+				    # Simple help with no headings ("flat")
+				    # data[1:] = [helpText]
+				    "default": [
+				      50,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(750, 50), font=1, text=1),
+				      ]
+				    ],
+				    # Simple help with headings
+				    # data[1:] = [heading, None]  # For heading entries
+				    # data[1:] = [None, helpText]  # For help entries
+				    "default+headings": [  # data[1:] = [helpText]
+				      50,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=0, text=1),
+					MultiContentEntryText(pos=(20, 0), size=(1140, 50), font=1, text=2),
+				      ]
+				    ],
+				    # Extended help with no headings
+				    # data[1:] = [helpText, extendedHelpText]
+				    "extended": [
+				      75,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(1160, 40), font=1, text=1),
+					MultiContentEntryText(pos=(0, 40), size=(1160, 35), font=3, text=2),
+				      ],
+				    ],
+				    # Extended help with headings
+				    # data[1:] = [heading, None, None]  # For heading entries
+				    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				    "extended+headings": [
+				      75,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 10), size=(1160, 40), font=0, text=1),
+					MultiContentEntryText(pos=(20, 0), size=(1140, 40), font=1, text=2),
+					MultiContentEntryText(pos=(20, 40), size=(1140, 35), font=3, text=3),
+				      ],
+				    ],
+				  },
+				  "fonts": [gFont("Regular", 38), gFont("Regular", 32), gFont("Regular", 32), gFont("Regular", 25)],
+				  "itemHeight": 50,
+				}
+				#{
+				#  # Template for use when "description" is used
+				#  "templates": {
+				#    # Simple help with no headings ("flat")
+				#    # data[1:] = [helpText]
+				#    "default": [
+				#      60,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=1, text=1),
+				#      ]
+				#    ],
+				#    # Simple help with headings
+				#    # data[1:] = [heading, None]  # For heading entries
+				#    # data[1:] = [None, helpText]  # For help entries
+				#    "default+headings": [
+				#      60,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(1140, 50), font=1, text=2),
+				#      ]
+				#    ],
+				#    # Extended help with no headings
+				#    # data[1:] = [helpText, extendedHelpText]
+				#    "extended": [
+				#      60,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=1, text=1),
+				#      ]
+				#    ],
+				#    # Extended help with headings
+				#    # data[1:] = [heading, None, None]  # For heading entries
+				#    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				#    "extended+headings": [
+				#      45,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(1140, 50), font=1, text=2),
+				#      ]
+				#    ],
+				#  },
+				#  "fonts": [gFont("Regular", 32), gFont("Regular", 28)],
+				#  "itemHeight": 60
+				#}
+				#{
+				# # Compact template for use when "description" is used
+				#  "templates": dict(
+				#    dict.fromkeys(("default", "extended"), [
+				#      50,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=1, text=1),
+				#      ]
+				#    ]).items() +
+				#    dict.fromkeys(("default+headings", "extended+headings"), [
+				#      50,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(1140, 50), font=1, text=2),
+				#      ]
+				#    ]).items()
+				#  ),
+				#  "fonts": [gFont("Regular", 32), gFont("Regular", 28)],
+				#  "itemHeight": 50
+				#}
+			</convert>
+		</widget>
+	</screen>
+	<!-- Uses the same screen area as SetupMenuFootnoteWidget -->
+	<screen name="HelpMenuDescriptionWidget">
+		<!-- use size="590,100" if you want the description to appear -->
+		<widget name="description" position="80,815" size="0,0" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1" />
+	</screen>
 </skin>

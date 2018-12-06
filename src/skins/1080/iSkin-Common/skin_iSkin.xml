@@ -1219,18 +1219,36 @@
 
 	<!-- ## HELP ## -->
 	<screen name="HelpMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="__HelpMenuOld__" conditional="arrowdown"/>
+		<panel name="__HelpMenuNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__HelpMenuOld__" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
 		<panel name="TopBar" />
 		<panel name="SetupScreen" />
 		<panel name="ListWidget" />
 		<panel name="MenuIconSetup" />
 		<panel name="PIG" />
-		<panel name="WizardRemote" />
-		<panel name="WizardRemoteArrowDown" />
-		<panel name="WizardRemoteArrowDown2" />
-		<panel name="WizardRemoteArrowUp" />
-		<panel name="WizardRemoteArrowUp2" />
+		<panel name="WizardRemoteTemplate" />
 		<panel name="DescriptionBox" />
 		<widget name="long_key" position="1120,650" size="570,300" font="DL;26" foregroundColor="menuforeground" backgroundColor="description" transparent="1" halign="center" valign="center" zPosition="3" />
+	</screen>
+	<screen name="__HelpMenuNew__" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="TopBar" />
+		<panel name="SetupScreen" />
+		<panel name="HelpMenuListWidget"/>
+		<panel name="MenuIconSetup" />
+		<panel name="PIG" />
+		<panel name="WizardRemoteTemplate" />
+		<!--
+		  If extended help text is shown within the list
+		  remove the next two lines and use the description
+		  widget below them.
+		-->
+		<panel name="Description" />
+		<panel name="DescriptionBox" />
+		<!-- <widget name="description" position="0,0" size="0,0"/> -->
+		<widget name="longshift_key1" position="80,865" size="420,35" font="DL;26" foregroundColor="menuforeground" backgroundColor="description" transparent="1" halign="left" valign="center" zPosition="3" />
+		<widget name="longshift_key0" position="506,865" size="420,35" font="DL;26" foregroundColor="menuforeground" backgroundColor="description" transparent="1" halign="right" valign="center" zPosition="3" />
 	</screen>
 
 	<!-- ## HISTORY ZAP ## -->

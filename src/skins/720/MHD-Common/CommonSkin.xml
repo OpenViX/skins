@@ -2640,11 +2640,7 @@ self.autoResize()
 		</widget>
 		<widget name="config" position="520,83" size="480,280" transparent="1" zPosition="1" scrollbarMode="showOnDemand"/>
 		<widget name="languagetext" position="60,30" size="200,30" font="Regular;18"/>
-		<widget name="rc" position="1066,107" size="154,500" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
+		<panel name="RcPanel"/>
 		<widget name="HelpWindow" pixmap="buttons/key_text.png" position="125,170" zPosition="1" size="1,1" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="DefaultWizard" title="Wizard" position="0,0" size="1280,720" flags="wfNoBorder">
@@ -2656,10 +2652,7 @@ self.autoResize()
 		<widget name="languagetext" position="774,228" size="95,30" font="Regular;18"/>
 		<widget name="config" position="60,405" size="440,200" transparent="1" zPosition="1" scrollbarMode="showOnDemand"/>
 		<widget name="wizard" pixmap="wizard.png" position="60,50" size="110,174" transparent="1" zPosition="10" alphatest="on"/>
-		<widget name="rc" pixmap="rc.png" position="557,135" size="154,471" transparent="1" zPosition="10" alphatest="on"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
+		<panel name="RcPanel"/>
 		<panel name="VixLogo"/>
 	</screen>
 	<screen name="DefaultSatLists" title="Default Sat-Lists" position="0,0" size="1280,720" flags="wfNoBorder">
@@ -2671,10 +2664,7 @@ self.autoResize()
 		<widget name="languagetext" position="50,682" size="220,26" font="Regular;18"/>
 		<widget name="config" position="600,405" size="440,200" transparent="1" zPosition="1" scrollbarMode="showOnDemand"/>
 		<widget name="wizard" pixmap="wizard.png" position="754,131" size="110,174" transparent="1" zPosition="10" alphatest="on"/>
-		<widget name="rc" pixmap="rc.png" position="1064,112" size="154,471" transparent="1" zPosition="10" alphatest="on"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
+		<panel name="RcPanel"/>
 		<panel name="VixLogo"/>
 	</screen>
 	<screen name="DreamPackageWizard" title="Dream-Package Wizard" position="280,78" size="720,576">
@@ -2686,10 +2676,7 @@ self.autoResize()
 		<widget name="languagetext" position="55,225" size="95,30" font="Regular;18"/>
 		<widget name="config" position="50,300" size="440,200" transparent="1" zPosition="1" scrollbarMode="showOnDemand"/>
 		<widget name="wizard" pixmap="wizard.png" position="40,50" size="110,174" transparent="1" zPosition="10" alphatest="on"/>
-		<widget name="rc" pixmap="rc.png" position="500,600" size="154,471" transparent="1" zPosition="10" alphatest="on"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
+		<panel name="RcPanel"/>
 		<widget source="session.VideoPicture" backgroundColor="transparent" position="-5,-5" render="Pig" size="5,5" zPosition="1"/>
 	</screen>
 	<screen name="LanguageWizard" title="Language Wizard" position="0,0" size="1280,720" flags="wfNoBorder">
@@ -2706,23 +2693,197 @@ self.autoResize()
 			</convert>
 		</widget>
 		<widget name="wizard" pixmap="wizard.png" position="329,410" size="110,174" zPosition="10" alphatest="on"/>
-		<widget name="rc" position="1065,98" size="154,500" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
+		<panel name="RcPanel"/>
 		<panel name="VixLogo"/>
 	</screen>
 	<screen name="HelpMenu" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="__HelpMenuOld__" conditional="arrowdown"/>
+		<panel name="__HelpMenuNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__HelpMenuOld__" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="520,82" size="450,583" scrollbarMode="showOnDemand"/>
+		<panel name="RcPanel"/>
+		<widget name="long_key" position="123,482" size="350,50" foregroundColor="yellow" font="Regular;25" halign="right"/>
+		<panel name="VixLogo"/>
+	</screen>
+	<screen name="__HelpMenuNew__" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<!--
+			To display the extended help for the current
+			item in a description widget instead of in
+			a second line in the help list, change the
+			size of the description wizard to something
+			appropriate (e.g. "477,120") and change over
+			to the commented out "extended" template
+			below.
+		-->
+		<widget name="description" position="10,360" size="0,0" font="Regular;20" halign="right" valign="center" transparent="0"/>
+		<widget source="list" render="Listbox" position="520,82" size="450,583" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{
+				  "templates": {
+				    # Simple help with no headings ("flat")
+				    # data[1:] = [helpText]
+				    "default": [
+				      38,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(450, 28), font=1, text=1),
+				      ]
+				    ],
+				    # Simple help with headings
+				    # data[1:] = [heading, None]  # For heading entries
+				    # data[1:] = [None, helpText]  # For help entries
+				    "default+headings": [  # data[1:] = [helpText]
+				      38,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(450, 32), font=0, text=1),
+					MultiContentEntryText(pos=(20, 0), size=(430, 28), font=1, text=2),
+				      ]
+				    ],
+				    # Extended help with no headings
+				    # data[1:] = [helpText, extendedHelpText]
+				    "extended": [
+				      50,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(450, 28), font=1, text=1),
+					MultiContentEntryText(pos=(0, 28), size=(430, 20), color=0x009e9fa4, font=2, text=2),
+				      ],
+				    ],
+				    # Extended help with headings
+				    # data[1:] = [heading, None, None]  # For heading entries
+				    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				    "extended+headings": [
+				      50,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 9), size=(450, 32), font=0, text=1),
+					MultiContentEntryText(pos=(20, 0), size=(430, 28), font=1, text=2),
+					MultiContentEntryText(pos=(20, 28), size=(430, 20), color=0x009e9fa4, font=2, text=3),
+				      ],
+				    ],
+				  },
+				  "fonts": [gFont("Regular", 28), gFont("Regular", 24), gFont("Regular", 17)],
+				  "itemHeight": 38
+				}
+				#{
+				# Template for use when "description" is used
+				#  "templates": {
+				#    # Simple help with no headings ("flat")
+				#    # data[1:] = [helpText]
+				#    "default": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(450, 28), font=1, text=1),
+				#      ]
+				#    ],
+				#    # Simple help with headings
+				#    # data[1:] = [heading, None]  # For heading entries
+				#    # data[1:] = [None, helpText]  # For help entries
+				#    "default+headings": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(450, 32), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(430, 28), font=1, text=2),
+				#      ]
+				#    ],
+				#    # Extended help with no headings
+				#    # data[1:] = [helpText, extendedHelpText]
+				#    "extended": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(450, 28), font=1, text=1),
+				#      ]
+				#    ],
+				#    # Extended help with headings
+				#    # data[1:] = [heading, None, None]  # For heading entries
+				#    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				#    "extended+headings": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(450, 32), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(430, 28), font=1, text=2),
+				#      ]
+				#    ],
+				#  },
+				#  "fonts": [gFont("Regular", 28), gFont("Regular", 24), gFont("Regular", 18)],
+				#  "itemHeight": 38
+				#}
+				# Compact template for use when "description" is used
+				#{ "templates": dict(
+				#    dict.fromkeys(("default", "extended"), [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(450, 28), font=1, text=1),
+				#      ]
+				#    ]).items() +
+				#    dict.fromkeys(("default+headings", "extended+headings"), [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(450, 32), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(430, 28), font=1, text=2),
+				#      ]
+				#    ]).items()
+				#  ),
+				#  "fonts": [gFont("Regular", 28), gFont("Regular", 24), gFont("Regular", 17)],
+				#  "itemHeight": 38
+				#}
+			</convert>
+		</widget>
+		<panel name="RcPanel"/>
+		<widget name="longshift_key0" position="123,482" size="350,30" font="Regular;23" halign="right" foregroundColor="yellow" transparent="0"/>
+		<widget name="longshift_key1" position="123,512" size="350,30" font="Regular;23" halign="right" foregroundColor="yellow" transparent="0"/>
+		<panel name="VixLogo"/>
+	</screen>
+	<screen name="RcPanel" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="__RcPanelOld__" conditional="arrowdown"/>
+		<panel name="__RcPanelNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__RcPanelOld__" position="0,0" size="1280,720" flags="wfNoBorder">
 		<widget name="rc" position="1064,103" size="154,500" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
 		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
 		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
 		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="long_key" position="123,482" size="350,50" foregroundColor="yellow" font="Regular;25" halign="right"/>
-		<panel name="VixLogo"/>
+	</screen>
+	<screen name="__RcPanelNew__" position="0,0" size="1280,720" flags="wfNoBorder">
+		<widget name="rc" position="1064,103" size="154,500" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
+		<!--+ For the key indicator pixmaps, "position" is used for
+		    | the position of the pixmap "hotspot".
+		    | The screen positions the pixmap relative to the
+		    | hotspot, not the pixmap's top left corner
+		    +-->
+		<widget alphatest="blend" name="indicator_u0" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u1" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u2" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u3" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u4" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u5" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u6" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u7" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u8" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u9" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u10" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u11" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u12" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u13" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u14" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u15" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l0" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l1" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l2" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l3" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l4" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l5" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l6" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l7" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l8" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l9" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l10" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l11" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l12" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l13" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l14" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l15" pixmap="yellow_circle23x23.png" position="1064,103" offset="11,11" size="23,23" zPosition="11"/>
 	</screen>
 	<screen name="VideoWizard" title="Welcome" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2734,11 +2895,7 @@ self.autoResize()
 		<widget name="wizard" pixmap="wizard.png" position="548,106" size="110,174" transparent="1" zPosition="10" alphatest="on"/>
 		<widget name="languagetext" position="598,328" size="95,30" font="Regular;18"/>
 		<widget name="portpic" pixmap="%s" position="549,410" size="150,150" transparent="1" zPosition="10" alphatest="on"/>
-		<widget name="rc" position="1094,97" size="154,500" transparent="1" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="517,288" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
-		<widget name="arrowdown2" pixmap="arrowdown.png" position="517,288" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" transparent="1" zPosition="11" alphatest="on"/>
+		<panel name="RcPanel"/>
 		<panel name="VixLogo"/>
 	</screen>
 	<screen name="ImageWizard" title="Welcome" position="0,0" size="1280,720" flags="wfNoBorder">
@@ -2751,30 +2908,19 @@ self.autoResize()
 		<ePixmap pixmap="buttons/button_red.png" position="559,324" size="15,16" transparent="1" zPosition="0" alphatest="on"/>
 		<widget name="languagetext" position="615,321" size="95,30" font="Regular;18"/>
 		<widget name="wizard" pixmap="wizard.png" position="541,110" size="110,174" zPosition="10" alphatest="on"/>
-		<widget name="rc" position="1082,99" size="154,500" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
+		<panel name="RcPanel"/>
 		<panel name="VixLogo"/>
 	</screen>
 	<screen name="TutorialWizard" title="Welcome" position="0,0" size="1280,720" flags="wfNoBorder">
  		<panel name="BasicTemplateNoVp"/>
-		<widget name="rc" position="130,105" size="154,500" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
+		<panel name="RcPanel"/>
 		<widget name="text" position="740,120" size="480,240" backgroundColor="background" transparent="1" font="Regular;23"/>
 		<widget name="list" position="550,380" size="660,150" zPosition="1"/>
 		<panel name="VixLogo"/>
 	</screen>
 	<screen name="StartWizard" title="Welcome" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="BasicTemplateNoVp"/>
-		<widget name="rc" position="170,105" size="154,500" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on"/>
+		<panel name="RcPanel"/>
 		<widget name="wizard" pixmap="wizard.png" position="550,120" size="110,174" zPosition="10" transparent="1" alphatest="on"/>
 		<ePixmap pixmap="MHD-Common/buttons/red2.png" position="15,682" size="26,26" alphatest="on"/>
 		<widget name="languagetext" position="50,682" size="220,26" backgroundColor="background" transparent="1" font="Regular;21"/>
@@ -4391,11 +4537,7 @@ self.autoResize()
 				}
 			</convert>
 		</widget>
-		<widget name="rc" position="70,380" size="154,230" pixmaps="rc.png,rcold.png" zPosition="10" alphatest="on"/>
-		<widget name="arrowdown" position="-100,-100" size=" 37,70" pixmap="arrowdown.png" zPosition="11" alphatest="on"/>
-		<widget name="arrowdown2" position="-100,-100" size=" 37,70" pixmap="arrowdown.png" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" position="-100,-100" size=" 37,70" pixmap="arrowup.png" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" position="-100,-100" size=" 37,70" pixmap="arrowup.png" zPosition="11" alphatest="on"/>
+		<panel name="RcPanel"/>
 		<panel name="VixLogo"/>
 	</screen>
 	<!-- ## ACDInfo ## -->

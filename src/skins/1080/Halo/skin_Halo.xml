@@ -1023,17 +1023,186 @@
 		<widget name="description" position="298,460" size="410,280" font="RobotoCondensed-Regular;32" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
 	</screen>
 	<screen name="HelpMenu" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<panel name="__HelpMenuOld__" conditional="arrowdown"/>
+		<panel name="__HelpMenuNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__HelpMenuOld__" flags="wfNoBorder" position="fill" backgroundColor="transparent">
 		<!--<eLabel text="HelpMenu" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
 		<panel name="settings_background_1372x545"/>
 		<eLabel text="Help Menu" position="278,212" size="1362,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
 		<panel name="button_background_1372x200"/>
 		<widget name="list" position="728,308" size="912,504" font="Roboto-Light;36" halign="center" valign="center" itemHeight="84" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="4"/>
+		<panel name="RcPanel"/>
+		<widget name="long_key" position="283,854" size="610,60" font="RobotoCondensed-Regular;32" foregroundColor="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+	</screen>
+	<screen name="__HelpMenuNew__" flags="wfNoBorder" position="fill" backgroundColor="transparent">
+		<!--<eLabel text="HelpMenu" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->
+		<panel name="settings_background_1372x545"/>
+		<eLabel text="Help Menu" position="278,212" size="1362,60" font="RobotoCondensed-Regular;42" foregroundColor="settings_title_font_color" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="4"/>
+		<panel name="button_background_1372x200"/>
+		<widget source="list" render="Listbox" position="728,308" size="912,504" font="Roboto-Light;36" selectionPixmap="settings/1740x84_On.png" backgroundPixmap="settings/1740x84_Off.png" foregroundColor="settings_lists_font_foregroundcolor" foregroundColorSelected="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="4">
+			<convert type="TemplatedMultiContent">
+				{
+				  # Template for use when "description" is not used
+				  "templates": {
+				    # Simple help with no headings ("flat")
+				    # data[1:] = [helpText]
+				    "default": [
+				      84,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(912, 84), font=1, text=1),
+				      ]
+				    ],
+				    # Simple help with headings
+				    # data[1:] = [heading, None]  # For heading entries
+				    # data[1:] = [None, helpText]  # For help entries
+				    "default+headings": [  # data[1:] = [helpText]
+				      84,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(912, 84), font=0, text=1),
+					MultiContentEntryText(pos=(20, 0), size=(892, 84), font=1, text=2),
+				      ]
+				    ],
+				    # Extended help with no headings
+				    # data[1:] = [helpText, extendedHelpText]
+				    "extended": [
+				      84,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(912, 50), font=1, text=1),
+					MultiContentEntryText(pos=(0, 50), size=(912, 34), font=2, text=2),
+				      ],
+				    ],
+				    # Extended help with headings
+				    # data[1:] = [heading, None, None]  # For heading entries
+				    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				    "extended+headings": [
+				      84,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 10), size=(912, 50), font=0, text=1),
+					MultiContentEntryText(pos=(20, 0), size=(912, 50), font=1, text=2),
+					MultiContentEntryText(pos=(20, 50), size=(892, 34), font=2, text=3),
+				      ],
+				    ],
+				  },
+				  "fonts": [gFont("menulist", 50), gFont("menulist", 40), gFont("menulist", 28)],
+				  "itemHeight": 84,
+				}
+				#{
+				#  # Template for use when "description" is used
+				#  "templates": {
+				#    # Simple help with no headings ("flat")
+				#    # data[1:] = [helpText]
+				#    "default": [
+				#      84,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(912, 84), font=1, text=1),
+				#      ]
+				#    ],
+				#    # Simple help with headings
+				#    # data[1:] = [heading, None]  # For heading entries
+				#    # data[1:] = [None, helpText]  # For help entries
+				#    "default+headings": [
+				#      84,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(912, 84), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(892, 84), font=1, text=2),
+				#      ]
+				#    ],
+				#    # Extended help with no headings
+				#    # data[1:] = [helpText, extendedHelpText]
+				#    "extended": [
+				#      84,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(912, 84), font=1, text=1),
+				#      ]
+				#    ],
+				#    # Extended help with headings
+				#    # data[1:] = [heading, None, None]  # For heading entries
+				#    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				#    "extended+headings": [
+				#      84,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(912, 84), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(892, 84), font=1, text=2),
+				#      ]
+				#    ],
+				#  },
+				#  "fonts": [gFont("Regular", 32), gFont("Regular", 28)],
+				#  "itemHeight": 94
+				#}
+				#{
+				# # Compact template for use when "description" is used
+				#  "templates": dict(
+				#    dict.fromkeys(("default", "extended"), [
+				#      84,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(912, 84), font=1, text=1),
+				#      ]
+				#    ]).items() +
+				#    dict.fromkeys(("default+headings", "extended+headings"), [
+				#      84,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(912, 84), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(892, 84), font=1, text=2),
+				#      ]
+				#    ]).items()
+				#  ),
+				#  "fonts": [gFont("Regular", 32), gFont("Regular", 28)],
+				#  "itemHeight": 84
+				#}
+			</convert>
+		</widget>
+		<panel name="RcPanel"/>
+		<widget name="longshift_key1" position="273,888" size="450,50" font="RobotoCondensed-Regular;32" foregroundColor="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4" />
+		<!-- If a description panel is required use size="912,124" -->
+		<widget name="description" position="728,822" size="0,0" font="Roboto-Light;28" foregroundColor="description_fontcolor" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="10"/>
+	</screen>
+	<screen name="RcPanel" position="fill" flags="wfNoBorder">
+		<panel name="__RcPanelOld__" conditional="arrowdown"/>
+		<panel name="__RcPanelNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__RcPanelOld__" position="fill" flags="wfNoBorder">
 		<widget name="rc" pixmaps="/usr/share/enigma2/skin_default/rc.png,rcold.png" position="410,310" zPosition="10" size="154,500" alphatest="blend" transparent="1"/>
 		<widget name="arrowdown" pixmap="/usr/share/enigma2/skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
 		<widget name="arrowdown2" pixmap="/usr/share/enigma2/skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
 		<widget name="arrowup" pixmap="/usr/share/enigma2/skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
 		<widget name="arrowup2" pixmap="/usr/share/enigma2/skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="long_key" position="283,854" size="610,60" font="RobotoCondensed-Regular;32" foregroundColor="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4"/>
+	</screen>
+	<screen name="__RcPanelNew__" position="fill" flags="wfNoBorder">
+		<widget name="rc" pixmaps="/usr/share/enigma2/skin_default/rc.png,rcold.png" position="410,310" zPosition="10" size="154,500" alphatest="blend" transparent="1"/>
+		<widget alphatest="blend" name="indicator_u0" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u1" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u2" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u3" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u4" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u5" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u6" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u7" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u8" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u9" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u10" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u11" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u12" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u13" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u14" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u15" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l0" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l1" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l2" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l3" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l4" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l5" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l6" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l7" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l8" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l9" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l10" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l11" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l12" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l13" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l14" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l15" pixmap="yellow_circle23x23.png" position="410,310" offset="11,11" size="23,23" zPosition="11"/>
+		<widget name="longshift_key0" position="273,838" size="450,50" font="RobotoCondensed-Regular;32" foregroundColor="settings_lists_font_foregroundcolor_selected" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="4" />
 	</screen>
 	<screen name="ParentalControlSetup" flags="wfNoBorder" position="fill" backgroundColor="transparent">
 		<!--<eLabel text="ParentalControlSetup" position="center,center" size="200,20" font="Regular;20" foregroundColor="black" backgroundColor="white" halign="center" valign="center" transparent="0" zPosition="99"/>-->

@@ -1069,7 +1069,11 @@ self.autoResize()
 	<screen name="HarddiskWait" position="center,center" size="540,60">
 		<widget name="wait" position="20,10" size="500,25" font="Regular;23" transparent="0"/>
 	</screen>
-	<screen name="HelpMenu" position="0,0" size="1280,720" title="Help" flags="wfNoBorder">
+	<screen name="HelpMenu" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="__HelpMenuOld__" conditional="arrowdown"/>
+		<panel name="__HelpMenuNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__HelpMenuOld__" position="0,0" size="1280,720" title="Help" flags="wfNoBorder">
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-top.png" position="0,0" size="1280,70" zPosition="-1"/>
 		<widget source="Title" render="Label" position="105,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="topbar-frgrnd" backgroundColor="topbar-bkgrnd" zPosition="2"/>
 		<widget source="global.CurrentTime" render="Label" position="1160,10" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="topbar-frgrnd" backgroundColor="topbar-bkgrnd">
@@ -1079,13 +1083,194 @@ self.autoResize()
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<widget name="list" position="60,150" size="503,456" transparent="0" selectionPixmap="ViXBMC_HD-Common/images/FocusBar_H50x503.png" scrollbarMode="showOnDemand"/>
-		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend" transparent="0"/>
-		<widget name="arrowdown" pixmap="skin_default//arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowdown2" pixmap="skin_default//arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default//arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default//arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="long_key" position="760,600" size="180,40" font="Regular; 20" halign="right" foregroundColor="yellow" transparent="0"/>
+		<panel name="RcPanel"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot.png" position="0,680" size="1280,40" zPosition="-1"/>
+	</screen>
+	<screen name="__HelpMenuNew__" position="0,0" size="1280,720" title="Help" flags="wfNoBorder">
+		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-top.png" position="0,0" size="1280,70" zPosition="-1"/>
+		<widget source="Title" render="Label" position="105,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="topbar-frgrnd" backgroundColor="topbar-bkgrnd" zPosition="2"/>
+		<widget source="global.CurrentTime" render="Label" position="1160,10" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="topbar-frgrnd" backgroundColor="topbar-bkgrnd">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="910,40" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="topbar-frgrnd" backgroundColor="topbar-bkgrnd">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<!--
+			To display the extended help for the current
+			item in a description widget instead of in
+			a second line in the help list, change the
+			size of the description wizard to something
+			appropriate (e.g. "360,125") and change over
+			to the commented out "extended" template
+			below.
+		-->
+		<widget name="description" position="580,150" size="0,0" font="Regular;20" halign="left" valign="center" transparent="1"/>
+		<widget source="list" render="Listbox" position="60,150" size="503,450" transparent="0" selectionPixmap="ViXBMC_HD-Common/images/FocusBar_H50x503.png" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{
+				  "templates": {
+				    # Simple help with no headings ("flat")
+				    # data[1:] = [helpText]
+				    "default": [
+				      38,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(503, 28), font=1, text=1),
+				      ]
+				    ],
+				    # Simple help with headings
+				    # data[1:] = [heading, None]  # For heading entries
+				    # data[1:] = [None, helpText]  # For help entries
+				    "default+headings": [  # data[1:] = [helpText]
+				      38,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(503, 32), font=0, text=1),
+					MultiContentEntryText(pos=(20, 0), size=(483, 28), font=1, text=2),
+				      ]
+				    ],
+				    # Extended help with no headings
+				    # data[1:] = [helpText, extendedHelpText]
+				    "extended": [
+				      50,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(503, 26), font=1, text=1),
+					MultiContentEntryText(pos=(0, 28), size=(503, 20), color=0x009e9fa4, font=2, text=2),
+				      ],
+				    ],
+				    # Extended help with headings
+				    # data[1:] = [heading, None, None]  # For heading entries
+				    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				    "extended+headings": [
+				      50,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 9), size=(503, 32), font=0, text=1),
+					MultiContentEntryText(pos=(20, 0), size=(483, 26), font=1, text=2),
+					MultiContentEntryText(pos=(20, 28), size=(483, 20), color=0x009e9fa4, font=2, text=3),
+				      ],
+				    ],
+				  },
+				  "fonts": [gFont("Regular", 28), gFont("Regular", 24), gFont("Regular", 18)],
+				  "itemHeight": 38
+				}
+				#{
+				# Template for use when "description" is used
+				#  "templates": {
+				#    # Simple help with no headings ("flat")
+				#    # data[1:] = [helpText]
+				#    "default": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 28), font=1, text=1),
+				#      ]
+				#    ],
+				#    # Simple help with headings
+				#    # data[1:] = [heading, None]  # For heading entries
+				#    # data[1:] = [None, helpText]  # For help entries
+				#    "default+headings": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 32), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(483, 28), font=1, text=2),
+				#      ]
+				#    ],
+				#    # Extended help with no headings
+				#    # data[1:] = [helpText, extendedHelpText]
+				#    "extended": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 28), font=1, text=1),
+				#      ]
+				#    ],
+				#    # Extended help with headings
+				#    # data[1:] = [heading, None, None]  # For heading entries
+				#    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				#    "extended+headings": [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 32), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(483, 28), font=1, text=2),
+				#      ]
+				#    ],
+				#  },
+				#  "fonts": [gFont("Regular", 28), gFont("Regular", 24), gFont("Regular", 18)],
+				#  "itemHeight": 38
+				#}
+				# Compact template for use when "description" is used
+				#{ "templates": dict(
+				#    dict.fromkeys(("default", "extended"), [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 28), font=1, text=1),
+				#      ]
+				#    ]).items() +
+				#    dict.fromkeys(("default+headings", "extended+headings"), [
+				#      38,  # itemHeight
+				#      [
+				#	MultiContentEntryText(pos=(0, 0), size=(503, 32), font=0, text=1),
+				#	MultiContentEntryText(pos=(20, 0), size=(483, 28), font=1, text=2),
+				#      ]
+				#    ]).items()
+				#  ),
+				#  "fonts": [gFont("Regular", 28), gFont("Regular", 24), gFont("Regular", 18)],
+				#  "itemHeight": 38
+				#}
+			</convert>
+		</widget>
+		<panel name="RcPanel"/>
+		<widget name="longshift_key0" position="660,600" size="280,25" font="Regular;20" halign="right" foregroundColor="yellow" transparent="0"/>
+		<widget name="longshift_key1" position="660,625" size="280,25" font="Regular;20" halign="right" foregroundColor="yellow" transparent="0"/>
+		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot.png" position="0,680" size="1280,40" zPosition="-1"/>
+	</screen>
+	<screen name="RcPanel" position="fill" flags="wfNoBorder">
+		<panel name="__RcPanelOld__" conditional="arrowdown"/>
+		<panel name="__RcPanelNew__" conditional="indicator_u0"/>
+	</screen>
+	<screen name="__RcPanelOld__"  position="0,0" size="1280,720" flags="wfNoBorder">
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend" transparent="0"/>
+		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<widget name="long_key" position="760,600" size="180,40" font="Regular; 20" halign="right" foregroundColor="yellow" transparent="0"/>
+	</screen>
+	<screen name="__RcPanelNew__"  position="0,0" size="1280,720" flags="wfNoBorder">
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend" transparent="0"/>
+		<!--+ For the key indicator pixmaps, "position" is used for
+		    | the position of the pixmap "hotspot".
+		    | The screen positions the pixmap relative to the
+		    | hotspot, not the pixmap's top left corner
+		    +-->
+		<widget alphatest="blend" name="indicator_u0" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u1" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u2" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u3" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u4" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u5" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u6" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u7" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u8" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u9" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u10" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u11" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u12" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u13" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u14" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u15" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l0" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l1" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l2" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l3" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l4" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l5" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l6" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l7" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l8" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l9" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l10" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l11" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l12" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l13" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l14" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l15" pixmap="yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
 	</screen>
 	<screen name="HdmiCECSetupScreen" position="0,0" size="623,720" flags="wfNoBorder" backgroundColor="transparent" title="HDMI CEC setup">
 		<ePixmap pixmap="ViXBMC_HD-Common/images/menu_bg.png" position="0,0" size="622,720" zPosition="-1" alphatest="on" transparent="1"/>
@@ -2204,11 +2389,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="StringList"/>
 		</widget>
 		<widget name="config" position="150,400" size="730,220" selectionPixmap="ViXBMC_HD-Common/images/FocusBar_H25x740.png" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend" transparent="1"/>
-		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<panel name="RcPanel"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
@@ -2226,11 +2407,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="StringList"/>
 		</widget>
 		<widget name="config" position="150,400" size="730,220" selectionPixmap="ViXBMC_HD-Common/images/FocusBar_H25x740.png" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend" transparent="1"/>
-		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<panel name="RcPanel"/>
 		<widget source="VKeyIcon" render="Pixmap" pixmap="ViXBMC_HD-Common/buttons/key_text.png" position="40,260" zPosition="0" size="35,25" transparent="1" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -2259,10 +2436,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
 		</widget>
-		<widget name="rc" pixmap="skin_default/rc.png" position="950,140" zPosition="10" size="154,500" transparent="1" alphatest="blend"/>
-		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
+		<panel name="RcPanel"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="ImageWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
@@ -2278,10 +2452,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="StringList"/>
 		</widget>
 		<widget name="config" position="150,400" size="730,220" selectionPixmap="ViXBMC_HD-Common/images/FocusBar_H25x740.png" zPosition="1" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget name="rc" pixmap="skin_default/rc.png" position="950,140" zPosition="10" size="154,500" transparent="0" alphatest="blend"/>
-		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
+		<panel name="RcPanel"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
@@ -2299,10 +2470,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="StringList"/>
 		</widget>
 		<widget name="config" position="150,400" size="730,220" selectionPixmap="ViXBMC_HD-Common/images/FocusBar_H25x740.png" zPosition="1" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget name="rc" pixmap="skin_default/rc.png" position="950,140" zPosition="10" size="154,500" transparent="0" alphatest="blend"/>
-		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
+		<panel name="RcPanel"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
@@ -2321,11 +2489,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget name="config" position="250,400" zPosition="1" size="630,220" transparent="1" scrollbarMode="showOnDemand"/>
 		<widget name="portpic" position="100,370" zPosition="10" size="150,150" transparent="1" alphatest="on"/>
-		<widget name="rc" pixmap="skin_default/rc.png" position="950,140" zPosition="10" size="154,500" transparent="1" alphatest="blend"/>
-		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
+		<panel name="RcPanel"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
@@ -2343,10 +2507,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="StringList"/>
 		</widget>
 		<widget name="config" position="150,400" size="730,220" selectionPixmap="ViXBMC_HD-Common/images/FocusBar_H25x740.png" zPosition="1" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget name="rc" pixmap="skin_default/rc.png" position="950,140" zPosition="10" size="154,500" transparent="0" alphatest="blend"/>
-		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
+		<panel name="RcPanel"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
@@ -2363,10 +2524,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="list" render="Listbox" position="150,400" size="730,220" selectionPixmap="ViXBMC_HD-Common/images/FocusBar_H25x740.png" scrollbarMode="showOnDemand">
 			<convert type="StringList"/>
 		</widget>
-		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend"/>
-		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<panel name="RcPanel"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot-wizzard.png" position="0,680" size="1280,40" zPosition="-1"/>
 	</screen>
 	<screen name="CleanupWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
@@ -2383,11 +2541,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget name="config" position="250,400" size="630,220" selectionPixmap="ViXBMC_HD-Common/images/FocusBar_H25x630.png" transparent="1" scrollbarMode="showOnDemand" zPosition="1"/>
 		<widget name="portpic" position="100,370" zPosition="10" size="150,150" transparent="1" alphatest="on"/>
-		<widget name="rc" pixmap="skin_default/rc.png" position="950,140" zPosition="10" size="154,500" transparent="1" alphatest="blend"/>
-		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
+		<panel name="RcPanel"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/buttons/red.png" position="90,686" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot-wizzard.png" position="0,680" size="1280,40" zPosition="-1"/>
@@ -2423,11 +2577,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="StringList"/>
 		</widget>
 		<widget name="config" position="150,400" zPosition="1" size="730,220" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget name="rc" pixmap="skin_default/rc.png" position="950,140" zPosition="10" size="154,500" transparent="0" alphatest="blend"/>
-		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="ViXBMC_HD-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
+		<panel name="RcPanel"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd"/>
 		<ePixmap pixmap="ViXBMC_HD-Common/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
