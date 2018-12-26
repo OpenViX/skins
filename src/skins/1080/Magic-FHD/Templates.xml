@@ -83,17 +83,17 @@
 	</screen>
 
 	<screen name="PlayerPanel">
-		<widget source="session.CurrentService" render="Label" position="192,0" size="1300,104" font="RegularSmall;40" backgroundColor="transparent" borderWidth="3" borderColor="black" valign="center" halign="center">
+		<widget source="session.CurrentService" render="Label" position="192,0" size="1300,104" font="RegularSmall;40" backgroundColor="transparent" borderWidth="3" borderColor="black" halign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget name="speed" position="0,120" size="110,75" font="Regular;45" backgroundColor="transparent" foregroundColor="grey" halign="right" borderWidth="3" borderColor="black" transparent="1" zPosition="5"/>
-		<widget name="statusicon" position="112,145" size="50,50" pixmaps="icons/play_large.png,icons/pause_large.png,icons/stop_large.png,icons/forward_large.png,icons/backward_large.png,icons/slow_large.png" zPosition="5" alphatest="on"/>
+		<widget name="statusicon" position="120,155" size="50,50" pixmaps="icons/play_large.png,icons/pause_large.png,icons/stop_large.png,icons/forward_large.png,icons/backward_large.png,icons/slow_large.png" zPosition="5" alphatest="on"/>
+		<widget name="speed" position="0,135" size="110,75" font="Regular;45" backgroundColor="transparent" foregroundColor="grey" halign="right" borderWidth="3" borderColor="black" transparent="1" zPosition="5"/>
 		<eLabel backgroundColor="infobarBG" position="180,108" size="1560,19" zPosition="0"/>
-		<ePixmap pixmap="dvr/scale1536.png" position="192,113" size="1536,6" zPosition="1"/>
+		<ePixmap pixmap="dvr/scale1536.png" position="192,114" size="1536,6" zPosition="1"/>
 		<widget source="session.CurrentService" render="PositionGauge" position="192,108" size="1536,18" pointer="dvr/position_pointer1536.png:1536,0" transparent="1" zPosition="4">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="60,54" size="300,50" font="Regular;36" backgroundColor="transparent" zPosition="4" borderWidth="3" borderColor="black" valign="center" halign="left">
+		<widget source="session.CurrentService" render="Label" position="30,54" size="180,50" font="Regular;36" backgroundColor="transparent" zPosition="4" borderWidth="3" borderColor="black" valign="center" halign="left">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1537,54" size="180,50" font="Regular;36" backgroundColor="transparent" transparent="1" borderWidth="3" borderColor="black" valign="center" halign="left">
