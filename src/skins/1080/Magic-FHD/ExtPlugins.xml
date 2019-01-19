@@ -616,8 +616,8 @@
 	</screen>
 	<screen name="CPmaniger" position="fill" flags="wfNoBorder" title="Select Copy/Move location...">
 		<panel name="BasicTemplate"/>
-		<eLabel text="MOVE" position="22,1023" size="400,39" font="Regular;33" foregroundColor="buttonred" halign="center"/>
-		<eLabel text="COPY" position="830,1023" size="330,39" font="Regular;33" foregroundColor="buttonyellow" backgroundColor="secondBG" halign="center"/>
+		<eLabel text="MOVE" position="22,1023" size="400,39" font="Regular;33" foregroundColor="buttonred" halign="left" transparent="1"/>
+		<eLabel text="COPY" position="830,1023" size="330,39" font="Regular;33" foregroundColor="buttonyellow" halign="left" transparent="1"/>
 		<widget name="File" position="735,120" size="1177,297" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center" zPosition="2"/>
 		<widget name="CPto" position="735,420" size="1177,540" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
@@ -1725,6 +1725,61 @@
 		<widget name="Field7" font="Regular;27" backgroundColor="transpBlack" foregroundColor="grey" noWrap="1" transparent="1" zPosition="+1" />
 		<widget name="Field8" font="Regular;27" backgroundColor="transpBlack" foregroundColor="grey" noWrap="1" transparent="1" zPosition="+1" />
 		<widget name="Field9" font="Regular;27" backgroundColor="transpBlack" foregroundColor="yellow" noWrap="1" transparent="1" zPosition="+1" />
+	</screen>
+
+	<!-- ## InfoBarRecTimers ## -->
+	<screen name="InfoBarRecTimersOverlay" position="0,250" size="1920,630" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="+1">
+		<widget name="Icons" position="0,0" size="30,30" pixmaps="icons/timer_off.png,icons/timer_wait.png,icons/timer_prep.png,icons/timer_rec.png,icons/timer_zap.png,icons/timer_failed.png,icons/timer_done.png,icons/timer_autotimer.png,icons/timer_rep.png" alphatest="blend" transparent="1" />
+		<widget source="Timers" render="Listbox" position="15,15" size="1740,38" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos = (0, 4), size = (30, 30), png = 0, flags = BT_SCALE),  # State icon
+					MultiContentEntryPixmapAlphaBlend(pos = (38, 4), size = (30, 30), png = 2, flags = BT_SCALE),  # Type icon (AutoTimer, IceTV, Repeat)
+					MultiContentEntryText(pos = (75, 0), size = (30, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Tuner letter
+					MultiContentEntryPixmapAlphaBlend(pos = (105, 1), size = (60, 36), png = 10, flags = BT_SCALE),  # Service picon
+					MultiContentEntryText(pos = (180, 0), size = (225, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 11),  # Service name
+					MultiContentEntryText(pos = (420, 0), size = (510, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 12),  # Timer name
+					MultiContentEntryText(pos = (945, 0), size = (540, 38), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 20),  # Begin - End time
+					MultiContentEntryProgress(pos = (1500, 12), size = (75, 14), percent = -28, borderWidth = 3, foreColor = "red", backColor = "black"),  # Progress bar
+					MultiContentEntryText(pos = (1590, 0), size = (150, 38), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 21)  # Duration
+					],
+				"fonts": [parseFont("Regular;30")],
+				"itemHeight": 38,
+				"scrollbarMode": "showNever",
+				"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="InfoBarRecTimersShow" position="fill" flags="wfNoBorder" backgroundColor="transpBlack">
+		<panel name="BasicTemplate2"/>
+
+		<widget name="Icons" position="0,0" size="20,20" pixmaps="icons/timer_off.png,icons/timer_wait.png,icons/timer_prep.png,icons/timer_rec.png,icons/timer_zap.png,icons/timer_failed.png,icons/timer_done.png,icons/timer_autotimer.png,icons/timer_icetv.png,icons/timer_rep.png" alphatest="blend" transparent="1" />
+
+		<widget source="Timers" render="Listbox" position="5,120" size="1910,880" foregroundColor="grey">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos = (0, 4), size = (30, 30), png = 0, flags = BT_SCALE),  # State icon
+					MultiContentEntryPixmapAlphaBlend(pos = (38, 4), size = (30, 30), png = 2, flags = BT_SCALE),  # Type icon (AutoTimer, IceTV, Repeat)
+					MultiContentEntryText(pos = (75, 0), size = (30, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Tuner letter
+					MultiContentEntryPixmapAlphaBlend(pos = (105, 1), size = (60, 36), png = 10, flags = BT_SCALE),  # Service picon
+					MultiContentEntryText(pos = (180, 0), size = (225, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 11),  # Service name
+					MultiContentEntryText(pos = (420, 0), size = (525, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 12),  # Timer name
+					MultiContentEntryText(pos = (990, 0), size = (555, 38), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 20),  # Begin - End time
+					MultiContentEntryProgress(pos = (1530, 12), size = (75, 14), percent = -28, borderWidth = 3, foreColor = "red", backColor = "black"),  # Progress bar
+					MultiContentEntryText(pos = (1620, 0), size = (150, 38), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 21)  # Duration
+					],
+				"fonts": [parseFont("Regular;30")],
+				"itemHeight": 40,
+				"scrollbarMode": "showOnDemand",
+				"selectionEnabled": True
+				}
+			</convert>
+		</widget>
 	</screen>
 
 	<!-- ##Picture-Player## -->
