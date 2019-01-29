@@ -486,10 +486,10 @@
 		<panel name="InfoBPanel"/>
 		<panel name="MenuBPanel"/>
 		<panel name="HelpBPanel"/>
+		<widget name="lab1" position="780,120" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="20"/>
+		<widget name="number" position="755,120" size="1157,810" font="Regular;54" zPosition="5" valign="center" halign="center"/>
 		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="number" position="755,123" size="1157,810" font="Regular;54" zPosition="5" valign="center" halign="center"/>
-		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="1"/>
 		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
@@ -590,9 +590,10 @@
 		<widget source="Event" render="Label" position="22,840" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
 			<convert type="EventName">Rating</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="22,900" size="690,39" font="Regular;33" halign="center" foregroundColor="selectedFG">
-			<convert type="EventName">NameNext</convert>
-		</widget>
+		<widget name="datetime" position="0,0" size="0,0"/> #To reduce debug noise.
+		<widget name="epg_eventname" position="0,0" size="0,0"/> #To reduce debug noise.
+		<widget name="epg_description" position="0,0" size="0,0"/> #To reduce debug noise.
+		<widget name="channel" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="InfoBarEventView" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
 		<widget name="FullDescription" position="15,97" size="1890,720" font="Regular;42" borderColor="black" borderWidth="1" foregroundColor="white" backgroundColor="background" transparent="1" valign="top" halign="center" zPosition="2"/>
@@ -1109,6 +1110,7 @@
 		<applet type="onLayoutFinish">
 			self.autoResize()
 		</applet>
+		<widget name="description" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="RemoveTimerQuestion" position="center,center" size="754,195" zPosition="5" flags="wfNoBorder">
 		<widget name="text" position="0,0" size="0,0" font="Regular;33"/>
@@ -1937,6 +1939,7 @@
 		<widget name="scan_progress" position="75,450" size="720,22" pixmap="infobar/progress_big.png" borderWidth="1" borderColor="grey"/>
 		<widget name="servicelist" position="975,120" size="930,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" selectionDisabled="1" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="Title" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="SatNimSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1998,6 +2001,7 @@
 		<widget source="onid" render="Label" position="915,385" size="150,50" font="Regular;40" foregroundColor="selectedFG" halign="left"/>
 		<eLabel text="Orb Pos:" position="1125,385" size="180,50" font="Regular;40" halign="right"/>
 		<widget source="pos" render="Label" position="1310,385" size="150,50" font="Regular;40" foregroundColor="selectedFG" halign="left"/>
+		<widget name="introduction" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="ServicesFound" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
