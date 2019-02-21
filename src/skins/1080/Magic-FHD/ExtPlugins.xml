@@ -1706,55 +1706,105 @@
 	</screen>
 
 	<!-- ## InfoBarRecTimers ## -->
-	<screen name="InfoBarRecTimersOverlay" position="0,250" size="1920,630" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="+1">
+	<screen name="InfoBarRecTimersOverlay" position="0,250" size="1920,830" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="1">
 		<widget name="Icons" position="0,0" size="30,30" pixmaps="icons/timer_off.png,icons/timer_wait.png,icons/timer_prep.png,icons/timer_rec.png,icons/timer_zap.png,icons/timer_failed.png,icons/timer_done.png,icons/timer_autotimer.png,icons/timer_rep.png" alphatest="blend" transparent="1" />
-		<widget source="Timers" render="Listbox" position="15,15" size="1740,38" transparent="1">
+		<widget source="Timers" render="Listbox" position="0,0" size="1920,825" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
-				"template":
-					[
-					MultiContentEntryPixmapAlphaBlend(pos = (0, 4), size = (30, 30), png = 0, flags = BT_SCALE),  # State icon
-					MultiContentEntryPixmapAlphaBlend(pos = (38, 4), size = (30, 30), png = 2, flags = BT_SCALE),  # Type icon (AutoTimer, IceTV, Repeat)
-					MultiContentEntryText(pos = (75, 0), size = (30, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Tuner letter
-					MultiContentEntryPixmapAlphaBlend(pos = (105, 1), size = (60, 36), png = 10, flags = BT_SCALE),  # Service picon
-					MultiContentEntryText(pos = (180, 0), size = (225, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 11),  # Service name
-					MultiContentEntryText(pos = (420, 0), size = (510, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 12),  # Timer name
-					MultiContentEntryText(pos = (945, 0), size = (540, 38), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 20),  # Begin - End time
-					MultiContentEntryProgress(pos = (1500, 12), size = (75, 14), percent = -28, borderWidth = 3, foreColor = "red", backColor = "black"),  # Progress bar
-					MultiContentEntryText(pos = (1590, 0), size = (150, 38), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 21)  # Duration
-					],
-				"fonts": [parseFont("Regular;30")],
-				"itemHeight": 38,
-				"scrollbarMode": "showNever",
+				"templates":
+					{
+					"default": (40,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos = (0,4), size = (30,30), png = 0, flags = BT_SCALE), # State icon
+						MultiContentEntryPixmapAlphaBlend(pos = (38,4), size = (30,30), png = 2, flags = BT_SCALE), # Type icon (AutoTimer, IceTV, Repeat)
+						MultiContentEntryPixmapAlphaBlend(pos = (75,1), size = (60,36), png = 12, flags = BT_SCALE),  # Service picon
+						MultiContentEntryText(pos = (145,0), size = (250,38), font = 0, text = 13), # Service name
+						MultiContentEntryText(pos = (405,0), size = (660,38), font = 0, text = 14), # Timer name
+						MultiContentEntryText(pos = (1070,0), size = (30,38), font = 4, text = 4, color = "buttonblue"), # Tuner letter
+						MultiContentEntryText(pos = (1115,0), size = (540,38), font = 0, flags = RT_HALIGN_RIGHT, text = 22), # Begin - End time
+						MultiContentEntryProgress(pos = (1670,14), size = (75,14), percent = -30, borderWidth = 1, foreColor = "buttonblue", backColor = "transpBlack"), # Progress bar
+						MultiContentEntryText(pos = (1750,0), size = (150,38), font = 0, flags = RT_HALIGN_RIGHT, text = 23) # Duration
+						]),
+					"Enhanced": (45,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos = (0,8), size = (30,30), png = 0, flags = BT_SCALE), # State icon
+						MultiContentEntryPixmapAlphaBlend(pos = (38,8), size = (30,30), png = 2, flags = BT_SCALE), # Type icon (AutoTimer, IceTV, Repeat)
+						MultiContentEntryText(pos = (75,0), size = (30,45), font = 4, flags = RT_HALIGN_CENTER, text = 4, color = "buttonblue"), # Tuner letter
+						MultiContentEntryPixmapAlphaBlend(pos = (110,1), size = (70,40), png = 12, flags = BT_SCALE), # Service picon
+						MultiContentEntryText(pos = (180,0), size = (645,45), font = 0, text = 14), # Timer name
+						MultiContentEntryText(pos = (830,5), size = (240,40), font = 2, text = 13), # Service name
+						MultiContentEntryText(pos = (1075,5), size = (90,30), font = 5, text = 5, color = "buttonblue"), # Tuner type
+						MultiContentEntryText(pos = (1170,5), size = (120,30), font = 5, text = 8, color = "buttonblue"), # SNR
+						MultiContentEntryText(pos = (1295,0), size = (260,30), font = 2, flags = RT_HALIGN_RIGHT, text = 22), # Begin - End time
+						MultiContentEntryText(pos = (1565,0), size = (180,30), font = 1, flags = RT_HALIGN_CENTER, text = 29), # Elapsed / Remaining time
+						MultiContentEntryProgress(pos = (1565,30), size = (180,15), percent = -30, borderWidth = 1, foreColor = "buttonblue", backColor = "transpBlack"), # Progress bar
+						MultiContentEntryText(pos = (1750,0), size = (150,45), font = 0, flags = RT_HALIGN_RIGHT, text = 23), # Duration
+						]),
+					"Enhanced (Alt)": (45,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos = (0,8), size = (30,30), png = 0, flags = BT_SCALE),  # State icon
+						MultiContentEntryPixmapAlphaBlend(pos = (38,8), size = (30,30), png = 2, flags = BT_SCALE),  # Type icon (AutoTimer, IceTV, Repeat)
+						MultiContentEntryText(pos = (75,0), size = (30, 38), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 4, color = "red"),  # Tuner letter
+						MultiContentEntryPixmapAlphaBlend(pos = (105,1), size = (72,43), png = 12, flags = BT_SCALE),  # Service picon
+						MultiContentEntryText(pos = (195,0), size = (645,22), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 14),  # Timer name
+						MultiContentEntryText(pos = (225,23), size = (300,22), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 13),  # Service name
+						MultiContentEntryText(pos = (540,23), size = (90,22), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 11),  # Power
+						MultiContentEntryText(pos = (645,23), size = (90,22), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 8),  # SNR
+						MultiContentEntryText(pos = (750,23), size = (90,22), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 5),  # Tuner type
+						MultiContentEntryText(pos = (855,0), size = (495,45), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 22),  # Begin - End time
+						MultiContentEntryText(pos = (1265,0), size = (210,30), font = 2, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 29),  # Elapsed / Remaining time
+						MultiContentEntryProgress(pos = (1365,30), size = (210,6), percent = -30, borderWidth = 1, foreColor = "buttonblue", backColor = "transpBlack"),  # Progress bar
+						MultiContentEntryText(pos = (1590,0), size = (150,45), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 23),  # Duration
+						]),
+					"Detailed": (75,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos = (1,15), size = (30,30), png = 0, flags = BT_SCALE), # State icon
+						MultiContentEntryPixmapAlphaBlend(pos = (35,15), size = (30,30), png = 2, flags = BT_SCALE), # Type icon (AutoTimer, IceTV, Repeat)
+						MultiContentEntryPixmapAlphaBlend(pos = (70,10), size = (50,40), png = 12, flags = BT_SCALE), # Service picon
+						MultiContentEntryText(pos = (130,0), size = (790,40), font = 0, text = 14), # Timer name
+						MultiContentEntryText(pos = (1195,0), size = (555,40), font = 0, flags = RT_HALIGN_CENTER, text = 22), # Begin - End time
+						MultiContentEntryText(pos = (1750,0), size = (150,40), font = 0, flags = RT_HALIGN_RIGHT, text = 23), # Duration
+						MultiContentEntryText(pos = (140,40), size = (750,30), font = 2, text = 13), # Service name
+						MultiContentEntryText(pos = (895,35), size = (30,45), font = 4, text = 4, color = "buttonblue"), # Tuner letter
+						MultiContentEntryText(pos = (935,40), size = (80,30), font = 5, flags = RT_HALIGN_RIGHT, text = 5, color = "buttonblue"), # Tuner type
+						MultiContentEntryText(pos = (1025,40), size = (180,30), font = 5, text = 8, color = "buttonblue"), # SNR
+						MultiContentEntryText(pos = (1208,40), size = (150,30), font = 5, flags = RT_HALIGN_RIGHT, text = 27), # Elapsed time
+						MultiContentEntryProgress(pos = (1365,48), size = (225,20), percent = -30, borderWidth = 1, foreColor = "buttonblue", backColor = "transpBlack"), # Progress bar
+						MultiContentEntryText(pos = (1597,40), size = (150,30), font = 5, text = 28),  # Remaining time
+						MultiContentEntryText(pos = (1750,40), size = (150,30), font = 5, flags = RT_HALIGN_RIGHT, text = 31) # Progress percentage
+						])
+					},
+				"fonts": [parseFont("Regular;30"), parseFont("Regular;22"), parseFont("Regular;25"), parseFont("Regular;19"), parseFont("buttons;31"), parseFont("buttons;27")],
 				"selectionEnabled": False
 				}
 			</convert>
 		</widget>
 	</screen>
-	<screen name="InfoBarRecTimersShow" position="fill" flags="wfNoBorder" backgroundColor="transpBlack">
-		<panel name="BasicTemplate2"/>
-
-		<widget name="Icons" position="0,0" size="20,20" pixmaps="icons/timer_off.png,icons/timer_wait.png,icons/timer_prep.png,icons/timer_rec.png,icons/timer_zap.png,icons/timer_failed.png,icons/timer_done.png,icons/timer_autotimer.png,icons/timer_icetv.png,icons/timer_rep.png" alphatest="blend" transparent="1" />
-
-		<widget source="Timers" render="Listbox" position="5,120" size="1910,880" foregroundColor="grey">
+	<screen name="InfoBarRecTimersShow" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
+		<widget name="Icons" position="0,0" size="30,30" pixmaps="icons/timer_off.png,icons/timer_wait.png,icons/timer_prep.png,icons/timer_rec.png,icons/timer_zap.png,icons/timer_failed.png,icons/timer_done.png,icons/timer_autotimer.png,icons/timer_rep.png" alphatest="blend" transparent="1" />
+		<widget source="Timers" render="Listbox" position="0,10" size="1910,1050"  transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue"
+		scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaBlend(pos = (0, 4), size = (30, 30), png = 0, flags = BT_SCALE),  # State icon
-					MultiContentEntryPixmapAlphaBlend(pos = (38, 4), size = (30, 30), png = 2, flags = BT_SCALE),  # Type icon (AutoTimer, IceTV, Repeat)
-					MultiContentEntryText(pos = (75, 0), size = (30, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Tuner letter
-					MultiContentEntryPixmapAlphaBlend(pos = (105, 1), size = (60, 36), png = 10, flags = BT_SCALE),  # Service picon
-					MultiContentEntryText(pos = (180, 0), size = (225, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 11),  # Service name
-					MultiContentEntryText(pos = (420, 0), size = (525, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 12),  # Timer name
-					MultiContentEntryText(pos = (990, 0), size = (555, 38), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 20),  # Begin - End time
-					MultiContentEntryProgress(pos = (1530, 12), size = (75, 14), percent = -28, borderWidth = 3, foreColor = "red", backColor = "black"),  # Progress bar
-					MultiContentEntryText(pos = (1620, 0), size = (150, 38), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 21)  # Duration
+						MultiContentEntryPixmapAlphaBlend(pos = (1,15), size = (30,30), png = 0, flags = BT_SCALE), # State icon
+						MultiContentEntryPixmapAlphaBlend(pos = (35,15), size = (30,30), png = 2, flags = BT_SCALE), # Type icon (AutoTimer, IceTV, Repeat)
+						MultiContentEntryPixmapAlphaBlend(pos = (70,10), size = (50,40), png = 12, flags = BT_SCALE), # Service picon
+						MultiContentEntryText(pos = (130,0), size = (790,40), font = 0, text = 14), # Timer name
+						MultiContentEntryText(pos = (1195,0), size = (555,40), font = 0, flags = RT_HALIGN_CENTER, text = 22), # Begin - End time
+						MultiContentEntryText(pos = (1750,0), size = (150,40), font = 0, flags = RT_HALIGN_RIGHT, text = 23), # Duration
+						MultiContentEntryText(pos = (140,40), size = (750,30), font = 2, text = 13), # Service name
+						MultiContentEntryText(pos = (895,35), size = (30,45), font = 4, text = 4, color = "buttonblue"), # Tuner letter
+						MultiContentEntryText(pos = (935,40), size = (80,30), font = 5, flags = RT_HALIGN_RIGHT, text = 5, color = "buttonblue"), # Tuner type
+						MultiContentEntryText(pos = (1025,40), size = (180,30), font = 5, text = 8, color = "buttonblue"), # SNR
+						MultiContentEntryText(pos = (1208,40), size = (150,30), font = 5, flags = RT_HALIGN_RIGHT, text = 27), # Elapsed time
+						MultiContentEntryProgress(pos = (1365,48), size = (225,20), percent = -30, borderWidth = 1, foreColor = "buttonblue", backColor = "transpBlack"), # Progress bar
+						MultiContentEntryText(pos = (1597,40), size = (150,30), font = 5, text = 28),  # Remaining time
+						MultiContentEntryText(pos = (1750,40), size = (150,30), font = 5, flags = RT_HALIGN_RIGHT, text = 31) # Progress percentage
 					],
-				"fonts": [parseFont("Regular;30")],
-				"itemHeight": 40,
-				"scrollbarMode": "showOnDemand",
-				"selectionEnabled": True
+				"fonts": [parseFont("Regular;30"), parseFont("Regular;22"), parseFont("Regular;25"), parseFont("Regular;19"), parseFont("buttons;31"), parseFont("buttons;27")],
+				"itemHeight": 75,
 				}
 			</convert>
 		</widget>
