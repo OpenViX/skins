@@ -93,11 +93,13 @@ src/skins/720/Magic-HD/menu/Makefile
 src/skins/720/Magic-HD/window/Makefile
 
 src/skins/720/Magic-HD-Night/Makefile
+src/skins/720/Magic-HD-Night/buttons/Makefile
 src/skins/720/Magic-HD-Night/crossepg/Makefile
 src/skins/720/Magic-HD-Night/epg/Makefile
 src/skins/720/Magic-HD-Night/meta/Makefile
 
 src/skins/720/Magic-HD-Noire/Makefile
+src/skins/720/Magic-HD-Noire/buttons/Makefile
 src/skins/720/Magic-HD-Noire/crossepg/Makefile
 src/skins/720/Magic-HD-Noire/epg/Makefile
 src/skins/720/Magic-HD-Noire/meta/Makefile
