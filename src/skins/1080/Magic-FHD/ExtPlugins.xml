@@ -927,42 +927,6 @@
 	<screen name="MovieManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
-		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
-			<convert type="ServicePosition">Gauge</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="0,135" size="135,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="left">
-			<convert type="ServicePosition">Position,ShowHours</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="540,135" size="175,32" font="Regular;27" backgroundColor="transparent" transparent="1" zPosition="6" borderWidth="2" borderColor="black" valign="center" halign="right">
-			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
-		</widget>
-		<widget name="config" position="735,120" size="1177,765" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="Service" render="Label" position="735,888" size="465,40" font="Regular;30" foregroundColor="selectedFG">
-			<convert type="MovieInfo">RecordServiceName</convert>
-		</widget>
-		<widget source="Service" render="Label" position="1205,888" size="230,40" font="Regular;30" foregroundColor="selectedFG" halign="right">
-			<convert type="ServiceTime">StartTime</convert>
-			<convert type="ClockToText">ShortDate</convert>
-		</widget>
-		<widget source="Service" render="Label" position="1445,888" size="200,40" font="Regular;30" foregroundColor="selectedFG" halign="left">
-			<convert type="ServiceTime">Duration</convert>
-			<convert type="ClockToText">AsLength</convert>
-		</widget>
-		<widget source="Service" render="Label" position="1775,888" size="125,40" font="Regular;30" foregroundColor="selectedFG" halign="right">
-			<convert type="MovieInfo">FileSize</convert>
-		</widget>
-		<widget name="number" position="1340,928" size="250,40" font="Regular;30" foregroundColor="secondFG" halign="right"/>
-		<widget name="size" position="1600,928" size="300,40" font="Regular;30" foregroundColor="secondFG" halign="right"/>
-		<widget source="Service" render="Label" position="735,968" size="1177,45" font="Regular;33" foregroundColor="selectedFG" halign="center">
-			<convert type="MovieInfo">ShortDescription</convert>
-		</widget>
-	</screen>
-
-	<!-- ## MovieManager ## -->
-	<screen name="MovieManager" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
 		<panel name="HelpBPanel"/>
 		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
@@ -1003,33 +967,39 @@
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget name="description" position="7,530" size="715,475" font="Regular;31" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
-<!--	<screen name="MovieManagerFileInfo" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget name="name" position="735,120" size="1177,45" font="Regular;31"/>
-		<widget name="path" position="735,170" size="1177,45" font="Regular;31" foregroundColor="green"/>
-		<widget source="service" render="Label" position="735,220" size="500,45" font="Regular;31" foregroundColor="grey">
+	<screen name="MovieManagerFileInfo" position="fill" flags="wfNoBorder" backgroundColor="transpBlack">
+		<widget name="name" position="10,15" size="1920,40" font="Regular;30" transparent="1"/>
+		<widget name="path" position="10,55" size="1920,40" font="Regular;30" foregroundColor="buttongreen" transparent="1"/>
+		<widget source="service" render="Label" position="10,95" size="290,40" font="Regular;30" foregroundColor="grey" transparent="1">
 			<convert type="ServiceTime">StartTime</convert>
 			<convert type="ClockToText">Format:%a %d.%m.%Y, %H:%M</convert>
 		</widget>
-		<widget source="service" render="Label" position="1240,220" size="675,45" font="Regular;31" foregroundColor="grey">
+		<widget source="service" render="Label" position="300,95" size="600,40" font="Regular;30" foregroundColor="grey" transparent="1">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget name="size" position="735,270" size="200,45" font="Regular;31" foregroundColor="blue"/>
-		<widget source="service" render="Label" position="940,270" size="200,45" foregroundColor="grey" font="Regular;31">
+		<widget name="size" position="10,135" size="120,40" font="Regular;30" foregroundColor="buttonblue" transparent="1"/>
+		<widget source="service" render="Label" position="130,135" size="80,40" foregroundColor="grey" font="Regular;30" transparent="1">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLengthHours</convert>
 		</widget>
-		<widget source="service" render="Label" position="1150,270" size="200,45" foregroundColor="grey" font="Regular;31">
+		<widget source="service" render="Label" position="210,135" size="80,40" foregroundColor="grey" font="Regular;30" transparent="1">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget name="play" position="1355,270" size="100,45" font="Regular;31" foregroundColor="yellow"/>
-	</screen>-->
+		<widget name="play" position="350,135" size="100,40" font="Regular;30" foregroundColor="buttonyellow" transparent="1"/>
+	</screen>
 	<screen name="MovieManagerCfg" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="HelpBPanel"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;31" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+	</screen>
+	<screen name="MovieManagerChoiceBox" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplate"/>
+		<panel name="MenuBPanel"/>
+		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
+				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 
 	<!-- ## MovieBrowser ## -->
