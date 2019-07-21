@@ -390,9 +390,6 @@ src/skins/1080/Simple_Ten_Eighty/extensions/Makefile
 src/skins/1080/Simple_Ten_Eighty/fonts/Makefile
 src/skins/1080/Simple_Ten_Eighty/icons/Makefile
 src/skins/1080/Simple_Ten_Eighty/infobar/Makefile
-src/skins/1080/Simple_Ten_Eighty/skin_default/Makefile
-src/skins/1080/Simple_Ten_Eighty/skin_default/buttons/Makefile
-src/skins/1080/Simple_Ten_Eighty/skin_default/icons/Makefile
 src/skins/1080/Simple_Ten_Eighty/window/Makefile
 
 src/skins/1080/ViXBMC_1080/Makefile
