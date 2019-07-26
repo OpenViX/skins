@@ -348,6 +348,12 @@
 		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar.png" position="260,952" size="1380,12" backgroundColor="un33333a" transparent="0" zPosition="2" borderWidth="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
+		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/update_stable.png" position="1640,901" size="60,32" zPosition="1" alphatest="blend">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/update_unstable.png" position="1640,901" size="60,32" zPosition="1" alphatest="blend">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4_3.png" position="1576,901" size="60,32" zPosition="3" alphatest="on">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
@@ -405,7 +411,6 @@
 		<widget source="session.CurrentService" render="Label" position="1705,856" size="180,25" borderWidth="1" borderColor="black" backgroundColor="transpBlack" zPosition="1" font="Regular;22" transparent="1">
 			<convert type="RotorPosition"/>
 		</widget>
-		<!--<ePixmap pixmap="PLi-HD/icons/icon_update_off.png" position="90,52" size="30,30" zPosition="0" alphatest="blend"/>-->
 	</screen>
 
 	<!-- DownloadBar (used by ABM, CrossEPG, etc -->
