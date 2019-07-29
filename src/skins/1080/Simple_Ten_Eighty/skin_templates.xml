@@ -417,15 +417,16 @@
 	<screen name="DownloadBar">
 		<widget name="action" position="10,5" size="650,45" font="Regular;34" backgroundColor="transpBlack"/>
 		<widget name="status" position="700,5" size="650,45" font="Regular;34" halign="center" backgroundColor="transpBlack"/>
-		<widget source="Frontend" conditional="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="1400,5" size="38,36" alphatest="on">
+		<widget source="Frontend" conditional="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="1393,5" size="38,36" alphatest="on">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="Frontend" conditional="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="1400,5" size="38,36" alphatest="on">
+		<widget source="Frontend" conditional="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="1393,5" size="38,36" alphatest="on">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
-		<widget source="Frontend" conditional="Frontend" render="Label" position="1450,5" size="130,45" font="Regular;34" halign="left" backgroundColor="transpBlack">
+		<widget name="tuner_text" conditional="tuner_text" position="1433,5" size="35,45" font="Regular;34" halign="center" backgroundColor="transpBlack"/>
+		<widget source="Frontend" conditional="Frontend" render="Label" position="1470,5" size="130,45" font="Regular;34" halign="left" backgroundColor="transpBlack">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 		<widget source="progress_text" render="Label" position="1620,5" size="130,45" font="Regular;34" halign="right" backgroundColor="transpBlack">
