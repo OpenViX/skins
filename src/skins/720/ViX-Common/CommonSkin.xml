@@ -1940,13 +1940,7 @@ self.autoResize()
 	</screen>
 	<!-- Wizzard's -->
 	<screen name="StartWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;22" foregroundColor="window-fg" backgroundColor="black" transparent="1"/>
 		<widget source="list" render="Listbox" position="75,400" size="805,220" selectionPixmap="ViX-Common/buttons/FocusBar_H25x805.png" transparent="1" backgroundColor="black" scrollbarMode="showOnDemand">
 			<convert type="StringList"/>
@@ -1959,40 +1953,19 @@ self.autoResize()
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="PluginDownloadBrowserWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="10,110" size="503,533" font="Regular;20" foregroundColor="window-fg" backgroundColor="black" halign="center" valign="center" transparent="0" zPosition="1"/>
 		<widget name="list" position="10,110" size="503,528" itemHeight="48" selectionPixmap="ViX-Common/buttons/FocusBar_H50x503.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="SkinSelectorWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="Preview" position="200,230" size="280,210" alphatest="on" zPosition="0"/>
 		<widget name="SkinList" position="600,230" size="450,240" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="3"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="NetworkWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;22" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
 		<widget source="list" render="Listbox" position="150,400" size="730,220" selectionPixmap="ViX-Common/buttons/FocusBar_H25x740.png" transparent="1" backgroundColor="black" scrollbarMode="showOnDemand">
 			<convert type="StringList"/>
@@ -2009,16 +1982,9 @@ self.autoResize()
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="125,170" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
 		<panel name="FullscreenButtonPanel"/>
 		<widget name="languagetext" position="130,686" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="LanguageWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;23" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
 		<widget source="languages" render="Listbox" position="150,350" size="440,252" selectionPixmap="ViX-Common/buttons/FocusBar_H42x440.png" transparent="1" backgroundColor="black" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
@@ -2035,16 +2001,9 @@ self.autoResize()
 		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
 		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="ImageWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;23" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
 		<widget source="list" render="Listbox" position="150,400" size="730,220" selectionPixmap="ViX-Common/buttons/FocusBar_H25x740.png" transparent="1" backgroundColor="black" scrollbarMode="showOnDemand" zPosition="3">
 			<convert type="StringList"/>
@@ -2056,16 +2015,9 @@ self.autoResize()
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="DefaultWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;23" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
 		<widget source="list" render="Listbox" position="150,400" size="730,220" selectionPixmap="ViX-Common/buttons/FocusBar_H25x740.png" zPosition="3" backgroundColor="black" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="StringList"/>
@@ -2077,16 +2029,9 @@ self.autoResize()
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="VideoWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;23" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
 		<widget source="list" render="Listbox" position="250,400" size="630,220" selectionPixmap="ViX-Common/buttons/FocusBar_H25x630.png" transparent="1" backgroundColor="black" scrollbarMode="showOnDemand" zPosition="3">
 			<convert type="StringList"/>
@@ -2100,16 +2045,9 @@ self.autoResize()
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="DreamPackageWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;23" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
 		<widget source="list" render="Listbox" position="150,400" size="730,220" selectionPixmap="ViX-Common/buttons/FocusBar_H25x740.png" zPosition="3" backgroundColor="black" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="StringList"/>
@@ -2121,16 +2059,9 @@ self.autoResize()
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="TutorialWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;22" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
 		<widget source="list" render="Listbox" position="150,400" size="730,220" selectionPixmap="ViX-Common/buttons/FocusBar_H25x740.png" backgroundColor="black" scrollbarMode="showOnDemand">
 			<convert type="StringList"/>
@@ -2139,16 +2070,9 @@ self.autoResize()
 		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
 		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,680" size="1280,40" zPosition="-1"/>
 	</screen>
 	<screen name="CleanupWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;23" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
 		<widget source="list" render="Listbox" position="250,400" size="630,220" selectionPixmap="ViX-Common/buttons/FocusBar_H25x630.png" transparent="1" backgroundColor="black" scrollbarMode="showOnDemand" zPosition="3">
 			<convert type="StringList"/>
@@ -2162,7 +2086,6 @@ self.autoResize()
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,686" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,680" size="1280,40" zPosition="-1"/>
 	</screen>
 	<screen name="CleanupWizardConfiguration" position="209,48" size="865,623" flags="wfNoBorder" backgroundColor="black">
 		<ePixmap pixmap="Bg_EPG_list.png" zPosition="-1" position="0,0" size="865,623" alphatest="on"/>
@@ -2182,13 +2105,7 @@ self.autoResize()
 		<widget source="status" render="Label" position="160,525" size="540,60" zPosition="10" foregroundColor="#003c3c3c" backgroundColor="#27aeaeae" font="Regular;20" halign="center" valign="center" transparent="1"/>
 	</screen>
 	<screen name="DefaultSatLists" position="fill" title="Welcome..." flags="wfNoBorder">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;23" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
 		<widget source="list" render="Listbox" position="150,400" size="730,220" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="ViX-Common/buttons/FocusBar_H25x740.png" transparent="0">
 			<convert type="StringList"/>
@@ -2200,35 +2117,20 @@ self.autoResize()
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="90,655" size="25,25" alphatest="blend" transparent="1"/>
 		<widget name="languagetext" position="130,659" size="240,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="MessageBoxWizard" position="fill" flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="0"/>
 		<widget source="Title" render="Label" position="80,37" size="880,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
-		<widget source="global.CurrentTime" render="Label" position="1100,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="850,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget name="text" position="150,140" size="730,250" font="Regular;23" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="100,140" size="53,53" alphatest="blend"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="100,140" size="53,53" alphatest="blend"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="100,140" size="53,53" alphatest="blend"/>
 		<widget name="list" position="150,400" size="730,220" transparent="1" backgroundColor="black"/>
 		<widget name="rc" pixmap="rc.png" position="950,140" zPosition="10" size="154,500" transparent="0" alphatest="blend"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<screen name="InstallWizardIpkgUpdater" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
-			<convert type="ClockToText">Date</convert>
-		</widget>
+		<panel name="WizardPanel"/>
 		<widget source="statusbar" render="Label"  position="150,140" size="730,250" font="Regular;22" foregroundColor="window-fg" backgroundColor="black" transparent="1"/>
-		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>
 	</screen>
 	<!-- Software Manger Screens -->
 	<screen name="UpdatePluginMenu" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">

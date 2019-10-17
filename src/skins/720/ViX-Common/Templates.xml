@@ -76,7 +76,7 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
-	
+
 	<screen name="FullscreenTemplateWithPIGPanel">
 		<panel name="FullscreenTemplatePanel"/>
 		<panel name="FullscreenPIGPanel"/>
@@ -85,7 +85,7 @@
 	<screen name="FullscreenInfoButtonPanel">
 		<ePixmap pixmap="buttons/key_info.png" position="1200,686" size="35,25" alphatest="blend" transparent="1"/>
 	</screen>
-	
+
 	<screen name="FullscreenMenuButtonPanel">
 		<ePixmap pixmap="buttons/key_menu.png" position="1150,686" size="35,25" alphatest="blend" transparent="1"/>
 	</screen>
@@ -104,7 +104,7 @@
 	<screen name="menu_path_compressed_HalfScreen">
 		<widget source="menu_path_compressed" render="Label" position="10,30" size="520,38" font="Bold;15" foregroundColor="menu-title-frgrnd" backgroundColor="menu-title-bkgrnd" transparent="1"/>
 	</screen>
-	
+
 	<screen name="MenuButtonPanel">
 		<!-- Red button -->
 		<ePixmap objectTypes="key_red,Button,Label" pixmap="ViX-Common/buttons/red.png" position="40,663" size="24,24" alphatest="blend" transparent="1"/>
@@ -129,7 +129,7 @@
 		</widget>
 		<widget name="key_yellow" objectTypes="key_yellow,Label,Button" position="315,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
 		<widget source="key_yellow" render="Label" objectTypes="key_yellow,StaticText" position="315,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd1"/>
-	
+
 		<!-- Blue button -->
 		<ePixmap objectTypes="key_blue,Button,Label" pixmap="ViX-Common/buttons/blue.png" position="280,690" size="24,24" alphatest="blend" transparent="1"/>
 		<widget source="key_blue" objectTypes="key_blue,StaticText" render="Pixmap" pixmap="ViX-Common/buttons/blue.png" position="280,690" size="24,24" alphatest="blend" transparent="1">
@@ -187,6 +187,17 @@
 		</widget>
 		<widget name="introduction" conditional="introduction" position="0,0" size="0,0"/><!-- Hidden -->
 		<widget name="footnote" conditional="footnote" position="0,0" size="0,0"/><!-- Hidden -->
+	</screen>
+
+	<screen name="WizardPanel">
+		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,113" alphatest="on" transparent="1" zPosition="12"/>	
+		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
+			<convert type="ClockToText"/>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<ePixmap pixmap="screens/fs-bg-bot-wizzard.png" position="0,645" size="1280,75" alphatest="on" transparent="1" zPosition="-1"/>		
 	</screen>
 
 </skin>
