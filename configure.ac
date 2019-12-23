@@ -80,18 +80,6 @@ src/skins/720/Blue-HD/piconbg/Makefile
 src/skins/720/Blue-HD/screens/Makefile
 src/skins/720/Blue-HD/spinner/Makefile
 
-src/skins/720/Magic-HD/Makefile
-src/skins/720/Magic-HD/border/Makefile
-src/skins/720/Magic-HD/buttons/Makefile
-src/skins/720/Magic-HD/dvr/Makefile
-src/skins/720/Magic-HD/epg/Makefile
-src/skins/720/Magic-HD/fonts/Makefile
-src/skins/720/Magic-HD/icons/Makefile
-src/skins/720/Magic-HD/infobar/Makefile
-src/skins/720/Magic-HD/meta/Makefile
-src/skins/720/Magic-HD/menu/Makefile
-src/skins/720/Magic-HD/window/Makefile
-
 src/skins/720/Magic-HD-Night/Makefile
 src/skins/720/Magic-HD-Night/buttons/Makefile
 src/skins/720/Magic-HD-Night/crossepg/Makefile
@@ -103,19 +91,6 @@ src/skins/720/Magic-HD-Noire/buttons/Makefile
 src/skins/720/Magic-HD-Noire/crossepg/Makefile
 src/skins/720/Magic-HD-Noire/epg/Makefile
 src/skins/720/Magic-HD-Noire/meta/Makefile
-
-src/skins/720/Magic-SD/Makefile
-src/skins/720/Magic-SD/buttons/Makefile
-src/skins/720/Magic-SD/crossepg/Makefile
-src/skins/720/Magic-SD/dvr/Makefile
-src/skins/720/Magic-SD/epg/Makefile
-src/skins/720/Magic-SD/fonts/Makefile
-src/skins/720/Magic-SD/icons/Makefile
-src/skins/720/Magic-SD/infobar/Makefile
-src/skins/720/Magic-SD/logos/Makefile
-src/skins/720/Magic-SD/meta/Makefile
-src/skins/720/Magic-SD/piconbg/Makefile
-src/skins/720/Magic-SD/window/Makefile
 
 src/skins/720/MetrixHD/Makefile
 src/skins/720/MetrixHD/buttons/Makefile
