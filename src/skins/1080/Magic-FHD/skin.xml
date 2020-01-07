@@ -1450,21 +1450,19 @@
 	</screen>
 	<screen name="SkinSelector" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="skins" render="Listbox" position="780,135" size="450,805" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
+		<widget source="skins" render="Listbox" position="735,120" size="750,800" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
 			<convert type="TemplatedMultiContent">
 		{"template": [
-				MultiContentEntryText(pos = (0, 0), size = (430, 50), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
-				# MultiContentEntryText(pos = (0, 0), size = (390, 50), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
-				# MultiContentEntryText(pos = (400, 0), size = (330, 50), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
+				MultiContentEntryText(pos = (0,0), size = (495,50), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+				MultiContentEntryText(pos = (500,0), size = (240,50), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
 			],
 		"fonts": [gFont("Regular",33)],
-		"itemHeight": 50
+		"itemHeight":50
 		}
 			</convert>
 		</widget>
-		<widget name="preview" position="1377,165" size="420,315" alphatest="blend"/>
-		<widget source="description" render="Label" position="780,123" size="1132,750" font="Regular;36" zPosition="-1" valign="center" halign="center" foregroundColor="grey"/>
+		<widget name="preview" position="1495,165" size="420,315" alphatest="blend"/>
 	</screen>
 	<screen name="UpdatePlugin" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
