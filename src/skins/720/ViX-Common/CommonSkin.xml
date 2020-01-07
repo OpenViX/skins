@@ -1789,9 +1789,20 @@ self.autoResize()
 	</screen>
 	<screen name="SkinSelector" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="SkinList" position="15,355" size="495,240" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<widget name="Preview" position="117,138" size="280,210" alphatest="on" zPosition="0"/>
-		<widget source="introduction" render="Label" position="10,604" size="503,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" backgroundColor="window-bg"/>
+		<widget alphatest="blend" name="preview" position="center,138" size="356,200" zPosition="0"/>
+		<widget source="skins" render="Listbox" position="15,340" size="495,240" backgroundColor="window-bg" enableWrapAround="1" foregroundColor="window-fg" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (0,0), size = (300,30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryText(pos = (305,0), size = (190,30), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
+				],
+				"fonts": [gFont("Regular",25)],
+				"itemHeight":30
+				}
+			</convert>
+		</widget>
+		<widget source="description" render="Label" position="center,580" size="503,48" font="Regular;20" halign="center" transparent="1" backgroundColor="window-bg"/>
 	</screen>
 	<screen name="SleepTimerEdit" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
