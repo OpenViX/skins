@@ -144,7 +144,7 @@
 		<panel name="MenuButtonPanel"/>
 	</screen>
 
-	<screen name="DownloadBar">
+<!--	<screen name="DownloadBar">
 		<widget name="action" position="5,3" size="435,25" font="Regular;22" backgroundColor="transpBlack" borderWidth="3" borderColor="black"/>
 		<widget name="status" position="465,5" size="435,25" font="Regular;22" halign="center" backgroundColor="transpBlack" borderWidth="2" borderColor="black"/>
 		<widget source="progress_text" render="Label" position="1005,5" size="135,25" font="Regular;22" halign="left" backgroundColor="transpBlack" borderWidth="2" borderColor="black">
@@ -153,7 +153,32 @@
 		<widget source="progress_text" render="Label" position="1135,5" size="140,25" font="Regular;22" halign="left" backgroundColor="transpBlack" borderWidth="2" borderColor="black">
 			<convert type="ProgressToText">InPercent</convert>
 		</widget>
+	</screen>-->
+
+	<screen name="DownloadBar">
+		<widget name="action" position="5,3" size="435,25" font="Regular;22" backgroundColor="transpBlack" borderWidth="3" borderColor="black"/>
+		<widget name="status" position="465,5" size="435,25" font="Regular;22" halign="center" backgroundColor="transpBlack" borderWidth="2" borderColor="black"/>
+		<widget source="Frontend" conditional="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="905,3" size="25,25" alphatest="on" scale="1">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="Frontend" conditional="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="905,3" size="25,25" alphatest="on" scale="1">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget name="tuner_text" conditional="tuner_text" position="935,5" size="25,25" font="Regular;22" halign="center" transparent="1"/>
+		<widget source="Frontend" conditional="Frontend" render="Label" position="965,5" size="25,25" font="Regular;22" halign="left" transparent="1">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<widget source="progress_text" render="Label" position="965,5" size="80,25" font="Regular;22" halign="left" backgroundColor="transpBlack" borderWidth="2" borderColor="black">
+			<convert type="ProgressToText">InText</convert>
+		</widget>
+		<widget source="progress_text" render="Label" position="1045,5" size="45,25" font="Regular;22" halign="left" backgroundColor="transpBlack" borderWidth="2" borderColor="black">
+			<convert type="ProgressToText">InPercent</convert>
+		</widget>
 	</screen>
+	
+
 
 	<screen name="HalfscreenConfig532"><!-- Config heights must be a multiple of itemHeight -->
 		<widget name="config" position="10,107" size="503,532" itemHeight="28" font="Regular;22" selectionPixmap="ViX-Common/buttons/FocusBar_H25x503.png" scrollbarMode="showOnDemand"/>
