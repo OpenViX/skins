@@ -1645,11 +1645,17 @@ self.autoResize()
 		<!-- ##Config List## -->
 		<widget name="config" position="580,280" size="640,350" itemHeight="38" font="Regular;22" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<!-- ##TSID ONID ORB ## -->
-		<eLabel text="TSID:" position="310,225" size="100,50" font="Regular;30" transparent="0" halign="right"/>
+		<widget source="tsid" render="FixedLabel" text="TSID:" position="310,225" size="100,50" font="Regular;30" transparent="0" halign="right">
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<widget source="tsid" render="Label" position="420,225" size="100,50" font="Regular;30" foregroundColor="yellow" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" zPosition="1"/>
-		<eLabel text="ONID:" position="615,225" size="100,50" font="Regular;30" transparent="0" halign="right"/>
+		<widget source="onid" render="FixedLabel" text="ONID:" position="615,225" size="100,50" font="Regular;30" transparent="0" halign="right">
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<widget source="onid" render="Label" position="725,225" size="100,50" font="Regular;30" foregroundColor="yellow" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" zPosition="1"/>
-		<eLabel text="Orb Pos:" position="920,225" size="130,50" font="Regular;30" transparent="0" halign="right"/>
+		<widget source="pos" render="FixedLabel" text="Orb Pos:" position="920,225" size="130,50" font="Regular;30" transparent="0" halign="right">
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<widget source="pos" render="Label" position="1060,225" size="100,50" font="Regular;30" foregroundColor="yellow" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" zPosition="1"/>
 <!--
 		<widget name="introduction" position="535,10" size="735,40" font="Regular;35" foregroundColor="yellow" backgroundColor="menu-buttons-bkgrnd1" halign="left" transparent="1" zPosition="1"/>

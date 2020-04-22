@@ -2008,12 +2008,24 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 
 		<!-- ORB TSID ONID -->
 		<!--This will need ABM to read the values until E2 is adapted to read values from stream -->
-		<eLabel text="Orb Pos:" position="450,340" size="180,45" font="Regular;40" halign="right"/>
-		<widget source="pos" render="Label" position="640,340" size="150,45" backgroundColor="darkgrey" font="Regular;40" foregroundColor="selectedFG" halign="center" />
-		<eLabel text="ONID:" position="880,340" size="180,45" font="Regular;40" halign="right"/>
-		<widget source="onid" render="Label" position="1065,340" size="150,45" backgroundColor="darkgrey" font="Regular;40" foregroundColor="selectedFG" halign="center"/>
-		<eLabel text="TSID:" position="1315,340" size="180,45" font="Regular;40" halign="right"/>
-		<widget source="tsid" render="Label" position="1520,340" size="150,45" backgroundColor="darkgrey" font="Regular;40" foregroundColor="selectedFG" halign="center"/>
+		<widget source="pos" render="FixedLabel" text="Orb Pos:" position="450,340" size="180,45" font="Regular;40" halign="right">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="pos" render="Label" position="640,340" size="150,45" backgroundColor="darkgrey" font="Regular;40" foregroundColor="selectedFG" halign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="onid" render="FixedLabel" text="ONID:" position="880,340" size="180,45" font="Regular;40" halign="right">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="onid" render="Label" position="1065,340" size="150,45" backgroundColor="darkgrey" font="Regular;40" foregroundColor="selectedFG" halign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="tsid" render="FixedLabel" text="TSID:" position="1315,340" size="180,45" font="Regular;40" halign="right">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="tsid" render="Label" position="1520,340" size="150,45" backgroundColor="darkgrey" font="Regular;40" foregroundColor="selectedFG" halign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
 
 	<screen name="SatNimSelection" title="Select Tuner" position="fill" flags="wfNoBorder">
