@@ -2060,12 +2060,24 @@
 		<widget name="config" position="802,455" size="1110,545" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" foregroundColor="secondFG" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 <!-- ##TSID ONID ORB ## -->
-		<eLabel text="TSID:" position="340,385" size="180,50" font="Regular;40" halign="right"/>
-		<widget source="tsid" render="Label" position="520,385" size="150,50" font="Regular;40" foregroundColor="selectedFG" halign="left"/>
-		<eLabel text="ONID:" position="730,385" size="180,50" font="Regular;40" halign="right"/>
-		<widget source="onid" render="Label" position="915,385" size="150,50" font="Regular;40" foregroundColor="selectedFG" halign="left"/>
-		<eLabel text="Orb Pos:" position="1125,385" size="180,50" font="Regular;40" halign="right"/>
-		<widget source="pos" render="Label" position="1310,385" size="150,50" font="Regular;40" foregroundColor="selectedFG" halign="left"/>
+		<widget source="tsid" render="FixedLabel" text="TSID:" position="340,385" size="180,50" font="Regular;40" halign="right">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="tsid" render="Label" position="520,385" size="150,50" font="Regular;40" foregroundColor="selectedFG" halign="left">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="onid" render="FixedLabel" text="ONID:" position="730,385" size="180,50" font="Regular;40" halign="right">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="onid" render="Label" position="915,385" size="150,50" font="Regular;40" foregroundColor="selectedFG" halign="left">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="pos" render="FixedLabel" text="Orb Pos:" position="1125,385" size="180,50" font="Regular;40" halign="right">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="pos" render="Label" position="1310,385" size="150,50" font="Regular;40" foregroundColor="selectedFG" halign="left">
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<widget name="introduction" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="ServicesFound" position="fill" flags="wfNoBorder">
