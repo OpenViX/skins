@@ -171,7 +171,27 @@
 		<ePixmap pixmap="buttons/record.png" position="343,676" size="27,27" alphatest="blend" transparent="0" />
 		<eLabel text="to record" font="skyreg;23" position="378,677" size="150,25" foregroundColor="skylighterblue2" backgroundColor="skydarkblue" halign="left" transparent="1" zPosition="1"/>
 	</screen>
-	
+	<screen name="EPGZap">
+		<widget name="zapbackground" position="0,0" size="e,e" backgroundColor="window-bg" transparent="0" zPosition="4" />
+		<widget source="zapservice" render="Picon" position="center,10%" size="110,66" alphatest="blend" backgroundColor="window-bg" transparent="1" zPosition="5">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget name="zapnumber" position="center,40%" size="e,80" font="skyreg;42" backgroundColor="window-bg" foregroundColor="window-fg" transparent="1" zPosition="5" valign="top" halign="center" />
+		<widget source="zapservice" render="Label" position="center,60%" size="e,80" font="skyreg;42" backgroundColor="window-bg" foregroundColor="window-fg" transparent="1" zPosition="5" valign="top" halign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<screen name="EPGZapHorizontal">
+		<widget name="zapbackground" position="0,0" size="e,e" backgroundColor="window-bg" transparent="0" zPosition="4" />
+		<widget source="zapservice" render="Picon" position="10,c-33" size="110,66" alphatest="blend" backgroundColor="window-bg" transparent="1" zPosition="5">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget name="zapnumber" position="160,0" size="100,e" font="skyreg;42" backgroundColor="window-bg" foregroundColor="window-fg" transparent="1" zPosition="5" valign="center" halign="right" />
+		<widget source="zapservice" render="Label" position="290,0" size="400,e" font="skyreg;42" backgroundColor="window-bg" foregroundColor="window-fg" transparent="1" zPosition="5" valign="center" halign="left">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+
 	<!-- ## Infobar Panels ## -->
 	<screen name="InfobarChannelName">
 		<widget source="session.CurrentService" render="Label" position="18,4" size="625,34" font="skyreg;28" foregroundColor="white" backgroundColor="infobar-bkgrnd" transparent="1" valign="top" halign="left" noWrap="1">

@@ -492,7 +492,9 @@
 		<panel name="MenuBPanel"/>
 		<panel name="HelpBPanel"/>
 		<widget name="lab1" position="780,120" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="20"/>
-		<widget name="number" position="755,120" size="1157,810" font="Regular;54" zPosition="5" valign="center" halign="center"/>
+		<panel position="755,120" size="1157,840">
+			<panel name="EPGZap" />
+		</panel>
 		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1">
@@ -513,8 +515,10 @@
 		<widget name="date" position="1125,120" size="375,50" font="Regular;36" halign="center" foregroundColor="secondFG"/>
 		<widget name="list" position="780,247" size="1132,722" EventFontSingle="Regular;30" itemHeight="38" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
 						scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<panel position="780,247" size="1132,722">
+			<panel name="EPGZap" />
+		</panel>
 		<widget name="bouquetlist" position="885,247" size="900,750" itemHeight="31" foregroundColor="white" foregroundColorSelected="selectedFG" backgroundColorSelected="#001C252D" borderColor="background" scrollbarMode="showNever" zPosition="4"/>
-		<widget name="number" position="755,123" size="1157,810" font="Regular;54" zPosition="5" valign="center" halign="center"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="1"/>
 		<widget name="now_button" pixmap="epg/epg_off.png" position="885,172" zPosition="2" size="270,60" alphatest="blend"/>
 		<widget name="now_button_sel" pixmap="epg/epg_now_on.png" position="885,172" zPosition="3" size="270,60" alphatest="blend"/>
@@ -656,6 +660,9 @@
 		<widget source="Title" render="Label" position="30,15" size="1275,50" font="Regular;36" transparent="1" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2"/>
 		<widget name="lab1" position="0,75" size="1920,172" font="Regular;33" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="timeline_text" position="0,75" size="1920,45" itemHeight="45" TimelineFont="Regular;30" backgroundColor="black" foregroundColor="orange" transparent="1" zPosition="0"/>
+		<panel position="0,120" size="1920,127">
+			<panel name="EPGZapHorizontal" />
+		</panel>
 		<widget name="list" position="0,120" size="1920,127" ServiceFontGraphical="Regular;30" EntryFontGraphical="Regular;30" EventNamePadding="10" backgroundColor="black" scrollbarMode="showNever" transparent="0"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget name="bouquetlist" position="0,112" size="1920,127" itemHeight="40" font="Regular;30" backgroundColor="black" foregroundColorSelected="yellow" scrollbarMode="showNever" zPosition="4" transparent="0"/>
@@ -683,6 +690,9 @@
 		<panel name="HelpBPanel"/>
 		<widget name="timeline_text" position="7,93" size="1905,36" TimelineFont="Regular;29" foregroundColor="selectedFG"/>
 		<widget name="lab1" position="0,82" size="1920,727" font="Regular;36" halign="center" valign="center" zPosition="20"/>
+		<panel position="7,135" size="1905,712">
+			<panel name="EPGZap" />
+		</panel>
 		<widget name="list" position="7,135" size="1905,712" ServiceFontGraphical="channelselectionservice;30" EntryFontGraphical="channelselectionevent;30"
 				ServiceNamePadding="5" ServiceBackgroundColor="bluetransparent" ServiceBackgroundColorNow="greentransparent" EntryBackgroundColor="bluetransparent"
 				EntryBackgroundColorSelected="black" EntryBackgroundColorNow="redtransparent" EntryBackgroundColorNowSelected="redtransparent" EntryForegroundColorSelected="selectedFG"
@@ -759,6 +769,9 @@
 		</widget>
 		<widget name="timeline_text" position="7,429" size="1912,45" TimelineFont="Regular;30" itemHeight="40" foregroundColor="selectedFG"/>
 		<widget name="lab1" position="7,469" size="1912,547" font="Regular;33" halign="center" valign="center" zPosition="20"/>
+		<panel position="7,469" size="1912,547">
+			<panel name="EPGZap" />
+		</panel>
 		<widget name="list" position="7,469" size="1912,547" ServiceFontGraphical="channelselectionservice;30" EntryFontGraphical="channelselectionevent;30" ServiceNamePadding="5"
 				ServiceBackgroundColor="bluetransparent" ServiceBackgroundColorNow="greentransparent" EntryBackgroundColor="bluetransparent" EntryBackgroundColorSelected="black"
 				EntryBackgroundColorNow="redtransparent" EntryBackgroundColorNowSelected="redtransparent" EntryForegroundColorSelected="selectedFG" EntryForegroundColorNowSelected="selectedFG"
