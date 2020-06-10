@@ -463,5 +463,26 @@
 		<widget name="slider" position="780,440" size="1110,20" zPosition="2" transparent="1"/>
 		<widget name="activityslider" position="30,1024" size="1860,6" pixmap="window/slider100.png" transparent="1" zPosition="2"/>
 	</screen>
+
+	<screen name="EPGZap">
+		<widget name="zapbackground" position="0,0" size="e,e" backgroundColor="window-bg" transparent="0" zPosition="4" />
+		<widget source="zapservice" render="Picon" position="center,10%" size="200,120" alphatest="blend" backgroundColor="window-bg" transparent="1" zPosition="5">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget name="zapnumber" position="center,45%" size="e,100" font="Regular;42" backgroundColor="window-bg" foregroundColor="window-fg" transparent="1" zPosition="5" valign="top" halign="center" />
+		<widget source="zapservice" render="Label" position="center,60%" size="e,100" font="Regular;42" backgroundColor="window-bg" foregroundColor="window-fg" transparent="1" zPosition="5" valign="top" halign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<screen name="EPGZapHorizontal">
+		<widget name="zapbackground" position="0,0" size="e,e" backgroundColor="window-bg" transparent="0" zPosition="4" />
+		<widget source="zapservice" render="Picon" position="10,c-33" size="110,66" alphatest="blend" backgroundColor="window-bg" transparent="1" zPosition="5">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget name="zapnumber" position="160,0" size="100,e" font="Regular;42" backgroundColor="window-bg" foregroundColor="window-fg" transparent="1" zPosition="5" valign="center" halign="right" />
+		<widget source="zapservice" render="Label" position="290,0" size="400,e" font="Regular;42" backgroundColor="window-bg" foregroundColor="window-fg" transparent="1" zPosition="5" valign="center" halign="left">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
 </skin>
 
