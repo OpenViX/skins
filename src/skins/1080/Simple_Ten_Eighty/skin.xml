@@ -364,8 +364,7 @@
 
 	<screen name="EPGSelection" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<panel name="KeyMenuTemplate"/>
-		<panel name="KeyInfoTemplate"/>
+		<panel name="KeyMenuInfoTemplate"/>
 		<widget name="list" position="780,100" size="1110,912" itemHeight="38" setEventItemFont="Regular;32" setColWidths="120,220" setColGap="40" setIconDistance="10" transparent="1" scrollbarMode="showOnDemand" />
 		<widget source="Service" render="Label" position="30,525" size="720,30" foregroundColor="foreground" font="Regular;26" valign="center" halign="center" transparent="1" zPosition="1">
 			<convert type="TransponderInfo"/>
@@ -480,8 +479,7 @@
 
 	<screen name="GraphMultiEPG" title="Electronic Program Guide" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<panel name="KeyMenuTemplate"/>
-		<panel name="KeyInfoTemplate"/>
+		<panel name="KeyMenuInfoTemplate"/>
 		<widget source="Event" render="Label" position="780,105" size="225,36" backgroundColor="background" transparent="1" foregroundColor="secondFG" font="Regular;33" valign="top">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">ShortDate</convert>
@@ -524,8 +522,7 @@
 
 	<screen name="GraphMultiEPGList" title="Electronic Program Guide" position="fill" flags="wfNoBorder">
 		<panel name="PigLessTemplate"/>
-		<panel name="KeyMenuTemplate"/>
-		<panel name="KeyInfoTemplate"/>
+		<panel name="KeyMenuInfoTemplate"/>
 		<widget source="Event" render="Label" position="30,105" size="1860,37" backgroundColor="background" transparent="1" foregroundColor="secondFG" font="Regular;34" valign="top">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Date</convert>
@@ -564,8 +561,8 @@
 
 	<screen flags="wfNoBorder" name="MenuSort" position="fill">
 		<panel name="MenuTemplate"/>
-		<ePixmap pixmap="buttons/key_prev.png" alphatest="blend" position="30,1031" size="52,38"/>
-		<ePixmap pixmap="buttons/key_next.png" alphatest="blend" position="82,1031" size="52,38"/>
+		<ePixmap pixmap="buttons/key_prev.png" alphatest="blend" position="62,1031" size="52,38"/>
+		<ePixmap pixmap="buttons/key_next.png" alphatest="blend" position="114,1031" size="52,38"/>
 	</screen>
 
 	<screen flags="wfNoBorder" name="menu_setup" position="fill">
@@ -766,8 +763,7 @@
 
 	<screen name="ChannelSelectionRadio" position="fill" flags="wfNoBorder">
 		<panel name="PigLessTemplate"/>
-		<panel name="KeyMenuTemplate"/>
-		<panel name="KeyInfoTemplate"/>
+		<panel name="KeyMenuInfoTemplate"/>
 		<widget source="session.CurrentService" render="Picon" position="30,907" size="150,90" alphatest="blend" backgroundColor="secondBG" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
@@ -1092,9 +1088,9 @@
 
 	<screen name="PluginBrowser" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<ePixmap pixmap="buttons/key_prev.png" alphatest="blend" position="30,1031" size="52,38"/>
-		<ePixmap pixmap="buttons/key_next.png" alphatest="blend" position="82,1031" size="52,38"/>
-		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="135,1031" size="52,38"/>
+		<ePixmap pixmap="buttons/key_prev.png" alphatest="blend" position="62,1031" size="52,38"/>
+		<ePixmap pixmap="buttons/key_next.png" alphatest="blend" position="114,1031" size="52,38"/>
+		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="167,1031" size="52,38"/>
 		<widget name="list" position="780,100" size="1110,912" scrollbarMode="showOnDemand"/>
 	</screen>
 
