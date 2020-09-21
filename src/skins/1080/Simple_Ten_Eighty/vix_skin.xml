@@ -100,6 +100,32 @@
 		<panel name="KeyMenuTemplate"/>
 	</screen>
 
+	<!-- SlimChannelSelection (on LONG UP / DOWN) -->
+	<screen name="SlimChannelSelection" flags="wfNoBorder" position="0,0" size="e,e" backgroundColor="transparent">
+		<eLabel position="0,0" size="885,e-60" backgroundColor="transpBlack" zPosition="-1"/>
+		<eLabel position="0,e-60" size="e,60" backgroundColor="transpBlack" zPosition="-1"/>
+		<panel name="ButtonTemplate"/>
+		<panel name="KeyMenuInfoTemplate"/>
+		<widget source="Title" foregroundColor="yellowsoft" render="Label" position="2,8" size="825,45" transparent="1" font="Regular;37" halign="center" valign="center"/>
+		<widget name="list" position="22,55" size="855,784" itemHeight="45" transparent="1" serviceNumberFont="Regular;34"
+			scrollbarMode="showOnDemand" serviceInfoFont="Regular;32" serviceNameFont="Regular;34" serviceItemHeight="45"
+			picServiceEventProgressbar="window/progress.png" progressbarHeight="15" progressBarWidth="60"
+			progressPercentWidth="80" colorEventProgressbarBorder="un33333a" fieldMargins="15" nonplayableMargins="15"
+			colorEventProgressbarBorderSelected="darkgrey" colorServiceDescription="yellowsoft" progressbarBorderWidth="0"
+			foregroundColorServiceNotAvail="#656565" backgroundColorMarked="#656565" colorServiceDescriptionFallback="yellowsoft"
+			colorServiceDescriptionSelectedFallback="yellowsoft" colorFallbackItem="#aaaaaa" colorServiceSelectedFallback="yellowsoft"/>
+		<widget source="ServiceEvent" render="Label" position="22,848" size="200,37" font="Regular;33" backgroundColor="black" halign="right" noWrap="1" foregroundColor="yellow" transparent="1">
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="252,848" size="625,35" transparent="1" foregroundColor="secondFG" noWrap="1" font="Regular;33" halign="left">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="22,885" size="855,135" font="Regular;30" backgroundColor="black" borderColor="black" borderWidth="2" foregroundColor="grey" zPosition="2" transparent="1" halign="block">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+	</screen>
+
 	<!-- InfoBarEventView -->
 	<screen name="InfoBarEventView" position="0,0" size="1920,780" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="10">
 		<widget name="FullDescription" position="15,97" size="1890,720" font="Regular;40" borderColor="black" borderWidth="1" foregroundColor="foreground" backgroundColor="background" transparent="1" valign="top" halign="center" zPosition="2"/>
