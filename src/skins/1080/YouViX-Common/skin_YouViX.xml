@@ -2908,11 +2908,39 @@
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySkinsText" />
 		<panel name="MenuIntroductionWidget" />
-		<widget name="Preview" position="1070,180" size="420,315" alphatest="blend" zPosition="1" />
-		<widget name="SkinList" position="900,510" size="750,400" font="youvix-r;28" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H50x750.png" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" />
+		<panel name="MenuDescriptionWidget" />
+		<widget name="preview" position="1070,180" size="420,315" alphatest="blend" zPosition="1" />
+<!--		<widget name="SkinList" position="900,510" size="750,400" font="youvix-r;28" itemHeight="50" selectionPixmap="selectionbars/SelectionBar_H50x750.png" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" />-->
+		<widget source="skins" render="Listbox" position="900,510" size="750,400" font="youvix-r;28" selectionPixmap="selectionbars/SelectionBar_H50x750.png" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+		{"template": [
+				MultiContentEntryText(pos = (0,0), size = (495,50), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+				MultiContentEntryText(pos = (500,0), size = (240,50), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
+			],
+		"fonts": [gFont("Regular",33)],
+		"itemHeight":50
+		}
+			</convert>
+		</widget>
+
 		<panel name="MenuButtonBar" />
 	</screen>
-
+<!--	<screen name="SkinSelector" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget source="skins" render="Listbox" position="735,120" size="750,800" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
+				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+			<convert type="TemplatedMultiContent">
+		{"template": [
+				MultiContentEntryText(pos = (0,0), size = (495,50), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+				MultiContentEntryText(pos = (500,0), size = (240,50), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
+			],
+		"fonts": [gFont("Regular",33)],
+		"itemHeight":50
+		}
+			</convert>
+		</widget>
+		<widget name="preview" position="1495,165" size="420,315" alphatest="blend"/>
+-->
 	<!-- ## Softcam Manager ## -->
 	<screen name="VIXSoftcamManager" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
