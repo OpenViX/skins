@@ -1054,7 +1054,7 @@
 	<screen name="TimerEditList" position="fill" title="Timer Overview" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<panel name="KeyInfoTemplate"/>
-		<widget name="timerlist" position="780,105" size="1110,900" scrollbarMode="showOnDemand" itemHeight="90" rowSplit="45" rowHeight="35" iconMargin="15"
+		<widget name="timerlist" position="780,105" size="1110,900" scrollbarMode="showOnDemand" itemHeight="90" rowSplit="45" iconMargin="15"
 		setEventNameFont="Regular;33" setServiceNameFont="Regular;30" setFont="Regular;28" satPosLeft="250" zPosition="2" foregroundColor="foreground"/>
 		<widget name="description" position="30,570" size="720,300" font="Regular;32" valign="top" halign="block"/>
 	</screen>
@@ -1779,11 +1779,11 @@
 
 	<screen name="MessageBoxSimple" position="center,center" size="960,15" title="Message" zPosition="10" flags="wfNoBorder">
 		<widget source="Title" render="Label" position="3,3" size="300,30" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;28" valign="center" halign="left"/>
-		<widget name="text" position="100,12" size="780,0" font="Regular;32"/>
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="10,10" size="80,80" alphatest="blend"/>
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="10,10" size="80,80" alphatest="blend"/>
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="10,10" size="80,80" alphatest="blend"/>
-		<widget name="list" position="150,150" size="720,570" itemHeight="38" font="Regular;28"/>
+		<widget name="text" position="100,12" size="780,0" font="Regular;32" zPosition="2"/>
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="10,10" size="80,80" alphatest="blend" zPosition="2"/>
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="10,10" size="80,80" alphatest="blend" zPosition="2"/>
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="10,10" size="80,80" alphatest="blend" zPosition="2"/>
+		<widget name="list" position="150,150" size="720,570" itemHeight="38" font="Regular;28" zPosition="3"/>
 	<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
 if self.timerRunning:
