@@ -206,6 +206,7 @@ src/skins/720/ViX-Night-HD/meta/Makefile
 
 src/skins/1080/Makefile
 
+src/skins/1080/Default1080/Makefile
 src/skins/1080/Halo/Makefile
 src/skins/1080/Halo/buttons/Makefile
 src/skins/1080/Halo/common/Makefile
