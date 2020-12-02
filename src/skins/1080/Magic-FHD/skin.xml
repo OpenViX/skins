@@ -914,11 +914,11 @@
 	</screen>
 	<screen name="AboutOE" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="lab1" render="Label" position="15,682" size="750,45" font="Regular;36" zPosition="2" foregroundColor="secondFG" halign="center"/>
-		<widget source="lab2" render="Label" position="15,730" size="750,45" font="Crs;30" zPosition="2" foregroundColor="grey" halign="center"/>
-		<widget source="lab3" render="Label" position="15,780" size="750,45" font="Regular;30" zPosition="2" foregroundColor="grey" halign="center"/>
+		<widget source="lab1" conditional="lab1" render="Label" position="15,682" size="750,45" font="Regular;36" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget source="lab2" conditional="lab1" render="Label" position="15,730" size="750,45" font="Crs;30" zPosition="2" foregroundColor="grey" halign="center"/>
+		<widget source="lab3" conditional="lab3" render="Label" position="15,780" size="750,45" font="Regular;30" zPosition="2" foregroundColor="grey" halign="center"/>
 		<widget name="AboutScrollLabel" position="850,123" size="900,874" font="Regular;31" foregroundColor="grey" zPosition="2" split="1" dividechar=":" colposition="0"/>
-		<eLabel text="Skin Magic-FHD  ViX team skin by Rob van der Does" position="7,885" size="750,82" font="Regular;28" foregroundColor="grey" halign="center"/>
+		<eLabel conditional="lab3" text="Skin Magic-FHD  ViX team skin by Rob van der Does" position="7,885" size="750,82" font="Regular;28" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="TranslationInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
