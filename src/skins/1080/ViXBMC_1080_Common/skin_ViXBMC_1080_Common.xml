@@ -604,7 +604,6 @@
 		<widget name="list" position="610,865" size="1130,160" EventFontInfobar="infobar2;36" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" EntryBackgroundColorNow="menubackground" transparent="1" zPosition="3"/>
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="fill" backgroundColor="transparent" flags="wfNoBorder" >
-		<ePixmap pixmap="infobar/background2.png" position="0,695" size="1920,405" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="infobar/infobarepg.png" position="0,680" size="1920,420" alphatest="blend" zPosition="2"/>
 		<widget source="global.CurrentTime" render="Label" position="1037,700" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="3">
 			<convert type="ClockToText">Format:%A,%e %B %Y</convert>
@@ -789,11 +788,25 @@
 
 	<!-- ## EVENTVIEW ## -->
 	<screen name="EventView" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
-		<panel name="InfoBarEventView" />
-		<widget name="key_red" position="420,963" size="270,60" font="menulist;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
-		<widget name="key_green" position="690,963" size="270,60" font="menulist;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
-		<widget name="key_yellow" position="960,963" size="270,60" font="menulist;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
-		<widget name="key_blue" position="1230,963" size="270,60" font="menulist;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<ePixmap pixmap="infobar/menubackground2.png" position="387,45" size="1146,1016" alphatest="blend" zPosition="-1"/>
+		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
+			<convert type="ClockToText">Format:%A,%e %B %Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1380,69" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget name="channel" position="420,139" size="600,60" font="screentitle;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
+		<widget source="Service" render="Picon" position="420,220" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="2">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="830,230" size="670,60" font="infobar2;44" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
+		<widget name="datetime" position="830,310" size="670,50" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" valign="center" zPosition="2" />
+		<widget name="duration" position="830,370" size="670,50" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" valign="center" zPosition="2" />
+		<widget name="FullDescription" position="420,475" size="1080,470" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2" />
+		<widget name="key_red" conditional="key_red" position="420,963" size="270,60" font="menulist;34" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_green" conditional="key_green" position="690,963" size="270,60" font="menulist;34" foregroundColor="green" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_yellow" conditional="key_yellow" position="960,963" size="270,60" font="menulist;34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
+		<widget name="key_blue" conditional="key_blue" position="1230,963" size="270,60" font="menulist;34" foregroundColor="blue" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>
 	<screen name="EventViewSimple" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
 		<ePixmap pixmap="infobar/menubackground2.png" position="387,45" size="1146,1016" alphatest="blend" zPosition="-1"/>
@@ -812,22 +825,16 @@
 		<widget name="duration" position="830,370" size="670,50" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" valign="center" zPosition="2" />
 		<widget name="FullDescription" position="420,475" size="1080,470" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2" />
 	</screen>
-	<screen name="InfoBarEventView" position="0,0" size="1920,815" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
-		<ePixmap pixmap="infobar/menubackground2.png" position="387,45" size="1146,1016" alphatest="blend" zPosition="-1"/>
-		<widget source="global.CurrentTime" render="Label" position="680,69" size="670,60" font="date;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2">
-			<convert type="ClockToText">Format:%A,%e %B %Y</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1380,69" size="130,60" font="clock;42" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" valign="center" zPosition="2">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget name="channel" position="420,139" size="600,60" font="screentitle;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
-		<widget source="Service" render="Picon" position="420,220" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="2">
+	<screen name="InfoBarEventView" position="0,435" size="1920,380" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
+		<ePixmap pixmap="infobar/infobarepg.png" position="0,0" size="1920,380" alphatest="blend" zPosition="-1"/>
+		<widget source="Title" render="Label" position="30,20" size="1100,60" font="infobar2;46" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2" />
+		<widget name="datetime" position="1130,20" size="530,60" font="infobar2;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2" />
+		<widget name="duration" position="1660,20" size="210,60" font="infobar2;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="2" />
+		<widget source="Service" render="Picon" position="30,90" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="2" scale="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="830,230" size="670,60" font="infobar2;44" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<widget name="datetime" position="830,310" size="670,50" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" valign="center" zPosition="2" />
-		<widget name="duration" position="830,370" size="670,50" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" valign="center" zPosition="2" />
-		<widget name="FullDescription" position="420,475" size="1080,470" font="infobar2;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="top" zPosition="2" />
+		<widget name="FullDescription" position="450,80" size="1440,330" font="infobar2;36" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="block" valign="top" zPosition="2" />
+		<widget name="channel" position="30,338" size="400,50" font="screentitle;38" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 	</screen>
 	<screen name="EventViewContextMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SetupMenuPanel3" />
