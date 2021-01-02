@@ -10,13 +10,6 @@
 		<widget name="introduction" conditional="introduction" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey"/>
 		<widget name="description" objectTypes="description,Button,Label" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
 		<widget source="description" render="Label" objectTypes="description,StaticText" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
-		<widget name="HelpWindow" conditional="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,755" size="1,1"/>
-		<widget source="key_help" render="Pixmap" pixmap="buttons/key_help.png" objectTypes="key_help,StaticText" position="1865,1028" size="52,37" alphatest="on">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="VKeyIcon" render="Pixmap" conditional="VKeyIcon" pixmap="buttons/key_text.png" position="1865,1028" size="52,37" alphatest="on">
-			<convert type="ConditionalShowHide"/>
-		</widget>
 	</screen>
 
 	<screen name="BasicTemplate1">
@@ -44,42 +37,58 @@
 	</screen>
 
 	<screen name="ButtonPanel">
-		<widget name="key_red" objectTypes="key_red,Button,Label" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" backgroundColor="secondBG" halign="left" transparent="1"/>
-		<widget source="key_red" render="Label" objectTypes="key_red,StaticText" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" backgroundColor="secondBG" halign="left" transparent="1"/>
-		<widget name="key_green" objectTypes="key_green,Button,Label" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" halign="left" transparent="1"/>
-		<widget source="key_green" render="Label" objectTypes="key_green,StaticText" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" halign="left" transparent="1"/>
-		<widget name="key_yellow" objectTypes="key_yellow,Label,Button" position="830,1023" size="400,45" font="buttons;33" foregroundColor="buttonyellow" backgroundColor="secondBG" halign="left" transparent="1"/>
-		<widget source="key_yellow" render="Label" objectTypes="key_yellow,StaticText" position="830,1023" size="400,45" font="buttons;33" foregroundColor="buttonyellow" backgroundColor="secondBG" halign="left" transparent="1"/>
-		<widget name="key_blue" objectTypes="key_blue,Label,Button" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" backgroundColor="secondBG" halign="left" transparent="1"/>
-		<widget source="key_blue" render="Label" objectTypes="key_blue,StaticText" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" backgroundColor="secondBG" halign="left" transparent="1"/>
+		<widget name="key_red" objectTypes="key_red,Button,Label" position="5,1023" size="350,45" font="buttons;33" foregroundColor="buttonred" backgroundColor="secondBG" halign="left" transparent="1"/>
+		<widget source="key_red" render="Label" objectTypes="key_red,StaticText" position="5,1023" size="350,45" font="buttons;33" foregroundColor="buttonred" backgroundColor="secondBG" halign="left" transparent="1"/>
+		<widget name="key_green" objectTypes="key_green,Button,Label" position="360,1023" size="350,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" halign="left" transparent="1"/>
+		<widget source="key_green" render="Label" objectTypes="key_green,StaticText" position="360,1023" size="350,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" halign="left" transparent="1"/>
+		<widget name="key_yellow" objectTypes="key_yellow,Label,Button" position="715,1023" size="350,45" font="buttons;33" foregroundColor="buttonyellow" backgroundColor="secondBG" halign="left" transparent="1"/>
+		<widget source="key_yellow" render="Label" objectTypes="key_yellow,StaticText" position="715,1023" size="350,45" font="buttons;33" foregroundColor="buttonyellow" backgroundColor="secondBG" halign="left" transparent="1"/>
+		<widget name="key_blue" objectTypes="key_blue,Label,Button" position="1050,1023" size="350,45" font="buttons;33" foregroundColor="buttonblue" backgroundColor="secondBG" halign="left" transparent="1"/>
+		<widget source="key_blue" render="Label" objectTypes="key_blue,StaticText" position="1050,1023" size="350,45" font="buttons;33" foregroundColor="buttonblue" backgroundColor="secondBG" halign="left" transparent="1"/>
+		<widget name="HelpWindow" conditional="HelpWindow" pixmap="buttons/vkey_icon.png" position="780,755" size="1,1"/>
+		<widget source="key_help" render="Pixmap" pixmap="buttons/key_help.png" objectTypes="key_help,StaticText" position="1425,1028" size="52,37" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_menu" conditional="key_menu" render="Pixmap" pixmap="buttons/key_menu.png" position="1590,1028" size="52,37" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_info" conditional="key_info" render="Pixmap" pixmap="buttons/key_info.png" position="1645,1028" size="52,37" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="VKeyIcon" render="Pixmap" conditional="VKeyIcon" pixmap="buttons/key_text.png" position="1865,1028" size="52,37" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_text" conditional="key_text" render="Pixmap" pixmap="buttons/key_text.png" position="1865,1028" size="52,37" alphatest="on" >
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
 
 	<screen name="PrevBPanel">
-			<ePixmap pixmap="buttons/key_prev.png" position="1535,1028" size="52,37"/>
+			<ePixmap pixmap="buttons/key_prev.png" position="1480,1028" size="52,37"/>
 	</screen>
 
 	<screen name="NextBPanel">
-		<ePixmap pixmap="buttons/key_next.png" position="1590,1028" size="52,37"/>
+		<ePixmap pixmap="buttons/key_next.png" position="1535,1028" size="52,37"/>
 	</screen>
 
 	<screen name="MenuBPanel">
-		<ePixmap pixmap="buttons/key_menu.png" alphatest="on" position="1640,1028" size="52,37"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="1590,1028" size="52,37" alphatest="on"/>
 	</screen>
 
 	<screen name="InfoBPanel">
-		<ePixmap pixmap="buttons/key_info.png" alphatest="on" position="1695,1028" size="52,37"/>
+		<ePixmap pixmap="buttons/key_info.png" position="1645,1028" size="52,37" alphatest="on"/>
 	</screen>
 
 	<screen name="ExitBPanel">
-		<ePixmap pixmap="buttons/key_exit.png" alphatest="on" position="1750,1028" size="52,37"/>
+		<ePixmap pixmap="buttons/key_exit.png" position="1700,1028" size="52,37" alphatest="on"/>
 	</screen>
 
 	<screen name="OKBPanel">
-			<ePixmap pixmap="buttons/key_ok.png" alphatest="on" position="1805,1028" size="52,37"/>
+			<ePixmap pixmap="buttons/key_ok.png" position="1755,1028" size="52,37" alphatest="on"/>
 	</screen>
 
 	<screen name="HelpBPanel">
-			<ePixmap pixmap="buttons/key_help.png" alphatest="on" position="1860,1028" size="52,37"/>
+			<ePixmap pixmap="buttons/key_help.png" position="1810,1028" size="52,37" alphatest="on"/>
 	</screen>
 
 	<screen name="PlayerPanel">
