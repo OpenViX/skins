@@ -1957,9 +1957,19 @@
 	<!-- ## SKIN SELECTOR ## -->
 	<screen name="SkinSelector" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
-		<widget name="Preview" position="222,90" size="400,280" alphatest="blend" zPosition="2" />
-		<widget name="SkinList" position="22,380" size="850,500" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2" />
-		<panel name="FullScreenIntroductionWidget" />
+		<widget name="preview" position="222,90" size="400,280" alphatest="blend" zPosition="2" />
+		<widget source="skins" render="Listbox" position="22,380" size="850,500" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand"  zPosition="2">
+			<convert type="TemplatedMultiContent">
+		{"template": [
+				MultiContentEntryText(pos = (10,6), size = (525,50), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+				MultiContentEntryText(pos = (525,6), size = (300,50), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
+			],
+		"fonts": [gFont("menulist",34)],
+		"itemHeight":50
+		}
+			</convert>
+		</widget>
+		<panel name="FullScreenDescriptionWidget"/>
 		<panel name="ButtonBar" />
 	</screen>
 
