@@ -1972,8 +1972,18 @@ self.autoResize()
 	</screen>
 	<screen name="SkinSelectorWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
 		<panel name="WizardPanel"/>
-		<widget name="Preview" position="200,230" size="280,210" alphatest="on" zPosition="0"/>
-		<widget name="SkinList" position="600,230" size="450,240" itemHeight="30" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" foregroundColor="window-fg" backgroundColor="black" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="3"/>
+		<widget name="preview" position="200,230" size="280,210" alphatest="on" zPosition="0"/>
+		<widget source="skins" render="Listbox" position="600,230" size="450,240" selectionPixmap="ViX-Common/buttons/FocusBar_H30x503.png" 
+			foregroundColor="window-fg" backgroundColor="black" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="3">
+			<convert type="TemplatedMultiContent">
+		{"template": [
+				MultiContentEntryText(pos = (10,0), size = (430,30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+			],
+		"fonts": [gFont("Regular",25)],
+		"itemHeight":30
+		}
+			</convert>
+		</widget>
 	</screen>
 	<screen name="NetworkWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
 		<panel name="WizardPanel"/>
