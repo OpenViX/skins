@@ -2770,12 +2770,22 @@
 	<screen name="SkinSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
 		<panel name="TopBar" />
 		<panel name="SetupScreen" />
-		<widget name="SkinList" position="21,51" size="948,810" font="DR;30" itemHeight="45" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" backgroundColor="topbarbackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
-		<panel name="Introduction" />
+		<widget source="skins" render="Listbox" position="21,51" size="948,810" foregroundColor="menuforeground" foregroundColorSelected="menuforegroundselected" 
+			backgroundColor="topbarbackground" transparent="1" scrollbarMode="showOnDemand" zPosition="3">
+			<convert type="TemplatedMultiContent">
+		{"template": [
+				MultiContentEntryText(pos = (10,0), size = (928,45), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+			],
+		"fonts": [gFont("DR",30)],
+		"itemHeight":45
+		}
+			</convert>
+		</widget>
+		<panel name="Description" />
 		<panel name="MenuIconPlugins" />
 		<panel name="PIG" />
 		<ePixmap pixmap="iSkin-Common/screens/skinselectorscreen.png" position="1200,650" size="450,351" alphatest="blend" transparent="1" zPosition="2"/>
-		<widget name="Preview" position="1237,672" size="377,236" alphatest="blend" zPosition="3" />
+		<widget name="preview" position="1237,672" size="377,236" alphatest="blend" zPosition="3" />
 		<panel name="MenuButtonBar" />
 	</screen>
 

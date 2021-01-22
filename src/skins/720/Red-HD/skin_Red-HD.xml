@@ -1534,9 +1534,19 @@ self.autoResize()
 		<panel name="MenuSetupText" />
 		<panel name="MenuRed1SourcePanel" />
 		<panel name="MenuGreen1SourcePanel" />
-		<widget name="Preview" position="270,220" size="360,210" alphatest="blend" zPosition="3" />
-		<widget name="SkinList" position="140,460" size="600,270" itemHeight="30" selectionPixmap="selectionbars/SelectionBar_H30x600.png" foregroundColor="white" backgroundColor="vmdarkred" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="3" />		
-		<panel name="MenuINTRODUCTIONWidget" />
+		<widget name="preview" position="270,220" size="360,210" alphatest="blend" zPosition="3" />
+		<widget source="skins" render="Listbox" position="140,450" size="600,270" selectionPixmap="selectionbars/SelectionBar_H30x600.png" 
+			foregroundColor="white" backgroundColor="vmdarkred" transparent="1" scrollbarMode="showOnDemand"  zPosition="3">
+			<convert type="TemplatedMultiContent">
+		{"template": [
+				MultiContentEntryText(pos = (10,0), size = (580,45), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 1)
+			],
+		"fonts": [gFont("vmreg",24)],
+		"itemHeight":30
+		}
+			</convert>
+		</widget>		
+		<panel name="MenuDESCRIPTIONWidget" />
 	</screen>
 	<screen name="SleepTimerEdit" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel" />
