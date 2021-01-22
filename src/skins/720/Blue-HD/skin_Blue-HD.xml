@@ -1306,11 +1306,21 @@ self.autoResize()
 	</screen>
 	<screen name="SkinSelector" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel" />
-		<widget name="SkinList" position="15,355" size="495,240" itemHeight="30" selectionPixmap="buttons/FocusBar_H30x503.png" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" />
-		<widget name="Preview" position="117,138" size="280,210" alphatest="on" zPosition="0" />
+		<widget source="skins" render="Listbox" position="15,355" size="495,240" selectionPixmap="buttons/FocusBar_H30x503.png" 
+		foregroundColor="white" backgroundColor="skydarkblue" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+		{"template": [
+				MultiContentEntryText(pos = (10,0), size = (485,30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 1)
+			],
+		"fonts": [gFont("skyreg",24)],
+		"itemHeight":30
+		}
+			</convert>
+		</widget>		
+		<widget name="preview" position="117,138" size="280,210" alphatest="on" zPosition="0" />
 		<panel name="MenuRed2Panel" />
 		<panel name="MenuGreen2Panel" />
-		<widget source="introduction" render="Label" position="10,604" size="503,24" zPosition="1" font="skyreg;20" halign="center" valign="center" foregroundColor="skygold" backgroundColor="skydarkblue" transparent="1" />
+		<widget source="description" render="Label" position="10,604" size="503,24" zPosition="1" font="skyreg;20" halign="center" valign="center" foregroundColor="skygold" backgroundColor="skydarkblue" transparent="1" />
 	</screen>
 	<screen name="SleepTimerEdit" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel" />
