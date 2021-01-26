@@ -1069,19 +1069,17 @@
 		<widget name="text" position="735,120" size="1177,870" font="Regular;30" foregroundColor="grey"/>
 		<panel name="ExitBPanel"/>
 	</screen>
-	<screen name="MessageBoxTemplate">
+	<screen name="MessageBox">
 		<panel name="BasicTemplate"/>
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="760,150" size="81,81" alphatest="on"/>
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="760,150" size="81,81" alphatest="on"/>
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="text" position="845,120" size="1070,877" font="Regular;30" foregroundColor="grey"/>
 		<widget name="list" position="7,530" size="715,475" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
 	</screen>
-	<screen name="MessageBox" position="fill" flags="wfNoBorder">
-		<panel name="MessageBoxTemplate"/>
-	</screen>
-	<screen name="MessageBoxSimple" position="fill" flags="wfNoBorder">
-		<panel name="MessageBoxTemplate"/>
+	<screen name="MessageBoxSimple">
+		<widget name="text" position="95,12" size="750,0" font="Regular;32"/>
+		<widget name="list" position="150,150" size="720,570" itemHeight="38" font="Regular;28"/>
+		<applet type="onLayoutFinish">
+self.autoResize()
+		</applet>
 	</screen>
 	<screen name="MessageBoxWizard" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
