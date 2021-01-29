@@ -192,7 +192,6 @@
 	<screen name="SecondInfoBar" position="fill" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="1">
 		<panel name="InfoBarPanel"/>
 		<panel name="ButtonPanel"/>
-		<panel name="HelpBPanel"/>
 		<widget name="channel" position="0,0" size="0,0" font="buttons;33"/> #To reduce debug noise.
 		<eLabel backgroundColor="black" position="0,0" size="1920,2" zPosition="5"/> # Permanent hiding of VBI-lines
 		<widget source="session.CurrentService" render="Label" position="7,7" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack" halign="left">
@@ -486,7 +485,6 @@
 	</screen>
 	<screen name="EPGSelection" position="fill" flags="wfNoBorder" title="EPG-Selection">
 		<panel name="BasicTemplate"/>
-		<panel name="HelpBPanel"/>
 		<widget name="lab1" position="780,120" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="20"/>
 		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
@@ -674,7 +672,6 @@
 			<convert type="ClockToText">Full</convert>
 		</widget>
 		<panel name="ButtonPanel"/>
-		<panel name="HelpBPanel"/>
 		<widget name="timeline_text" position="7,93" size="1905,36" TimelineFont="Regular;29" foregroundColor="selectedFG"/>
 		<widget name="lab1" position="0,82" size="1920,727" font="Regular;36" halign="center" valign="center" zPosition="20"/>
 		<widget name="list" position="7,135" size="1905,712" ServiceFontGraphical="channelselectionservice;30" EntryFontGraphical="channelselectionevent;30"
@@ -727,7 +724,6 @@
 		</widget>
 		<eLabel backgroundColor="black" position="0,90" size="597,2" zPosition="5"/> # Permanent hiding of VBI-lines
 		<panel name="ButtonPanel"/>
-		<panel name="HelpBPanel"/>
 		<widget source="Event" render="Label" position="472,7" size="150,50" font="Regular;36" foregroundColor="selectedFG" halign="right">
 		<convert type="EventTime">StartTime</convert>
 		<convert type="ClockToText"/>
@@ -783,7 +779,6 @@
 	</screen>
 	<screen name="MovieSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="HelpBPanel"/>
 <!--		<ePixmap pixmap="dvr/scale716.png" position="0,175" size="716,18" zPosition="1" alphatest="on"/>
 		<eLabel backgroundColor="transpBlack" position="0,179" size="723,10" zPosition="5"/>-->
 		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
@@ -1224,7 +1219,6 @@
 	</screen>
 	<screen name="VirtualKeyBoard" position="fill" zPosition="99" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="HelpBPanel"/>
 		<widget name="prompt" position="870,200" size="952,45" noWrap="1" font="Regular;33" foregroundColor="grey" halign="center" valign="center"/>
 		<ePixmap pixmap="buttons/vkey_text.png" position="866,410" size="960,50" alphatest="on"/>
 		<widget name="text" position="870,410" size="952,50" noWrap="1" font="Regular;35" foregroundColor="grey" halign="center" valign="center"/>
@@ -1296,8 +1290,6 @@
 	</screen>
 	<screen name="ChannelSelectionRadio" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
-		<panel name="MenuBPanel"/>
-		<panel name="InfoBPanel"/>
 		<widget name="list" position="780,120" size="1132,595" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
 				serviceInfoFont="channelselectionevent;28" progressBarWidth="70" fieldMargins="10" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
 				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey" scrollbarWidth="6" scrollbarSliderBorderWidth="1"
@@ -1496,7 +1488,6 @@
 	</screen>
 	<screen name="AdapterSetupConfiguration" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="HelpBPanel"/>
 		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget source="Statustext" render="Label" position="474,945" size="300,40" font="Regular;36" halign="right" foregroundColor="grey"/>
@@ -1507,7 +1498,6 @@
 	</screen>
 	<screen name="AdapterSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="HelpBPanel"/>
 		<widget name="config" position="780,123" size="1132,405" itemHeight="50" font="Regular;36" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget source="DNS1text" render="Label" position="1252,575" size="285,37" font="Regular;31" foregroundColor="grey" halign="left"/>
@@ -1524,8 +1514,6 @@
 		<widget source="Adapter" render="Label" position="1400,965" size="400,45" font="Regular;36" foregroundColor="grey" halign="left"/>
 	</screen>
 	<screen name="NameserverSetup" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="HelpBPanel"/>
 		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 	</screen>
@@ -1852,7 +1840,6 @@
 	</screen>
 	<screen name="MMIDialog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="MenuBPanel"/>
 		<widget name="title" position="885,165" size="900,45" font="Regular;33" foregroundColor="grey"/>
 		<widget name="subtitle" position="885,212" size="900,46" font="Regular;34" foregroundColor="grey"/>
 		<widget name="entries" position="885,260" size="900,540" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"
