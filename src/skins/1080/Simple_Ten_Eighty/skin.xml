@@ -195,11 +195,13 @@
 	<!-- InfoBars -->
 
 	<screen name="InfoBar" title="InfoBar" position="fill" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap alphatest="off" pixmap="infobar/hd.png" position="0,780" size="1920,300" zPosition="-1"/>
-		<panel name="InfoBarTemplate"/>
+		<ePixmap alphatest="off" pixmap="infobar/hd.png" position="0,750" size="1920,330" zPosition="-1" scale="1"/>
+		<panel position="0,-35" size="e,e">
+			<panel name="InfoBarTemplate"/>
+		</panel>
 	</screen>
 
-	<screen name="SecondInfoBarSimple" title="Second InfoBar" position="fill" flags="wfNoBorder">
+	<screen name="SecondInfoBarSimple" title="Second InfoBar" position="fill" flags="wfNoBorder"><!-- Not in OpenViX -->
 		<eLabel position="fill" backgroundColor="transpBlack" zPosition="0"/>
 		<widget source="session.Event_Now" render="Label" position="30,20" size="915,36" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="secondFG" noWrap="1" font="Regular;33" halign="left">
 			<convert type="EventName">NameNow</convert>
@@ -225,7 +227,10 @@
 		<widget source="session.Event_Next" render="Label" position="975,118" size="915,702" font="Regular;30" halign="block" zPosition="1" transparent="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<panel name="InfoBarTemplate"/>
+		<panel position="0,-35" size="e,e">
+			<panel name="InfoBarTemplate"/>
+		</panel>
+		<panel name="ButtonTemplate"/>
 	</screen>
 
 	<screen name="SecondInfoBar" title="Second InfoBar" position="fill" flags="wfNoBorder">
@@ -275,7 +280,10 @@
 		<widget source="session.Event_Next" render="Label" position="975,260" size="915,560" font="Regular;30" halign="block" zPosition="1" transparent="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<panel name="InfoBarTemplate"/>
+		<panel position="0,-35" size="e,e">
+			<panel name="InfoBarTemplate"/>
+		</panel>
+		<panel name="ButtonTemplate"/>
 	</screen>
 
 	<!-- Movie Player Infobar -->
