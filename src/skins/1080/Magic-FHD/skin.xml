@@ -62,6 +62,7 @@
 		<parameter name="ServiceInfo" value="0,0,450,50"/>
 		<parameter name="ServiceInfoLeft" value="0,0,450,45"/>
 		<parameter name="ServiceInfoRight" value="450,0,1000,45"/>
+		<parameter name="SecondInfoBarSimple" value="1"/>
 		<parameter name="PicturePlayerThumb" value="30,285,45,300,30,25"/>
 <!--	ImsSelectionListDescr text rectangle: x,y, width, height-->
 		<parameter name="ImsSelectionListLock" value="0,4,38,36"/>
@@ -323,6 +324,34 @@
 		</widget>
 		<widget source="session.CurrentService" render="Label"  text="	Signal:" position="1800,115" size="120,55" font="Regular;21" backgroundColor="transpBlack" transparent="1">
 			<convert type="RotorPosition"/>
+		</widget>
+	</screen>
+	<screen name="SecondInfoBarSimple" position="fill" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="1">
+		<panel name="InfoBarPanel"/>
+		<panel name="ButtonPanel"/>
+		<widget name="channel" position="0,0" size="0,0" font="buttons;33"/> #To reduce debug noise.
+		<eLabel backgroundColor="black" position="0,0" size="1920,2" zPosition="5"/> # Permanent hiding of VBI-lines
+		<widget source="session.Event_Now" render="Label" position="7,10" size="937,45" font="Regular;33" backgroundColor="secondBG" transparent="1" foregroundColor="selectedFG" noWrap="1" halign="left">
+			<convert type="EventName">NameNow</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="157,50" size="787,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="7,50" size="150,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget name="epg_description" position="7,90" size="937,742" font="Regular;30" backgroundColor="secondBG" transparent="1"/>
+		<widget source="session.Event_Next" render="Label" position="975,10" size="930,45" font="Regular;33" backgroundColor="secondBG" transparent="1" foregroundColor="selectedFG" noWrap="1" halign="left">
+			<convert type="EventName">NameNext</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="1125,50" size="787,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="975,50" size="150,40" font="Regular;30" halign="left" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="975,90" size="930,742" font="Regular;30" backgroundColor="secondBG" transparent="1">
+			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 	</screen>
 	<screen name="Volume" position="center,2" size="500,80" zPosition="10" backgroundColor="transparent" flags="wfNoBorder">
