@@ -215,31 +215,32 @@
 		<widget source="session.CurrentService" render="Label" position="7,130" size="954,57" font="Regular;22" transparent="1" backgroundColor="transpBlack" halign="left">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
-		<eLabel name="snr" text="	Quality:" position="1012,5" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1"/>
+		<widget source="session.FrontendStatus" render="FixedLabel" text="	Quality:" position="1012,5" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
+			<convert type="FrontendInfo">SNR</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="1140,12" size="615,15" backgroundColor="transpBlack" borderWidth="1" borderColor="grey">
 			<convert type="FrontendInfo">SNR</convert>
+			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="Label" position="1761,5" size="155,25" font="Regular;20" backgroundColor="transpBlack" transparent="1" halign="left">
+		<widget source="session.FrontendStatus" render="Label" position="1761,5" size="155,25" font="Regular;20" backgroundColor="transpBlack" transparent="1">
 			<convert type="FrontendInfo">SNR</convert>
+			<convert type="ConditionalShowHide"/>
 		</widget>
-		<eLabel name="agc" text="	Signal:" position="1012,32" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1"/>
+		<widget source="session.FrontendStatus" render="FixedLabel" text="	Signal:" position="1012,32" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
+			<convert type="FrontendInfo">AGC</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="1140,37" size="615,15" backgroundColor="transpBlack" borderWidth="1" borderColor="grey">
 			<convert type="FrontendInfo">AGC</convert>
+			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.FrontendStatus" render="Label" position="1761,32" size="155,22" font="Regular;20" backgroundColor="transpBlack" transparent="1" halign="left">
 			<convert type="FrontendInfo">AGC</convert>
-		</widget>
-		<eLabel name="lock" text="Lock:" position="1012,75" size="120,22" font="Regular;21" backgroundColor="transpBlack" halign="right" transparent="1"/>
-		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_on.png" position="1140,70" size="38,36" backgroundColor="transpBlack" transparent="1" alphatest="blend">
-			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_off.png" position="1140,70" size="38,36" backgroundColor="transpBlack" transparent="1" alphatest="blend">
-			<convert type="FrontendInfo">LOCK</convert>
-			<convert type="ConditionalShowHide">Invert</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="1200,75" size="700,33" font="Regular;27" transparent="1" backgroundColor="transpBlack" halign="left">
-			<convert type="PliExtraInfo">TransponderInfo</convert>
+		<widget source="session.CurrentService" render="Label" position="1040,75" size="875,33" font="Regular;27" transparent="1" backgroundColor="transpBlack" halign="left">
+			<convert type="PliExtraInfo">All</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="7,190" size="937,45" font="Regular;33" backgroundColor="secondBG" transparent="1" foregroundColor="selectedFG" noWrap="1" halign="left">
 			<convert type="EventName">NameNow</convert>
@@ -322,8 +323,9 @@
 		<widget source="session.FrontendInfo" render="Label" position="1537,115" size="255,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
 			<convert type="FrontendInfo">STRING</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label"  text="	Signal:" position="1800,115" size="120,55" font="Regular;21" backgroundColor="transpBlack" transparent="1">
+		<widget source="session.CurrentService" render="Label" text="	Signal:" position="1800,115" size="120,55" font="Regular;21" backgroundColor="transpBlack" transparent="1">
 			<convert type="RotorPosition"/>
+			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
 	<screen name="SecondInfoBarSimple" position="fill" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="1">
