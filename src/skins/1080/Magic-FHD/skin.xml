@@ -215,28 +215,41 @@
 		<widget source="session.CurrentService" render="Label" position="7,130" size="954,57" font="Regular;22" transparent="1" backgroundColor="transpBlack" halign="left">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
-		<widget source="session.FrontendStatus" render="FixedLabel" text="	Quality:" position="1012,5" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
+		<widget source="session.FrontendStatus" render="FixedLabel" text="	Quality:" position="975,5" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="1140,12" size="615,15" backgroundColor="transpBlack" borderWidth="1" borderColor="grey">
+		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="1103,12" size="615,15" backgroundColor="transpBlack" borderWidth="1" borderColor="grey">
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="Label" position="1761,5" size="155,25" font="Regular;20" backgroundColor="transpBlack" transparent="1">
+		<widget source="session.FrontendStatus" render="Label" position="1724,5" size="155,25" font="Regular;20" backgroundColor="transpBlack" transparent="1">
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="FixedLabel" text="	Signal:" position="1012,32" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
+		<widget source="session.FrontendStatus" render="FixedLabel" text="	Signal:" position="975,32" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
 			<convert type="FrontendInfo">AGC</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="1140,37" size="615,15" backgroundColor="transpBlack" borderWidth="1" borderColor="grey">
+		<widget source="session.FrontendStatus" render="Progress" pixmap="infobar/bar.png" position="1103,37" size="615,15" backgroundColor="transpBlack" borderWidth="1" borderColor="grey">
 			<convert type="FrontendInfo">AGC</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="Label" position="1761,32" size="155,22" font="Regular;20" backgroundColor="transpBlack" transparent="1" halign="left">
+		<widget source="session.FrontendStatus" render="Label" position="1724,32" size="155,22" font="Regular;20" backgroundColor="transpBlack" transparent="1" halign="left">
 			<convert type="FrontendInfo">AGC</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendStatus" render="FixedLabel" text="Lock:" position="1760,11" size="120,30" font="Regular;27" backgroundColor="transpBlack" halign="right">
+			<convert type="FrontendInfo">Lock</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_on.png" position="1880,10" size="38,36" backgroundColor="transpBlack" transparent="1" alphatest="blend">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="icons/lock_off.png" position="1880,10" size="38,36" backgroundColor="transpBlack" transparent="1" alphatest="blend">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1040,75" size="875,33" font="Regular;27" transparent="1" backgroundColor="transpBlack" halign="left">
