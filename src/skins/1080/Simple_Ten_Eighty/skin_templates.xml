@@ -9,7 +9,7 @@
 		<widget source="session.CurrentService" render="PositionGauge" position="42,84" size="1536,18" transparent="1" zPosition="4" pointer="dvr/position_pointer1024.png:1536,4">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="42,46" size="135,37" backgroundColor="secondBG" zPosition="4" foregroundColor="foreground" borderWidth="2" font="Regular;33" borderColor="black" valign="center" halign="left">
+		<widget source="session.CurrentService" render="Label" position="42,46" size="135,37" backgroundColor="secondBG" zPosition="4" foregroundColor="foreground" borderWidth="2" font="Regular;33" borderColor="black" valign="center">
 			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1402,46" size="175,37" backgroundColor="secondBG" zPosition="4" foregroundColor="foreground" borderWidth="2" font="Regular;33" borderColor="black" valign="center" halign="right">
@@ -31,8 +31,8 @@
 	<screen name="TopTemplate">
 		<eLabel position="0,0" size="1920,87" backgroundColor="toptemplatecolor"/>
 		<ePixmap pixmap="border/smallshadowline.png" position="0,87" size="1920,3" zPosition="2"/>
-		<widget source="ScreenPath" conditional="ScreenPath" render="Label" position="30,5" size="1860,35" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="left"/>
-		<widget source="Title" render="Label" position="30,36" size="1860,45" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;40" valign="center" halign="left"/>
+		<widget source="ScreenPath" conditional="ScreenPath" render="Label" position="30,5" size="1860,35" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center"/>
+		<widget source="Title" render="Label" position="30,36" size="1860,45" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;40" valign="center"/>
 		<widget source="global.CurrentTime" render="Label" position="1665,5" size="225,40" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="right">
 			<convert type="ClockToText">Format:%-H:%M</convert>
 		</widget>
@@ -124,25 +124,25 @@
 
 	<!-- Red button text -->
 	<screen name="ButtonTextRed">
-		<widget objectTypes="key_red,Label,Button" name="key_red" position="266,1030" size="370,38" backgroundColor="black" zPosition="2" transparent="1" font="Regular;34" halign="left"/>
-		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="266,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34" halign="left"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" position="266,1030" size="370,38" backgroundColor="black" zPosition="2" transparent="1" font="Regular;34"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="266,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34"/>
 	</screen>
 
 	<!-- Green button text -->
 	<screen name="ButtonTextGreen">
-		<widget objectTypes="key_green,Label,Button" name="key_green" position="694,1030" size="370,38" backgroundColor="black" zPosition="2" transparent="1" font="Regular;34" halign="left"/>
-		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="694,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34" halign="left"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" position="694,1030" size="370,38" backgroundColor="black" zPosition="2" transparent="1" font="Regular;34"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="694,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34"/>
 	</screen>
 
 	<!-- Yellow button text -->
 	<screen name="ButtonTextYellow">
-		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="1122,1030" size="370,38" backgroundColor="black" zPosition="2" transparent="1" font="Regular;34" halign="left"/>
-		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="1122,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34" halign="left"/>
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="1122,1030" size="370,38" backgroundColor="black" zPosition="2" transparent="1" font="Regular;34"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="1122,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34"/>
 	</screen>
 	<!-- Blue button text -->
 	<screen name="ButtonTextBlue">
-		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="1550,1030" size="370,38" backgroundColor="black" zPosition="2" transparent="1" font="Regular;34" halign="left"/>
-		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="1550,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34" halign="left"/>
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="1550,1030" size="370,38" backgroundColor="black" zPosition="2" transparent="1" font="Regular;34"/>
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="1550,1030" size="370,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="grey" font="Regular;34"/>
 	</screen>
 
 	<!-- Individual Button Templates -->
@@ -259,12 +259,12 @@
 
 	<screen name="CancelTemplate">
 		<ePixmap pixmap="buttons/red.png" position="192,1032" size="34,34" alphatest="blend"/>
-		<widget name="canceltext" position="242,1030" zPosition="2" size="370,38" font="Regular;36" halign="left" backgroundColor="background" transparent="1"/>
+		<widget name="canceltext" position="242,1030" zPosition="2" size="370,38" font="Regular;36" backgroundColor="background" transparent="1"/>
 	</screen>
 
 	<screen name="OKTemplate">
 		<ePixmap pixmap="buttons/green.png" position="628,1032" size="34,34" alphatest="blend"/>
-		<widget name="oktext" position="678,1030" zPosition="2" size="370,38" font="Regular;34" halign="left" backgroundColor="background" transparent="1"/>
+		<widget name="oktext" position="678,1030" zPosition="2" size="370,38" font="Regular;34" backgroundColor="background" transparent="1"/>
 	</screen>
 
 	<screen name="CancelOKTemplate">
@@ -317,18 +317,18 @@
 		<widget source="session.CurrentService" render="Picon" position="30,942" size="192,115" alphatest="blend" backgroundColor="secondBG" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="session.CurrentService" render="ChannelNumber" borderWidth="2" position="260,880" size="150,75" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;40" valign="center" halign="left"/>
-		<widget source="session.CurrentService" render="Label" borderWidth="2" position="387,880" size="774,75" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;40" valign="center" halign="left">
+		<widget source="session.CurrentService" render="ChannelNumber" borderWidth="2" position="260,880" size="150,75" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;40" valign="center"/>
+		<widget source="session.CurrentService" render="Label" borderWidth="2" position="387,880" size="774,75" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;40" valign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="30,860" size="540,32" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;26" valign="center" halign="left">
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="30,860" size="540,32" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;26" valign="center">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="30,892" size="210,50" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;39" valign="center" halign="left">
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="30,892" size="210,50" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;39" valign="center">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<eLabel position="134,897" size="10,33" text=":" transparent="1" borderWidth="2" font="Regular;27" backgroundColor="secondBG" foregroundColor="foreground" valign="center" halign="center"/>
-		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="144,897" size="52,33" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;27" valign="center" halign="left">
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="144,897" size="52,33" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;27" valign="center">
 			<convert type="ClockToText">Format:%S</convert>
 		</widget>
 		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="205,902" size="30,30" zPosition="3" alphatest="on">
@@ -337,22 +337,22 @@
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="695,845" size="945,55" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;25" valign="center" halign="right">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="260,978" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" halign="left">
+		<widget source="session.Event_Now" render="Label" position="260,978" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="387,978" size="1072,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" noWrap="1" font="Regular;36" halign="left">
+		<widget source="session.Event_Now" render="Label" position="387,978" size="1072,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" noWrap="1" font="Regular;36">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="1430,978" size="210,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" halign="right">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="260,1023" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" halign="left">
+		<widget source="session.Event_Next" render="Label" position="260,1023" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="387,1023" size="1072,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" noWrap="1" font="Regular;36" halign="left">
+		<widget source="session.Event_Next" render="Label" position="387,1023" size="1072,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" noWrap="1" font="Regular;36">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="1430,1023" size="210,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" halign="right">
@@ -412,12 +412,12 @@
 			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget render="VideoSize" source="session.CurrentService" position="1705,943" size="165,30" backgroundColor="secondBG" font="Regular;28" foregroundColor="foreground" halign="left" transparent="1" zPosition="1"/>
+		<widget render="VideoSize" source="session.CurrentService" position="1705,943" size="165,30" backgroundColor="secondBG" font="Regular;28" foregroundColor="foreground" transparent="1" zPosition="1"/>
 		<widget source="session.FrontendStatus" render="Label" position="1705,985" size="112,33" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;28">
 			<convert type="FrontendInfo">SNRdB</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="Label" position="1705,900" size="200,30" borderWidth="1" borderColor="black" zPosition="1" backgroundColor="transpBlack" transparent="1" halign="left" font="Regular;30">
+		<widget source="session.FrontendInfo" render="Label" position="1705,900" size="200,30" borderWidth="1" borderColor="black" zPosition="1" backgroundColor="transpBlack" transparent="1" font="Regular;30">
 			<convert type="FrontendInfo">STRING</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1705,1027" size="165,33" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;28">
@@ -441,13 +441,13 @@
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
 		<widget name="tuner_text" conditional="tuner_text" position="1433,5" size="35,45" font="Regular;34" halign="center" backgroundColor="transpBlack"/>
-		<widget source="Frontend" conditional="Frontend" render="Label" position="1470,5" size="130,45" font="Regular;34" halign="left" backgroundColor="transpBlack">
+		<widget source="Frontend" conditional="Frontend" render="Label" position="1470,5" size="130,45" font="Regular;34" backgroundColor="transpBlack">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 		<widget source="progress_text" render="Label" position="1620,5" size="130,45" font="Regular;34" halign="right" backgroundColor="transpBlack">
 			<convert type="ProgressToText">InText</convert>
 		</widget>
-		<widget source="progress_text" render="Label" position="1780,5" size="110,45" font="Regular;34" halign="left" backgroundColor="transpBlack">
+		<widget source="progress_text" render="Label" position="1780,5" size="110,45" font="Regular;34" backgroundColor="transpBlack">
 			<convert type="ProgressToText">InPercent</convert>
 		</widget>
 	</screen>
