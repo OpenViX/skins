@@ -156,7 +156,7 @@
 		<eLabel position="450,450" size="1080,864" zPosition="1" backgroundColor="#000000"/>
 		<widget name="Video" position="0,0" size="0,0"/>
 		<widget name="SeekState" position="0,0"/>
-		<widget source="cutlist" position="0,0" render="Listbox" >
+		<widget source="cutlist" position="0,0" render="Listbox">
 			<convert type="TemplatedMultiContent">
 					{"template": [
 				MultiContentEntryText(text = 1),
@@ -181,7 +181,7 @@
 		<panel name="PigTemplate"/>
 		<widget source="title_label" render="Label" position="900,165" size="810,57" font="Regular;27" transparent="1"/>
 		<widget source="error_label" render="Label" position="900,165" size="810,444" zPosition="3" font="Regular;30" transparent="1"/>
-	<widget source="titles" render="Listbox" scrollbarMode="showOnDemand" position="900,222" size="819,444" zPosition="3" transparent="1" >
+	<widget source="titles" render="Listbox" scrollbarMode="showOnDemand" position="900,222" size="819,444" zPosition="3" transparent="1">
 		<convert type="TemplatedMultiContent">
 			{"template": [
 					MultiContentEntryText(pos = (0,0), size = (540,30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
@@ -389,7 +389,7 @@
 		<gstyles filename="window/separator.png#cached"/>
 	</gstyle>
 
-	<screen name="Dish" flags="wfNoBorder" position="30,90" size="195,303" title="Dish" zPosition="1" backgroundColor="transparent" >
+	<screen name="Dish" flags="wfNoBorder" position="30,90" size="195,303" title="Dish" zPosition="1" backgroundColor="transparent">
 		<widget name="Dishpixmap" position="0,0" size="195,240" zPosition="-1" pixmap="icons/dish.png" transparent="1" alphatest="blend"/>
 		<widget name="turnTime" position="67,7" size="120,30" zPosition="1" font="Regular;26" halign="right" borderWidth="1" transparent="1"/>
 		<widget name="From" position="7,246" size="67,27" zPosition="1" font="Regular;24" halign="left" borderWidth="1" transparent="1"/>
@@ -400,7 +400,7 @@
 		<widget name="turnSpeed" position="112,147" size="75,24" zPosition="1" font="Regular;22" halign="right" borderWidth="1" transparent="1"/>
 	</screen>
 
-	<screen name="Dishpip" flags="wfNoBorder" position="30,90" size="130,202" title="DishPiP" zPosition="1" backgroundColor="transparent" >
+	<screen name="Dishpip" flags="wfNoBorder" position="30,90" size="130,202" title="DishPiP" zPosition="1" backgroundColor="transparent">
 		<widget source="Dishpixmap" render="Pixmap" pixmap="icons/dish.png" zPosition="-1" position="0,0" size="130,160" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -574,7 +574,7 @@
 
 	<screen flags="wfNoBorder" name="CrossEPG_Menu" position="fill" title="CrossEPG Menu">
 		<panel name="PigTemplate"/>
-		<widget source="list" render="Listbox" transparent="0" position="780,100" size="1110,912" scrollbarMode="showOnDemand" >
+		<widget source="list" render="Listbox" transparent="0" position="780,100" size="1110,912" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 		{"template": [
 			MultiContentEntryPixmapAlphaTest(pos = (18,6), size = (48,48), png = 0),
@@ -739,7 +739,7 @@
 		<widget font="Regular;30" halign="left" name="detailtext" position="780,225" size="1005,487" transparent="1" valign="top" zPosition="10"/>
 	</screen>
 
-	<screen name="MyTubeSuggestionsListScreen" position="780,195" size="1110,346" zPosition="6" backgroundColor="grey" flags="wfNoBorder" >
+	<screen name="MyTubeSuggestionsListScreen" position="780,195" size="1110,346" zPosition="6" backgroundColor="grey" flags="wfNoBorder">
 		<eLabel backgroundColor="dark" position="4,4" size="1101,337" zPosition="7"/>
 		<widget position="4,4" render="Listbox" scrollbarMode="showOnDemand" size="1101,337" source="suggestionslist" transparent="1" zPosition="8">
 			<convert type="TemplatedMultiContent">
@@ -754,7 +754,7 @@
 		</widget>
 	</screen>
 
-	<screen name="MyTubeHistoryScreen" position="780,195" size="1110,346" zPosition="6" backgroundColor="grey" flags="wfNoBorder" >
+	<screen name="MyTubeHistoryScreen" position="780,195" size="1110,346" zPosition="6" backgroundColor="grey" flags="wfNoBorder">
 		<eLabel backgroundColor="dark" position="4,4" size="1101,337" zPosition="7"/>
 		<widget position="4,4" render="Listbox" scrollbarMode="showOnDemand" size="1101,337" source="historylist" transparent="1" zPosition="8">
 			<convert type="TemplatedMultiContent">
@@ -776,7 +776,7 @@
 	<screen name="MyTubeTasksScreen" position="fill" title="MyTube - Tasks" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<panel name="KeyOkTemplate"/>
-		<widget source="tasklist" render="Listbox" position="840,165" size="952,555" zPosition="2" scrollbarMode="showOnDemand" transparent="1" >
+		<widget source="tasklist" render="Listbox" position="840,165" size="952,555" zPosition="2" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 		{"template": [
 				MultiContentEntryText(pos = (15,1), size = (375,36), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
@@ -1064,7 +1064,7 @@
 		<widget name="memvalue" font="Regular;21" position="1485,142" size="300,795" zPosition="1" halign="right" backgroundColor="secondBG" transparent="1"/>
 	</screen>
 
-	<screen name="ClearMemAutoScreen" position="1500,45" zPosition="2" size="375,45" title="ClearMem Status" flags="wfNoBorder" >
+	<screen name="ClearMemAutoScreen" position="1500,45" zPosition="2" size="375,45" title="ClearMem Status" flags="wfNoBorder">
 	<widget name="message_label" font="Regular;36" position="0,0" zPosition="2" valign="center" halign="center" size="375,45" backgroundColor="secondBG" transparent="1"/>
 	</screen>
 
@@ -1089,7 +1089,7 @@
 		<widget name="slide" position="1335,157" size="27,772" render="Progress" zPosition="1" borderWidth="1" orientation="orBottomToTop"/>
 	</screen>
 
-	<screen name="CacheFlushAutoScreen" position="1500,45" zPosition="2" size="375,45" title="CacheFlush Status" flags="wfNoBorder" >
+	<screen name="CacheFlushAutoScreen" position="1500,45" zPosition="2" size="375,45" title="CacheFlush Status" flags="wfNoBorder">
 	<widget name="message_label" font="Regular;36" position="0,0" zPosition="2" valign="center" halign="center" size="375,45" backgroundColor="secondBG" transparent="1"/>
 	</screen>
 
@@ -1168,9 +1168,9 @@
 						text1Pos="615,15,500,35" text2Pos="615,50,500,25" text3Pos="615,75,500,25" text4Pos="615,100,500,25" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 
-	<screen name="ForecaPreviewCache" position="center,center" size="76,76" flags="wfNoBorder" backgroundColor="#000000" >
-		<eLabel position="2,2" zPosition="1" size="72,72" font="Regular;18" backgroundColor="#40000000" />
-		<widget name="spinner" position="14,14" zPosition="4" size="48,48" alphatest="blend" />
+	<screen name="ForecaPreviewCache" position="center,center" size="76,76" flags="wfNoBorder" backgroundColor="#000000">
+		<eLabel position="2,2" zPosition="1" size="72,72" font="Regular;18" backgroundColor="#40000000"/>
+		<widget name="spinner" position="14,14" zPosition="4" size="48,48" alphatest="blend"/>
 	</screen>
 
 	<screen flags="wfNoBorder" name="CityPanel" position="fill">
@@ -1222,7 +1222,7 @@
 		<widget name="console" position="30,802" size="720,60" zPosition="1" font="Regular;27" transparent="1"/>
 	</screen>
 
-	<screen flags="wfNoBorder" name="SHOUTcastSetup" position="fill" title="SHOUTcast Setup" >
+	<screen flags="wfNoBorder" name="SHOUTcastSetup" position="fill" title="SHOUTcast Setup">
 		<panel name="PigLessTemplate"/>
 		<panel name="OKTemplate"/>
 		<widget name="config" position="780,150" size="870,600" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"	transparent="1"/>
@@ -1236,18 +1236,18 @@
 
 	<!-- unwetterZentrale -->
 
-	<screen flags="wfNoBorder" name="PictureView" position="fill" title="UWZ" >
+	<screen flags="wfNoBorder" name="PictureView" position="fill" title="UWZ">
 		<panel name="PigTemplate"/>
 		<panel name="KeyInfoTemplate"/>
 		<widget name="picture" position="780,100" size="1110,912" zPosition="2"/>
 	</screen>
 
-	<screen flags="wfNoBorder" name="HelpPictureView" position="fill" title="UWZ" >
+	<screen flags="wfNoBorder" name="HelpPictureView" position="fill" title="UWZ">
 		<panel name="PigTemplate"/>
 		<widget name="picture" position="780,100" size="1110,912" zPosition="2"/>
 	</screen>
 
-	<screen flags="wfNoBorder" name="UnwetterMain" position="fill" title="UWZ" >
+	<screen flags="wfNoBorder" name="UnwetterMain" position="fill" title="UWZ">
 		<panel name="PigTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<widget name="hmenu" scrollbarMode="showOnDemand" font="Regular;30" position="780,100" size="1110,912" transparent="1"/>
@@ -1286,7 +1286,7 @@
 		<widget name="config" position="30,655" size="720,266" itemHeight="38" font="Regular;28" transparent="1" zPosition="1" scrollbarMode="showOnDemand"/>
 		<widget name="wizard" pixmap="wizard.png" position="811,165" size="165,261" zPosition="10" alphatest="on"/>
 		<widget name="HelpWindow" pixmap="buttons/key_text.png" position="810,660" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
-		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="165,967" zPosition="1" size="52,38" transparent="1" alphatest="on" >
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="165,967" zPosition="1" size="52,38" transparent="1" alphatest="on">
 	<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
@@ -1354,7 +1354,7 @@
 	<screen name="AutoTimerOverviewSummary" position="fill">
 		<widget source="parent.Title" render="Label" position="780,105" size="180,31" font="Regular;27"/>
 		<widget source="entry" render="Label" position="780,133" size="180,31" font="Regular;24"/>
-		<widget source="global.CurrentTime" render="Label" position="969,228" size="123,27" font="Regular;24" >
+		<widget source="global.CurrentTime" render="Label" position="969,228" size="123,27" font="Regular;24">
 	<convert type="ClockToText">WithSeconds</convert>
 		</widget>
 	</screen>
@@ -1441,7 +1441,7 @@
 
 	<screen name="BlindscanScreen" title="Blind scan" position="fill" flags="wfNoBorder"><!-- OE-Alliance version -->
 		<panel name="SetupPanelPIG"/>
-		<widget text="LOCK" source="Frontend" render="FixedLabel" position="810,950" size="160,50" font="Regular;46" zPosition="1" halign="left" foregroundColor="green" backgroundColor="darkgrey" transparent="1" >
+		<widget text="LOCK" source="Frontend" render="FixedLabel" position="810,950" size="160,50" font="Regular;46" zPosition="1" halign="left" foregroundColor="green" backgroundColor="darkgrey" transparent="1">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -1460,9 +1460,9 @@
 	
 	<screen name="DmmBlindscanState" title="Blind scan state" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<widget name="text" position="780,123" size="1110,45" font="Regular;33" valign="center" />
-		<widget name="progress" position="780,168" size="1110,45" font="Regular;33" noWrap="1" />
-		<widget source="list" render="Listbox" position="780,213" size="1110,765" scrollbarMode="showAlways" >
+		<widget name="text" position="780,123" size="1110,45" font="Regular;33" valign="center"/>
+		<widget name="progress" position="780,168" size="1110,45" font="Regular;33" noWrap="1"/>
+		<widget source="list" render="Listbox" position="780,213" size="1110,765" scrollbarMode="showAlways">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (5, 2), size = (900, 41), flags = RT_HALIGN_LEFT, text = 0) ],
 				 "fonts": [gFont("Regular", 33)],
@@ -1471,7 +1471,7 @@
 			</convert>
 		</widget>
 		<widget name="post_action" position="30,570" size="720,180" font="Regular;32" valign="top" halign="block"/>
-		<widget source="constellation" render="Canvas" position="262,754" size="256,256" correct_aspect="width" />
+		<widget source="constellation" render="Canvas" position="262,754" size="256,256" correct_aspect="width"/>
 	</screen>
 
 	<screen name="Blindscan" position="fill" title="Blind scan"><!-- OpenPLi version -->
@@ -1493,9 +1493,9 @@
 
 	<!-- AutoResolution -->
 
-	<screen name="ResolutionLabel" position="75,60" size="375,54" flags="wfNoBorder" >
-		<widget name="content" position="0,0" size="375,27" font="Regular;24" />
-		<widget name="restxt" position="0,27" size="375,27" font="Regular;24" />
+	<screen name="ResolutionLabel" position="75,60" size="375,54" flags="wfNoBorder">
+		<widget name="content" position="0,0" size="375,27" font="Regular;24"/>
+		<widget name="restxt" position="0,27" size="375,27" font="Regular;24"/>
 	</screen>
 
  <!-- Remote timer -->
@@ -1539,11 +1539,11 @@
 	<screen name="refreshBouquet" position="fill" title="RefreshBouquet">
 		<panel name="PigTemplate"/>
 		<panel name="KeyMenuTemplate"/>
-		<widget name="source_text" position="780,105" zPosition="2" size="310,45" font="Regular;32" valign="center" halign="left" foregroundColor="yellow" />
-		<widget name="source_name" position="1110,105" zPosition="2" size="780,45" font="Regular;32" valign="center" halign="left" />
+		<widget name="source_text" position="780,105" zPosition="2" size="310,45" font="Regular;32" valign="center" halign="left" foregroundColor="yellow"/>
+		<widget name="source_name" position="1110,105" zPosition="2" size="780,45" font="Regular;32" valign="center" halign="left"/>
 
-		<widget name="target_text" position="780,150" zPosition="2" size="310,45" font="Regular;32" valign="center" halign="left" foregroundColor="blue" />
-		<widget name="target_name" position="1110,150" zPosition="2" size="780,45" font="Regular;32" valign="center" halign="left" />
+		<widget name="target_text" position="780,150" zPosition="2" size="310,45" font="Regular;32" valign="center" halign="left" foregroundColor="blue"/>
+		<widget name="target_name" position="1110,150" zPosition="2" size="780,45" font="Regular;32" valign="center" halign="left"/>
 
 		<widget source="config" render="Listbox" position="780,250" size="1110,684" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
@@ -1565,21 +1565,21 @@
 		<widget source="Service" render="Label" position="30,525" size="720,30" foregroundColor="foreground" font="Regular;26" valign="center" halign="center" transparent="1" zPosition="1">
 			<convert type="TransponderInfo"/>
 		</widget>
-		<widget name="info" position="30,630" size="720,270" font="Regular;28" foregroundColor="white" />
+		<widget name="info" position="30,630" size="720,270" font="Regular;28" foregroundColor="white"/>
 	</screen>
 
 	<screen name="refreshBouquetManualSelection" position="fill" title="RefreshBouquet">
 		<panel name="PigTemplate"/>
-		<widget name="source" position="780,105" zPosition="2" size="540,45" font="Regular;33" foregroundColor="white" />
-		<widget name="target" position="1350,105" zPosition="2" size="350,45" font="Regular;33" foregroundColor="white" />
-		<widget name="source_label" position="780,145" zPosition="2" size="540,25" font="Regular;23" foregroundColor="yellow" />
-		<widget name="target_label" position="1350,145" zPosition="2" size="540,25" font="Regular;23" foregroundColor="blue" />
-		<widget name="sources" position="780,175" zPosition="2" size="540,836" itemHeight="38" font="Regular;28" foregroundColor="white" />
-		<widget name="targets" position="1350,175" zPosition="2" size="540,836" itemHeight="38" font="Regular;28" foregroundColor="white" />
+		<widget name="source" position="780,105" zPosition="2" size="540,45" font="Regular;33" foregroundColor="white"/>
+		<widget name="target" position="1350,105" zPosition="2" size="350,45" font="Regular;33" foregroundColor="white"/>
+		<widget name="source_label" position="780,145" zPosition="2" size="540,25" font="Regular;23" foregroundColor="yellow"/>
+		<widget name="target_label" position="1350,145" zPosition="2" size="540,25" font="Regular;23" foregroundColor="blue"/>
+		<widget name="sources" position="780,175" zPosition="2" size="540,836" itemHeight="38" font="Regular;28" foregroundColor="white"/>
+		<widget name="targets" position="1350,175" zPosition="2" size="540,836" itemHeight="38" font="Regular;28" foregroundColor="white"/>
 		<widget source="Service" render="Label" position="30,525" size="720,30" foregroundColor="foreground" font="Regular;26" valign="center" halign="center" transparent="1" zPosition="1">
 			<convert type="TransponderInfo"/>
 		</widget>
-		<widget name="info" position="30,630" size="720,270" font="Regular;28" foregroundColor="white" />
+		<widget name="info" position="30,630" size="720,270" font="Regular;28" foregroundColor="white"/>
 	</screen>
 
 	<!-- ## Het Weer ##-->
@@ -1608,8 +1608,8 @@
 	</screen>
 	<screen name="View_Slideshow" position="fill" flags="wfNoBorder">
 		<panel name="PigLessTemplate"/>
-		<widget name="pic" position="center,center" size="1080, 1005" zPosition="2" alphatest="on" />
-		<widget name="file" position="1,1" size="1, 1"  />
+		<widget name="pic" position="center,center" size="1080, 1005" zPosition="2" alphatest="on"/>
+		<widget name="file" position="1,1" size="1, 1" />
 	</screen>
 
  <!-- ## FanControl 2 ##-->
@@ -1775,7 +1775,7 @@
 	<screen name="TmbdYTTrailerList" position="fill" flags="wfNoBorder" title="YTTrailer List">
 		<panel name="PigTemplate"/>
 		<widget source="list" render="Listbox" position="780,123" size="1132,874" scrollbarMode="showOnDemand">
-			<convert type="TemplatedMultiContent" >
+			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos=(0,0), size=(150,108), png=3), # Thumbnail
 					MultiContentEntryText(pos=(160,1), size=(800,100), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=1)],
@@ -1783,7 +1783,7 @@
 				"itemHeight": 108}
 			</convert>
 		</widget>
-		<widget name="thumbnail" position="0,0" size="150,108" /> # Thumbnail size in list
+		<widget name="thumbnail" position="0,0" size="150,108"/> # Thumbnail size in list
 		<eLabel text="'OK'= Play trailer" position="652,1030" size="330,39" font="RegularSmall;33" halign="left" zPosition="1"/>
 	</screen>
 
@@ -1823,7 +1823,7 @@
 		<panel name="ButtonGreen"/>
 		<widget name="save" position="678,1030" size="370,38" backgroundColor="black" zPosition="1" transparent="1" font="Regular;34" halign="left"/>
 		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showNever" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="plugin" position="7,530" size="715,475" alphatest="blend" zPosition="2" />
+		<widget name="plugin" position="7,530" size="715,475" alphatest="blend" zPosition="2"/>
 		</screen>
 	<screen name="wikiFullScreen" position="fill" flags="wfNoBorder">
 		<panel name="SelectionTemplate"/>
@@ -2029,7 +2029,7 @@
 	<!-- AutoBouquetsMaker (ABM) -->
 	<screen flags="wfNoBorder" name="AutoBouquetsMaker_Menu" position="fill">
 		<panel name="PigTemplate"/>
-		<widget source="list" render="Listbox" transparent="0" position="780,100" size="1110,912" scrollbarMode="showOnDemand" >
+		<widget source="list" render="Listbox" transparent="0" position="780,100" size="1110,912" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryPixmapAlphaTest(pos = (18,6), size = (48,48), png = 0),
@@ -2264,8 +2264,8 @@
 		<panel name="PigTemplate"/>
 		<panel name="KeyMenuInfoTemplate"/>
 		<widget name="text" position="30,560" size="720,210" font="Regular;36" halign="center" zPosition="1"/>
-		<widget source="list" render="Listbox" transparent="0" position="780,100" size="1110,912" scrollbarMode="showOnDemand" >
-			<convert type="TemplatedMultiContent" >
+		<widget source="list" render="Listbox" transparent="0" position="780,100" size="1110,912" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryPixmapAlphaTest(pos=(0,0), size=(150,108), png=2), # Thumbnail
 				MultiContentEntryText(pos=(165,1), size=(862,78), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=3), # Title
@@ -2277,15 +2277,15 @@
 				}
 			</convert>
 		</widget>
-		<widget name="thumbnail" position="0,0" size="150,108" /> # Thumbnail size in list
+		<widget name="thumbnail" position="0,0" size="150,108"/> # Thumbnail size in list
 	</screen>
 
 	<screen name="YouTubeSearch" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<widget name="config" position="780,100" size="1110,45" itemHeight="45" font="Regular;30" halign="center" zPosition="1"/> <!-- Search box -->
-		<widget source="list" render="Listbox" transparent="0" position="780,150" size="1110,712" scrollbarMode="showOnDemand" >
-			<convert type="TemplatedMultiContent" >
+		<widget source="list" render="Listbox" transparent="0" position="780,150" size="1110,712" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos=(15,1), size=(870,45), font=0, flags=RT_HALIGN_LEFT, text=0)
 				],
