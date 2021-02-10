@@ -479,7 +479,7 @@
 		<widget source="ServiceEvent" render="Label" position="780,970" size="1132,35" font="RegularSmall;30" halign="right" foregroundColor="secondFG" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="7,524" size="765,40" font="Regular;32" foregroundColor="secondFG" halign="center" valign="top">
+		<widget source="ServiceEvent" render="Label" position="7,524" size="765,40" font="Regular;32" foregroundColor="secondFG" halign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="7,564" size="180,35" font="Regular;31" foregroundColor="selectedFG" halign="right">
@@ -562,7 +562,7 @@
 		<widget source="Service" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center" valign="top">
+		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Event" render="Label" position="7,610" size="750,40" font="Regular;33" foregroundColor="yellow" halign="center">
@@ -643,7 +643,7 @@
 		<widget name="channel" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="InfoBarEventView" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
-		<widget name="FullDescription" position="15,97" size="1890,720" font="Regular;42" borderColor="black" borderWidth="1" foregroundColor="white" backgroundColor="background" transparent="1" valign="top" halign="center" zPosition="2"/>
+		<widget name="FullDescription" position="15,97" size="1890,720" font="Regular;42" borderColor="black" borderWidth="1" foregroundColor="white" backgroundColor="background" transparent="1" halign="center" zPosition="2"/>
 		<widget source="Title" render="Label" position="5,7" size="1100,75" font="Regular;40" borderColor="black" borderWidth="2" foregroundColor="secondFG" transparent="1" backgroundColor="background" halign="center"/>
 		<widget name="datetime" position="1110,15" size="575,45" font="Regular;36" borderColor="black" borderWidth="2" transparent="1" halign="center"/>
 		<widget name="duration" position="1690,15" size="225,45" font="Regular;34" borderColor="black" borderWidth="2" transparent="1" halign="center"/>
@@ -778,7 +778,7 @@
 		<widget source="Event" render="Label" position="795,7" size="720,50" font="Regular;36" foregroundColor="selectedFG">
 		<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="615,57" size="1300,330" font="Regular;32" foregroundColor="grey" valign="top">
+		<widget source="Event" render="Label" position="615,57" size="1300,330" font="Regular;32" foregroundColor="grey">
 		<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget source="Event" render="Label" position="655,390" size="1060,40" font="Regular;30" foregroundColor="blue">
@@ -1805,7 +1805,7 @@
 		<widget name="serialno" position="870,450" size="225,45" font="Regular;30" valign="center"/>
 		<widget name="labserialno" position="1185,450" size="465,45" font="Regular;30" valign="center" backgroundColor="bluegrey"/>
 		<widget name="sharedir" position="870,510" size="225,45" font="Regular;30" valign="center"/>
-		<widget name="labsharedir" position="1185,510" size="465,45" font="Regular;30" valign="top" backgroundColor="bluegrey"/>
+		<widget name="labsharedir" position="1185,510" size="465,45" font="Regular;30" backgroundColor="bluegrey"/>
 		<widget name="inotify" position="870,607" size="270,45" font="Regular;30" valign="center"/>
 		<widget name="inotifyinactive" position="1200,607" pixmap="icons/lock_off.png" size="48,48" alphatest="on"/>
 		<widget name="inotifyactive" position="1200,607" zPosition="2" pixmap="icons/lock_on.png" size="48,48" alphatest="on"/>
@@ -2271,67 +2271,67 @@
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,180" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="SensorTempText0" render="Label" position="780,315" size="135,70" font="RegularSmall;30" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTempText0" render="Label" position="780,315" size="135,70" font="RegularSmall;30" foregroundColor="grey"/>
 		<widget source="SensorTemp0" render="Label" position="915,315" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText0" render="Label" position="1200,315" size="180,70" font="RegularSmall;30" valign="top" foregroundColor="grey"/>
+		<widget source="SensorFanText0" render="Label" position="1200,315" size="180,70" font="RegularSmall;30" foregroundColor="grey"/>
 		<widget source="SensorFan0" render="Label" position="1380,315" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText1" render="Label" position="780,390" size="135,70" font="RegularSmall;30" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTempText1" render="Label" position="780,390" size="135,70" font="RegularSmall;30" foregroundColor="grey"/>
 		<widget source="SensorTemp1" render="Label" position="915,390" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText1" render="Label" position="1200,390" size="180,70" font="RegularSmall;30" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFanText1" render="Label" position="1200,390" size="180,70" font="RegularSmall;30"	foregroundColor="grey"/>
 		<widget source="SensorFan1" render="Label" position="1380,390" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText2" render="Label" position="780,465" size="135,70" font="RegularSmall;30" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTempText2" render="Label" position="780,465" size="135,70" font="RegularSmall;30" foregroundColor="grey"/>
 		<widget source="SensorTemp2" render="Label" position="915,465" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText2" render="Label" position="1200,465" size="180,70" font="RegularSmall;30" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFanText2" render="Label" position="1200,465" size="180,70" font="RegularSmall;30"	foregroundColor="grey"/>
 		<widget source="SensorFan2" render="Label" position="1380,465" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText3" render="Label" position="780,540" size="135,70" font="RegularSmall;30" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTempText3" render="Label" position="780,540" size="135,70" font="RegularSmall;30" foregroundColor="grey"/>
 		<widget source="SensorTemp3" render="Label" position="915,540" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText3" render="Label" position="1200,540" size="180,70" font="RegularSmall;30" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFanText3" render="Label" position="1200,540" size="180,70" font="RegularSmall;30"	foregroundColor="grey"/>
 		<widget source="SensorFan3" render="Label" position="1380,540" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText4" render="Label" position="780,615" size="135,70" font="RegularSmall;30" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTempText4" render="Label" position="780,615" size="135,70" font="RegularSmall;30" foregroundColor="grey"/>
 		<widget source="SensorTemp4" render="Label" position="915,615" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText4" render="Label" position="1200,615" size="180,70" font="RegularSmall;30" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFanText4" render="Label" position="1200,615" size="180,70" font="RegularSmall;30"	foregroundColor="grey"/>
 		<widget source="SensorFan4" render="Label" position="1380,615" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText5" render="Label" position="780,690" size="135,70" font="RegularSmall;30" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTempText5" render="Label" position="780,690" size="135,70" font="RegularSmall;30" foregroundColor="grey"/>
 		<widget source="SensorTemp5" render="Label" position="915,690" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText5" render="Label" position="1200,690" size="180,70" font="RegularSmall;30" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFanText5" render="Label" position="1200,690" size="180,70" font="RegularSmall;30"	foregroundColor="grey"/>
 		<widget source="SensorFan5" render="Label" position="1380,690" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText6" render="Label" position="780,765" size="135,70" font="RegularSmall;30" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTempText6" render="Label" position="780,765" size="135,70" font="RegularSmall;30" foregroundColor="grey"/>
 		<widget source="SensorTemp6" render="Label" position="915,765" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText6" render="Label" position="1200,765" size="180,70" font="RegularSmall;30" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFanText6" render="Label" position="1200,765" size="180,70" font="RegularSmall;30"	foregroundColor="grey"/>
 		<widget source="SensorFan6" render="Label" position="1380,765" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorTempText7" render="Label" position="780,840" size="135,70" font="RegularSmall;30" valign="top" foregroundColor="grey"/>
+		<widget source="SensorTempText7" render="Label" position="780,840" size="135,70" font="RegularSmall;30" foregroundColor="grey"/>
 		<widget source="SensorTemp7" render="Label" position="915,840" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
-		<widget source="SensorFanText7" render="Label" position="1200,840" size="180,70" font="RegularSmall;30" valign="top"	foregroundColor="grey"/>
+		<widget source="SensorFanText7" render="Label" position="1200,840" size="180,70" font="RegularSmall;30"	foregroundColor="grey"/>
 		<widget source="SensorFan7" render="Label" position="1380,840" size="225,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
 		</widget>
@@ -2527,14 +2527,14 @@
 		<widget name="connect" position="1155,330" size="96,96" zPosition="2"
 		pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy24.png"
 		alphatest="blend"/>
-		<widget name="lab1" position="840,199" halign="center" size="754,90" font="Regular;30" valign="top"/>
+		<widget name="lab1" position="840,199" halign="center" size="754,90" font="Regular;30"/>
 	</screen>
 	<screen name="VIXStopCam" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="connect" position="1155,330" size="96,96" zPosition="2"
 		pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/images/busy24.png"
 		alphatest="blend"/>
-		<widget name="lab1" position="840,199" halign="center" size="754,90" font="Regular;30" valign="top"/>
+		<widget name="lab1" position="840,199" halign="center" size="754,90" font="Regular;30"/>
 	</screen>
 	<screen name="TranscodingSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
