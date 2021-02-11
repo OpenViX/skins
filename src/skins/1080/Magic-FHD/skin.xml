@@ -116,26 +116,22 @@
 	<!--	## Colors ## -->
 	<colors>
 		<color name="black" value="#00000000"/>
-		<color name="background" value="#00000000"/>
 		<color name="blue" value="#00879ce1"/>
 		<color name="bluetransparent" value="#08001e4b"/>
 		<color name="bluegrey" value="#4D5375"/>
-		<color name="buttonred" value="#00f50808" />
-		<color name="buttongreen" value="#0004c81b" />
-		<color name="buttonyellow" value="#00edf506" />
-		<color name="buttonblue" value="#00077cf5" />
+		<color name="buttonred" value="#00f50808"/>
+		<color name="buttongreen" value="#0004c81b"/>
+		<color name="buttonyellow" value="#00edf506"/>
+		<color name="buttonblue" value="#00077cf5"/>
 		<color name="darkgrey" value="#00555556"/>
-		<color name="foreground" value="#00f0f0f0"/>
 		<color name="green" value="#0056c856"/>
 		<color name="greentransparent" value="#08004c00"/>
 		<color name="grey" value="#00aaaaaa"/>
 		<color name="infobarBG" value="#41080808"/>
 		<color name="noTransBG" value="#00101214"/>
-		<color name="orange" value="#00ffc000"/>
 		<color name="red" value="#00ff4a3c"/>
 		<color name="redtransparent" value="#084c0000"/>
 		<color name="secondBG" value="#18101214"/>
-		<color name="secondFG" value="#00879ce1"/>
 		<color name="selectedBG" value="#06303240"/>
 		<color name="selectedFG" value="#00fcc000"/>
 		<color name="transparent" value="#ff000000"/>
@@ -149,18 +145,17 @@
 	<!--	## Window ## -->
 	<windowstyle id="0" type="skinned">
 		<title offset="30,5" font="Regular;28"/>
-		<color name="Background" color="background"/>
-		<color name="LabelForeground" color="foreground"/>
-		<color name="ListboxBackground" color="background"/>
-		<color name="ListboxForeground" color="foreground"/>
+		<color name="LabelForeground" color="white"/>
+		<color name="ListboxBackground" color="black"/>
+		<color name="ListboxForeground" color="white"/>
 		<color name="ListboxSelectedBackground" color="selectedBG"/>
 		<color name="ListboxSelectedForeground" color="selectedFG"/>
 		<color name="ListboxMarkedBackground" color="black"/>
-		<color name="ListboxMarkedForeground" color="foreground"/>
+		<color name="ListboxMarkedForeground" color="white"/>
 		<color name="ListboxMarkedAndSelectedBackground" color="black"/>
-		<color name="ListboxMarkedAndSelectedForeground" color="foreground"/>
-		<color name="WindowTitleForeground" color="foreground"/>
-		<color name="WindowTitleBackground" color="background"/>
+		<color name="ListboxMarkedAndSelectedForeground" color="white"/>
+		<color name="WindowTitleForeground" color="white"/>
+		<color name="WindowTitleBackground" color="black"/>
 		<borderset name="bsWindow">
 			<pixmap filename="window/oben_links.png" pos="bpTopLeft"/>
 			<pixmap filename="window/oben.png" pos="bpTop"/>
@@ -258,20 +253,20 @@
 		<widget source="session.Event_Now" render="Label" position="7,190" size="937,45" font="Regular;33" backgroundColor="secondBG" transparent="1" foregroundColor="selectedFG" noWrap="1">
 			<convert type="EventName">NameNow</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="157,230" size="787,40" font="Regular;30" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="157,230" size="787,40" font="Regular;30" foregroundColor="blue" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="7,230" size="150,40" font="Regular;30" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="7,230" size="150,40" font="Regular;30" foregroundColor="blue" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
 		<widget name="epg_description" position="7,270" size="937,562" font="Regular;30" backgroundColor="secondBG" transparent="1"/>
 		<widget source="session.Event_Next" render="Label" position="975,190" size="930,45" font="Regular;33" backgroundColor="secondBG" transparent="1" foregroundColor="selectedFG" noWrap="1">
 			<convert type="EventName">NameNext</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="1125,230" size="787,40" font="Regular;30" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+		<widget source="session.Event_Next" render="Label" position="1125,230" size="787,40" font="Regular;30" foregroundColor="blue" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="975,230" size="150,40" font="Regular;30" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+		<widget source="session.Event_Next" render="Label" position="975,230" size="150,40" font="Regular;30" foregroundColor="blue" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="975,270" size="930,562" font="Regular;30" backgroundColor="secondBG" transparent="1">
@@ -333,7 +328,7 @@
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="Label" position="1537,115" size="255,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="orange">
+		<widget source="session.FrontendInfo" render="Label" position="1537,115" size="255,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="yellow">
 			<convert type="FrontendInfo">STRING</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" text="	Signal:" position="1800,115" size="120,55" font="Regular;21" backgroundColor="transpBlack" transparent="1">
@@ -349,20 +344,20 @@
 		<widget source="session.Event_Now" render="Label" position="7,10" size="937,45" font="Regular;33" backgroundColor="secondBG" transparent="1" foregroundColor="selectedFG" noWrap="1">
 			<convert type="EventName">NameNow</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="157,50" size="787,40" font="Regular;30" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="157,50" size="787,40" font="Regular;30" foregroundColor="blue" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="7,50" size="150,40" font="Regular;30" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="7,50" size="150,40" font="Regular;30" foregroundColor="blue" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
 		<widget name="epg_description" position="7,90" size="937,742" font="Regular;30" backgroundColor="secondBG" transparent="1"/>
 		<widget source="session.Event_Next" render="Label" position="975,10" size="930,45" font="Regular;33" backgroundColor="secondBG" transparent="1" foregroundColor="selectedFG" noWrap="1">
 			<convert type="EventName">NameNext</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="1125,50" size="787,40" font="Regular;30" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+		<widget source="session.Event_Next" render="Label" position="1125,50" size="787,40" font="Regular;30" foregroundColor="blue" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="975,50" size="150,40" font="Regular;30" foregroundColor="secondFG" backgroundColor="secondBG" transparent="1">
+		<widget source="session.Event_Next" render="Label" position="975,50" size="150,40" font="Regular;30" foregroundColor="blue" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="975,90" size="930,742" font="Regular;30" backgroundColor="secondBG" transparent="1">
@@ -476,10 +471,10 @@
 			<convert type="EventTime">ThirdEndTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="780,970" size="1132,35" font="RegularSmall;30" halign="right" foregroundColor="secondFG" noWrap="1">
+		<widget source="ServiceEvent" render="Label" position="780,970" size="1132,35" font="RegularSmall;30" halign="right" foregroundColor="blue" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="7,524" size="765,40" font="Regular;32" foregroundColor="secondFG" halign="center">
+		<widget source="ServiceEvent" render="Label" position="7,524" size="765,40" font="Regular;32" foregroundColor="blue" halign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="7,564" size="180,35" font="Regular;31" foregroundColor="selectedFG" halign="right">
@@ -531,7 +526,7 @@
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1">
+		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" halign="right" foregroundColor="blue" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="7,530" size="750,40" font="Regular;33" foregroundColor="yellow" halign="center">
@@ -546,24 +541,24 @@
 	</screen>
 	<screen name="EPGSelectionMulti" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="date" position="1125,120" size="375,50" font="Regular;36" halign="center" foregroundColor="secondFG"/>
+		<widget name="date" position="1125,120" size="375,50" font="Regular;36" halign="center" foregroundColor="blue"/>
 		<widget name="list" position="780,247" size="1132,722" itemHeight="38" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="bouquetlist" position="885,247" size="900,750" itemHeight="31" foregroundColor="white" foregroundColorSelected="selectedFG" backgroundColorSelected="#001C252D" borderColor="background" scrollbarMode="showNever" zPosition="4"/>
+		<widget name="bouquetlist" position="885,247" size="900,750" itemHeight="31" foregroundColor="white" foregroundColorSelected="selectedFG" backgroundColorSelected="#001C252D" borderColor="black" scrollbarMode="showNever" zPosition="4"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="1"/>
 		<widget name="now_button" pixmap="epg/epg_off.png" position="885,172" zPosition="2" size="270,60" alphatest="blend"/>
 		<widget name="now_button_sel" pixmap="epg/epg_now_on.png" position="885,172" zPosition="3" size="270,60" alphatest="blend"/>
-		<widget name="now_text" position="885,172" size="270,60" backgroundColor="background" zPosition="4" transparent="1" text=" NOW" font="Regular;30" valign="center" halign="center"/>
+		<widget name="now_text" position="885,172" size="270,60" backgroundColor="black" zPosition="4" transparent="1" text=" NOW" font="Regular;30" valign="center" halign="center"/>
 		<widget name="next_button" pixmap="epg/epg_off.png" position="1170,172" zPosition="2" size="270,60" alphatest="blend"/>
 		<widget name="next_button_sel" pixmap="epg/epg_next_on.png" position="1170,172" zPosition="3" size="270,60" alphatest="blend"/>
-		<widget name="next_text" position="1170,172" size="270,60" backgroundColor="background" zPosition="4" transparent="1" text=" NEXT" font="Regular;30" valign="center" halign="center"/>
+		<widget name="next_text" position="1170,172" size="270,60" backgroundColor="black" zPosition="4" transparent="1" text=" NEXT" font="Regular;30" valign="center" halign="center"/>
 		<widget name="more_button" pixmap="epg/epg_off.png" position="1440,172" zPosition="2" size="270,60" alphatest="blend"/>
 		<widget name="more_button_sel" pixmap="epg/epg_next_on.png" position="1440,172" zPosition="3" size="270,60" alphatest="blend"/>
-		<widget name="more_text" position="1440,172" size="270,60" backgroundColor="background" zPosition="4" transparent="1" text="MORE" font="Regular;30" valign="center" halign="center"/>
-		<widget source="Service" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1">
+		<widget name="more_text" position="1440,172" size="270,60" backgroundColor="black" zPosition="4" transparent="1" text="MORE" font="Regular;30" valign="center" halign="center"/>
+		<widget source="Service" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="blue" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="secondFG" halign="center">
+		<widget source="Event" render="Label" position="7,528" size="750,80" font="Regular;33" foregroundColor="blue" halign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Event" render="Label" position="7,610" size="750,40" font="Regular;33" foregroundColor="yellow" halign="center">
@@ -583,7 +578,7 @@
 		<panel name="BasicTemplate"/>
 		<widget name="FullDescription" position="780,123" size="1132,825" font="Regular;33" halign="center" foregroundColor="grey" scrollbarWidth="6" scrollbarSliderBorderWidth="1"
 				scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="session.CurrentService" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="secondFG" noWrap="1">
+		<widget source="session.CurrentService" render="Label" position="780,967" size="1132,35" font="Regular;30" halign="right" foregroundColor="blue" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="Service" render="Label" position="7,530" size="715,50" font="Regular;36" foregroundColor="selectedFG" halign="center">
@@ -597,10 +592,10 @@
 		<convert type="ClockToText">LongFullDate,Default</convert>
 		</widget>
 		<widget name="duration" position="7,740" size="715,45" font="Regular;33" halign="center" foregroundColor="grey"/>
-		<widget source="Event" render="Label" position="7,790" size="715,45" font="Regular;33" foregroundColor="secondFG" halign="center">
+		<widget source="Event" render="Label" position="7,790" size="715,45" font="Regular;33" foregroundColor="blue" halign="center">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="Event" render="Label" position="7,840" size="715,45" font="Regular;33" foregroundColor="secondFG" halign="center">
+		<widget source="Event" render="Label" position="7,840" size="715,45" font="Regular;33" foregroundColor="blue" halign="center">
 			<convert type="EventName">Rating</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="7,900" size="715,45" font="Regular;33" halign="center" foregroundColor="selectedFG">
@@ -632,10 +627,10 @@
            <convert type="ClockToText">LongFullDate,Default</convert>
        </widget>
        <widget name="duration" position="22,740" size="690,45" font="Regular;33" halign="center" foregroundColor="grey"/>
-       <widget source="Event" render="Label" position="22,790" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
+       <widget source="Event" render="Label" position="22,790" size="690,45" font="Regular;33" foregroundColor="blue" halign="center">
  			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="Event" render="Label" position="22,840" size="690,45" font="Regular;33" foregroundColor="secondFG" halign="center">
+		<widget source="Event" render="Label" position="22,840" size="690,45" font="Regular;33" foregroundColor="blue" halign="center">
 			<convert type="EventName">Rating</convert>
 		</widget>
 		<widget name="datetime" position="0,0" size="0,0"/> #To reduce debug noise.
@@ -644,8 +639,8 @@
 		<widget name="channel" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="InfoBarEventView" position="fill" backgroundColor="transpBlack" flags="wfNoBorder">
-		<widget name="FullDescription" position="15,97" size="1890,720" font="Regular;42" borderColor="black" borderWidth="1" foregroundColor="white" backgroundColor="background" transparent="1" halign="center" zPosition="2"/>
-		<widget source="Title" render="Label" position="5,7" size="1100,75" font="Regular;40" borderColor="black" borderWidth="2" foregroundColor="secondFG" transparent="1" backgroundColor="background" halign="center"/>
+		<widget name="FullDescription" position="15,97" size="1890,720" font="Regular;42" borderColor="black" borderWidth="1" foregroundColor="white" backgroundColor="black" transparent="1" halign="center" zPosition="2"/>
+		<widget source="Title" render="Label" position="5,7" size="1100,75" font="Regular;40" borderColor="black" borderWidth="2" foregroundColor="blue" transparent="1" backgroundColor="black" halign="center"/>
 		<widget name="datetime" position="1110,15" size="575,45" font="Regular;36" borderColor="black" borderWidth="2" transparent="1" halign="center"/>
 		<widget name="duration" position="1690,15" size="225,45" font="Regular;34" borderColor="black" borderWidth="2" transparent="1" halign="center"/>
 		</screen>
@@ -654,7 +649,7 @@
 		<panel name="KeyGreen"/>
 		<panel name="KeyYellow"/>
 		<panel name="KeyBlue"/>
-		<widget source="Event" render="Label" position="0,0" size="1920,750" font="Regular;42" borderWidth="1" borderColor="black" foregroundColor="white" backgroundColor="background" transparent="1" valign="bottom" halign="center" zPosition="2">
+		<widget source="Event" render="Label" position="0,0" size="1920,750" font="Regular;42" borderWidth="1" borderColor="black" foregroundColor="white" backgroundColor="black" transparent="1" valign="bottom" halign="center" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget source="Service" render="Picon" position="67,832" size="150,90" alphatest="blend" transparent="1" zPosition="2">
@@ -663,14 +658,14 @@
 		<widget source="Service" render="Label" position="382,832" size="1485,50" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="yellow" font="Regular;36" valign="center">
 		<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget name="list" position="270,882" size="1235,145" backgroundColor="secondBG" foregroundColor="foreground" transparent="1" zPosition="1"/>
-		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,36" font="Regular;30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" halign="center">
+		<widget name="list" position="270,882" size="1235,145" backgroundColor="secondBG" foregroundColor="white" transparent="1" zPosition="1"/>
+		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,36" font="Regular;30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="blue" halign="center">
 			<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="30,967" size="180,45" font="Regular;36" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="secondFG" halign="center">
+		<widget source="global.CurrentTime" render="Label" position="30,967" size="180,45" font="Regular;36" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="blue" halign="center">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="Event" render="Label" position="1630,937" size="240,45" backgroundColor="secondBG" transparent="1" zPosition="10" foregroundColor="foreground" font="Regular;36" halign="center">
+		<widget source="Event" render="Label" position="1630,937" size="240,45" backgroundColor="secondBG" transparent="1" zPosition="10" foregroundColor="white" font="Regular;36" halign="center">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -679,10 +674,10 @@
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="0,780" size="1920,300" backgroundColor="transparent" transparent="0" flags="wfNoBorder">
 		<ePixmap alphatest="off" pixmap="infobar/hd.png" position="0,-10" size="1920,330" zPosition="-1"/>
-		<widget source="global.CurrentTime" render="Label" position="1650,0" size="225,45" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" transparent="1" font="Regular;36" valign="center" halign="right">
+		<widget source="global.CurrentTime" render="Label" position="1650,0" size="225,45" backgroundColor="secondBG" foregroundColor="white" borderColor="black" borderWidth="2" transparent="1" font="Regular;36" valign="center" halign="right">
 		<convert type="ClockToText">Format:%-H:%M</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1425,32" size="450,45" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2" transparent="1" font="Regular;24" valign="center" halign="right">		<convert type="ClockToText">Date</convert>
+		<widget source="global.CurrentTime" render="Label" position="1425,32" size="450,45" backgroundColor="secondBG" foregroundColor="white" borderColor="black" borderWidth="2" transparent="1" font="Regular;24" valign="center" halign="right">		<convert type="ClockToText">Date</convert>
 		</widget>
 		<widget name="key_red" position="55,250" size="400,45" foregroundColor="buttonred" backgroundColor="secondBG" transparent="1" font="buttons;33"/>
 		<widget name="key_green" position="460,250" size="400,45" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1" font="buttons;33"/>
@@ -692,9 +687,9 @@
 		<ePixmap pixmap="buttons/key_menu.png" position="1762,250" size="52,37" alphatest="on"/>
 		<ePixmap pixmap="buttons/key_info.png" position="1815,250" size="52,37" alphatest="on"/>
 		<ePixmap pixmap="buttons/key_help.png" position="1868,250" size="52,37" alphatest="on"/>
-		<widget source="Title" render="Label" position="30,15" size="1275,50" font="Regular;36" transparent="1" backgroundColor="secondBG" foregroundColor="foreground" borderColor="black" borderWidth="2"/>
+		<widget source="Title" render="Label" position="30,15" size="1275,50" font="Regular;36" transparent="1" backgroundColor="secondBG" foregroundColor="white" borderColor="black" borderWidth="2"/>
 		<widget name="lab1" position="0,75" size="1920,172" font="Regular;33" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
-		<widget name="timeline_text" position="0,75" size="1920,45" itemHeight="45" TimelineFont="Regular;30" backgroundColor="black" foregroundColor="orange" transparent="1" zPosition="0"/>
+		<widget name="timeline_text" position="0,75" size="1920,45" itemHeight="45" TimelineFont="Regular;30" backgroundColor="black" foregroundColor="yellow" transparent="1" zPosition="0"/>
 		<widget name="list" position="0,120" size="1920,127" EventNamePadding="10" backgroundColor="black" scrollbarMode="showNever" transparent="0"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget name="bouquetlist" position="0,112" size="1920,127" itemHeight="40" font="Regular;30" backgroundColor="black" foregroundColorSelected="yellow" scrollbarMode="showNever" zPosition="4" transparent="0"/>
@@ -763,7 +758,7 @@
 		<convert type="ClockToText">Full</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="0,90" size="597,331" backgroundColor="transparent"/>
-		<widget source="session.CurrentService" render="Label" position="7,93" size="589,30" font="Regular;28" backgroundColor="background" transparent="1" foregroundColor="secondFG" borderWidth="2" noWrap="1" borderColor="black" valign="center" halign="center">
+		<widget source="session.CurrentService" render="Label" position="7,93" size="589,30" font="Regular;28" backgroundColor="black" transparent="1" foregroundColor="blue" borderWidth="2" noWrap="1" borderColor="black" valign="center" halign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<eLabel backgroundColor="black" position="0,90" size="597,2" zPosition="5"/> # Permanent hiding of VBI-lines
@@ -815,7 +810,7 @@
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(45)
 		</applet>
-	<widget name="LogsSize" position="15,675" size="754,75" font="Regular;33" foregroundColor="secondFG" halign="center" valign="center"/>
+	<widget name="LogsSize" position="15,675" size="754,75" font="Regular;33" foregroundColor="blue" halign="center" valign="center"/>
 	</screen>
 	<screen name="LogManagerViewLog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
@@ -859,11 +854,11 @@
 		<widget source="Service" render="Label" position="7,560" size="750,447" font="Regular;34" foregroundColor="grey" halign="center" valign="center">
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="780,960" size="225,35" font="Regular;30" foregroundColor="secondFG">
+		<widget source="Service" render="Label" position="780,960" size="225,35" font="Regular;30" foregroundColor="blue">
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
-		<widget name="freeDiskSpace" position="1087,960" size="375,40" font="Regular;30" foregroundColor="secondFG" halign="center"/>
-		<widget name="TrashcanSize" position="1537,960" size="375,40" font="Regular;30" foregroundColor="secondFG" halign="right"/>
+		<widget name="freeDiskSpace" position="1087,960" size="375,40" font="Regular;30" foregroundColor="blue" halign="center"/>
+		<widget name="TrashcanSize" position="1537,960" size="375,40" font="Regular;30" foregroundColor="blue" halign="right"/>
 		<widget source="Service" render="Label" position="22,530" size="120,40" font="Regular;30" foregroundColor="selectedFG">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
@@ -879,7 +874,7 @@
 	</screen>
 	<screen name="MovieListTags" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="22,568" size="715,390" font="Regular;33" zPosition="2" foregroundColor="secondFG"/>
+		<widget name="text" position="22,568" size="715,390" font="Regular;33" zPosition="2" foregroundColor="blue"/>
 		<widget name="list" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" 
 				enableWrapAround="1" scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue"
 				scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
@@ -942,7 +937,7 @@
 	</screen>
 	<screen name="AboutOE" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="lab1" conditional="lab1" render="Label" position="15,682" size="750,45" font="Regular;36" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget source="lab1" conditional="lab1" render="Label" position="15,682" size="750,45" font="Regular;36" zPosition="2" foregroundColor="blue" halign="center"/>
 		<widget source="lab2" conditional="lab1" render="Label" position="15,730" size="750,45" font="Crs;30" zPosition="2" foregroundColor="grey" halign="center"/>
 		<widget source="lab3" conditional="lab3" render="Label" position="15,780" size="750,45" font="Regular;30" zPosition="2" foregroundColor="grey" halign="center"/>
 		<widget name="AboutScrollLabel" position="850,123" size="900,874" font="Regular;31" foregroundColor="grey" zPosition="2"/>
@@ -956,7 +951,7 @@
 	</screen>
 	<screen name="TranslationInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="TranslationInfo" render="Label" position="780,127" size="1177,45" font="Regular;33" foregroundColor="secondFG"/>
+		<widget source="TranslationInfo" render="Label" position="780,127" size="1177,45" font="Regular;33" foregroundColor="blue"/>
 		<widget source="TranslatorName" render="Label" position="780,225" size="1177,150" font="Regular;33" foregroundColor="grey"/>
 	</screen>
 	<screen name="StreamingClientsInfo" position="fill" flags="wfNoBorder">
@@ -965,15 +960,15 @@
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="TunerHeader" render="Label" position="735,120" size="1177,50" font="Regular;36" foregroundColor="secondFG" halign="center"/>
+		<widget source="TunerHeader" render="Label" position="735,120" size="1177,50" font="Regular;36" foregroundColor="blue" halign="center"/>
 		<widget source="nims" render="Label" position="735,175" size="1177,190"	font="Regular;30" foregroundColor="grey" halign="center"/>
 		<widget source="Tuner0" render="Label" position="735,175" size="1177,40" font="Regular;30" foregroundColor="grey" halign="center"/>
 		<widget source="Tuner1" render="Label" position="735,215" size="1177,40" font="Regular;30" foregroundColor="grey" halign="center"/>
 		<widget source="Tuner2" render="Label" position="735,255" size="1177,40" font="Regular;30" foregroundColor="grey" halign="center"/>
 		<widget source="Tuner3" render="Label" position="735,295" size="1177,70" font="Regular;30" foregroundColor="grey" halign="center"/>
-		<widget source="HDDHeader" render="Label" position="735,370" size="1177,50" font="Regular;36" foregroundColor="secondFG" halign="center"/>
+		<widget source="HDDHeader" render="Label" position="735,370" size="1177,50" font="Regular;36" foregroundColor="blue" halign="center"/>
 		<widget source="hdd" render="Label" position="735,425" size="1177,200" font="Regular;30" foregroundColor="grey" halign="center"/>
-		<widget source="MountsHeader" render="Label" position="735,630" size="1177,50" font="Regular;36" foregroundColor="secondFG" halign="center"/>
+		<widget source="MountsHeader" render="Label" position="735,630" size="1177,50" font="Regular;36" foregroundColor="blue" halign="center"/>
 		<widget source="mounts" render="Label" position="735,685" size="1177,190" font="Regular;30" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="AboutReleaseNotes" position="fill" flags="wfNoBorder"	>
@@ -983,14 +978,14 @@
 	<screen name="ServiceInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="infolist" position="735,120" size="1177,775" font="Regular;31" itemHeight="35" selectionDisabled="1" foregroundColor="grey"/>
-		<eLabel text="HbbTV URL:" position="7,895" size="1950,45" font="Regular;35" foregroundColor="secondFG" halign="center"/>
+		<eLabel text="HbbTV URL:" position="7,895" size="1950,45" font="Regular;35" foregroundColor="blue" halign="center"/>
 		<widget source="session.CurrentService" render="Label" position="7,940" size="1950,50" font="Regular;30" halign="center" foregroundColor="grey">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 		</widget>
 		</screen>
 	<screen name="ServiceInfoSimple" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<eLabel text="HbbTV URL:" position="735,150" size="1177,80" font="Regular;35" foregroundColor="secondFG" halign="center"/>
+		<eLabel text="HbbTV URL:" position="735,150" size="1177,80" font="Regular;35" foregroundColor="blue" halign="center"/>
 		<widget source="session.CurrentService" render="Label" position="735,240" size="1177,500" font="Regular;30" halign="center" foregroundColor="grey">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 		</widget>
@@ -1003,7 +998,7 @@
 		<widget name="AboutScrollLabel" position="735,120" size="1177,855" font="Regular;33" foregroundColor="grey" scrollbarWidth="6"
 				scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png"
 				scrollbarSliderPicture="infobar/scrlbr.png" split="1" dividechar=":" colposition="0"/>
-		<widget name="HintText" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="HintText" position="7,530" size="715,475" font="Regular;33" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="SystemMemoryInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1065,7 +1060,7 @@
 	</screen>
 	<screen name="JobView" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="job_name" render="Label" position="735,120" size="1177,110" font="Regular;42" foregroundColor="secondFG" halign="center"/>
+		<widget source="job_name" render="Label" position="735,120" size="1177,110" font="Regular;42" foregroundColor="blue" halign="center"/>
 		<widget source="job_task" render="Label" position="735,235" size="1177,85" font="Regular;34" halign="center"/>
 		<widget source="job_progress" render="Progress" position="880,330" size="720,55" borderWidth="2" borderColor="grey"/>
 		<widget source="job_progress" render="Label" position="880,325" size="720,54" font="Regular;45" halign="center" foregroundColor="yellow" zPosition="2" transparent="1">
@@ -1163,7 +1158,7 @@
 	</screen>
 	<screen name="InputBox" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="885,150" size="900,50" font="Regular;36" foregroundColor="secondFG" halign="center"/>
+		<widget name="text" position="885,150" size="900,50" font="Regular;36" foregroundColor="blue" halign="center"/>
 		<widget name="input" position="885,225" size="900,45" font="Regular;33" halign="center"/>
 	</screen>
 	<screen name="EcmExtraWindow" position="fill" flags="wfNoBorder">
@@ -1186,7 +1181,7 @@
 		<panel name="NextBPanel"/>
 		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="RecordTimerQuestion" position="center,center" size="350,295" zPosition="5" flags="wfNoBorder">
 		<widget name="text" position="0,0" size="0,0" font="Regular;21"/>
@@ -1272,31 +1267,31 @@
 		<widget name="text" position="870,410" size="952,50" noWrap="1" font="Regular;35" foregroundColor="grey" halign="center" valign="center"/>
 		<widget name="list" position="870,500" size="952,340" selectionDisabled="1"/>
 		<widget name="mode" position="870,900" size="952,45" font="Regular;33" foregroundColor="selectedFG" valign="center" halign="center"/>
-		<widget name="locale" position="7,880" size="715,45" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget name="language" position="7,930" size="715,45" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="locale" position="7,880" size="715,45" font="Regular;33" foregroundColor="blue" valign="center" halign="center"/>
+		<widget name="language" position="7,930" size="715,45" font="Regular;33" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="SubservicesQuickzap" position="607,492" size="705,96" backgroundColor="transpBlack" flags="wfNoBorder">
 		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="675,4" size="21,21" zPosition="2" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<eLabel position="0,0" size="705,30" font="Regular;19" backgroundColor="background" text="Subservices"/>
+		<eLabel position="0,0" size="705,30" font="Regular;19" backgroundColor="black" text="Subservices"/>
 		<widget name="CurrentSubserviceNumber" position="15,36" size="75,51" font="Regular;33" backgroundColor="transpBlack"/>
 		<widget source="session.CurrentService" render="Label" position="105,36" size="600,51" font="Regular;33" backgroundColor="transpBlack">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
-	<screen name="RadioInfoBar" position="0,750" size="1920,270" backgroundColor="background" flags="wfNoBorder">
+	<screen name="RadioInfoBar" position="0,750" size="1920,270" backgroundColor="black" flags="wfNoBorder">
 		<widget source="session.CurrentService" render="Label" position="330,105" size="1260,48" font="Regular;39" foregroundColor="grey" halign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="10,180" size="105,45" font="Regular;36" foregroundColor="foreground">
+		<widget source="session.Event_Now" render="Label" position="10,180" size="105,45" font="Regular;36" foregroundColor="white">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="127,180" size="1570,45" font="Regular;36" foregroundColor="foreground" noWrap="1">
+		<widget source="session.Event_Now" render="Label" position="127,180" size="1570,45" font="Regular;36" foregroundColor="white" noWrap="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="1720,180" size="180,45" font="Regular;34"  foregroundColor="foreground" halign="right">
+		<widget source="session.Event_Now" render="Label" position="1720,180" size="180,45" font="Regular;34"  foregroundColor="white" halign="right">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -1342,7 +1337,7 @@
 				serviceInfoFont="channelselectionevent;28" progressBarWidth="70" fieldMargins="10" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
 				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey" scrollbarWidth="6" scrollbarSliderBorderWidth="1"
 				scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="ServiceEvent" render="Label" position="780,715" size="1132,35" font="Regular;30" foregroundColor="secondFG" halign="right" noWrap="1">
+		<widget source="ServiceEvent" render="Label" position="780,715" size="1132,35" font="Regular;30" foregroundColor="blue" halign="right" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="10,120" size="765,623" font="Regular;28" foregroundColor="grey">
@@ -1350,8 +1345,8 @@
 		</widget>
 	</screen>
 	<screen name="RdsInfoDisplay" position="22,90" size="1920,300" backgroundColor="transparent" zPosition="-2" flags="wfNoBorder">
-		<widget name="RadioText" position="0,0" size="1875,135" font="LCD;60" backgroundColor="transparent" zPosition="1" transparent="1" foregroundColor="secondFG" valign="center" halign="center" borderColor="black" borderWidth="4"/>
-		<widget name="RtpText" position="0,150" size="1875,135" font="LCD;60" backgroundColor="transparent" zPosition="1" transparent="1" foregroundColor="secondFG" valign="center" halign="center" borderColor="black" borderWidth="4"/>
+		<widget name="RadioText" position="0,0" size="1875,135" font="LCD;60" backgroundColor="transparent" zPosition="1" transparent="1" foregroundColor="blue" valign="center" halign="center" borderColor="black" borderWidth="4"/>
+		<widget name="RtpText" position="0,150" size="1875,135" font="LCD;60" backgroundColor="transparent" zPosition="1" transparent="1" foregroundColor="blue" valign="center" halign="center" borderColor="black" borderWidth="4"/>
 		<widget name="RassLogo" position="0,0" size="75,31"/>
 	</screen>
 	<screen name="RassInteractive" position="fill" flags="wfNoBorder" title="RassInteractive">
@@ -1384,7 +1379,7 @@
 		<widget name="target" position="780,172" size="1132,45" font="Regular;34"/>
 		<widget name="filelist" position="735,230" size="1177,750" font="FileList;34" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="textbook" position="7,568" size="715,45" font="Regular;33" foregroundColor="secondFG" zPosition="2" halign="center"/>
+		<widget name="textbook" position="7,568" size="715,45" font="Regular;33" foregroundColor="blue" zPosition="2" halign="center"/>
 		<widget name="booklist" position="7,609" size="715,360" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" zPosition="2" foregroundColor="grey" selectionDisabled="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget name="red" position="0,0" size="0,0"/> #To reduce debug noise.
@@ -1443,7 +1438,7 @@
 		<widget name="lab2" position="52,825" size="225,39" font="Regular;30" valign="center" transparent="0"/>
 		<widget name="labstop" position="315,825" size="375,39" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="315,825" size="375,39" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
-		<widget name="key" position="780,123" size="1132,37" font="Regular;30" halign="center" transparent="1" valign="center" backgroundColor="background"/>
+		<widget name="key" position="780,123" size="1132,37" font="Regular;30" halign="center" transparent="1" valign="center" backgroundColor="black"/>
 		<widget source="list" render="Listbox" position="780,195" size="1132,585" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" transparent="1" enableWrapAround="1"		scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
 			<convert type="StringList"/>
 		</widget>
@@ -1501,7 +1496,7 @@
 		<widget source="status" render="Label" position="755,170" size="1157,240" font="Regular;33" halign="center" foregroundColor="grey"/>
 		<widget name="slider" position="891,441" size="978,25" zPosition="2"/>
 		<widget name="activityslider" position="73,913" size="1791,9" pixmap="window/slider.png"/>
-		<widget name="feedStatusMSG" position="7,568" size="715,45" font="Regular;33" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget name="feedStatusMSG" position="7,568" size="715,45" font="Regular;33" zPosition="2" foregroundColor="blue" halign="center"/>
 		<widget name="tl_off" pixmap="icons/aoff.png" position="350,632" size="36,97" alphatest="on"/>
 		<widget name="tl_red" pixmap="icons/ared.png" position="350,632" size="36,97" alphatest="on"/>
 		<widget name="tl_yellow" pixmap="icons/ayellow.png" position="350,632" size="36,97" alphatest="on"/>
@@ -1515,8 +1510,8 @@
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,123" size="1132,495" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="text" position="735,800" size="1177,200" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="bottom"/>
-		<widget name="feedStatusMSG" position="7,568" size="715,45" font="Regular;33" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget name="text" position="735,800" size="1177,200" font="Regular;33" zPosition="2" foregroundColor="blue" valign="bottom"/>
+		<widget name="feedStatusMSG" position="7,568" size="715,45" font="Regular;33" zPosition="2" foregroundColor="blue" halign="center"/>
 		<widget name="tl_off" pixmap="icons/aoff.png" position="350,632" size="36,97" alphatest="on"/>
 		<widget name="tl_red" pixmap="icons/ared.png" position="350,632" size="36,97" alphatest="on"/>
 		<widget name="tl_yellow" pixmap="icons/ayellow.png" position="350,632" size="36,97" alphatest="on"/>
@@ -1720,7 +1715,7 @@
 	</screen>
 	<screen name="WlanStatus" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="IF" render="Label" position="780,135" size="1000,50" zPosition="1" halign="center" font="Regular;36" foregroundColor="secondFG"/>
+		<widget source="IF" render="Label" position="780,135" size="1000,50" zPosition="1" halign="center" font="Regular;36" foregroundColor="blue"/>
 		<widget source="LabelBSSID" render="Label" position="885,200" size="375,52" valign="center" font="Regular;30" foregroundColor="grey"/>
 		<widget source="BSSID" render="Label" position="1275,200" size="555,52" valign="center" font="Regular;30" foregroundColor="grey"/>
 		<widget source="LabelESSID" render="Label" position="885,260" size="375,52" valign="center" font="Regular;30" foregroundColor="grey"/>
@@ -1738,7 +1733,7 @@
 	</screen>
 	<screen name="WlanScan" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="info" render="Label" position="780,120" size="1132,50"  font="Regular;36" halign="center" foregroundColor="secondFG"/>
+		<widget source="info" render="Label" position="780,120" size="1132,50"  font="Regular;36" halign="center" foregroundColor="blue"/>
 		<widget source="list" render="Listbox" position="780,175" size="1132,735" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
 			<convert type="TemplatedMultiContent">
@@ -1894,18 +1889,18 @@
 		<widget name="subtitle" position="885,212" size="900,46" font="Regular;34" foregroundColor="grey"/>
 		<widget name="entries" position="885,260" size="900,540" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="bottom" position="7,540" size="715,396" zPosition="2" font="Regular;36" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="bottom" position="7,540" size="715,396" zPosition="2" font="Regular;36" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="CiSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="text" position="735,118" size="1177,45" font="Regular;37" halign="center" foregroundColor="secondFG"/>
+		<widget name="text" position="735,118" size="1177,45" font="Regular;37" halign="center" foregroundColor="blue"/>
 		<widget name="entries" position="885,165" size="900,825" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 	</screen>
 	<screen name="CIselectMainMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 
-		<widget name="CiList" position="885,180" size="900,675" font="Regular;33" itemHeight="45" backgroundColor="background" scrollbarMode="showOnDemand"
+		<widget name="CiList" position="885,180" size="900,675" font="Regular;33" itemHeight="45" backgroundColor="black" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 	</screen>
 	<screen name="CIconfigMenu" position="fill" flags="wfNoBorder">
@@ -1923,17 +1918,17 @@
 	</screen>
 	<screen name="easyCIconfigMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="CAidList_desc" render="Label" position="885,180" size="900,45" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1" font="Regular;36"/>
-		<widget source="CAidList" render="Label" position="885,255" size="900,112" backgroundColor="background" transparent="1" font="Regular;33"/>
-		<widget source="ServiceList_desc" render="Label" position="885,397" size="900,45" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1" font="Regular;36"/>
+		<widget source="CAidList_desc" render="Label" position="885,180" size="900,45" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" font="Regular;36"/>
+		<widget source="CAidList" render="Label" position="885,255" size="900,112" backgroundColor="black" transparent="1" font="Regular;33"/>
+		<widget source="ServiceList_desc" render="Label" position="885,397" size="900,45" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" font="Regular;36"/>
 		<eLabel position="885,456" size="900,3" backgroundColor="black"/>
 		<eLabel position="885,459" size="900,3" backgroundColor="grey"/>
-		<widget name="ServiceList" position="885,472" size="900,450" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand"
+		<widget name="ServiceList" position="885,472" size="900,450" backgroundColor="black" transparent="1" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="ServiceList_info" render="Label" position="885,472" size="900,450" backgroundColor="background" zPosition="2" transparent="1" font="Regular;33"/>
-		<widget name="ServiceList" position="885,255" size="900,600" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand"
+		<widget source="ServiceList_info" render="Label" position="885,472" size="900,450" backgroundColor="black" zPosition="2" transparent="1" font="Regular;33"/>
+		<widget name="ServiceList" position="885,255" size="900,600" backgroundColor="black" transparent="1" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="ServiceList_info" render="Label" position="885,255" size="900,600" backgroundColor="background" zPosition="2" transparent="1" font="Regular;33"/>
+		<widget source="ServiceList_info" render="Label" position="885,255" size="900,600" backgroundColor="black" zPosition="2" transparent="1" font="Regular;33"/>
 	</screen>
 	<screen name="CAidSelect" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1970,7 +1965,7 @@
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="hint" position="7,568" size="715,396" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="hint" position="7,568" size="715,396" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="ScanSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2081,7 +2076,7 @@
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
 <!-- ##Config List## -->
-		<widget name="config" position="802,455" size="1110,545" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" foregroundColor="secondFG" enableWrapAround="1"
+		<widget name="config" position="802,455" size="1110,545" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" foregroundColor="blue" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 <!-- ##TSID ONID ORB ## -->
 		<widget source="tsid" render="FixedLabel" text="TSID:" position="340,385" size="180,50" font="Regular;40" halign="right">
@@ -2134,7 +2129,7 @@
 		<eLabel text="Polarisation:" position="1440,825" size="225,36" font="Regular;31" foregroundColor="grey"/>
 		<widget name="polarisation" position="1665,825" size="450,36" font="Regular;31" foregroundColor="grey"/>
 		<widget name="status_bar" position="25,900" size="1900,70" font="Regular;55" halign="center" foregroundColor="red" zPosition="4"/>
-		<widget name="rotorstatus" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="rotorstatus" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="TunerScreen" position="fill" flags="wfNoBorder" title="">
 		<panel name="BasicTemplate"/>
@@ -2198,7 +2193,7 @@
 	</screen>
 	<screen name="AutoTimerPreview" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="timerlist" render="Listbox" position="780,127" size="1132,864" backgroundColor="background" scrollbarMode="showOnDemand"
+		<widget source="timerlist" render="Listbox" position="780,127" size="1132,864" backgroundColor="black" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -2221,13 +2216,13 @@
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="help" render="Label" position="7,577" size="715,405" font="Regular;30" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="help" render="Label" position="7,577" size="715,405" font="Regular;30" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="AutoTimerEditor" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="help" render="Label" position="7,577" size="715,405" font="Regular;30" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget source="help" render="Label" position="7,577" size="715,405" font="Regular;30" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="AutoTimerFilterEditor" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2356,9 +2351,9 @@
 		<widget name="powerstatus" position="750,900" size="375,33" halign="right" font="Regular;30" transparent="1" foregroundColor="grey"/>
 		<widget name="daemon0" pixmap="buttons/button_green_off.png" position="1140,910" size="22,24" zPosition="10" alphatest="on" transparent="1"/>
 		<widget name="daemon1" pixmap="buttons/button_green.png" position="1140,910" size="23,24" zPosition="10" alphatest="on" transparent="1"/>
-		<widget name="hddTemp" position="7,568" size="715,45" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget name="sysTemp" position="7,637" size="715,45" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-		<widget name="cpuTemp" position="7,690" size="715,45" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="hddTemp" position="7,568" size="715,45" zPosition="2" font="Regular;33" foregroundColor="blue" valign="center" halign="center"/>
+		<widget name="sysTemp" position="7,637" size="715,45" zPosition="2" font="Regular;33" foregroundColor="blue" valign="center" halign="center"/>
+		<widget name="cpuTemp" position="7,690" size="715,45" zPosition="2" font="Regular;33" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="VIXMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2373,7 +2368,7 @@
 				}
 		</convert>
 		</widget>
-			<widget source="menu" render="Listbox" position="15,600" size="715,80" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="secondFG">
+			<widget source="menu" render="Listbox" position="15,600" size="715,80" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="blue">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (0,0),size = (700,80),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP,text = 2),# index 0 is the MenuText,
@@ -2408,23 +2403,23 @@
 	</screen>
 	<screen name="VIXImageManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="lab1" position="735,123" size="1177,90" font="Regular;33" foregroundColor="secondFG" zPosition="2" halign="center"/>
+		<widget name="lab1" position="735,123" size="1177,90" font="Regular;33" foregroundColor="blue" zPosition="2" halign="center"/>
 		<widget name="list" position="735,225" size="1177,720" font="Regular;31" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="backupstatus" position="22,600" size="700,112" font="Regular;33" zPosition="5" foregroundColor="secondFG"/>
+		<widget name="backupstatus" position="22,600" size="700,112" font="Regular;33" zPosition="5" foregroundColor="blue"/>
 	</screen>
 	<screen name="ImageManagerDownload" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="lab1" position="7,530" size="715,475" font="Regular;33" halign="center" foregroundColor="secondFG"/>
+		<widget name="lab1" position="7,530" size="715,475" font="Regular;33" halign="center" foregroundColor="blue"/>
 	</screen>
 	<screen name="VIXBackupManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="lab1" position="735,123" size="1177,90" font="Regular;33" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget name="lab1" position="735,123" size="1177,90" font="Regular;33" zPosition="2" foregroundColor="blue" halign="center"/>
 		<widget name="list" position="735,225" size="1177,720" font="Regular;31" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="backupstatus" position="22,652" size="700,105" font="Regular;33" zPosition="5" foregroundColor="secondFG"/>
+		<widget name="backupstatus" position="22,652" size="700,105" font="Regular;33" zPosition="5" foregroundColor="blue"/>
 	</screen>
 	<screen name="VIXBackupManagerMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2447,7 +2442,7 @@
 	</screen>
 	<screen name="VIXIPKInstaller" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="lab1" position="780,123" size="1132,45" font="Regular;34" foregroundColor="secondFG" zPosition="2" halign="center"/>
+		<widget name="lab1" position="780,123" size="1132,45" font="Regular;34" foregroundColor="blue" zPosition="2" halign="center"/>
 		<widget name="list" position="735,185" size="1177,810" font="Regular;34" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<applet type="onLayoutFinish">
@@ -2469,11 +2464,11 @@
 				}
 			</convert>
 		</widget>
-		<widget name="lab1" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="lab1" position="7,530" size="715,475" zPosition="2" font="Regular;33" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="VIXDevicePanelConf" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="Linconn" position="735,940" size="1177,60" font="Regular;33" foregroundColor="secondFG" halign="center" valign="center"/>
+		<widget name="Linconn" position="735,940" size="1177,60" font="Regular;33" foregroundColor="blue" halign="center" valign="center"/>
 		<widget name="config" position="735,120" size="1177,810" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 	</screen>
@@ -2543,7 +2538,7 @@
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="755,120" size="1157,815" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="text" position="7,550" size="715,90" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
+		<widget name="text" position="7,550" size="715,90" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
 		<widget name="blue" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="AutoVideoModeLabel" position="0,0" size="495,82" backgroundColor="transparent" flags="wfNoBorder">
@@ -2560,10 +2555,10 @@
 		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget source="status" render="Label" position="780,903" size="1110,90" font="Regular;33" halign="center" valign="center"/>
-		<widget name="oldversion_label" position="7,600" size="290,45" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="oldversion" position="300,600" size="290,45" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="newversion_label" position="7,650" size="290,45" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="newversion" position="300,650" size="290,240" font="Regular;33" foregroundColor="secondFG"/>
+		<widget name="oldversion_label" position="7,600" size="290,45" font="Regular;33" foregroundColor="blue"/>
+		<widget name="oldversion" position="300,600" size="290,45" font="Regular;33" foregroundColor="blue"/>
+		<widget name="newversion_label" position="7,650" size="290,45" font="Regular;33" foregroundColor="blue"/>
+		<widget name="newversion" position="300,650" size="290,240" font="Regular;33" foregroundColor="blue"/>
 	</screen>
 	<screen name="Filebrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2576,13 +2571,13 @@
 		<widget name="name" position="735,125" size="1177,45" font="Regular;33" foregroundColor="grey"/>
 		<widget name="status" position="735,540" size="715,45" font="Regular;33" foregroundColor="selectedFG" halign="center"/>
 		<widget name="slider" position="735,600" size="715,30" borderWidth="1" borderColor="grey" foregroundColor="grey"/>
-		<widget source="info" render="Label" position="15,600" size="715,100" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget source="info" render="Label" position="15,600" size="715,100" font="Regular;33" halign="center" valign="center" foregroundColor="blue"/>
 	</screen>
 	<screen name="FUFilebrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="file_list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="status" render="Label" position="15,555" size="715,300" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget source="status" render="Label" position="15,555" size="715,300" font="Regular;33" halign="center" valign="center" foregroundColor="blue"/>
 	</screen>
 	<screen name="ButtonSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2590,7 +2585,7 @@
 		<eLabel text="Exit" position="115,1022" size="330,39" font="Regular;33" foregroundColor="grey"/>
 		<widget name="list" position="735,120" size="577,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="choosen" position="1320,120" size="577,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="secondFG"
+		<widget name="choosen" position="1320,120" size="577,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="blue"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<ePixmap pixmap="buttons/key-exit.png" position="57,1027" size="53,38" zPosition="0" alphatest="blend"/>
 		<eLabel text="Exit" position="115,1022" size="330,39" font="Regular;33" foregroundColor="grey"/>
@@ -2601,7 +2596,7 @@
 		<panel name="NextBPanel"/>
 		<widget name="list" position="735,120" size="577,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="choosen" position="1320,120" size="577,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="secondFG"
+		<widget name="choosen" position="1320,120" size="577,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="blue"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 	</screen>
 	<screen name="LED_GigaSetup" position="fill" flags="wfNoBorder" title="GigaBlue LED Setup">
@@ -2710,7 +2705,7 @@
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="status" render="Label" position="22,600" size="715,300" font="Regular;24" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget name="status" render="Label" position="22,600" size="715,300" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
 	</screen>
 	<screen name="oscInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2757,7 +2752,7 @@
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="info" position="22,600" size="715,360" font="Regular;33" foregroundColor="secondFG"/>
+		<widget name="info" position="22,600" size="715,360" font="Regular;33" foregroundColor="blue"/>
 		<eLabel text="" position="515,1020" size="330,39" font="Regular;33" backgroundColor="secondBG"/>
 	</screen>
 	<screen name="CCcamInfoServerMenu" position="fill" flags="wfNoBorder">
@@ -2771,11 +2766,11 @@
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="uphops" position="30,600" size="675,37" font="RegularSmall;30" foregroundColor="secondFG"/>
-		<widget name="providers" position="30,660" size="675,37" font="RegularSmall;30" foregroundColor="secondFG"/>
-		<widget name="title" position="30,720" size="675,37" font="RegularSmall;24" foregroundColor="secondFG"/>
-		<widget name="reshare" position="30,780" size="675,37" font="RegularSmall;30" foregroundColor="secondFG"/>
-		<widget name="cards" position="30,840" size="675,37" font="RegularSmall;30" foregroundColor="secondFG"/>
+		<widget name="uphops" position="30,600" size="675,37" font="RegularSmall;30" foregroundColor="blue"/>
+		<widget name="providers" position="30,660" size="675,37" font="RegularSmall;30" foregroundColor="blue"/>
+		<widget name="title" position="30,720" size="675,37" font="RegularSmall;24" foregroundColor="blue"/>
+		<widget name="reshare" position="30,780" size="675,37" font="RegularSmall;30" foregroundColor="blue"/>
+		<widget name="cards" position="30,840" size="675,37" font="RegularSmall;30" foregroundColor="blue"/>
 	</screen>
 	<screen name="CCcamInfoRemoteBoxMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>

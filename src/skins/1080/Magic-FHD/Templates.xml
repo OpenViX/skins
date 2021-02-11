@@ -8,14 +8,14 @@
 		<widget name="footnote" conditional="footnote" position="755,965" size="1177,45" font="Regular;33" foregroundColor="grey"/>
 		<widget source="introduction" render="Label" conditional="introduction" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey"/>
 		<widget name="introduction" conditional="introduction" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey"/>
-		<widget name="description" objectTypes="description,Button,Label" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
-		<widget source="description" render="Label" objectTypes="description,StaticText" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="secondFG"/>
+		<widget name="description" objectTypes="description,Button,Label" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="blue"/>
+		<widget source="description" render="Label" objectTypes="description,StaticText" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="blue"/>
 	</screen>
 
 	<screen name="BasicTemplate1">
 		<panel name="BasicTemplate2"/>
 		<widget source="session.VideoPicture" render="Pig" position="0,113" size="723,409" backgroundColor="transparent"/>
-		<widget source="session.CurrentService" render="Label" position="7,116" size="715,33" font="Regular;28" borderColor="black" borderWidth="2" foregroundColor="secondFG" backgroundColor="background" transparent="1" noWrap="1" halign="center">
+		<widget source="session.CurrentService" render="Label" position="7,116" size="715,33" font="Regular;28" borderColor="black" borderWidth="2" foregroundColor="blue" backgroundColor="black" transparent="1" noWrap="1" halign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<eLabel backgroundColor="black" position="0,113" size="723,2" zPosition="5"/> # Permanent hiding of VBI-lines
@@ -29,9 +29,9 @@
 		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" halign="right" foregroundColor="grey">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<widget source="ScreenPath" render="Label" conditional="ScreenPath" position="22,1" size="1500,29" font="RegularSmall;24" foregroundColor="secondFG" zPosition="2"/>
+		<widget source="ScreenPath" render="Label" conditional="ScreenPath" position="22,1" size="1500,29" font="RegularSmall;24" foregroundColor="blue" zPosition="2"/>
 		<widget source="Title" render="Label" position="22,3" size="1500,90" font="RegularSmall;37" foregroundColor="grey" valign="bottom"/>
-		<eLabel backgroundColor="background" position="fill" zPosition="-1"/>
+		<eLabel backgroundColor="black" position="fill" zPosition="-1"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
 		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
 	</screen>
@@ -166,23 +166,23 @@
 		<widget source="session.CurrentService" render="Picon" position="67,832" size="150,90" alphatest="blend" backgroundColor="secondBG" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="270,862" size="1597,54" font="Regular;36" backgroundColor="secondBG" transparent="1" foregroundColor="foreground" valign="center">
+		<widget source="session.CurrentService" render="Label" position="270,862" size="1597,54" font="Regular;36" backgroundColor="secondBG" transparent="1" foregroundColor="white" valign="center">
 		<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,33" font="Regular;30" backgroundColor="secondBG" noWrap="1" transparent="1" foregroundColor="secondFG" valign="center" halign="right">
+		<widget source="global.CurrentTime" render="Label" position="30,930" size="180,33" font="Regular;30" backgroundColor="secondBG" noWrap="1" transparent="1" foregroundColor="blue" valign="center" halign="right">
 			<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="30,970" size="180,45" font="Regular;40" backgroundColor="secondBG" noWrap="1" transparent="1" foregroundColor="secondFG" valign="center" halign="right">
+		<widget source="global.CurrentTime" render="Label" position="30,970" size="180,45" font="Regular;40" backgroundColor="secondBG" noWrap="1" transparent="1" foregroundColor="blue" valign="center" halign="right">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="270,934" size="105,45" font="Regular;36" backgroundColor="secondBG" transparent="1" foregroundColor="foreground">
+		<widget source="session.Event_Now" render="Label" position="270,934" size="105,45" font="Regular;36" backgroundColor="secondBG" transparent="1" foregroundColor="white">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="382,934" size="1140,45" font="Regular;36" backgroundColor="secondBG" transparent="1" foregroundColor="foreground" noWrap="1">
+		<widget source="session.Event_Now" render="Label" position="382,934" size="1140,45" font="Regular;36" backgroundColor="secondBG" transparent="1" foregroundColor="white" noWrap="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="1485,934" size="240,45" font="Regular;34" backgroundColor="secondBG" transparent="1" foregroundColor="foreground" halign="right">
+		<widget source="session.Event_Now" render="Label" position="1485,934" size="240,45" font="Regular;34" backgroundColor="secondBG" transparent="1" foregroundColor="white" halign="right">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
