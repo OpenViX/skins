@@ -172,6 +172,140 @@
 		<panel name="MenuButtonPanel"/>
 	</screen>
 
+<!-- InfoBar templates -->
+	
+	<!-- InfoBar Red button png -->
+	<screen name="InfoBarButtonGraphicRed"><!-- position="165,e-34" -->
+		<widget objectTypes="key_red,StaticText,Boolean" source="key_red" render="Pixmap" pixmap="ViX-Common/buttons/red.png" 
+			position="0,0" size="25,25" backgroundColor="infobar_collab_back" alphatest="blend" scale="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_red,Button,Label" pixmap="ViX-Common/buttons/red.png"
+			position="0,0" size="25,25" backgroundColor="infobar_collab_back" alphatest="blend" scale="1"/>
+	</screen>
+	
+	<!-- InfoBar Green button png -->
+	<screen name="InfoBarButtonGraphicGreen"><!-- position="445,e-34" -->
+		<widget objectTypes="key_green,StaticText,Boolean" source="key_green" render="Pixmap" pixmap="ViX-Common/buttons/green.png" 
+			position="0,0" size="25,25" backgroundColor="infobar_collab_back" alphatest="blend" scale="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_green,Button,Label" pixmap="ViX-Common/buttons/green.png"
+			position="0,0" size="25,25" backgroundColor="infobar_collab_back" alphatest="blend" scale="1"/>
+	</screen>
+
+	<!--InfoBar Yellow button png -->
+	<screen name="InfoBarButtonGraphicYellow"><!-- position="725,e-34" -->
+		<widget objectTypes="key_yellow,StaticText,Boolean" source="key_yellow" render="Pixmap" pixmap="ViX-Common/buttons/yellow.png" 
+			position="0,0" size="25,25" backgroundColor="infobar_collab_back" alphatest="blend" scale="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_yellow,Button,Label" pixmap="ViX-Common/buttons/yellow.png" 
+			position="0,0" size="25,25" backgroundColor="infobar_collab_back" alphatest="blend" scale="1"/>
+	</screen>
+
+	<!-- InfoBar Blue button png -->
+	<screen name="InfoBarButtonGraphicBlue"><!-- position="1005,e-34" -->
+		<widget objectTypes="key_blue,StaticText,Boolean" source="key_blue" render="Pixmap" pixmap="ViX-Common/buttons/blue.png"
+			position="0,0" size="25,25" backgroundColor="infobar_collab_back" alphatest="blend" scale="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_blue,Button,Label" pixmap="ViX-Common/buttons/blue.png" 
+			position="0,0" size="25,25" backgroundColor="infobar_collab_back" alphatest="blend" scale="1"/>
+	</screen>
+
+	<!-- InfoBar Red button text -->
+	<screen name="InfoBarButtonTextRed"><!-- position="200,e-34" -->
+		<widget objectTypes="key_red,Label,Button" name="key_red" 
+			position="0,0" size="240,25" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" zPosition="1" transparent="1" 
+			font="Regular;20" halign="left" valign="center"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" 
+			position="0,0" size="240,25" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" zPosition="1" transparent="1" 
+			font="Regular;20" halign="left" valign="center"/>
+	</screen>
+
+	<!-- InfoBar Green button text -->
+	<screen name="InfoBarButtonTextGreen"><!-- position="480,e-34" -->
+		<widget objectTypes="key_green,Label,Button" name="key_green" 
+			position="0,0" size="240,25" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" zPosition="1" transparent="1" 
+			font="Regular;20" halign="left" valign="center"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" 
+			position="0,0" size="240,25" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" zPosition="1" transparent="1" 
+			font="Regular;20" halign="left" valign="center"/>
+	</screen>
+
+	<!-- InfoBar Yellow button text -->
+	<screen name="InfoBarButtonTextYellow"><!-- position="760,e-34" -->
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" 
+			position="0,0" size="240,25" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" zPosition="1" transparent="1" 
+			font="Regular;20" halign="left" valign="center"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label"
+			position="0,0" size="240,25" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" zPosition="1" transparent="1" 
+			font="Regular;20" halign="left" valign="center"/>
+	</screen>
+
+	<!-- InfoBar Blue button text -->
+	<screen name="InfoBarButtonTextBlue"><!-- position="1040,e-34" -->
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" 
+			position="0,0" size="240,25" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" zPosition="1" transparent="1" 
+			font="Regular;20" halign="left" valign="center"/>
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label"
+			position="0,0" size="240,25" foregroundColor="menu-buttons-frgrnd" backgroundColor="infobar_collab_back" zPosition="1" transparent="1" 
+			font="Regular;20" halign="left" valign="center"/>
+	</screen>
+
+	<!-- Individual Infobar Button Templates -->
+	<screen name="InfoBarButtonRedTemplate">
+		<panel position="0,0" size="25,25">
+			<panel name="InfoBarButtonGraphicRed"/>
+		</panel>
+		<panel position="35,0" size="240,25">
+			<panel name="InfoBarButtonTextRed"/>
+		</panel>
+	</screen>
+
+	<screen name="InfoBarButtonGreenTemplate">
+		<panel position="0,0" size="25,25">
+			<panel name="InfoBarButtonGraphicGreen"/>
+		</panel>	
+		<panel position="35,0" size="240,25">
+			<panel name="InfoBarButtonTextGreen"/>
+		</panel>
+	</screen>
+
+	<screen name="InfoBarButtonYellowTemplate">
+		<panel position="0,0" size="25,25">
+			<panel name="InfoBarButtonGraphicYellow"/>
+		</panel>
+		<panel position="35,0" size="240,25">
+			<panel name="InfoBarButtonTextYellow"/>
+		</panel>
+	</screen>
+
+	<screen name="InfoBarButtonBlueTemplate">
+		<panel position="0,0" size="25,25">
+			<panel name="InfoBarButtonGraphicBlue"/>
+		</panel>
+		<panel position="35,0" size="240,25">
+			<panel name="InfoBarButtonTextBlue"/>
+		</panel>
+	</screen>
+
+	<screen name="InfoBarButtonTemplate">
+		<panel position="0,0" size="165,25">
+			<panel name="InfoBarButtonRedTemplate"/>
+		</panel>
+		<panel position="190,0" size="165,25">
+			<panel name="InfoBarButtonGreenTemplate"/>
+		</panel>
+		<panel position="380,0" size="165,25">
+			<panel name="InfoBarButtonYellowTemplate"/>
+		</panel>
+		<panel position="570,0" size="165,25">
+			<panel name="InfoBarButtonBlueTemplate"/>
+		</panel>
+	</screen>
+
 	<screen name="DownloadBar">
 		<widget name="action" position="5,3" size="435,25" font="Regular;22" backgroundColor="transpBlack" borderWidth="3" borderColor="black"/>
 		<widget name="status" position="465,5" size="435,25" font="Regular;22" halign="center" backgroundColor="transpBlack" borderWidth="2" borderColor="black"/>
