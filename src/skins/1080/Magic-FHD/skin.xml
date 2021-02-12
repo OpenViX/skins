@@ -69,33 +69,33 @@
 <!--	ImsSelectionListLock icon position and size: x,y, width, height-->
 		<parameter name="SHOUTcastListItem" value="30,27,45,110,37,37,70,40"/>
 <!--	<parameter name="EPGSingleColumnScales" value="5.7,6.0,1.5"/>-->
-<!--    The values are:
-        - the scale width of the date column (5.7)
-        - the scale width of the start/end column (6.0)
-        - the scale width modifier of the start/end column for 12 hour clock times (1.5)-->
+<!--	The values are:
+		- the scale width of the date column (5.7)
+		- the scale width of the start/end column (6.0)
+		- the scale width modifier of the start/end column for 12 hour clock times (1.5)-->
 		<parameter name="EPGSingleColumnSpecs" value="0,135,5,165,15"/>
-<!--    The values are:
-        - the pixel offset of the start of the date column (0)
-        - the pixel width of the date column (125)
-        - the pixel width of the separation between the date and start/end columns (5)
-        - the pixel width of the start/end column (135)
-        - the pixel width of the separation between the start/end and event name columns (20)-->
+<!--	The values are:
+		- the pixel offset of the start of the date column (0)
+		- the pixel width of the date column (125)
+		- the pixel width of the separation between the date and start/end columns (5)
+		- the pixel width of the start/end column (135)
+		- the pixel width of the separation between the start/end and event name columns (20)-->
 <!--	<parameter name="EPGMultiColumnScales" value="6.5,6.0,4.5,1.5"/>-->
-<!--    The values are:
-        - the scale width of the service column (6.5)
-        - the scale width of the progress/start/end column (6.0)
-        - the scale width of the duration column (4.5)
-        - the scale width modifier of the progress/start/end column for 12 hour clock times (1.5)-->
+<!--	The values are:
+		- the scale width of the service column (6.5)
+		- the scale width of the progress/start/end column (6.0)
+		- the scale width of the duration column (4.5)
+		- the scale width modifier of the progress/start/end column for 12 hour clock times (1.5)-->
 <!--	<parameter name="EPGMultiColumnSpecs" value="0,153,10,149,18,10,120,10"/>-->
-<!--    The values are:
-        - the pixel offset of the start of the service column (0)
-        - the pixel width of the service column (153)
-        - the pixel width of the separation between the service and progress/start/end columns (10)
-        - the pixel width of the progress/start/end column (149)
-        - the pixel height of the progress bar (18)
-        - the pixel width of the separation between the progress/start/end and duration columns (10)
-        - the pixel width of the duration column (120)
-        - the pixel width of the separation between the duration and  event name columns (10)-->
+<!--	The values are:
+		- the pixel offset of the start of the service column (0)
+		- the pixel width of the service column (153)
+		- the pixel width of the separation between the service and progress/start/end columns (10)
+		- the pixel width of the progress/start/end column (149)
+		- the pixel height of the progress bar (18)
+		- the pixel width of the separation between the progress/start/end and duration columns (10)
+		- the pixel width of the duration column (120)
+	- the pixel width of the separation between the duration and  event name columns (10)-->
 	<!--	## Parameters below this line are default in ViX## -->
 		<parameter name="EpgListIcon" value="2,12,25,25,2"/>
 <!--	The values are:		posx, posy, sizex, sizey, gap-->
@@ -619,12 +619,12 @@
 		<widget source="Service" render="Label" position="7,585" size="715,100" font="Regular;36" foregroundColor="selectedFG" halign="center">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-       <widget source="Event" render="Label" position="7,690" size="715,45" font="Regular;33" foregroundColor="grey" halign="center"> 
-           <convert type="EventTime">Times</convert>
-           <convert type="ClockToText">LongFullDate,Default</convert>
-       </widget>
-       <widget name="duration" position="22,740" size="690,45" font="Regular;33" halign="center" foregroundColor="grey"/>
-       <widget source="Event" render="Label" position="22,790" size="690,45" font="Regular;33" foregroundColor="blue" halign="center">
+		<widget source="Event" render="Label" position="7,690" size="715,45" font="Regular;33" foregroundColor="grey" halign="center"> 
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText">LongFullDate,Default</convert>
+		</widget>
+		<widget name="duration" position="22,740" size="690,45" font="Regular;33" halign="center" foregroundColor="grey"/>
+		<widget source="Event" render="Label" position="22,790" size="690,45" font="Regular;33" foregroundColor="blue" halign="center">
  			<convert type="EventName">Genre</convert>
 		</widget>
 		<widget source="Event" render="Label" position="22,840" size="690,45" font="Regular;33" foregroundColor="blue" halign="center">
