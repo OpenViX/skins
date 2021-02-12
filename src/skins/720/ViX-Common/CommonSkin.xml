@@ -1032,10 +1032,27 @@ self.autoResize()
 		<ePixmap pixmap="ViX-Common/buttons/red.png" position="110,205" size="140,40" alphatest="on"/>
 		<widget source="key_red" render="Label" position="110,205" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
 	</screen>
-	<screen name="NumberZap" position="center,center" size="434,109" backgroundColor="transparent" flags="wfNoBorder">
-		<widget name="number" position="0,0" size="434,50" backgroundColor="transparent" transparent="1" font="Regular;48" borderColor="black" borderWidth="2" valign="center" halign="center"/>
-		<widget name="servicename" position="0,40" size="434,60" backgroundColor="transparent" transparent="1" font="Regular;30" borderColor="black" borderWidth="2" valign="center" halign="center"/>
+
+	<!-- Number zap -->
+	<screen name="NumberZapTemplate" position="center,center" size="434,110">
+		<widget name="number" position="0,0" size="434,50" backgroundColor="transparent" transparent="1" font="Regular;48" 
+			borderColor="black" borderWidth="2" valign="center" halign="center"/>
+		<widget name="servicename" position="0,40" size="434,60" backgroundColor="transparent" transparent="1" font="Regular;30" 
+			borderColor="black" borderWidth="2" valign="center" halign="center"/>
 	</screen>
+
+	<screen name="NumberZap" position="center,center" size="434,110" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="NumberZapTemplate"/>
+	</screen>
+
+	<screen name="NumberZapPicon" position="center,center" size="434,242" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="NumberZapTemplate" position="top"/>
+		<widget source="Service" render="Picon" position="center,e-132" size="220,132" alphatest="blend" 
+			backgroundColor="transparent" transparent="1" scale="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>		
+	</screen>
+
 	<screen name="HistoryZapSelector" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
 		<widget source="menu" render="Listbox" position="10,107" size="503,530" selectionPixmap="ViX-Common/buttons/FocusBar_H106x503.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand">
