@@ -1197,10 +1197,20 @@
 	</screen>
 	<screen name="Scart" position="fill" backgroundColor="transparent"/>
 	<screen name="Standby" position="fill" flags="wfNoBorder" backgroundColor="black"/>
-	<screen name="NumberZap" position="center,center" size="900,60" backgroundColor="transparent" flags="wfNoBorder">
-		<widget name="number" position="0,-300" size="195,60" font="Regular;54" borderColor="black" borderWidth="3" valign="center" halign="right" backgroundColor="transparent" transparent="1" foregroundColor="grey"/>
-		<widget name="servicename" position="202,-300" size="675,60" font="Regular;51" borderColor="black" borderWidth="3" backgroundColor="transparent" transparent="1" valign="center" foregroundColor="grey"/>
+	<screen name="NumberZapPanel" position="center,center" size="900,60">
+		<widget name="number" position="1,1" size="195,60" font="Regular;54" borderColor="black" borderWidth="3" halign="right" backgroundColor="transparent" transparent="1" foregroundColor="grey"/>
+		<widget name="servicename" position="205,1" size="675,60" font="Regular;51" borderColor="black" borderWidth="3" backgroundColor="transparent" transparent="1" foregroundColor="grey"/>
 		<widget name="channel" position="0,0" size="0,0"/> #To reduce debug noise.
+	</screen>
+	<screen name="NumberZap" position="center,center" size="900,60" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="NumberZapPanel"/>
+	</screen>
+	<screen name="NumberZapPicon" position="center,center" size="900,200" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="NumberZapPanel"/>
+		<widget source="Service" render="Picon" position="220,65" size="220,132" alphatest="blend" 
+			backgroundColor="transparent" transparent="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
 	</screen>
 	<screen name="HistoryZapSelector" position="center,center" size="1700,842" backgroundColor="transpBlack" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="0,1" size="1700,840" scrollbarMode="showOnDemand" backgroundColor="transpBlack" transparent="1"
