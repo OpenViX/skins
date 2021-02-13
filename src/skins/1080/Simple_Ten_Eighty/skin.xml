@@ -753,10 +753,18 @@
 
 	<!-- NumberZap -->
 
-	<screen name="NumberZap" title="Channel" position="150,67" size="651,163" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="NumberZap" position="150,67" size="651,163" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="channel" position="0,0" size="180,90" backgroundColor="transparent" transparent="1" font="Regular;39" borderColor="black" borderWidth="2" valign="center" halign="left"/>
 		<widget name="number" position="180,0" size="150,90" backgroundColor="transparent" transparent="1" font="Regular;39" borderColor="black" borderWidth="2" valign="center" halign="left"/>
 		<widget name="servicename" position="0,67" size="651,90" backgroundColor="transparent" transparent="1" font="Regular;33" borderColor="black" borderWidth="2" valign="center" halign="left"/>
+	</screen>
+	
+	<screen name="NumberZapPicon" position="150,67" size="651,363" backgroundColor="transparent" flags="wfNoBorder">
+		 <panel name="NumberZap"/>
+		 <widget source="Service" render="Picon" position="0,165" size="220,132" alphatest="blend" 
+			backgroundColor="transparent" transparent="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
 	</screen>
 
 	<!-- VideoMode -->
