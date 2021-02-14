@@ -403,13 +403,13 @@
 
 	<screen name="InfoBarTunerInfoTemplate">
 		<widget source="session.FrontendInfo" render="FixedLabel" text="Tuner" position="0,0" size="54,20" font="Regular;20" 
-			zPosition="10" foregroundColor="infobar-frgrnd" backgroundColor="infobar_collab_back" transparent="1">
-			<convert type="FrontendInfo">USE_TUNERS_STRING</convert>
+			foregroundColor="infobar-frgrnd" backgroundColor="infobar_collab_back" transparent="1">
+			<convert type="FrontendInfo">STRING</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="Label" position="55,0" size="65,20" borderWidth="0" borderColor="transpBlack" 
+		<widget source="session.FrontendInfo" render="Label" position="55,0" size="80,20" borderWidth="0" borderColor="transpBlack" 
 			backgroundColor="infobar_collab_back" transparent="1" halign="left" font="Bold;20">
-			<convert type="FrontendInfo">USE_TUNERS_STRING</convert>
+			<convert type="FrontendInfo">STRING,6,4</convert>
 		</widget>
 	</screen>
 	
