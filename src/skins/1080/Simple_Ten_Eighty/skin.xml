@@ -675,15 +675,21 @@
 
 	<!-- ChoiceBox -->
 
-	<screen name="ChoiceBox" title="" position="fill" flags="wfNoBorder">
+	<screen name="ChoiceBox" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<ePixmap pixmap="buttons/key_prev.png" alphatest="blend" position="62,1031" size="52,38"/>
-		<ePixmap pixmap="buttons/key_next.png" alphatest="blend" position="167,1031" size="52,38"/>
 		<panel name="TextTemplate"/>
 		<widget name="list" position="780,100" size="1110,900" itemHeight="50" font="Regular;33" scrollbarMode="showOnDemand"/>
-		<!-- widget name="text" conditional="text" position="30,570" size="720,300" itemHeight="38" font="Regular;30" valign="top"/ --><!-- "text" template imported above -->
 	</screen>
+	
+	<!-- ExtensionsList -->
 
+	<screen name="ExtensionsList" position="fill" flags="wfNoBorder">
+		<panel name="ChoiceBox"/>
+		<panel name="KeyMenuTemplate"/>
+		<ePixmap pixmap="buttons/key_prev.png" alphatest="blend" position="62,1031" size="52,38"/>
+		<ePixmap pixmap="buttons/key_next.png" alphatest="blend" position="167,1031" size="52,38"/>
+	</screen>
+	
 	<!-- SortbyChoiceBox -->
 
 	<screen name="SortbyChoiceBox" title="" position="fill" flags="wfNoBorder">
@@ -2052,7 +2058,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<widget name="nimlist" position="780,105" size="1080,900"/>
 	</screen>
 
-	<!--Media-Player-->
+	<!--Media-Player -->
 
 	<screen name="MediaPlayer" title="MediaPlayer" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
