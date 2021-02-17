@@ -1093,7 +1093,7 @@
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="text" position="845,120" size="1070,877" font="Regular;30" foregroundColor="grey"/>
 		<widget name="list" position="7,530" size="715,475" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
-		<widget name="icon" position="0,0" size="0,0" font="Regular;33"/> #To reduce debug noise.
+		<widget name="icon" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="MessageBox" position="fill" flags="wfNoBorder">
 		<panel name="MessageBoxTemplate"/>
@@ -1175,11 +1175,17 @@
 	</screen>
 	<screen name="ChoiceBox" position="fill" zPosition="10" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
+		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
+				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
+	</screen>
+	<screen name="ExtensionsList" position="fill" zPosition="10" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="MenuBPanel"/>
 		<panel name="PrevBPanel"/>
 		<panel name="NextBPanel"/>
 		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="RecordTimerQuestion" position="center,center" size="350,295" zPosition="5" flags="wfNoBorder">
 		<widget name="text" position="0,0" size="0,0" font="Regular;21"/>
