@@ -2326,4 +2326,27 @@
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget source="File" render="Label" position="7,568" size="715,396" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
+	
+	<!-- EPG Translator -->
+	<screen name="translatorMain" position="fill" flags="wfNoBorder" backgroundColor="transpBlack">
+		<panel name="PigLessTemplate"/>
+		<ePixmap pixmap="border/smallshadowline.png" position="0,1020" size="1920,3" zPosition="2"/><!-- bottom background top line -->
+		<eLabel position="0,1023" size="1920,57" backgroundColor="toptemplatecolor"/><!-- bottom background -->
+		<widget name="timing" position="30,100" size="790,100" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="secondFG" noWrap="1" font="Regular;36" halign="left" valign="center"/>
+		<panel position="30,100" size="c-60,e-180">
+			<widget name="flag2" position="e-120,0" size="100,100" alphatest="blend" zPosition="1"  backgroundColor="transpBlack" transparent="1" scale="1"/><!-- 288x288 -->
+			<widget name="text2" position="0,120" size="e,e-140" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" valign="top" halign="block"/>
+		</panel>
+		<panel position="c+30,100" size="c-60,e-180">
+			<widget name="flag" position="e-120,0" size="100,100" alphatest="blend" zPosition="1"  backgroundColor="transpBlack" transparent="1" scale="1"/><!-- 288x288 -->
+			<widget name="text" position="0,120" size="e,e-140" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" valign="top" halign="block"/>
+		</panel>
+	</screen>
+	<screen name="translatorConfig" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<panel name="ConfigTemplate"/>
+		<panel position="30,570" size="720,370">
+			<widget name="flag" position="center,center" size="288,288" alphatest="blend" zPosition="1"  backgroundColor="transpBlack" transparent="1" scale="1"/>
+		</panel>
+	</screen>
 </skin>
