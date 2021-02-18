@@ -522,6 +522,11 @@
 				serviceItemHeight="60" foregroundColorServiceNotAvail="#656565" foregroundColorEventSelected="yellow" foregroundColorMarkedSelected="blue" scrollbarMode="showOnDemand"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 	</screen>
+	<screen name="SubserviceSelection" position="fill" flags="wfNoBorder" title="">
+		<panel name="BasicTemplateWOButtons"/>
+		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="text" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
 	<screen name="EPGSelection" position="fill" flags="wfNoBorder" title="EPG-Selection">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"
@@ -2795,30 +2800,6 @@
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,135" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-	</screen>
-	<screen name="SubserviceSelection" position="fill" flags="wfNoBorder" title="">
-		<widget name="footnote" conditional="footnote" position="755,965" size="1177,45" font="Regular;33" foregroundColor="grey"/>
-		<widget source="introduction" render="Label" conditional="introduction" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey"/>
-		<widget name="introduction" conditional="introduction" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey"/>
-		<widget name="description" objectTypes="description,Button,Label" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="blue"/>
-		<widget source="description" render="Label" objectTypes="description,StaticText" position="7,530" size="715,475" font="Regular;33" halign="center" valign="center" foregroundColor="blue"/>
-		<widget source="session.VideoPicture" render="Pig" position="0,113" size="723,409" backgroundColor="transparent"/>
-		<widget source="session.CurrentService" render="Label" position="7,116" size="715,33" font="Regular;28" borderColor="black" borderWidth="2" foregroundColor="blue" backgroundColor="black" transparent="1" noWrap="1" halign="center">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1522,5" size="375,47" font="Regular;39" halign="right" foregroundColor="grey">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1522,55" size="375,40" font="Regular;30" halign="right" foregroundColor="grey">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<widget source="ScreenPath" render="Label" conditional="ScreenPath" position="22,1" size="1500,29" font="RegularSmall;24" foregroundColor="blue" zPosition="2"/>
-		<widget source="Title" render="Label" position="22,3" size="1500,90" font="RegularSmall;37" foregroundColor="grey" valign="bottom"/>
-		<eLabel backgroundColor="black" position="fill" zPosition="-1"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,109" size="1920,3"/>
-		<ePixmap pixmap="border/bottom_bg.png" position="0,1012" size="1920,3"/>
-		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<widget name="text" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
 
 </skin>
