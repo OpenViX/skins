@@ -1184,13 +1184,21 @@
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
-	<screen name="ExtensionsList" position="fill" zPosition="10" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+	<screen name="ExtensionsListPanel"> 
 		<panel name="MenuBPanel"/>
 		<panel name="PrevBPanel"/>
 		<panel name="NextBPanel"/>
 		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
+	</screen>
+	<screen name="ExtensionsList" position="fill" zPosition="10" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="ExtensionsListPanel"/>
+	</screen>
+	<screen name="EPGExtensionsList" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="ExtensionsListPanel"/>
 	</screen>
 	<screen name="RecordTimerQuestion" position="center,center" size="350,295" zPosition="5" flags="wfNoBorder">
 		<widget name="text" position="0,0" size="0,0" font="Regular;21"/>
