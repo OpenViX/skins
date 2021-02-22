@@ -418,7 +418,7 @@
 	</screen>
 	<screen name="AutoBouquetsMaker_Menu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" position="780,123" size="1132,855" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget source="list" render="Listbox" position="780,123" size="1132,855" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 			{"template": [
 				MultiContentEntryText(pos = (0,0), size = (1100,583), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
@@ -758,15 +758,12 @@
 	</screen>
 	<screen name="translatorMain" position="fill" flags="wfNoBorder">
 		<panel name="translatorMainPanel"/>
-		<widget name="text" position="735,120" size="1177,420" font="Regular;33" foregroundColor="grey" scrollbarWidth="6" scrollbarSliderBorderWidth="1"
-				scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="text2" position="735,547" size="1177,415" font="Regular;33" foregroundColor="grey" scrollbarWidth="6" scrollbarSliderBorderWidth="1"
-				scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="text" position="735,120" size="1177,420" font="Regular;33" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+		<widget name="text2" position="735,547" size="1177,415" font="Regular;33" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="translatorMainSingle" position="fill" flags="wfNoBorder">
 		<panel name="translatorMainPanel"/>
-		<widget name="text" position="735,120" size="1177,855" font="Regular;33" foregroundColor="grey" scrollbarWidth="6" scrollbarSliderBorderWidth="1"
-				scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="text" position="735,120" size="1177,855" font="Regular;33" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 		<widget name="text2" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="translatorConfig" position="fill" flags="wfNoBorder" title="PG Translator Setup">
@@ -1797,7 +1794,7 @@
 	<!-- ## CutListEditor ## -->
 	<screen name="CutListEditor" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
-		<widget source="cutlist" render="Listbox" position="22,123" size="670,874" backgroundColor="black" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget source="cutlist" render="Listbox" position="22,123" size="670,874" backgroundColor="black" zPosition="3" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos=(10,2),size=(170,40),text = 1,backcolor = MultiContentTemplateColor(3)),
@@ -1824,7 +1821,7 @@
 	<!-- ## SoftwareManager ## -->
 	<screen name="UpdatePluginMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="menu" render="Listbox" position="885,165" size="900,750" zPosition="3" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="grey"/>
+		<widget source="menu" render="Listbox" position="885,165" size="900,750" zPosition="3" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 			{"template": [
 					MultiContentEntryText(pos = (35,12),size = (860,60),flags = RT_HALIGN_LEFT,text = 1),# index 0 is the MenuText,
@@ -2610,7 +2607,7 @@
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<panel name="InfoBPanel"/>
-		<widget source="menu" render="Listbox" position="800,120" size="600,855" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget source="menu" render="Listbox" position="800,120" size="600,855" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (5,10), size =(100,60), png = 0),
