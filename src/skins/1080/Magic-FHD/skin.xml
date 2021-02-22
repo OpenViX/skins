@@ -171,10 +171,14 @@
 			<pixmap filename="border/line.png" pos="bpBottom"/>
 		</borderset>
 	</windowstyle>
+
 	<switchpixmap>
 		<pixmap name="menu_on" filename="icons/menu_on.png" />
 		<pixmap name="menu_off" filename="icons/menu_off.png" />
 	</switchpixmap>
+
+	<scrollbarstyle width="6" sliderBorderWidth="1" sliderForegroundColor="blue" sliderBorderColor="blue" 
+					backgroundPixmap="infobar/scrollbar.png" sliderPixmap="infobar/scrlbr.png"/>
 
 	<!--	## InfoBars ## -->
 	<screen name="InfoBar" position="fill" backgroundColor="transparent" flags="wfNoBorder">
@@ -444,9 +448,8 @@
 	<screen name="ChannelSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,119" size="1132,770" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30"
-				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" scrollbarMode="showOnDemand" 
-				backgroundColor="black" colorEventProgressbar="blue" foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" backgroundColor="black" colorEventProgressbar="blue" foregroundColorEvent="blue"
+				foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceEvent" render="Label" position="780,890" size="950,39" font="RegularSmall;33" foregroundColor="selectedFG" noWrap="1">
 			<convert type="EventName">NextName</convert>
 		</widget>
@@ -500,8 +503,7 @@
 		<widget name="key_blue" foregroundColor="buttonblue" backgroundColor="secondBG" font="buttons;30" position="490,1015" size="330,39" transparent="1"/>
 		<widget source="Title" foregroundColor="blue" render="Label" position="2,3" size="825,45" transparent="1" font="Regular;37" halign="center" valign="center"/>
 		<widget name="list" position="22,51" size="855,720" itemHeight="45" serviceNumberFont="Regular;33" serviceInfoFont="Crs;33" serviceNameFont="Regular;33" serviceItemHeight="35"
-				colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" transparent="1" foregroundColorServiceNotAvail="#656565" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+				colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" transparent="1" foregroundColorServiceNotAvail="#656565" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceEvent" render="Label" position="22,775" zPosition="2" size="200,37" font="Regular;33" backgroundColor="black" halign="right" noWrap="1" foregroundColor="yellow" transparent="1">
 		<convert type="EventTime">Times</convert>
 		<convert type="ClockToText"></convert>
@@ -512,15 +514,13 @@
 	</screen>
 	<screen name="ChannelContextMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="menu" position="780,123" size="1132,855" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="menu" position="780,123" size="1132,855" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="SimpleChannelSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,123" size="1132,874" itemHeight="60" font="Regular;33" colorServiceDescription="yellow" colorEventProgressbar="blue"
 				foregroundColorEvent="blue" serviceNumberFont="channelselectionservice;36" serviceInfoFont="channelselectionevent;30" serviceNameFont="channelselectionservice;33"
-				serviceItemHeight="60" foregroundColorServiceNotAvail="#656565" foregroundColorEventSelected="yellow" foregroundColorMarkedSelected="blue" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+				serviceItemHeight="60" foregroundColorServiceNotAvail="#656565" foregroundColorEventSelected="yellow" foregroundColorMarkedSelected="blue" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="SubserviceSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplateWOButtons"/>
@@ -529,8 +529,7 @@
 	</screen>
 	<screen name="EPGSelection" position="fill" flags="wfNoBorder" title="EPG-Selection">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"/>
 		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" halign="right" foregroundColor="blue" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
@@ -546,8 +545,7 @@
 	</screen>
 	<screen name="EPGSearch" position="fill" flags="wfNoBorder" title="EPG-Selection">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" zPosition="3" enableWrapAround="1"/>
 		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" halign="right" foregroundColor="blue" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
@@ -563,8 +561,7 @@
 	<screen name="EPGSelectionMulti" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="date" position="1125,120" size="375,50" font="Regular;36" halign="center" foregroundColor="blue"/>
-		<widget name="list" position="780,247" size="1132,722" itemHeight="50" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,247" size="1132,722" itemHeight="50" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="bouquetlist" position="885,247" size="900,750" itemHeight="31" foregroundColor="white" foregroundColorSelected="selectedFG" backgroundColorSelected="#001C252D" borderColor="black" scrollbarMode="showNever" zPosition="4"/>
 		<widget name="lab1" position="780,123" size="1132,874" font="Regular;37" halign="center" valign="center" zPosition="1"/>
 		<widget name="now_button" pixmap="epg/epg_off.png" position="885,172" zPosition="2" size="270,60" alphatest="blend"/>
@@ -592,8 +589,7 @@
 	</screen>
 	<screen name="SelectBouquet" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="menu" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="menu" font="Regular;33" position="780,123" size="1132,874" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="EventView" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -630,13 +626,12 @@
 	</screen>
 	<screen name="EventViewContextMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="menu" position="780,123" size="1132,874" font="Regular;33" itemHeight="50" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="menu" position="780,123" size="1132,874" font="Regular;33" itemHeight="50" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="EventViewSimple" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="FullDescription" position="780,123" size="1132,874" font="Regular;33" foregroundColor="grey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+/>
 		<widget source="Service" render="Label" position="7,585" size="715,100" font="Regular;36" foregroundColor="selectedFG" halign="center">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
@@ -709,7 +704,7 @@
 		<widget name="lab1" position="0,75" size="1920,172" font="Regular;33" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="timeline_text" position="0,75" size="1920,45" itemHeight="45" TimelineFont="Regular;30" backgroundColor="black" foregroundColor="yellow" transparent="1" zPosition="0"/>
 		<widget name="list" position="0,120" size="1920,127" EventNamePadding="10" backgroundColor="black" scrollbarMode="showNever" transparent="0"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+/>
 		<widget name="bouquetlist" position="0,112" size="1920,127" itemHeight="40" font="Regular;30" backgroundColor="black" foregroundColorSelected="yellow" scrollbarMode="showNever" zPosition="4" transparent="0"/>
 		<widget name="timeline_now" position="0,112" zPosition="3" size="28,127" pixmap="epg/timeline-now.png" alphatest="on"/>
 		<widget name="jump" position="0,0" size="0,0"/> #To reduce debug noise.
@@ -823,8 +818,7 @@
 	</screen>
 	<screen name="LogManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,855" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1132,855" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(45)
 		</applet>
@@ -867,8 +861,7 @@
 		<widget name="chosenletter" position="780,123" size="1132,822" font="Regular;75" foregroundColor="yellow" halign="center" valign="center" zPosition="4"/>
 		<widget name="list" position="780,123" size="1132,820" font="channelselectionservice;31" itemHeight="50" pbarHeight="10" pbarLargeWidth="70"
 				pbarColour="green" pbarColourSeen="yellow" pbarColourRec="red" spaceIconeText="2" iconsWidth="30" spaceRight="10" durationWidth="110"
-				dateWidth="245" foregroundColor="grey" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" scrollbarWidth="6" scrollbarSliderBorderWidth="1"
-				scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+				dateWidth="245" foregroundColor="grey" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget source="Service" render="Label" position="7,560" size="750,447" font="Regular;34" foregroundColor="grey" halign="center" valign="center">
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
@@ -905,8 +898,7 @@
 		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="855,260" size="52,37" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget name="config" position="930,122" size="637,495" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" foregroundColor="grey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="930,122" size="637,495" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand" foregroundColor="grey"/>
 		<widget source="streams" render="Listbox" position="755,500" size="1035,480" zPosition="3" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"templates":
@@ -931,8 +923,7 @@
 	</screen>
 	<screen name="Menu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="menu" render="Listbox" position="780,123" size="1102,880" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="menu" render="Listbox" position="780,123" size="1102,880" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [	MultiContentEntryText(pos = (20,3), size = (1000,50), flags = RT_HALIGN_LEFT, text = 0	) ],
 				"fonts": [gFont("Regular",37)],
@@ -943,8 +934,7 @@
 	</screen>
 	<screen name="Setup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="755,120" size="1155,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="755,120" size="1155,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="AboutOE" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1017,9 +1007,7 @@
 	</screen>
 	<screen name="SystemNetworkInfo" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
-		<widget name="AboutScrollLabel" position="800,135" size="800,765" font="Regular;30" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png"
-				scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="AboutScrollLabel" position="800,135" size="800,765" font="Regular;30" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="IFtext" render="Label" position="780,900" size="180,37" font="Regular;30" zPosition="10" halign="right" foregroundColor="grey"/>
 		<widget source="IF" render="Label" position="967,900" size="600,37" font="Regular;30" zPosition="10" foregroundColor="grey"/>
 		<widget source="Statustext" render="Label" position="780,953" size="172,37" font="Regular;30" zPosition="10" halign="right" foregroundColor="grey"/>
@@ -1046,13 +1034,11 @@
 	<screen name="SelectPath" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="target" position="780,135" size="1132,45" font="Regular;33"/>
-		<widget name="filelist" position="780,180" size="1132,817" font="Regular;33" itemHeight="30" zPosition="3" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="filelist" position="780,180" size="1132,817" font="Regular;33" itemHeight="30" zPosition="3" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="RecordPathsSettings" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" zPosition="3" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" zPosition="3" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="JobView" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1110,13 +1096,11 @@
 	</screen>
 	<screen name="TimeDateInput" position="fill" flags="wfNoBorder" zPosition="2">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,874" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,874" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="LanguageSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="languages" render="Listbox" position="780,123" size="1132,880" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="languages" render="Listbox" position="780,123" size="1132,880" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 			{"template": [
 					MultiContentEntryPixmap(pos = (20,15), size = (90,60), png = 2), # index 2 is the pixmap
@@ -1130,8 +1114,7 @@
 	</screen>
 	<screen name="InputDeviceSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" position="780,123" size="1132,804" zPosition="10" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="list" render="Listbox" position="780,123" size="1132,804" zPosition="10" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 							{"template": [
 									MultiContentEntryPixmapAlphaBlend(pos = (2,8), size = (54,54), png = 2), # index 3 is the interface pixmap
@@ -1145,8 +1128,7 @@
 	</screen>
 	<screen name="InputDeviceSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,824" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,824" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="Console" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1173,13 +1155,11 @@
 	</screen>
 	<screen name="ChoiceBox" position="fill" zPosition="10" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="ExtensionsListPanel"> 
-		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="ExtensionsList" position="fill" zPosition="10" flags="wfNoBorder">
@@ -1223,8 +1203,7 @@
 		</widget>
 	</screen>
 	<screen name="HistoryZapSelector" position="center,center" size="1700,842" backgroundColor="transpBlack" flags="wfNoBorder">
-		<widget source="menu" render="Listbox" position="0,1" size="1700,840" scrollbarMode="showOnDemand" backgroundColor="transpBlack" transparent="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="menu" render="Listbox" position="0,1" size="1700,840" scrollbarMode="showOnDemand" backgroundColor="transpBlack" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (90,15), size = (15,45), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -1243,8 +1222,7 @@
 	</screen>
 	<screen name="Subtitles" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" backgroundColor="darkgrey" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" backgroundColor="darkgrey" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="SubtitleDisplay" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="-1">
 		<widget name="message" position="0,0" size="0,0" font="buttons;33"/> #To reduce debug noise.
@@ -1259,8 +1237,7 @@
 	</screen>
 	<screen name="BouquetSelector" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="menu" position="755,120" size="1150,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"
-				enableWrapAround="1" scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="menu" position="755,120" size="1150,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="NumericalTextInputHelpDialog" position="7,600" size="681,246" zPosition="2" flags="wfNoBorder">
 		<eLabel position="0,0" size="681,246" backgroundColor="yellowtransparent" zPosition="-1"/>
@@ -1352,8 +1329,7 @@
 		<panel name="BasicTemplate2"/>
 		<widget name="list" position="780,120" size="1132,595" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
 				serviceInfoFont="channelselectionevent;28" progressBarWidth="70" fieldMargins="10" scrollbarMode="showOnDemand" zPosition="3" colorEventProgressbar="blue"
-				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey" scrollbarWidth="6" scrollbarSliderBorderWidth="1"
-				scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey" scrollbarWidth="6"/>
 		<widget source="ServiceEvent" render="Label" position="780,715" size="1132,35" font="Regular;30" foregroundColor="blue" halign="right" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
@@ -1394,11 +1370,9 @@
 		<panel name="BasicTemplate"/>
 		<widget name="text" position="780,123" size="1132,52" font="Regular;39" halign="center"/>
 		<widget name="target" position="780,172" size="1132,45" font="Regular;34"/>
-		<widget name="filelist" position="735,230" size="1177,750" font="FileList;34" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="filelist" position="735,230" size="1177,750" font="FileList;34" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey"/>
 		<widget name="textbook" position="7,568" size="715,45" font="Regular;33" foregroundColor="blue" zPosition="2" halign="center"/>
-		<widget name="booklist" position="7,609" size="715,360" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" zPosition="2" foregroundColor="grey" selectionDisabled="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="booklist" position="7,609" size="715,360" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" zPosition="2" foregroundColor="grey" selectionDisabled="1"/>
 		<widget name="red" position="0,0" size="0,0"/> #To reduce debug noise.
 		<widget name="green" position="0,0" size="0,0"/> #To reduce debug noise.
 		<widget name="yellow" position="0,0" size="0,0"/> #To reduce debug noise.
@@ -1407,13 +1381,11 @@
 	<screen name="TimerSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="timerlist" position="735,127" size="1177,825" scrollbarMode="showOnDemand" itemHeight="75" rowSplit="37" iconMargin="15" setEventNameFont="Regular;32"
-				setServiceNameFont="Regular;32" setFont="Regular;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1" scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue"
-				scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+				setServiceNameFont="Regular;32" setFont="Regular;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="TimerEntry" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,120" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,120" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="ok" position="0,0" size="0,0"/> #To reduce debug noise.
 		<widget name="cancel" position="0,0" size="0,0"/> #To reduce debug noise.
 		<widget name="oktext" position="0,0" size="0,0"/> #To reduce debug noise.
@@ -1431,19 +1403,16 @@
 	<screen name="TimerEditList" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="timerlist" position="735,124" size="1177,880" itemHeight="80" rowSplit="40" iconMargin="15" setEventNameFont="Regular;32"
-				setServiceNameFont="Regular;32" setFont="Regular;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+				setServiceNameFont="Regular;32" setFont="Regular;28" satPosLeft="300" foregroundColor="grey" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="TimerLog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="loglist" position="735,115" size="1177,440" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="loglist" position="735,115" size="1177,440" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="logentry" position="7,580" size="1905,427" font="Regular;33" foregroundColor="grey"/>
 	</screen>
 	<screen name="TimerSanityConflict" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="735,123" size="1177,280" itemHeight="35" font="Regular;30" scrollbarMode="showOnDemand" zPosition="2"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="735,123" size="1177,280" itemHeight="35" font="Regular;30" scrollbarMode="showOnDemand" zPosition="2"/>
 		<widget name="timer2" position="735,410" size="1177,600" itemHeight="75" setEventNameFont="Regular;30" rowSplit="35" setServiceNameFont="Regular;30" setFont="Regular;30" satPosLeft="300" scrollbarMode="showNever" zPosition="2"/>
 		<widget name="timer1" position="7,568" size="715,375" itemHeight="75" setEventNameFont="Regular;30" rowSplit="35" setServiceNameFont="Regular;30" setFont="Regular;30" satPosLeft="170" scrollbarMode="showNever" zPosition="2"/>
 	</screen>
@@ -1456,7 +1425,7 @@
 		<widget name="labstop" position="315,825" size="375,39" font="Regular;30" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="315,825" size="375,39" font="Regular;30" valign="center" halign="center" backgroundColor="green"/>
 		<widget name="key" position="780,123" size="1132,37" font="Regular;30" halign="center" transparent="1" valign="center" backgroundColor="black"/>
-		<widget source="list" render="Listbox" position="780,195" size="1132,585" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" transparent="1" enableWrapAround="1"		scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="list" render="Listbox" position="780,195" size="1132,585" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" transparent="1" enableWrapAround="1">
 			<convert type="StringList"/>
 		</widget>
 		<eLabel text="'OK' = Show details" position="755,970" size="1230,40" font="Regular;31" foregroundColor="grey"/>
@@ -1466,19 +1435,16 @@
 		<panel name="PrevBPanel"/>
 		<panel name="NextBPanel"/>
 		<ePixmap pixmap="buttons/key_0.png" position="1645,1028" size="52,37"/>
-		<widget name="list" position="780,120" size="1132,884" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,120" size="1132,884" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="PluginDownloadBrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,120" size="1132,884" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,120" size="1132,884" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="780,123" size="1132,750" font="Regular;36" zPosition="-1" valign="center" halign="center" foregroundColor="grey"/>
 	</screen>
 	<screen name="DirectoryBrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="filelist" position="780,123" size="1132,855" font="FileList;37" itemHeight="45" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="filelist" position="780,123" size="1132,855" font="FileList;37" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="configTest" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1493,8 +1459,7 @@
 	</screen>
 	<screen name="SkinSelector" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="skins" render="Listbox" position="735,120" size="750,800" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="skins" render="Listbox" position="735,120" size="750,800" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 		{"template": [
 				MultiContentEntryText(pos = (0,0), size = (495,50), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
@@ -1525,8 +1490,7 @@
 	</screen>
 	<screen name="SoftwareUpdateChoices" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,495" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1132,495" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="735,800" size="1177,200" font="Regular;33" zPosition="2" foregroundColor="blue" valign="bottom"/>
 		<widget name="feedStatusMSG" position="7,568" size="715,45" font="Regular;33" zPosition="2" foregroundColor="blue" halign="center"/>
 		<widget name="tl_off" pixmap="icons/aoff.png" position="350,632" size="36,97" alphatest="on"/>
@@ -1545,13 +1509,11 @@
 	</screen>
 	<screen name="NetworkSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="menu" position="780,123" size="1132,874" itemHeight="32" font="Regular;33" selectionDisabled="1" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="menu" position="780,123" size="1132,874" itemHeight="32" font="Regular;33" selectionDisabled="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="AdapterSetupConfiguration" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="Statustext" render="Label" position="474,945" size="300,40" font="Regular;36" halign="right" foregroundColor="grey"/>
 		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="787,958" size="23,24" alphatest="on"/>
 		<widget name="devicepic" pixmaps="icons/network_wired.png,icons/network_wireless.png" position="840,945" size="54,54" alphatest="on"/>
@@ -1560,8 +1522,7 @@
 	</screen>
 	<screen name="AdapterSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,405" itemHeight="50" font="Regular;36" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,405" itemHeight="50" font="Regular;36" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="DNS1text" render="Label" position="1252,575" size="285,37" font="Regular;31" foregroundColor="grey"/>
 		<widget source="DNS2text" render="Label" position="1252,620" size="285,37" font="Regular;31" foregroundColor="grey"/>
 		<widget source="DNS1" render="Label" position="1545,575" size="345,37" font="Regular;30" foregroundColor="grey"/>
@@ -1576,8 +1537,7 @@
 		<widget source="Adapter" render="Label" position="1400,965" size="400,45" font="Regular;36" foregroundColor="grey"/>
 	</screen>
 	<screen name="NameserverSetup" position="fill" flags="wfNoBorder">
-		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="NetworkAdapterTest" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1613,13 +1573,11 @@
 	</screen>
 	<screen name="NetworkMountsMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="menulist" position="780,123" size="1132,825" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="NetworkBrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" position="780,127" size="1132,814" scrollbarMode="showOnDemand" foregroundColor="grey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="list" render="Listbox" position="780,127" size="1132,814" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 		{"template": [
 				MultiContentEntryPixmapAlphaBlend(pos = (0,0),size = (72,72),png = 1),# index 1 is the expandable/expanded/verticalline icon
@@ -1638,8 +1596,7 @@
 	</screen>
 	<screen name="UserDialog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand"  foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="ScanIP" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1647,8 +1604,7 @@
 	</screen>
 	<screen name="NetworkAdapterSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" position="780,123" size="1132,780" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="list" render="Listbox" position="780,123" size="1132,780" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (100,6),size = (900,40),font=0,flags = RT_HALIGN_LEFT|RT_VALIGN_TOP,text = 1),# index 1 is the interfacename
@@ -1667,8 +1623,7 @@
 		<widget source="legend1" render="Label" position="735,123" size="240,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
 		<widget source="legend2" render="Label" position="1027,123" size="517,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
 		<widget source="legend3" render="Label" position="1680,123" size="195,108" font="Regular;31" valign="center" halign="center" foregroundColor="grey"/>
-		<widget source="config" render="Listbox" position="735,240" size="1177,720" scrollbarMode="showOnDemand" foregroundColor="grey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="config" render="Listbox" position="735,240" size="1177,720" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaBlend(pos = (2,4),size = (72,72),png = 0),# index 0 is the isMounted pixmap
@@ -1686,8 +1641,7 @@
 	</screen>
 	<screen name="AutoMountManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="config" render="Listbox" position="780,123" size="1100,832" scrollbarMode="showOnDemand" foregroundColor="grey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="config" render="Listbox" position="780,123" size="1100,832" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaBlend(pos = (10,5),size = (72,72),png = 3),# index 4 is the pixmap
@@ -1702,14 +1656,12 @@
 	</screen>
 	<screen name="AutoMountEdit" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="735,120" size="1177,805" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="735,120" size="1177,805" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="UserManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="config" render="Listbox" position="780,120" size="832,804" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
-		<convert type="TemplatedMultiContent">
+		<widget source="config" render="Listbox" position="780,120" size="832,804" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
 					{"template": [
 							MultiContentEntryText(pos = (80,15), size = (600,75), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 							MultiContentEntryPixmapAlphaBlend(pos = (10,10), size = (48,48), png = 3), # index 4 is the status pixmap
@@ -1717,13 +1669,12 @@
 					"fonts": [gFont("Regular",33)],
 					"itemHeight": 78
 					}
-				</convert>
-			</widget>
+			</convert>
+		</widget>
 	</screen>
 	<screen name="devicesMount" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="menu" render="Listbox" position="780,135" size="1132,862" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="menu" render="Listbox" position="780,135" size="1132,862" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{ "template": [	MultiContentEntryText(pos = (80,5),size = (990,100),flags = RT_HALIGN_LEFT,text = 0,border_width=1),
 				MultiContentEntryPixmapAlphaBlend(pos = (5,20),size = (64,64),png = 1)],"fonts": [gFont("Regular",18)],"itemHeight": 110 }
@@ -1751,8 +1702,7 @@
 	<screen name="WlanScan" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget source="info" render="Label" position="780,120" size="1132,50"  font="Regular;36" halign="center" foregroundColor="blue"/>
-		<widget source="list" render="Listbox" position="780,175" size="1132,735" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="list" render="Listbox" position="780,175" size="1132,735" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (10,5),size = (770,45),font=0,flags = RT_HALIGN_LEFT,text = 0),# index 0 is the essid
@@ -1801,8 +1751,7 @@
 	</screen>
 	<screen name="NetworkInadynSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,652" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,652" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="NetworkInadynLog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1859,18 +1808,15 @@
 	</screen>
 	<screen name="NetworkuShareSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="NetworkuShareLog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="infotext" position="780,123" size="1132,874" font="Regular;30" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="infotext" position="780,123" size="1132,874" font="Regular;30" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="uShareSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="checkList" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="checkList" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874"/>
 	</screen>
 	<screen name="ScSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1882,43 +1828,36 @@
 	</screen>
 	<screen name="ConfigAction" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" scrollbarMode="showOnDemand" position="780,123" size="1132,855" itemHeight="45" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget source="list" render="Listbox" scrollbarMode="showOnDemand" position="780,123" size="1132,855" itemHeight="45" enableWrapAround="1"/>
 	</screen>
 	<screen name="CamSelectMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" scrollbarMode="showOnDemand" position="780,123" size="1132,855" itemHeight="45" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget source="list" render="Listbox" scrollbarMode="showOnDemand" position="780,123" size="1132,855" itemHeight="45" enableWrapAround="1"/>
 	</screen>
 	<screen name="myChannelSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,810" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1132,810" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="myProviderSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,810" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1132,810" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="MMIDialog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="title" position="885,165" size="900,45" font="Regular;33" foregroundColor="grey"/>
 		<widget name="subtitle" position="885,212" size="900,46" font="Regular;34" foregroundColor="grey"/>
-		<widget name="entries" position="885,260" size="900,540" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="entries" position="885,260" size="900,540" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 		<widget name="bottom" position="7,540" size="715,396" zPosition="2" font="Regular;36" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="CiSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="text" position="735,118" size="1177,45" font="Regular;37" halign="center" foregroundColor="blue"/>
-		<widget name="entries" position="885,165" size="900,825" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="entries" position="885,165" size="900,825" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="CIselectMainMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 
-		<widget name="CiList" position="885,180" size="900,675" font="Regular;33" itemHeight="45" backgroundColor="black" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="CiList" position="885,180" size="900,675" font="Regular;33" itemHeight="45" backgroundColor="black" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="CIconfigMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1929,8 +1868,7 @@
 		<widget source="ServiceList_desc" render="Label" position="825,397" size="990,45" font="Regular;36"/>
 		<eLabel position="825,456" size="990,3" backgroundColor="black"/>
 		<eLabel position="825,459" size="990,3" backgroundColor="grey"/>
-		<widget name="ServiceList" position="885,472" size="900,450" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="ServiceList" position="885,472" size="900,450" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceList_info" render="Label" position="825,472" size="990,450" font="Regular;33" zPosition="2"/>
 	</screen>
 	<screen name="easyCIconfigMenu" position="fill" flags="wfNoBorder">
@@ -1940,24 +1878,20 @@
 		<widget source="ServiceList_desc" render="Label" position="885,397" size="900,45" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" font="Regular;36"/>
 		<eLabel position="885,456" size="900,3" backgroundColor="black"/>
 		<eLabel position="885,459" size="900,3" backgroundColor="grey"/>
-		<widget name="ServiceList" position="885,472" size="900,450" backgroundColor="black" transparent="1" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="ServiceList" position="885,472" size="900,450" backgroundColor="black" transparent="1" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceList_info" render="Label" position="885,472" size="900,450" backgroundColor="black" zPosition="2" transparent="1" font="Regular;33"/>
-		<widget name="ServiceList" position="885,255" size="900,600" backgroundColor="black" transparent="1" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="ServiceList" position="885,255" size="900,600" backgroundColor="black" transparent="1" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceList_info" render="Label" position="885,255" size="900,600" backgroundColor="black" zPosition="2" transparent="1" font="Regular;33"/>
 	</screen>
 	<screen name="CAidSelect" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<eLabel position="121,657" size="525,108" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" zPosition="3" transparent="1" text="select CAId's" foregroundColor="grey" font="Regular;48"/>
-		<widget name="list" position="885,180" size="900,675" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="885,180" size="900,675" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="AutoDiseqc" position="fill">
 		<widget source="statusbar" render="Label" position="15,150" size="1905,90" font="Regular;36" foregroundColor="grey" zPosition="10" halign="center" valign="center"/>
 		<widget source="tunerstatusbar" render="Label" position="15,262" size="1918,45" font="Regular;36" foregroundColor="grey" zPosition="10" halign="center" valign="center"/>
-		<widget name="config" position="15,150" size="1905,292" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="15,150" size="1905,292" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="NimSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1975,13 +1909,11 @@
 	</screen>
 	<screen name="NimSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="SelectSatsEntryScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="hint" position="7,568" size="715,396" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="TerrestrialScan" position="0,0" size="1920,60" backgroundColor="transpBlack" flags="wfNoBorder">
@@ -1992,8 +1924,7 @@
 	</screen>
 	<screen name="DeleteBouquets" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" position="780,120" size="900,855" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="list" render="Listbox" position="780,120" size="900,855" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1">
 				<convert type="TemplatedMultiContent">
 					{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (32, 32), png = 0),
@@ -2028,14 +1959,12 @@
 		<widget name="scan_state" position="75,345" size="870,40" font="Regular;30" foregroundColor="grey"/>
 		<widget name="pass" position="75,390" size="870,40" font="Regular;30" foregroundColor="grey"/>
 		<widget name="scan_progress" position="75,450" size="720,22" pixmap="infobar/progress_big.png" borderWidth="1" borderColor="grey"/>
-		<widget name="servicelist" position="975,120" size="930,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" selectionDisabled="1" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="servicelist" position="975,120" size="930,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" selectionDisabled="1" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="Title" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="SatNimSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="nimlist" scrollbarMode="showOnDemand" itemHeight="32" font="Regular;36" position="780,123" size="1132,874" foregroundColor="grey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="nimlist" scrollbarMode="showOnDemand" itemHeight="32" font="Regular;36" position="780,123" size="1132,874" foregroundColor="grey"/>
 	</screen>
 	<screen name="Satfinder" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
@@ -2083,8 +2012,7 @@
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
 <!-- ##Config List## -->
-		<widget name="config" position="802,455" size="1110,545" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" foregroundColor="blue" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="802,455" size="1110,545" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" foregroundColor="blue" enableWrapAround="1"/>
 <!-- ##TSID ONID ORB ## -->
 		<widget source="tsid" render="FixedLabel" text="TSID:" position="340,385" size="180,50" font="Regular;40" halign="right">
 			<convert type="ConditionalShowHide"/>
@@ -2109,8 +2037,7 @@
 	<screen name="ServicesFound" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="legend" position="735,117" size="1177,135" font="Regular;34"/>
-		<widget name="servicesfound" position="735,250" size="1177,760" font="buttons;34" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="servicesfound" position="735,250" size="1177,760" font="buttons;34" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="PositionerSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2144,18 +2071,15 @@
 	</screen>
 	<screen name="PositionerSetupLog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="735,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="735,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="RotorNimSelection" position="fill" title="Select Slot">
 		<panel name="BasicTemplate"/>
-		<widget name="nimlist" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="nimlist" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="CableScanScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,810" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,810" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="CableScanStatus" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2165,11 +2089,9 @@
 	<screen name="NetworkWizard" position="fill" flags="wfNoBorder" title="Network Wizard">
 		<panel name="BasicTemplate"/>
 		<widget name="languagetext" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred"/>
-		<widget name="config" position="780,124" size="750,420" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,124" size="750,420" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 		<widget name="text" position="780,600" size="750,470" font="Regular;34"/>
-		<widget source="list" render="Listbox" position="22,577" size="670,360" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="list" render="Listbox" position="22,577" size="670,360" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand">
 			<convert type="StringList"/>
 		</widget>
 		<widget name="rc" position="1599,160" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
@@ -2180,8 +2102,7 @@
 	</screen>
 	<screen name="HelpMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="735,120" size="1177,855" scrollbarMode="showOnDemand" font="Regular;31" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="735,120" size="1177,855" scrollbarMode="showOnDemand" font="Regular;31" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="rc" position="1596,154" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on"/>
 		<widget name="arrowdown" pixmap="arrowdown.png" position="-150,-150" size="55,105" zPosition="11" alphatest="on"/>
 		<widget name="arrowdown2" pixmap="arrowdown.png" position="-150,-150" size="55,105" zPosition="11" alphatest="on"/>
@@ -2195,13 +2116,11 @@
 		<panel name="OKBPanel"/>
 		<panel name="HelpBPanel"/>
 		<widget name="entries" position="735,124" size="1177,880" itemHeight="80" rowSplit1="40" rowSplit2="40" rowHeight="35" iconMargin="5" EventNameFont="Regular;32"
-		ServiceNameFont="Regular;32" DayNameFont="Regular;28" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2" foregroundColor="grey" 		scrollbarWidth="6"
-		scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		ServiceNameFont="Regular;32" DayNameFont="Regular;28" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2" foregroundColor="grey"/>
 	</screen>
 	<screen name="AutoTimerPreview" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="timerlist" render="Listbox" position="780,127" size="1132,864" backgroundColor="black" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="timerlist" render="Listbox" position="780,127" size="1132,864" backgroundColor="black" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos=(5,2), size=(900,40), text = 3, font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
@@ -2221,30 +2140,25 @@
 	</screen>
 	<screen name="AutoTimerSettings" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="help" render="Label" position="7,577" size="715,405" font="Regular;30" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="AutoTimerEditor" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="help" render="Label" position="7,577" size="715,405" font="Regular;30" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
 	<screen name="AutoTimerFilterEditor" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" enableWrapAround="1" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="AutoTimerServiceEditor" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="AutoTimerImporter" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,120" size="1132,440" font="RegularSmall;33" itemHeight="55" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,120" size="1132,440" font="RegularSmall;33" itemHeight="55" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="MinuteInput" position="center,center" size="810,65" backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel text="Jump" position="0,-300" size="330,52" backgroundColor="transparent" font="Regular;51" halign="right" borderColor="black" borderWidth="2" transparent="1" zPosition="1"/>
@@ -2265,8 +2179,7 @@
 	</screen>
 	<screen name="RemoteControlCode" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="RCSetupScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2274,8 +2187,7 @@
 	</screen>
 	<screen name="TempFanControl" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,180" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,180" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="SensorTempText0" render="Label" position="780,315" size="135,70" font="RegularSmall;30" foregroundColor="grey"/>
 		<widget source="SensorTemp0" render="Label" position="915,315" size="150,35" font="RegularSmall;30" halign="right" foregroundColor="grey">
 			<convert type="SensorToText"/>
@@ -2347,14 +2259,12 @@
 	</screen>
 	<screen name="FancontrolConfiguration" flags="wfNoBorder" position="fill">
 		<panel name="BasicTemplate"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" font="Regular;33" position="780,123" size="1132,874" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="FanSetupScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="hddtemp" position="1235,1023" size="400,39" foregroundColor="buttonblue" font="buttons;33"/>
-		<widget name="config" position="780,120" size="1125,720" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,120" size="1125,720" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="powerstatus" position="750,900" size="375,33" halign="right" font="Regular;30" transparent="1" foregroundColor="grey"/>
 		<widget name="daemon0" pixmap="buttons/button_green_off.png" position="1140,910" size="22,24" zPosition="10" alphatest="on" transparent="1"/>
 		<widget name="daemon1" pixmap="buttons/button_green.png" position="1140,910" size="23,24" zPosition="10" alphatest="on" transparent="1"/>
@@ -2364,8 +2274,7 @@
 	</screen>
 	<screen name="VIXMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="menu" render="Listbox" position="780,123" size="1132,874" scrollbarMode="showOnDemand" foregroundColor="grey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="menu" render="Listbox" position="780,123" size="1132,874" scrollbarMode="showOnDemand" foregroundColor="grey">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (10,6), size = (1000,855), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
@@ -2392,8 +2301,7 @@
 	</screen>
 	<screen name="VIXSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,874" font="Regular;33" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,874" font="Regular;33" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="VIXSwap" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2411,27 +2319,23 @@
 	<screen name="VIXImageManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="lab1" position="735,123" size="1177,90" font="Regular;33" foregroundColor="blue" zPosition="2" halign="center"/>
-		<widget name="list" position="735,225" size="1177,720" font="Regular;31" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="735,225" size="1177,720" font="Regular;31" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="backupstatus" position="22,600" size="700,112" font="Regular;33" zPosition="5" foregroundColor="blue"/>
 	</screen>
 	<screen name="ImageManagerDownload" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 		<widget name="lab1" position="7,530" size="715,475" font="Regular;33" halign="center" foregroundColor="blue"/>
 	</screen>
 	<screen name="VIXBackupManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="lab1" position="735,123" size="1177,90" font="Regular;33" zPosition="2" foregroundColor="blue" halign="center"/>
-		<widget name="list" position="735,225" size="1177,720" font="Regular;31" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="735,225" size="1177,720" font="Regular;31" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey"/>
 		<widget name="backupstatus" position="22,652" size="700,105" font="Regular;33" zPosition="5" foregroundColor="blue"/>
 	</screen>
 	<screen name="VIXBackupManagerMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,405" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,405" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>  
 	<screen name="VIXBackupManagerLogView" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2439,27 +2343,23 @@
 	</screen>
 	<screen name="BackupSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="checkList" position="780,120" size="1132,864" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="checkList" position="780,120" size="1132,864" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="XtraPluginsSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="checkList" position="780,123" size="1132,855" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="checkList" position="780,123" size="1132,855" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="VIXIPKInstaller" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="lab1" position="780,123" size="1132,45" font="Regular;34" foregroundColor="blue" zPosition="2" halign="center"/>
-		<widget name="list" position="735,185" size="1177,810" font="Regular;34" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="735,185" size="1177,810" font="Regular;34" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(45)
 		</applet>
 	</screen>
 	<screen name="VIXDevicesPanel" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" position="780,123" size="1132,795" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="list" render="Listbox" position="780,123" size="1132,795" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (120,0), size = (1000,35), font=0, text = 0),
@@ -2476,13 +2376,11 @@
 	<screen name="VIXDevicePanelConf" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="Linconn" position="735,940" size="1177,60" font="Regular;33" foregroundColor="blue" halign="center" valign="center"/>
-		<widget name="config" position="735,120" size="1177,810" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="735,120" size="1177,810" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="VIXPartitionPanelConf" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" position="735,120" size="1177,765" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="list" render="Listbox" position="735,120" size="1177,765" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				 MultiContentEntryText(pos = (90,0), size = (675,30), font=0, text = 0),
@@ -2498,25 +2396,21 @@
 	</screen>
 	<screen name="LogManagerViewLogM" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="15,123" size="1890,832" font="Regular;24" scrollbarMode="showOnDemand" itemHeight="30" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="15,123" size="1890,832" font="Regular;24" scrollbarMode="showOnDemand" itemHeight="30" enableWrapAround="1"/>
 	</screen>
 	<screen name="LogManagerFb" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,874" font="Regular;33" scrollbarMode="showOnDemand" itemHeight="30" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1132,874" font="Regular;33" scrollbarMode="showOnDemand" itemHeight="30" enableWrapAround="1"/>
 	</screen>
 	<screen name="VIXSoftcamMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" scrollbarMode="showOnDemand" font="Regular;33" position="780,123" size="1132,874"/>
 	</screen>
 	<screen name="VIXSoftcamManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="lab2" position="885,135" size="255,45" font="Regular;34" zPosition="2" valign="center" foregroundColor="grey"/>
 		<widget name="lab1" position="885,406" size="255,40" font="Regular;34" zPosition="2" foregroundColor="grey"/>
-		<widget name="list" position="1162,406" size="450,425" font="SelectionList;34" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="1162,406" size="450,425" font="SelectionList;34" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="activecam" position="1162,135" size="360,225" font="Regular;30" zPosition="2" noWrap="1" foregroundColor="grey"/>
 		<applet type="onLayoutFinish">
 		self["list"].instance.setItemHeight(50)
@@ -2524,8 +2418,7 @@
 	</screen>
 	<screen name="VIXSoftcamLog" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" scrollbarMode="showOnDemand" font="Regular;30" position="780,123" size="1132,874" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" scrollbarMode="showOnDemand" font="Regular;30" position="780,123" size="1132,874" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="VIXStartCam" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -2543,8 +2436,7 @@
 	</screen>
 	<screen name="TranscodingSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="755,120" size="1157,815" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="755,120" size="1157,815" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="7,550" size="715,90" font="Regular;33" zPosition="2" foregroundColor="blue" valign="center" halign="center"/>
 		<widget name="blue" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
@@ -2554,13 +2446,11 @@
 	</screen>
 	<screen name="NetworkMacSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,120" size="1132,826" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="50" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,120" size="1132,826" scrollbarMode="showOnDemand" font="Regular;33" itemHeight="50" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="FirmwareUpgrade" position="0,0" size="1920,1080" flags="wfNoBorder" title="Firmware Upgrade">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 		<widget source="status" render="Label" position="780,903" size="1110,90" font="Regular;33" halign="center" valign="center"/>
 		<widget name="oldversion_label" position="7,600" size="290,45" font="Regular;33" foregroundColor="blue"/>
 		<widget name="oldversion" position="300,600" size="290,45" font="Regular;33" foregroundColor="blue"/>
@@ -2569,8 +2459,7 @@
 	</screen>
 	<screen name="Filebrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="file_list" position="780,123" size="1132,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="file_list" position="780,123" size="1132,765" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 		<widget source="status" render="Label" position="780,903" size="1110,90" font="Regular;33" halign="center" valign="center"/>
 	</screen>
 	<screen name="UpgradeStatus" position="fill" flags="wfNoBorder">
@@ -2582,18 +2471,15 @@
 	</screen>
 	<screen name="FUFilebrowser" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="file_list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="file_list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget source="status" render="Label" position="15,555" size="715,300" font="Regular;33" halign="center" valign="center" foregroundColor="blue"/>
 	</screen>
 	<screen name="ButtonSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<ePixmap pixmap="buttons/key-exit.png" position="57,1027" size="53,38" zPosition="0" alphatest="blend"/>
 		<eLabel text="Exit" position="115,1022" size="330,39" font="Regular;33" foregroundColor="grey"/>
-		<widget name="list" position="735,120" size="577,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="choosen" position="1320,120" size="577,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="blue"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="735,120" size="577,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="choosen" position="1320,120" size="577,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="blue"/>
 		<ePixmap pixmap="buttons/key-exit.png" position="57,1027" size="53,38" zPosition="0" alphatest="blend"/>
 		<eLabel text="Exit" position="115,1022" size="330,39" font="Regular;33" foregroundColor="grey"/>
 	</screen>
@@ -2601,40 +2487,33 @@
 		<panel name="BasicTemplate"/>
 		<panel name="PrevBPanel"/>
 		<panel name="NextBPanel"/>
-		<widget name="list" position="735,120" size="577,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget name="choosen" position="1320,120" size="577,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="blue"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="735,120" size="577,855" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="choosen" position="1320,120" size="577,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="blue"/>
 	</screen>
 	<screen name="LED_GigaSetup" position="fill" flags="wfNoBorder" title="GigaBlue LED Setup">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="BufferIndicator" position="c-150,67" size="300,52" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="status" position="0,0" size="300,52" backgroundColor="transparent" transparent="1" font="Regular;39" foregroundColor="grey" borderColor="black" borderWidth="2" valign="center" halign="center" zPosition="0"/>
 	</screen>
 	<screen name="AnimationSetupConfig" position="0,0" size="1920,1080" flags="wfNoBorder" title="Animation Settings">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,120" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="AnimationSetupScreen" position="0,0" size="1920,1080" flags="wfNoBorder" title="Animation Setup">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,120" size="1132,815" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,120" size="1132,815" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<!-- ## Oscam Info ##-->
 	<screen name="OscamInfoMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="mainmenu" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="mainmenu" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="oscReaderStats" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="ExitBPanel"/>
-		<widget source="output" render="Listbox" position="5,540" size="1877,440" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="output" render="Listbox" position="5,540" size="1877,440" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 			{"templates":
 				{"default": (50,[
@@ -2667,8 +2546,7 @@
 	<screen name="oscEntitlements" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="ExitBPanel"/>
-		<widget source="output" render="Listbox" position="5,540" size="1877,440" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
+		<widget source="output" render="Listbox" position="5,540" size="1877,440" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 			{"templates":
 				{"default": (55,[
@@ -2705,19 +2583,16 @@
 	<screen name="oscECMInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="ExitBPanel"/>
-		<widget name="output" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="output" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="OscamInfoConfigScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand"/>
 		<widget name="status" render="Label" position="22,600" size="715,300" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
 	</screen>
 	<screen name="oscInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="output" position="5,540" size="1877,455" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="output" position="5,540" size="1877,455" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<!-- ## CCCam Info ##-->
 	<screen name="EcmInfoScreen" position="0,0" size="1132,37" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="-1">
@@ -2735,14 +2610,12 @@
 	</screen>
 	<screen name="CCcamInfoMain" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="menu" position="780,123" size="1132,850" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="menu" position="780,123" size="1132,850" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<panel name="ExitBPanel"/>
 	</screen>
 	<screen name="CCcamInfoEcmInfoSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<panel name="ExitBPanel"/>
 	</screen>
 	<screen name="CCcamInfoInfoScreen" position="fill" flags="wfNoBorder">
@@ -2752,27 +2625,23 @@
 	</screen>
 	<screen name="CCcamInfoConfigMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="config" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="config" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="CCcamInfoSubMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="info" position="22,600" size="715,360" font="Regular;33" foregroundColor="blue"/>
 		<eLabel text="" position="515,1020" size="330,39" font="Regular;33" backgroundColor="secondBG"/>
 	</screen>
 	<screen name="CCcamInfoServerMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<eLabel text="" position="515,1020" size="330,39" font="Regular;33"/>
-		<widget name="list" position="780,123" size="1132,450" itemHeight="50" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1132,450" itemHeight="50" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget name="info" position="780,680" size="1132,435" font="Regular;33" foregroundColor="grey"/>
 	</screen>
 	<screen name="CCcamShareViewMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="uphops" position="30,600" size="675,37" font="RegularSmall;30" foregroundColor="blue"/>
 		<widget name="providers" position="30,660" size="675,37" font="RegularSmall;30" foregroundColor="blue"/>
 		<widget name="title" position="30,720" size="675,37" font="RegularSmall;24" foregroundColor="blue"/>
@@ -2781,23 +2650,19 @@
 	</screen>
 	<screen name="CCcamInfoRemoteBoxMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,135" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,135" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="CCcamInfoShareInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1100,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1100,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="CCcamInfoConfigSwitcher" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="CCcamInfoMenuConfig" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,135" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
-				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
+		<widget name="list" position="780,135" size="1132,850" font="Regular;33" itemHeight="50" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 
 </skin>
