@@ -169,9 +169,13 @@
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<ePixmap pixmap="infobar/ico_format_4-3.png" position="1572,134" size="40,21" zPosition="1" alphatest="on"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4-3.png" position="1572,134" size="40,21" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">IsSDAndNotWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_16-9.png" position="1572,134" size="40,21" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ServiceInfo">IsSDAndWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_hd.png" position="1572,134" size="40,21" zPosition="4" alphatest="on">
