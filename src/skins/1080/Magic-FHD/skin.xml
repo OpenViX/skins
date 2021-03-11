@@ -195,13 +195,13 @@
 		<panel name="ButtonPanel"/>
 		<widget name="channel" position="0,0" size="0,0" font="buttons;33"/> #To reduce debug noise.
 		<eLabel backgroundColor="black" position="0,0" size="1920,2" zPosition="5"/> # Permanent hiding of VBI-lines
-		<widget source="session.CurrentService" render="Label" position="7,7" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack">
+		<widget source="session.CurrentService" render="Label" position="1,1" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack">
 			<convert type="PliExtraInfo">ServiceRef</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="7,38" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack">
+		<widget source="session.CurrentService" render="Label" position="1,38" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack">
 			<convert type="PliExtraInfo">PIDInfo</convert>
 		</widget>
-		<eLabel text="VideoCodec:  " position="2,70" size="160,30" font="Regular;27" halign="right" transparent="1" backgroundColor="transpBlack"/>
+		<eLabel text="VideoCodec:  " position="1,70" size="160,30" font="Regular;27" transparent="1" backgroundColor="transpBlack"/>
 		<widget source="session.CurrentService" render="Label" position="165,70" size="225,30" font="Regular;27" transparent="1" backgroundColor="transpBlack">
 			<convert type="PliExtraInfo">VideoCodec</convert>
 		</widget>
@@ -209,10 +209,10 @@
 		<widget source="session.CurrentService" render="Label" position="480,70" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack">
 			<convert type="PliExtraInfo">ResolutionString</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="7,103" size="952,27" font="Regular;25" transparent="1" backgroundColor="transpBlack">
+		<widget source="session.CurrentService" render="Label" position="1,103" size="952,27" font="Regular;25" transparent="1" backgroundColor="transpBlack">
 			<convert type="PliExtraInfo">CryptoInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="7,130" size="954,57" font="Regular;22" transparent="1" backgroundColor="transpBlack">
+		<widget source="session.CurrentService" render="Label" position="1,130" size="954,57" font="Regular;22" transparent="1" backgroundColor="transpBlack">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
 		<widget source="session.FrontendStatus" render="FixedLabel" text="	Quality:" position="975,5" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
@@ -281,65 +281,97 @@
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_crypt_on.png" position="1030,125" size="40,21" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/crypt.png" position="1030,125" size="28,28" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1081,125" size="60,24" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/mpeg2.png" position="1075,125" size="80,28" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">IsVideoMPEG2</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/avc.png" position="1075,125" size="80,28" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">IsVideoAVC</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/hevc.png" position="1075,125" size="80,28" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">IsVideoHEVC</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/2-0.png" position="1160,125" size="60,28" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">IsStereo</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/5-1.png" position="1160,125" size="60,28" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_txt_on.png" position="1152,125" size="40,24" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/txt.png" position="1225,125" size="60,28" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4-3.png" position="1203,128" size="40,21" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/4-3.png" position="1290,125" size="60,28" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsSDAndNotWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_16-9.png" position="1203,128" size="40,21" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/16-9.png" position="1290,125" size="60,28" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsSDAndWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_hd.png" position="1203,128" size="40,21" zPosition="4" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/hdi.png" position="1290,125" size="60,28" zPosition="4" alphatest="on">
 			<convert type="ServiceInfo">IsHD</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4k.png" position="1203,128" size="40,21" zPosition="6" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/uhd.png" position="1290,125" size="60,28" zPosition="6" alphatest="on">
 			<convert type="ServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_hbbtv_on.png" position="1255,125" size="64,24" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/hbbtv.png" position="1355,125" size="70,28" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide"	/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_ip.png" position="1325,125" size="30,30" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ip.png" position="1430,125" size="28,28" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsStream</convert>
 			<convert type="ConditionalShowHide"	/>
 		</widget>
-		<widget source="session.Event_Now" render="Pixmap" pixmap="infobar/ico_pdc.png" position="1360,125" size="40,25" zPosition="2" alphatest="on">
+		<widget source="session.Event_Now" render="Pixmap" pixmap="infobar/ico_pdc.png" position="1465,125" size="40,25" zPosition="2" alphatest="on">
 			<convert type="EventName">Pdc</convert>
 			<convert type="ConditionalShowHide"	/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S:" position="1410,115" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/sdr.png" position="1510,125" size="60,28" alphatest="blend">
+			<convert type="ServiceInfo">IsSDR</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hdr.png" position="1510,125" size="60,28" alphatest="blend">
+			<convert type="ServiceInfo">IsHDR</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hdr.png" position="1510,125" size="60,28" alphatest="blend">
+			<convert type="ServiceInfo">IsHDR10</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hlg.png" position="1510,125" size="60,28" alphatest="blend">
+			<convert type="ServiceInfo">IsHLG</convert>
+		<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S:" position="1410,155" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C:" position="1410,115" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C:" position="1410,155" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T:" position="1410,115" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" borderColor="black" borderWidth="1" transparent="1">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T:" position="1410,155" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" borderColor="black" borderWidth="1" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="Label" position="1537,115" size="255,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="yellow">
+		<widget source="session.FrontendInfo" render="Label" position="1537,155" size="255,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="yellow">
 			<convert type="FrontendInfo">STRING</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" text="	Signal:" position="1800,115" size="120,55" font="Regular;21" backgroundColor="transpBlack" transparent="1">
+		<widget source="session.CurrentService" render="Label" text="	Signal:" position="1800,155" size="120,55" font="Regular;21" backgroundColor="transpBlack" transparent="1">
 			<convert type="RotorPosition"/>
 			<convert type="ConditionalShowHide"/>
 		</widget>
