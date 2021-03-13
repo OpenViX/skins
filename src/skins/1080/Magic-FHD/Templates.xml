@@ -165,33 +165,41 @@
 		<widget source="session.CurrentService" render="Label" position="1717,54" size="180,50" font="Regular;36" backgroundColor="transparent" transparent="1" borderWidth="3" borderColor="black" valign="center">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1479,134" size="90,36" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/txt.png" position="1415,134" size="60,28" alphatest="on">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/2-0.png" position="1479,134" size="60,36" alphatest="on">
+			<convert type="ServiceInfo">IsStereo</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/5-1.png" position="1479,134" size="60,36" alphatest="on">
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4-3.png" position="1572,134" size="40,21" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/4-3.png" position="1542,134" size="60,28" alphatest="on">
 			<convert type="ServiceInfo">IsSDAndNotWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_16-9.png" position="1572,134" size="40,21" zPosition="2" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/16-9.png" position="1542,134" size="60,28" alphatest="on">
 			<convert type="ServiceInfo">IsSDAndWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_hd.png" position="1572,134" size="40,21" zPosition="4" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/hdi.png" position="1542,134" size="60,28" alphatest="on">
 			<convert type="ServiceInfo">IsHD</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4k.png" position="1572,134" size="40,21" zPosition="6" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/uhd.png" position="1542,134" size="60,28" alphatest="on">
 			<convert type="ServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1615,125" size="240,40" font="Regular;27" backgroundColor="transparent" transparent="1" borderWidth="3" borderColor="black">
+		<widget source="session.CurrentService" render="Label" position="1615,130" size="240,40" font="Regular;27" backgroundColor="transparent" transparent="1" borderWidth="3" borderColor="black">
 			<convert type="PliExtraInfo">ResolutionString</convert>
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_rec.png" position="1857,134" size="20,20" zPosition="3" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_rec.png" position="1857,130" size="20,20" zPosition="3" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_stream.png" position="1880,134" size="20,20" zPosition="3" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="infobar/ico_stream.png" position="1880,130" size="20,20" zPosition="3" alphatest="on">
 			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
