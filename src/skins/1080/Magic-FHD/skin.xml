@@ -73,13 +73,13 @@
 		- the scale width of the date column (5.7)
 		- the scale width of the start/end column (6.0)
 		- the scale width modifier of the start/end column for 12 hour clock times (1.5)-->
-		<parameter name="EPGSingleColumnSpecs" value="0,135,5,165,15"/>
+		<parameter name="EPGSingleColumnSpecs" value="0,155,5,165,15"/>
 <!--	The values are:
-		- the pixel offset of the start of the date column (0)
-		- the pixel width of the date column (125)
-		- the pixel width of the separation between the date and start/end columns (5)
-		- the pixel width of the start/end column (135)
-		- the pixel width of the separation between the start/end and event name columns (20)-->
+		- 1-the pixel offset of the start of the date column (0)
+		- 2-the pixel width of the date column (125)
+		- 3-the pixel width of the separation between the date and start/end columns (5)
+		- 4-the pixel width of the start/end column (135)
+		- 5-the pixel width of the separation between the start/end and event name columns (20)-->
 <!--	<parameter name="EPGMultiColumnScales" value="6.5,6.0,4.5,1.5"/>-->
 <!--	The values are:
 		- the scale width of the service column (6.5)
@@ -577,7 +577,7 @@
 	</screen>
 	<screen name="EPGSearch" position="fill" flags="wfNoBorder" title="EPG-Selection">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" foregroundColor="grey" zPosition="3" enableWrapAround="1"/>
+		<widget name="list" position="755,120" size="1157,840" EventFontSingle="Regular;30" itemHeight="50" foregroundColor="grey" zPosition="3"/>
 		<widget source="Service" render="Label" position="755,967" size="1155,35" font="Regular;30" halign="right" foregroundColor="blue" noWrap="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
