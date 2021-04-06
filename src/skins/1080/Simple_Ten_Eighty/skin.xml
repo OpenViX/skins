@@ -544,21 +544,36 @@
 
 	<screen name="GraphMultiEPGList" title="Electronic Program Guide" position="fill" flags="wfNoBorder">
 		<panel name="PigLessTemplate"/>
-		<widget source="Event" render="Label" position="30,105" size="1860,37" backgroundColor="background" transparent="1" foregroundColor="secondFG" font="Regular;34" valign="top">
+		<widget source="Event" render="Label" position="30,105" size="200,37" backgroundColor="background" transparent="1" foregroundColor="secondFG" font="Regular;34" valign="top">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Date</convert>
+			<convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget name="timeline_text" position="30,155" size="1860,38" itemHeight="38" font="Regular;32" TimelineFont="Regular;32" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1"/>
-		<widget name="list" position="30,198" size="1860,817" itemHeight="52" ServiceFont="Regular;28" transparent="1" scrollbarMode="showNever"
+		<widget source="Event" render="Label" position="245,105" size="120,37" backgroundColor="background" transparent="1" foregroundColor="secondFG" font="Regular;34" halign="right" valign="top">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText"/>
+		</widget>
+		<widget source="Event" render="Label" position="365,105" size="120,37" backgroundColor="background" transparent="1" foregroundColor="secondFG" font="Regular;34" halign="left" valign="top">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format: - %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="505,105" size="1395,37" backgroundColor="background" transparent="1" foregroundColor="secondFG" font="Regular;34" halign="left" valign="top">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="30,145" size="1860,115" font="Regular;33" valign="top" halign="block">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<widget name="timeline_text" position="30,262" size="1860,38" itemHeight="38" font="Regular;32" TimelineFont="Regular;32" 
+			foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1"/>
+		<widget name="list" position="30,305" size="1860,718" itemHeight="52" ServiceFont="Regular;28" transparent="1" scrollbarMode="showNever"
 			EntryBackgroundColor="background" EventNamePadding="6" EntryBorderColor="#cccccc" EntryFont="Regular;28"
 			ServiceBorderVerWidth="3" EventBorderVerWidth="3" RecIconSize="32" IconXPadding="6" IconYPadding="4"/>
-		<widget name="timeline0" pixmap="window/timeline.png" position="0,193" size="1,824" zPosition="1"/>
-		<widget name="timeline1" pixmap="window/timeline.png" position="0,193" size="1,824" zPosition="1"/>
-		<widget name="timeline2" pixmap="window/timeline.png" position="0,193" size="1,824" zPosition="1"/>
-		<widget name="timeline3" pixmap="window/timeline.png" position="0,193" size="1,824" zPosition="1"/>
-		<widget name="timeline4" pixmap="window/timeline.png" position="0,193" size="1,824" zPosition="1"/>
-		<widget name="timeline5" pixmap="window/timeline.png" position="0,193" size="1,824" zPosition="1"/>
-		<widget name="timeline_now" pixmap="window/timeline-now.png" position="6,193" size="28,826" zPosition="2" alphatest="blend"/>
+		<widget name="timeline0" pixmap="window/timeline.png" position="0,300" size="1,720" zPosition="1"/>
+		<widget name="timeline1" pixmap="window/timeline.png" position="0,300" size="1,720" zPosition="1"/>
+		<widget name="timeline2" pixmap="window/timeline.png" position="0,300" size="1,720" zPosition="1"/>
+		<widget name="timeline3" pixmap="window/timeline.png" position="0,300" size="1,720" zPosition="1"/>
+		<widget name="timeline4" pixmap="window/timeline.png" position="0,300" size="1,720" zPosition="1"/>
+		<widget name="timeline5" pixmap="window/timeline.png" position="0,300" size="1,720" zPosition="1"/>
+		<widget name="timeline_now" pixmap="window/timeline-now.png" position="6,300" size="28,719" zPosition="2" alphatest="blend" scale="1"/>
 	</screen>
 
 	<screen name="GraphMultiEpgSetup" position="fill" title="Electronic Program Guide Setup" flags="wfNoBorder">
