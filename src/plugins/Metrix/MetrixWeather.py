@@ -26,11 +26,11 @@ from Components.Element import cached
 
 
 class MetrixWeather(Converter, object):
-	
+
 	def __init__(self, type):
 		Converter.__init__(self, type)
 		self.type = type
-			
+
 	@cached
 	def getText(self):
 		try:
@@ -61,16 +61,16 @@ class MetrixWeather(Converter, object):
 			elif self.type == "title":
 				return self.getCF() + " | " + config.plugins.MetrixWeather.currentLocation.value
 			elif self.type == "CF":
-				return self.getCF() 
+				return self.getCF()
 			else:
 				return ""
 		except:
 			return ""
-		
+
 	def getCF(self):
 		if config.plugins.MetrixWeather.tempUnit.value == "Fahrenheit":
 			return "°F"
-		else: 
+		else:
 			return "°C"
-		
+
 	text = property(getText)

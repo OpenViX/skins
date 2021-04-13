@@ -33,7 +33,7 @@ class XPicon(Renderer):
 		if self.instance:
 			pngname = ""
 			if what[0] != self.CHANGED_CLEAR:
-				
+
 				sname = self.source.text
 				pos = sname.rfind(':')
 				if pos != -1:
