@@ -11,7 +11,6 @@ from email import Encoders
 from email.MIMENonMultipart import MIMENonMultipart
 
 
-
 class MIMEImage(MIMENonMultipart):
     """Class for generating image/* type MIME documents."""
 

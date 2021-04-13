@@ -17,7 +17,6 @@ except NameError:
     False = 0
 
 
-
 # This function will become a method of the Message class
 def walk(self):
     """Walk over the message tree, yielding each subpart.
@@ -42,7 +41,6 @@ def _isstring(obj):
     return isinstance(obj, StringTypes)
 
 
-
 # These two functions are imported into the Iterators.py interface module.
 # The Python 2.2 version uses generators for efficiency.
 def body_line_iterator(msg, decode=False):

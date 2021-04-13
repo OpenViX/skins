@@ -36,7 +36,6 @@ except NameError:
     False = 0
 
 
-
 # Some convenience routines.  Don't import Parser and Message as side-effects
 # of importing email since those cascadingly import most of the rest of the
 # email package.
@@ -51,6 +50,7 @@ def message_from_string(s, _class=None, strict=False):
         _class = Message
     return Parser(_class, strict=strict).parsestr(s)
 
+
 def message_from_file(fp, _class=None, strict=False):
     """Read a file and parse its contents into a Message object model.
 
@@ -63,7 +63,6 @@ def message_from_file(fp, _class=None, strict=False):
     return Parser(_class, strict=strict).parse(fp)
 
 
-
 # Patch encodings.aliases to recognize 'ansi_x3.4_1968' which isn't a standard
 # alias in Python 2.1.3, but is used by the email package test suite.
 from encodings.aliases import aliases # The aliases dictionary

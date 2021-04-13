@@ -13,7 +13,6 @@ except SyntaxError:
     from _compat21 import body_line_iterator, typed_subpart_iterator
 
 
-
 def _structure(msg, fp=None, level=0):
     """A handy debugging aid"""
     if fp is None:

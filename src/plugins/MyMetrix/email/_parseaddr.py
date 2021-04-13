@@ -429,8 +429,10 @@ class AddrlistClass:
 
         return plist
 
+
 class AddressList(AddrlistClass):
     """An AddressList encapsulates a list of parsed RFC 2822 addresses."""
+
     def __init__(self, field):
         AddrlistClass.__init__(self, field)
         if field:

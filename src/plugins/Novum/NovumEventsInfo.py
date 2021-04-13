@@ -24,6 +24,7 @@ from time import localtime, strftime, mktime, time
 from datetime import datetime
 from Components.config import config
 
+
 class NovumEventsInfo(Converter, object):
 	
 	Event1 = 0

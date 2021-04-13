@@ -7,7 +7,6 @@
 import MIMEBase
 
 
-
 class MIMEMultipart(MIMEBase.MIMEBase):
     """Base class for MIME multipart/* type messages."""
 

@@ -60,12 +60,10 @@ pcre = re.compile('([,;])')
 fcre = re.compile(r'[\041-\176]+:$')
 
 
-
 # Helpers
 _max_append = quopriMIME._max_append
 
 
-
 def decode_header(header):
     """Decode a message header value without converting charset.
 
@@ -122,7 +120,6 @@ def decode_header(header):
     return decoded
 
 
-
 def make_header(decoded_seq, maxlinelen=None, header_name=None,
                 continuation_ws=' '):
     """Create a Header from a sequence of pairs as returned by decode_header()
@@ -145,7 +142,6 @@ def make_header(decoded_seq, maxlinelen=None, header_name=None,
     return h
 
 
-
 class Header:
     def __init__(self, s=None, charset=None,
                  maxlinelen=None, header_name=None,
@@ -415,7 +411,6 @@ class Header:
         return self._encode_chunks(newchunks, maxlinelen)
 
 
-
 def _split_ascii(s, firstlen, restlen, continuation_ws, splitchars):
     lines = []
     maxlen = firstlen
@@ -485,7 +480,6 @@ def _split_ascii(s, firstlen, restlen, continuation_ws, splitchars):
     return lines
 
 
-
 def _binsplit(splittable, charset, maxlinelen):
     i = 0
     j = len(splittable)

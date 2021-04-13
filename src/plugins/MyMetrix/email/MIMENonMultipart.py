@@ -8,7 +8,6 @@ import Errors
 import MIMEBase
 
 
-
 class MIMENonMultipart(MIMEBase.MIMEBase):
     """Base class for MIME multipart/* type messages."""
 
