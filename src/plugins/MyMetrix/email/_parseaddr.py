@@ -55,7 +55,7 @@ def parsedate_tz(data):
     else:
         i = data[0].rfind(',')
         if i >= 0:
-            data[0] = data[0][i+1:]
+            data[0] = data[0][i + 1:]
     if len(data) == 3: # RFC 850 date, deprecated
         stuff = data[0].split('-')
         if len(stuff) == 3:
@@ -64,7 +64,7 @@ def parsedate_tz(data):
         s = data[3]
         i = s.find('+')
         if i > 0:
-            data[3:] = [s[:i], s[i+1:]]
+            data[3:] = [s[:i], s[i + 1:]]
         else:
             data.append('') # Dummy tz
     if len(data) < 5:
@@ -122,7 +122,7 @@ def parsedate_tz(data):
             tzoffset = -tzoffset
         else:
             tzsign = 1
-        tzoffset = tzsign * ((tzoffset/100)*3600 + (tzoffset % 100)*60)
+        tzoffset = tzsign * ((tzoffset / 100) * 3600 + (tzoffset % 100) * 60)
     tuple = (yy, mm, dd, thh, tmm, tss, 0, 0, 0, tzoffset)
     return tuple
 

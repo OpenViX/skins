@@ -357,13 +357,13 @@ class DecodedGenerator(Generator):
 
 
 # Helper
-_width = len(repr(sys.maxint-1))
+_width = len(repr(sys.maxint - 1))
 _fmt = '%%0%dd' % _width
 
 def _make_boundary(text=None):
     # Craft a random boundary.  If text is given, ensure that the chosen
     # boundary doesn't appear in the text.
-    token = random.randint(0, sys.maxint-1)
+    token = random.randint(0, sys.maxint - 1)
     boundary = ('=' * 15) + (_fmt % token) + '=='
     if text is None:
         return boundary

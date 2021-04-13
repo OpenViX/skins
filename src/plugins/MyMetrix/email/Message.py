@@ -70,7 +70,7 @@ def _parseparam(s):
         f = s[:end]
         if '=' in f:
             i = f.index('=')
-            f = f[:i].strip().lower() + '=' + f[i+1:].strip()
+            f = f[:i].strip().lower() + '=' + f[i + 1:].strip()
         plist.append(f.strip())
         s = s[end:]
     return plist
@@ -221,7 +221,7 @@ class Message:
             elif cte in ('x-uuencode', 'uuencode', 'uue', 'x-uue'):
                 sfp = StringIO()
                 try:
-                    uu.decode(StringIO(payload+'\n'), sfp)
+                    uu.decode(StringIO(payload + '\n'), sfp)
                     payload = sfp.getvalue()
                 except uu.Error:
                     # Some decoding problem
