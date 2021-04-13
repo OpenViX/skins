@@ -122,12 +122,12 @@ class NovumEventsInfo(Converter, object):
 		ldescr = event.getExtendedDescription()
 		if self.showDuration == self.withDuration:
 			f = "{begin} - {end:10}{title:<} -  {duration}"
-			return f.format(begin = begin, end = end, title = title, duration = duration)
+			return f.format(begin=begin, end=end, title=title, duration=duration)
 		elif self.showDuration == self.onlyDuration:
 			return duration
 		elif self.showDuration == self.noDuration:
 			f = "{begin} {title:<}"
-			return f.format(begin = begin, end = end, title = title)
+			return f.format(begin=begin, end=end, title=title)
 		elif self.showDuration == self.shortDescription:
 			return sdescr
 		elif self.showDuration == self.longDescription:
