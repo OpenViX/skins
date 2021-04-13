@@ -134,7 +134,7 @@ class Parser:
             if lastheader:
                 container[lastheader] = NL.join(lastvalue)
             lastheader = line[:i]
-            lastvalue = [line[i+1:].lstrip()]
+            lastvalue = [line[i + 1:].lstrip()]
         # Make sure we retain the last header
         if lastheader:
             container[lastheader] = NL.join(lastvalue)
@@ -224,7 +224,7 @@ class Parser:
                         msgobj = self._class()
                         part = part[len(linesep):]
                     else:
-                        parthdrs, part = part.split(linesep+linesep, 1)
+                        parthdrs, part = part.split(linesep + linesep, 1)
                         # msgobj in this case is the "message/rfc822" container
                         msgobj = self.parsestr(parthdrs, headersonly=1)
                     # while submsgobj is the message itself

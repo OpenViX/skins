@@ -339,7 +339,7 @@ class Header:
     def _split_ascii(self, s, charset, firstlen, splitchars):
         chunks = _split_ascii(s, firstlen, self._maxlinelen,
                               self._continuation_ws, splitchars)
-        return zip(chunks, [charset]*len(chunks))
+        return zip(chunks, [charset] * len(chunks))
 
     def _encode_chunks(self, newchunks, maxlinelen):
         # MIME-encode a header with many different charsets and/or encodings.
@@ -452,7 +452,7 @@ def _split_ascii(s, firstlen, restlen, continuation_ws, splitchars):
         this = []
         linelen = 0
         for part in cre.split(line):
-            curlen = linelen + max(0, len(this)-1) * joinlen
+            curlen = linelen + max(0, len(this) - 1) * joinlen
             partlen = len(part)
             onfirstline = not lines
             # We don't want to split after the field name, if we're on the
@@ -498,7 +498,7 @@ def _binsplit(splittable, charset, maxlinelen):
         # 3. We don't know about splittable[:k] for k in i+1..j.
         # 4. We want to set i to the largest k that fits, with i <= k <= j.
         #
-        m = (i+j+1) >> 1  # ceiling((i+j)/2); i < m <= j
+        m = (i + j + 1) >> 1  # ceiling((i+j)/2); i < m <= j
         chunk = charset.from_splittable(splittable[:m], True)
         chunklen = charset.encoded_header_len(chunk)
         if chunklen <= maxlinelen:
@@ -511,5 +511,5 @@ def _binsplit(splittable, charset, maxlinelen):
     # invariant #2 implies that splittable[:i+1] does not fit, so i
     # is what we're looking for.
     first = charset.from_splittable(splittable[:i], False)
-    last  = charset.from_splittable(splittable[i:], False)
+    last = charset.from_splittable(splittable[i:], False)
     return first, last

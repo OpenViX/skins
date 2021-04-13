@@ -19,7 +19,7 @@ except NameError:
 
 
 # Flags for types of header encodings
-QP     = 1   # Quoted-Printable
+QP = 1   # Quoted-Printable
 BASE64 = 2   # Base64
 SHORTEST = 3 # the shorter of QP and base64, but only for headers
 
@@ -33,32 +33,32 @@ DEFAULT_CHARSET = 'us-ascii'
 # Defaults
 CHARSETS = {
     # input        header enc  body enc output conv
-    'iso-8859-1':  (QP,        QP,      None),
-    'iso-8859-2':  (QP,        QP,      None),
-    'iso-8859-3':  (QP,        QP,      None),
-    'iso-8859-4':  (QP,        QP,      None),
+    'iso-8859-1': (QP, QP, None),
+    'iso-8859-2': (QP, QP, None),
+    'iso-8859-3': (QP, QP, None),
+    'iso-8859-4': (QP, QP, None),
     # iso-8859-5 is Cyrillic, and not especially used
     # iso-8859-6 is Arabic, also not particularly used
     # iso-8859-7 is Greek, QP will not make it readable
     # iso-8859-8 is Hebrew, QP will not make it readable
-    'iso-8859-9':  (QP,        QP,      None),
-    'iso-8859-10': (QP,        QP,      None),
+    'iso-8859-9': (QP, QP, None),
+    'iso-8859-10': (QP, QP, None),
     # iso-8859-11 is Thai, QP will not make it readable
-    'iso-8859-13': (QP,        QP,      None),
-    'iso-8859-14': (QP,        QP,      None),
-    'iso-8859-15': (QP,        QP,      None),
-    'windows-1252':(QP,        QP,      None),
-    'viscii':      (QP,        QP,      None),
-    'us-ascii':    (None,      None,    None),
-    'big5':        (BASE64,    BASE64,  None),
-    'gb2312':      (BASE64,    BASE64,  None),
-    'euc-jp':      (BASE64,    None,    'iso-2022-jp'),
-    'shift_jis':   (BASE64,    None,    'iso-2022-jp'),
-    'iso-2022-jp': (BASE64,    None,    None),
-    'koi8-r':      (BASE64,    BASE64,  None),
-    'utf-8':       (SHORTEST,  BASE64, 'utf-8'),
+    'iso-8859-13': (QP, QP, None),
+    'iso-8859-14': (QP, QP, None),
+    'iso-8859-15': (QP, QP, None),
+    'windows-1252':(QP, QP, None),
+    'viscii': (QP, QP, None),
+    'us-ascii': (None, None, None),
+    'big5': (BASE64, BASE64, None),
+    'gb2312': (BASE64, BASE64, None),
+    'euc-jp': (BASE64, None, 'iso-2022-jp'),
+    'shift_jis': (BASE64, None, 'iso-2022-jp'),
+    'iso-2022-jp': (BASE64, None, None),
+    'koi8-r': (BASE64, BASE64, None),
+    'utf-8': (SHORTEST, BASE64, 'utf-8'),
     # We're making this one up to represent raw unencoded 8-bit
-    '8bit':        (None,      BASE64, 'utf-8'),
+    '8bit': (None, BASE64, 'utf-8'),
     }
 
 # Aliases for other commonly-used names for character sets.  Map
@@ -82,10 +82,10 @@ ALIASES = {
     'latin-8': 'iso-8859-14',
     'latin_9': 'iso-8859-15',
     'latin-9': 'iso-8859-15',
-    'cp949':   'ks_c_5601-1987',
-    'euc_jp':  'euc-jp',
-    'euc_kr':  'euc-kr',
-    'ascii':   'us-ascii',
+    'cp949': 'ks_c_5601-1987',
+    'euc_jp': 'euc-jp',
+    'euc_kr': 'euc-kr',
+    'ascii': 'us-ascii',
     }
 
 # Map charsets to their Unicode codec strings.  Note that Python doesn't come
@@ -99,20 +99,20 @@ ALIASES = {
 # of stability and useability.
 
 CODEC_MAP = {
-    'euc-jp':      'japanese.euc-jp',
+    'euc-jp': 'japanese.euc-jp',
     'iso-2022-jp': 'japanese.iso-2022-jp',
-    'shift_jis':   'japanese.shift_jis',
-    'euc-kr':      'korean.euc-kr',
+    'shift_jis': 'japanese.shift_jis',
+    'euc-kr': 'korean.euc-kr',
     'ks_c_5601-1987': 'korean.cp949',
     'iso-2022-kr': 'korean.iso-2022-kr',
-    'johab':       'korean.johab',
-    'gb2132':      'eucgb2312_cn',
-    'big5':        'big5_tw',
-    'utf-8':       'utf-8',
+    'johab': 'korean.johab',
+    'gb2132': 'eucgb2312_cn',
+    'big5': 'big5_tw',
+    'utf-8': 'utf-8',
     # Hack: We don't want *any* conversion for stuff marked us-ascii, as all
     # sorts of garbage might be sent to us in the guise of 7-bit us-ascii.
     # Let that stuff pass through without conversion to/from Unicode.
-    'us-ascii':    None,
+    'us-ascii': None,
     }
 
 

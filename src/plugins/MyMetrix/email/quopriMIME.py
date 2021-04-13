@@ -210,7 +210,7 @@ def encode(body, binary=False, maxlinelen=76, eol=NL):
             prev = c
             if bqre.match(c):
                 c = quote(c)
-            elif j+1 == linelen:
+            elif j + 1 == linelen:
                 # Check for whitespace at end of line; special case
                 if c not in ' \t':
                     encoded_line += c
@@ -279,12 +279,12 @@ def decode(encoded, eol=NL):
                 i += 1
             # Otherwise, c == "=".  Are we at the end of the line?  If so, add
             # a soft line break.
-            elif i+1 == n:
+            elif i + 1 == n:
                 i += 1
                 continue
             # Decode if in form =AB
-            elif i+2 < n and line[i+1] in hexdigits and line[i+2] in hexdigits:
-                decoded += unquote(line[i:i+3])
+            elif i + 2 < n and line[i + 1] in hexdigits and line[i + 2] in hexdigits:
+                decoded += unquote(line[i:i + 3])
                 i += 3
             # Otherwise, not in form =AB, pass literally
             else:
