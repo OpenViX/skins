@@ -62,7 +62,7 @@ CHARSETS = {
     }
 
 # Aliases for other commonly-used names for character sets.  Map
-# them to the real ones used in 
+# them to the real ones used in
 ALIASES = {
     'latin_1': 'iso-8859-1',
     'latin-1': 'iso-8859-1',

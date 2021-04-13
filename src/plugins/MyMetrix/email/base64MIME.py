@@ -77,7 +77,7 @@ def header_encode(header, charset='iso-8859-1', keep_eols=False,
 
     Each line of the header will be terminated in the value of eol, which
     defaults to "\\n".  Set this to "\\r\\n" if you are using the result of
-    this function directly in 
+    this function directly in
 
     The resulting string will be in the form:
 
@@ -129,7 +129,7 @@ def encode(s, binary=True, maxlinelen=76, eol=NL):
 
     Each line of encoded text will end with eol, which defaults to "\\n".  Set
     this to "\r\n" if you will be using the result of this function directly
-    in an 
+    in an
     """
     if not s:
         return s
