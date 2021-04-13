@@ -7,6 +7,7 @@ from enigma import ePixmap
 from enigma import iServiceInformation, iPlayableService, iPlayableServicePtr
 from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
 
+
 class XPicon(Renderer):
 	searchPaths = ('/media/hdd/XPicons/%s/', '/media/usb/XPicons/%s/', '/usr/share/enigma2/XPicons/%s/', '/usr/share/enigma2/%s/', '/media/usb/%s/')
 

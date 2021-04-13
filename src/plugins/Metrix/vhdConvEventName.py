@@ -1,6 +1,7 @@
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 
+
 class vhdConvEventName(Converter, object):
 	NAME = 0
 	SHORT_DESCRIPTION = 1

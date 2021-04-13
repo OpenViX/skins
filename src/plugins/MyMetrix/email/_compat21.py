@@ -11,7 +11,6 @@ False = 0
 True = 1
 
 
-
 # This function will become a method of the Message class
 def walk(self):
     """Walk over the message tree, yielding each subpart.
@@ -37,7 +36,6 @@ def _isstring(obj):
     return isinstance(obj, StringType) or isinstance(obj, UnicodeType)
 
 
-
 # These two functions are imported into the Iterators.py interface module.
 # The Python 2.2 version uses generators for efficiency.
 def body_line_iterator(msg, decode=False):

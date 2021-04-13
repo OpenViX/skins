@@ -34,7 +34,6 @@ paramre = re.compile(r'\s*;\s*')
 tspecials = re.compile(r'[ \(\)<>@,;:\\"/\[\]\?=]')
 
 
-
 # Helper functions
 def _formatparam(param, value=None, quote=True):
     """Convenience function to format and return a key=value pair.
@@ -57,6 +56,7 @@ def _formatparam(param, value=None, quote=True):
             return '%s=%s' % (param, value)
     else:
         return param
+
 
 def _parseparam(s):
     plist = []
@@ -83,7 +83,6 @@ def _unquotevalue(value):
         return Utils.unquote(value)
 
 
-
 class Message:
     """Basic message object.
 
@@ -99,6 +98,7 @@ class Message:
     you must use the explicit API to set or get all the headers.  Not all of
     the mapping methods are implemented.
     """
+
     def __init__(self):
         self._headers = []
         self._unixfrom = None

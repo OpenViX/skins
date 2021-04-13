@@ -6,8 +6,10 @@ from Encoders import encode_7or8bit
 import base64MIME
 import quopriMIME
 
+
 def _isunicode(s):
     return isinstance(s, UnicodeType)
+
 
 # Python 2.2.1 and beyond has these symbols
 try:
@@ -17,7 +19,6 @@ except NameError:
     False = 0
 
 
-
 # Flags for types of header encodings
 QP = 1   # Quoted-Printable
 BASE64 = 2   # Base64
@@ -29,7 +30,6 @@ MISC_LEN = 7
 DEFAULT_CHARSET = 'us-ascii'
 
 
-
 # Defaults
 CHARSETS = {
     # input        header enc  body enc output conv
@@ -116,7 +116,6 @@ CODEC_MAP = {
     }
 
 
-
 # Convenience functions for extending the above mappings
 def add_charset(charset, header_enc=None, body_enc=None, output_charset=None):
     """Add character set properties to the global registry.
@@ -165,7 +164,6 @@ def add_codec(charset, codecname):
     CODEC_MAP[charset] = codecname
 
 
-
 class Charset:
     """Map character sets to their email properties.
 
@@ -210,6 +208,7 @@ class Charset:
                   to the output_charset.  If no conversion codec is necessary,
                   this attribute will have the same value as the input_codec.
     """
+
     def __init__(self, input_charset=DEFAULT_CHARSET):
         # RFC 2046, $4.1.2 says charsets are not case sensitive
         input_charset = input_charset.lower()

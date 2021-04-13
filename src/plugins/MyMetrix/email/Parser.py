@@ -23,7 +23,6 @@ except NameError:
 NLCRE = re.compile('\r\n|\r|\n')
 
 
-
 class Parser:
     def __init__(self, _class=Message.Message, strict=False):
         """Parser of RFC 2822 and MIME email messages.
@@ -273,7 +272,6 @@ class Parser:
             container.set_payload(text)
 
 
-
 class HeaderParser(Parser):
     """A subclass of Parser, this one only meaningfully parses message headers.
 
@@ -284,6 +282,7 @@ class HeaderParser(Parser):
     Parsing with this subclass can be considerably faster if all you're
     interested in is the message headers.
     """
+
     def _parsebody(self, container, fp, firstbodyline=None):
         # Consume but do not parse, the body
         text = fp.read()

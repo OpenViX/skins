@@ -8,7 +8,6 @@ import Message
 from MIMENonMultipart import MIMENonMultipart
 
 
-
 class MIMEMessage(MIMENonMultipart):
     """Class representing message/* MIME documents."""
 

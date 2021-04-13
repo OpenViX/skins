@@ -9,7 +9,6 @@ from email.MIMENonMultipart import MIMENonMultipart
 from email.Encoders import encode_7or8bit
 
 
-
 class MIMEText(MIMENonMultipart):
     """Class for generating text/* type MIME documents."""
 

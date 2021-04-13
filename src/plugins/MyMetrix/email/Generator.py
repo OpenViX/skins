@@ -38,6 +38,7 @@ SPACE8 = ' ' * 8
 
 fcre = re.compile(r'^From ', re.MULTILINE)
 
+
 def _is8bitstring(s):
     if isinstance(s, StringType):
         try:
@@ -47,7 +48,6 @@ def _is8bitstring(s):
     return False
 
 
-
 class Generator:
     """Generates output from a Message object tree.
 
@@ -299,13 +299,13 @@ class Generator:
         self._fp.write(s.getvalue())
 
 
-
 class DecodedGenerator(Generator):
     """Generator a text representation of a message.
 
     Like the Generator base class, except that non-text parts are substituted
     with a format string representing the part.
     """
+
     def __init__(self, outfp, mangle_from_=True, maxheaderlen=78, fmt=None):
         """Like Generator.__init__() except that an additional optional
         argument is allowed.
@@ -355,10 +355,10 @@ class DecodedGenerator(Generator):
                     }
 
 
-
 # Helper
 _width = len(repr(sys.maxint - 1))
 _fmt = '%%0%dd' % _width
+
 
 def _make_boundary(text=None):
     # Craft a random boundary.  If text is given, ensure that the chosen
