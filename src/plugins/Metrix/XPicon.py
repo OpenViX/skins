@@ -8,7 +8,7 @@ from enigma import iServiceInformation, iPlayableService, iPlayableServicePtr
 from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
 
 class XPicon(Renderer):
-	searchPaths = ('/media/hdd/XPicons/%s/','/media/usb/XPicons/%s/','/usr/share/enigma2/XPicons/%s/','/usr/share/enigma2/%s/', '/media/usb/%s/')
+	searchPaths = ('/media/hdd/XPicons/%s/', '/media/usb/XPicons/%s/', '/usr/share/enigma2/XPicons/%s/', '/usr/share/enigma2/%s/', '/media/usb/%s/')
 
 	def __init__(self):
 		Renderer.__init__(self)
@@ -22,7 +22,7 @@ class XPicon(Renderer):
 			if attrib == "path":
 				self.path = value
 			else:
-				attribs.append((attrib,value))
+				attribs.append((attrib, value))
 		self.skinAttributes = attribs
 		return Renderer.applySkin(self, desktop, parent)
 
@@ -36,7 +36,7 @@ class XPicon(Renderer):
 				sname = self.source.text
 				pos = sname.rfind(':')
 				if pos != -1:
-					sname = sname[:pos].rstrip(':').replace(':','_')
+					sname = sname[:pos].rstrip(':').replace(':', '_')
 				pngname = self.nameCache.get(sname, "")
 				if pngname == "":
 					pngname = self.findPicon(sname)

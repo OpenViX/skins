@@ -47,7 +47,7 @@ CHARSETS = {
     'iso-8859-13': (QP, QP, None),
     'iso-8859-14': (QP, QP, None),
     'iso-8859-15': (QP, QP, None),
-    'windows-1252':(QP, QP, None),
+    'windows-1252': (QP, QP, None),
     'viscii': (QP, QP, None),
     'us-ascii': (None, None, None),
     'big5': (BASE64, BASE64, None),

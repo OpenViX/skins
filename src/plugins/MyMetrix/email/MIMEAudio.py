@@ -13,9 +13,9 @@ from MIMENonMultipart import MIMENonMultipart
 
 
 _sndhdr_MIMEmap = {'au': 'basic',
-                   'wav':'x-wav',
-                   'aiff':'x-aiff',
-                   'aifc':'x-aiff',
+                   'wav': 'x-wav',
+                   'aiff': 'x-aiff',
+                   'aifc': 'x-aiff',
                    }
 
 # There are others in sndhdr that don't have MIME types. :(

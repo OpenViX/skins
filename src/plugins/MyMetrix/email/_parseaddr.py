@@ -32,7 +32,7 @@ _daynames = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 # zones.  RFC1123 recommends that numeric timezone indicators be used
 # instead of timezone names.
 
-_timezones = {'UT':0, 'UTC':0, 'GMT':0, 'Z':0,
+_timezones = {'UT': 0, 'UTC': 0, 'GMT': 0, 'Z': 0,
               'AST': -400, 'ADT': -300,  # Atlantic (used in Canada)
               'EST': -500, 'EDT': -400,  # Eastern
               'CST': -600, 'CDT': -500,  # Central

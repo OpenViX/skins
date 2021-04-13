@@ -7,7 +7,7 @@ from enigma import ePixmap, eServiceReference
 from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
 
 class XPiconChannel(Renderer):
-	searchPaths = ('/media/hdd/XPicons/%s/','/media/usb/XPicons/%s/','/usr/share/enigma2/XPicons/%s/','/usr/share/enigma2/%s/Picon2/', '/media/sde1/%s/Picon2/', '/media/cf/%s/Picon2/', '/media/sdd1/%s/Picon2/', '/media/usb/%s/Picon2/', '/media/ba/%s/Picon2/', '/mnt/ba/%s/Picon2/', '/media/sda/%s/Picon2/', '/etc/%s/Picon2/', '/usr/share/enigma2/%s/', '/media/sde1/%s/', '/media/cf/%s/', '/media/sdd1/%s/', '/media/usb/%s/', '/media/ba/%s/', '/mnt/ba/%s/', '/media/sda/%s/', '/etc/%s/')
+	searchPaths = ('/media/hdd/XPicons/%s/', '/media/usb/XPicons/%s/', '/usr/share/enigma2/XPicons/%s/', '/usr/share/enigma2/%s/Picon2/', '/media/sde1/%s/Picon2/', '/media/cf/%s/Picon2/', '/media/sdd1/%s/Picon2/', '/media/usb/%s/Picon2/', '/media/ba/%s/Picon2/', '/mnt/ba/%s/Picon2/', '/media/sda/%s/Picon2/', '/etc/%s/Picon2/', '/usr/share/enigma2/%s/', '/media/sde1/%s/', '/media/cf/%s/', '/media/sdd1/%s/', '/media/usb/%s/', '/media/ba/%s/', '/mnt/ba/%s/', '/media/sda/%s/', '/etc/%s/')
 	
 
 	def __init__(self):
@@ -22,7 +22,7 @@ class XPiconChannel(Renderer):
 			if attrib == "path":
 				self.path = value
 			else:
-				attribs.append((attrib,value))
+				attribs.append((attrib, value))
 		self.skinAttributes = attribs
 		return Renderer.applySkin(self, desktop, parent)
 
@@ -62,7 +62,7 @@ class XPiconChannel(Renderer):
 					# strip all after last :
 					pos = sname.rfind(':')
 					if pos != -1:
-						sname = sname[:pos].rstrip(':').replace(':','_')
+						sname = sname[:pos].rstrip(':').replace(':', '_')
 					pngname = self.nameCache.get(sname, "")
 					if pngname == "":
 						pngname = self.findPicon(sname)
