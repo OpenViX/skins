@@ -12,8 +12,8 @@ from MIMENonMultipart import MIMENonMultipart
 
 
 
-_sndhdr_MIMEmap = {'au'  : 'basic',
-                   'wav' :'x-wav',
+_sndhdr_MIMEmap = {'au': 'basic',
+                   'wav':'x-wav',
                    'aiff':'x-aiff',
                    'aifc':'x-aiff',
                    }

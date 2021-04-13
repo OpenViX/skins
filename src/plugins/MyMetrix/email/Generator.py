@@ -344,13 +344,13 @@ class DecodedGenerator(Generator):
                 pass
             else:
                 print >> self, self._fmt % {
-                    'type'       : part.get_type('[no MIME type]'),
-                    'maintype'   : part.get_main_type('[no main MIME type]'),
-                    'subtype'    : part.get_subtype('[no sub-MIME type]'),
-                    'filename'   : part.get_filename('[no filename]'),
+                    'type': part.get_type('[no MIME type]'),
+                    'maintype': part.get_main_type('[no main MIME type]'),
+                    'subtype': part.get_subtype('[no sub-MIME type]'),
+                    'filename': part.get_filename('[no filename]'),
                     'description': part.get('Content-Description',
                                             '[no description]'),
-                    'encoding'   : part.get('Content-Transfer-Encoding',
+                    'encoding': part.get('Content-Transfer-Encoding',
                                             '[no encoding]'),
                     }
 

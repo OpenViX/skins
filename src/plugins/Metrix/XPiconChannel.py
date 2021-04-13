@@ -13,11 +13,11 @@ class XPiconChannel(Renderer):
 	def __init__(self):
 		Renderer.__init__(self)
 		self.path = "picon"
-		self.nameCache = { }
+		self.nameCache = {}
 		self.pngname = ""
 
 	def applySkin(self, desktop, parent):
-		attribs = [ ]
+		attribs = []
 		for (attrib, value) in self.skinAttributes:
 			if attrib == "path":
 				self.path = value
