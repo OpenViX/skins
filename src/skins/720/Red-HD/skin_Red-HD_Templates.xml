@@ -395,7 +395,10 @@
 	</screen>
 	<screen name="MenuAppletConfigItemHeight35">
 		<applet type="onLayoutFinish">
-			self["config"].instance.setItemHeight(35)
+			try:
+				self["config"].instance.setItemHeight(35)
+			except AttributeError:
+				pass
 		</applet>
 	</screen>
 	<screen name="MenuAppletMenuItemHeight35">
