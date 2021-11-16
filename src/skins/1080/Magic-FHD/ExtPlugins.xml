@@ -1685,6 +1685,248 @@
 		<widget name="key_4" position="1575,960" zPosition="2" size="270,37" font="RegularSmall;30" valign="center" transparent="1" foregroundColor="grey"/>
 	</screen>
 
+----------------------------------------------------------------------------------------------------------------------
+<!-- Temp fix for Enigmalight not reading it's own embedded screens-->
+    <!-- MainMenu -->
+    <screen name="EL_Screen_MainMenu" position="0,0" size="1920,1080" title=" " backgroundColor="#ffffffff" flags="wfNoBorder">
+
+        <!-- title -->
+        <widget source="Title" render="Label" transparent="1" zPosition="4" halign="center" valign="center" position="670,0" size="577,40" font="OpenSans; 30" foregroundColor="#ffffff" backgroundColor="#000000"/>
+
+        <!-- background -->
+        <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/background-main-fs8.png" position="0,0" zPosition="-1" size="1920,1080" alphatest="blend" />
+
+        <!-- menu -->
+        <widget source="menu" render="Listbox" position="10,232" size="1,1" zPosition="1">
+            <convert type="TemplatedMultiContent">
+                {"template": [ MultiContentEntryText(pos = (10, 14), size = (390, 40), flags = RT_HALIGN_CENTER, text = 0) ], "fonts": [gFont("OpenSans", 35)], "itemHeight": 90 }
+            </convert>
+        </widget>
+
+        <!-- moving targets -->
+        <widget name="-2" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="8" position="4,810"   size="380,90" font="OpenSans; 32" halign="center"/>
+        <widget name="-1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="8" position="384,810" size="380,90" font="OpenSans; 32" halign="center" />
+        <widget name="0"  foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="8" position="768,810" size="380,90" font="OpenSans; 32" halign="center" />
+        <widget name="+1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="8" position="1152,810" size="380,90" font="OpenSans; 32" halign="center" />
+        <widget name="+2" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="8" position="1536,810" size="380,90" font="OpenSans; 32" halign="center" />
+
+        <widget name="txt_check" position="415,602" zPosition="9" size="160,37" font="OpenSans;20" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1"/>
+
+        <!-- enabled button -->
+        <widget name="btn_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_green-fs8.png" zPosition="6" position="650,908" size="22,22" alphatest="blend"/>
+        <widget name="txt_green" position="700,900" zPosition="9" size="250,37" font="OpenSans;24" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1"/>
+
+        <!-- disable button -->
+        <widget name="btn_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_red-fs8.png" zPosition="6" position="650,908" size="22,22" alphatest="blend"/>
+        <widget name="txt_red" position="700,900" zPosition="9" size="250,37" font="OpenSans;24" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1"/>
+
+         <!-- dynamic button -->
+        <widget name="btn_blue" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_blue-fs8.png" zPosition="6" position="850,908" size="22,22" alphatest="blend"/>
+        <widget name="txt_blue" position="900,900" zPosition="9" size="300,37" font="OpenSans;24" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1"/>
+
+        <!-- Moodlamp button -->
+        <widget name="btn_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_yellow-fs8.png" zPosition="6" position="850,908" size="22,22" alphatest="blend"/>
+        <widget name="txt_yellow" position="900,900" zPosition="9" size="300,37" font="OpenSans;24" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1"/>
+
+         <!-- Statusbar -->
+        <widget name="statusbar" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/statusbar-fs8.png" zPosition="10" position="0,980" size="1920,100" alphatest="blend"/>
+        <widget name="txt_statusbar" transparent="1" zPosition="20" valign="center" position="28,1000" size="1000,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="left"/>
+        <widget name="txt_statusbar_info" transparent="1" zPosition="20" valign="center" position="1200,1000" size="320,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="right"/>
+    </screen>
+
+
+    <!-- About -->
+    <screen name="EL_Screen_About" position="0,0" size="1920,1080" title=" " backgroundColor="#000000" flags="wfNoBorder">
+
+        <!-- background -->
+        <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/background-small-fs8.png" position="0,0" zPosition="1" size="1920,1080" transparent="0"/>
+
+        <!-- title -->
+        <widget source="Title" render="Label" transparent="1" zPosition="4" halign="center" valign="center" position="670,0" size="577,40" font="OpenSans; 30" foregroundColor="#ffffff" backgroundColor="#000000"/>
+
+        <!-- About Content -->
+        <widget name="content" zPosition="3" position="245,100" size="600,600" transparent="1" font="OpenSans;26" backgroundColor="#222222" foregroundColor="#ffffff"/>
+
+        <!-- BoxInfo Content -->
+        <widget name="content2" zPosition="3" position="870,100" size="600,600" transparent="1" font="OpenSans;26" backgroundColor="#222222" foregroundColor="#ffffff"/>
+
+
+         <!-- Statusbar -->
+        <widget name="statusbar" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/statusbar-fs8.png" zPosition="10" position="0,980" size="1920,100" alphatest="blend"/>
+        <widget name="txt_statusbar" transparent="1" zPosition="20" valign="center" position="28,1000" size="1000,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="left"/>
+        <widget name="txt_statusbar_info" transparent="1" zPosition="20" valign="center" position="1200,1000" size="320,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="right"/>
+
+
+    </screen>
+
+
+    <!-- Help -->
+
+
+    <screen name="EL_Screen_Help" position="0,0" size="1920,1080" title=" " backgroundColor="#000000" flags="wfNoBorder">
+
+        <!-- background -->
+        <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/background-small-fs8.png" position="0,0" zPosition="1" size="1920,1080" transparent="0"/>
+
+        <!-- title -->
+        <widget source="Title" render="Label" transparent="1" zPosition="4" halign="center" valign="center" position="670,0" size="577,40" font="OpenSans; 30" foregroundColor="#ffffff" backgroundColor="#000000"/>
+
+        <!-- content -->
+        <widget name="content" zPosition="3" position="245,100" size="900,500" transparent="1" font="OpenSans;26" backgroundColor="#222222" foregroundColor="#ffffff"/>
+
+
+         <!-- Statusbar -->
+        <widget name="statusbar" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/statusbar-fs8.png" zPosition="10" position="0,980" size="1920,100" alphatest="blend"/>
+        <widget name="txt_statusbar" transparent="1" zPosition="20" valign="center" position="28,1000" size="1000,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="left"/>
+        <widget name="txt_statusbar_info" transparent="1" zPosition="20" valign="center" position="1200,1000" size="320,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="right"/>
+
+    </screen>
+
+
+    <!-- Settings -->
+
+    <screen name="EL_Screen_Settings" position="0,0" size="1920,1080" title=" " backgroundColor="#000000" flags="wfNoBorder">
+        <!-- background -->
+        <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/background-big-fs8.png" position="0,0" zPosition="1" size="1920,1080" transparent="0"/>
+
+        <!-- title -->
+        <widget source="Title" render="Label" transparent="1" zPosition="4" halign="center" valign="center" position="670,0" size="577,40" font="OpenSans; 30" foregroundColor="#ffffff" backgroundColor="#000000"/>
+
+        <!-- settings -->
+        <widget name="config" zPosition="3" position="245,100" size="1440,490" transparent="1" itemHeight="40" scrollbarMode="showOnDemand" foregroundColor="#ffffff" backgroundColor="#212121" foregroundColorSelected="#ffffff" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/focus-fs8.png" backgroundPixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/sel_bg-fs8.png"/>
+
+        <!-- help -->
+        <widget source="help" render="Label" position="270,660" size="920,100" foregroundColor="#ffffff" backgroundColor="#000000" zPosition="30" transparent="1" font="OpenSans;26" />
+
+        <!-- buttons -->
+        <widget name="btn_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_green-fs8.png" zPosition="6" position="245,848" size="22,22" alphatest="blend"/>
+        <widget name="txt_green" position="285,840" zPosition="9" size="200,37" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" font="OpenSans;24" />
+
+
+         <!-- Statusbar -->
+        <widget name="statusbar" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/statusbar-fs8.png" zPosition="10" position="0,980" size="1920,100" alphatest="blend"/>
+        <widget name="txt_statusbar" transparent="1" zPosition="20" valign="center" position="28,1000" size="1000,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="left"/>
+        <widget name="txt_statusbar_info" transparent="1" zPosition="20" valign="center" position="1200,1000" size="320,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="right"/>
+
+    </screen>
+
+    <!-- Tuning -->
+
+    <screen name="EL_Screen_Tuning" position="0,0" size="1920,1080" title=" " backgroundColor="#000000" flags="wfNoBorder">
+        <!-- background -->
+        <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/background-center-fs8.png" position="0,0" zPosition="1" size="1920,1080" transparent="0"/>
+
+        <!-- title -->
+        <widget source="Title" render="Label" transparent="1" zPosition="10" halign="center" valign="center" position="715,132" size="479,50" font="OpenSans; 30" foregroundColor="#ffffff" backgroundColor="#000000"/>
+
+        <widget name="config" zPosition="3" position="636,200" size="630,560" transparent="1" itemHeight="40" scrollbarMode="showOnDemand" foregroundColor="#ffffff" backgroundColor="#212121" foregroundColorSelected="#ffffff" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/focus-fs8.png" backgroundPixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/sel_bg-fs8.png"/>
+
+        <!-- buttons -->
+        <widget name="btn_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_green-fs8.png" zPosition="6" position="633,780" size="22,22" alphatest="blend"/>
+        <widget name="txt_green" position="673,772" zPosition="9" size="200,37" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" font="OpenSans;24" />
+
+        <widget name="txt_arrows" position="850,772" zPosition="9" size="400,37" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" font="OpenSans;24" />
+
+
+         <!-- Statusbar -->
+        <widget name="statusbar" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/statusbar-fs8.png" zPosition="10" position="0,980" size="1920,100" alphatest="blend"/>
+        <widget name="txt_statusbar" transparent="1" zPosition="20" valign="center" position="28,1000" size="1000,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="left"/>
+        <widget name="txt_statusbar_info" transparent="1" zPosition="20" valign="center" position="1200,1000" size="320,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="right"/>
+
+    </screen>
+
+
+    <!-- Moodlamp -->
+
+    <screen name="EL_Screen_Moodlamp" position="0,0" size="1920,1080" title=" " backgroundColor="#000000" flags="wfNoBorder">
+        <!-- background -->
+        <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/background-big-fs8.png" position="0,0" zPosition="1" size="1920,1080" transparent="0"/>
+
+        <!-- title -->
+        <widget source="Title" render="Label" transparent="1" zPosition="4" halign="center" valign="center" position="670,0" size="577,40" font="OpenSans; 30" foregroundColor="#ffffff" backgroundColor="#000000"/>
+
+        <!-- settings -->
+        <widget name="config" zPosition="3" position="245,100" size="1440,500" transparent="1" itemHeight="40" scrollbarMode="showOnDemand" foregroundColor="#ffffff" backgroundColor="#212121" foregroundColorSelected="#ffffff" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/focus-fs8.png" backgroundPixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/sel_bg-fs8.png"/>
+
+        <!-- help -->
+        <widget source="help" render="Label" position="270,660" size="920,100" foregroundColor="#ffffff" backgroundColor="#000000" zPosition="30" transparent="1" font="OpenSans;26" />
+
+        <!-- buttons -->
+        <widget name="btn_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_green-fs8.png" zPosition="6" position="245,848" size="22,22" alphatest="blend"/>
+        <widget name="txt_green" position="285,840" zPosition="9" size="200,37" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" font="OpenSans;24" />
+
+        <!-- Canvas -->
+        <widget source="canvas_text" render="Label" position="245,340" size="250,0" zPosition="10" halign="left" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1"  font="OpenSans;26" valign="center" />
+        <widget source="Canvas" render="Canvas" position="245,370" zPosition="10" size="1448,0"/>
+
+         <!-- Statusbar -->
+        <widget name="statusbar" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/statusbar-fs8.png" zPosition="10" position="0,980" size="1920,100" alphatest="blend"/>
+        <widget name="txt_statusbar" transparent="1" zPosition="20" valign="center" position="28,1000" size="1000,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="left"/>
+        <widget name="txt_statusbar_info" transparent="1" zPosition="20" valign="center" position="1200,1000" size="320,100" font="OpenSans; 24" foregroundColor="#ffffff" backgroundColor="#000000" halign="right"/>
+
+    </screen>
+
+
+   <!-- PathSelector -->
+
+    <screen name="EL_Screen_PathSelector" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="#000000">
+        <!-- background -->
+        <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/background-big-fs8.png" position="0,0" zPosition="1" size="1920,1080" transparent="0"/>
+
+        <!-- title -->
+        <widget source="Title" render="Label" transparent="1" zPosition="4" halign="center" valign="center" position="670,0" size="577,40" font="OpenSans; 30" foregroundColor="#ffffff" backgroundColor="#000000"/>
+
+        <!-- help -->
+        <widget source="help" render="Label" position="270,660" size="920,100" foregroundColor="#ffffff" backgroundColor="#000000" zPosition="30" transparent="1" font="OpenSans;26" />
+
+        <!-- content -->
+        <widget name="filelist" itemHeight="40" zPosition="10" position="245,80" size="950,326" scrollbarMode="showOnDemand" backgroundColor="#212121" transparent="1"/>
+
+         <!-- buttons -->
+        <widget name="btn_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_red-fs8.png" zPosition="6" position="245,848" size="22,22" alphatest="blend"/>
+        <widget name="btn_redText" position="285,840" zPosition="9" size="200,37" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" font="OpenSans;24" />
+
+        <widget name="btn_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_green-fs8.png" zPosition="6" position="1530,848" size="22,22" alphatest="blend"/>
+        <widget name="btn_greenText" position="1570,840" zPosition="9" size="300,37" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" font="OpenSans;24" />
+
+    </screen>
+
+    <screen name="EL_Screen_ConfigEditor" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="#000000">
+
+        <!-- background -->
+        <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/background-editor-fs8.png" position="0,0" zPosition="1" size="1920,1080" transparent="0"/>
+
+       <!-- title -->
+        <widget source="Title" render="Label" transparent="1" zPosition="4" halign="center" valign="center" position="670,0" size="577,40" font="OpenSans; 30" foregroundColor="#ffffff" backgroundColor="#000000"/>
+
+        <widget name="config" position="193,176" size="808,700" zPosition="6" transparent="1" itemHeight="30" scrollbarMode="showOnDemand" foregroundColor="#ffffff" backgroundColor="#212121" foregroundColorSelected="#ffffff" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/focus-fs8.png" backgroundPixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/sel_bg-fs8.png"/>
+
+        <widget name="pic_leftb" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/left-bottom.png" position="1027,184" size="707,547" zPosition="5" transparent="1" alphatest="blend"/>
+        <widget name="pic_leftt" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/left-top.png" position="1027,184" size="707,547" zPosition="5" transparent="1" alphatest="blend"/>
+        <widget name="pic_topl" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/top-left.png" position="1027,184" size="707,547" zPosition="5" transparent="1" alphatest="blend"/>
+        <widget name="pic_topr" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/top-right.png" position="1027,184" size="707,547" zPosition="5" transparent="1" alphatest="blend"/>
+        <widget name="pic_rightt" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/right-top.png" position="1027,184" size="707,547" zPosition="5" transparent="1" alphatest="blend"/>
+        <widget name="pic_rightb" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/right-bottom.png" position="1027,184" size="707,547" zPosition="5" transparent="1" alphatest="blend"/>
+        <widget name="pic_botr" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/bottom-right.png" position="1027,184" size="707,547" zPosition="5" transparent="1" alphatest="blend"/>
+        <widget name="pic_botl" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/bottom-left.png" position="1027,184" size="707,547" zPosition="5" transparent="1" alphatest="blend"/>
+        <widget name="pic_botmr" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/bottom-middle-right.png" position="1027,184" size="707,547" zPosition="5" transparent="1" alphatest="blend"/>
+        <widget name="pic_botml" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/bottom-middle-left.png" position="1027,184" size="707,547" zPosition="5" transparent="1" alphatest="blend"/>
+        <widget name="pic_floor" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/images/editor/tv-floorstand.png" position="1230,618" size="350,40" zPosition="5" transparent="1" alphatest="blend"/>
+
+        <widget name="infoblock" position="1033,780" size="701,158" valign="center" halign="center" zPosition="11" foregroundColor="white" transparent="1" font="OpenSans; 32"/>
+
+        <!-- buttons -->
+        <widget name="btn_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_green-fs8.png" zPosition="6" position="210,922" size="22,22" alphatest="blend"/>
+        <widget name="btn_greenText" position="250,914" zPosition="9" size="300,37" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" font="OpenSans;24" />
+
+        <widget name="btn_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnigmaLight/skins/default/fullhd/buttons/btn_yellow-fs8.png" zPosition="6" position="510,922" size="22,22" alphatest="blend"/>
+        <widget name="btn_yellowText" position="550,914" zPosition="9" size="400,37" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" font="OpenSans;24" />
+
+        </screen>
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
 	<!-- ## AutoResolution# -->
 	<screen name="ResolutionLabel" position="0,0" size="495,82" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="content" position="7,7" size="480,40" font="Regular;30" borderWidth="3" borderColor="black" transparent="1"/>
