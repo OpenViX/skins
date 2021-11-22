@@ -1,3 +1,3 @@
-installdir = $(datadir)/enigma2/ViX-Night-HD/crossepg
+installdir = $(datadir)/enigma2/ViX-Night-1080/crossepg
 
 dist_install_DATA = *.png
