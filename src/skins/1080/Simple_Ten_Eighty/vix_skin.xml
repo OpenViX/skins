@@ -457,6 +457,82 @@
 		<panel name="PigTemplate"/>
 		<widget name="output" position="780,105" size="1110,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
+
+	<screen name="oscInfo" position="fill" flags="wfNoBorder">
+		<panel name="PigLessTemplate"/>
+		<widget name="output" position="30,123" size="1860,855" foregroundColor="grey" enableWrapAround="1"/>
+	</screen>
+
+	<screen name="oscReaderStats" position="fill" flags="wfNoBorder">
+		<panel name="PigLessTemplate"/>
+		<widget source="output" render="Listbox" position="30,123" size="1860,882"  enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{
+				"default": (50,[
+					MultiContentEntryText(pos = (0, 2), size = (305, 36), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+					MultiContentEntryText(pos = (200, 2), size = (105, 36), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+					MultiContentEntryText(pos = (350, 2), size = (500, 36), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+					MultiContentEntryText(pos = (980, 2), size = (150, 36), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+					MultiContentEntryText(pos = (1135, 2), size = (220, 36), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+					MultiContentEntryText(pos = (1360, 2), size = (195, 36), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+					MultiContentEntryText(pos = (1560, 2), size = (195, 36), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+					MultiContentEntryText(pos = (1760, 2), size = (100, 36), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+					]),
+				"HD": (50,[
+					MultiContentEntryText(pos = (0, 2), size = (305, 36), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+					MultiContentEntryText(pos = (200, 2), size = (105, 36), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+					MultiContentEntryText(pos = (350, 2), size = (500, 36), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+					MultiContentEntryText(pos = (980, 2), size = (150, 36), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+					MultiContentEntryText(pos = (1135, 2), size = (220, 36), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+					MultiContentEntryText(pos = (1360, 2), size = (195, 36), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+					MultiContentEntryText(pos = (1560, 2), size = (195, 36), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+					MultiContentEntryText(pos = (1760, 2), size = (100, 36), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+					]),
+					},
+					"fonts": [gFont("Regular", 30)],
+					"itemHeight": 40
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="oscEntitlements" position="fill" flags="wfNoBorder">
+		<panel name="PigLessTemplate"/>
+		<widget source="output" render="Listbox" position="30,123" size="1860,882" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{
+				"default": (55,[
+						MultiContentEntryText(pos = (0, 10), size = (150, 36), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+						MultiContentEntryText(pos = (175, 10), size = (225, 36), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+						MultiContentEntryText(pos = (455, 10), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+						MultiContentEntryText(pos = (560, 10), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+						MultiContentEntryText(pos = (655, 10), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+						MultiContentEntryText(pos = (755, 10), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+						MultiContentEntryText(pos = (855, 10), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+						MultiContentEntryText(pos = (1000, 10), size = (105, 36), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+						MultiContentEntryText(pos = (1100, 10), size = (120, 36), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+						MultiContentEntryText(pos = (1260, 2), size = (600, 80), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+						]),
+				"HD": (55,[
+						MultiContentEntryText(pos = (0, 10), size = (150, 36), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+						MultiContentEntryText(pos = (175, 10), size = (225, 36), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+						MultiContentEntryText(pos = (455, 10), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+						MultiContentEntryText(pos = (560, 10), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+						MultiContentEntryText(pos = (655, 10), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+						MultiContentEntryText(pos = (755, 10), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+						MultiContentEntryText(pos = (855, 10), size = (90, 36), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+						MultiContentEntryText(pos = (1000, 10), size = (105, 36), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+						MultiContentEntryText(pos = (1100, 10), size = (120, 36), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+						MultiContentEntryText(pos = (1260, 2), size = (600, 80), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+						]),
+				},
+				"fonts": [gFont("Regular", 30),gFont("Regular", 21)],
+				"itemHeight": 85
+			}
+			</convert>
+		</widget>
+	</screen>
 	
 
  	<!-- VIX Script runner -->
