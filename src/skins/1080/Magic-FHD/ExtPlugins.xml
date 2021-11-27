@@ -2964,4 +2964,37 @@
 		<widget source="labe15" render="Label" position="7,750" size="715,90" font="Regular;30" foregroundColor="secondFG"/>
 	</screen>
 
+	<!-- ## QuadPip ## -->
+	<screen name="CreateQuadPipChannelEntry" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="OKBPanel"/>
+		<panel name="HelpBPanel"/>
+		<widget name="list" position="780,119" size="1132,630" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30"
+				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" backgroundColor="black" colorEventProgressbar="blue" foregroundColorEvent="blue"
+				foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
+		<widget name="textChannels" position="735,755" size="1177,55" font="Regular;45" transparent="1" foregroundColor="secondFG" halign="center"/>
+		<widget name="selectedList" position="800,805" size="900,160" font="Regular;30" itemHeight="40" foregroundColor="grey"/>
+		<widget name="description" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+
+	<screen name="QuadPiPChannelSelection" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<panel name="OKBPanel"/>
+		<panel name="HelpBPanel"/>
+		<widget source="ChannelList" render="Listbox" position="755,120" size="1157,750" foregroundColor="grey" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (0,0), size = (1157,50), font=0, text = 0),
+				MultiContentEntryText(pos = (20,50), size = (1147,50), font=1, text = 1),
+				MultiContentEntryText(pos = (20,100), size = (1147,50), font=1, text = 2),
+				MultiContentEntryText(pos = (20,150), size = (1147,50), font=1, text = 3),
+				MultiContentEntryText(pos = (20,200), size = (1147,50), font=1, text = 4),
+				],
+				"fonts": [gFont("Regular",40), gFont("Regular",30)],
+				"itemHeight":250
+				}
+			</convert>
+		</widget>
+	</screen>
+
 </skin>
