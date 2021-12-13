@@ -733,11 +733,12 @@ self.autoResize()
 		<widget name="list" position="150,150" size="780,0" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38" font="Regular;28"/>
 				<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
-if self.timerRunning:
-	titleheight = 30
-else:
-	titleheight = 0
-	self.setTitle(&quot;&quot;)
+titleheight = 30
+#if self.timerRunning:
+#	titleheight = 30
+#else:
+#	titleheight = 0
+#	self.setTitle(&quot;&quot;)
 orgwidth = self.instance.size().width()
 orgheight = self.instance.size().height()
 orgpos = self.instance.position()
