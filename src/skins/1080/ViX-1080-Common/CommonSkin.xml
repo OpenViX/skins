@@ -379,7 +379,7 @@
 	</screen>
 	<screen name="AdapterSetup" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="config" position="143,225" size="480,225" transparent="0" zPosition="10" scrollbarMode="showOnDemand" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png"/>
+		<widget name="config" position="143,225" size="480,225" transparent="0" zPosition="10" scrollbarMode="showOnDemand" itemHeight="38" font="Regular;28" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png"/>
 		<eLabel text=" " position="113,477" zPosition="1" size="540,3" backgroundColor="#008c8c8c"/>
 		<widget source="DNS1text" render="Label" position="143,492" size="270,32" zPosition="1" font="Regular;29" transparent="0" backgroundColor="window-bg"/>
 		<widget source="DNS2text" render="Label" position="143,537" size="270,32" zPosition="1" font="Regular;29" transparent="0" backgroundColor="window-bg"/>
@@ -458,7 +458,7 @@
 	</screen>
 	<screen name="BouquetSelector" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="menu" position="15,161" size="755,768" itemHeight="45" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H45.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="menu" position="15,161" size="755,768" font="Regular;29" itemHeight="45" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H45.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="ChannelContextMenu" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
@@ -591,9 +591,9 @@ self.autoResize()
 		<widget name="now_button_sel" pixmap="epg/now_next_more_on.png" position="45,128" zPosition="1" size="228,51" alphatest="on"/>
 		<widget name="next_button_sel" pixmap="epg/now_next_more_on.png" position="279,128" zPosition="1" size="228,51" alphatest="on"/>
 		<widget name="more_button_sel" pixmap="epg/now_next_more_on.png" position="513,128" zPosition="1" size="228,51" alphatest="on"/>
-		<widget name="now_text" position="75,128" zPosition="2" size="180,51" text="NOW" font="Regular;30" halign="center" valign="center" foregroundColor="#00efefef" backgroundColor="#005c5c5c" transparent="1"/>
-		<widget name="next_text" position="311,128" zPosition="2" size="180,51" text="NEXT" font="Regular;30" halign="center" valign="center" foregroundColor="#00efefef" backgroundColor="#005c5c5c" transparent="1"/>
-		<widget name="more_text" position="542,128" zPosition="2" size="180,51" text="MORE" font="Regular;30" halign="center" valign="center" foregroundColor="#00efefef" backgroundColor="#005c5c5c" transparent="1"/>
+		<widget name="now_text" position="45,120" zPosition="2" size="180,51" text="NOW" font="Regular;30" halign="center" valign="center" foregroundColor="#00efefef" backgroundColor="#005c5c5c" transparent="1"/>
+		<widget name="next_text" position="279,120" zPosition="2" size="180,51" text="NEXT" font="Regular;30" halign="center" valign="center" foregroundColor="#00efefef" backgroundColor="#005c5c5c" transparent="1"/>
+		<widget name="more_text" position="513,120" zPosition="2" size="180,51" text="MORE" font="Regular;30" halign="center" valign="center" foregroundColor="#00efefef" backgroundColor="#005c5c5c" transparent="1"/>
 		<widget name="date" position="750,140" size="270,53" font="Regular;27" backgroundColor="black" valign="center" halign="left" transparent="0"/>
 		<widget source="Event" render="Label" position="1043,615" size="863,375" font="Regular;33" backgroundColor="black" foregroundColor="window-fg" transparent="0" valign="top" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
@@ -677,14 +677,7 @@ self.autoResize()
 
 	<screen name="EventViewContextMenu" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="menu"  render="Listbox" position="15,161" size="755,800" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H57.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand">
-			<convert type="TemplatedMultiContent">
-				{"template": [	MultiContentEntryText(pos = (30,0), size = (698,57), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	) ],
-				"fonts": [gFont("Regular",42)],
-				"itemHeight": 57
-				}
-			</convert>
-		</widget>
+		<widget name="menu"  render="Listbox" position="15,161" size="755,800" font="Regular;33" itemHeight="45" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H45.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="HarddiskSelection" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
@@ -730,7 +723,7 @@ self.autoResize()
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="80,80" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="80,80" alphatest="on"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="80,80" alphatest="on"/>
-		<widget name="list" position="150,150" size="780,0" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38" font="Regular;28"/>
+		<widget name="list" position="150,150" size="780,0" itemHeight="38" font="Regular;28" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png"/>
 				<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
 titleheight = 30
@@ -807,10 +800,8 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<panel name="FullscreenTemplateWithPIGPanel"/>
 		<widget name="waitingtext" position="30,123" size="990,885" font="Regular;32" halign="center" valign="center" transparent="0" foregroundColor="window-fg" backgroundColor="black" zPosition="4"/>
 		<widget name="list" position="30,123" size="990,874" itemHeight="38" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png"
-			foregroundColor="window-fg" backgroundColor="black" transparent="0" enableWrapAround="1" durationWidth="120" dateWidth="245"
-			fontSizesCompact="36,28" fontSizesMinimal="34,30" pbarHeight="20" pbarLargeWidth="72" spaceRight="3" columnsOriginal="270,300"
-			columnsCompactDescription="240,220,240" compactColumn="300" treeDescription="250" partIconeShiftMinimal="8" partIconeShiftCompact="2"
-			partIconeShiftOriginal="3" iconsWidth="33" spaceIconeText="6" font="Regular;32"/>
+			foregroundColor="window-fg" backgroundColor="black" transparent="0" enableWrapAround="1" durationWidth="120" dateWidth="245" pbarHeight="38" pbarLargeWidth="72" spaceRight="3" 
+			iconsWidth="33" spaceIconeText="6" font="Regular;32"/>
 		<widget name="chosenletter" position="30,123" size="990,864" foregroundColor="yellow" font="Regular;75" halign="center" valign="center" transparent="1" zPosition="4"/>
 		<widget name="DescriptionBorder" position="30,900" size="990,0" zPosition="3" transparent="1"/>
 		<widget source="Service" render="Label" position="1043,615" size="668,38" zPosition="2" foregroundColor="orange" backgroundColor="black" font="Bold;33" noWrap="1" transparent="0" valign="top">
@@ -832,16 +823,16 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<panel name="HalfscreenTemplate"/>
 		<widget name="freeDiskSpace" position="15,45" size="615,42" font="Regular;33" halign="right" transparent="1" foregroundColor="menu-title-frgrnd" backgroundColor="menu-time-bkgrnd"/>
 		<widget name="waitingtext" position="15,161" size="755,780" font="Regular;32" halign="center" valign="center" transparent="0" foregroundColor="window-fg" backgroundColor="window-bg" zPosition="4"/>
-		<widget name="list" position="15,161" size="755,780" zPosition="3" scrollbarMode="showOnDemand" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="black" transparent="1" enableWrapAround="1"/>
-		<widget name="DescriptionBorder" position="15,600" size="755,143" zPosition="3" transparent="1"/>
-		<widget source="Service" render="Label" position="15,795" size="630,38" zPosition="1" backgroundColor="black" font="Bold;33" noWrap="1" transparent="1" valign="top" foregroundColor="infobar_service_frgrnd">
+		<widget name="list" position="15,161" size="755,760" zPosition="3" scrollbarMode="showOnDemand" font="Regular;28" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="black" transparent="1" enableWrapAround="1"/>
+		<widget name="DescriptionBorder" position="15,580" size="755,143" zPosition="3" transparent="1"/>
+		<widget source="Service" render="Label" position="15,775" size="630,38" zPosition="1" backgroundColor="black" font="Bold;33" noWrap="1" transparent="1" valign="top" foregroundColor="infobar_service_frgrnd">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="570,795" zPosition="1" size="150,38" transparent="1" backgroundColor="black" font="Bold;33" halign="right" foregroundColor="infobar_service_frgrnd">
+		<widget source="Service" render="Label" position="570,775" zPosition="1" size="150,38" transparent="1" backgroundColor="black" font="Bold;33" halign="right" foregroundColor="infobar_service_frgrnd">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="Service" render="Label" position="15,833" size="747,135" font="Regular;29" backgroundColor="black" foregroundColor="window-fg" valign="top" zPosition="1" transparent="1">
+		<widget source="Service" render="Label" position="16,809" size="747,155" font="Regular;29" backgroundColor="black" foregroundColor="window-fg" valign="top" zPosition="1" transparent="1">
 			<convert type="MovieInfo">MetaDescription</convert>
 		</widget>
 		<widget name="movie_sort" position="5,998" size="53,30" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" zPosition="10" transparent="1" alphatest="on"/>
@@ -849,7 +840,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="MovieListTags" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="list" position="15,161" size="755,804" itemHeight="38" font="Regular;33" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="list" position="15,161" size="755,804" font="Regular;33" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="MovieManager" position="fill" backgroundColor="black" flags="wfNoBorder">
 		<panel name="FullscreenTemplateWithPIGPanel"/>
@@ -923,9 +914,9 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<widget name="DNS" position="195,696" size="300,39" zPosition="1" font="Italic;32" halign="right" foregroundColors="#cccccc,#a72c25,#5d984d" backgroundColor="window-bg" transparent="1"/>
 		<widget name="DNSInfo_Text" position="578,696" size="225,39" zPosition="2" font="Regular;32" backgroundColor="window-bg" transparent="1" foregroundColors="#18000000,#cccccc,#446bb7" text="Info"/>
 		<widget name="DNSInfo_Check" pixmaps="icons/lock_on.png,icons/lock_error.png" position="510,692" size="57,47" alphatest="blend" zPosition="2"/>
-		<widget name="EditSettingsButton" pixmaps="ViX-1080-Common/buttons/button_bluekey.png,ViX-1080-Common/buttons/button_bluekey.png" position="375,797" zPosition="1" size="333,54" transparent="1" alphatest="blend"/>
-		<widget name="EditSettings_Text" position="420,810" size="240,39" zPosition="2" font="Regular;36" backgroundColor="#00868686" halign="center" transparent="1" foregroundColors="#1c1c1c,#1c1c1c,#07255d"/>
-		<widget name="InfoText" position="15,240" size="755,645" zPosition="25" backgroundColor="black" font="Regular;32"/>
+		<widget name="EditSettingsButton" pixmaps="ViX-1080-Common/buttons/blue.png" position="360,1035" size="36,36" scale="1" alphatest="blend" transparent="1"/>
+		<widget name="EditSettings_Text" position="405,1035" size="285,36" zPosition="1" font="Regular;30" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="menu-buttons-bkgrnd2"/>
+	<widget name="InfoText" position="15,240" size="755,645" zPosition="25" backgroundColor="black" font="Regular;32"/>
 	</screen>
 	<screen name="WlanScan" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
@@ -948,7 +939,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="NetworkMountsMenu" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="menulist" position="15,161" size="755,600" itemHeight="57" font="Regular;42" transparent="0" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H57.png"/>
+		<widget name="menulist" position="15,161" size="755,600" font="Regular;42" itemHeight="57" transparent="0" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H57.png"/>
 		<ePixmap pixmap="div-h.png" position="15,915" zPosition="1" size="755,3"/>
 		<widget source="introduction" render="Label" position="15,923" size="755,45" font="Regular;29" halign="center" valign="center" backgroundColor="window-bg" transparent="1"/>
 	</screen>
@@ -1035,15 +1026,15 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<widget source="config" render="Listbox" position="15,275" size="755,600" scrollbarMode="showOnDemand" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H75.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryPixmapAlphaBlend(pos = (8, 2), size = (72, 72), png = 0, flags = BT_SCALE), # index 0 is the isMounted pixmap
-				MultiContentEntryText(pos = (83, 5), size = (300, 38), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the sharename
-				MultiContentEntryText(pos = (375, 8), size = (225, 26), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the IPdescription
-				MultiContentEntryText(pos = (83, 44), size = (525, 26), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the DIRdescription
-				MultiContentEntryPixmapAlphaBlend(pos = (630, 14), size = (72, 72), png = 4, flags = BT_SCALE), # index 4 is the activepng pixmap
-				MultiContentEntryPixmapAlphaBlend(pos = (675, 2), size = (72, 72), png = 5, flags = BT_SCALE), # index 4 is the mounttype pixmap
+				MultiContentEntryPixmapAlphaBlend(pos = (8,2), size = (72,72), png = 0, flags = BT_SCALE), # index 0 is the isMounted pixmap
+				MultiContentEntryText(pos = (83,5), size = (300,38), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the sharename
+				MultiContentEntryText(pos = (375,8), size = (225,26), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the IPdescription
+				MultiContentEntryText(pos = (83,44), size = (525,26), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the DIRdescription
+				MultiContentEntryPixmapAlphaBlend(pos = (630,1), size = (72,72), png = 4, flags = BT_SCALE), # index 4 is the activepng pixmap
+				MultiContentEntryPixmapAlphaBlend(pos = (675,2), size = (72,72), png = 5, flags = BT_SCALE), # index 4 is the mounttype pixmap
 				],
 				"fonts": [gFont("Regular", 30),gFont("Regular", 21)],
-				"itemHeight": 74
+				"itemHeight": 75
 				}
 			</convert>
 		</widget>
@@ -1052,9 +1043,9 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="LogManager" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="list" position="15,161" size="755,38*19" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="list" position="15,161" size="755,38*19" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H45.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
-			self["list"].instance.setItemHeight(38)
+			self["list"].instance.setItemHeight(45)
 		</applet>
 		<widget name="LogsSize" position="15,915" size="755,38" foregroundColor="window-fg" font="Regular;29" halign="center" backgroundColor="window-bg" transparent="0"/>
 	</screen>
@@ -1337,7 +1328,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="LED_GigaSetup" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent" title="GigaBlue LED Setup">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="config" position="30,161" size="735,743" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H57.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="30,161" size="735,743" font="Regular;33" itemHeight="57" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H57.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="TunerServer" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
@@ -1349,7 +1340,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<screen name="OpenWebifConfig" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
 		<widget name="lab1" position="15,161" halign="center" size="755,45" zPosition="1" font="Regular;36" valign="top" transparent="0"/>
-		<widget name="config" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="15,221" size="755,740" scrollbarMode="showOnDemand"/>
+		<widget name="config" font="Regular;33" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="15,221" size="755,740" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="Scart" position="fill" backgroundColor="transparent"/>
 	<screen name="ServiceInfoSimple" position="center,center" size="975,450" title="Service info">
@@ -1471,8 +1462,8 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<widget name="lab2" position="360,209" size="225,36" font="Regular;30" valign="center" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<widget name="labstop" position="585,204" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
 		<widget name="labrun" position="585,204" size="150,36" font="Regular;30" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
-		<widget source="list" render="Listbox" position="15,248" size="755,600" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38"
-			font="Regular;28" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1">
+		<widget source="list" render="Listbox" position="15,248" size="755,600" itemHeight="38" font="Regular;28" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" 
+				foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="StringList"/>
 		</widget>
 		<widget name="key" position="15,908" size="755,38" font="Regular;30" halign="center" transparent="1" valign="center" backgroundColor="window-bg"/>
@@ -1529,7 +1520,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<panel name="HalfscreenTemplate"/>
 		<widget name="timer1" position="15,161" size="755,75" selectionDisabled="1" scrollbarMode="showNever"/>
 		<widget name="timer2" position="15,320" size="755,75" selectionDisabled="1" scrollbarMode="showNever"/>
-		<widget name="list" position="15,455" size="755,488" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
+		<widget name="list" position="15,455" size="755,488" font="Regular;30" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="TimerSelection" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
@@ -1541,7 +1532,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="WebIfConfigScreen" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="config" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="15,161" size="755,800" scrollbarMode="showOnDemand"/>
+		<widget name="config" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" position="15,161" size="755,800" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="VirtualKeyBoard" position="center,center" size="1080,653" zPosition="99">
 		<widget name="prompt" position="68,15" size="945,90" font="Regular;38" transparent="1" valign="center"/>
@@ -1668,7 +1659,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<screen name="VideoWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
 		<panel name="WizardPanel"/>
 		<widget name="text" position="225,210" size="1095,375" font="Regular;35" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
-		<widget source="list" render="Listbox" position="375,600" size="945,330" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" font="Regular;32" itemHeight="38" transparent="1" backgroundColor="black" scrollbarMode="showOnDemand" zPosition="3">
+		<widget source="list" render="Listbox" position="375,600" size="945,330" font="Regular;32" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" transparent="1" backgroundColor="black" scrollbarMode="showOnDemand" zPosition="3">
 			<convert type="StringList"/>
 		</widget>
 		<widget name="config" position="375,600" zPosition="1" size="945,330" transparent="1" font="Regular;32" itemHeight="38" backgroundColor="black" scrollbarMode="showOnDemand"/>
@@ -1873,11 +1864,11 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<widget source="package" render="Label" position="15,240" size="755,30" font="Regular;27" halign="center" valign="center" backgroundColor="window-bg" transparent="0"/>
 		<widget source="status" render="Label" position="15,285" size="755,143" font="Regular;30" halign="center" valign="center" backgroundColor="window-bg" transparent="0"/>
 		<widget name="slider" position="15,450" size="755,45"/>
-		<widget name="feedStatusMSG" render="Label" position="15,750" size="755,45" font="Regular;33" backgroundColor="window-bg" transparent="1" halign="center" valign="center" zPosition="1" />
+		<widget name="feedStatusMSG" position="15,750" size="755,45" font="Regular;33" backgroundColor="window-bg" transparent="1" halign="center" valign="center" zPosition="1" />
 	</screen>
 	<screen name="IPKGMenu" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="filelist" position="15,161" size="755,789" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="filelist" position="15,161" size="755,789" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="IPKGSource" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
@@ -1907,15 +1898,15 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="BackupSelection" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="checkList" position="15,161" size="755,789" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="checkList" position="15,161" size="755,789" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="XtraPluginsSelection" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="checkList" position="15,161" size="755,789" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="checkList" position="15,161" size="755,789" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="RestoreMenu" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="filelist" position="15,161" size="755,789" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" itemHeight="38" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
+		<widget name="filelist" position="15,161" size="755,789" itemHeight="38" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0" scrollbarMode="showOnDemand"/>
 	</screen>
 	<!-- Misc Screens -->
 	<screen name="JobView" position="center,center" size="780,375">
@@ -2848,11 +2839,11 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="CCcamInfoMain" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="menu" position="15,161" size="755,44*16" itemHeight="44" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H54.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="menu" position="15,161" size="755,44*16" itemHeight="54" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H54.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="CCcamInfoEcmInfoSelection" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="list" position="15,161" size="755,675" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="list" position="15,161" size="755,648" itemHeight="54" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H54.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="CCcamInfoInfoScreen" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
@@ -2860,7 +2851,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="CCcamShareViewMenu" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="list" position="15,161" size="755,555" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="list" position="15,161" size="755,540" itemHeight="54" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H54.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<eLabel text="" position="15,783" size="755,3" font="Regular;21" backgroundColor="white"/>
 		<widget name="uphops" position="15,810" size="360,38" font="Regular;30"/>
 		<widget name="cards" position="405,810" size="330,38" halign="right" font="Regular;30"/>
@@ -2870,13 +2861,13 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="CCcamInfoSubMenu" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="list" position="15,161" size="755,375" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="list" position="15,161" size="755,378" itemHeight="54" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H54.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<eLabel text="" position="15,581" size="755,3" font="Regular;21" backgroundColor="white"/>
 		<widget name="info" position="15,593" size="755,248" font="Regular;24" transparent="0"/>
 	</screen>
 	<screen name="CCcamInfoServerMenu" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="list" position="15,161" size="755,375" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="list" position="15,161" size="755,378" itemHeight="54" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H54.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<eLabel text="" position="15,581" size="755,3" font="Regular;21" backgroundColor="white"/>
 		<widget name="info" position="15,593" size="755,248" font="Regular;24" transparent="0"/>
 	</screen>
@@ -2886,12 +2877,12 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="CCcamInfoRemoteBoxMenu" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
-		<widget name="list" position="15,161" size="755,675" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="list" position="15,161" size="755,648" itemHeight="54" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H54.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 		<panel name="MenuButton1Panel"/>
 	</screen>
 	<screen name="CCcamInfoShareInfo" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="list" position="15,161" size="755,675" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H90.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="list" position="15,161" size="755,630" itemHeight="90" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H90.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="CCcamInfoConfigSwitcher" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
@@ -2899,20 +2890,20 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="CCcamInfoMenuConfig" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="list" position="15,161" size="755,675" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="list" position="15,161" size="755,648" itemHeight="54" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H54.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="OscamInfoMenu" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
-		<widget name="mainmenu" position="15,161" itemHeight="40" size="755,40*17" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H45.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="mainmenu" position="15,161" itemHeight="45" size="755,40*17" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H45.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="oscECMInfo" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
-		<widget name="output" position="15,161" size="755,675" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="output" position="15,161" size="755,648" itemHeight="54" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H54.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="OscamInfoConfigScreen" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MenuPanel"/>
 		<panel name="HalfscreenConfig252"/>
-		<widget name="status" position="15,585" size="755,360" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H38.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
+		<widget name="status" position="15,585" size="755,324" itemHeight="54" selectionPixmap="ViX-1080-Common/buttons/FocusBar_H54.png" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
 	</screen>
 	<screen name="VIXIPKInstaller" position="0,0" size="812,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="HalfscreenTemplate"/>
