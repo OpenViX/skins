@@ -1,1 +1,1 @@
-SUBDIRS = plugins skins
+SUBDIRS = skins
