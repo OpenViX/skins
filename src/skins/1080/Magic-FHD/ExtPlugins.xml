@@ -973,12 +973,12 @@
 		<widget name="infotext4" position="10,585" size="725,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 	</screen>
 	<screen name="TVPanel2">
-		<widget name="menu" position="635,120" size="1277,810" foregroundColor="grey" zPosition="2"/>
+<!--	<widget name="menu" position="635,120" size="1277,810" foregroundColor="grey" zPosition="2"/>-->
 		<widget name="textpage" position="635,120" size="1277,790" font="Regular;33" foregroundColor="grey" zPosition="1"/>
 		<widget name="picpost" position="7,120" size="490,245" alphatest="blend" zPosition="1"/>
 		<widget name="piclabel" position="75,380" size="150,35" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#CD006C" valign="center" halign="center"/>
 		<widget name="piclabel2" position="235,380" size="150,35" font="Regular;28" foregroundColor="#CD006C" backgroundColor="#FFFFFF" valign="center" halign="center"/>
-		<widget name="infotext" position="7,435" size="625,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
+<!--	<widget name="infotext" position="7,435" size="625,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>-->
 		<widget name="infotext2" position="7,485" size="625,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 		<widget name="infotext3" position="10,535" size="625,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 		<widget name="infotext4" position="10,585" size="625,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
@@ -989,7 +989,7 @@
 		<widget name="label4" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1"/>
 		<widget name="label3" position="830,1023" size="400,45" font="buttons;33" foregroundColor="buttonyellow" backgroundColor="secondBG" transparent="1"/>
 		<eLabel text="Hide" position="1235,1023" size="400,45" font="buttons;30" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1"/>
-		<widget name="label" position="7,960" size="1900,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
+		<widget name="label" position="7,970" size="1900,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 	</screen>
 	<screen name="TVPanelBasic2">
 		<panel name="BasicTemplate2"/>
@@ -997,35 +997,39 @@
 		<widget name="label4" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1"/>
 		<widget name="label3" position="830,1023" size="400,45" font="buttons;33" foregroundColor="buttonyellow" backgroundColor="secondBG" transparent="1"/>
 		<eLabel text="Hide" position="1235,1023" size="400,45" font="buttons;30" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1"/>
-		<widget name="label" position="7,960" size="1900,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
+		<widget name="label" position="7,970" size="1900,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 	</screen>
 
-		<!-- ## Panels ## -->
+		<!-- ## Screens ## -->
 	<screen name="tvMain" position="fill" flags="wfNoBorder" title="TV Spielfilm">
 		<panel name="BasicTemplate"/>
+		<panel name="MenuBPanel"/>
+		<widget name="release" position="300,46" size="0,0"/> #To reduce debug noise.
 		<widget name="label" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" backgroundColor="secondBG" transparent="1"/>
 		<widget name="label2" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1"/>
-		<panel name="MenuBPanel"/>
-		<widget name="mainmenu" position="935,120" size="300,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showNever"/>
-		<widget name="secondmenu" position="935,120" size="300,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showNever"/>
-		<widget name="thirdmenu" position="935,120" size="300,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showNever"/>
+		<widget name="label5" position="1050,1023" size="350,45" font="buttons;33" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1"/>
+		<widget name="bluebutton" position="250,790" size="0,0"/> #To reduce debug noise.
+		<widget name="mainmenu" position="835,120" size="400,410" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+		<widget name="secondmenu" position="835,120" size="400,410" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+		<widget name="thirdmenu" position="835,120" size="400,410" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="tvsConfig" position="fill" flags="wfNoBorder" title="TV Spielfilm - configuratuion">
 		<panel name="BasicTemplate"/>
 		<eLabel text="Cancel" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred"/>
 		<eLabel text="OK" position="425,1023" size="400,45" foregroundColor="buttongreen" font="buttons;33"/>
+		<widget name="release" position="300,46" size="0,0"/> #To reduce debug noise.
 		<widget name="config" position="755,120" size="1157,855" font="Regular;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="plugin" position="100,630" size="600,375" alphatest="blend"/>
 	</screen>
 	<screen name="TVTippsView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic1"/>
 		<panel name="TVPanel"/>
-	<widget name="tvinfo1" position="1095,75" size="135,90" alphatest="blend"/>
-	<widget name="tvinfo2" position="1095,165" size="135,90" alphatest="blend"/>
-	<widget name="tvinfo3" position="1095,255" size="135,90" alphatest="blend"/>
-	<widget name="tvinfo4" position="1095,345" size="135,90" alphatest="blend"/>
-	<widget name="tvinfo5" position="1095,435" size="135,90" alphatest="blend"/>
-	<widget name="tvinfo6" position="1095,525" size="135,90" alphatest="blend"/>
+		<widget name="tvinfo1" position="1095,75" size="135,90" alphatest="blend"/>
+		<widget name="tvinfo2" position="1095,165" size="135,90" alphatest="blend"/>
+		<widget name="tvinfo3" position="1095,255" size="135,90" alphatest="blend"/>
+		<widget name="tvinfo4" position="1095,345" size="135,90" alphatest="blend"/>
+		<widget name="tvinfo5" position="1095,435" size="135,90" alphatest="blend"/>
+		<widget name="tvinfo6" position="1095,525" size="135,90" alphatest="blend"/>
 	</screen>
 	<screen name="tvTipps" position="7,540" size="1900,470" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="picture" position="20,0" size="387,270" alphatest="blend"/>
@@ -1034,23 +1038,22 @@
 		<widget name="label" position="5,307" size="1800,45" font="Regular;33" foregroundColor="secondFG"/>
 		<widget name="label2" position="5,353" size="1800,45" font="Regular;33" foregroundColor="secondFG"/>
 		<widget name="label3" position="5,399" size="1800,70" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="elabel" position="420,0" size="150,150" font="Regular;28" zPosition="1"/>
 		<widget name="elabel3" position="420,150" size="353,125" font="Regular;28" zPosition="1"/>
-		<widget name="elabel2" position="575,0" size="100,100" font="Regular;28" zPosition="1"/>
+		<widget name="thumb" position="380,280" size="40,40" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/icons/rating-small1FHD.png" alphatest="blend" zPosition="2"/>
 	</screen>
-	<screen name="TVProgrammView" position="fill" flags="wfNoBorder">
+	<screen name="XXXTVProgrammView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic2"/>
 		<panel name="TVPanel2"/>
 	</screen>
-	<screen name="TVNeuView" position="fill" flags="wfNoBorder">
+	<screen name="XXXTVNeuView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic1"/>
 		<panel name="TVPanel"/>
 	</screen>
-	<screen name="TVGenreView" position="fill" flags="wfNoBorder">
+	<screen name="XXXTVGenreView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic2"/>
 		<panel name="TVPanel2"/>
 	</screen>
-	<screen name="TVJetztView" position="fill" flags="wfNoBorder">
+	<screen name="XXXTVJetztView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic2"/>
 		<panel name="TVPanel2"/>
 	</screen>
@@ -1066,12 +1069,20 @@
 	</screen>
 	<screen name="TVNews" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
+		<panel name="OKBPanel"/>
+		<widget name="release" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="release" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="picpost" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="playlogo" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="statuslabel" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="bluebutton" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="label5" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="menu" position="735,120" size="1177,850" font="Regular;33" foregroundColor="grey" scrollbarMode="showAlways"/>
+		<widget name="textpage" position="735,120" size="1177,850" font="Regular;33" zPosition="0"/>
 		<eLabel text="Hide" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1"/>
-		<widget name="previewtext" position="735,120" size="1177,695" font="Regular;33" foregroundColor="grey"/>
-		<widget name="menu" position="735,820" size="1177,185" font="RegularSmall;33" foregroundColor="grey"/>
 		<widget name="picture" position="7,120" size="600,400" alphatest="blend"/>
-		<widget name="topictext" position="7,525" size="600,45" font="Regular;33" foregroundColor="grey"/>
-		<widget name="picturetext" position="7,575" size="600,90" font="Regular;33" foregroundColor="grey"/>
+		<widget name="picturetext" position="7,530" size="600,180" font="Regular;33" foregroundColor="grey"/>
+		<widget name="label" position="7,970" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="PlayboyPicShow" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
@@ -1113,49 +1124,90 @@
 	</screen>
 	<screen name="gotoPageMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="pagemenu" position="800,120" size="400,855" font="Regular;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
+		<widget name="pagemenu" position="800,120" size="620,840" scrollbarMode="showAlways"/>
 	</screen>
 	<screen name="TVHeuteView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic2"/>
 		<panel name="TVPanel2"/>
-		<widget name="sender1" position="9,200" size="212,45" font="Regular;33"/>
-		<widget name="sender2" position="298,200" size="212,45" font="Regular;33"/>
-		<widget name="sender3" position="586,200" size="212,45" font="Regular;33"/>
-		<widget name="sender4" position="874,200" size="212,45" font="Regular;33"/>
-		<widget name="sender5" position="1162,200" size="212,45" font="Regular;33"/>
-		<widget name="sender6" position="1451,200" size="212,45" font="Regular;33"/>
-		<widget name="logo1" position="229,200" size="61,33" alphatest="blend"/>
-		<widget name="logo2" position="517,200" size="61,33" alphatest="blend"/>
-		<widget name="logo3" position="805,200" size="61,33" alphatest="blend"/>
-		<widget name="logo4" position="1094,200" size="61,33" alphatest="blend"/>
-		<widget name="logo5" position="1382,200" size="61,33" alphatest="blend"/>
-		<widget name="logo6" position="1670,200" size="61,33" alphatest="blend"/>
-		<widget name="pic1" position="9,233" size="281,166" alphatest="blend"/>
-		<widget name="pic2" position="298,233" size="281,166" alphatest="blend"/>
-		<widget name="pic3" position="586,233" size="281,166" alphatest="blend"/>
-		<widget name="pic4" position="874,233" size="281,166" alphatest="blend"/>
-		<widget name="pic5" position="1162,233" size="281,166" alphatest="blend"/>
-		<widget name="pic6" position="1451,233" size="281,166" alphatest="blend"/>
-		<widget name="pictime1" position="9,406" size="84,40" font="Regular;30" halign="center"/>
-		<widget name="pictime2" position="298,406" size="84,40" font="Regular;30" halign="center"/>
-		<widget name="pictime3" position="586,406" size="84,40" font="Regular;30" halign="center"/>
-		<widget name="pictime4" position="874,406" size="84,40" font="Regular;30" halign="center"/>
-		<widget name="pictime5" position="1162,406" size="84,40" font="Regular;30" halign="center"/>
-		<widget name="pictime6" position="1451,406" size="84,40" font="Regular;30" halign="center"/>
-		<widget name="pictext1" position="101,406" size="184,40" font="Regular;30"/>
-		<widget name="pictext2" position="389,406" size="184,40" font="Regular;30"/>
-		<widget name="pictext3" position="677,406" size="184,40" font="Regular;30"/>
-		<widget name="pictext4" position="966,406" size="184,40" font="Regular;30"/>
-		<widget name="pictext5" position="1254,406" size="184,40" font="Regular;30"/>
-		<widget name="pictext6" position="1542,406" size="184,40" font="Regular;30"/>
-		<widget name="menu1" position="9,466" size="281,480" scrollbarMode="showNever"/>
-		<widget name="menu2" position="298,466" size="281,480" scrollbarMode="showNever"/>
-		<widget name="menu3" position="586,466" size="281,480" scrollbarMode="showNever"/>
-		<widget name="menu4" position="874,466" size="281,480" scrollbarMode="showNever"/>
-		<widget name="menu5" position="1162,466" size="281,480" scrollbarMode="showNever"/>
-		<widget name="menu6" position="1451,466" size="281,480" scrollbarMode="showNever"/>
-		<widget name="searchtext" position="10,130" size="1900,100" font="Regular;36" foregroundColor="secondFG" halign="center"/>
-		<widget name="searchmenu" position="250,235" size="1250,600" font="Regular;33" foregroundColor="grey"/>
+		<panel name="MenuBPanel"/>
+		<panel name="InfoBPanel"/>
+		<panel name="PrevBPanel"/>
+		<panel name="NextBPanel"/>
+		<widget name="release" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="bluebutton" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="label5" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="seitennr" position="1,70" size="1355,36" font="Regular;28" foregroundColor="secondFG" halign="center"/>
+		<widget name="label6" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="sender0" position="15,120" size="300,36" font="Regular;30" zPosition="1"/>
+		<widget name="sender1" position="320,120" size="300,36" font="Regular;30" zPosition="1"/>
+		<widget name="sender2" position="625,120" size="300,36" font="Regular;30" zPosition="1"/>
+		<widget name="sender3" position="930,120" size="300,36" font="Regular;30" zPosition="1"/>
+		<widget name="sender4" position="1235,120" size="300,36" font="Regular;30" zPosition="1"/>
+		<widget name="sender5" position="1540,120" size="300,36" font="Regular;30" zPosition="1"/>
+		<widget name="picon0" position="217,157" size="100,60" alphatest="blend" zPosition="1"/>
+		<widget name="picon1" position="522,157" size="100,60" alphatest="blend" zPosition="1"/>
+		<widget name="picon2" position="827,157" size="100,60" alphatest="blend" zPosition="1"/>
+		<widget name="picon3" position="1132,157" size="100,60" alphatest="blend" zPosition="1"/>
+		<widget name="picon4" position="1437,157" size="100,60" alphatest="blend" zPosition="1"/>
+		<widget name="picon5" position="1742,157" size="100,60" alphatest="blend" zPosition="1"/>
+		<widget name="pic0" position="15,157" size="201,168" alphatest="blend" zPosition="1"/>
+		<widget name="pic1" position="320,157" size="201,168" alphatest="blend" zPosition="1"/>
+		<widget name="pic2" position="625,157" size="201,168" alphatest="blend" zPosition="1"/>
+		<widget name="pic3" position="930,157" size="201,168" alphatest="blend" zPosition="1"/>
+		<widget name="pic4" position="1235,157" size="201,168" alphatest="blend" zPosition="1"/>
+		<widget name="pic5" position="1540,157" size="201,168" alphatest="blend" zPosition="1"/>
+		<widget name="pictime0" position="230,217" size="80,38" font="Regular;28" valign="top" halign="center" zPosition="1"/>
+		<widget name="pictime1" position="535,217" size="80,38" font="Regular;28" valign="top" halign="center" zPosition="1"/>
+		<widget name="pictime2" position="840,217" size="80,38" font="Regular;28" valign="top" halign="center" zPosition="1"/>
+		<widget name="pictime3" position="1145,217" size="80,38" font="Regular;28" valign="top" halign="center" zPosition="1"/>
+		<widget name="pictime4" position="1450,217" size="80,38" font="Regular;28" valign="top" halign="center" zPosition="1"/>
+		<widget name="pictime5" position="1755,217" size="80,38" font="Regular;28" valign="top" halign="center" zPosition="1"/>
+		<widget name="pictext0" position="15,323" size="290,68" font="Regular;24" valign="top" zPosition="1"/>
+		<widget name="pictext1" position="320,323" size="290,68" font="Regular;24" valign="top" zPosition="1"/>
+		<widget name="pictext2" position="625,323" size="290,68" font="Regular;24" valign="top" zPosition="1"/>
+		<widget name="pictext3" position="930,323" size="290,68" font="Regular;24" valign="top" zPosition="1"/>
+		<widget name="pictext4" position="1235,323" size="290,68" font="Regular;24" valign="top" zPosition="1"/>
+		<widget name="pictext5" position="1540,323" size="290,68" font="Regular;24" valign="top" zPosition="1"/>
+		<widget name="menu0" position="15,397" size="300,552" scrollbarMode="showNever" zPosition="1"/>
+		<widget name="menu1" position="320,397" size="300,552" scrollbarMode="showNever" zPosition="1"/>
+		<widget name="menu2" position="625,397" size="300,552" scrollbarMode="showNever" zPosition="1"/>
+		<widget name="menu3" position="930,397" size="300,552" scrollbarMode="showNever" zPosition="1"/>
+		<widget name="menu4" position="1235,397" size="300,552" scrollbarMode="showNever" zPosition="1"/>
+		<widget name="menu5" position="1540,397" size="300,552" scrollbarMode="showNever" zPosition="1"/>
+		<widget name="searchtext" position="365,142" size="1430,95" font="Regular;38" valign="center" zPosition="1"/>
+		<widget name="searchmenu" position="15,242" size="1830,720" scrollbarMode="showNever" zPosition="1"/>
+		<widget name="picpost" position="700,137" size="454,255" alphatest="blend" zPosition="1"/>
+		<widget name="infotext0" position="15,137" size="545,40" font="Regular;30" foregroundColor="grey" zPosition="1"/>
+		<widget name="infotext1" position="15,174" size="545,40" font="Regular;30" foregroundColor="grey" zPosition="1"/>
+		<widget name="infotext2" position="15,212" size="545,52" font="Regular;42" foregroundColor="grey" zPosition="1"/>
+		<widget name="infotext3" position="15,264" size="545,40" font="Regular;30" foregroundColor="grey" zPosition="1"/>
+		<widget name="infotext4" position="1260,137" size="540,40" font="Regular;30" foregroundColor="grey" zPosition="1"/>
+		<widget name="infotext5" position="1260,174" size="540,40" font="Regular;30" foregroundColor="grey" zPosition="1"/>
+		<widget name="infotext6" position="1155,212" size="645,40" font="Regular;30" foregroundColor="grey" zPosition="1"/>
+		<widget name="infotext7" position="1155,264" size="645,40" font="Regular;30" foregroundColor="grey" zPosition="1"/>
+		<widget name="infotext8" position="1155,302" size="645,40" font="Regular;30" foregroundColor="grey" zPosition="1"/>
+		<widget name="tvinfo0" position="15,309" size="60,19" alphatest="blend" zPosition="1"/>
+		<widget name="tvinfo1" position="82,309" size="60,19" alphatest="blend" zPosition="1"/>
+		<widget name="tvinfo2" position="150,309" size="60,19" alphatest="blend" zPosition="1"/>
+		<widget name="tvinfo3" position="217,309" size="60,19" alphatest="blend" zPosition="1"/>
+		<widget name="tvinfo4" position="285,309" size="60,19" alphatest="blend" zPosition="1"/>
+		<widget name="ratinglabel0" position="15,339" size="110,30" font="Regular;21" halign="center" zPosition="1"/>
+		<widget name="ratingdot0" position="38,365" size="60,22" alphatest="blend" zPosition="1"/>
+		<widget name="ratinglabel1" position="125,339" size="110,30" font="Regular;21" halign="center" zPosition="1"/>
+		<widget name="ratingdot1" position="147,365" size="60,22" alphatest="blend" zPosition="1"/>
+		<widget name="ratinglabel2" position="235,339" size="110,30" font="Regular;21" halign="center" zPosition="1"/>
+		<widget name="ratingdot2" position="257,365" size="60,22" alphatest="blend" zPosition="1"/>
+		<widget name="ratinglabel3" position="345,339" size="110,30" font="Regular;21" halign="center" zPosition="1"/>
+		<widget name="ratingdot3" position="367,365" size="60,22" alphatest="blend" zPosition="1"/>
+		<widget name="ratinglabel4" position="455,339" size="110,30" font="Regular;21" halign="center" zPosition="1"/>
+		<widget name="ratingdot4" position="478,365" size="60,22" alphatest="blend" zPosition="1"/>
+		<widget name="starslabel" position="565,339" size="127,30" font="Regular;21" halign="center" zPosition="0"/>
+		<widget name="starsrating" position="575,365" size="108,22" alphatest="blend" zPosition="1"/>
+		<widget name="piclabel" position="570,137" size="127,30" font="Regular;27" foregroundColor="#FFFFFF" backgroundColor="#CC4942" halign="center" valign="center" zPosition="2"/>
+		<widget name="piclabel2" position="570,167" size="127,30" font="Regular;21" foregroundColor="#CC4942" backgroundColor="#FFFFFF" halign="center" valign="center" zPosition="2"/>
+		<widget name="picon" position="1157,137" size="100,60" alphatest="blend" zPosition="2"/>
+		<widget name="playlogo" position="882,224" size="90,90" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/icons/playFHD.png" alphatest="blend" zPosition="2"/>
+		<widget name="textpage" position="15,392" size="1830,555" font="Regular;33" zPosition="0"/>
 	</screen>
 
 	<!-- ## xbmcWetter ## -->
