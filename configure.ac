@@ -244,8 +244,10 @@ src/skins/1080/ViX-Night-1080/Makefile
 src/skins/1080/ViX-Night-1080/crossepg/Makefile
 src/skins/1080/ViX-Night-1080/epg/Makefile
 src/skins/1080/ViX-Night-1080/icons/Makefile
+src/skins/1080/ViX-Night-1080/infobar/Makefile
 src/skins/1080/ViX-Night-1080/menu/Makefile
 src/skins/1080/ViX-Night-1080/meta/Makefile
+src/skins/1080/ViX-Night-1080/screens/Makefile
 
 src/skins/1080/ViXBMC_1080/Makefile
 src/skins/1080/ViXBMC_1080/buttons/Makefile
