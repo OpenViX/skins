@@ -1329,15 +1329,15 @@
 
 	<screen name="AutoTimerPreview" title="Preview AutoTimer" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<widget source="timerlist" render="Listbox" position="780,105" size="1110,892" backgroundColor="background" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand">
+		<widget source="timerlist" render="Listbox" position="780,105" size="1110,889" backgroundColor="background" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 		{"template": [
-				MultiContentEntryText(pos=(10,5),size=(595,26),text = 3,font = 0,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
-				MultiContentEntryText(pos=(10,32),size=(595,24),text = 0,font = 1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
-				MultiContentEntryText(pos=(10,57),size=(310,24),text = 4,font = 1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
-				MultiContentEntryText(pos=(330,57),size=(240,24),text = 2,font = 1,flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER),
+				MultiContentEntryText(pos=(10,5),size=(1075,42),text = 3,font = 0,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER), # index 3 is the service name,
+				MultiContentEntryText(pos=(10,44),size=(1075,39),text = 0,font = 1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER), # index 0 is the title,
+				MultiContentEntryText(pos=(10,78),size=(1075,39),text = 4,font = 1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER), # index 4 is the time,
+				MultiContentEntryText(pos=(10,78),size=(1075,39),text = 2,font = 1,flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER), # index 2 is the description,
 			],
-		"fonts": [gFont("Regular",33),gFont("Regular",30)],
+		"fonts": [gFont("Regular",35),gFont("Regular",30)],
 		"itemHeight": 127
 		}
 			</convert>
