@@ -3126,7 +3126,7 @@
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 
-	<!-- ## zapstatistic ## -->
+	<!-- ## Zap Statistic ## -->
 	<screen name="ZapStatisticDurationScreen" position="fill" flags="wfNoBorder" title="Zap Statistic">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
@@ -3140,10 +3140,45 @@
 		<widget name="list" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 
+	<!-- ## Simple RSS Reader ## -->
+	<screen name="RSSSummary" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget source="entry" render="Label" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+
+	<screen name="RSSEntryView" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget source="info" render="Label" position="735,120" size="1177,55" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="content" position="735,175" size="1177,800" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+	<screen name="RSSFeedView" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget source="info" render="Label" position="735,120" size="1177,55" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="content" position="735,175" size="1177,800" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget source="content" render="Listbox" position="735,175" size="1177,800" scrollbarMode="showOnDemand">
+				<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos=(0,3), size=(460,294), font=0, flags = RT_HALIGN_LEFT|RT_WRAP, text = 0)
+					],
+				 "fonts": [gFont("Regular",33)],
+				 "itemHeight": 50
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="RSSOverview" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget source="info" render="Label" position="735,120" size="1177,55" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="content" position="735,175" size="1177,800" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget source="summary" render="Label" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<screen name="RSSSetup" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
 
 </skin>
 <!--
-simplerss 
 podcast 
 growlee 
 dvdbackup 
