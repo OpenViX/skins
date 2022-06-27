@@ -3233,7 +3233,38 @@
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 
+	<!-- ## Birthday Reminder ## -->
+	<screen name="BirthdayReminder" position="fill" flags="wfNoBorder" title="Birthday Reminder">
+		<panel name="BasicTemplate"/>
+			<widget name="name" position="735,120" size="300,50" font="Regular;35" foregroundColor="grey" />
+			<widget name="birthday" position="1040,120" size="300,50" font="Regular;35" foregroundColor="grey" />
+			<widget name="age" position="1350,120" size="300,50" font="Regular;35" foregroundColor="grey" />
+			<widget source="list" render="Listbox" position="735,175" size="1177,805" scrollbarMode="showOnDemand">
+				<convert type="TemplatedMultiContent">
+					{"template": [
+							MultiContentEntryText(pos = (0,0), size = (295,45), font=0, flags = RT_HALIGN_LEFT, text = 0),
+							MultiContentEntryText(pos = (300,0), size = (295,45), font=0, flags = RT_HALIGN_CENTER, text = 1),
+							MultiContentEntryText(pos = (600,0), size = (50,45), font=0, flags = RT_HALIGN_RIGHT, text = 2),
+						],
+					"fonts": [gFont("Regular",33)],
+					"itemHeight": 45
+					}
+				</convert>
+			</widget>
+	</screen>
+	<screen name="EditBirthdayScreen" position="fill" flags="wfNoBorder" title="Birthday Reminder edit">
+		<panel name="BasicTemplate"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="error" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
+	</screen>
+	<screen name="BirthdayReminderSettings" position="fill" flags="wfNoBorder" title="Birthday Reminder settings">
+		<panel name="BasicTemplate"/>
+		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+	<screen name="PathSelectionScreen" position="fill" flags="wfNoBorder" title="Birthday Reminder path">
+		<panel name="BasicTemplate"/>
+		<widget name="target" position="735,120" size="1177,50" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="filelist" position="735,180" size="1177,800" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+	</screen>
+
 </skin>
-<!--
-birthdayreminder 
--->
