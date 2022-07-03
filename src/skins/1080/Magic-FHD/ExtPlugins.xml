@@ -945,7 +945,7 @@
 
 	<!-- ## TV-Spielfilm ## -->
 		<!-- ## Panels ## -->
-	<screen name="TVPanel">
+	<screen name="TVPanel1">
 		<widget name="menu" position="735,120" size="1177,810" foregroundColor="grey" zPosition="2"/>
 		<widget name="textpage" position="735,120" size="1177,800" font="Regular;33" foregroundColor="grey" zPosition="1"/>
 		<widget name="picpost" position="7,530" size="490,245" alphatest="blend" zPosition="1"/>
@@ -967,7 +967,7 @@
 		<widget name="infotext3" position="10,535" size="625,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 		<widget name="infotext4" position="10,585" size="625,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 	</screen>
-	<screen name="TVPanelBasic">
+	<screen name="TVPanelBasic1">
 		<panel name="BasicTemplate"/>
 		<widget name="label2" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" backgroundColor="secondBG" transparent="1"/>
 		<widget name="label4" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1"/>
@@ -989,25 +989,27 @@
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
 		<widget name="release" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="waiting" position="780,123" size="1132,822" font="Regular;45" halign="center" valign="center" foregroundColor="grey" zPosition="4"/>
 		<widget name="label" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred" backgroundColor="secondBG" transparent="1"/>
 		<widget name="label2" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1"/>
 		<widget name="label5" position="1050,1023" size="350,45" font="buttons;33" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1"/>
 		<widget name="bluebutton" position="250,790" size="0,0"/> #To reduce debug noise.
-		<widget name="mainmenu" position="835,120" size="400,410" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
-		<widget name="secondmenu" position="835,120" size="400,410" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
-		<widget name="thirdmenu" position="835,120" size="400,410" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+		<widget name="mainmenu" position="1000,120" size="400,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+		<widget name="secondmenu" position="1000,120" size="400,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
+		<widget name="thirdmenu" position="1000,120" size="400,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="tvsConfig" position="fill" flags="wfNoBorder" title="TV Spielfilm - configuratuion">
 		<panel name="BasicTemplate"/>
 		<eLabel text="Cancel" position="22,1023" size="400,45" font="buttons;33" foregroundColor="buttonred"/>
 		<eLabel text="OK" position="425,1023" size="400,45" foregroundColor="buttongreen" font="buttons;33"/>
 		<widget name="release" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="waiting" position="780,123" size="1132,822" font="Regular;45" halign="center" valign="center" foregroundColor="grey" zPosition="4"/>
 		<widget name="config" position="755,120" size="1157,855" font="Regular;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="plugin" position="100,630" size="600,375" alphatest="blend"/>
 	</screen>
 	<screen name="TVTippsView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic1"/>
-		<panel name="TVPanel"/>
+		<panel name="TVPanel1"/>
 		<widget name="tvinfo1" position="1095,75" size="135,90" alphatest="blend"/>
 		<widget name="tvinfo2" position="1095,165" size="135,90" alphatest="blend"/>
 		<widget name="tvinfo3" position="1095,255" size="135,90" alphatest="blend"/>
@@ -1015,23 +1017,22 @@
 		<widget name="tvinfo5" position="1095,435" size="135,90" alphatest="blend"/>
 		<widget name="tvinfo6" position="1095,525" size="135,90" alphatest="blend"/>
 	</screen>
-	<screen name="tvTipps" position="7,540" size="1900,470" flags="wfNoBorder" backgroundColor="transparent">
-		<widget name="picture" position="20,0" size="387,270" alphatest="blend"/>
-		<widget name="label4" position="55,271" size="150,35" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#CD006C" halign="center" valign="center"/>
-		<widget name="label5" position="210,271" size="150,35" font="Regular;28" foregroundColor="#CD006C" backgroundColor="#FFFFFF" halign="center" valign="center"/>
-		<widget name="label" position="5,307" size="1800,45" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="label2" position="5,353" size="1800,45" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="label3" position="5,399" size="1800,70" font="Regular;33" foregroundColor="secondFG"/>
-		<widget name="elabel3" position="420,150" size="353,125" font="Regular;28" zPosition="1"/>
-		<widget name="thumb" position="380,280" size="40,40" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pic/icons/rating-small1FHD.png" alphatest="blend" zPosition="2"/>
-	</screen>
-	<screen name="XXXTVProgrammView" position="fill" flags="wfNoBorder">
-		<panel name="TVPanelBasic2"/>
-		<panel name="TVPanel2"/>
+	<screen name="tvTipps" position="center-585,center+308" size="750,255" flags="wfNoBorder">
+		<widget name="picture" position="8,3" size="379,249" alphatest="blend" zPosition="1" />
+		<widget name="label" position="397,80" size="342,30" font="Regular;21" foregroundColor="#00000000" backgroundColor="green" zPosition="3" />
+		<widget name="label2" position="397,110" size="300,87" font="Regular;22" foregroundColor="blue" backgroundColor="#00ffffff" zPosition="2" />
+		<widget name="label3" position="397,200" size="342,84" font="Regular;30" foregroundColor="grey" backgroundColor="#00000000" zPosition="2" />
+		<widget name="label4" position="397,2" size="100,36" font="Regular;22" foregroundColor="#00ffffff" backgroundColor="#00CC4942" halign="center" valign="center" zPosition="2" />
+		<widget name="label5" position="397,42" size="100,36" font="Regular;18" foregroundColor="#00CC4942" backgroundColor="#00ffffff" halign="center" valign="center" zPosition="2" />
+		<widget name="label6" position="210,205" size="150,36" foregroundColor="#00ffffff" backgroundColor="#00000000" font="Regular;27" zPosition="2" />
+		<widget name="thumb" position="699,134" size="40,40" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pics/FHD/icons/rating-small1.png" alphatest="blend" zPosition="2" />
+		<widget name="1_zapup" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pics/FHD/buttons/button_1_zap_up.png" position="575,2" size="140,36" alphatest="blend" zPosition="0" />
+		<widget name="2_zapdown" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/pics/FHD/buttons/button_2_zap_down.png" position="575,42" size="160,36" alphatest="blend" zPosition="0" />
+		<eLabel name="" position="697,110" size="42,87" backgroundColor="#00ffffff" zPosition="1" />
 	</screen>
 	<screen name="XXXTVNeuView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic1"/>
-		<panel name="TVPanel"/>
+		<panel name="TVPanel1"/>
 	</screen>
 	<screen name="XXXTVGenreView" position="fill" flags="wfNoBorder">
 		<panel name="TVPanelBasic2"/>
@@ -1054,8 +1055,11 @@
 	<screen name="TVNews" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
 		<panel name="OKBPanel"/>
+		<widget name="waiting" position="780,123" size="1132,822" font="Regular;45" halign="center" valign="center" foregroundColor="grey" zPosition="4"/>
 		<widget name="release" position="300,46" size="0,0"/> #To reduce debug noise.
-		<widget name="release" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="OKkey" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="OKtext" position="300,46" size="0,0"/> #To reduce debug noise.
+		<widget name="Line_down" position="300,46" size="0,0"/> #To reduce debug noise.
 		<widget name="picpost" position="300,46" size="0,0"/> #To reduce debug noise.
 		<widget name="playlogo" position="300,46" size="0,0"/> #To reduce debug noise.
 		<widget name="statuslabel" position="300,46" size="0,0"/> #To reduce debug noise.
@@ -1066,28 +1070,6 @@
 		<eLabel text="Hide" position="1235,1023" size="400,45" font="buttons;33" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1"/>
 		<widget name="picture" position="7,120" size="600,400" alphatest="blend"/>
 		<widget name="picturetext" position="7,530" size="600,180" font="Regular;33" foregroundColor="grey"/>
-		<widget name="label" position="7,970" size="0,0"/> #To reduce debug noise.
-	</screen>
-	<screen name="PlayboyPicShow" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<eLabel text="Hide" position="1235,1023" size="400,45" font="Regular;33" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1"/>
-		<widget name="label" position="955,960" size="900,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
-		<widget name="picture" position="955,120" size="700,500" alphatest="blend"/>
-		<widget name="picindex" position="1660,130" size="250,45" font="Regular;33" foregroundColor="grey"/>
-		<widget name="pictext" position="955,650" size="955,100" font="Regular;36" halign="center" foregroundColor="selectedFG"/>
-		<widget name="textpage" position="7,530" size="600,475" font="Regular;30" foregroundColor="grey"/>
-	</screen>
-	<screen name="TVTrailer" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<eLabel text="Hide" position="1235,1023" size="400,45" font="Regular;33" foregroundColor="buttonblue" backgroundColor="secondBG" transparent="1"/>
-		<widget name="menu" position="875,120" size="1040,540" foregroundColor="grey" zPosition="10"/>
-		<widget name="pic1" position="735,120" size="135,90" alphatest="blend"/>
-		<widget name="pic2" position="735,210" size="135,90" alphatest="blend"/>
-		<widget name="pic3" position="735,300" size="135,90" alphatest="blend"/>
-		<widget name="pic4" position="735,390" size="135,90" alphatest="blend"/>
-		<widget name="pic5" position="735,480" size="135,90" alphatest="blend"/>
-		<widget name="pic6" position="735,570" size="135,90" alphatest="blend"/>
-		<widget name="label" position="7,960" size="1900,45" font="Regular;33" foregroundColor="secondFG" halign="center"/>
 	</screen>
 	<screen name="makeServiceFile" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
