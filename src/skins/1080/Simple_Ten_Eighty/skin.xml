@@ -1376,7 +1376,7 @@
 		<panel position="top" size="*,50"/>
 		<panel position="top" size="*,50">
 			<ePixmap pixmap="buttons/red.png" position="left" zPosition="0" size="50,34" transparent="1" alphatest="blend"/>
-			<widget name="languagetext" position="fill" font="Regular;34"/>
+			<widget name="languagetext" position="fill" font="Regular;34" transparent="1" />
 		</panel>
 	</screen>
 	<!-- it's the same screen... -->
@@ -1391,10 +1391,10 @@
 		<panel position="left" size="10,*"/>
 		<panel position="right" size="10,*"/>
 		<panel position="fill">
-			<widget name="text" position="top" size="*,400" font="Regular;34" valign="center"/>
+			<widget name="text" position="top" size="*,400" font="Regular;34" valign="center" transparent="1"/>
 			<widget position="bottom" size="*,50"/>
 			<panel position="fill" layout="stack">
-				<widget source="list" render="Listbox" position="fill" scrollbarMode="showOnDemand">
+				<widget source="list" render="Listbox" position="fill" scrollbarMode="showOnDemand" transparent="1">
 					<convert type="TemplatedMultiContent">
 						{"template": [ MultiContentEntryText(pos = (0,0),size = (1035,42),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
 						"fonts": [gFont("Regular",34)],
