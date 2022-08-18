@@ -1394,10 +1394,10 @@
 			<widget name="text" position="top" size="*,400" font="Regular;34" valign="center" transparent="1"/>
 			<widget position="bottom" size="*,50"/>
 			<panel position="fill" layout="stack">
-				<widget source="list" render="Listbox" position="fill" zPosition="1" font="Regular;34" itemHeight="42" scrollbarMode="showOnDemand" transparent="1">
+				<widget source="list" render="Listbox" position="0,center" size="e,e//42*42" zPosition="1" font="Regular;34" itemHeight="42" scrollbarMode="showOnDemand" transparent="1">
 					<convert type="StringList"/>
 				</widget>
-				<widget name="config" position="fill" zPosition="1" font="Regular;34" itemHeight="42" scrollbarMode="showOnDemand" transparent="1"/>
+				<widget name="config" position="0,center" size="e,e//42*42" zPosition="1" font="Regular;34" itemHeight="42" scrollbarMode="showOnDemand" transparent="1"/>
 			</panel>
 		</panel>
 	</screen>
@@ -1423,7 +1423,7 @@
 					<widget name="portpic" position="top" zPosition="10" size="150,150" transparent="1" alphatest="on"/>
 				</panel>
 				<panel position="fill" layout="stack">
-					<widget source="list" render="Listbox" position="fill" zPosition="1" font="Regular;34" itemHeight="42" scrollbarMode="showOnDemand" transparent="1" backgroundColor="red">
+					<widget source="list" render="Listbox" position="0,center" size="e,e//42*42" zPosition="1" font="Regular;34" itemHeight="42" scrollbarMode="showOnDemand" transparent="1" backgroundColor="red">
 						<convert type="StringList"/>
 					</widget>
 				</panel>
@@ -1439,7 +1439,7 @@
 		<panel position="fill">
 			<widget name="text" position="top" size="*,240" font="Regular;34" valign="center"/>
 			<panel position="bottom" size="*,50"/>
-			<widget source="languages" render="Listbox" position="fill" scrollbarMode="showOnDemand">
+			<widget source="languages" render="Listbox" position="0,center" size="e,e//50*50" scrollbarMode="showOnDemand">
 				<convert type="TemplatedMultiContent">
 					{"template": [
 							MultiContentEntryText(pos = (80, 10), size = (200, 50), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
