@@ -1401,6 +1401,25 @@
 			</panel>
 		</panel>
 	</screen>
+	<!-- MessageBox wizard -->
+	<screen name="MessageBoxWizard" position="fill" flags="wfNoBorder">
+		<panel name="WizardMarginsTemplate"/>
+		<panel name="RemoteControlTemplate"/>
+		<panel position="left" size="10,*"/>
+		<panel position="right" size="10,*"/>
+		<panel position="top" size="*,100"/>
+		<panel position="top" size="*,400">
+			<panel position="left" size="90,*">
+				<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="80,80" alphatest="blend"/>
+				<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="80,80" alphatest="blend"/>
+				<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="80,80" alphatest="blend"/>
+			</panel>
+			<widget name="text" position="fill" font="Regular;34"/>
+		</panel>
+		<panel position="fill">
+			<widget name="list" position="0,center" size="e,e//42*42" itemHeight="42" font="Regular;34"/>	
+		</panel>
+	</screen>
 	<!-- Network wizard -->
 	<screen name="NetworkWizard" position="fill" flags="wfNoBorder">
 		<panel name="DefaultWizard"/>
