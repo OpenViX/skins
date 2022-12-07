@@ -510,19 +510,19 @@
 				{
 				 # Compact template for use when "description" is used
 				  "templates": dict(
-				    dict.fromkeys(("default", "extended"), [
+				    list(dict.fromkeys(("default", "extended"), [
 				      60,  # itemHeight
 				      [
 					MultiContentEntryText(pos=(0, 0), size=(1070, 60), font=1, text=1),
 				      ]
-				    ]).items() +
-				    dict.fromkeys(("default+headings", "extended+headings"), [
+				    ]).items()) +
+				    list(dict.fromkeys(("default+headings", "extended+headings"), [
 				      60,  # itemHeight
 				      [
 					MultiContentEntryText(pos=(0, 0), size=(1070, 60), font=0, text=1),
 					MultiContentEntryText(pos=(20, 0), size=(1050, 60), font=1, text=2),
 				      ]
-				    ]).items()
+				    ]).items())
 				  ),
 				  "fonts": [gFont("Regular", 45), gFont("Regular", 40)],
 				  "itemHeight": 60

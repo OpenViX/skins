@@ -913,19 +913,19 @@ self.autoResize()
 				}
 				# Compact template for use when "description" is used
 				#{ "templates": dict(
-				#    dict.fromkeys(("default", "extended"), [
+				#    list(dict.fromkeys(("default", "extended"), [
 				#      35,  # itemHeight
 				#      [
 				#	MultiContentEntryText(pos=(0, 0), size=(600, 28), font=1, text=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER),
 				#      ]
-				#    ]).items() +
-				#    dict.fromkeys(("default+headings", "extended+headings"), [
+				#    ]).items()) +
+				#    list(dict.fromkeys(("default+headings", "extended+headings"), [
 				#      35,  # itemHeight
 				#      [
 				#	MultiContentEntryText(pos=(0, 0), size=(600, 32), font=0, text=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER),
 				#	MultiContentEntryText(pos=(20, 0), size=(580, 28), font=1, text=2, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER),
 				#      ]
-				#    ]).items()
+				#    ]).items())
 				#  ),
 				#  "fonts": [gFont("vmreg", 28), gFont("vmreg", 24), gFont("vmreg", 18)],
 				#  "itemHeight": 35
