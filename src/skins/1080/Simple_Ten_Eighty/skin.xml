@@ -1785,16 +1785,18 @@
 	<!-- Help -->
 
 	<screen name="HelpMenu" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
-		<panel name="DescriptionTemplate"/>
-		<widget name="list" conditional="arrowdown" position="780,100" size="855,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/><!-- belongs to old HelpMenu -->
-		<widget name="long_key" conditional="long_key" position="1636,922" size="284,30" foregroundColor="yellow" font="Regular;24" halign="center"/><!-- belongs to old HelpMenu -->
-		<widget name="longshift_key0" conditional="longshift_key1" position="1636,922" size="284,30" foregroundColor="yellow" font="Regular;24" halign="center"/>
-		<widget name="longshift_key1" conditional="longshift_key1" position="1636,962" size="284,30" foregroundColor="yellow" font="Regular;24" halign="center"/>
-		<panel position="1659,105" size="154,500">
+		<panel name="PigLessTemplate"/>
+		<panel position="1130,130" size="750,870">
+			<panel name="DescriptionTemplate"/>
+		</panel>
+		<widget name="list" conditional="arrowdown" position="30,100" size="1100,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/><!-- belongs to old HelpMenu -->
+		<widget name="long_key" conditional="long_key" position="1636,922" size="600,30" foregroundColor="yellow" font="Regular;24" halign="center"/><!-- belongs to old HelpMenu -->
+		<widget name="longshift_key0" conditional="longshift_key1" position="1225,615" size="600,30" foregroundColor="yellow" font="Regular;24" halign="center"/>
+		<widget name="longshift_key1" conditional="longshift_key1" position="1225,645" size="600,30" foregroundColor="yellow" font="Regular;24" halign="center"/>
+		<panel position="1447,105" size="154,500">
 			<panel name="RcPanel"/>
 		</panel>
-		<widget source="list" conditional="indicator_u0" render="Listbox" position="780,100" size="855,912" transparent="0" scrollbarMode="showOnDemand">
+		<widget source="list" conditional="indicator_u0" render="Listbox" position="30,100" size="1100,912" transparent="0" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{
 				  "templates": {
@@ -1803,7 +1805,7 @@
 				    "default": [
 				      57,  # itemHeight
 				      [
-					MultiContentEntryText(pos=(0, 0), size=(855, 57), font=1, text=1),
+					MultiContentEntryText(pos=(0, 0), size=(1100, 57), font=1, text=1),
 				      ]
 				    ],
 				    # Simple help with headings
@@ -1812,8 +1814,8 @@
 				    "default+headings": [  # data[1:] = [helpText]
 				      57,  # itemHeight
 				      [
-					MultiContentEntryText(pos=(0, 0), size=(855, 57), font=0, text=1),
-					MultiContentEntryText(pos=(30, 0), size=(825, 57), font=1, text=2),
+					MultiContentEntryText(pos=(0, 0), size=(1100, 57), font=0, text=1),
+					MultiContentEntryText(pos=(30, 0), size=(1070, 57), font=1, text=2),
 				      ]
 				    ],
 				    # Extended help with no headings
@@ -1821,8 +1823,8 @@
 				    "extended": [
 				      86,  # itemHeight
 				      [
-					MultiContentEntryText(pos=(0, 0), size=(855, 45), font=2, text=1),
-					MultiContentEntryText(pos=(0, 60), size=(855, 40), color=0x009e9fa4, font=3, text=2),
+					MultiContentEntryText(pos=(0, 0), size=(1100, 45), font=2, text=1),
+					MultiContentEntryText(pos=(0, 60), size=(1100, 40), color=0x009e9fa4, font=3, text=2),
 				      ],
 				    ],
 				    # Extended help with headings
@@ -1831,9 +1833,9 @@
 				    "extended+headings": [
 				      86,  # itemHeight
 				      [
-					MultiContentEntryText(pos=(0, 14), size=(855, 48), font=0, text=1),
-					MultiContentEntryText(pos=(30, 0), size=(825, 45), font=2, text=2),
-					MultiContentEntryText(pos=(30, 45), size=(825, 40), color=0x009e9fa4, font=3, text=3),
+					MultiContentEntryText(pos=(0, 14), size=(1100, 48), font=0, text=1),
+					MultiContentEntryText(pos=(30, 0), size=(1070, 45), font=2, text=2),
+					MultiContentEntryText(pos=(30, 45), size=(1070, 40), color=0x009e9fa4, font=3, text=3),
 				      ],
 				    ],
 				  },
@@ -1848,7 +1850,7 @@
 				#    "default": [
 				#      57,  # itemHeight
 				#      [
-				#	MultiContentEntryText(pos=(0, 0), size=(855, 42), font=1, text=1),
+				#	MultiContentEntryText(pos=(0, 0), size=(1100, 42), font=1, text=1),
 				#      ]
 				#    ],
 				#    # Simple help with headings
@@ -1857,8 +1859,8 @@
 				#    "default+headings": [
 				#      57,  # itemHeight
 				#      [
-				#	MultiContentEntryText(pos=(0, 0), size=(855, 48), font=0, text=1),
-				#	MultiContentEntryText(pos=(30, 0), size=(825, 42), font=1, text=2),
+				#	MultiContentEntryText(pos=(0, 0), size=(1100, 48), font=0, text=1),
+				#	MultiContentEntryText(pos=(30, 0), size=(1070, 42), font=1, text=2),
 				#      ]
 				#    ],
 				#    # Extended help with no headings
@@ -1866,7 +1868,7 @@
 				#    "extended": [
 				#      57,  # itemHeight
 				#      [
-				#	MultiContentEntryText(pos=(0, 0), size=(855, 42), font=1, text=1),
+				#	MultiContentEntryText(pos=(0, 0), size=(1100, 42), font=1, text=1),
 				#      ]
 				#    ],
 				#    # Extended help with headings
@@ -1875,8 +1877,8 @@
 				#    "extended+headings": [
 				#      57,  # itemHeight
 				#      [
-				#	MultiContentEntryText(pos=(0, 0), size=(855, 48), font=0, text=1),
-				#	MultiContentEntryText(pos=(30, 0), size=(825, 42), font=1, text=2),
+				#	MultiContentEntryText(pos=(0, 0), size=(1100, 48), font=0, text=1),
+				#	MultiContentEntryText(pos=(30, 0), size=(1070, 42), font=1, text=2),
 				#      ]
 				#    ],
 				#  },
@@ -1888,14 +1890,14 @@
 				#    list(dict.fromkeys(("default", "extended"), [
 				#      57,  # itemHeight
 				#      [
-				#	MultiContentEntryText(pos=(0, 0), size=(855, 42), font=1, text=1),
+				#	MultiContentEntryText(pos=(0, 0), size=(1100, 42), font=1, text=1),
 				#      ]
 				#    ]).items()) +
 				#    list(dict.fromkeys(("default+headings", "extended+headings"), [
 				#      57,  # itemHeight
 				#      [
-				#	MultiContentEntryText(pos=(0, 0), size=(855, 48), font=0, text=1),
-				#	MultiContentEntryText(pos=(30, 0), size=(825, 42), font=1, text=2),
+				#	MultiContentEntryText(pos=(0, 0), size=(1100, 48), font=0, text=1),
+				#	MultiContentEntryText(pos=(30, 0), size=(1070, 42), font=1, text=2),
 				#      ]
 				#    ]).items())
 				#  ),
