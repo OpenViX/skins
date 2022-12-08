@@ -24,9 +24,6 @@
 		<alias name="Dreamexplorer" font="Regular" size="30" height="45"/>
 		<alias name="FileList" font="Regular" size="33" height="48"/>
 		<alias name="FileListMulti" font="Regular" size="33" height="48"/>
-		<alias name="HelpMenuList" font="Regular" size="30" height="45"/>
-		<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
-		<alias name="HelpMenuListExt1" font="Regular" size="28"/>
 		<alias name="ImsSelectionList" font="Regular" size="31" height="35"/>
 		<alias name="PluginBrowser0" font="RegularSmall" size="32" height="68"/>
 		<alias name="PluginBrowser1" font="Regular" size="23"/>
@@ -47,9 +44,6 @@
 		<parameter name="ChoicelistIcon" value="7,3,53,38"/>
 		<parameter name="ChoicelistDash" value="0,3,1100,30"/>
 		<parameter name="ChoicelistName" value="68,0,1100,50"/>
-		<parameter name="HelpMenuListHlp" value="0,0,900,42"/>
-		<parameter name="HelpMenuListExtHlp0" value="0,0,900,39"/>
-		<parameter name="HelpMenuListExtHlp1" value="0,42,900,30"/>
 		<parameter name="AllowUserDatesAndTimes" value="1,1"/>
 		<parameter name="ImsSelectionListDescr" value="46,2,1177,45"/>
 		<parameter name="FileListIcon" value="7,2,52,37"/>
@@ -2123,27 +2117,8 @@
 		<panel name="RcPanel"/>
 	</screen>
 	<screen name="HelpMenu" position="fill" flags="wfNoBorder">
-		<panel name="__HelpMenuOld__" conditional="arrowdown"/>
-		<panel name="__HelpMenuNew__" conditional="indicator_u0"/>
-	</screen>
-	<screen name="__HelpMenuOld__" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="735,120" size="1177,855" font="Regular;31" foregroundColor="grey" enableWrapAround="1"/>
-		<panel name="RcPanel"/>
-		<widget name="long_key" position="172,723" size="525,75" foregroundColor="yellow" font="Regular;37" halign="right"/>
-	</screen>
-	<screen name="__HelpMenuNew__" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<!--
-			To display the extended help for the current
-			item in a description widget instead of in
-			a second line in the help list, change the
-			size of the description wizard to something
-			appropriate (e.g. "280,44") and change over
-			to the commented out "extended" template
-			below.
-		-->
-		<widget source="list" render="Listbox" position="735,120" size="858,855" scrollbarMode="showOnDemand" font="Regular;31" foregroundColor="grey" enableWrapAround="1"
+		<widget source="list" conditional="indicator_u0" render="Listbox" position="735,120" size="858,855" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
 			<convert type="TemplatedMultiContent">
 				{
@@ -2256,60 +2231,41 @@
 				#{
 			</convert>
 		</widget>
-		<panel name="RcPanel"/>
-		<widget name="longshift_key0" position="735,965" size="858,40" font="Regular;33" halign="left" foregroundColor="yellow" transparent="0"/>
-		<widget name="longshift_key1" position="735,1005" size="858,40" font="Regular;33" halign="left" foregroundColor="yellow" transparent="0"/>
-	</screen>
-	<screen name="RcPanel" position="fill" flags="wfNoBorder">
-		<panel name="__RcPanelOld__" conditional="arrowdown"/>
-		<panel name="__RcPanelNew__" conditional="indicator_u0"/>
-	</screen>
-	<screen name="__RcPanelOld__" position="fill" flags="wfNoBorder">
-		<widget name="rc" position="1596,154" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="blend" backgroundColor="black" transparent="1"/>
-		<widget name="arrowdown" pixmap="arrowdown.png" position="-150,-150" size="55,105" zPosition="11" alphatest="on"/>
-		<widget name="arrowdown2" pixmap="arrowdown.png" position="-150,-150" size="55,105" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" pixmap="arrowup.png" position="-150,-150" size="55,105" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" pixmap="arrowup.png" position="-150,-150" size="55,105" zPosition="11" alphatest="on"/>
-	</screen>
-	<screen name="__RcPanelNew__" position="fill" flags="wfNoBorder">
-		<widget name="rc" position="1596,154" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="blend" backgroundColor="black" transparent="1"/>
-		<!--+ For the key indicator pixmaps, "position" is used for
-		    | the position of the pixmap "hotspot".
-		    | The screen positions the pixmap relative to the
-		    | hotspot, not the pixmap's top left corner
-		    +-->
-		<widget alphatest="blend" name="indicator_u0" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u1" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u2" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u3" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u4" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u5" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u6" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u7" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u8" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u9" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u10" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u11" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u12" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u13" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u14" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_u15" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l0" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l1" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l2" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l3" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l4" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l5" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l6" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l7" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l8" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l9" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l10" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l11" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l12" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l13" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l14" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
-		<widget alphatest="blend" name="indicator_l15" pixmap="yellow_circle23x23.png" position="1596,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget name="longshift_key0" conditional="longshift_key1" position="50,600" size="650,45" font="Regular;33" foregroundColor="yellow"/>
+		<widget name="longshift_key1" conditional="longshift_key1" position="50,700" size="650,45" font="Regular;33" foregroundColor="yellow"/>
+		<widget name="rc" position="1700,154" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="blend" backgroundColor="black" transparent="1"/>
+		<widget alphatest="blend" name="indicator_u0" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u1" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u2" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u3" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u4" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u5" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u6" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u7" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u8" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u9" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u10" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u11" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u12" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u13" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u14" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_u15" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l0" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l1" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l2" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l3" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l4" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l5" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l6" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l7" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l8" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l9" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l10" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l11" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l12" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l13" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l14" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicator_l15" pixmap="icons/yellow_circle.png" position="1700,154" offset="11,11" size="23,23" zPosition="11"/>
 	</screen>
 	<screen name="AutoTimerOverview" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
