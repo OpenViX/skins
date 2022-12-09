@@ -1114,8 +1114,19 @@
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2" />
-		<widget name="text" position="420,200" size="1080,540" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2" />	
-		<widget name="list" position="420,775" size="1080,240" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="2"/>
+		<widget name="text" position="420,200" size="1080,790" font="menulist;32" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" halign="center" transparent="1" zPosition="2" />	
+		<widget name="list" position="420,1015" size="1080,0" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="2"/>
+		<applet type="onLayoutFinish">
+from enigma import eSize, ePoint
+textsize = 1080, 790
+listsize = 1080, 0
+list_pos = 420, 1015
+listitemheight = 50
+listheight = len(self.list) * listitemheight
+self[&quot;text&quot;].instance.resize(eSize(textsize[0], textsize[1] - listheight))
+self[&quot;list&quot;].instance.move(ePoint(list_pos[0], list_pos[1] - listheight))
+self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
+		</applet>
 	</screen>
 	<screen name="SystemMessage" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
 		<ePixmap pixmap="infobar/menubackground2.png" position="387,45" size="1146,1016" alphatest="blend" zPosition="-1"/>
