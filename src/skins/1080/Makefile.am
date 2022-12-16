@@ -1,1 +1,1 @@
-SUBDIRS = Default1080 Halo iSkin-Light iSkin-Dark iSkin-Common Magic-FHD ViXBMC_1080 ViXBMC_1080_Bello ViXBMC_1080_Common ViXBMC_1080_Confluence YouViX-Blue YouViX-Common YouViX-Green YouViX-Purple YouViX-Red Simple_Ten_Eighty ViX-1080-Common ViX-Day-1080 ViX-Night-1080
+SUBDIRS = Default1080 Halo iSkin-Light iSkin-Dark iSkin-Common Magic-FHD ViXBMC_1080 ViXBMC_1080_Bello ViXBMC_1080_Common ViXBMC_1080_Confluence YouViX-Blue YouViX-Common YouViX-Green YouViX-Purple YouViX-Red Simple_Ten_Eighty
