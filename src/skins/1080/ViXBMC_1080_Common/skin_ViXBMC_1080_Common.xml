@@ -98,14 +98,12 @@
 				}
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoBouquetsMaker_Setup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenPleaseWaitWidget" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenDescriptionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoBouquetsMaker_Ordering" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -120,14 +118,9 @@
 				}
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoBouquetsMaker_ProvidersSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="FullScreenTemplate" />
-		<panel name="FullScreenPleaseWaitWidget" />
-		<panel name="FullScreenConfigWidget" />
-		<panel name="FullScreenDescriptionWidget" />
-		<panel name="ButtonBar" />
+		<panel name="AutoBouquetsMaker_Setup" />
 	</screen>
 	<screen name="AutoBouquetsMaker_HideSections" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -143,7 +136,6 @@
 				}
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoBouquetsMaker_KeepBouquets" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="AutoBouquetsMaker_HideSections" />
@@ -151,12 +143,10 @@
 	<screen name="AutoBouquetsMaker_About" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenAboutWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoBouquetsMaker_Log" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoBouquetsMaker" position="fill" title="CrossEPG" flags="wfNoBorder" backgroundColor="transparent" >
 		<panel name="DownloadBar" />
@@ -169,18 +159,15 @@
 		<widget source="lab2" render="Label" position="22,145" size="850,50" font="screentitle;34" foregroundColor="thirdcolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="3" />
 		<widget source="lab3" render="Label" position="22,190" size="850,50" font="screentitle;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="3" />
 		<widget name="AboutScrollLabel" position="22,290" size="850,650" font="menulist;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="99" split="1" dividechar=":" colposition="0" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="CommitInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<widget name="AboutScrollLabel" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="99" />
 		<widget name="HintText" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="SoftwareUpdateChanges" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<widget name="text" position="22,90" size="850,900" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="3" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="TranslationInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Translation">
 		<panel name="FullScreenTemplate" />
@@ -193,18 +180,16 @@
 	<screen name="AnimationSetupConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Animation Settings" >
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AnimationSetupScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Animation Setup" >
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## AUDIO SELECTION ## -->
 	<screen name="AudioSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="FullScreenTemplate" />
+		<panel name="FullScreenTemplateNoButtonBar" />
 		<widget name="config" position="122,90" size="650,400" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2" />
 		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="22,91" size="67,48" alphatest="blend" zPosition="2">
 			<convert type="ConditionalShowHide" />
@@ -248,47 +233,39 @@
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenFooterWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## AUTO TIMERS ## -->
 	<screen name="AutoTimerHelp" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
 		<panel name="FullScreenTemplate" />
 		<widget name="detailtext" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3"/>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoTimerOverview" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenMenuButton" />
 		<widget name="entries" position="22,90" size="850,840" itemHeight="120" rowSplit1="40" rowSplit2="80" rowHeight="40" iconMargin="5" EventNameFont="menulist;34" ServiceNameFont="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoTimerEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenHelpWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoTimerSettings" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenHelpWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoTimerImporter" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoTimerFilterEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="AutoTimerServiceEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## BUFFER INDICATOR ## -->
@@ -308,7 +285,6 @@
 		<widget name="list" position="22,90" size="800,600" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
 		<widget name="choosen" position="10,720" size="812,120" font="menulist;36" itemHeight="40" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2"/>
 		<panel name="FullScreenDescriptionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## CCCAM INFO ## -->
@@ -348,12 +324,10 @@
 	<screen name="CCcamInfoRemoteBoxMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="CCcamInfoShareInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenList75Widget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="CCcamInfoConfigSwitcher" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="CCcamInfoShareInfo" />
@@ -361,7 +335,6 @@
 	<screen name="CCcamInfoMenuConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## CHANNEL SELECTION ## -->
@@ -414,8 +387,7 @@
 			<convert type="EventName">NextDescription</convert>
 		</widget>
 		<panel name="FullScreenEPGButton" />
-		<panel name="FullScreenInfoButton" />
-		<panel name="FullScreenMenuButton" />
+		<panel name="FullScreenAutoButtons" />
 		<panel name="ButtonBar" />
 	</screen>
 	<screen name="SlimChannelSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -436,7 +408,6 @@
 	<screen name="SimpleChannelSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## CHOICEBOX ## -->
@@ -455,7 +426,6 @@
 	<screen name="CIselectMainMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<widget name="CiList" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## CONSOLE ## -->
@@ -477,14 +447,12 @@
 			<convert type="StringList" />
 		</widget>
 		<widget name="key" position="22,900" size="850,50" font="menulist;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="CronTimersConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenHelpwindowWidget" />
 		<panel name="FullScreenTextButton" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## CROSSEPG ## -->
@@ -503,7 +471,6 @@
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenInformationWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="CrossEPG_Providers" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -518,7 +485,6 @@
 				}
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="CrossEPG_Ordering" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -533,7 +499,6 @@
 				}
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="CrossEPG_Info" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -548,12 +513,10 @@
 		<widget name="channels_count" position="22,490" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<widget name="events_count" position="22,540" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<widget name="hashes_count" position="22,590" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="CrossEPG_About" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenAboutWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="CrossEPG_Converter" position="fill" title="CrossEPG" flags="wfNoBorder" backgroundColor="transparent" >
 		<panel name="DownloadBar" />
@@ -760,17 +723,14 @@
 		<widget name="status" position="22,700" size="850,100" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 		<widget name="statusbar" position="22,800" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 		<panel name="FullScreenInfoButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="EPGImportSources" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="EPGImportLog" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## EPG REFRESH ## -->
@@ -778,12 +738,10 @@
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<widget source="help" render="Label" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="EPGRefreshServiceEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## EVENTVIEW ## -->
@@ -845,7 +803,6 @@
 	<screen name="Execute" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<widget name="linelist" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## FAN CONTROL - XTREND ## -->
@@ -858,7 +815,6 @@
 		<widget name="daemon0" pixmap="buttons/key_red.png" position="520,703" size="67,48" transparent="1" alphatest="blend" zPosition="10"/>
 		<widget name="daemon1" pixmap="buttons/key_green.png" position="520,703" size="67,48" transparent="1" alphatest="blend" zPosition="10"/>
 		<widget name="hddtemp" position="22,800" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="2" halign="left" valign="center" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## FIRMWARE UPGRADE ## -->
@@ -866,13 +822,11 @@
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<widget source="status" render="Label" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="FUFilebrowser" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<widget name="file_list" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />		
 		<widget source="status" render="Label" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## FPGA UPDATE ## -->
@@ -880,14 +834,12 @@
 		<panel name="FullScreenTemplate" />
 		<widget name="file_list" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
 		<widget source="status" render="Label" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## GIGABLUE LED SETUP ## -->
 	<screen name="LED_GigaSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Giga LED Setup" >
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## HDMI-CEC ## -->
@@ -896,7 +848,6 @@
 		<panel name="FullScreenConfigWidget" />
 		<widget source="current_address" render="Label" position="995,700" size="855,50" font="infobar2;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 		<widget source="fixed_address" render="Label" position="995,750" size="855,50" font="infobar2;34" foregroundColor="thirdcolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## HELP SCREEN ## -->
@@ -941,6 +892,7 @@
 		<panel name="FullScreenDescriptionWidget"/>
 		<panel name="ButtonBar" />
 		<panel name="FullScreenHelpWidget"/>
+		<panel name="FullScreenAutoButtons" />
 	</screen>
 
 	<!-- ## HISTORY ZAP ## -->
@@ -977,7 +929,6 @@
 		<widget name="starsbg" pixmap="imdb/starsbar_empty.png" position="22,950" size="315,32" backgroundColor="menubackground" transparent="1" alphatest="blend" zPosition="2" />
 		<widget name="stars" pixmap="imdb/starsbar_filled.png" position="22,950" size="315,32" backgroundColor="menubackground" transparent="1" alphatest="blend" zPosition="3" />
 		<widget name="poster" position="1250,600" size="335,377" alphatest="blend" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen> 
 
 	<!-- ## INPUT BOX ## -->
@@ -1002,13 +953,11 @@
 			</convert>
 		</widget>
 		<widget name="introduction" position="420,773" size="1080,180" font="screentitle;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="InputDeviceSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## JOB VIEW ## -->
@@ -1054,7 +1003,6 @@
 				}
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## LINUXSATADDONS ## -->
@@ -1070,7 +1018,6 @@
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenInfoWidget" />
 		<panel name="FullScreenListWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="IpkgPackages" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="LinuxsatSupportAddons" >
 		<panel name="FullScreenTemplate" />
@@ -1085,7 +1032,6 @@
 		<widget name="filelist" position="22,190" size="850,400" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" zPosition="2"/>
 		<widget name="textbook" position="22,640" size="850,60" font="screentitle;36" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2"/>
 		<widget name="booklist" position="22,700" size="850,150" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" zPosition="2"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## LOG MANAGER ## -->
@@ -1093,7 +1039,6 @@
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
 		<widget name="LogsSize" position="22,950" size="850,50" font="screentitle;28" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="3"/>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="LogManagerViewLog" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -1102,7 +1047,6 @@
 	<screen name="LogManagerFb" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## MANUAL SCAN  ## -->
@@ -1110,7 +1054,6 @@
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## MEMORY INFO ## -->
@@ -1257,7 +1200,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenMenuButton" />
 		<widget name="config" position="22,90" size="850,855" font="menulist;34" itemHeight="45" foregroundColor="maincolour" backgroundColor="menubackground" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2"/>
 		<widget name="description" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" valign="center" halign="center" zPosition="3" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## MUTE ## -->
@@ -1273,7 +1215,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="lab2" position="150,180" size="330,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="2" />
 		<widget name="labstop" position="390,180" size="200,50" font="menulist;34" backgroundColor="red" valign="center" halign="center" zPosition="2" />
 		<widget name="labrun" position="390,180" size="200,50" font="menulist;34" backgroundColor="green" valign="center" halign="center" zPosition="3"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - ADAPTER SETTINGS ## -->
@@ -1296,7 +1237,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget source="introduction2" render="Label" position="1005,575" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
 		<panel name="FullScreenTextButtonVkeySource" />
 		<panel name="FullScreenHelpwindowWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - ADAPTER TEST ## -->
@@ -1325,8 +1265,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="EditSettingsButton" pixmaps="buttons/key_blue.png,buttons/key_blue.png" position="200,700" size="67,48" transparent="1" alphatest="blend" zPosition="2" />
 		<widget name="EditSettings_Text" position="290,705" size="250,60" font="menulist;34" backgroundColor="menubackground" halign="left" transparent="1" foregroundColors="#ffffff,#ffffff,#cccccc" zPosition="2" />
 		<widget name="InfoText" position="22,910" size="850,50" font="menulist;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" />
-		
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK- DEVICE SETUP ## -->
@@ -1346,7 +1284,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 			</convert>
 		</widget>
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - DEVICE SETUP ## -->
@@ -1358,7 +1295,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget source="IF" render="Label" position="390,790" size="600,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<widget source="Statustext" render="Label" position="200,850" size="200,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" transparent="1" zPosition="2"/>
 		<widget name="statuspic" pixmaps="buttons/key_green.png,buttons/key_red.png" position="390,850" size="67,48" transparent="1" alphatest="blend" zPosition="10"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - FTP ## -->
@@ -1368,7 +1304,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="lab2" position="150,180" size="330,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="2" />
 		<widget name="labstop" position="390,180" size="200,50" font="menulist;34" backgroundColor="red" valign="center" halign="center" zPosition="2" />
 		<widget name="labrun" position="390,180" size="200,50" font="menulist;34" backgroundColor="green" valign="center" halign="center" zPosition="3"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - INADYN ## -->
@@ -1393,14 +1328,12 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="system" position="80,520" size="150,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="2" />
 		<widget name="labsys" position="250,520" size="500,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="2" />
 		<panel name="FullScreenMenuButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="NetworkInadynSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenHelpwindowWidget" />
 		<panel name="FullScreenTextButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="NetworkInadynLog" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -1412,7 +1345,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - MINIDLNA ## -->
@@ -1444,14 +1376,12 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="dlnainactive" position="500,817" pixmap="icons/lock_off.png" size="63,45" alphatest="blend" zPosition="3" />
 		<widget name="dlnaactive" position="500,817" pixmap="icons/lock_on.png" size="63,45" alphatest="blend" zPosition="4" />
 		<panel name="FullScreenMenuButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="NetworkMiniDLNASetup" position="fill" flags="wfNoBorder">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenTextButton" />
 		<panel name="FullScreenHelpwindowWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - MOUNT EDIT ## -->
@@ -1461,7 +1391,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenTextButtonVKey" />
 		<panel name="FullScreenHelpwindowWidget" />
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - MOUNT MANAGER ## -->
@@ -1480,7 +1409,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 			</convert>
 		</widget>
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - MOUNT SETUP ## -->
@@ -1488,7 +1416,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenTemplate" />
 		<widget name="menulist" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - MOUNT VIEWER ## -->
@@ -1513,7 +1440,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 			</convert>
 		</widget>
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - NAMESERVER ## -->
@@ -1521,7 +1447,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - NETWORK BROWSER ## -->
@@ -1543,7 +1468,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 			</convert>
 		</widget>
 		<widget source="infotext" position="420,765" size="1080,60" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - OPENVPN ## -->
@@ -1554,7 +1478,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="lab2" position="150,180" size="330,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="2" />
 		<widget name="labstop" position="390,180" size="200,50" font="menulist;34" backgroundColor="red" valign="center" halign="center" zPosition="2" />
 		<widget name="labrun" position="390,180" size="200,50" font="menulist;34" backgroundColor="green" valign="center" halign="center" zPosition="3"/>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="NetworkVpnLog" position="fill" flags="wfNoBorder">
 		<panel name="FullScreenTemplate" />
@@ -1581,7 +1504,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 			</convert>
 		</widget>
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## NETWORK - USHARE ## -->		
@@ -1616,19 +1538,16 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="dlnainactive" position="500,845" pixmap="icons/lock_off.png" size="63,45" alphatest="blend" zPosition="3" />
 		<widget name="dlnaactive" position="500,845" pixmap="icons/lock_on.png" size="63,45" alphatest="blend" zPosition="4" />
 		<panel name="FullScreenMenuButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="NetworkuShareSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenHelpwindowWidget" />
 		<panel name="FullScreenTextButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="uShareSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="3" >
 		<panel name="FullScreenTemplate" />
 		<widget name="checkList" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="NetworkuShareLog" position="fill" flags="wfNoBorder">
 		<panel name="SetupMenuPanel3" />
@@ -1637,7 +1556,7 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 
 	<!-- ## NETWORK - WIZARD ## -->
 	<screen name="NetworkWizard" flags="wfNoBorder" position="fill" title="Network Wizard" backgroundColor="transparent" >
-		<panel name="FullScreenTemplate" />
+		<panel name="FullScreenTemplateNoButtonBar" />
 		<panel position="150,300" size="154,500">
 			<panel name="RcPanel" />
 		</panel>
@@ -1687,7 +1606,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget source="list" render="Listbox" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" >
 			<convert type="StringList" />
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## OSCAM INFO ##-->
@@ -1703,14 +1621,12 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenTemplate" />
 		<widget name="status" render="Label" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## PARENTAL CONTROL ## -->
 	<screen name="ParentalControlSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="ParentalControlChangePin" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -1724,7 +1640,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="thn" position="170,660" size="500,300" alphatest="blend" zPosition="2"/>
 		<widget name="label" position="1005,610" size="835,230" font="infobar2;28" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
 		<panel name="FullScreenMenuButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="Pic_Full_View" position="fill" flags="wfNoBorder">
 		<eLabel position="0,0" size="1920,1080" backgroundColor="black" zPosition="0" />
@@ -1744,7 +1659,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 				"itemHeight": 50 }
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## PiP ## -->
@@ -1763,7 +1677,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenMenuButton" />
 		<widget name="list" position="22,90" size="850,880" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="PluginDownloadBrowser" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -1804,21 +1717,18 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget source="Frontend" render="Label" position="1005,90" size="834,483" font="menulist;170" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="2" >
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## QUICKBUTTON ## -->
 	<screen name="QuickbuttonSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Quickbutton Setup">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## REMOTE CONTROL CODE ## -->
 	<screen name="RemoteControlCode" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="RCSetupScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -1831,13 +1741,11 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 	<screen name="ServerEditor" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="StreamingChannelFromServerScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
 		<widget source="statusbar" render="Label" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## RESTART SCREEN ## -->
@@ -1905,7 +1813,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget source="Frontend" render="Label" position="1005,90" size="834,483" font="menulist;170" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="99" >
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## SAT KEYS UPDATER by rossi2000 ## -->
@@ -1918,7 +1825,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 	<screen name="ScanIP" flags="wfNoBorder" position="fill" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## SCREENSAVER ## -->
@@ -1949,7 +1855,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 	<screen name="ServiceInfo" position="fill" backgroundColor="transparent" flags="wfNoBorder" title="Service info">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenInfoListWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## SERVICE SCAN ## -->
@@ -1990,7 +1895,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenFootnoteWidget" />
 		<panel name="FullScreenHelpwindowWidget" />
 		<panel name="FullScreenTextButtonVKeySource" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## SKIN SELECTOR ## -->
@@ -2009,7 +1913,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 			</convert>
 		</widget>
 		<panel name="FullScreenDescriptionWidget"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## SOFTCAM MANAGER ## -->
@@ -2021,7 +1924,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="activecam" position="22,750" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="center" valign="center" transparent="1" noWrap="1" zPosition="2" />
 		<panel name="FullScreenInfoButton" />
 		<panel name="FullScreenMenuButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="VIXSoftcamLog" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -2059,7 +1961,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 	<screen name="Solo4kMiscControl" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Solo4k Misc Control">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## STANDBY ## -->
@@ -2076,7 +1977,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="model" position="22,90" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" halign="left" transparent="1" zPosition="2" />
 		<widget name="capacity" position="22,140" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" halign="left" transparent="1" zPosition="2" />
 		<widget name="bus" position="22,190" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" halign="left" transparent="1" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## SUBTITLES ## -->
@@ -2095,7 +1995,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 	<screen name="TextBox" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<widget name="text" position="22,90" size="850,850" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="3"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## TIMEDATEINPUT ## -->
@@ -2136,7 +2035,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenDescriptionWidget" />
 		<widget name="text" position="680,890" size="1160,30" font="menulist;24" halign="center" valign="center" transparent="1" zPosition="1"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## TRANSMISSION ## -->
@@ -2151,7 +2049,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenInfoButton" />
 		<widget name="timerlist" position="22,90" size="850,825" itemHeight="75" rowSplit="40" iconMargin="5" setEventNameFont="menulist;32" setServiceNameFont="menulist;32" setFont="menulist;28" satPosLeft="300" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
 		<panel name="FullScreenDescriptionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="TimerEntry" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -2165,14 +2062,12 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenTemplate" />
 		<widget name="loglist" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
 		<widget name="logentry" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="TimerSanityConflict" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<widget name="list" position="22,90" size="850,300" itemHeight="50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2" />
 		<widget name="timer2" position="22,400" size="850,375" itemHeight="75" rowSplit="40" setServiceNameFont="menulist;32" setFont="menulist;28" satPosLeft="300" setEventNameFont="menulist;34" scrollbarMode="showNever" zPosition="2" />
 		<widget name="timer1" position="22,785" size="850,75" itemHeight="75" rowSplit="40" setServiceNameFont="menulist;32" setFont="menulist;28" satPosLeft="300" setEventNameFont="menulist;34" scrollbarMode="showNever" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="TimerSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -2207,18 +2102,15 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 				}
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="NimSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="SelectSatsEntryScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="">
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenListWidget" />
 		<widget name="hint" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## TUNER SERVER ## -->
@@ -2228,7 +2120,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="lab2" position="150,180" size="330,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="2" />
 		<widget name="labstop" position="390,180" size="200,50" font="menulist;34" backgroundColor="red" valign="center" halign="center" zPosition="2" />
 		<widget name="labrun" position="390,180" size="200,50" font="menulist;34" backgroundColor="green" valign="center" halign="center" zPosition="3"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## UNHANDLED KEY ## -->
@@ -2243,7 +2134,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenIntroductionWidget" />
 		<panel name="FullScreenTextButtonVkeySource" />
 		<panel name="FullScreenHelpwindowWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## VIRTUAL KEYBOARD ## -->
@@ -2278,7 +2168,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 				}
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 	<!-- ## BACKUP MANAGER ## -->
 	<screen name="VIXBackupManager" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2289,7 +2178,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenInfoButton" />
 		<panel name="FullScreenMenuButton" />
 		<panel name="FullScreenRedButtonSource" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="VIXBackupManagerMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -2298,7 +2186,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenHelpwindowWidget" />
 		<panel name="FullScreenFootnoteWidget" />
 		<panel name="FullScreenDescriptionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="VIXBackupManagerLogView" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -2307,7 +2194,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 	<screen name="BackupSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<widget name="checkList" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="XtraPluginsSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BackupSelection" />
@@ -2315,7 +2201,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 	<screen name="RestoreMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<widget name="filelist" position="22,90" size="850,850" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 	<!-- ## IMAGE MANAGER ## -->
 	<screen name="VIXImageManager" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2324,20 +2209,17 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="lab1" position="22,700" size="850,200" font="menulist;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
 		<widget name="backupstatus" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 		<panel name="FullScreenMenuButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="ImageManagerDownload" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Image Manager">
 		<panel name="FullScreenTemplate" />
 		<widget name="list" position="22,90" size="850,600" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
 		<widget name="lab1" position="22,700" size="850,200" font="menulist;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 	<!-- ## IPK INSTALLER ## -->
 	<screen name="VIXIPKInstaller" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
 		<widget name="list" position="22,90" size="850,600" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
 		<widget name="lab1" position="22,700" size="850,200" font="menulist;30" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="2" />
-		<panel name="ButtonBar" />
 	</screen>
 	<!-- ## MOUNT MANAGER ## -->
 	<screen name="VIXDevicesPanel" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2355,7 +2237,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 				}
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="VIXPartitionPanelConf" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="VIXDevicesPanel" />
@@ -2364,7 +2245,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 	    <panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<!-- <widget name="lab1" position="80,765" size="590,150" font="youvix-r;22" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" /> -->
-		<panel name="ButtonBar" />
 	</screen>
 	<!-- ## SCRIPT RUNNER ## -->
 	<screen name="IpkgInstaller" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2372,7 +2252,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenMenuButton" />
 		<panel name="FullScreenListWidget" />
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 	</screen>
 	<!-- ## SWAP MANAGER ## -->
 	<screen name="VIXSwap" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2387,7 +2266,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="lab4" position="120,400" size="250,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<widget name="inactive" position="370,400" size="400,50" font="menulist;34" backgroundColor="red" halign="center" valign="center" zPosition="2" />
 		<widget name="active" position="370,400" size="400,50" font="menulist;34" backgroundColor="green" halign="center" valign="center" zPosition="3" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## VOLUME # -->
@@ -2414,7 +2292,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget source="IF" render="Label" position="22,450" size="850,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2"/>
 		<widget source="Statustext" render="Label" position="22,500" size="350,50" font="menulist;34" halign="left" valign="center" backgroundColor="un25062748" transparent="1" zPosition="2"/>
 		<widget name="statuspic" position="380,502" size="63,45" pixmaps="icons/lock_on.png,icons/lock_error.png" transparent="1" alphatest="blend" zPosition="2"/>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="WlanScan" position="fill" flags="wfNoBorder">
 		<panel name="FullScreenTemplate" />
@@ -2433,7 +2310,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 			</convert>
 		</widget>
 		<widget source="info" render="Label" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3"/>
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## YAHOO WEATHER ## -->
@@ -2593,7 +2469,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="text" position="1005,610" size="835,230" font="infobar2;32" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="3" />
 		<panel name="FullScreenMenuButton" />
 		<panel name="FullScreenInfoButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="YouTubeSearch" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -2606,7 +2481,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 			</convert>
 		</widget>
 		<panel name="FullScreenMenuButton" />
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="YouTubeDownloadList" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -2621,7 +2495,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 				"itemHeight": 50}
 			</convert>
 		</widget>
-		<panel name="ButtonBar" />
 	</screen>
 	<screen name="YouTubeInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="FullScreenTemplate" />
@@ -2632,7 +2505,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<widget name="duration" position="1005,850" size="835,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
 		<widget name="likes" position="1005,900" size="835,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
 		<widget name="dislikes" position="1005,900" size="835,50" font="menulist;34" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" />
-		<panel name="ButtonBar" />
 	</screen>
 
 	<!-- ## Video-Enhancement ## -->
@@ -2640,7 +2512,6 @@ self[&quot;list&quot;].instance.resize(eSize(listsize[0], listheight))
 		<panel name="FullScreenTemplate" />
 		<panel name="FullScreenConfigWidget" />
 		<panel name="FullScreenIntroductionWidget" />
-		<panel name="ButtonBar" />
 		<panel name="FullScreenDescriptionWidget" />
 		<panel name="FullScreenFootnoteWidget" />
 		<panel name="FullScreenHelpwindowWidget" />
