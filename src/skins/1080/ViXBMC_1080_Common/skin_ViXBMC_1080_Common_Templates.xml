@@ -95,11 +95,16 @@
 	</screen>
 
 	<!-- ## FULLSCREEN TEMPLATES ## -->
-	<screen name="FullScreenTemplate">
+	<screen name="FullScreenTemplateNoButtonBar">
 		<ePixmap pixmap="infobar/background.png" position="fill" alphatest="on" zPosition="-1"/>
 		<panel name="FullScreenTitle" />
 		<panel name="FullScreenTimeDate" />
 		<panel name="FullscreenPIGPanel" />
+		<panel name="FullScreenAutoButtons" />
+	</screen>
+	<screen name="FullScreenTemplate">
+		<panel name="FullScreenTemplateNoButtonBar" />
+		<panel name="ButtonBar" />
 	</screen>
 	<screen name="FullScreenTitle">
 		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=140,repeat=3,always=0,oneshot=1,startdelay=6000,wrap" position="25,20" size="850,50" font="screentitle;40" foregroundColor="maincolour" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="3" />
@@ -181,6 +186,38 @@
 		<widget source="session.CurrentService" render="Pixmap" pixmap="ViXBMC_1080_Common/icons/480.png" position="1760,530" size="70,30" alphatest="blend" zPosition="3">
 			<convert type="ServiceInfo">Is480</convert>
 			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	<screen name="FullScreenAutoButtons">
+		<widget source="key_menu" conditional="key_menu" render="Pixmap" pixmap="buttons/key_blank.png" alphatest="blend" position="900,90" size="67,48" zPosition="5">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget conditional="key_menu" source="key_menu" render="FixedLabel" text="MENU" position="900,90" size="67,48" backgroundColor="buttonface" zPosition="6" transparent="1" foregroundColor="maincolour" font="buttons;20" valign="center" halign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_info" conditional="key_info" render="Pixmap" pixmap="buttons/key_blank.png" alphatest="blend" position="900,140" size="67,48" zPosition="5">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget conditional="key_info" source="key_info" render="FixedLabel" text="INFO" position="900,140" size="67,48" backgroundColor="buttonface" zPosition="6" transparent="1" foregroundColor="maincolour" font="buttons;20" valign="center" halign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_text" conditional="key_text" render="Pixmap" pixmap="buttons/key_blank.png" alphatest="blend" position="900,240" size="67,48" zPosition="5">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget conditional="key_text" source="key_text" render="FixedLabel" text="TEXT" position="900,240" size="67,48" backgroundColor="buttonface" zPosition="6" transparent="1" foregroundColor="maincolour" font="buttons;20" valign="center" halign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget conditional="VKeyIcon" source="VKeyIcon" render="Pixmap" pixmap="buttons/key_blank.png" alphatest="blend" position="900,240" size="67,48" zPosition="5">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget conditional="VKeyIcon" source="VKeyIcon" render="FixedLabel" text="TEXT" position="900,240" size="67,48" backgroundColor="buttonface" zPosition="6" transparent="1" foregroundColor="maincolour" font="buttons;20" valign="center" halign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_help" conditional="key_help" render="Pixmap" pixmap="buttons/key_blank.png" alphatest="blend" position="900,290" size="67,48" zPosition="5">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget conditional="key_help" source="key_help" render="FixedLabel" text="HELP" position="900,290" size="67,48" backgroundColor="buttonface" zPosition="6" transparent="1" foregroundColor="maincolour" font="buttons;20" valign="center" halign="center">
+			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
 	<screen name="FullScreenMenuButton">
