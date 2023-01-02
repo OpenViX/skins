@@ -905,6 +905,43 @@
 		<panel name="FullScreenListWidget" />
 		<widget name="long_key" position="0,1020" size="480,60" font="menulist;40" foregroundColor="red" backgroundColor="menubackground" transparent="1" halign="center" valign="center" noWrap="1" zPosition="2" />
 	</screen>-->
+	
+	<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<ePixmap pixmap="infobar/background.png" position="fill" alphatest="on" zPosition="-1"/>
+		<panel name="FullScreenTitle" />
+		<panel name="FullScreenTimeDate" />
+		<panel position="1350,100" size="154,500">
+			<panel name="RcPanel" />
+		</panel>
+		<widget name="longshift_key0" conditional="indicatorU0" position="1175,625" size="500,35" font="Regular;27" foregroundColor="yellow" halign="center" valign="center" transparent="1"/>
+		<widget name="longshift_key1" conditional="indicatorU0" position="1175,665" size="500,35" font="Regular;27" foregroundColor="yellow" halign="center" valign="center" transparent="1"/>
+		<widget source="list" conditional="indicatorU0" render="Listbox" position="22,90" size="850,850" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{
+				  "templates": dict(
+				    list(dict.fromkeys(("default", "extended"), [
+				      45,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(850, 42), font=1, text=1),
+				      ]
+				    ]).items()) +
+				    list(dict.fromkeys(("default+headings", "extended+headings"), [
+				      45,  # itemHeight
+				      [
+					MultiContentEntryText(pos=(0, 0), size=(850, 42), font=0, text=1),
+					MultiContentEntryText(pos=(30, 0), size=(850, 42), font=1, text=2),
+				      ]
+				    ]).items())
+				  ),
+				  "fonts": [gFont("menulist", 35), gFont("menulist", 30)],
+				  "itemHeight": 45
+				}
+			</convert>
+		</widget>
+		<panel name="FullScreenDescriptionWidget"/>
+		<panel name="ButtonBar" />
+		<panel name="FullScreenHelpWidget"/>
+	</screen>
 
 	<!-- ## HISTORY ZAP ## -->
 	<screen name="HistoryZapSelector" position="fill" flags="wfNoBorder" backgroundColor="transparent">
