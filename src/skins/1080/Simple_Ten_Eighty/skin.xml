@@ -14,6 +14,7 @@
 
 	<fonts>
 		<font name="Regular" filename="LiberationSans-Regular.ttf" scale="100"/>
+		<font name="RegularSmall" filename="LiberationSans-Regular.ttf" scale="95"/>
 		<font name="LCD" filename="lcd.ttf" scale="100"/>
 		<font name="Console" filename="tuxtxt.ttf" scale="100"/>
 		<font name="Fixed" filename="andale.ttf" scale="100"/>
@@ -1941,17 +1942,17 @@
 
 	<screen name="TextBox" title="Message" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<widget name="text" position="780,123" size="1110,855" font="Regular;32" halign="block" scrollbarMode="showOnDemand"/>
+		<widget name="text" position="780,123" size="1110,855" font="RegularSmall;32" halign="block"/><!-- font has scale "95" which is required by ScrollLabel to get the arithmetic to work properly, otherwise text will be truncated -->
 	</screen>
 
 	<screen name="TextBoxSplit" title="Message" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<widget name="text" position="780,123" size="1110,855" font="Regular;32" split="1" dividechar=":" colposition="0" scrollbarMode="showOnDemand"/>
+		<widget name="text" position="780,123" size="1110,855" font="RegularSmall;32" split="1" dividechar=":" colposition="0"/><!-- font has scale "95" which is required by ScrollLabel to get the arithmetic to work properly, otherwise text will be truncated -->
 	</screen>
 
 	<screen name="TextBoxPigLess" title="Message" position="fill" flags="wfNoBorder">
 		<panel name="PigLessTemplate"/>
-		<widget name="text" position="30,123" size="1860,855" font="Regular;32" scrollbarMode="showOnDemand"/>
+		<widget name="text" position="30,123" size="1860,855" font="RegularSmall;32"/><!-- font has scale "95" which is required by ScrollLabel to get the arithmetic to work properly, otherwise text will be truncated -->
 	</screen>
 
 	<!-- MessageBox -->
