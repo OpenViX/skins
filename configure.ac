@@ -355,4 +355,25 @@ src/skins/1080/YouViX-Red/selectionbars/Makefile
 src/skins/1080/YouViX-Red/spinner/Makefile
 src/skins/1080/YouViX-Red/vixcore/Makefile
 
+src/skins/1080/YouViX-Blue-Mod/Makefile
+src/skins/1080/YouViX-Blue-Mod/buttons/Makefile
+src/skins/1080/YouViX-Blue-Mod/countries/Makefile
+src/skins/1080/YouViX-Blue-Mod/crossepg/Makefile
+src/skins/1080/YouViX-Blue-Mod/epg/Makefile
+src/skins/1080/YouViX-Blue-Mod/extensions/Makefile
+src/skins/1080/YouViX-Blue-Mod/fonts/Makefile
+src/skins/1080/YouViX-Blue-Mod/icons/Makefile
+src/skins/1080/YouViX-Blue-Mod/imdb/Makefile
+src/skins/1080/YouViX-Blue-Mod/infobar/Makefile
+src/skins/1080/YouViX-Blue-Mod/logos/Makefile
+src/skins/1080/YouViX-Blue-Mod/menuicons/Makefile
+src/skins/1080/YouViX-Blue-Mod/meta/Makefile
+src/skins/1080/YouViX-Blue-Mod/networkbrowser/Makefile
+src/skins/1080/YouViX-Blue-Mod/ondemand/Makefile
+src/skins/1080/YouViX-Blue-Mod/pvr/Makefile
+src/skins/1080/YouViX-Blue-Mod/screens/Makefile
+src/skins/1080/YouViX-Blue-Mod/selectionbars/Makefile
+src/skins/1080/YouViX-Blue-Mod/spinner/Makefile
+src/skins/1080/YouViX-Blue-Mod/vixcore/Makefile
+
 ])
