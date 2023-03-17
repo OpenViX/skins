@@ -88,14 +88,22 @@
 		</widget>
 	</screen>
 	
-	<screen name="OldNeedsUpdatingMenuHorizontal" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<ePixmap alphatest="off" pixmap="selectionbars/SelectionBar_H330x1160.png" position="0,e-180" size="e,180" zPosition="-1" scale="1"/>
-		<widget source="Title" conditional="Title" render="Label" position="0,e-170" size="e,80" font="youvix-r;64" halign="center" valign="center" foregroundColor="grey" transparent="1" backgroundColor="lightcolour"/>
-		<widget source="label1" conditional="label1" render="Label" position="20,e-85" size="360,80" font="youvix-r;34" halign="center" valign="center" transparent="1" backgroundColor="lightcolour"/>
-		<widget source="label2" conditional="label2" render="Label" position="400,e-85" size="360,80" font="youvix-r;34" halign="center" valign="center" transparent="1" backgroundColor="lightcolour"/>
-		<widget source="label3" conditional="label3" render="Label" position="780,e-85" size="360,80" font="youvix-r;34" halign="center" valign="center" foregroundColor="yellow" transparent="1" backgroundColor="lightcolour"/>
-		<widget source="label4" conditional="label4" render="Label" position="1160,e-85" size="360,80" font="youvix-r;34" halign="center" valign="center" transparent="1" backgroundColor="lightcolour"/>
-		<widget source="label5" conditional="label5" render="Label" position="1540,e-85" size="360,80" font="youvix-r;34" halign="center" valign="center" transparent="1" backgroundColor="lightcolour"/>
+	<screen name="MenuHorizontal" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<ePixmap alphatest="blend" pixmap="selectionbars/SelectionBar_H330x1160.png" position="0,e-180" size="e,175" zPosition="-1" scale="1"/>
+		<widget source="Title" conditional="Title" render="Label" position="0,e-170" size="e,80" font="youvix-r;64" halign="center" valign="center" foregroundColor="white" transparent="1" backgroundColor="lightcolour"/>
+		<widget source="menu" render="Listbox" position="60,e-85" size="1800,80" foregroundColorSelected="white" foregroundColor="white" backgroundColorSelected="lightcolour" backgroundColor="menubackground2" scrollbarMode="showNever" selectionFrame="none" >
+		<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (5,2), size = (440,75), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP,text = 0) ],
+					"fonts": [gFont("youvix-r",32)],
+					"itemHeight": 75,
+					"itemWidth": 450,
+					"orientation" : "orHorizontal",
+				}
+			</convert>
+		</widget>
+		<widget addon="Pager" connection="menu" itemHeight="75" showIcons="onlyFirst" picPage="icons/chevronleft.png" picPageCurrent="icons/chevronlefttrans.png" position="0,e-83" size="50,75" transparent="1" backgroundColor="lightcolour"/>
+		<widget addon="Pager" connection="menu" itemHeight="75" showIcons="onlyLast" picPage="icons/chevronright.png" picPageCurrent="icons/chevronrighttrans.png" position="e-50,e-83" size="50,75" transparent="1" backgroundColor="lightcolour"/>
+		<ePixmap pixmap="buttons/key_help.png" position="e-53,e-179" size="53,38" alphatest="blend" transparent="1" zPosition="1"/>
 	</screen>
 	
     <screen name="MenuSort" position="fill" flags="wfNoBorder" backgroundColor="transparent">
