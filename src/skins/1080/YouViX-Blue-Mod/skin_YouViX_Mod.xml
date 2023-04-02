@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 01.04.2023 -->
+	<!--  Modified by Orlandox 02.04.2023 -->
 
 	<!--  ## Head ##  -->
 
@@ -574,14 +574,17 @@
 		<widget source="global.CurrentTime" render="Label" position="1718,748" size="140,38" font="youvix-b;30" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" zPosition="1">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
-		<ePixmap pixmap="buttons/key_menu.png" position="1240,751" size="53,38" alphatest="blend" zPosition="5"/>
-		<ePixmap pixmap="buttons/key_info.png" position="1300,751" size="53,38" alphatest="blend" zPosition="5"/>
-		<ePixmap pixmap="buttons/key_text.png" position="1360,751" size="53,38" alphatest="blend" zPosition="5"/>
-		<ePixmap pixmap="buttons/key_help.png" position="1420,751" size="53,38" alphatest="blend" zPosition="5"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="117,956" size="53,38" alphatest="blend" zPosition="5"/>
+		<ePixmap pixmap="buttons/key_info.png" position="172,956" size="53,38" alphatest="blend" zPosition="5"/>
+		<ePixmap pixmap="buttons/key_text.png" position="227,956" size="53,38" alphatest="blend" zPosition="5"/>
+		<ePixmap pixmap="buttons/key_help.png" position="282,956" size="53,38" alphatest="blend" zPosition="5"/>
+		<ePixmap pixmap="buttons/key-left.png" position="408,956" size="36,38" alphatest="blend" zPosition="5"/>
+		<ePixmap pixmap="buttons/key-right.png" position="452,956" size="36,38" alphatest="blend" zPosition="5"/>
+		<ePixmap pixmap="buttons/key_0.png" position="492,956" size="53,38" alphatest="blend" zPosition="5"/>
 		<eLabel position="675,785" size="1170,175" backgroundColor="menubackground" zPosition="-1" />
 		<widget name="timeline_text" position="center,795" size="1770,40" itemHeight="40" TimelineFont="youvix-b;24" foregroundColor="white" transparent="1" zPosition="2" />
 		<widget name="timeline_now" position="center,820" zPosition="1" size="19,85" pixmap="epg/timeline-now.png" alphatest="blend" />
-		<widget name="bouquetlist" position="center,832" size="1770,120" backgroundColor="menubackground" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
+		<widget name="bouquetlist" position="center,832" size="1770,130"  itemHeight="43" font="youvix-r;30" backgroundColor="menubackground" foregroundColorSelected="white" backgroundColorSelected="darkcolour" scrollbarMode="showNever" transparent="0" zPosition="5" />
 		<widget name="lab1" position="center,832" size="1770,120" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="center" zPosition="1" transparent="1" />
 		<widget name="list" position="center,832" size="1770,120" ServiceFontInfobar="youvix-r;30" EventNamePadding="10" backgroundColor="menubackground"  EntryForegroundColor="grey" EntryBackgroundColor="menubackground" EntryForegroundColorSelected="white" EntryForegroundColorNowSelected="white" RecordForegroundColorSelected="white" ZapForegroundColorSelected="white" scrollbarMode="showNever" zPosition="2" transparent="0"/>
 		<eLabel position="1845,785" size="75,175" backgroundColor="menubackground2" zPosition="-1" />
@@ -631,7 +634,7 @@
 		</widget>
 		<panel name="MenuKeyAutoTemplate" />
 		<panel name="MenuButtonBar" />
-		<widget name="bouquetlist" position="8,165" size="590,60" itemHeight="50" backgroundColor="menubackground2" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
+		<widget name="bouquetlist" position="0,0" size="0,0"/> #To reduce debug noise.
 		<widget name="lab1" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="EPGSelectionSimilar" flags="wfNoBorder" position="fill" backgroundColor="transparent">
@@ -718,7 +721,7 @@
 		</widget>
 		<widget name="list" position="680,265" size="1160,615" itemHeight="50" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="1" />
 		<widget name="lab1" position="680,165" size="1160,750" font="youvix-r;29" halign="center" valign="center" zPosition="1"/>
-		<widget name="bouquetlist" position="785,265" size="1055,604" itemHeight="50" backgroundColor="menubackground" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
+		<widget name="bouquetlist" position="680,265" size="1160,604" itemHeight="43" font="youvix-r;30" backgroundColor="menubackground" foregroundColorSelected="white" backgroundColorSelected="darkcolour" scrollbarMode="showNever" transparent="0" zPosition="5" />
 		<widget source="Service" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
@@ -746,7 +749,7 @@
 		<widget name="timeline_now" position="center,183" size="19,611" pixmap="epg/timeline-now2.png" transparent="1" alphatest="blend" zPosition="4"  />
 		<widget name="lab1" position="center,188" size="1770,604" font="youvix-r;24" backgroundColor="menubackground" halign="center" transparent="1" zPosition="1" />
 		<widget name="list" position="center,188" size="1770,604" ServiceFontGraphical="youvix-r;30" EntryFontGraphical="youvix-r;30" EventNamePadding="10" backgroundColor="menubackground" ServiceForegroundColor="white" ServiceBackgroundColor="black" ServiceForegroundColorNow="white" ServiceBackgroundColorNow="darkergrey" EntryForegroundColor="white" EntryBackgroundColor="darkgrey" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="darkcolour" EntryForegroundColorNow="white" EntryBackgroundColorNow="darkergrey" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="darkcolour" RecordForegroundColorSelected="white" ZapForegroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="2" />	
-		<widget name="bouquetlist" position="center,188" size="1770,604" itemHeight="50" backgroundColor="menubackground" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
+		<widget name="bouquetlist" position="center,188" size="1770,604" itemHeight="43" font="youvix-r;30" backgroundColor="menubackground" foregroundColorSelected="white" backgroundColorSelected="darkcolour" scrollbarMode="showNever" transparent="0" zPosition="5" />
 		<panel name="EPGSelectionPicon" />
 		<eLabel position="675,930" size="1170,150" backgroundColor="menubackground" zPosition="-1" />
 		<widget source="Event" render="Label" position="700,802" size="90,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="right" noWrap="1" transparent="1">
@@ -818,21 +821,6 @@
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="1200,10" size="640,360" backgroundColor="transparent" zPosition="4"/>
-<!--		<widget alphatest="blend" render="MSNWeatherPixmap" position="360,15" size="60,60" source="session.MSNWeather" transparent="1" zPosition="1" backgroundColor="background2">
-            <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/WeatherIcons/,png</convert>
-        </widget>
-		<eLabel text="Lämpötila:" position="430,15" size="170,40" backgroundColor="background2" transparent="1" font="youvix-b;35" foregroundColor="grey" />
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;35" render="Label" position="595,15" size="130,40" source="session.MSNWeather" transparent="1" zPosition="1" foregroundColor="grey" halign="right">
-            <convert type="MSNWeather">temperature_current</convert>
-        </widget>
-		<widget backgroundColor="background2" font="youvix-b;35" foregroundColor="grey" render="Label" position="738,15" size="460,80" source="session.MSNWeather" zPosition="1" transparent="1" noWrap="0" >
-           <convert type="MSNWeather">temperature_text,current</convert>
-        </widget>
-		<eLabel text="Tuntuu kuin:" position="430,55" size="200,40" backgroundColor="background2" transparent="1" font="youvix-b;35" foregroundColor="grey" />
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;35" render="Label" position="610,55" size="80,40" source="session.MSNWeather" transparent="1" zPosition="1" foregroundColor="grey" halign="right">
-            <convert type="MSNWeather">feelslike</convert>
-        </widget>
-		<eLabel text="°C" position="690,55" size="80,40" backgroundColor="background2" transparent="1" font="youvix-b;35" foregroundColor="grey" /> -->
 		<widget source="global.CurrentTime" render="Label" position="80,330" zPosition="1" size="250,40" font="youvix-b;32" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right">
 			<convert type="ClockToText">Format:%a %e %h</convert>
 		</widget>
@@ -843,7 +831,7 @@
 		<ePixmap position="center,335" size="50,32" pixmap="icons/arrow-up.png" alphatest="blend" zPosition="1"/>
 		<widget name="timeline_text" position="center,370" size="1760,40" itemHeight="40" TimelineFont="youvix-b;24" foregroundColor="white" transparent="1" zPosition="2"/>
 		<widget name="timeline_now" position="center,405" size="19,629" pixmap="epg/timeline-now3.png" transparent="1" alphatest="blend" zPosition="4" />
-		<widget name="bouquetlist" position="center,410" size="1760,616" itemHeight="50" backgroundColor="menubackground" foregroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="5" />
+		<widget name="bouquetlist" position="center,412" size="1760,610" itemHeight="43" font="youvix-r;30" backgroundColor="menubackground" foregroundColorSelected="white" backgroundColorSelected="darkcolour" scrollbarMode="showNever" transparent="0" zPosition="5" />
 		<widget name="lab1" position="center,410" size="1760,622" font="youvix-r;24" backgroundColor="menubackground" halign="center" transparent="1" zPosition="1" />
 		<widget name="list" position="center,410" size="1760,622" ServiceFontGraphical="youvix-r;30" EntryFontGraphical="youvix-r;30" EventNamePadding="10" backgroundColor="menubackground" ServiceForegroundColor="white" ServiceBackgroundColor="black" ServiceForegroundColorNow="white" ServiceBackgroundColorNow="darkergrey" EntryForegroundColor="grey" EntryBackgroundColor="darkgrey" EntryForegroundColorSelected="white" EntryBackgroundColorSelected="darkcolour" EntryForegroundColorNow="white" EntryBackgroundColorNow="darkergrey" EntryForegroundColorNowSelected="white" EntryBackgroundColorNowSelected="darkcolour" RecordForegroundColorSelected="white" ZapForegroundColorSelected="white" scrollbarMode="showNever" transparent="0" zPosition="3" />
 		<ePixmap pixmap="icons/arrow-left.png" position="25,700" size="32,48" zPosition="5" alphatest="blend" />
@@ -884,7 +872,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 01.04.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 02.04.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<panel name="MenuButtonBar" />
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
