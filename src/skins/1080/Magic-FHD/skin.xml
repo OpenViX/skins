@@ -959,6 +959,22 @@
 			</convert>
 		</widget>
 	</screen>
+	<screen name="MenuHorizontal" position="fill" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap pixmap="infobar/hd.png" position="0,800" size="1920,284" zPosition="-1" alphatest="blend"/>
+		<widget source="Title" conditional="Title" render="Label" position="0,890" size="1800,80" font="Regular;64" halign="center" valign="center" transparent="1" backgroundColor="secondBG"/>
+		<widget source="menu" render="Listbox" position="50,1000" size="1820,80" foregroundColorSelected="selectedFG" foregroundColor="white" backgroundColorSelected="secondBG" backgroundColor="secondBG" scrollbarMode="showNever" selectionFrame="none" enableWrapAround="off">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (10,0), size = (340,80), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER,text = 0) ],
+					"fonts": [gFont("Regular",34)],
+					"itemHeight": 80,
+					"itemWidth": 360,
+					"orientation" : "orHorizontal",
+				}
+			</convert>
+		</widget>
+		<widget addon="Pager" connection="menu" itemHeight="75" showIcons="onlyFirst" picPage="icons/chevronleft.png" picPageCurrent="icons/chevronlefttrans.png" position="0,1000" size="50,80" transparent="0" backgroundColor="secondBG"/>
+		<widget addon="Pager" connection="menu" itemHeight="75" showIcons="onlyLast" picPage="icons/chevronright.png" picPageCurrent="icons/chevronrighttrans.png" position="1870,1000" size="50,80" transparent="0" backgroundColor="secondBG"/>
+	</screen>
 	<screen name="Setup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="config" position="755,120" size="1155,855" font="Regular;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
@@ -2442,15 +2458,6 @@
 				}
 			</convert>
 		</widget>
-	</screen>
-	<screen name="OldNeedsUpdatingMenuHorizontal" position="fill" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap alphatest="off" pixmap="infobar/hd.png" position="0,e-180" size="e,180" zPosition="-1" scale="1"/>
-		<widget source="Title" conditional="Title" render="Label" position="0,e-170" size="e,80" font="Regular;64" halign="center" valign="center" transparent="1" backgroundColor="transpBlack"/>
-		<widget source="label1" conditional="label1" render="Label" position="20,e-85" size="360,80" font="Regular;33" halign="center" valign="center" transparent="1" backgroundColor="transpBlack"/>
-		<widget source="label2" conditional="label2" render="Label" position="400,e-85" size="360,80" font="Regular;33" halign="center" valign="center" transparent="1" backgroundColor="transpBlack"/>
-		<widget source="label3" conditional="label3" render="Label" position="780,e-85" size="360,80" font="Regular;33" halign="center" valign="center" foregroundColor="yellow" transparent="1" backgroundColor="transpBlack"/>
-		<widget source="label4" conditional="label4" render="Label" position="1160,e-85" size="360,80" font="Regular;33" halign="center" valign="center" transparent="1" backgroundColor="transpBlack"/>
-		<widget source="label5" conditional="label5" render="Label" position="1540,e-85" size="360,80" font="Regular;33" halign="center" valign="center" transparent="1" backgroundColor="transpBlack"/>
 	</screen>
 	<screen name="VIXEPGBouquetSelector" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
