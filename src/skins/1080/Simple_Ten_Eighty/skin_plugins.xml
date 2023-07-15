@@ -2427,22 +2427,42 @@
 	</screen>
 	
 	<!-- TMDb -->
-	<screen name="tmdbTemplate" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
-		<panel name="PigLessTemplate"/> 
+	<screen name="tmdbTemplate1" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
+		<panel name="PigLessTemplate"/>
 		<widget name="searchinfo" position="30,123" size="830,40" font="Regular;34" foregroundColor="selectedFG" transparent="1" />
-		<widget name="list" conditional="list" position="30,183" size="830,810" transparent="1" itemHeight="45" scrollbarMode="showOnDemand"/>
 		<eLabel position="e-341,299" size="322,482" backgroundColor="white"/>
 		<widget name="cover" position="e-340,300" size="320,480" zPosition="100" alphatest="blend" />
 	</screen>
 
+	<screen name="tmdbTemplate2" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
+		<panel name="tmdbTemplate1"/>
+		<widget name="data" conditional="data" position="0,0" size="0,0" font="Regular;21" /><!-- silence debug -->
+		<widget name="list" conditional="list" position="30,183" size="830,810" transparent="1" itemHeight="45" scrollbarMode="showOnDemand"/>
+		
+	</screen>
+
 	<screen name="tmdbScreen" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
-		<panel name="tmdbTemplate"/>
+		<panel name="tmdbTemplate2"/>
 	</screen>
 
 	<screen name="tmdbScreenPeople" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
-		<panel name="tmdbTemplate"/>
+		<panel name="tmdbTemplate2"/>
 	</screen>
-	
+
+	<screen name="tmdbScreenPerson" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
+		<panel name="tmdbTemplate1"/>
+		<widget name="fulldescription" position="30,183" size="830,810" font="Regular;33" transparent="1"/>
+	</screen>
+
+	<screen name="tmdbScreenSeason" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
+		<panel name="PigLessTemplate"/>
+		<widget name="searchinfo" position="30,123" size="830,40" font="Regular;34" foregroundColor="selectedFG" transparent="1" />
+		<widget name="list" conditional="list" position="30,183" size="830,360" transparent="1" itemHeight="45" scrollbarMode="showOnDemand"/>
+		<widget name="data" conditional="data" position="30,585" size="830,410" font="Regular;33" />
+		<eLabel position="e-869,299" size="850,482" backgroundColor="white"/>
+		<widget name="cover" position="e-868,300" size="848,480" zPosition="100" alphatest="blend" />
+	</screen>
+
 	<screen name="tmdbScreenMovie" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
 		<panel name="tmdbTemplate"/> 
 		<widget name="fulldescription" position="30,183" size="830,810" transparent="1" halign="block" font="Regular;32" scrollbarMode="showOnDemand"/>
@@ -2466,5 +2486,14 @@
 		<widget name="genre" position="1080,600" size="450,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
 		<widget name="studio_txt" position="915,650" size="150,40" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
 		<widget name="studio" position="1080,650" size="450,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+	</screen>
+
+	<screen name="tmdbTemplate" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
+		<panel name="PigLessTemplate"/>
+		<widget name="data" conditional="data" position="0,0" size="0,0" font="Regular;21" /><!-- silence debug -->
+		<widget name="searchinfo" position="30,123" size="830,40" font="Regular;34" foregroundColor="selectedFG" transparent="1" />
+		<widget name="list" conditional="list" position="30,183" size="830,810" transparent="1" itemHeight="45" scrollbarMode="showOnDemand"/>
+		<eLabel position="e-341,299" size="322,482" backgroundColor="white"/>
+		<widget name="cover" position="e-340,300" size="320,480" zPosition="100" alphatest="blend" />
 	</screen>
 </skin>
