@@ -2432,6 +2432,7 @@
 		<widget name="searchinfo" position="30,123" size="830,40" font="Regular;34" foregroundColor="selectedFG" transparent="1" />
 		<eLabel position="e-341,299" size="322,482" backgroundColor="white"/>
 		<widget name="cover" position="e-340,300" size="320,480" zPosition="100" alphatest="blend" />
+		<widget name="backdrop" conditional="backdrop" position="0,0" size="0,0" zPosition="-5" alphatest="blend"/><!-- silence debug -->
 	</screen>
 
 	<screen name="tmdbTemplate2" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
@@ -2464,8 +2465,8 @@
 	</screen>
 
 	<screen name="tmdbScreenMovie" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
-		<panel name="tmdbTemplate"/> 
-		<widget name="fulldescription" position="30,183" size="830,810" transparent="1" halign="block" font="Regular;32" scrollbarMode="showOnDemand"/>
+		<panel name="tmdbTemplate1"/> 
+		<widget name="fulldescription" position="30,183" size="830,810" transparent="1" halign="block" font="Regular;33" scrollbarMode="showOnDemand"/>
 		<ePixmap position="e-340,123" size="100,100" zPosition="0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/tmdb/pic/star.png" transparent="1" alphatest="blend"/>
 		<widget name="rating" position="e-340,128" size="100,100" zPosition="2" font="Regular;27" halign="center" valign="center" foregroundColor="black" backgroundColor="#00ffba00" transparent="1"/>
 		<widget name="votes_brackets" position="e-340,217" size="100,30" zPosition="2" font="Regular;27" halign="center" transparent="1"/>
