@@ -6,6 +6,8 @@
 	</fonts>
 	<parameters>
 		<parameter name="AutomaticVolumeAdjustmentList" value="5,0,900,45,0,925,0,180,45,0"/>
+		<parameter name="TMDbListName" value="5,2,900,45"/>
+		<parameter name="TMDbListFont" value="*Regular,33"/>
 	</parameters>
 
 	<!-- AutomaticVolumeAdjustment -->
@@ -2422,5 +2424,47 @@
 	<!-- Series2Folder -->
 	<screen name="Series2FolderConfig" title="Setup" position="fill" flags="wfNoBorder">
 		<panel name="SetupPanelPIG"/>
+	</screen>
+	
+	<!-- TMDb -->
+	<screen name="tmdbTemplate" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
+		<panel name="PigLessTemplate"/> 
+		<widget name="searchinfo" position="30,123" size="830,40" font="Regular;34" foregroundColor="selectedFG" transparent="1" />
+		<widget name="list" conditional="list" position="30,183" size="830,810" transparent="1" itemHeight="45" scrollbarMode="showOnDemand"/>
+		<eLabel position="e-341,299" size="322,482" backgroundColor="white"/>
+		<widget name="cover" position="e-340,300" size="320,480" zPosition="100" alphatest="blend" />
+	</screen>
+
+	<screen name="tmdbScreen" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
+		<panel name="tmdbTemplate"/>
+	</screen>
+
+	<screen name="tmdbScreenPeople" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
+		<panel name="tmdbTemplate"/>
+	</screen>
+	
+	<screen name="tmdbScreenMovie" position="fill" flags="wfNoBorder" title="TMDb - The Movie Database">
+		<panel name="tmdbTemplate"/> 
+		<widget name="fulldescription" position="30,183" size="830,810" transparent="1" halign="block" font="Regular;32" scrollbarMode="showOnDemand"/>
+		<ePixmap position="e-340,123" size="100,100" zPosition="0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/tmdb/pic/star.png" transparent="1" alphatest="blend"/>
+		<widget name="rating" position="e-340,128" size="100,100" zPosition="2" font="Regular;27" halign="center" valign="center" foregroundColor="black" backgroundColor="#00ffba00" transparent="1"/>
+		<widget name="votes_brackets" position="e-340,217" size="100,30" zPosition="2" font="Regular;27" halign="center" transparent="1"/>
+		<widget name="fsklogo" position="e-120,123" size="100,100" zPosition="2" alphatest="blend"/>
+		<widget name="year_txt" position="915,300" size="150,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="year" position="1080,300" size="450,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="country_txt" position="915,350" size="150,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="country" position="1080,350" size="450,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="runtime_txt" position="915,400" size="150,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="runtime" position="1080,400" size="450,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="votes_txt" position="915,450" size="150,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="votes" position="1080,450" size="450,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="director_txt" position="915,500" size="150,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="director" position="1080,500" size="450,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="author_txt" position="915,550" size="150,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="author" position="1080,550" size="450,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="genre_txt" position="915,600" size="150,40" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="genre" position="1080,600" size="450,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="studio_txt" position="915,650" size="150,40" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
+		<widget name="studio" position="1080,650" size="450,40" zPosition="2" font="Regular;33" foregroundColor="#00ffffff" backgroundColor="#00303030" transparent="1"/>
 	</screen>
 </skin>
