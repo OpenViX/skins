@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 29.07.2023 -->
+	<!--  Modified by Orlandox 30.07.2023 -->
 
 	<!--  ## Head ##  -->
 
@@ -883,7 +883,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 29.07.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 30.07.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<panel name="MenuButtonBar" />
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
@@ -2045,18 +2045,10 @@
 	<!-- ## Event View ## -->
 	<screen name="EventView" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
 		<panel name="EventViewSimple" />
-<!--		<panel name="MenuButtonBar" /> -->
-		<widget name="epg_eventname" position="0,0" size="0,0"/> #To remove debug warning
-		<widget name="epg_description" position="0,0" size="0,0"/> #To remove debug warning
-		<widget name="channel" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="red" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="green" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="blue" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="yellow" position="0,0" size="0,0"/> #To remove debug warning
-<!--		<widget name="key_red" position="0,0" size="0,0"/> #To remove debug warning
-		<widget name="key_green" position="0,0" size="0,0"/> #To remove debug warning
-		<widget name="key_blue" position="0,0" size="0,0"/> #To remove debug warning
-		<widget name="key_yellow" position="0,0" size="0,0"/> #To remove debug warning -->
 	</screen>
 	<screen name="EventViewSimple" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
 		<panel name="MenuClock" />
@@ -2074,12 +2066,13 @@
 		<panel name="MenuButtonBar" /> 
 		<panel name="MenuKeyAutoTemplate" />
 		<widget source="Title" render="Label" position="80,245" size="590,35" font="youvix-b;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1" />
-        <widget source="session.CurrentService" render="Label" position="80,165" size="590,76" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1" >
+        <widget source="session.CurrentService" render="Label" position="85,55" size="445,76" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" halign="left" zPosition="1" >
 		    <convert type="ServiceName">Name</convert>
 		</widget>
+		<widget name="channel" position="80,200" size="590,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
 		<widget name="datetime" position="80,280" size="590,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
 		<widget name="duration" position="80,320" size="590,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
-		<widget source="session.Event_Now" render="Label" position="80,360" size="590,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" >
+		<widget source="session.Event_Now" render="Label" position="535,57" size="135,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" zPosition="1" >
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -2092,7 +2085,6 @@
 		</widget>
 		<widget name="epg_eventname" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="epg_description" position="0,0" size="0,0"/> #To remove debug warning
-		<widget name="channel" position="0,0" size="0,0"/> #To remove debug warning
 	</screen>
 	<screen name="InfoBarEventView" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
 		<panel name="EventViewSimple" />
