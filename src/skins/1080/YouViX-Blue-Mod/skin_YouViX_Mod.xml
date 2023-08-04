@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 30.07.2023 -->
+	<!--  Modified by Orlandox 04.08.2023 -->
 
 	<!--  ## Head ##  -->
 
@@ -216,9 +216,6 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
- <!--       <widget noWrap="1" backgroundColor="background2" font="youvix-b;30" render="Label" position="1832,1035" size="130,33" source="session.MSNWeather" transparent="1" zPosition="1" foregroundColor="yellow" valign="center" halign="left">
-            <convert type="MSNWeather">temperature_current</convert>
-        </widget> -->
 	</screen>
 	<screen name="SecondInfoBar" flags="wfNoBorder" position="fill" backgroundColor="transparent">
 	    <panel name="InfobarClients"/>
@@ -231,6 +228,9 @@
 		<widget source="session.Event_Now" render="Progress" position="780,893" size="600,10" pixmap="selectionbars/activityslider.png" backgroundColor="background2" transparent="1" zPosition="2">
 			<convert type="EventTime">Progress</convert>
 		</widget>
+		<widget source="session.CurrentService" render="Label" position="780,868" size="600,26" font="youvix-r;20" backgroundColor="background2" transparent="1" zPosition="2">
+            <convert type="StreamInfo">StreamType</convert>
+        </widget>
 		<widget name="epg_description" position="0,0" size="0,0"/> #To remove debug warning
 		<widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=11000,wrap" position="480,620" size="690,183" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
@@ -274,7 +274,6 @@
 		<widget source="session.CurrentService" render="Label" position="1545,890" size="160,38" font="youvix-r;26" foregroundColor="red" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2">
 			<convert type="VNetSpeedInfo">TM</convert>
 		</widget>
-		<panel name="InfobarClients"/>
 		<panel name="InfobarLeftArrow"/>
 		<panel name="InfobarChannelName"/>
 		<panel name="InfobarProgramNowStartTime"/>
@@ -309,130 +308,6 @@
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
 		<panel name="MenuKeyAutoTemplate"/>
-<!--/* MSN WEATHER WIDGET -->
- <!--       <ePixmap pixmap="infobar/2ndinfobar1.png" position="0,280" size="1920,215" zPosition="-1"/>
-		<widget backgroundColor="background2" font="youvix-b;34" foregroundColor="yellow" render="Label" position="10,300" size="300,120" source="session.MSNWeather" zPosition="1" halign="center" transparent="1" valign="center">
-            <convert type="MSNWeather">city</convert>
-        </widget>
-		<eLabel text="Havaintoaika:" position="10,420" size="120,23" font="youvix-b;18" foregroundColor="green" backgroundColor="background2" transparent="1" halign="right" valign="center" noWrap="1" />
-		<widget backgroundColor="background2" font="youvix-b;20" foregroundColor="#0023e02d" render="Label" position="10,443" size="120,25" source="session.MSNWeather" zPosition="1" halign="right" transparent="1">
-            <convert type="MSNWeather">observationtime</convert>
-        </widget>
-		<eLabel text="Havaintopaikka:" position="140,420" size="160,23" font="youvix-b;18" foregroundColor="green" backgroundColor="background2" transparent="1" valign="center" noWrap="1" />
-		<widget backgroundColor="background2" font="youvix-b;20" foregroundColor="#0023e02d" render="Label" position="140,443" size="260,50" source="session.MSNWeather" zPosition="1" transparent="1" >
-            <convert type="MSNWeather">observationpoint</convert>
-        </widget>
-        <widget alphatest="blend" render="MSNWeatherPixmap" position="320,282" size="80,80" source="session.MSNWeather" transparent="1" zPosition="1" backgroundColor="background2">
-            <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/WeatherIcons/,png</convert>
-        </widget>
-		<eLabel text="Tänään:" position="410,424" size="90,30" backgroundColor="background2" transparent="1" font="youvix-b;25" foregroundColor="grey" />
-        <eLabel text="max:" position="410,445" size="90,30" backgroundColor="background2" transparent="1" font="youvix-b;25" foregroundColor="red" />
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;25" render="Label" position="405,445" size="130,30" source="session.MSNWeather" transparent="1" zPosition="1" foregroundColor="red" valign="center" halign="right">
-            <convert type="MSNWeather">temperature_high,current</convert>
-        </widget>
-        <eLabel text="min:" position="410,466" size="90,30" backgroundColor="background2" transparent="1" font="youvix-b;25" foregroundColor="lightcolour" />
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;25" foregroundColor="lightcolour" render="Label" position="405,466" size="130,30" source="session.MSNWeather" zPosition="1" transparent="1" valign="center" halign="right">
-            <convert type="MSNWeather">temperature_low,current</convert>
-        </widget>
-		<eLabel text="Lämpötila:" position="410,283" size="150,35" backgroundColor="background2" transparent="1" font="youvix-b;30" foregroundColor="white" />
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;30" render="Label" position="532,283" size="130,33" source="session.MSNWeather" transparent="1" zPosition="1" foregroundColor="white" valign="center" halign="right">
-            <convert type="MSNWeather">temperature_current</convert>
-        </widget>
-		<widget backgroundColor="background2" font="youvix-b;30" foregroundColor="white" render="Label" position="672,283" size="650,35" source="session.MSNWeather" zPosition="1" transparent="1" valign="center">
-           <convert type="MSNWeather">temperature_text,current</convert>
-        </widget>
-		<eLabel text="Tuntuu kuin:" position="410,314" size="180,35" backgroundColor="background2" transparent="1" font="youvix-b;30" foregroundColor="white" />
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;30" render="Label" position="550,314" size="80,35" source="session.MSNWeather" transparent="1" zPosition="1" foregroundColor="white" valign="center" halign="right">
-            <convert type="MSNWeather">feelslike</convert>
-        </widget>
-		<eLabel text="°C" position="630,314" size="80,35" backgroundColor="background2" transparent="1" font="youvix-b;30" foregroundColor="white" />
-        <ePixmap pixmap="WeatherIcons/humidity_icon.png" position="410,373" size="40,40" transparent="1" alphatest="blend" zPosition="1" />
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;26" foregroundColor="white" render="Label" position="455,375" size="40,35" source="session.MSNWeather" zPosition="1" transparent="1" halign="right">
-            <convert type="MSNWeather">humidity</convert>
-        </widget>
-		<eLabel text="%" position="500,375" size="28,28" backgroundColor="background2" transparent="1" font="youvix-b;26" foregroundColor="white" halign="left"/>
-        <ePixmap pixmap="WeatherIcons/wind_icon.png" position="410,445" size="40,40" transparent="1" alphatest="blend" zPosition="1" />
-        <widget backgroundColor="background2" font="youvix-b;26" foregroundColor="white" render="Label" position="460,447" size="275,35" source="session.MSNWeather" zPosition="1" transparent="1" halign="left">
-            <convert type="MSNWeather">winddisplay</convert>
-        </widget>
-		<eLabel text="km/h" position="493,430" size="70,28" backgroundColor="background2" transparent="1" font="youvix-b;22" foregroundColor="white" halign="left" zPosition="3" />
- Week forecast	
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;30" foregroundColor="white" render="Label" position="620,350" size="60,32" source="session.MSNWeather" zPosition="3" halign="right" transparent="1">
-		   <convert type="MSNWeather">weekshortday,day1</convert>
-		</widget>
-		<widget alphatest="blend" render="MSNWeatherPixmap" position="690,340" size="60,60" source="session.MSNWeather" transparent="1" zPosition="5" backgroundColor="transparent">
-		   <convert type="MSNWeather">weathericon,day1,/usr/share/enigma2/WeatherIcons/,png</convert>
-		</widget>
-		<widget backgroundColor="background2" font="youvix-b;26" render="Label" position="620,393" size="250,95" source="session.MSNWeather" transparent="1" zPosition="3" halign="center" foregroundColor="white" valign="center">
-		   <convert type="MSNWeather">temperature_text,day1</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;26" foregroundColor="lightcolour" render="Label" position="750,369" size="80,27" source="session.MSNWeather" zPosition="3" transparent="1" valign="center" halign="right">
-		   <convert type="MSNWeather">temperature_low,day1</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;26" foregroundColor="red" render="Label" position="750,338" size="80,27" source="session.MSNWeather" zPosition="3" transparent="1" valign="center" halign="right">
-		   <convert type="MSNWeather">temperature_high,day1</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;30" foregroundColor="white" render="Label" position="870,350" size="60,32" source="session.MSNWeather" zPosition="3" halign="right" transparent="1">
-		   <convert type="MSNWeather">weekshortday,day2</convert>
-		</widget>
-		<widget alphatest="blend" render="MSNWeatherPixmap" position="940,340" size="60,60" source="session.MSNWeather" transparent="1" zPosition="5" backgroundColor="transparent">
-		   <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/WeatherIcons/,png</convert>
-		</widget>
-		<widget backgroundColor="background2" font="youvix-b;26" foregroundColor="white" render="Label" position="870,393" size="250,95" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center">
-		   <convert type="MSNWeather">temperature_text,day2</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;26" foregroundColor="lightcolour" render="Label" position="1000,369" size="80,27" source="session.MSNWeather" zPosition="3" transparent="1" valign="center" halign="right">
-		   <convert type="MSNWeather">temperature_low,day2</convert>
-		</widget>
-		<widget backgroundColor="background2" font="youvix-b;26" foregroundColor="red" render="Label" position="1000,338" size="80,27" source="session.MSNWeather" zPosition="3" transparent="1" noWrap="1" halign="right">
-           <convert type="MSNWeather">temperature_high,day2</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;30" foregroundColor="white" render="Label" position="1120,350" size="60,32" source="session.MSNWeather" zPosition="3" halign="right" transparent="1">
-		   <convert type="MSNWeather">weekshortday,day3</convert>
-		</widget>
-		<widget alphatest="blend" render="MSNWeatherPixmap" position="1190,340" size="60,60" source="session.MSNWeather" transparent="1" zPosition="5" backgroundColor="transparent">
-		   <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/WeatherIcons/,png</convert>
-		</widget>
-		<widget backgroundColor="background2" font="youvix-b;26" foregroundColor="white" render="Label" position="1120,393" size="250,95" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center">
-		   <convert type="MSNWeather">temperature_text,day3</convert>
-		</widget>
-		<widget backgroundColor="background2" font="youvix-b;26" foregroundColor="lightcolour" render="Label" position="1250,369" size="80,27" source="session.MSNWeather" zPosition="3" transparent="1" noWrap="1" halign="right">
-		   <convert type="MSNWeather">temperature_low,day3</convert>
-		</widget>
-		<widget backgroundColor="background2" font="youvix-b;26" foregroundColor="red" render="Label" position="1250,338" size="80,27" source="session.MSNWeather" zPosition="3" transparent="1" valign="center" noWrap="1" halign="right">
-		   <convert type="MSNWeather">temperature_high,day3</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;30" foregroundColor="white" render="Label" position="1370,350" size="60,32" source="session.MSNWeather" zPosition="3" halign="right" transparent="1">
-		   <convert type="MSNWeather">weekshortday,day4</convert>
-		</widget>
-		<widget alphatest="blend" render="MSNWeatherPixmap" position="1440,340" size="60,60" source="session.MSNWeather" transparent="1" zPosition="5">
-		   <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/WeatherIcons/,png</convert>
-		</widget>
-		<widget backgroundColor="background2" font="youvix-b;26" foregroundColor="white" render="Label" position="1370,393" size="250,95" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center">
-		   <convert type="MSNWeather">temperature_text,day4</convert>
-		</widget>
-		<widget backgroundColor="background2" font="youvix-b;26" foregroundColor="lightcolour" render="Label" position="1500,369" size="80,27" source="session.MSNWeather" zPosition="3" transparent="1" noWrap="1" halign="right">
-		   <convert type="MSNWeather">temperature_low,day4</convert>
-		</widget>	
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;26" foregroundColor="red" render="Label" position="1500,338" size="80,27" source="session.MSNWeather" zPosition="3" transparent="1" valign="center" halign="right">
-		   <convert type="MSNWeather">temperature_high,day4</convert>
-		</widget>	
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;30" foregroundColor="white" render="Label" position="1620,350" size="60,32" source="session.MSNWeather" zPosition="3" halign="right" transparent="1">
-		   <convert type="MSNWeather">weekshortday,day5</convert>
-		</widget>
-		<widget alphatest="blend" render="MSNWeatherPixmap" position="1690,340" size="60,60" source="session.MSNWeather" transparent="1" zPosition="5">
-		   <convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/WeatherIcons/,png</convert>
-		</widget>
-		<widget backgroundColor="background2" font="youvix-b;26" foregroundColor="white" render="Label" position="1620,393" size="250,95" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center">
-		   <convert type="MSNWeather">temperature_text,day5</convert>
-		</widget>
-		<widget backgroundColor="background2" font="youvix-b;26" foregroundColor="lightcolour" render="Label" position="1750,369" size="80,27" source="session.MSNWeather" zPosition="3" transparent="1" noWrap="1" halign="right">
-		   <convert type="MSNWeather">temperature_low,day5</convert>
-		</widget>	
-		<widget noWrap="1" backgroundColor="background2" font="youvix-b;26" foregroundColor="red" render="Label" position="1750,338" size="80,27" source="session.MSNWeather" zPosition="3" transparent="1" valign="center" halign="right">
-		   <convert type="MSNWeather">temperature_high,day5</convert>
-		</widget> -->
- <!-- MSN WEATHER WIDGET */ -->
 	</screen>
 	<screen name="SecondInfoBarSimple" flags="wfNoBorder" position="fill" backgroundColor="transparent">
 	    <widget name="channel" position="0,0" size="0,0"/>  #To remove debug warning
@@ -883,7 +758,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 30.07.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 04.08.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<panel name="MenuButtonBar" />
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
