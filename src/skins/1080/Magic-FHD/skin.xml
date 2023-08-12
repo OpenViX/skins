@@ -1235,6 +1235,15 @@
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 	</screen>
+	<screen name="EPGServiceNumberSelection" position="725,center" size="700,200" backgroundColor="transpBlack" zPosition="1" flags="wfNoBorder">
+		<widget name="number" position="1,1" size="120,60" font="Regular;54" borderColor="black" borderWidth="3" halign="right" backgroundColor="transpBlack" foregroundColor="grey"/>
+		<widget source="service" render="Label" position="125,1" size="675,60" font="Regular;51" borderColor="black" borderWidth="3" backgroundColor="transpBlack" foregroundColor="grey">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="service" render="Picon" position="135,65" size="220,132" alphatest="blend" backgroundColor="transpBlack">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
 	<screen name="HistoryZapSelector" position="center,center" size="1700,842" backgroundColor="transpBlack" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="0,1" size="1700,840" backgroundColor="transpBlack" transparent="1">
 			<convert type="TemplatedMultiContent">
