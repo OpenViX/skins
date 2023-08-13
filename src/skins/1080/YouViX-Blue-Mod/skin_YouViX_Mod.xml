@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 12.08.2023 -->
+	<!--  Modified by Orlandox 13.08.2023 -->
 
 	<!--  ## Head ##  -->
 
@@ -758,7 +758,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 12.08.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 13.08.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<panel name="MenuButtonBar" />
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
@@ -2195,6 +2195,18 @@
 		<panel name="MenuHelpButton" />
 	</screen>
 
+	<!-- ## EPGServiceNumberSelection ## -->
+	<screen name="EPGServiceNumberSelection" position="c-500,c-65" size="1000,130" backgroundColor="#000000" zPosition="5" flags="wfNoBorder">
+		<eLabel position="2,2" size="e-4,e-4" backgroundColor="#262626" />
+		<widget source="service" render="Picon" position="20,c-33" size="110,66" alphatest="blend" backgroundColor="#262626" transparent="1" zPosition="5">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget name="number" position="150,0" size="120,e" font="youvix-r;42" backgroundColor="#262626" foregroundColor="white" transparent="1" zPosition="5" valign="center" halign="right" />
+		<widget source="service" render="Label" position="280,0" size="710,e" font="youvix-r;42" backgroundColor="#262626" foregroundColor="white" transparent="1" zPosition="5" valign="center" halign="left">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	
 	<!-- ## History Zap ## -->
 	<screen name="HistoryZapSelector" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
