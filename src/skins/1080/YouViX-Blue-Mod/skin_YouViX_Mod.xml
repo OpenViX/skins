@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 13.08.2023 -->
+	<!--  Modified by Orlandox 19.08.2023 -->
 
 	<!--  ## Head ##  -->
 
@@ -758,7 +758,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 13.08.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 19.08.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<panel name="MenuButtonBar" />
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
@@ -1458,7 +1458,7 @@
 		</widget>
 		<panel name="ChannelSelectionPicon" />
 		<panel name="ChannelSelectionBouquetName" />
-		<widget name="list" position="680,218" size="1160,720" backgroundColor="menubackground" foregroundColorEvent="lightcolour" foregroundColorEventSelected="white" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="lightcolour" serviceItemHeight="50" serviceNumberFont="youvix-r;28" serviceNameFont="channelselectionservice;28" serviceInfoFont="channelselectionevent;26" progressBarWidth="72" fieldMargins="13" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
+		<widget name="list" position="680,218" size="1160,715" backgroundColor="menubackground" foregroundColorEvent="lightcolour" foregroundColorEventSelected="white" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="lightcolour" serviceItemHeight="50" serviceNumberFont="youvix-r;28" serviceNameFont="channelselectionservice;28" serviceInfoFont="channelselectionevent;26" progressBarWidth="72" fieldMargins="13" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="ServiceEvent" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="1">
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="680,187" size="1100,29" font="youvix-r;24" foregroundColor="grey" backgroundColor="menubackground" noWrap="1" transparent="1" halign="left" valign="center" zPosition="1">
@@ -2383,16 +2383,19 @@
 
 	<!-- ## Job View ## -->
 	<screen name="JobView" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<ePixmap pixmap="screens/jobview.png" position="center,985" size="800,95" zPosition="-1"/>
-		<widget source="job_name" render="Label" position="center-50,990" size="650,30" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
-		<widget source="job_status" render="Label" position="1020,985" size="320,30" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" transparent="1" />
-		<widget source="job_task" render="Label" position="center-50,1025" size="520,30" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
-		<ePixmap position="center-50,1060" size="600,10" pixmap="selectionbars/activitysliderbackground.png" alphatest="blend" zPosition="-1"/> 
-		<widget source="job_progress" render="Progress" position="center-50,1060" size="600,10" pixmap="selectionbars/activityslider.png" transparent="1" zPosition="1" />
-		<widget source="job_progress" render="Label" position="1020,1020" size="320,30" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="1">
+	    <panel name="BottomMenuBlock" />
+		<ePixmap pixmap="screens/jobview.png" position="center+115,985" size="800,95" zPosition="-1"/>
+		<widget source="job_name" render="Label" position="center+65,990" size="650,30" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
+		<widget source="job_status" render="Label" position="1135,985" size="320,30" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" transparent="1" />
+		<widget source="job_task" render="Label" position="center+65,1025" size="520,30" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
+		<ePixmap position="center+65,1060" size="600,10" pixmap="selectionbars/activitysliderbackground.png" alphatest="blend" zPosition="-1"/> 
+		<widget source="job_progress" render="Progress" position="center+65,1060" size="600,10" pixmap="selectionbars/activityslider.png" transparent="1" zPosition="1" />
+		<widget source="job_progress" render="Label" position="1135,1020" size="320,30" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="1">
 			<convert type="ProgressToText" />
 		</widget>
-		<widget name="config" position="680,354" size="480,30" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" zPosition="1" />
+		<widget name="config" position="center+115,947" size="800,36" font="youvix-r;28" itemHeight="38" foregroundColor="white" backgroundColor="menubackground" zPosition="1" />
+		<panel name="MenuButtonBar" />
+		<panel name="MenuKeyAutoTemplate" />
 		<panel name="MenuHelpwindowWidget" />
 	</screen>
 
