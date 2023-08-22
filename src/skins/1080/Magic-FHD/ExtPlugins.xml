@@ -1587,37 +1587,6 @@
 		<widget name="menu" position="5,5" size="240,405" font="Regular;33" itemHeight="45" backgroundColor="transpBlack" transparent="1"/>
 	</screen>
 
-	<!-- ## VCS ## -->
-	<screen name="VcsSetupScreen" position="fill" flags="wfNoBorder" title="VCS">
-		<panel name="BasicTemplate"/>
-		<widget name="config" position="735,120" size="1177,585" font="Regular;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="profiles" render="Listbox" position="735,710" size="1177,270" font="Regular;33" foregroundColor="secogreyndFG" valign="center" halign="center">
-			<convert type="TemplatedMultiContent">
-				{"templates":
-					{"default": (45, [
-						MultiContentEntryText(pos=(50, 0),  size=(200, 45), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=1),
-						MultiContentEntryText(pos=(260, 0), size=(320, 45), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=2),
-						MultiContentEntryPixmapAlphaTest(pos=(12, 9), size=(25, 24), png=3),
-					], True, "showOnDemand"),
-					"notselected": (45, [
-						MultiContentEntryText(pos=(50, 0),  size=(200, 45), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=1),
-						MultiContentEntryText(pos=(260, 0), size=(320, 45), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=2),
-						MultiContentEntryPixmapAlphaTest(pos=(12, 9), size=(25, 24), png=3),
-					], False, "showOnDemand")
-					},
-				"fonts": [gFont("Regular", 33), gFont("Regular", 30)],
-				"itemHeight": 45,
-				"scrollbarMode": "showOnDemand",
-				}
-			</convert>
-		</widget>
-	</screen>
-	<screen name="VcsProfileSetup" position="fill" flags="wfNoBorder" title="VCS Profile Setup">
-		<panel name="BasicTemplate"/>
-		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
-		<widget source="header" render="Label" position="7,530" size="715,475" font="Regular;33" foregroundColor="secondFG" valign="center" halign="center"/>
-	</screen>
-
 	<!-- ## MultiBoot ## -->
 	<screen name="MultiBoot" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
