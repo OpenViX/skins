@@ -1514,24 +1514,6 @@
 		<widget source="downloadProgressText" render="Label" position="900,200" size="700,50" font="Regular;35" halign="center" transparent="1" zPosition="2" foregroundColor="selectedFG"/>
 	</screen>
 
-	<!-- ## Pravos TV ## -->
-	<screen name="PravosMenu" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<panel name="MenuBPanel"/>
-		<panel name="InfoBPanel"/>
-		<widget source="menu" render="Listbox" position="800,120" size="600,855" foregroundColor="grey" enableWrapAround="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryPixmapAlphaTest(pos = (5,10), size =(100,60), png = 0),
-						MultiContentEntryText(pos = (120,10), size = (420,45), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 1),
-					],
-				"fonts": [gFont("Regular",33)],
-				"itemHeight":90
-				}
-			</convert>
-		</widget>
-	</screen>
-
 	<!-- ## SpinnerSelector ## -->
 	<screen name="SpinnerSelectionBox" position="fill" flags="wfNoBorder" title="SpinnerSelector">
 		<panel name="BasicTemplate"/>
