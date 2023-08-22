@@ -1514,50 +1514,6 @@
 		<widget source="downloadProgressText" render="Label" position="900,200" size="700,50" font="Regular;35" halign="center" transparent="1" zPosition="2" foregroundColor="selectedFG"/>
 	</screen>
 
-	<!-- ## WebcamViewer ## -->
-	<screen name="PictureViewer" position="fill" flags="wfNoBorder" title="PictureViewer">
-		<panel name="BasicTemplate"/>
-		<widget name="menu" position="755,120" size="1157,560" font="FileList;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="slist" position="755,1300" size="1157,560" font="Regular;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
-		<widget name="pixmap" position="7,530" size="715,475"/>
-	</screen>
-	<screen name="WebcamViewerMenu" position="fill" flags="wfNoBorder" title="PictureViewer Setup">
-		<panel name="BasicTemplate"/>
-		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="WebcamViewer" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget name="menu" position="755,120" size="1157,855" font="Regular;33" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
-	</screen>
-	<screen name="TravelWebcamviewer" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget source="list" render="Listbox" position="735,120" size="1177,855" foregroundColor="grey" enableWrapAround="1">
-			<convert type="TemplatedMultiContent">
-			{"templates":
-				{"default": (100,[
-						MultiContentEntryPixmapAlphaTest(pos = (0,0), size =(100,75), png = 4), # index 4 is the thumbnail
-						MultiContentEntryText(pos = (100,1), size =(500,45), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 1 is the Title
-						MultiContentEntryText(pos = (100,50), size =(300,45), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 5), # index 5 is the Published Date
-						MultiContentEntryText(pos = (100,100), size =(300,45), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 6), # index 6 is the Views Count
-						MultiContentEntryText(pos = (400,50), size =(200,45), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 7), # index 7 is the duration
-						MultiContentEntryText(pos = (400,100), size =(200,45), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 8), # index 8 is the ratingcount
-					]),
-				"status": (100,[
-						MultiContentEntryText(pos = (10,1), size =(500,50), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (10,50), size =(500,45), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 2 is the description
-					])
-				},
-				"fonts": [gFont("Regular",33),gFont("Regular",27),gFont("Regular",36),gFont("Regular",30)],
-				"itemHeight":100
-			}
-			</convert>
-		</widget>
-		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on"/>
-		<widget name="count" position="735,960" zPosition="5" size="300,45" font="Regular;33"/>
-		<widget name="page" position="1050,960" zPosition="5" size="300,45" font="Regular;33"/>
-		<widget name="currentnumbers" position="1400,960" zPosition="5" size="300,45" font="Regular;33"/>
-	</screen>
-
 	<!-- ## Pravos TV ## -->
 	<screen name="PravosMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
