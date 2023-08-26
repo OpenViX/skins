@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 20.08.2023 -->
+	<!--  Modified by Orlandox 26.08.2023 -->
 
 	<!--  ## Head ##  -->
 
@@ -758,7 +758,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 20.08.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 26.08.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<panel name="MenuButtonBar" />
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
@@ -3942,7 +3942,7 @@
 		<panel name="MenuConfigWidget" />
 		<widget name="cancel" position="0,0" size="0,0"/>
 		<widget name="canceltext" position="120,987" size="268,35" font="youvix-r;24" foregroundColor="#00ff0808" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="2"/>
-		<widget name="ok" position="0,0" size="0,0"/>
+		<widget name="ok" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="oktext" position="120,1033" size="268,35" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="2"/>
 		<panel name="MenuHelpwindowWidget" />
 	</screen>
@@ -3950,9 +3950,11 @@
 	<!-- ## Timeshift ## -->
 	 <screen name="TimeshiftState" flags="wfNoBorder" position="0,0" size="1920,400" backgroundColor="transparent" title="InfoBar">
 	    <panel name="PlayerTemplate"/>
-		<widget name="eventname" position="325,34" size="850,60" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" valign="center" noWrap="0" zPosition="1"/>
 		<widget name="PTSSeekPointer" position="277,84" size="19,12" pixmap="epg/timeline-now-pig.png" alphatest="blend" zPosition="4" />
 		<widget name="PTSSeekBack" position="277,97" size="1367,17" zPosition="1"/>
+		<widget name="statusicon" position="276,119" size="25,25" pixmaps="pvr/play.png,pvr/pause.png,pvr/stop.png,pvr/forward.png,pvr/backward.png,pvr/slow.png,pvr/blank.png" zPosition="1" alphatest="blend" />
+		<widget name="speed" position="310,119" size="100,38" font="youvix-r;22" foregroundColor="white" backgroundColor="background2" transparent="1" zPosition="4" />
+		<widget name="eventname" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="state" position="0,0" size="0,0"/> #To remove debug warning
 	</screen>
 
