@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 04.10.2023 -->
+	<!--  Modified by Orlandox 08.10.2023 -->
 
 	<!--  ## Head ##  -->
 
@@ -749,7 +749,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 04.10.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 08.10.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
@@ -1898,12 +1898,13 @@
 	<screen name="MediaPlayer" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Mediasoitin">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyMediaPlayerText" />
-		<eLabel name="Filelist" position="670,150" size="200,35" text="Tiedostolista" font="youvix-b;30" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="filelist" position="670,190" size="550,700" scrollbarMode="showOnDemand" backgroundColor="menubackground"/>
-		<eLabel name="Playlist" position="1240,150" size="200,35" text="Soittolista" font="youvix-b;30" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="playlist" position="1240,190" size="550,700" scrollbarMode="showOnDemand" backgroundColor="menubackground" selectionDisabled="1"/>
-		<widget name="currenttext" position="465,120" size="0,0"/>
-		<widget name="titletext" position="465,120" size="0,0"/>
+		<eLabel name="Filelist" position="680,150" size="200,37" text="Tiedostolista" font="youvix-b;30" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
+		<widget name="filelist" position="680,190" size="580,715" scrollbarMode="showOnDemand" backgroundColor="menubackground"/>
+		<eLabel name="Playlist" position="1260,150" size="200,37" text="Soittolista" font="youvix-b;30" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
+		<widget name="playlist" position="1260,190" size="580,715" scrollbarMode="showOnDemand" backgroundColor="menubackground" selectionDisabled="1"/>
+		<widget name="currenttext" position="820,100" size="1020,40" font="youvix-r;28" valign="top" halign="left" transparent="1"/>
+		<widget name="title" position="680,50" size="1160,42" foregroundColor="yellow" backgroundColor="menubackground" font="youvix-r;32" valign="top" halign="center" transparent="1"/>
+		<widget name="titletext" position="680,100" size="140,40"  backgroundColor="menubackground" font="youvix-r;30" valign="top" halign="left" transparent="1"/>
 		<widget name="coverArt" position="90,400" size="300,300" pixmap="no_coverArt.png" transparent="1" alphatest="blend"/>
 		<widget name="artisttext" position="90,710" size="74,22" font="youvix-r;20" valign="top" transparent="1"/>
 		<widget name="artist" position="174,710" size="315,22" font="youvix-r;20" valign="top" transparent="1"/>
@@ -1918,10 +1919,11 @@
 		    <convert type="ServicePosition">Gauge</convert>
 		</widget>
 		<widget name="repeat" position="605,790" size="105,45" pixmaps="buttons/repeat-off.png,buttons/repeat-on.png" transparent="1" alphatest="blend"/>
+		<widget name="PositionGauge" position="90,815" size="580,21" transparent="0" zPosition="1" pointer="position_arrow.png:20,5"/>
 		<widget source="session.CurrentService" render="Label" position="80,840" size="120,18" foregroundColor="white" font="youvix-r;18" valign="center" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="620,840" size="120,18" font="youvix-r;18" valign="right" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="600,840" size="120,18" font="youvix-r;18" transparent="1">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 	</screen>
