@@ -79,19 +79,6 @@
 				}
 			</convert>
 		</widget>
-		<widget source="key_previous" conditional="key_previous" render="Pixmap" pixmap="buttons/key_prev.png" alphatest="blend" position="10,1031" size="52,38">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="key_next" conditional="key_next" render="Pixmap" pixmap="buttons/key_next.png" alphatest="blend" position="114,1031" size="52,38">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-	</screen>
-
-	<!-- VKeyIconPanel -->
-	<screen name="VKeyIconPanel">
-		<widget source="VKeyIcon" conditional="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" alphatest="blend" position="10,1031" size="52,38">
-			<convert type="ConditionalShowHide"/>
-		</widget>
 	</screen>
 
 	<!-- Button Templates -->
@@ -122,35 +109,13 @@
 		<panel name="ButtonGreen"/>
 		<panel name="ButtonYellow"/>
 		<panel name="ButtonBlue"/>
-		<panel name="KeyMenuAutoTemplate"/>
-		<panel name="KeyInfoAutoTemplate"/>
-		<panel name="KeyHelpAutoTemplate"/>
-		<panel name="KeyTextAutoTemplate"/>
-		<panel name="VKeyIconPanel"/>
+		<panel name="keysAutoTemplate"/>
 	</screen>
-
-	<screen name="KeyTextAutoTemplate"><!-- show with Components.Sources.Boolean -->
-		<widget source="key_text" conditional="key_text" render="Pixmap" pixmap="buttons/key_text.png" alphatest="blend" position="10,1031" size="52,38" zPosition="2">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-	</screen>
-
-	<screen name="KeyHelpAutoTemplate"><!-- show with Components.Sources.Boolean -->
-		<widget source="key_help" conditional="key_help" render="Pixmap" pixmap="buttons/key_help.png" alphatest="blend" position="62,1031" size="52,38" zPosition="2">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-	</screen>
-
-	<screen name="KeyMenuAutoTemplate"><!-- show with Components.Sources.Boolean -->
-		<widget source="key_menu" conditional="key_menu" render="Pixmap" pixmap="buttons/key_menu.png" alphatest="blend" position="114,1031" size="52,38" zPosition="2">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-	</screen>
-
-	<screen name="KeyInfoAutoTemplate"><!-- show with Components.Sources.Boolean -->
-		<widget source="key_info" conditional="key_info" render="Pixmap" pixmap="buttons/key_info.png" alphatest="blend" position="167,1031" size="52,38" zPosition="2">
-			<convert type="ConditionalShowHide"/>
-		</widget>
+	
+	<screen name="keysAutoTemplate">
+		<widget addon="ButtonSequence" connection="key_previous,key_help,key_info,key_menu,key_text,VKeyIcon,key_next" 
+			pixmaps="key_previous:buttons/key_prev.png,key_help:buttons/key_help.png,key_info:buttons/key_info.png,key_menu:buttons/key_menu.png,key_text:buttons/key_text.png,VKeyIcon:buttons/key_text.png,key_next:buttons/key_next.png" 
+			position="10,1031" size="220,38" itemHeight="38" spacing="1" transparent="1" zPosition="10"/>
 	</screen>
 
 	<screen name="KeyMenuTemplate">
@@ -161,36 +126,16 @@
 		<ePixmap pixmap="buttons/key_info.png" alphatest="blend" position="167,1031" size="52,38" zPosition="2"/>
 	</screen>
 
-	<screen name="KeyZeroTemplate">
-		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="62,1031" size="52,38" zPosition="2"/>
-	</screen>
-
-	<screen name="KeyOkTemplate">
+	<screen name="KeyOkTemplate"><!-- only used in skin_plugins.xml -->
 		<ePixmap pixmap="buttons/key_ok.png" alphatest="blend" position="62,1031" size="52,38" zPosition="2"/>
-	</screen>
-
-	<screen name="KeyOneTemplate">
-		<ePixmap pixmap="buttons/key_1.png" alphatest="blend" position="62,1031" size="52,38" zPosition="2"/>
 	</screen>
 
 	<screen name="KeyTextTemplate">
 		<ePixmap pixmap="buttons/key_text.png" alphatest="blend" position="10,1031" size="52,38" zPosition="2"/>
 	</screen>
 
-	<screen name="KeyTextTemplateGreen">
-		<ePixmap pixmap="buttons/key_text.png" alphatest="blend" position="619,1031" size="52,38" zPosition="2"/>
-	</screen>
-
-	<screen name="KeyTextTemplateBlue">
+	<screen name="KeyTextTemplateBlue"><!-- only used in skin_plugins.xml, button apears in key_blue position -->
 		<ePixmap pixmap="buttons/key_text.png" alphatest="blend" position="1500,1032" size="52,38" zPosition="2"/>
-	</screen>
-
-	<screen name="KeyTextTemplateRight">
-		<ePixmap pixmap="buttons/key_text.png" alphatest="blend" position="1840,1032" size="52,38" zPosition="2"/>
-	</screen>
-
-	<screen name="KeyExit">
-		<ePixmap pixmap="buttons/key_exit.png" position="183,1032" size="52,38" alphatest="blend" zPosition="2"/>
 	</screen>
 
 	<screen name="CancelTemplate">
