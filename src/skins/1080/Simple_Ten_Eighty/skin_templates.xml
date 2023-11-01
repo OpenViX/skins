@@ -83,39 +83,40 @@
 
 	<!-- Button Templates -->
 
-	<screen name="ButtonRed">
+	<screen name="ButtonRed"><!-- used by some plugins -->
 		<widget objectTypes="key_red,Label,Button" name="key_red" position="224,1030" size="410,38" backgroundColor="black" zPosition="2" transparent="1" foregroundColor="buttonred" font="Regular;34" halign="left"/>
 		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="224,1030" size="410,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="buttonred" font="Regular;34" halign="left"/>
 	</screen>
 
-	<screen name="ButtonGreen">
+	<screen name="ButtonGreen"><!-- used by some plugins -->
 		<widget objectTypes="key_green,Label,Button" name="key_green" position="652,1030" size="410,38" backgroundColor="black" zPosition="2" transparent="1" foregroundColor="buttongreen" font="Regular;34" halign="left"/>
 		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="652,1030" size="410,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="buttongreen" font="Regular;34" halign="left"/>
 	</screen>
 
-	<screen name="ButtonYellow">
+	<screen name="ButtonYellow"><!-- used by some plugins -->
 		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="1080,1030" size="410,38" backgroundColor="black" zPosition="2" transparent="1" foregroundColor="buttonyellow" font="Regular;34" halign="left"/>
 		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="1080,1030" size="410,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="buttonyellow" font="Regular;34" halign="left"/>
 	</screen>
 
-	<screen name="ButtonBlue">
+	<screen name="ButtonBlue"><!-- used by some plugins -->
 		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="1508,1030" size="410,38" backgroundColor="black" zPosition="2" transparent="1" foregroundColor="buttonblue" font="Regular;34" halign="left"/>
 		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="1508,1030" size="410,38" backgroundColor="darkgrey" zPosition="2" transparent="1" foregroundColor="buttonblue" font="Regular;34" halign="left"/>
 	</screen>
 
 	<!-- Button Bar Template -->
-	<screen name="ButtonTemplate">
-		<panel name="ButtonRed"/>
-		<panel name="ButtonGreen"/>
-		<panel name="ButtonYellow"/>
-		<panel name="ButtonBlue"/>
-		<panel name="keysAutoTemplate"/>
+	<screen name="ColorButtonTemplate">
+		<widget addon="ColorButtonsSequence" connection="key_red,key_green,key_yellow,key_blue" 
+			textColors="key_red:buttonred,key_green:buttongreen,key_yellow:buttonyellow,key_blue:buttonblue" 
+			position="224,1030" size="1694,42" font="Regular;34" backgroundColor="darkgrey" transparent="1" alignment="left" zPosition="2" spacing="10" />
 	</screen>
-	
-	<screen name="keysAutoTemplate">
+	<screen name="ActionButtonTemplate">
 		<widget addon="ButtonSequence" connection="key_previous,key_help,key_info,key_menu,key_text,VKeyIcon,key_next" 
 			pixmaps="key_previous:buttons/key_prev.png,key_help:buttons/key_help.png,key_info:buttons/key_info.png,key_menu:buttons/key_menu.png,key_text:buttons/key_text.png,VKeyIcon:buttons/key_text.png,key_next:buttons/key_next.png" 
 			position="10,1031" size="220,38" itemHeight="38" spacing="1" transparent="1" zPosition="10"/>
+	</screen>
+	<screen name="ButtonTemplate">
+		<panel name="ColorButtonTemplate"/>
+		<panel name="ActionButtonTemplate"/>
 	</screen>
 
 	<screen name="KeyMenuTemplate">
