@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 22.10.2023 -->
+	<!--  Modding done by Orlandox 02.11.2023 -->
 	
 	<!--  ## Head ##  -->
 	
@@ -368,10 +368,11 @@
 		<panel name="CenterMenuBlock" />
 		<panel name="BigRightMenuBlock" />
 		<panel name="FarRightMenuBlock" />
-		<panel name="BottomMenuBlock" />
+		<panel name="BottomMenuBlock2" />
 		<panel name="MenuForwardArrow" />
 		<panel name="MenuTitle" />
 		<panel name="MenuButtonBar" />
+		<ePixmap pixmap="extensions/smallshadowline.png" position="0,929" size="1920,3" zPosition="2"/>
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
 	<screen name="MenuPanel">
@@ -403,7 +404,7 @@
 		<panel name="CenterMenuBlock" />
 		<panel name="BigRightMenuBlock" />
 		<panel name="FarRightMenuBlock" />
-		<panel name="BottomMenuBlock" />
+		<panel name="BottomMenuBlock2" />
 		<panel name="MenuForwardArrow" />
 		<panel name="MenuTitle" />
 		<panel name="MenuUpArrow" />
@@ -411,6 +412,7 @@
 		<panel name="FarRightMenuRightArrow" />
 		<panel name="MenuDownArrow" />
 		<panel name="MenuButtonBar" />
+		<ePixmap pixmap="extensions/smallshadowline.png" position="0,929" size="1920,3" zPosition="2"/>
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
 	<screen name="BigMenuPanel2">
@@ -427,6 +429,23 @@
 		<panel name="MenuLeftArrow" />
 		<panel name="FarRightMenuRightArrow" />
 		<panel name="MenuDownArrow" />
+		<panel name="MenuKeyAutoTemplate" />
+	</screen>
+	<screen name="BigMenuPanel3">
+	    <panel name="MenuClock" />
+	    <panel name="TopMenuBlock" />
+	    <panel name="LeftMenuBlock" />
+		<panel name="CenterMenuBlock" />
+		<panel name="BigRightMenuBlock" />
+		<panel name="FarRightMenuBlock" />
+		<panel name="BottomMenuBlock" />
+		<panel name="MenuForwardArrow" />
+		<panel name="MenuTitle" />
+		<panel name="MenuUpArrow" />
+		<panel name="MenuLeftArrow" />
+		<panel name="FarRightMenuRightArrow" />
+		<panel name="MenuDownArrow" />
+		<panel name="MenuButtonBar" />
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
 	<screen name="MenuClock">
@@ -652,6 +671,9 @@
 	<screen name="BottomMenuBlock">
 		<eLabel position="75,930" size="600,150" backgroundColor="menubackground" zPosition="-1" />
 	</screen>
+	<screen name="BottomMenuBlock2">
+		<eLabel position="75,930" size="1770,150" backgroundColor="menubackground" zPosition="-1" />
+	</screen>
 	<screen name="MenuUpArrow">
 		<ePixmap position="345,110" size="50,32" pixmap="icons/arrow-up.png" alphatest="blend" zPosition="1"/>
 	</screen>
@@ -757,53 +779,12 @@
 	    <ePixmap pixmap="buttons/key_channel.png" position="1857,590" size="53,38" alphatest="blend" transparent="1" zPosition="1"/> 
 	</screen>
 	<screen name="MenuKeyAutoTemplate">
-	    <widget source="key_menu" conditional="key_menu" render="Pixmap" pixmap="buttons/key_menu.png" alphatest="blend" position="1857,160" size="53,38" zPosition="1">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="key_text" conditional="key_text" render="Pixmap" pixmap="buttons/key_text.png" alphatest="blend" position="1857,240" size="53,38" zPosition="1">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="key_info" conditional="key_info" render="Pixmap" pixmap="buttons/key_info.png" alphatest="blend" position="1857,200" size="53,38" zPosition="1">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="VKeyIcon" conditional="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" alphatest="blend" position="1857,240" size="53,38" zPosition="1">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="key_help" conditional="key_help" render="Pixmap" pixmap="buttons/key_help.png" alphatest="blend" position="1857,280" size="53,38" zPosition="1">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="key_ok" conditional="key_ok" render="Pixmap" pixmap="buttons/key_ok.png" alphatest="blend" position="1857,320" size="53,38" zPosition="1">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="key_0" conditional="key_0" render="Pixmap" pixmap="buttons/key_0.png" alphatest="blend" position="1857,360" size="53,38" zPosition="1">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="key_prev" conditional="key_prev" render="Pixmap" pixmap="buttons/key-left.png" alphatest="blend" position="1846,400" size="36,38" zPosition="1">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="key_next" conditional="key_next" render="Pixmap" pixmap="buttons/key-right.png" alphatest="blend" position="1885,400" size="36,38" zPosition="1">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="key_exit" conditional="key_exit" render="Pixmap" pixmap="buttons/key-exit.png" alphatest="blend" position="1857,440" size="53,38" zPosition="1">
-		    <convert type="ConditionalShowHide"/>
-		</widget>
+		<widget addon="ButtonSequence" connection="key_previous,key_help,key_info,key_menu,key_text,VKeyIcon,key_next,key_ok,key_0,key_exit" 
+			pixmaps="key_previous:buttons/key_left.png,key_help:buttons/key_help.png,key_info:buttons/key_info.png,key_menu:buttons/key_menu.png,key_text:buttons/key_text.png,VKeyIcon:buttons/key_text.png,key_next:buttons/key_right.png,key_ok:buttons/key_ok.png,key_0:buttons/key_0.png,key_exit:buttons/key_exit.png" 
+			position="85,1005" size="600,38" itemHeight="38" spacing="1" transparent="1" zPosition="10" />
 	</screen>
 	<screen name="MenuButtonBar">
-		<!-- Red button text -->
-		<widget objectTypes="key_red,Label,Button" name="key_red" position="117,967" size="273,70" font="youvix-r;24" foregroundColor="#00ff0808" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="0" zPosition="2" />
-		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="120,967" size="273,70" font="youvix-r;24" foregroundColor="#00ff0808" backgroundColor="menubackground" transparent="1" valign="center" noWrap="0" zPosition="2" />
-
-		<!-- Green button text -->
-		<widget objectTypes="key_green,Label,Button" name="key_green" position="117,1011" size="273,70" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" halign="left" valign="center" noWrap="0" zPosition="2" />
-		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="120,1011" size="273,70" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" valign="center" noWrap="0" zPosition="2" />
-	
-		<!-- Yellow button text -->
-		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="363,967" size="273,70" font="youvix-r;24" foregroundColor="#00edf506" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="0" zPosition="2" />
-	    <widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="363,967" size="273,70" font="youvix-r;24" foregroundColor="#00edf506" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="0" zPosition="2" />
-	
-		<!-- Blue button text -->
-		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="310,1011" size="326,70" font="youvix-r;24" foregroundColor="#00077cf5" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="0" zPosition="2" />
-	    <widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="363,1011" size="273,70" font="youvix-r;24" foregroundColor="#00077cf5" backgroundColor="menubackground" transparent="1" halign="right" valign="center" noWrap="0" zPosition="2" />
+		<widget addon="ColorButtonsSequence" connection="key_red,key_green,key_yellow,key_blue" textColors="key_red:buttonred,key_green:buttongreen,key_yellow:buttonyellow,key_blue:buttonblue" position="85,955" size="1750,40" font="youvix-r;30" backgroundColor="menubackground" transparent="1" alignment="left" zPosition="2" spacing="10" />
 	</screen>
 	
 	<!-- ## ONDEMAND TEMPLATES ## -->
