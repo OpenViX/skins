@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 07.11.2023 -->
+	<!--  Modified by Orlandox 08.11.2023 -->
 
 	<!--  ## Head ##  -->
 
@@ -679,7 +679,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 07.11.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 08.11.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
@@ -1110,7 +1110,7 @@
 
 	<!-- ## VU BLUETOOTH SETUP ## -->
 	<screen name="BluetoothSetupScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3"/>
+		<panel name="BigMenuPanel"/>
 		<widget source="description" render="Label" position="80,630" size="590,85" font="Regular;33" halign="center" valign="center" foregroundColor="red" backgroundColor="menubackground" transparent="1"/>
 		<widget source="deviceList" render="Listbox" position="680,165" size="1160,750" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="lightcolour" scrollbarSliderBorderColor="lightcolour" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
@@ -1135,7 +1135,7 @@
 		<panel name="MenuHelpwindowWidget" />
 	</screen>
 	<screen name="BluetoothDiscoveryScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3"/>
+		<panel name="BigMenuPanel"/>
 		<widget source="deviceList" render="Listbox" position="680,165" size="1160,750" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="lightcolour" scrollbarSliderBorderColor="lightcolour" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
 			<convert type="TemplatedMultiContent">
@@ -1175,14 +1175,14 @@
 
 	<!-- ## Button Setup ## -->
 	<screen name="ButtonSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
 		<widget name="list" position="680,165" size="1160,545" font="youvix-r;30" itemHeight="45" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
 		<widget name="choosen" position="680,740" size="1160,150" font="youvix-b;28" itemHeight="45" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="1"/>
 		<panel name="MenuDescriptionWidget" />
 	</screen>
 	<screen name="ButtonSetupSelect" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
 		<widget name="list" position="680,165" size="1160,545" font="youvix-r;30" itemHeight="45" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
 		<widget name="choosen" position="680,740" size="1160,150" font="youvix-b;28" itemHeight="45" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="1"/>
@@ -1319,7 +1319,7 @@
 		</widget>
 		<panel name="MenuKeyAutoTemplate" />
 		<panel name="MenuButtonBar" />
-		<panel name="Menu0Button" />
+		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="679,1005" size="53,38" zPosition="10"/>
 	</screen>
 	<screen name="SlimChannelSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="ChannelSelection" />
@@ -1410,7 +1410,7 @@
 		<widget name="bottom" position="80,930" size="590,150" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1"/>
 	</screen>
 	<screen name="CiSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMyCamsText" />
 		<widget name="text" position="80,765" size="590,150" font="youvix-b;30" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1"/>
 		<widget name="entries" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="50" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1"/>
@@ -1818,7 +1818,8 @@
 	
 	<!-- ## Foreca 3.3.1 ## -->
 	<screen name="ForecaPreview" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel" />
+		<panel name="BasicMenuPanel" />
+		<panel name="MenuButtonBar" />
 		<panel name="MenuMyWeatherForecaText" />
 		<widget source="Titel" render="Label" position="685,159" size="1160,40" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" valign="center" halign="center" transparent="1" zPosition="1"/>
 		<widget source="Titel2" render="Label" position="680,165" size="1160,750" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1"/>
@@ -1826,6 +1827,9 @@
 		<widget source="key_menu" render="Label" position="1598,160" size="220,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="1"/>
 		<widget source="key_info" render="Label" position="1398,200" size="420,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="1"/>
 		<widget source="key_ok" render="Label" position="1598,320" size="220,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="1"/>
+		<panel name="MenuMenuButton" />
+		<panel name="MenuInfoButton" />
+		<panel name="MenuOKButton" />
 	</screen>
 	<screen name="ForecaPreviewCache" position="center,center" size="76,76" flags="wfNoBorder" backgroundColor="black">
 		<eLabel position="2,2" size="72,72" font="youvix-r;20" zPosition="1" backgroundColor="menubackground"/>
@@ -1996,7 +2000,7 @@
 	</screen>
 
 	<!-- ## IMDB ## -->
-	<screen name="IMDB" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="IMDB" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Internet Movie Database Details Plugin">>
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyIMDBText" />
 		<widget name="titellabel" position="680,150" size="1160,40" font="youvix-b;34" foregroundColor="yellow" backgroundColor="menubackground" halign="center" transparent="1" zPosition="1" />
@@ -2009,7 +2013,7 @@
 		<widget name="stars" pixmap="imdb/starsbar_filled.png" position="1100,455" size="315,32" backgroundColor="background2" zPosition="2" transparent="1" />
 		<widget name="ratinglabel" position="1120,495" size="260,32" halign="center" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
 		<widget name="poster" position="680,218" size="190,281" alphatest="blend" />
-		<panel name="MenuRecListButton" />
+		<ePixmap pixmap="buttons/key_reclist.png" alphatest="blend" position="787,1005" size="58,38" zPosition="10"/>
 	</screen>
 
 	<!-- ## Input Box ## -->
@@ -2023,7 +2027,7 @@
 
 	<!-- ## Input Devices ## -->
 	<screen name="InputDeviceSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
 		<widget source="list" render="Listbox" position="680,165" size="1160,750" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" >
 			<convert type="TemplatedMultiContent">
@@ -2218,7 +2222,7 @@
 	
 	<!-- ## MessageBox ## -->
 	<screen name="MessageBox" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMyMessagesText" />
 		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
@@ -2323,9 +2327,9 @@
 		<widget name="waitingtext" position="680,222" size="1160,708" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="list" position="680,222" size="1160,708" font="youvix-r;28" itemHeight="50" pbarShift="3" pbarHeight="31" pbarLargeWidth="58" pbarColour="lightcolour" pbarColourSeen="green" pbarColourRec="red" pbarColourPlayRec="yellow" partIconeShift="0" spaceIconeText="8" iconsWidth="37" spaceLeft="1" spaceRight="2" durationWidth="95" dateWidth="275" foregroundColor="white" backgroundColor="menubackground" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
 		<panel name="MenuKeyAutoTemplate" />
-		<panel name="Menu0Button" />
+		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="679,1005" size="53,38" zPosition="10"/>
 		<panel name="MenuButtonBar" />
-		<panel name="MenuRecListButton" />
+		<ePixmap pixmap="buttons/key_reclist.png" alphatest="blend" position="787,1005" size="58,38" zPosition="10"/>
 	</screen>
 	<screen name="MovieSelectionSlim" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="MovieSelection" />
@@ -2480,7 +2484,7 @@
 	</screen>
 	<!-- ## Network - Mount Setup ## -->
 	<screen name="NetworkMountsMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMyNetworkText" />
 		<widget name="menulist" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="50" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
 		<panel name="MenuIntroductionWidget" />
@@ -2594,7 +2598,7 @@
 	</screen>
 	<!-- ## Network - Network Device Setup ## -->
 	<screen name="AdapterSetupConfiguration" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMyNetworkText" />
 		<widget name="menulist" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="40" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
 		<panel name="MenuDescriptionWidget" />		
@@ -2963,7 +2967,7 @@
 
 	 <!-- ## OSCam Info ##-->
 	<screen name="OscamInfoMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMySoftcamsText" />
 		<widget name="mainmenu" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="50" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1"/>
 	</screen>
@@ -2973,7 +2977,7 @@
 		<widget name="output" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="50" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" selectionDisabled="1" zPosition="1"/>
 	</screen>
 	<screen name="OscamInfoConfigScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMySoftcamsText" />
 		<widget name="status" render="Label" position="80,765" size="590,150" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1"/>
 		<widget name="config" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="50" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1"/>
@@ -3078,13 +3082,13 @@
 
 	<!-- ## Parental Control ## -->
 	<screen name="ParentalControlSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
 		<panel name="MenuConfigWidget" />
 		<panel name="MenuHelpwindowWidget" />
 	</screen>
 	<screen name="ParentalControlChangePin" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
 		<panel name="MenuConfigWidget" />
 	</screen>
@@ -3121,12 +3125,13 @@
 		</widget>
 	</screen>
 	<screen name="Pic_Full_View" position="fill" flags="wfNoBorder">
-		<eLabel position="0,0" zPosition="0" size="1920,1080" backgroundColor="black" />
-		<widget name="pic" position="fill" alphatest="blend" zPosition="1" />
-		<eLabel position="25,15" size="30,25" backgroundColor="menubackground" transparent="1" zPosition="2" />
-		<widget name="point" position="27,17" size="25,25" pixmap="icons/epgclock.png" alphatest="blend" zPosition="3" />
-		<widget name="play_icon" position="30,20" size="37,37" pixmap="icons/movie_play.png" alphatest="blend" zPosition="3"/>
-		<widget source="file" render="Label" position="70,15" size="600,25" font="youvix-r;22" foregroundColor="yellow" backgroundColor="menubackground" noWrap="1" transparent="1" zPosition="3"/>
+		<eLabel position="144,45" zPosition="0" size="1632,918" backgroundColor="black" />
+		<widget name="pic" position="144,45" size="1632,918" alphatest="blend" zPosition="1" />
+		<widget name="point" position="10,15" size="25,25" pixmap="icons/epgclock.png" alphatest="blend" zPosition="3" />
+		<widget name="play_icon" position="40,12" size="31,31" pixmap="icons/movie_play.png" alphatest="blend" zPosition="3"/>
+		<widget source="file" render="Label" position="75,15" size="600,27" font="youvix-r;22" foregroundColor="yellow" backgroundColor="menubackground" noWrap="1" transparent="1" zPosition="3"/>
+		<panel name="MenuButtonBar" />
+		<panel name="MenuKeyAutoTemplate" />
 	</screen>
 
 	<!-- ## Picture Player FS ## -->
@@ -3255,7 +3260,7 @@
 
 	<!-- ## Remote Control Code ## -->
 	<screen name="RemoteControlCode" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMyRemotesText" />
 		<panel name="MenuConfigWidget" />
 		<panel name="MenuHelpwindowWidget" />
@@ -3355,7 +3360,7 @@
 
 	<!-- ## Skin Setup ## -->
 	<screen name="SkinSelector" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMySkinsText" />
 <!--		<panel name="MenuIntroductionWidget" /> -->
 		<panel name="MenuDescriptionWidget" />
@@ -3412,7 +3417,7 @@
 		<widget name="slider" position="680,440" size="1160,38" transparent="1" />
 	</screen>
 	<screen name="SoftwareUpdateChoices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMyUpdatesText" />
 		<panel name="FeedsStatus" />
 		<widget name="list" position="680,165" size="1160,300" itemHeight="50" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" />
@@ -3774,7 +3779,7 @@
 
 	<!-- ## ViX Menu ## -->
 	<screen name="VIXMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMyViXText" />
 		<widget source="menu" render="Listbox" position="680,165" size="1160,650" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="1">
 			<convert type="TemplatedMultiContent">
@@ -4334,8 +4339,9 @@
 	</screen>
 	
 <!-- ShowClock -->
-	<screen name="ShowClockSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
+	<screen name="ShowClockSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Clock Setup">
 		<panel name="BigMenuPanel"/>
+		<panel name="MenuMySetupText" />
 		<panel name="WizardConfigWidget"/>
 		<panel name="MenuHelpwindowWidget" />
 		<widget source="help" render="Label" position="80,670" size="590,100" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground2" halign="center" valign="center"/>
@@ -4474,7 +4480,7 @@
 		<panel name="MenuHelpwindowWidget" />
 	</screen>
 	<screen name="LCDdisplayMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="LCD4linux - Config">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<eLabel text="MyConfig" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="menu" position="680,165" size="1160,750" font="youvix-r;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="white" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
@@ -4488,11 +4494,11 @@
 	</screen>
 	
 	<!-- ## tmdb ## -->
-	<screen name="tmdbScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" >
+	<screen name="tmdbScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database">
         <eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
 		<panel name="MenuClock" />
-		<eLabel text="TMDb - The Movie Database" position="125,44" size="540,69" font="youvix-r;26" foregroundColor="darkcolour" backgroundColor="menubackground" valign="top" transparent="1" zPosition="1" />
 		<panel name="MenuForwardArrow" />
+		<panel name="MenuTitle" />
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="searchinfo" position="80,100" size="1400,40" font="youvix-b;35" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
 		<widget name="cover" position="e-400,400" size="320,480" zPosition="100" alphatest="blend" />
@@ -4501,11 +4507,11 @@
 		<ePixmap pixmap="extensions/smallshadowline.png" position="0,950" size="1920,3" zPosition="2"/>
 		<panel name="MenuKeyAutoTemplate"/>
 	</screen>
-	<screen name="tmdbScreenMovie" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="tmdbScreenMovie" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Details">
 		 <eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
 		<panel name="MenuClock" />
-		<eLabel text="TMDb - The Movie Database - Details" position="125,44" size="540,69" font="youvix-r;26" foregroundColor="darkcolour" backgroundColor="menubackground" valign="top" transparent="1" zPosition="1" />
 		<panel name="MenuForwardArrow" />
+		<panel name="MenuTitle" />
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="searchinfo" position="80,100" size="830,80" font="youvix-b;35" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
 		<widget name="cover" position="e-400,400" size="320,480" zPosition="100" alphatest="blend" />
@@ -4538,11 +4544,11 @@
 		<ePixmap pixmap="extensions/smallshadowline.png" position="0,950" size="1920,3" zPosition="2"/>
 		<panel name="MenuKeyAutoTemplate"/>
 	</screen>
-	<screen name="tmdbScreenPeople" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="tmdbScreenPeople" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Cast">
 		<eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
 		<panel name="MenuClock" />
-		<eLabel text="TMDb - The Movie Database - Cast" position="125,44" size="540,69" font="youvix-r;26" foregroundColor="darkcolour" backgroundColor="menubackground" valign="top" transparent="1" zPosition="1" />
 		<panel name="MenuForwardArrow" />
+		<panel name="MenuTitle" />
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="searchinfo" position="80,100" size="830,80" font="youvix-b;35" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
 		<widget name="cover" position="e-400,400" size="320,480" zPosition="100" alphatest="blend" />
@@ -4553,11 +4559,11 @@
 		<ePixmap pixmap="extensions/smallshadowline.png" position="0,950" size="1920,3" zPosition="2"/>
 		<panel name="MenuKeyAutoTemplate"/>
 	</screen>
-	<screen name="tmdbScreenPerson" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="tmdbScreenPerson" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Actor">
 	    <eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
 		<panel name="MenuClock" />
-		<eLabel text="TMDb - The Movie Database - Actor" position="125,44" size="540,69" font="youvix-r;26" foregroundColor="darkcolour" backgroundColor="menubackground" valign="top" transparent="1" zPosition="1" />
 		<panel name="MenuForwardArrow" />
+		<panel name="MenuTitle" />
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="searchinfo" position="80,100" size="830,80" font="youvix-b;35" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
 		<widget name="cover" position="e-400,400" size="320,480" zPosition="100" alphatest="blend" />
@@ -4567,11 +4573,11 @@
 		<ePixmap pixmap="extensions/smallshadowline.png" position="0,950" size="1920,3" zPosition="2"/>
 		<panel name="MenuKeyAutoTemplate"/>
 	</screen>
-	<screen name="tmdbScreenSeason" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="tmdbScreenSeason" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Seasons">
 	    <eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
 		<panel name="MenuClock" />
-		<eLabel text="TMDb - The Movie Database - Seasons" position="125,44" size="540,69" font="youvix-r;26" foregroundColor="darkcolour" backgroundColor="menubackground" valign="top" transparent="1" zPosition="1" />
 		<panel name="MenuForwardArrow" />
+		<panel name="MenuTitle" />
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="searchinfo" position="80,100" size="830,80" font="youvix-b;35" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
 		<widget name="cover" position="e-933,400" size="853,480" zPosition="100" alphatest="blend" />
@@ -4585,7 +4591,7 @@
 	
 	<!-- ## RemoteControlSelection ## -->
 	<screen name="RemoteControlSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel3" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
 		<widget name="rc" position="80,220" size="154,500" backgroundColor="menubackground2" transparent="1" alphatest="blend" zPosition="100"/>
 		<panel name="MenuConfigWidget" />
@@ -4605,6 +4611,15 @@
 		<panel name="MenuButtonBar" />
 		<panel name="MenuHelpwindowWidget" />
 		<panel name="MenuKeyAutoTemplate" />
+	</screen>
+	
+	<!-- ## VU Speech to Text ## -->
+	<screen name="WitAiSttSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="BigMenuPanel"/>
+		<panel name="MenuMySetupText" />
+		<panel name="MenuConfigWidget" />
+		<panel name="MenuDescriptionWidget" />
+		<panel name="MenuHelpwindowWidget" />
 	</screen>
 	
 </skin>
