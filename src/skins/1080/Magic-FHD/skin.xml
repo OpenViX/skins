@@ -414,9 +414,6 @@
 		<panel name="PlayerPanel"/>
 		<widget name="eventname" position="0,0" size="0,0"/> #To reduce debug noise.
 		<widget name="state" position="0,0" size="0,0"/> #To reduce debug noise.
-		<widget name="key_green" position="0,0" size="0,0" font="buttons;33"/> #To reduce debug noise.
-		<widget name="key_yellow" position="0,0" size="0,0" font="buttons;33"/> #To reduce debug noise.
-		<widget name="key_blue" position="0,0" size="0,0" font="buttons;33"/> #To reduce debug noise.
 	</screen>
 	<screen name="Seekbar" position="0,45" size="1920,187" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="PlayerPanel"/>
@@ -859,7 +856,7 @@
 	</screen>
 	<screen name="MovieSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<ePixmap pixmap="buttons/key_0.png" position="1535,1028" size="52,37"/>
+		<panel name="0BPanel"/>
 <!--		<ePixmap pixmap="dvr/scale716.png" position="0,175" size="716,18" zPosition="1" alphatest="on"/>
 		<eLabel backgroundColor="transpBlack" position="0,179" size="723,10" zPosition="5"/>-->
 		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
@@ -914,7 +911,6 @@
 	</screen>
 	<screen name="AudioSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate1"/>
-		<panel name="MenuBPanel"/>
 		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="855,125" size="52,37" alphatest="on">
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -1480,7 +1476,8 @@
 		<panel name="BasicTemplate"/>
 		<panel name="PrevBPanel"/>
 		<panel name="NextBPanel"/>
-		<ePixmap pixmap="buttons/key_0.png" position="1645,1028" size="52,37"/>
+		<panel name="0BPanel"/>
+		<ePixmap pixmap="buttons/key_0.png" position="1760,1028" size="52,37"/>
 		<widget name="list" position="780,120" size="1132,884" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="PluginDownloadBrowser" position="fill" flags="wfNoBorder">
@@ -2288,8 +2285,6 @@
 	<screen name="AutoTimerOverview" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<panel name="MenuBPanel"/>
-		<panel name="OKBPanel"/>
-		<panel name="HelpBPanel"/>
 		<widget name="entries" position="735,124" size="1177,880" itemHeight="80" rowSplit1="40" rowSplit2="40" rowHeight="35" iconMargin="5" EventNameFont="Regular;32"
 		ServiceNameFont="Regular;32" DayNameFont="Regular;28" enableWrapAround="1" zPosition="2" foregroundColor="grey"/>
 	</screen>
@@ -2661,8 +2656,6 @@
 	</screen>
 	<screen name="ButtonSetupSelect" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="PrevBPanel"/>
-		<panel name="NextBPanel"/>
 		<widget name="list" position="735,120" size="577,855" font="Regular;30" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="choosen" position="1320,120" size="577,855" font="Regular;33" itemHeight="45" foregroundColor="blue"/>
 	</screen>
@@ -2688,7 +2681,6 @@
 	</screen>
 	<screen name="oscReaderStats" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="ExitBPanel"/>
 		<widget source="output" render="Listbox" position="5,540" size="1877,440" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 			{"templates":
@@ -2721,7 +2713,6 @@
 	</screen>
 	<screen name="oscEntitlements" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="ExitBPanel"/>
 		<widget source="output" render="Listbox" position="5,540" size="1877,440" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 			{"templates":
@@ -2758,7 +2749,6 @@
 	</screen>
 	<screen name="oscECMInfo" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="ExitBPanel"/>
 		<widget name="output" position="780,123" size="1132,855" font="Regular;33" itemHeight="45"/>
 	</screen>
 	<screen name="OscamInfoConfigScreen" position="fill" flags="wfNoBorder">
@@ -2772,7 +2762,6 @@
 	</screen>
 	<!-- ## CCCam Info ##-->
 	<screen name="EcmInfoScreen" position="0,0" size="1132,37" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="-1">
-		<panel name="ExitBPanel"/>
 		<widget name="irdeto" position="0,0" size="22,37" font="Regular;24" text="I" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
 		<widget name="seca" position="22,0" size="22,37" font="Regular;24" text="S" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
 		<widget name="nagra" position="45,0" size="22,37" font="Regular;24" text="N" valign="center" halign="center" borderColor="black" borderWidth="2" transparent="1"/>
@@ -2787,17 +2776,14 @@
 	<screen name="CCcamInfoMain" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="menu" position="780,123" size="1132,850" itemHeight="50" foregroundColor="grey" enableWrapAround="1"/>
-		<panel name="ExitBPanel"/>
 	</screen>
 	<screen name="CCcamInfoEcmInfoSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" foregroundColor="grey" enableWrapAround="1"/>
-		<panel name="ExitBPanel"/>
 	</screen>
 	<screen name="CCcamInfoInfoScreen" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="text" position="780,123" size="1132,850" font="Regular;33" itemHeight="50" foregroundColor="grey" enableWrapAround="1"/>
-		<panel name="ExitBPanel"/>
 	</screen>
 	<screen name="CCcamInfoConfigMenu" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>

@@ -7,7 +7,6 @@
 	<!-- ## IMDB Plugin ## -->
 	<screen name="IMDB" position="fill" flags="wfNoBorder" title="Internet Movie Database Details Plugin">
 		<panel name="BasicTemplate"/>
-		<panel name="MenuBPanel"/>
 		<widget name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" position="223,570" size="315,31" zPosition="2" alphatest="blend"/>
 		<widget name="stars" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" position="223,570" size="315,31" zPosition="3" transparent="1"/>
 		<widget name="ratinglabel" position="7,615" size="765,75" font="RegularSmall;30" foregroundColor="grey" halign="center"/>
@@ -155,7 +154,7 @@
 	</screen>
 	<screen name="filtersServicesSetup" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
+		<panel name=""/>
 		<widget source="list" render="Listbox" position="735,120" size="1177,855">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -178,7 +177,6 @@
 	<!--Templates-->
 	<screen name="ForecaTemplate">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
 	</screen>
 	<screen name="ForecaMlistTemplate">
 		<panel name="ForecaTemplate"/>
@@ -189,8 +187,6 @@
 	<!--Screens-->
 	<screen name="ForecaPreview" position="fill" flags="wfNoBorder">
 		<panel name="ForecaTemplate"/>
-		<panel name="MenuBPanel"/>
-		<panel name="InfoBPanel"/>
 		<widget source="Titel2" render="Label" position="30,600" zPosition="3" size="600,150" font="RegularSmall;36" valign="center" halign="right" transparent="1" foregroundColor="secondFG"/>
 		<widget source="Titel3" render="Label" position="30,600" zPosition="2" size="600,150" font="RegularSmall;36" valign="center" halign="right" transparent="1" foregroundColor="secondFG"/>
 		<widget name="MainList" position="780,112" size="1110,896" itemHeight="128" font0="RegularSmall;26" font1="RegularSmall;36" font2="RegularSmall;22"	font3="RegularSmall;28" setTime="40,49,90,30"
@@ -604,24 +600,10 @@
 		<panel name="BasicTemplate"/>
 		<widget name="donate" position="780,120" size="1132,855" font="Regular;33" foregroundColor="grey"/>
 	</screen>
-	<screen name="searchYouTube" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget name="label2" position="830,1023" size="400,39" font="buttons;33" foregroundColor="buttonyellow"/>
-		<widget name="label" position="1235,1023" size="400,39" font="buttons;33" foregroundColor="buttonblue"/>
-		<panel name="MenuBPanel"/>
-		<widget name="list" position="1020,120" size="755,500" foregroundColor="grey"/>
-		<widget name="poster1" position="780,120" size="215,120" alphatest="blend"/>
-		<widget name="poster2" position="780,245" size="215,120" alphatest="blend"/>
-		<widget name="poster3" position="780,370" size="215,120" alphatest="blend"/>
-		<widget name="poster4" position="780,500" size="215,120" alphatest="blend"/>
-	</screen>
 
 	<!-- ## MovieManager ## -->
 	<screen name="MovieManager" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="MenuBPanel"/>
-		<panel name="InfoBPanel"/>
-		<panel name="HelpBPanel"/>
 		<widget source="session.CurrentService" render="PositionGauge" position="4,179" size="715,5" pointer="dvr/position_pointer716.png:716,3" transparent="1" zPosition="6">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
@@ -654,7 +636,6 @@
 	</screen>
 	<screen name="MovieManagerClearBookmarks" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="HelpBPanel"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;31" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="description" position="7,530" size="715,475" font="Regular;31" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
@@ -681,12 +662,10 @@
 	</screen>
 	<screen name="MovieManagerCfg" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="HelpBPanel"/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;31" itemHeight="45" foregroundColor="grey" enableWrapAround="1"/>
 	</screen>
 	<screen name="MovieManagerChoiceBox" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="MenuBPanel"/>
 		<widget name="list" position="755,125" size="1157,855" font="ChoiceList;31" foregroundColor="grey" enableWrapAround="1"/>
 		<widget name="text" position="7,530" size="715,475" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="center" halign="center"/>
 	</screen>
@@ -1106,32 +1085,32 @@
 	<!-- ## SystemTools ## -->
 	<screen name="SystemToolsConfig" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
+		<panel name=""/>
 		<widget name="config" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="SystemToolsSc" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
+		<panel name=""/>
 		<widget name="entries" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="SystemToolsInf" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
+		<panel name=""/>
 		<widget name="entries" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="SystemToolsSwap" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
+		<panel name=""/>
 		<widget name="entries" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="SystemToolsTextBox" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
+		<panel name=""/>
 		<widget name="text" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="SystemToolsTextBox2" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
+		<panel name=""/>
 		<widget name="text" position="735,120" size="1177,855" font="Regular;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="SystemToolsTextBoxEcm" position="fill" flags="wfNoBorder">
@@ -1479,8 +1458,6 @@
 	<!-- ## QuadPip ## -->
 	<screen name="CreateQuadPipChannelEntry" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
-		<panel name="HelpBPanel"/>
 		<widget name="list" position="780,119" size="1132,630" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30"
 				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" backgroundColor="black" colorEventProgressbar="blue" foregroundColorEvent="blue"
 				foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
@@ -1491,8 +1468,6 @@
 
 	<screen name="QuadPiPChannelSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<panel name="OKBPanel"/>
-		<panel name="HelpBPanel"/>
 		<widget source="ChannelList" render="Listbox" position="755,120" size="1157,750" foregroundColor="grey" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
