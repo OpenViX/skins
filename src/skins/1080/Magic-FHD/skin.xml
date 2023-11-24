@@ -475,7 +475,7 @@
 	</screen>
 	<screen name="ChannelSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="list" position="780,119" size="1132,770" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30"
+		<widget name="list" position="780,119" size="1132,770" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30"
 				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" backgroundColor="black" colorEventProgressbar="blue" foregroundColorEvent="blue"
 				foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
 		<widget source="ServiceEvent" render="Label" position="780,890" size="950,39" font="RegularSmall;33" foregroundColor="selectedFG" noWrap="1">
@@ -530,7 +530,7 @@
 		<widget name="key_yellow" foregroundColor="buttonyellow" backgroundColor="secondBG" font="buttons;30" position="490,965" size="330,39" transparent="1"/>
 		<widget name="key_blue" foregroundColor="buttonblue" backgroundColor="secondBG" font="buttons;30" position="490,1015" size="330,39" transparent="1"/>
 		<widget source="Title" foregroundColor="blue" render="Label" position="2,3" size="825,45" transparent="1" font="Regular;37" halign="center" valign="center"/>
-		<widget name="list" position="22,51" size="855,720" itemHeight="45" serviceNumberFont="Regular;33" serviceInfoFont="Crs;33" serviceNameFont="Regular;33"
+		<widget name="list" position="22,51" size="855,720" itemHeight="45" serviceNumberFont="Regular;33" serviceInfoFont="Crs;33" serviceNameFont="Regular;33" serviceItemHeight="35"
 				colorEventProgressbar="blue" colorEventProgressbarSelected="yellow" colorServiceDescription="blue" transparent="1" foregroundColorServiceNotAvail="#656565"/>
 		<widget source="ServiceEvent" render="Label" position="22,775" zPosition="2" size="200,37" font="Regular;33" backgroundColor="black" halign="right" noWrap="1" foregroundColor="yellow" transparent="1">
 		<convert type="EventTime">Times</convert>
@@ -548,7 +548,7 @@
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,123" size="1132,874" itemHeight="60" font="Regular;33" colorServiceDescription="yellow" colorEventProgressbar="blue"
 				foregroundColorEvent="blue" serviceNumberFont="channelselectionservice;36" serviceInfoFont="channelselectionevent;30" serviceNameFont="channelselectionservice;33"
-				foregroundColorServiceNotAvail="#656565" foregroundColorEventSelected="yellow" foregroundColorMarkedSelected="blue"/>
+				serviceItemHeight="60" foregroundColorServiceNotAvail="#656565" foregroundColorEventSelected="yellow" foregroundColorMarkedSelected="blue"/>
 	</screen>
 	<screen name="SubserviceSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplateWOButtons"/>
@@ -1370,7 +1370,7 @@
 	</screen>
 	<screen name="ChannelSelectionRadio" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate2"/>
-		<widget name="list" position="780,120" size="1132,595" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
+		<widget name="list" position="780,120" size="1132,595" serviceItemHeight="70" serviceNumberFont="channelselectionservice;31" serviceNameFont="channelselectionservice;32"
 				serviceInfoFont="channelselectionevent;28" progressBarWidth="70" fieldMargins="10" zPosition="3" colorEventProgressbar="blue"
 				foregroundColorEvent="blue" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey" scrollbarWidth="6"/>
 		<widget source="ServiceEvent" render="Label" position="780,715" size="1132,35" font="Regular;30" foregroundColor="blue" halign="right" noWrap="1">
