@@ -193,6 +193,7 @@
 		<panel name="InfoBarPanel"/>
 		<panel name="ButtonPanel"/>
 		<widget name="channel" position="0,0" size="0,0" font="buttons;33"/> #To reduce debug noise.
+		<widget name="epg_description" position="0,0" size="0,0" font="buttons;33"/> #To reduce debug noise.
 		<eLabel backgroundColor="black" position="0,0" size="1920,2" zPosition="5"/> # Permanent hiding of VBI-lines
 		<widget source="session.CurrentService" render="Label" position="1,1" size="952,30" font="Regular;27" transparent="1" backgroundColor="transpBlack">
 			<convert type="PliExtraInfo">ServiceRef</convert>
@@ -414,6 +415,9 @@
 		<panel name="PlayerPanel"/>
 		<widget name="eventname" position="0,0" size="0,0"/> #To reduce debug noise.
 		<widget name="state" position="0,0" size="0,0"/> #To reduce debug noise.
+		<widget name="key_yellow" position="0,0" size="0,0"/> #To reduce debug noise.
+		<widget name="key_blue" position="0,0" size="0,0"/> #To reduce debug noise.
+		<widget name="key_green" position="0,0" size="0,0"/> #To reduce debug noise.
 	</screen>
 	<screen name="Seekbar" position="0,45" size="1920,187" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="PlayerPanel"/>
@@ -476,8 +480,8 @@
 	<screen name="ChannelSelection" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="list" position="780,119" size="1132,770" serviceItemHeight="60" serviceNumberFont="channelselectionservice;30" serviceNameFont="channelselectionservice;30"
-				serviceInfoFont="channelselectionevent;28" progressBarWidth="80" fieldMargins="13" backgroundColor="black" colorEventProgressbar="blue" foregroundColorEvent="blue"
-				foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
+				serviceInfoFont="channelselectionevent;27" progressbarHeight="10" progressBarWidth="80" progressPercentWidth="80" ProgressbarBorderWidth="1" colorEventProgressbarBorder="white" fieldMargins="13" backgroundColor="black" colorEventProgressbar="blue" foregroundColorEvent="blue"
+				nonplayableMargins="15" foregroundColorEventSelected="yellow" foregroundColorServiceNotAvail="darkgrey"/>
 		<widget source="ServiceEvent" render="Label" position="780,890" size="950,39" font="RegularSmall;33" foregroundColor="selectedFG" noWrap="1">
 			<convert type="EventName">NextName</convert>
 		</widget>
@@ -1108,6 +1112,7 @@
 	</screen>
 	<screen name="MessageBoxTemplate">
 		<panel name="BasicTemplate"/>
+		<widget name="WarningPixmap" pixmap="icons/input_error.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="760,150" size="81,81" alphatest="on"/>
