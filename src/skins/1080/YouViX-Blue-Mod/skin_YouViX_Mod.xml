@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 21.12.2023 -->
+	<!--  Modified by Orlandox 25.12.2023 -->
 
 	<!--  ## Head ##  -->
 
@@ -625,8 +625,8 @@
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="1200,10" size="640,360" backgroundColor="transparent" zPosition="4"/>
 		<ePixmap position="280,336" size="30,30" pixmap="icons/ico_cal.png" alphatest="blend" zPosition="1"/>
-		<widget source="global.CurrentTime" render="Label" position="320,332" zPosition="1" size="250,40" font="youvix-b;32" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left">
-			<convert type="ClockToText">Format:%a %e %h</convert>
+		<widget source="global.CurrentTime" render="Label" position="320,332" zPosition="1" size="600,40" font="youvix-b;32" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left">
+			<convert type="ClockToText">Date</convert>
 		</widget>
 		<ePixmap position="80,336" size="30,30" pixmap="icons/clock5.png" alphatest="blend" zPosition="1"/>
 		<widget source="global.CurrentTime" render="Label" position="120,330" zPosition="1" size="140,40" font="youvix-b;35" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left">
@@ -676,7 +676,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 21.12.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 25.12.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
@@ -1710,7 +1710,10 @@
 		    <convert type="ServiceName">Name</convert>
 		</widget>
 		<widget name="channel" position="80,200" size="590,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
-		<widget name="datetime" position="80,280" size="590,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
+		<widget source="Event" render="Label" position="80,280" size="590,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" >
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText">LongFullDate,Default</convert>
+		</widget>
 		<widget name="duration" position="80,320" size="590,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
 		<widget source="session.Event_Now" render="Label" position="535,59" size="135,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="left" zPosition="1" >
 			<convert type="EventTime">Remaining</convert>
@@ -1725,6 +1728,7 @@
 		</widget>
 		<widget name="epg_eventname" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="epg_description" position="0,0" size="0,0"/> #To remove debug warning
+		<widget name="datetime" position="0,0" size="0,0"/> #To remove debug warning
 	</screen>
 	<screen name="InfoBarEventView" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
 		<panel name="EventViewSimple" />
