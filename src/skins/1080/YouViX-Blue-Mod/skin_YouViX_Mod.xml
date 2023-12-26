@@ -1276,7 +1276,7 @@
 	<!-- ## Channel Selection ## -->
 	<screen name="ChannelSelection" position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="BasicMenuPanel" />
-		<panel name="MenuMyGuideText" />
+		<panel name="MenuMyChannelText" />
 		<widget source="ServiceEvent" render="Label" position="80,148" size="590,70" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" noWrap="0" transparent="1" halign="center" valign="center" zPosition="1">
 			<convert type="EventName">NowName</convert>
 		</widget>
@@ -1290,9 +1290,9 @@
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="470,208" size="120,35" font="youvix-b;24" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" valign="center" zPosition="1">
-            		<convert type="EventTime">Remaining</convert>
-            		<convert type="RemainingToText">InMinutes</convert>
-        	</widget>
+            <convert type="EventTime">Remaining</convert>
+            <convert type="RemainingToText">InMinutes</convert>
+        </widget>
 		<widget source="ServiceEvent" render="RunningText" position="80,245" size="590,150" font="youvix-r;26" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
@@ -1322,13 +1322,15 @@
 		<panel name="MenuButtonBar" />
 		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="679,1005" size="53,38" zPosition="10"/>
 	</screen>
-	<screen name="SlimChannelSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="SimpleChannelSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="ChannelSelection" />
 	</screen>
-	<screen name="SimpleChannelSelection" title="Channel Selection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="SlimChannelSelection" title="Channel Selection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyChannelText"/>
-		<widget name="list" position="680,210" size="1160,680" backgroundColor="menubackground" foregroundColorEvent="lightcolour" foregroundColorEventSelected="white" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="lightcolour" serviceItemHeight="50" serviceNumberFont="youvix-r;28" serviceNameFont="youvix-r;28" serviceInfoFont="youvix-r;26" progressBarWidth="72" fieldMargins="13" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
+		<widget name="list" position="680,218" size="1160,715" backgroundColor="menubackground" foregroundColorEvent="lightcolour" foregroundColorEventSelected="lightgrey" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" foregroundColorNextEvent="lightgrey" foregroundColorEventNextSelected="lightgrey" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="lightcolour" itemHeight="40" itemHeightTwoLine="84" serviceNumberFont="youvix-r;30" serviceNameFont="channelselectionservice;30" serviceInfoFont="channelselectionevent;26" progressBarWidth="72" fieldMargins="13" colorEventProgressbar="lightcolour" colorEventProgressbarSelected="white" foregroundColorEventRemaining="lightcolour" foregroundColorEventRemainingSelected="lightgrey" serviceRemainingInfoFont="youvix-r;22" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
+		<widget source="ServiceEvent" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="1">
+		</widget>
 	</screen>
 	<screen name="ChannelContextMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
