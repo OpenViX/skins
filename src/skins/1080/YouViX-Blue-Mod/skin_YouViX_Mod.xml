@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 26.12.2023 -->
+	<!--  Modified by Orlandox 27.12.2023 -->
 
 	<!--  ## Head ##  -->
 
@@ -282,10 +282,6 @@
 		<widget source="session.Event_Now" render="Label" position="480,496" size="690,120" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<ePixmap position="780,893" size="600,10" pixmap="selectionbars/activitysliderbackground.png" alphatest="blend" zPosition="1"/>
-		<widget source="session.Event_Now" render="Progress" position="780,893" size="600,10" pixmap="selectionbars/activityslider.png" backgroundColor="background2" transparent="1" zPosition="2">
-			<convert type="EventTime">Progress</convert>
-		</widget>
 		<widget name="epg_description" position="0,0" size="0,0"/> #To remove debug warning
 		<widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=11000,wrap" position="480,620" size="690,210" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
@@ -293,15 +289,15 @@
 		<widget source="session.CurrentService" render="Label" position="20,730" size="255,30" font="youvix-b;24" foregroundColor="grey" backgroundColor="background2" transparent="1" zPosition="1">
 			<convert type="PliExtraInfo">TransponderInfo</convert>
 		</widget>
-		<eLabel text="Videokoodekki: " position="30,763" size="170,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2"/>
-		<widget source="session.CurrentService" render="Label" position="200,763" size="255,30" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" transparent="1" zPosition="1">
+		<eLabel text="Videokoodekki: " position="30,760" size="170,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2"/>
+		<widget source="session.CurrentService" render="Label" position="200,760" size="255,30" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" transparent="1" zPosition="1">
 			<convert type="PliExtraInfo">VideoCodec</convert>
 		</widget>
-		<eLabel text="Resoluutio: " position="30,796" size="160,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2"/>
-		<widget source="session.CurrentService" render="Label" position="200,796" size="2552,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2">
+		<eLabel text="Resoluutio: " position="30,790" size="160,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2"/>
+		<widget source="session.CurrentService" render="Label" position="200,790" size="2552,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2">
 			<convert type="PliExtraInfo">ResolutionString</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="30,829" size="610,30" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="30,825" size="610,30" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" transparent="1">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="1200,496" size="690,120" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
@@ -328,13 +324,6 @@
 		<ePixmap pixmap="infobar/infobar.png" position="0,870" size="1920,215" zPosition="-1"/>
 		<panel name="InfobarClock"/>
 		<panel name="InfobarUpArrow"/>
-		<widget source="session.CurrentService" render="Label" position="1370,880" size="160,38" font="youvix-r;26" foregroundColor="green" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2">
-			<convert type="VNetSpeedInfo">RC</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="1545,880" size="160,38" font="youvix-r;26" foregroundColor="red" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2">
-			<convert type="VNetSpeedInfo">TM</convert>
-		</widget>
-		<panel name="InfobarClients"/>
 		<panel name="InfobarLeftArrow"/>
 		<panel name="InfobarChannelName"/>
 		<panel name="InfobarProgramNowStartTime"/>
@@ -344,12 +333,6 @@
 		<panel name="InfobarRecIcon"/>
 		<panel name="InfobarInfoIcon"/>
 		<panel name="InfobarStatusIcons"/>
-		<widget source="session.CurrentService" render="Label" position="1720,940" size="155,35" font="youvix-r;28" foregroundColor="white" backgroundColor="background2" halign="center" valign="center" transparent="1" zPosition="1">
-			<convert type="PliExtraInfo">VideoCodec</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="1720,975" size="155,35" font="youvix-r;28" foregroundColor="white" backgroundColor="background2" halign="center" valign="center" transparent="1" >
-			<convert type="PliExtraInfo">OrbitalPositionOrTunerSystem</convert>
-		</widget>
 		<panel name="InfobarRightArrow"/>
 		<panel name="InfobarDownArrow"/>
 		<panel name="InfobarProgramNextStartTime"/>
@@ -676,7 +659,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 26.12.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 27.12.2023 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
