@@ -444,9 +444,33 @@
 		<panel name="ChannelSelectionPicon" />
 		<panel name="ChannelSelectionBouquetName" />
 		<widget name="list" position="680,210" size="1160,665" EventFontSingle="youvix-r;30" itemHeight="55" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
-		<widget source="Event" render="RunningText" position="80,205" size="590,420" font="youvix-r;26" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="top" zPosition="1">
+		<widget source="Event" render="Label" position="80,150" size="590,78" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" valign="center" font="youvix-b;32" transparent="1" zPosition="1">
+	        <convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="RunningText" position="80,225" size="590,450" font="youvix-r;26" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
+		<widget source="Event" render="Label" position="80,675" size="170,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" zPosition="1">
+	        <convert type="EventTime">StartTime</convert>
+	        <convert type="ClockToText">ShortDate</convert>
+		</widget>
+		<widget source="Event" render="Label" position="192,675" size="100,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="right" zPosition="1">
+	        <convert type="EventTime">StartTime</convert>
+	        <convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="300,675" size="100,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="left" zPosition="1">
+	        <convert type="EventTime">EndTime</convert>
+	        <convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="420,675" size="150,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="left" zPosition="1">
+	        <convert type="EventTime">Duration</convert>
+	        <convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<widget source="Event" render="Label" position="540,675" size="100,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="right" zPosition="1">
+	        <convert type="EventTime">Duration</convert>
+	        <convert type="ClockToText">AsLengthHours</convert>
+		</widget>
+		<eLabel conditional="Event" text="h" position="645,675" size="30,34" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground2" transparent="1" zPosition="1" />
 		<widget source="Service" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
@@ -460,33 +484,33 @@
 		<eLabel text="Similar broadcasts:" position="85,2" size="600,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<panel name="ChannelSelectionPicon" />
 		<widget name="list" position="680,210" size="1160,665" EventFontSingle="youvix-r;30" itemHeight="55" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
-		<widget source="Event" render="Label" position="80,160" size="590,38" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" font="youvix-b;32" transparent="1" zPosition="1">
+		<widget source="Event" render="Label" position="80,150" size="590,78" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center"  valign="center" font="youvix-b;32" transparent="1" zPosition="1">
 	        <convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="RunningText" position="80,205" size="590,420" font="youvix-r;26" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="top" zPosition="1">
+		<widget source="Event" render="RunningText" position="80,225" size="590,450" font="youvix-r;26" options="movetype=running,startpoint=0,direction=top,steptime=140,repeat=3,always=0,oneshot=1,startdelay=10000,wrap" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		 <widget source="Event" render="Label" position="80,665" size="170,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" zPosition="1">
+		<widget source="Event" render="Label" position="80,675" size="170,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" zPosition="1">
 	        <convert type="EventTime">StartTime</convert>
 	        <convert type="ClockToText">ShortDate</convert>
 		</widget>
-		<widget source="Event" render="Label" position="192,665" size="100,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="right" zPosition="1">
+		<widget source="Event" render="Label" position="192,675" size="100,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="right" zPosition="1">
 	        <convert type="EventTime">StartTime</convert>
 	        <convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="300,665" size="100,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="left" zPosition="1">
+		<widget source="Event" render="Label" position="300,675" size="100,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="left" zPosition="1">
 	        <convert type="EventTime">EndTime</convert>
 	        <convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="420,665" size="150,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="left" zPosition="1">
+		<widget source="Event" render="Label" position="420,675" size="150,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="left" zPosition="1">
 	        <convert type="EventTime">Duration</convert>
 	        <convert type="ClockToText">InMinutes</convert>
 		</widget>
-		<widget source="Event" render="Label" position="540,665" size="100,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="right" zPosition="1">
+		<widget source="Event" render="Label" position="540,675" size="100,34" backgroundColor="menubackground2" transparent="1" foregroundColor="yellow" font="youvix-r;28" halign="right" zPosition="1">
 	        <convert type="EventTime">Duration</convert>
 	        <convert type="ClockToText">AsLengthHours</convert>
 		</widget>
-		<eLabel conditional="Event" text="h" position="645,665" size="30,34" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground2" transparent="1" zPosition="1" />
+		<eLabel conditional="Event" text="h" position="645,675" size="30,34" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground2" transparent="1" zPosition="1" />
 		<widget source="Service" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
