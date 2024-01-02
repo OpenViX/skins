@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 18.12.2023 -->
+	<!--  Modding done by Orlandox 02.01.2024 -->
 	
 	<!--  ## Head ##  -->
 	
@@ -55,6 +55,25 @@
 		</widget>
 		<ePixmap position="center-50,1045" size="600,10" pixmap="selectionbars/activitysliderbackground.png" alphatest="blend" zPosition="-1"/> 
 		<widget name="progress" position="center-50,1045" size="600,10" pixmap="selectionbars/activityslider.png" transparent="1" zPosition="1"/>
+	</screen>
+	
+	<!-- AUTOBOUQUETSMAKER TEMPLATE -->
+	<screen name="DownloadBar">
+		<ePixmap pixmap="screens/crossepgdownloadbox.png" position="center,965" size="800,115" zPosition="-1"/>
+		<widget name="action" position="center,975" size="520,38" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
+		<widget name="status" position="center,1020" size="520,36" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
+		<widget source="Frontend" conditional="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="1235,1020" size="35,35" alphatest="blend" backgroundColor="menubackground">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="Frontend" conditional="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="1235,1020" size="35,35" alphatest="blend" backgroundColor="menubackground">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget name="tuner_text" conditional="tuner_text" position="center+300,975" size="100,38" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
+		<widget source="Frontend" conditional="Frontend" render="Label" position="1225,1008" size="130,32" font="youvix-r;22" halign="right" backgroundColor="menubackground" transparent="1">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
 	</screen>
 	
 	<!-- EPG TEMPLATES -->
