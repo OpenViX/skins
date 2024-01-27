@@ -3916,7 +3916,8 @@
 		<widget name="inactive" position="1240,353" size="200,35" font="youvix-r;28" valign="center" halign="center" backgroundColor="red" zPosition="1" />
 		<widget name="active" position="1240,353" size="200,35" font="youvix-r;28" valign="center" halign="center" backgroundColor="green" zPosition="1" />
 	</screen>
-	<!-- ## ViX Menu - Package Manager ## -->
+	
+	<!-- ## System Menu - Package Manager ## -->
 	<screen name="PackageManager" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
@@ -3924,9 +3925,9 @@
 		    <convert type="TemplatedMultiContent">
 				{"template":
 					[
-						MultiContentEntryText(pos = (5,1), size = (1090,38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (5,42), size = (1090,31), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-						MultiContentEntryPixmapAlphaTest(pos = (1100,15), size = (48,48), png = 4), # index 5 is the status pixmap
+						MultiContentEntryText(pos = (5,1), size = (1085,38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (5,42), size = (1085,31), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (1094,13), size = (50,50), png = 4), # index 5 is the status pixmap
 						MultiContentEntryPixmapAlphaTest(pos = (0,74), size = (1160,2), png = 5), # index 6 is the div pixmap
 					],
 					"fonts": [gFont("youvix-r",32),gFont("youvix-r",24)],
@@ -3935,7 +3936,17 @@
 			</convert>
 		</widget>	
 	</screen>
-		
+	<!-- ## System Menu - Ipkg ## -->
+	<screen name="Ipkg" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Ipkg">
+		<panel name="BigMenuPanel" />
+		<panel name="MenuMyInfoText" />
+		<widget name="package" position="680,160" size="1160,100" font="youvix-r;32"  transparent="1" backgroundColor="menubackground" zPosition="1"/>
+		<widget name="status" position="680,270" size="1160,100" font="youvix-r;32"  transparent="1" backgroundColor="menubackground" zPosition="1"/>
+		<widget name="slider" position="680,400" size="1160,25" transparent="1" backgroundColor="menubackground" zPosition="2"/>
+		<ePixmap position="960,500" size="600,10" pixmap="slider_back.png" alphatest="blend" zPosition="1"/>
+		<widget name="activityslider" position="960,500" size="600,10" pixmap="slider.png" transparent="1" zPosition="1"/>
+	</screen>
+	
 	<!-- ## Volume # -->
 	<screen name="Volume" position="center,20" size="480,102" title="Volume" flags="wfNoBorder" backgroundColor="transparent" zPosition="10">
 		<ePixmap pixmap="screens/volume_background.png" position="0,0" size="480,102" alphatest="on" />
