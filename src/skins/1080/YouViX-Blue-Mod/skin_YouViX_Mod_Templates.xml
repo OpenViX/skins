@@ -125,7 +125,6 @@
 			<convert type="ServiceName">NameOnly</convert>
 		</widget>
 	</screen>
-	</screen>
 	<screen name="InfobarProgramNowStartTime">
 		<widget source="session.Event_Now" render="Label" position="595,935" size="100,38" font="youvix-b;32" foregroundColor="white" backgroundColor="lightcolour" transparent="1" valign="center" noWrap="1">
 			<convert type="EventTime">StartTime</convert>
@@ -382,20 +381,20 @@
 	<!-- MENU TEMPLATES -->
 	<screen name="InfoPanel">
 	    <panel name="MenuClock" />
-	    <panel name="TopMenuBlock" />
+	    <panel name="TopMenuBlock2" />
 	    <panel name="LeftMenuBlock" />
 		<panel name="CenterMenuBlock" />
 		<panel name="BigRightMenuBlock" />
 		<panel name="FarRightMenuBlock" />
 		<panel name="BottomMenuBlock2" />
 		<panel name="MenuForwardArrow" />
-		<panel name="MenuTitle" />
+		<panel name="MenuTitle2" />
 		<panel name="MenuButtonBar" />
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
 	<screen name="BasicMenuPanel">
 	    <panel name="MenuClock" />
-		<panel name="TopMenuBlock" />
+		<panel name="TopMenuBlock2" />
 		<panel name="LeftMenuBlock" />
 		<panel name="CenterMenuBlock" />
 		<panel name="BigRightMenuBlock" />
@@ -430,14 +429,14 @@
 	</screen>
 	<screen name="BigMenuPanel">
 	    <panel name="MenuClock" />
-	    <panel name="TopMenuBlock" />
+	    <panel name="TopMenuBlock2" />
 	    <panel name="LeftMenuBlock" />
 		<panel name="CenterMenuBlock" />
 		<panel name="BigRightMenuBlock" />
 		<panel name="FarRightMenuBlock" />
 		<panel name="BottomMenuBlock2" />
 		<panel name="MenuForwardArrow" />
-		<panel name="MenuTitle" />
+		<panel name="MenuTitle2" />
 		<panel name="MenuUpArrow" />
 		<panel name="MenuLeftArrow" />
 		<panel name="FarRightMenuRightArrow" />
@@ -462,12 +461,11 @@
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
 	<screen name="MenuClock">
-	    <eLabel position="1540,0" size="380,50" backgroundColor="menubackground" zPosition="-1" cornerRadius="16"/>
-		<widget source="global.CurrentTime" render="Label" position="1540,0" size="200,50" font="youvix-b;30" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="1">
+		<widget source="global.CurrentTime" render="Label" position="1465,0" size="200,50" font="youvix-b;30" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" zPosition="1">
 			<convert type="ClockToText">Format:%a %e %b</convert>
 		</widget>
-		<ePixmap position="1750,11" size="28,28" pixmap="icons/clock4.png" alphatest="blend" zPosition="1"/>
-		<widget source="global.CurrentTime" render="Label" position="1788,0" size="130,50" font="youvix-b;30" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" valign="center" zPosition="1">
+		<ePixmap position="1675,11" size="28,28" pixmap="icons/clock4.png" alphatest="blend" zPosition="1"/>
+		<widget source="global.CurrentTime" render="Label" position="1713,0" size="130,50" font="youvix-b;30" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" valign="center" zPosition="1">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
 	</screen>
@@ -660,8 +658,15 @@
 	<screen name="MenuTitle">
         <widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=2,repeat=5,always=0,oneshot=1,startdelay=5000,wrap" position="125,44" size="540,69" font="youvix-r;26" foregroundColor="darkcolour" backgroundColor="menubackground" valign="top" transparent="1" zPosition="1" />
 	</screen>
+	<screen name="MenuTitle2">
+        <widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=2,repeat=5,always=0,oneshot=1,startdelay=5000,wrap" position="125,44" size="1720,69" font="youvix-r;26" foregroundColor="darkcolour" backgroundColor="menubackground" valign="top" transparent="1" zPosition="1" />
+	</screen>
 	<screen name="TopMenuBlock">
 		<eLabel position="75,0" size="600,150" backgroundColor="menubackground" zPosition="-1" />
+	</screen>
+	<screen name="TopMenuBlock2">
+		<eLabel position="75,0" size="1770,150" backgroundColor="menubackground" zPosition="-1" />
+		<ePixmap pixmap="extensions/smallshadowline.png" position="0,149" size="1920,3" zPosition="2"/>
 	</screen>
 	<screen name="LeftMenuBlock">
 		<eLabel position="0,150" size="75,780" backgroundColor="menubackground" zPosition="-1" />
