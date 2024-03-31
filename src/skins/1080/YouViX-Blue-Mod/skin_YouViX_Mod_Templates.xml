@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 30.03.2024 -->
+	<!--  Modding done by Orlandox 31.03.2024 -->
 	
 	<!--  ## Head ##  -->
 	
@@ -120,9 +120,11 @@
 		<ePixmap position="15,950" size="32,48" pixmap="icons/arrow-left.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="InfobarChannelName">
-		<widget source="session.CurrentService" render="Label" position="55,935" size="525,80" font="youvix-b;34" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" halign="right" noWrap="0">
-			<convert type="ServiceName"> ,NUMBER,NAME</convert>
+		<widget source="session.CurrentService" render="ChannelNumber" position="35,935" size="120,80" font="youvix-b;34" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" halign="right" noWrap="0"/>
+		<widget source="session.CurrentService" render="Label" position="175,935" size="405,80" font="youvix-b;34" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" halign="left" noWrap="0">
+			<convert type="ServiceName">NameOnly</convert>
 		</widget>
+	</screen>
 	</screen>
 	<screen name="InfobarProgramNowStartTime">
 		<widget source="session.Event_Now" render="Label" position="595,935" size="100,38" font="youvix-b;32" foregroundColor="white" backgroundColor="lightcolour" transparent="1" valign="center" noWrap="1">
