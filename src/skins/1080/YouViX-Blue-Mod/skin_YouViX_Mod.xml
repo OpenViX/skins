@@ -470,7 +470,10 @@
 	        <convert type="EventTime">Duration</convert>
 	        <convert type="ClockToText">AsLengthHours</convert>
 		</widget>
-		<eLabel conditional="Event" text="h" position="645,675" size="30,34" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground2" transparent="1" zPosition="1" />
+		<widget source="Event" render="FixedLabel" text="h" position="645,675" size="30,34" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground2" transparent="1" zPosition="1">
+			<convert type="EventName">Name</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<widget source="Service" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
@@ -554,7 +557,10 @@
 	        <convert type="EventTime">Duration</convert>
 	        <convert type="ClockToText">AsLengthHours</convert>
 		</widget>
-		<eLabel conditional="Event" text="h" position="645,675" size="30,34" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground2" transparent="1" zPosition="1" />
+		<widget source="Event" render="FixedLabel" text="h" position="645,675" size="30,34" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground2" transparent="1" zPosition="1">
+			<convert type="EventName">Name</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<widget source="Service" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
