@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 09.04.2024 -->
+	<!--  Modified by Orlandox 14.04.2024 -->
 
 	<!--  ## Head ##  -->
 
@@ -741,7 +741,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 09.04.2024 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 14.04.2024 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
@@ -2462,14 +2462,55 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>	
 		<widget name="waitingtext" position="680,222" size="1160,708" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
-		<widget name="list" position="680,222" size="1160,708" font="youvix-r;28" itemHeight="50" pbarHeight="20" pbarLargeWidth="58" pbarColour="lightcolour" pbarColourSeen="green" pbarColourRec="red" pbarColourPlayRec="yellow" partIconeShift="0" spaceIconeText="8" iconsWidth="37" spaceLeft="1" spaceRight="2" durationWidth="95" dateWidth="275" paddingFactor="8" foregroundColor="white" backgroundColor="menubackground" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
+		<widget name="list" position="680,222" size="1160,708" font="youvix-r;28" itemHeight="50" pbarHeight="20" pbarLargeWidth="58" pbarColour="lightcolour" pbarColourSeen="green" pbarColourRec="red" pbarColourPlayRec="yellow" partIconeShift="0" spaceIconeText="8" iconsWidth="37" spaceLeft="1" spaceRight="2" durationWidth="95" dateWidth="220" paddingFactor="8" foregroundColor="white" backgroundColor="menubackground" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
 		<panel name="MenuKeyAutoTemplate" />
 		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="679,1005" size="53,38" zPosition="10"/>
 		<panel name="MenuButtonBar" />
 		<ePixmap pixmap="buttons/key_reclist.png" alphatest="blend" position="787,1005" size="58,38" zPosition="10"/>
 	</screen>
-	<screen name="MovieSelectionSlim" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MovieSelection" />
+	<screen name="MovieSelectionSlim" position="fill" backgroundColor="transparent" flags="wfNoBorder" >
+		<eLabel position="0,0" size="960,1080" backgroundColor="menubackground" zPosition="-1" />
+        <widget name="chosenletter" position="10,880" size="80,40" font="youvix-r;30" foregroundColor="yellow" halign="center" valign="center" zPosition="4"/>
+        <widget name="movie_sort" position="800,7" size="68,38" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" zPosition="10" alphatest="on"/>
+		<widget name="DescriptionBorder" position="0,0" size="0,0" transparent="1"/> #To remove debug warning
+		<ePixmap pixmap="extensions/smallshadowline.png" position="0,676" size="960,2" zPosition="2"/>
+		<ePixmap pixmap="extensions/smallshadowline.png" position="0,893" size="960,2" zPosition="2"/>
+		<widget name="movie_off" position="880,7" size="68,38" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png" zPosition="10" alphatest="on"/>
+		<widget source="Service" render="Label" position="15,680" size="735,35" font="youvix-b;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="left" noWrap="1" zPosition="1" >
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="15,720" size="100,35" font="youvix-r;26" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="left" zPosition="1" >
+			<convert type="ServiceTime">Duration</convert>	
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+        <widget source="Service" render="Label" position="115,720" size="705,68" font="youvix-r;26" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="left" noWrap="0" zPosition="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>		
+		<widget source="Service" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="190,770" size="765,120" font="youvix-r;25" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="top" zPosition="1">
+			<convert type="MovieInfo">MetaDescription</convert>
+		</widget>
+		<widget name="freeDiskSpace" position="10,896" size="400,30" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" />
+		<widget name="TrashcanSize" position="410,896" size="400,30" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" />
+		<widget source="Service" render="Picon" position="10,770" size="176,112" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
+			<convert type="MovieReference"/>
+		</widget>
+		<eLabel text=">" position="10,5" size="35,38" font="youvix-r;32" foregroundColor="darkcolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
+		<widget source="Title" render="Label" position="40,7" size="820,38" font="youvix-r;32" foregroundColor="darkcolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
+		<widget source="Service" render="Label" position="755,680" size="200,40" font="youvix-b;32" foregroundColor="yellow" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="1">
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>	
+		<widget name="waitingtext" position="15,46" size="945,638" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
+		<widget name="list" position="15,46" size="945,638" font="youvix-r;28" itemHeight="50" pbarHeight="20" pbarLargeWidth="58" pbarColour="lightcolour" pbarColourSeen="green" pbarColourRec="red" pbarColourPlayRec="yellow" partIconeShift="0" spaceIconeText="8" iconsWidth="37" spaceLeft="1" spaceRight="2" durationWidth="95" dateWidth="220" paddingFactor="8" foregroundColor="white" backgroundColor="menubackground" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
+		<panel name="BottomMenuBlock2" />
+		<panel name="MenuKeyAutoTemplate" />
+		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="679,1005" size="53,38" zPosition="10"/>
+		<panel name="MenuButtonBar" />
+		<ePixmap pixmap="buttons/key_reclist.png" alphatest="blend" position="787,1005" size="58,38" zPosition="10"/>
+		<panel name="MenuClock" />
+		<widget source="session.CurrentService" backgroundColor="black" font="youvix-r;29" foregroundColor="yellow" halign="center" noWrap="1" position="965,130" valign="center" render="Label" size="965,40" transparent="1" zPosition="4">
+		  <convert type="ServiceName" nostrip="1">  ◦  ,NUMBER,NAME,ORBPOS,PROVIDER</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="965,179" size="950,535" backgroundColor="transparent" zPosition="4"/>
 	</screen>
 	<screen name="MovieListTags" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
