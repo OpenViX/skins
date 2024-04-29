@@ -3826,14 +3826,14 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<panel name="MenuMyTimersText" />
 		<widget name="timerlist" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="75" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
 	</screen>
-	<screen name="RecordTimerQuestion" position="center,center" size="500,295" backgroundColor="black" zPosition="5" flags="wfNoBorder" >
-		<widget name="text" position="5,5" size="490,75" font="youvix-r;22" foregroundColor="yellow" />
-		<widget name="list" position="5,80" size="490,150" backgroundColor="black" enableWrapAround="1" />
+	<screen name="RecordTimerQuestion" position="center,center" size="350,295" backgroundColor="black" zPosition="5" flags="wfNoBorder">
+		<widget name="description" position="0,0" size="0,0" />
+		<widget name="text" position="0,0" size="0,0"/>
+		<widget name="list" position="15,15" size="330,150" backgroundColor="black" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
-			self.autoResize()
+self[&quot;text&quot;].text = &quot;&quot;
+self.autoResize()
 		</applet>
-		<widget source="description" render="Label" objectTypes="description,StaticText" position="5,230" size="490,50" font="youvix-r;22" halign="center" valign="center" foregroundColor="white" backgroundColor="menubackground2" />
-		<widget name="description" position="5,230" size="490,50" font="youvix-r;22" foregroundColor="white" transparent="1" halign="center" valign="center" zPosition="1" />
 	</screen>
 	 <screen name="RemoveTimerQuestion" position="center,center" size="500,300" backgroundColor="black" zPosition="5" flags="wfNoBorder" >
 		<widget name="text" position="100,0" size="0,0" font="youvix-r;22" backgroundColor="black" zPosition="5" />
