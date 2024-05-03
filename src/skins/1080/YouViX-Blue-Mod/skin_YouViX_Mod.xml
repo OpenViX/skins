@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 02.05.2024 -->
+	<!--  Modified by Orlandox 03.05.2024 -->
 
 	<!--  ## Head ##  -->
 
@@ -677,11 +677,11 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="520,111" size="520,99" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" noWrap="0" zPosition="1" >
+		<widget source="Event" render="Label" position="520,110" size="520,99" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" noWrap="0" zPosition="1" >
 			<convert type="EventName">Name</convert>
 		</widget>
-		<ePixmap pixmap="icons/info2.png" position="1045,112" size="26,26" alphatest="blend" transparent="1" zPosition="2" />
-		<widget source="Event" render="Label" position="1080,111" font="youvix-r;24" size="120,35" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2" >
+		<ePixmap pixmap="icons/info2.png" position="1045,113" size="26,26" alphatest="blend" transparent="1" zPosition="2" />
+		<widget source="Event" render="Label" position="1080,112" font="youvix-r;24" size="120,35" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2" >
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -741,7 +741,7 @@
 		<widget source="lab3" conditional="lab3" render="Label" position="680,240" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 02.05.2024 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 03.05.2024 Orlandox ---" position="75,590" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
@@ -3386,8 +3386,8 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<screen name="PictureInPicture" position="600,90" zPosition="-1" size="360,288" flags="wfNoBorder">
 		<widget name="video" position="0,0" size="360,288" backgroundColor="transparent" />
 	</screen>
-	<screen name="PictureInPictureZapping" position="870,90" size="180,45" flags="wfNoBorder" backgroundColor="transparent" zPosition="2">
-		<eLabel text="PiP-Vaihto" position="0,0" size="180,45" backgroundColor="transparent" font="youvix-r;22" borderColor="black" transparent="1" valign="center" halign="center"/>
+	<screen name="PictureInPictureZapping" position="870,90" size="250,45" flags="wfNoBorder" backgroundColor="transparent" zPosition="2">
+		<eLabel text="PiP-Zap" position="0,0" size="250,45" backgroundColor="transparent" font="youvix-r;28" borderWidth="2" borderColor="black" transparent="1" valign="center" halign="center"/>
 	</screen>
 
 	<!-- ## Position Setup ## -->
@@ -3833,8 +3833,6 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<applet type="onLayoutFinish">
 if len(self["title"].text) &lt; 55 and len(self["text"].text) &lt; 55:
 	self["text"].text = self["title"].text
-else:
-	self["text"].text = self["text"].text
 self.autoResize()
 		</applet>
 	</screen>
