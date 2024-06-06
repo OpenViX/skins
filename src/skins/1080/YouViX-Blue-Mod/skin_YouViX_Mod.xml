@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 01.06.2024 -->
+	<!--  Modified by Orlandox 06.06.2024 -->
 
 	<!--  ## Head ##  -->
 
@@ -742,7 +742,7 @@
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 01.06.2024 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 06.06.2024 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
@@ -3884,13 +3884,13 @@ self.autoResize()
 	<screen name="NimSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyTunersText" />
-		<widget source="nimlist" render="Listbox" position="680,160" size="1160,750" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand">
+		<widget source="nimlist" render="Listbox" position="680,160" size="1160,8*93" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (5,2), size = (1160,30), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
-				MultiContentEntryText(pos = (5,37), size = (1160,60), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+				MultiContentEntryText(pos = (5,1), size = (1155,32), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
+				MultiContentEntryText(pos = (55,33), size = (1105,60), font = 1,color = "grey",flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
 				],
-				"fonts": [gFont("youvix-r",28), gFont("youvix-r",22)],
+				"fonts": [gFont("youvix-r",30), gFont("youvix-r",24)],
 				"itemHeight":93
 				}
 			</convert>
