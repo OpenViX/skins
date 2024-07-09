@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 04.07.2024 -->
+	<!--  Modified by Orlandox 09.07.2024 -->
 
 	<!--  ## Head ##  -->
 
@@ -148,10 +148,10 @@
 	<!-- ## INFOBARS ## -->
 	<screen name="InfoBar" flags="wfNoBorder" position="fill" title="InfoBar" backgroundColor="transparent">
 		<ePixmap pixmap="infobar/2ndinfobar1.png" position="0,810" size="1920,60" zPosition="-1"/>
-		<widget name="key_red" position="640,810" size="180,59" font="youvix-r;24" foregroundColor="#00ff0808" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
-		<widget name="key_green" position="870,810" size="180,59" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
-		<widget name="key_yellow" position="1100,810" size="180,59" font="youvix-r;24" foregroundColor="#00edf506" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
-		<widget name="key_blue" position="1330,810" size="180,59" font="youvix-r;24" foregroundColor="#00077cf5" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
+		<widget name="key_red" position="640,810" size="180,59" font="youvix-r;24" foregroundColor="#00ff0808" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
+		<widget name="key_green" position="870,810" size="180,59" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
+		<widget name="key_yellow" position="1100,810" size="180,59" font="youvix-r;24" foregroundColor="#00edf506" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
+		<widget name="key_blue" position="1330,810" size="180,59" font="youvix-r;24" foregroundColor="#00077cf5" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
 		<ePixmap pixmap="infobar/infobar.png" position="0,870" size="1920,210" zPosition="-1"/>
 		<panel name="InfobarClock"/>
 		<panel name="InfobarUpArrow"/>
@@ -215,10 +215,10 @@
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<ePixmap pixmap="infobar/2ndinfobar1.png" position="0,810" size="1920,60" zPosition="-1"/>
-		<widget name="key_red" position="640,810" size="180,59" font="youvix-r;24" foregroundColor="#00ff0808" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
-		<widget name="key_green" position="870,810" size="180,59" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
-		<widget name="key_yellow" position="1100,810" size="180,59" font="youvix-r;24" foregroundColor="#00edf506" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
-		<widget name="key_blue" position="1330,810" size="180,59" font="youvix-r;24" foregroundColor="#00077cf5" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
+		<widget name="key_red" position="640,810" size="180,59" font="youvix-r;24" foregroundColor="#00ff0808" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
+		<widget name="key_green" position="870,810" size="180,59" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
+		<widget name="key_yellow" position="1100,810" size="180,59" font="youvix-r;24" foregroundColor="#00edf506" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
+		<widget name="key_blue" position="1330,810" size="180,59" font="youvix-r;24" foregroundColor="#00077cf5" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
 		<widget source="session.CurrentService" render="Picon" position="20,505" size="300,180" transparent="0" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
@@ -234,11 +234,11 @@
 		<panel name="InfobarClock"/>
 		<panel name="InfobarUpArrow"/>
         <ePixmap pixmap="icons/RX.png" position="1470,872" size="44,26" alphatest="blend" zPosition="2"/>
-		<widget source="session.CurrentService" render="Label" position="1370,890" size="160,38" font="youvix-r;26" foregroundColor="green" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2">
+		<widget source="session.CurrentService" render="Label" position="1370,890" size="160,38" font="youvix-r;26" foregroundColor="green" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2" borderWidth="1">
 			<convert type="VNetSpeedInfo">RC</convert>
 		</widget>
         <ePixmap pixmap="icons/TX.png" position="1645,872" size="44,26" alphatest="blend" zPosition="2"/>
-		<widget source="session.CurrentService" render="Label" position="1545,890" size="160,38" font="youvix-r;26" foregroundColor="red" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2">
+		<widget source="session.CurrentService" render="Label" position="1545,890" size="160,38" font="youvix-r;26" foregroundColor="red" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2" borderWidth="1">
 			<convert type="VNetSpeedInfo">TM</convert>
 		</widget>
 		<panel name="InfobarLeftArrow"/>
@@ -742,7 +742,7 @@
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 04.07.2024 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 09.07.2024 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
