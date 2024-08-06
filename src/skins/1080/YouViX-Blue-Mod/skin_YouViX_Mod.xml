@@ -3966,32 +3966,7 @@ self.autoResize()
 		<widget name="mode" position="436,465" size="100,25" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="center" transparent="1" />
 		<widget name="language" position="0,0" size="0,0" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="right" transparent="1" />
 	</screen>
-
-	<!-- ## ViX Menu ## -->
-	<screen name="VIXMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BigMenuPanel" />
-		<panel name="MenuMyViXText" />
-		<widget source="menu" render="Listbox" position="680,165" size="1160,650" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-				MultiContentEntryText(pos = (5,0), size = (1160,50), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 0 is the MenuText,
-				],
-				"fonts": [gFont("youvix-r",32)],
-				"itemHeight":50
-				}
-			</convert>
-		</widget>
-		<widget source="menu" render="Listbox" position="680,165" size="1160,650" foregroundColor="white" backgroundColor="lightcolour" scrollbarMode="showNever" selectionDisabled="1" transparent="1" zPosition="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-				MultiContentEntryText(pos = (0,0),size = (1155,50),flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER|RT_WRAP,text = 2), # index 0 is the MenuText,
-				],
-				"fonts": [gFont("youvix-r",24)],
-				"itemHeight":50
-				}
-			</convert>
-		</widget>
-	</screen>
+	
 	<screen name="VIXSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
