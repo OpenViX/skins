@@ -1385,8 +1385,6 @@
 		<widget source="ServiceEvent" render="RunningText" position="80,498" size="590,150" font="youvix-r;26" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">NextDescription</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="1">
-		</widget>
 		<widget source="ServiceEvent" render="Label" position="680,187" size="1100,29" font="youvix-r;24" foregroundColor="grey" backgroundColor="menubackground" noWrap="1" transparent="1" halign="left" valign="center" zPosition="1">
 			<convert type="TransponderInfo"></convert>
 		</widget>
@@ -1395,7 +1393,7 @@
 	<screen name="SimpleChannelSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BasicMenuPanel" />
 		<panel name="MenuMyChannelText" />
-		<widget name="list" position="680,218" size="1160,715" backgroundColor="menubackground" foregroundColorEvent="lightcolour" foregroundColorEventSelected="lightgrey" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" foregroundColorNextEvent="lightgrey" foregroundColorEventNextSelected="lightgrey" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="lightcolour" itemHeight="40" itemHeightTwoLine="84" serviceNumberFont="youvix-r;30" serviceNameFont="channelselectionservice;30" serviceInfoFont="channelselectionevent;26" progressBarWidth="72" fieldMargins="13" colorEventProgressbar="lightcolour" colorEventProgressbarSelected="white" foregroundColorEventRemaining="lightcolour" foregroundColorEventRemainingSelected="lightgrey" serviceRemainingInfoFont="youvix-r;22" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
+		<widget name="list" position="680,215" size="1160,715" backgroundColor="menubackground" foregroundColorEvent="lightcolour" foregroundColorEventSelected="lightgrey" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" foregroundColorNextEvent="lightgrey" foregroundColorEventNextSelected="lightgrey" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="lightcolour" itemHeight="40" itemHeightTwoLine="84" serviceNumberFont="youvix-r;30" serviceNameFont="channelselectionservice;30" serviceInfoFont="channelselectionevent;26" progressBarWidth="72" fieldMargins="13" colorEventProgressbar="lightcolour" colorEventProgressbarSelected="white" foregroundColorEventRemaining="lightcolour" foregroundColorEventRemainingSelected="lightgrey" serviceRemainingInfoFont="youvix-r;22" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
 		<panel name="ChannelSelectionBouquetName" />
 		<panel name="MenuKeyAutoTemplate" />
 		<panel name="MenuButtonBar" />
@@ -1404,8 +1402,10 @@
 	<screen name="SlimChannelSelection" title="Channel Selection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyChannelText"/>
-		<widget name="list" position="680,218" size="1160,715" backgroundColor="menubackground" foregroundColorEvent="lightcolour" foregroundColorEventSelected="lightgrey" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" foregroundColorNextEvent="lightgrey" foregroundColorEventNextSelected="lightgrey" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="lightcolour" itemHeight="40" itemHeightTwoLine="84" serviceNumberFont="youvix-r;30" serviceNameFont="channelselectionservice;30" serviceInfoFont="channelselectionevent;26" progressBarWidth="72" fieldMargins="13" colorEventProgressbar="lightcolour" colorEventProgressbarSelected="white" foregroundColorEventRemaining="lightcolour" foregroundColorEventRemainingSelected="lightgrey" serviceRemainingInfoFont="youvix-r;22" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
-		<widget source="ServiceEvent" render="Label" position="680,890" size="1160,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" noWrap="1" zPosition="1">
+		<widget name="list" position="680,215" size="1160,715" backgroundColor="menubackground" foregroundColorEvent="lightcolour" foregroundColorEventSelected="lightgrey" foregroundColorServiceNotAvail="darkgrey" foregroundColorMarked="white" foregroundColorMarkedSelected="red" foregroundColorNextEvent="lightgrey" foregroundColorEventNextSelected="lightgrey" backgroundColorMarked="lightcolour" backgroundColorMarkedSelected="lightcolour" itemHeight="40" itemHeightTwoLine="84" serviceNumberFont="youvix-r;30" serviceNameFont="channelselectionservice;30" serviceInfoFont="channelselectionevent;26" progressBarWidth="72" fieldMargins="13" colorEventProgressbar="lightcolour" colorEventProgressbarSelected="white" foregroundColorEventRemaining="lightcolour" foregroundColorEventRemainingSelected="lightgrey" serviceRemainingInfoFont="youvix-r;22" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
+		<panel name="ChannelSelectionBouquetName" />
+		<widget source="ServiceEvent" render="Label" position="680,187" size="1100,29" font="youvix-r;24" foregroundColor="grey" backgroundColor="menubackground" noWrap="1" transparent="1" halign="left" valign="center" zPosition="1">
+			<convert type="TransponderInfo"></convert>
 		</widget>
 	</screen>
 	<screen name="ChannelContextMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
