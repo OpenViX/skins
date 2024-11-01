@@ -2448,29 +2448,6 @@
 		<widget name="sysTemp" position="7,637" size="715,45" zPosition="2" font="Regular;33" foregroundColor="blue" valign="center" halign="center"/>
 		<widget name="cpuTemp" position="7,690" size="715,45" zPosition="2" font="Regular;33" foregroundColor="blue" valign="center" halign="center"/>
 	</screen>
-	<screen name="VIXMenu" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
-		<widget source="menu" render="Listbox" position="780,123" size="1132,874" foregroundColor="grey">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-				MultiContentEntryText(pos = (10,6), size = (1000,855), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
-				],
-				"fonts": [gFont("Regular",37)],
-				"itemHeight": 60
-				}
-		</convert>
-		</widget>
-			<widget source="menu" render="Listbox" position="15,600" size="715,80" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="blue">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-				MultiContentEntryText(pos = (0,0),size = (700,80),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP,text = 2),# index 0 is the MenuText,
-				],
-				"fonts": [gFont("Regular",33)],
-				"itemHeight": 80
-				}
-			</convert>
-		</widget>
-	</screen>
 	<screen name="VIXEPGBouquetSelector" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<widget name="menu" position="780,123" size="1132,855" font="Regular;33" itemHeight="45"/>
