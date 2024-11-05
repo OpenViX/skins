@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 22.10.2024 -->
+	<!--  Modified by Orlandox 05.11.2024 -->
 
 	<!--  ## Head ##  -->
 
@@ -790,7 +790,7 @@
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 22.10.2024 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 05.11.2024 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
@@ -4916,5 +4916,25 @@ self.autoResize()
 		<panel name="Setup" />
 		<widget name="info" position="80,765" size="590,150" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1" />
 	</screen>
-		
+
+	<!-- ## M3UIPTV ## -->
+	<screen name="M3UIPTVManagerConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="BigMenuPanel"/>
+		<panel name="MenuMySetupText" />
+		<panel name="MenuDescriptionWidget"/>
+		<widget conditional="progress" source="progress" render="Progress" position="30,542" size="720,18" backgroundColor="background" foregroundColor="blue" zPosition="11" borderWidth="0" borderColor="grey" cornerRadius="5"/>
+		<widget source="list" render="Listbox" position="680,165" size="1110,17*44" transparent="1" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (10,0), size = (1050,44), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1) ],
+					"fonts": [gFont("youvix-r",32)],
+					"itemHeight": 44
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="M3UIPTVVoDMovies" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="M3UIPTVManagerConfig"/>
+	</screen>
+
 </skin>
