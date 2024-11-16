@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 13.11.2024 -->
+	<!--  Modding done by Orlandox 16.11.2024 -->
 	
 	<!--  ## Head ##  -->
 	
@@ -321,6 +321,78 @@
 		<widget source="session.CurrentService" render="Label" position="1540,113" size="150,38" font="youvix-b;26" foregroundColor="yellow" backgroundColor="background2" transparent="1" valign="center">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
+		<widget source="session.CurrentService" render="Label" position="370,119" size="161,28" font="youvix-r;22" backgroundColor="background2" transparent="1" borderWidth="3" borderColor="black">
+			<convert type="PliExtraInfo">ResolutionString</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/txt.png" position="536,119" size="60,28" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/2-0.png" position="601,119" size="60,28" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsStereo</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/5-1.png" position="601,119" size="60,28" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/4-3.png" position="666,119" size="60,28" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsNotWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/16-9.png" position="666,119" size="60,28" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/sdi.png" position="731,119" size="60,28" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsSD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/hdi.png" position="731,119" size="60,28" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/uhd.png" position="731,119" size="60,28" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="796,119" size="100,28" font="youvix-r;22" foregroundColor="white" backgroundColor="background2" transparent="1" zPosition="1">
+			<convert type="PliExtraInfo">VideoCodec</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="901,119" size="175,28" font="youvix-r;22" foregroundColor="white" backgroundColor="background2" transparent="1" zPosition="1">
+			<convert type="VAudioInfo">AudioCodec</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/ico_stream2.png" position="1106,123" size="20,20" zPosition="1" alphatest="blend">
+			<convert type="ClientsStreaming"/>
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/ico_rec.png" position="1081,123" size="20,20" zPosition="1" alphatest="blend">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+	<screen name="CatchupPlayerTemplate">
+		<widget source="Title" render="Label" position="center,34" size="1500,30" font="youvix-b;25" foregroundColor="darkcolour" backgroundColor="background2" halign="right" transparent="1" zPosition="1" />
+	    <widget source="session.CurrentService" render="Picon" position="202,46" size="70,42" transparent="0" alphatest="blend" zPosition="1">
+			<convert type="MovieReference"/>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="325,34" size="850,60" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" valign="center" noWrap="0" zPosition="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<ePixmap position="center,35" size="1517,120" pixmap="infobar/moviebar.png" zPosition="-1" />
+		<ePixmap position="275,48" size="35,35" pixmap="icons/info.png" alphatest="blend" zPosition="1"/>
+		<widget source="global.CurrentTime" render="Label" position="1275,57" size="200,38" font="youvix-b;30" foregroundColor="clockcolour" backgroundColor="background2" transparent="1" noWrap="1" halign="right" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %e %h</convert>
+		</widget>
+		<ePixmap position="1485,60" size="30,30" pixmap="icons/clock5.png" alphatest="blend" zPosition="1"/>
+		<widget source="global.CurrentTime" render="Label" position="1523,57" size="120,38" font="youvix-b;30" foregroundColor="clockcolour" backgroundColor="background2" transparent="1" noWrap="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+		<widget source="progress" render="Progress" backgroundColor="background2" foregroundColor="lightcolour" position="center,95" size="1367,20" zPosition="2" pointer="infobar/movieprogressbar.png:1367,4" transparent="1">
+		<widget name="time_elapsed" position="1131,113" size="240,38" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="right" valign="center">
+		<eLabel text="/" font="youvix-r;26" position="1377,117" size="25,38" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" zPosition="1"/>
+		<widget name="time_duration" position="1395,113" size="130,38" font="youvix-r;26" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" valign="center">
+		<ePixmap position="1500,119" size="26,26" pixmap="icons/info3.png" alphatest="blend" zPosition="1"/>
+		<widget name="time_remaining" position="1540,113" size="150,38" font="youvix-b;26" foregroundColor="yellow" backgroundColor="background2" transparent="1" valign="center">
 		<widget source="session.CurrentService" render="Label" position="370,119" size="161,28" font="youvix-r;22" backgroundColor="background2" transparent="1" borderWidth="3" borderColor="black">
 			<convert type="PliExtraInfo">ResolutionString</convert>
 		</widget>
