@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 27.12.2024 -->
+	<!--  Modified by Orlandox 28.12.2024 -->
 
 	<!--  ## Head ##  -->
 
@@ -437,20 +437,19 @@
 		</widget>
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="fill" backgroundColor="transparent" transparent="0" flags="wfNoBorder" title="Infobar Grid EPG" >
-		<eLabel position="75,665" size="600,120" backgroundColor="menubackground" zPosition="-1" />
-		<eLabel text="Infobar Grid EPG" position="85,677" size="600,45" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
+		<eLabel position="75,665" size="1770,120" backgroundColor="menubackground" zPosition="-1" />
+		<eLabel text="Infobar Grid EPG" position="85,677" size="800,45" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<ePixmap position="345,735" size="50,32" pixmap="icons/arrow-up.png" alphatest="blend" zPosition="1"/>
 		<eLabel position="0,785" size="75,170" backgroundColor="menubackground" zPosition="-1" />
 		<ePixmap pixmap="icons/arrow-left.png" position="35,847" size="32,48" alphatest="blend" zPosition="5" />
 		<eLabel position="75,785" size="600,170" backgroundColor="menubackground2" zPosition="-1" />
-		<eLabel position="675,745" size="1170,40" backgroundColor="menubackground" zPosition="-1" />
 		<eLabel text=">" position="685,746" size="35,38" font="youvix-r;30" foregroundColor="darkcolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-		<widget source="Title" render="Label" position="715,748" size="740,38" font="youvix-r;30" foregroundColor="darkcolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
-		<widget source="global.CurrentTime" render="Label" position="1450,748" size="220,38" font="youvix-b;28" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" zPosition="1">
+		<widget source="Title" render="Label" position="715,748" size="1130,38" font="youvix-r;30" foregroundColor="darkcolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
+		<widget source="global.CurrentTime" render="Label" position="1450,677" size="220,38" font="youvix-b;28" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" zPosition="1">
 			<convert type="ClockToText">Format:%a %e %h</convert>
 		</widget>
-		<ePixmap position="1680,752" size="28,28" pixmap="icons/clock4.png" alphatest="blend" zPosition="1"/>
-		<widget source="global.CurrentTime" render="Label" position="1718,748" size="140,38" font="youvix-b;30" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" zPosition="1">
+		<ePixmap position="1680,681" size="28,28" pixmap="icons/clock4.png" alphatest="blend" zPosition="1"/>
+		<widget source="global.CurrentTime" render="Label" position="1718,677" size="140,38" font="youvix-b;30" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" zPosition="1">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
 		<eLabel position="675,785" size="1170,175" backgroundColor="menubackground" zPosition="-1" />
@@ -782,7 +781,7 @@
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 27.12.2024 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 28.12.2024 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
@@ -1874,9 +1873,10 @@
 		<widget name="datetime" position="0,0" size="0,0"/> #To remove debug warning
 	</screen>
 	<screen name="InfoBarEventView" position="0,350" size="1920,315" flags="wfNoBorder" backgroundColor="transparent" zPosition="1" >
-		<ePixmap pixmap="infobar/2ndinfobar2.png" position="0,0" size="1920,315" zPosition="-1"/>
-		<widget source="Title" render="Label" position="80,70" size="600,95" font="youvix-b;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1" />
-        <widget source="session.CurrentService" render="Label" position="80,15" size="600,44" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" halign="left" zPosition="1" >
+		<eLabel position="75,0" size="1770,315" backgroundColor="menubackground" zPosition="-1" />
+		<ePixmap pixmap="extensions/smallshadowline.png" position="75,314" size="1770,3" zPosition="2"/>
+		<widget source="Title" render="Label" position="80,50" size="600,95" font="youvix-b;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1" />
+        <widget source="session.CurrentService" render="Label" position="80,10" size="600,44" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" halign="left" zPosition="1" >
 		    <convert type="ServiceName">Name</convert>
 		</widget>
 		<widget name="channel" position="80,140" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
@@ -1884,20 +1884,22 @@
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">LongFullDate,Default</convert>
 		</widget>
-		<widget name="duration" position="80,240" size="600,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
-		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="680,10" size="1240,300" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="top" zPosition="1">
+		<eLabel text="/" position="340,240" size="35,38" font="youvix-r;30" foregroundColor="darkcolour" backgroundColor="menubackground" transparent="1" zPosition="1"/>
+		<widget name="duration" position="355,240" size="250,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="left" zPosition="1" />
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="680,10" size="1160,300" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="Service" render="Picon" position="10,130" size="100,60" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
+		<widget source="Service" render="Picon" position="80,223" size="100,60" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="Event" render="Label" position="80,280" size="600,35" font="youvix-r;26" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="center" zPosition="1" >
+		<widget source="Event" render="Label" position="80,240" size="253,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" zPosition="1" >
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget name="epg_eventname" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="epg_description" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="datetime" position="0,0" size="0,0"/> #To remove debug warning
+		<widget name="FullDescription" position="0,0" size="0,0"/> #To remove debug warning
 	</screen>
 	<screen name="EventViewContextMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
@@ -2176,7 +2178,6 @@
 		<widget name="stars" pixmap="imdb/starsbar_filled.png" position="1100,455" size="315,32" zPosition="3" transparent="1" />
 		<widget name="ratinglabel" position="1120,495" size="260,32" halign="center" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
 		<widget name="poster" position="680,218" size="190,281" alphatest="blend" />
-		<ePixmap pixmap="buttons/key_reclist.png" alphatest="blend" position="787,1005" size="58,38" zPosition="10"/>
 	</screen>
 
 	<!-- ## Input Box ## -->
