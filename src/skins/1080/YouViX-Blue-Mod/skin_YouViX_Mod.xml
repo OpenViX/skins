@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 10.01.2025 -->
+	<!--  Modified by Orlandox 31.01.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -781,7 +781,7 @@
 		<widget name="AboutScrollLabel" position="800,300" size="950,630"  font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 10.01.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 31.01.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2040,6 +2040,7 @@
 		<widget source="key_ok" render="Label" position="1598,320" size="220,35" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="1"/>
 		<panel name="MenuHelpButton" />
 		<panel name="MenuOKButton" />
+		<panel name="MenuVirtualKeyboardVkey" />
 	</screen>
 
 	<!-- ## FPGA Update ## -->
@@ -4022,15 +4023,17 @@ self.autoResize()
 	</screen>
 
 	<!-- ## Virtual Keyboard ## -->
-	<screen name="VirtualKeyBoard" position="center,center" size="972,569" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
-		<ePixmap pixmap="screens/virtualkeyboard.png" position="0,0" size="972,541" alphatest="blend" zPosition="-1" />
-		<ePixmap pixmap="buttons/vkey_text.png" position="7,35" zPosition="-4" size="958,60" alphatest="blend" />
-		<widget name="prompt" position="10,10" size="750,20" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" />
-		<widget name="text" position="10,36" size="952,58" font="youvix-r;46" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" />
-		<widget name="list" position="10,105" size="952,340" foregroundColor="white" backgroundColor="menubackground" transparent="1" selectionDisabled="1" />
-		<widget name="locale" position="10,500" size="800,25" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
-		<widget name="mode" position="436,465" size="100,25" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="center" transparent="1" />
-		<widget name="language" position="0,0" size="0,0" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="right" transparent="1" />
+	<screen name="VirtualKeyBoard" position="fill" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
+		<panel name="BigMenuPanel" />
+		<panel name="MenuMyVirtualKeyboardText" />
+		<ePixmap pixmap="screens/virtualkeyboard.png" position="680,165" size="972,541" alphatest="blend" zPosition="-1" />
+		<ePixmap pixmap="buttons/vkey_text.png" position="687,210" zPosition="-1" size="958,60" alphatest="blend" />
+		<widget name="prompt" position="690,170" size="750,35" font="youvix-r;30" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" />
+		<widget name="text" position="690,214" size="952,50" font="youvix-r;34" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" />
+		<widget name="list" position="690,270" size="952,340" foregroundColor="white" backgroundColor="menubackground" transparent="1" selectionDisabled="1" />
+		<widget name="locale" position="690,665" size="800,30" font="youvix-r;25" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
+		<widget name="mode" position="1116,630" size="100,25" font="youvix-r;20" foregroundColor="white" backgroundColor="menubackground" halign="center" transparent="1" />
+		<widget name="language" position="680,720" size="300,44" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
 	</screen>
 	
 	<screen name="VIXSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
