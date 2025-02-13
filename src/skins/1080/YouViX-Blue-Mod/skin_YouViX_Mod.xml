@@ -2408,11 +2408,11 @@
 	<screen name="MessageBoxSimple" position="center,center" size="1100,100" title="Message" zPosition="10" flags="wfNoBorder" backgroundColor="menubackground">
 		<widget source="Title" render="Label" position="100,10" size="500,34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" zPosition="1" font="youvix-b;28" valign="center" halign="left"/>
 		<widget name="text" position="110,50" size="840,40" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2"/>
-		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png" position="0,0" size="100,100" alphatest="blend" zPosition="1" scale="1" />
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="100,100" alphatest="blend" zPosition="1" scale="1" />
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="100,100" alphatest="blend" zPosition="1" scale="1" />
-		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="0,0" size="100,100" alphatest="blend" zPosition="1" scale="1" />
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="100,100" alphatest="blend" zPosition="1" scale="1" />
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
+		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
 		<widget name="list" position="0,80" size="1100,380" itemHeight="38" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="3" scrollbarMode="showOnDemand" />
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
@@ -2431,8 +2431,8 @@ wsizey = textsize[1]
 lenlist = len(self.list)*38
 if (lenlist &gt; 190):
 	lenlist = 190
-if (96 &gt; wsizey):
-	wsizey = 96
+if (110 &gt; wsizey):
+	wsizey = 110
 if self.type == self.TYPE_YESNO:
 	wsizey += lenlist + 15
 if (840 &gt; wsizex):
