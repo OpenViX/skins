@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 05.03.2025 -->
+	<!--  Modified by Orlandox 18.03.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -779,7 +779,7 @@
 		<widget name="AboutScrollLabel" position="800,267" size="950,660" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 05.03.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 18.03.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2403,15 +2403,16 @@
 		<widget name="text" position="680,165" size="1160,770" font="youvix-r;27" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="list" position="80,600" size="590,210" font="youvix-r;24" itemHeight="35" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="MessageBoxSimple" position="center,center" size="1100,100" title="Message" zPosition="10" flags="wfNoBorder" backgroundColor="menubackground">
-		<widget source="Title" render="Label" position="100,10" size="500,34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" zPosition="1" font="youvix-b;28" valign="center" halign="left"/>
-		<widget name="text" position="110,50" size="840,40" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2"/>
+	<screen name="MessageBoxSimple" position="center,center" size="960,150" title="Message" zPosition="10" flags="wfNoBorder" backgroundColor="menubackground">
+		<widget source="Title" render="Label" position="100,10" size="250,34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" zPosition="1" font="youvix-b;28" valign="center" halign="left"/>
+		<widget name="text" position="110,50" size="780,0" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2"/>
 		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
 		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
-		<widget name="list" position="0,80" size="1100,380" itemHeight="38" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="3" scrollbarMode="showOnDemand" />
+		<widget name="list" textOffset="10,2" position="0,80" size="880,480" itemHeight="38" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="3" scrollbarMode="showOnDemand" />
+		<widget name="autoresize" conditional="autoresize" position="0,0" size="0,0" font="youvix-r;28" noWrap="1" />
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
 if self.timerRunning:
@@ -2422,27 +2423,34 @@ else:
 orgwidth = self.instance.size().width()
 orgheight = self.instance.size().height()
 orgpos = self.instance.position()
-textsize = self[&quot;text&quot;].getSize()
+textsize = self["text"].getSize()
 textsize = (textsize[0] + 76, textsize[1] + 30)
-wsizex = textsize[0] + 90
-wsizey = textsize[1]
+wsizex = textsize[0] + 140
+if (75 + textsize[1]) &gt; 180:
+	wsizey = textsize[1]
+else:
+	wsizey = textsize[1] + 38
 lenlist = len(self.list)*38
-if (lenlist &gt; 190):
-	lenlist = 190
-if (110 &gt; wsizey):
-	wsizey = 110
-if self.type == self.TYPE_YESNO:
-	wsizey += lenlist + 15
-if (840 &gt; wsizex):
-	wsizex = 840
+if (lenlist &gt; 320):
+	lenlist = 320
+
+wsizey += lenlist + 20
+
+if (420 &gt; wsizex):
+	wsizex = 420
+listwidth = self.getListWidth() + 10
+if (listwidth &gt; 1280):
+	listwidth = 1280
+if (listwidth &gt; wsizex):
+	wsizex = listwidth
 wsize = (wsizex, wsizey + titleheight)
 self.instance.resize(eSize(*wsize))
-self[&quot;text&quot;].instance.move(ePoint(97, int(12 + titleheight)))
-self[&quot;text&quot;].instance.resize(eSize(*textsize))
+self["text"].instance.move(ePoint(97, 12 + titleheight))
+self["text"].instance.resize(eSize(*textsize))
 if self.type == self.TYPE_YESNO:
-	listsize = (wsizex-6, lenlist)
-	self[&quot;list&quot;].instance.move(ePoint(3, int(wsizey - lenlist + titleheight - 3)))
-	self[&quot;list&quot;].instance.resize(eSize(*listsize))
+	listsize = (wsizex-10, lenlist)
+	self["list"].instance.move(ePoint(3, int(wsizey - lenlist + titleheight - 3)))
+	self["list"].instance.resize(eSize(*listsize))
 newwidth = wsize[0]
 self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgpos.y() + (orgheight - wsizey) // 2)))
 	</applet>
