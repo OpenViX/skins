@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 23.03.2025 -->
+	<!--  Modified by Orlandox 31.03.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -779,7 +779,7 @@
 		<widget name="AboutScrollLabel" position="800,267" size="950,660" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 23.03.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 31.03.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -4767,98 +4767,75 @@ self.autoResize()
 	
 	<!-- ## tmdb ## -->
 	<screen name="tmdbScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database">
-        <eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
-		<panel name="MenuClock" />
-		<panel name="MenuForwardArrow" />
-		<panel name="MenuTitle" />
+		<panel name="BigMenuPanel"/>
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-		<widget name="searchinfo" position="80,100" size="1760,40" font="youvix-b;35" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
-		<widget name="cover" position="e-400,400" size="320,480" zPosition="100" alphatest="blend" />
-		<widget name="list" conditional="list" position="80,145" size="1400,770" backgroundColor="menubackground" transparent="1" itemHeight="45" scrollbarMode="showOnDemand"/>
-		<panel name="MenuButtonBar" />
-		<ePixmap pixmap="extensions/smallshadowline.png" position="0,950" size="1920,3" zPosition="2"/>
-		<panel name="MenuKeyAutoTemplate"/>
+		<widget name="searchinfo" position="80,165" size="590,130" font="youvix-b;35" foregroundColor="yellow" halign="center" backgroundColor="menubackground" transparent="1" />
+		<eLabel position="164,294" size="422,632" backgroundColor="white"/>
+		<widget name="cover" position="165,295" size="420,630" zPosition="100" alphatest="blend" />
+		<widget name="list" conditional="list" position="680,165" size="1160,17*44" backgroundColor="menubackground" transparent="1" itemHeight="44" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="tmdbScreenMovie" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Details">
-		 <eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
-		<panel name="MenuClock" />
-		<panel name="MenuForwardArrow" />
-		<panel name="MenuTitle" />
+		<panel name="BigMenuPanel"/>
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-		<widget name="searchinfo" position="80,100" size="830,80" font="youvix-b;35" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
-		<widget name="cover" position="e-400,400" size="320,480" zPosition="100" alphatest="blend" />
-		<widget name="fulldescription" position="80,186" size="825,767" backgroundColor="menubackground" transparent="1" halign="left" font="youvix-r;32" scrollbarMode="showOnDemand"/>
-		<ePixmap position="e-400,165" size="100,100" zPosition="0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/tmdb/pic/star.png" transparent="1" alphatest="blend" scale="1"/>
-		<widget name="rating" position="e-400,170" size="100,100" zPosition="50" font="youvix-r;27" halign="center" valign="center" foregroundColor="black" backgroundColor="#00ffba00" transparent="1"/>
-		<widget name="votes_brackets" position="e-400,259" size="100,30" backgroundColor="menubackground" zPosition="2" font="youvix-r;27" halign="center" transparent="1"/>
-		<widget name="fsklogo" position="e-180,165" size="100,100" zPosition="2" alphatest="blend"/>
-		<widget name="year_txt" position="910,390" size="110,40" zPosition="2" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="year" position="1020,390" size="460,40" zPosition="2" font="youvix-r;27" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
-		<widget name="country_txt" position="910,430" size="110,40" zPosition="2" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="country" position="1020,430" size="460,40" zPosition="2" font="youvix-r;27" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="runtime_txt" position="910,470" size="110,40" zPosition="2" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="runtime" position="1020,470" size="460,40" zPosition="2" font="youvix-r;27" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="votes_txt" position="910,510" size="110,40" zPosition="2" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="votes" position="1020,510" size="460,40" zPosition="2" font="youvix-r;27" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="director_txt" position="910,550" size="110,40" zPosition="2" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="director" position="1020,550" size="460,70" zPosition="2" font="youvix-r;27" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="author_txt" position="910,620" size="110,40" zPosition="2" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="author" position="1020,620" size="460,70" zPosition="2" font="youvix-r;27" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="genre_txt" position="910,690" size="110,40" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="genre" position="1020,690" size="460,70" zPosition="2" font="youvix-r;27" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="studio_txt" position="910,760" size="110,40" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="studio" position="1020,760" size="460,190" zPosition="2" font="youvix-r;27" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
+		<widget name="searchinfo" position="80,165" size="590,130" font="youvix-b;35" foregroundColor="yellow" halign="center" backgroundColor="menubackground" transparent="1" />
+		<eLabel position="e-397,409" size="322,482" backgroundColor="white" zPosition="5"/>
+		<widget name="cover" position="e-396,410" size="320,480" zPosition="100" alphatest="blend" />
+		<widget name="fulldescription" position="80,295" size="590,16*40" backgroundColor="menubackground" transparent="1" halign="left" font="youvix-r;30" scrollbarMode="showOnDemand"/>
+		<ePixmap position="680,160" size="100,100" zPosition="5" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/tmdb/pic/star.png" transparent="1" alphatest="blend" scale="1"/>
+		<widget name="rating" position="680,160" size="100,100" zPosition="8" font="youvix-r;27" halign="center" valign="center" foregroundColor="black" transparent="1" alphatest="blend"/>
+		<widget name="votes_brackets" position="680,262" size="100,30" zPosition="5" font="youvix-r;27" halign="center" transparent="1" alphatest="blend"/>
+		<widget name="fsklogo" position="880,160" size="100,100" zPosition="5" alphatest="blend"/>
+		<widget name="year_txt" position="680,390" size="110,40" zPosition="5" font="youvix-r;28" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="year" position="790,390" size="730,40" zPosition="5" font="youvix-r;27" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="country_txt" position="680,430" size="110,40" zPosition="5" font="youvix-r;28" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="country" position="790,430" size="730,40" zPosition="5" font="youvix-r;27" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="runtime_txt" position="680,470" size="110,40" zPosition="5" font="youvix-r;28" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="runtime" position="790,470" size="730,40" zPosition="5" font="youvix-r;27" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="votes_txt" position="680,510" size="110,40" zPosition="5" font="youvix-r;28" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="votes" position="790,510" size="730,40" zPosition="5" font="youvix-r;27" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="director_txt" position="680,550" size="110,40" zPosition="5" font="youvix-r;28" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="director" position="790,550" size="730,70" zPosition="5" font="youvix-r;27" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="author_txt" position="680,620" size="110,40" zPosition="5" font="youvix-r;28" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="author" position="790,620" size="730,70" zPosition="5" font="youvix-r;27" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="genre_txt" position="680,690" size="110,40" zPosition="5" font="youvix-r;28" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="genre" position="790,690" size="730,70" zPosition="5" font="youvix-r;27" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="studio_txt" position="680,760" size="110,40" zPosition="5" font="youvix-r;28" foregroundColor="white" transparent="1" alphatest="blend"/>
+		<widget name="studio" position="790,760" size="730,190" zPosition="5" font="youvix-r;27" foregroundColor="white" transparent="1" alphatest="blend"/>
 		<widget name="description" position="0,0" size="0,0" /> #To remove debug warning
 		<widget name="fsk" position="0,0" size="0,0" /> #To remove debug warning
 		<widget name="subtitle" position="0,0" size="0,0" /> #To remove debug warning
-		<widget name="backdrop" position="895,45" size="640,340" zPosition="100" alphatest="blend" />
-		<panel name="MenuButtonBar" />
-		<ePixmap pixmap="extensions/smallshadowline.png" position="0,950" size="1920,3" zPosition="2"/>
-		<panel name="MenuKeyAutoTemplate"/>
+		<widget name="backdrop" position="675,272" size="1170,658" zPosition="0" alphatest="blend" />
+		<ePixmap position="675,272" size="1170,658" zPosition="1" pixmap="screens/backdrop_dark.png" alphatest="blend" />
 	</screen>
 	<screen name="tmdbScreenPeople" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Cast">
-		<eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
-		<panel name="MenuClock" />
-		<panel name="MenuForwardArrow" />
-		<panel name="MenuTitle" />
+		<panel name="BigMenuPanel"/>
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-		<widget name="searchinfo" position="80,100" size="830,80" font="youvix-b;35" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
-		<widget name="cover" position="e-400,400" size="320,480" zPosition="100" alphatest="blend" />
+		<widget name="searchinfo" position="80,165" size="590,130" font="youvix-b;35" foregroundColor="yellow" halign="center" backgroundColor="menubackground" transparent="1" />
+		<eLabel position="164,294" size="422,632" backgroundColor="white" zPosition="5"/>
+		<widget name="cover" position="165,295" size="420,630" zPosition="100" alphatest="blend" />
 		<widget name="data" position="0,0" size="0,0" /> #To remove debug warning
-		<widget name="list" position="80,183" size="825,770" transparent="1" backgroundColor="menubackground" itemHeight="45" scrollbarMode="showOnDemand"/>
-		<widget name="backdrop" position="895,45" size="640,340" zPosition="100" alphatest="blend" />
-		<panel name="MenuButtonBar" />
-		<ePixmap pixmap="extensions/smallshadowline.png" position="0,950" size="1920,3" zPosition="2"/>
-		<panel name="MenuKeyAutoTemplate"/>
+		<widget name="list" position="680,165" size="1160,17*44" transparent="1" backgroundColor="menubackground" zPosition="5" itemHeight="44" scrollbarMode="showOnDemand"/>
+		<widget name="backdrop" position="675,272" size="1170,658" zPosition="0" alphatest="blend" />
+		<ePixmap position="675,272" size="1170,658" zPosition="1" pixmap="screens/backdrop_dark.png" alphatest="blend" />
 	</screen>
 	<screen name="tmdbScreenPerson" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Actor">
-	    <eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
-		<panel name="MenuClock" />
-		<panel name="MenuForwardArrow" />
-		<panel name="MenuTitle" />
+		<panel name="BigMenuPanel"/>
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-		<widget name="searchinfo" position="80,100" size="830,80" font="youvix-b;35" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
-		<widget name="cover" position="e-400,400" size="320,480" zPosition="100" alphatest="blend" />
-		<widget name="fulldescription" position="80,183" size="825,770" backgroundColor="menubackground" transparent="1" halign="left" font="youvix-r;32" scrollbarMode="showOnDemand"/>
-		<widget name="backdrop" position="895,45" size="640,340" zPosition="100" alphatest="blend" />
-		<panel name="MenuButtonBar" />
-		<ePixmap pixmap="extensions/smallshadowline.png" position="0,950" size="1920,3" zPosition="2"/>
-		<panel name="MenuKeyAutoTemplate"/>
+		<widget name="searchinfo" position="80,165" size="590,130" font="youvix-b;35" foregroundColor="yellow" halign="center" backgroundColor="menubackground" transparent="1" />
+		<eLabel position="164,294" size="422,632" backgroundColor="white" zPosition="5"/>
+		<widget name="cover" position="165,295" size="420,630" zPosition="100" alphatest="blend" />
+		<widget name="fulldescription" position="680,155" size="1160,775" transparent="1" backgroundColor="menubackground" zPosition="100" halign="left" font="youvix-r;30" scrollbarMode="showOnDemand"/>
+		<widget name="backdrop" position="0,0" size="0,0" /> #To remove debug warning
 	</screen>
 	<screen name="tmdbScreenSeason" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Seasons">
-	    <eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
-		<panel name="MenuClock" />
-		<panel name="MenuForwardArrow" />
-		<panel name="MenuTitle" />
+		<panel name="BigMenuPanel"/>
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-		<widget name="searchinfo" position="80,100" size="830,80" font="youvix-b;35" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" />
-		<widget name="cover" position="e-933,400" size="853,480" zPosition="100" alphatest="blend" />
-		<widget name="data" position="80,560" size="825,393" font="youvix-r;30" backgroundColor="menubackground"/>
-		<widget name="list" position="80,183" size="825,360" transparent="1" backgroundColor="menubackground" itemHeight="45" scrollbarMode="showOnDemand"/>
-		<widget name="backdrop" position="895,45" size="640,340" zPosition="100" alphatest="blend" />
-		<panel name="MenuButtonBar" />
-		<ePixmap pixmap="extensions/smallshadowline.png" position="0,950" size="1920,3" zPosition="2"/>
-		<panel name="MenuKeyAutoTemplate"/>
+		<widget name="searchinfo" position="80,165" size="590,130" font="youvix-b;35" foregroundColor="yellow" halign="center" backgroundColor="menubackground" transparent="1" />
+		<widget name="cover" position="e-396,410" size="320,480" zPosition="100" alphatest="blend" />
+		<widget name="data" position="680,157" size="1160,252" font="youvix-r;30" backgroundColor="menubackground" scrollbarMode="showNever"/>
+		<widget name="list" position="80,295" size="590,625" transparent="1" backgroundColor="menubackground2" itemHeight="44" scrollbarMode="showOnDemand"/>
+		<widget name="backdrop" position="675,410" size="924,520" zPosition="0" alphatest="blend" />
+		<ePixmap position="675,410" size="924,520" zPosition="1" pixmap="screens/backdrop_dark.png" alphatest="blend" />
 	</screen>
 	
 	<!-- ## CacheFlush ## -->
