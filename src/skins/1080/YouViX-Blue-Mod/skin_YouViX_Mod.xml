@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 31.03.2025 -->
+	<!--  Modified by Orlandox 05.04.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -779,7 +779,7 @@
 		<widget name="AboutScrollLabel" position="800,267" size="950,660" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 31.03.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 05.04.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2192,8 +2192,8 @@
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
 		<widget name="text" position="680,165" size="1160,530" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
-		<ePixmap pixmap="buttons/vkey_text.png" position="676,714" size="960,50" alphatest="blend" transparent="1" zPosition="1" backgroundColor="menubackground"/>
-		<widget name="input" position="680,715" size="952,48" font="youvix-r;32" />
+		<ePixmap pixmap="buttons/vkey_text.png" position="680,714" size="1160,53" alphatest="blend" transparent="1" zPosition="1" backgroundColor="menubackground" scale="1"/>
+		<widget name="input" position="685,720" size="1150,40" font="youvix-r;32" valign="center"/>
 	</screen>
 
 	<!-- ## Input Devices ## -->
@@ -4725,36 +4725,27 @@ self.autoResize()
 	
 	<!-- ## LCD4linux ## -->
 	<screen name="LCDdisplayConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-        <eLabel position="0,0" size="1920,1080" backgroundColor="menubackground" zPosition="-1" />
-		<panel name="MenuClock" />
-		<panel name="MenuTitle2" />
-		<panel name="MenuForwardArrow" />
+		<panel name="BigMenuPanel"/>
 		<eLabel text="MySetup" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-		<widget name="config" position="7,120" size="940,830" font="youvix-r;28" itemHeight="33" scrollbarMode="showOnDemand" foregroundColor="white" enableWrapAround="1"
+		<widget name="config" position="680,158" size="1160,22*35" font="youvix-r;28" itemHeight="35" scrollbarMode="showOnDemand" foregroundColor="white" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<widget source="introduction" render="Label" position="1000,110" size="820,80" zPosition="2" font="youvix-b;33" foregroundColor="white" halign="left"/>
-		<widget source="LibUSB" render="Label" position="1000,200" size="500,45" zPosition="1" font="youvix-r;30" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center"/>
-		<widget source="About" render="Label" position="1000,240" size="500,40" zPosition="1" font="youvix-r;30" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left"/>
-		<widget source="Version" render="Label" position="1000,280" size="500,40" zPosition="1" font="youvix-r;30" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="left"/>
-		<widget source="LCD1text" render="Label" position="1050,330" size="615,35" zPosition="1" font="youvix-r;30" halign="center" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget source="LCD2text" render="Label" position="1050,365" size="615,35" zPosition="1" font="youvix-r;30" halign="center" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget source="LCD3text" render="Label" position="1050,400" size="615,35" zPosition="1" font="youvix-r;30" halign="center" foregroundColor="white" backgroundColor="menubackground" transparent="1"/>
-		<widget name="LCD1" position="950,440" size="960,580" zPosition="5" transparent="1" alphatest="on" backgroundColor="menubackground"/>
-		<widget name="LCD2" position="950,450" size="960,580" zPosition="5" transparent="1" alphatest="on" backgroundColor="menubackground"/>
-		<widget name="LCD3" position="950,460" size="960,580" zPosition="5" transparent="1" alphatest="on" backgroundColor="menubackground"/>
-		<panel name="MenuButtonBar" />
-		<ePixmap pixmap="extensions/smallshadowline.png" position="0,950" size="1920,3" zPosition="2"/>
-		<panel name="MenuKeyAutoTemplate" />
+		<widget source="introduction" render="Label" position="80,165" size="590,80" zPosition="2" font="youvix-b;33" foregroundColor="white" backgroundColor="menubackground2" halign="left"/>
+		<widget source="LibUSB" render="Label" position="80,250" size="590,45" zPosition="1" font="youvix-r;30" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center"/>
+		<widget source="About" render="Label" position="80,290" size="590,40" zPosition="1" font="youvix-r;30" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="left"/>
+		<widget source="Version" render="Label" position="80,330" size="590,40" zPosition="1" font="youvix-r;30" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="left"/>
+		<widget source="LCD1text" render="Label" position="80,380" size="590,35" zPosition="1" font="youvix-r;30" halign="center" foregroundColor="white" backgroundColor="menubackground2" transparent="1"/>
+		<widget source="LCD2text" render="Label" position="80,415" size="590,35" zPosition="1" font="youvix-r;30" halign="center" foregroundColor="white" backgroundColor="menubackground2" transparent="1"/>
+		<widget source="LCD3text" render="Label" position="80,450" size="590,35" zPosition="1" font="youvix-r;30" halign="center" foregroundColor="white" backgroundColor="menubackground2" transparent="1"/>
+		<widget name="LCD1" position="80,490" size="590,300" zPosition="5" transparent="1" alphatest="on" backgroundColor="menubackground2" scale="1"/>
+		<widget name="LCD2" position="80,500" size="590,300" zPosition="5" transparent="1" alphatest="on" backgroundColor="menubackground2" scale="1"/>
+		<widget name="LCD3" position="80,510" size="590,300" zPosition="5" transparent="1" alphatest="on" backgroundColor="menubackground2" scale="1"/>
 		<panel name="MenuHelpwindowWidget" />
-		<ePixmap pixmap="buttons/key_menu.png" position="147,1010" size="61,44" alphatest="blend" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="LCDdisplayMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="LCD4linux - Config">
 		<panel name="BigMenuPanel" />
 		<eLabel text="MyConfig" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-		<widget name="menu" position="680,165" size="1160,750" font="youvix-r;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="white" enableWrapAround="1"
+		<widget name="menu" position="680,165" size="1160,17*44" font="youvix-r;32" itemHeight="44" scrollbarMode="showOnDemand" foregroundColor="white" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="blue" scrollbarSliderBorderColor="blue" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
-		<panel name="MenuButtonBar" />
-		<panel name="MenuKeyAutoTemplate" />
 		<ePixmap pixmap="buttons/key_exit.png" position="147,1010" size="61,44" alphatest="blend" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="LCDdisplayFile" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Select File/Dir...">
