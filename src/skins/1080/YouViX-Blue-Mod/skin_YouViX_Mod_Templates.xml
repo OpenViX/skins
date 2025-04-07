@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 01.03.2025 -->
+	<!--  Modding done by Orlandox 07.04.2025 -->
 	
 	<!--  ## Head ##  -->
 	
@@ -106,15 +106,15 @@
 		<ePixmap position="442,880" size="50,32" pixmap="icons/arrow-up.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="InfobarClients">
-	    <widget source="session.CurrentService" render="CiModuleControl" allVisible="0" position="1730, 868" size="100,22" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" zPosition="2" transparent="1" font="youvix-r;18"/>
+		<widget source="session.CurrentService" render="CiModuleControl" allVisible="0" position="1730, 868" size="100,22" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" zPosition="2" transparent="1" font="youvix-r;18"/>
 		<eLabel text="Clients" position="1710,887" size="100,22" font="youvix-r;18" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2" />
 		<eLabel text=":" position="1811,887" size="22,22" font="youvix-r;18" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="2" />
 		<widget source="session.RecordState" render="Label" position="1807,887" size="22,22" font="youvix-r;18" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" transparent="1" zPosition="2">
 			<convert type="ClientsStreaming">NUMBER</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1730,905" size="100,22" foregroundColor="white" backgroundColor="menubackground" halign="right" valign="center" zPosition="2" transparent="1" font="youvix-r;18">
-            <convert type="HddState"></convert> <!-- "I"(internal)/"S"(SSD)/"E"(external), standby - yellow, active - green -->
-        </widget>
+			<convert type="HddState"></convert> <!-- "I"(internal)/"S"(SSD)/"E"(external), standby - yellow, active - green -->
+		</widget>
 	</screen>
 	<screen name="InfobarLeftArrow">
 		<ePixmap position="15,950" size="32,48" pixmap="icons/arrow-left.png" alphatest="blend" zPosition="1"/>
@@ -136,7 +136,7 @@
 		<ePixmap position="786,937" size="30,30" pixmap="icons/nowplaying.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="InfobarRecIcon">
-<!--	    <ePixmap pixmap="icons/record.png" position="740,937" size="30,30" zPosition="0" alphatest="blend" />  -->
+<!--		<ePixmap pixmap="icons/record.png" position="740,937" size="30,30" zPosition="0" alphatest="blend" />  -->
 		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="751,937" size="30,30" zPosition="1" backgroundColor="lightcolour" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink,1000</convert>
 		</widget>
@@ -232,7 +232,7 @@
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-        <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_dvb-s.png" position="1607,984" size="38,38" zPosition="1" alphatest="blend" scale="1">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_dvb-s.png" position="1607,984" size="38,38" zPosition="1" alphatest="blend" scale="1">
 			<convert type="TransponderInfo">DVB-S;DVB-S2</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -290,12 +290,12 @@
 	<screen name="InfobarTunerStatus">
 		<widget source="session.FrontendInfo" render="Label" position="73,1035" size="300,35" font="youvix-r;26" backgroundColor="menubackground" zPosition="1" transparent="1" halign="left">
 <!--		<convert type="FrontendInfo">USE_TUNERS_STRING</convert> -->
-            <convert type="FrontendInfo">STRING,12,12</convert>
+			<convert type="FrontendInfo">STRING,12,12</convert>
 		</widget>
 	</screen>
 	<screen name="PlayerTemplate">
 		<widget source="Title" render="Label" position="center,34" size="1500,30" font="youvix-b;25" foregroundColor="darkcolour" backgroundColor="background2" halign="right" transparent="1" zPosition="1" />
-	    <widget source="session.CurrentService" render="Picon" position="202,46" size="70,42" transparent="0" alphatest="blend" zPosition="1">
+		<widget source="session.CurrentService" render="Picon" position="202,46" size="70,42" transparent="0" alphatest="blend" zPosition="1">
 			<convert type="MovieReference"/>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="325,34" size="850,60" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" valign="center" noWrap="0" zPosition="1">
@@ -449,7 +449,7 @@
 	
 	 <!-- LOGOS -->
 	<screen name="OEA-Logo">
-	    <widget name="oealogo" position="280,500" size="300,202"  zPosition="1" alphatest="blend"/>
+		<widget name="oealogo" position="280,500" size="300,202"  zPosition="1" alphatest="blend"/>
 	</screen>
 	<screen name="BigYouVix-Logo">
 		<ePixmap position="180,210" size="384,384" pixmap="logos/youvix-big.png" alphatest="blend" zPosition="1"/>
@@ -457,9 +457,9 @@
 	
 	<!-- MENU TEMPLATES -->
 	<screen name="InfoPanel">
-	    <panel name="MenuClock" />
-	    <panel name="TopMenuBlock2" />
-	    <panel name="LeftMenuBlock" />
+		<panel name="MenuClock" />
+		<panel name="TopMenuBlock2" />
+		<panel name="LeftMenuBlock" />
 		<panel name="CenterMenuBlock" />
 		<panel name="BigRightMenuBlock" />
 		<panel name="FarRightMenuBlock" />
@@ -470,7 +470,7 @@
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
 	<screen name="BasicMenuPanel">
-	    <panel name="MenuClock" />
+		<panel name="MenuClock" />
 		<panel name="TopMenuBlock2" />
 		<panel name="LeftMenuBlock" />
 		<panel name="CenterMenuBlock" />
@@ -483,9 +483,9 @@
 		<panel name="MenuDownArrow" />
 	</screen>
 	<screen name="MenuPanel">
-	    <panel name="MenuClock" />
-	    <panel name="TopMenuBlock" />
-	    <panel name="LeftMenuBlock" />
+		<panel name="MenuClock" />
+		<panel name="TopMenuBlock" />
+		<panel name="LeftMenuBlock" />
 		<panel name="CenterMenuBlock" />
 		<panel name="RightMenuBlock" />
 		<panel name="BottomMenuBlock" />
@@ -505,9 +505,9 @@
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
 	<screen name="MenuPanel2">
-	    <panel name="MenuClock" />
-	    <panel name="TopMenuBlock" />
-	    <panel name="LeftMenuBlock" />
+		<panel name="MenuClock" />
+		<panel name="TopMenuBlock" />
+		<panel name="LeftMenuBlock" />
 		<panel name="CenterMenuBlock" />
 		<panel name="RightMenuBlock" />
 		<panel name="BottomMenuBlock2" />
@@ -521,9 +521,9 @@
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
 	<screen name="BigMenuPanel">
-	    <panel name="MenuClock" />
-	    <panel name="TopMenuBlock2" />
-	    <panel name="LeftMenuBlock" />
+		<panel name="MenuClock" />
+		<panel name="TopMenuBlock2" />
+		<panel name="LeftMenuBlock" />
 		<panel name="CenterMenuBlock" />
 		<panel name="BigRightMenuBlock" />
 		<panel name="FarRightMenuBlock" />
@@ -538,9 +538,9 @@
 		<panel name="MenuKeyAutoTemplate" />
 	</screen>
 	<screen name="BigMenuPanel2">
-	    <panel name="MenuClock" />
-	    <panel name="TopMenuBlock" />
-	    <panel name="LeftMenuBlock" />
+		<panel name="MenuClock" />
+		<panel name="TopMenuBlock" />
+		<panel name="LeftMenuBlock" />
 		<panel name="CenterMenuBlock" />
 		<panel name="BigRightMenuBlock" />
 		<panel name="FarRightMenuBlock" />
@@ -574,42 +574,42 @@
 	</screen>
 	<screen name="MenuMySetupText">
 		<eLabel text="MySetup" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="menuicons/setup.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="menuicons/setup.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyInfoText">
 		<eLabel text="MyInfo" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="menuicons/info.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="menuicons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyInputText">
 		<eLabel text="MyInput" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="menuicons/question.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="menuicons/question.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyServicesText">
 		<eLabel text="MyTextBox" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="menuicons/info.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="menuicons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyYoutubeText">
 		<eLabel text="MyYouTube" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="100,210" size="550,219" pixmap="menuicons/YouTube.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="100,210" size="550,219" pixmap="menuicons/YouTube.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyYoutubeTV">
 		<eLabel text="MyYouTubeTV" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="100,210" size="550,219" pixmap="menuicons/YouTubeTV.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="100,210" size="550,219" pixmap="menuicons/YouTubeTV.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyCommitInfoText">
 		<eLabel text="MyCommitInfo" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="menuicons/info.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="menuicons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyGuideText">
 		<eLabel text="MyGuide" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyIMDBText">
 		<eLabel text="MyIMDB" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="80,250" size="590,389" pixmap="menuicons/imdb.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="80,250" size="590,389" pixmap="menuicons/imdb.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyAudioText">
 		<eLabel text="MyAudio" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="menuicons/audio.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="menuicons/audio.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyViewText">
 		<eLabel text="MyView" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
@@ -644,11 +644,11 @@
 	</screen>
 	<screen name="MenuMyTunersText">
 		<eLabel text="MyTuners" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="menuicons/tuners.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="menuicons/tuners.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyViXText">
 		<eLabel text="MyViX" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <panel name="BigYouVix-Logo" />
+		<panel name="BigYouVix-Logo" />
 	</screen>
 	<screen name="MenuMyJobsText">
 		<eLabel text="MyJobs" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
@@ -664,7 +664,7 @@
 	</screen>
 	<screen name="MenuMyRemotesText">
 		<eLabel text="MyRemotes" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="menuicons/remotecontrol.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="menuicons/remotecontrol.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMyOnDemandText">
 		<eLabel text="MyOnDemand" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
@@ -702,7 +702,7 @@
 	</screen>
 	<screen name="MenuMyRuyaText">
 		<eLabel text="MyRuya" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
-	    <ePixmap position="250,210" size="256,256" pixmap="menuicons/ruya.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="250,210" size="256,256" pixmap="menuicons/ruya.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="MenuMySundtekText">
 		<eLabel text="MySundtek" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
@@ -754,7 +754,7 @@
 		<eLabel text=">" position="95,39" size="33,33" font="youvix-r;32" foregroundColor="darkcolour" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="MenuTitle">
-        <widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=2,repeat=5,always=0,oneshot=1,startdelay=5000,wrap" position="125,44" size="540,69" font="youvix-r;28" foregroundColor="darkcolour" backgroundColor="menubackground" valign="top" transparent="1" zPosition="1" />
+		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=2,repeat=5,always=0,oneshot=1,startdelay=5000,wrap" position="125,44" size="540,69" font="youvix-r;28" foregroundColor="darkcolour" backgroundColor="menubackground" valign="top" transparent="1" zPosition="1" />
 	</screen>
 	<screen name="MenuTitle2">
 		<widget source="Title" render="Label" position="125,44" size="1720,69" foregroundColor="darkcolour" backgroundColor="menubackground" transparent="1" zPosition="1" font="youvix-r;28" valign="top"/>
@@ -806,7 +806,7 @@
 
 	<!-- ## MENU WIDGETS ## -->
 	<screen name="MenuConfigWidget">
-		<widget name="config" position="680,157" size="1160,765" font="youvix-r;27" itemHeight="45" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
+		<widget name="config" position="680,165" size="1160,17*44" font="youvix-r;32" itemHeight="44" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
 	</screen>
 	<screen name="MenuListWidget">
 		<widget name="list" position="680,265" size="1160,15*44" font="youvix-r;32" itemHeight="44" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
@@ -821,7 +821,7 @@
 		<widget name="about" position="680,165" size="1160,750" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1" />
 	</screen>
 	<screen name="MenuDescriptionWidget">
-	    <widget source="description" render="Label" objectTypes="description,StaticText" position="80,720" size="590,160" font="youvix-r;22" halign="center" valign="center" foregroundColor="white" backgroundColor="menubackground2" />
+		<widget source="description" render="Label" objectTypes="description,StaticText" position="80,720" size="590,160" font="youvix-r;22" halign="center" valign="center" foregroundColor="white" backgroundColor="menubackground2" />
 		<widget name="description" position="80,720" size="590,160" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1" />
 	</screen>
 	<screen name="MenuInformationWidget">
@@ -881,7 +881,7 @@
 		<ePixmap pixmap="buttons/key-left_right.png" position="1842,436" size="75,44" alphatest="blend" transparent="1" zPosition="1"/> 
 	</screen>
 	<screen name="MenuExitButton">
-	    <ePixmap pixmap="buttons/key-exit.png" position="1849,482" size="61,44" alphatest="blend" transparent="1" zPosition="1"/> 
+		<ePixmap pixmap="buttons/key-exit.png" position="1849,482" size="61,44" alphatest="blend" transparent="1" zPosition="1"/> 
 	</screen>
 	<screen name="MenuRecListButton">
 		<ePixmap pixmap="buttons/key_reclist.png" position="1849,528" size="61,44" alphatest="blend" transparent="1" zPosition="1"/> 
@@ -900,7 +900,7 @@
 	
 	<!-- ## ONDEMAND TEMPLATES ## -->
 	<screen name="OnDemandThumbsCommon">
-        <panel name="BigMenuPanel" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMyOnDemandText" />
 		<widget name="lab1" position="680,165" size="1160,750" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="list" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="117" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />	
@@ -950,13 +950,13 @@
 		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11" />
 	</screen>
 	<screen name="WizardDescriptionWidget">
-		<widget name="text" position="680,160" size="1160,380" font="youvix-r;26" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1" />
+		<widget name="text" position="680,160" size="1160,370" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1" />
 	</screen>
 	<screen name="WizardConfigWidget">
-		<widget name="config" position="680,540" size="1160,380" font="youvix-r;28" itemHeight="42" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
+		<widget name="config" position="680,530" size="1160,9*44" font="youvix-r;32" itemHeight="44" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
 	</screen>
 	<screen name="WizardStringList">
-		<widget source="list" render="Listbox" position="680,540" size="1160,380" font="youvix-r;28" itemHeight="42" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="680,530" size="1160,9*44" font="youvix-r;32" itemHeight="44" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
 	</screen>
@@ -1021,44 +1021,44 @@
 				{
 				  # Template for use when "description" is not used
 				  "templates": {
-				    # Simple help with no headings ("flat")
-				    # data[1:] = [helpText]
-				    "default": [
-				      45,  # itemHeight
-				      [
+					# Simple help with no headings ("flat")
+					# data[1:] = [helpText]
+					"default": [
+					  45,  # itemHeight
+					  [
 					MultiContentEntryText(pos=(0, 0), size=(1160, 45), font=1, text=1),
-				      ]
-				    ],
-				    # Simple help with headings
-				    # data[1:] = [heading, None]  # For heading entries
-				    # data[1:] = [None, helpText]  # For help entries
-				    "default+headings": [  # data[1:] = [helpText]
-				      45,  # itemHeight
-				      [
+					  ]
+					],
+					# Simple help with headings
+					# data[1:] = [heading, None]  # For heading entries
+					# data[1:] = [None, helpText]  # For help entries
+					"default+headings": [  # data[1:] = [helpText]
+					  45,  # itemHeight
+					  [
 					MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=0, text=1),
 					MultiContentEntryText(pos=(20, 0), size=(1140, 40), font=1, text=2),
-				      ]
-				    ],
-				    # Extended help with no headings
-				    # data[1:] = [helpText, extendedHelpText]
-				    "extended": [
-				      75,  # itemHeight
-				      [
+					  ]
+					],
+					# Extended help with no headings
+					# data[1:] = [helpText, extendedHelpText]
+					"extended": [
+					  75,  # itemHeight
+					  [
 					MultiContentEntryText(pos=(0, 0), size=(1160, 40), font=1, text=1),
 					MultiContentEntryText(pos=(0, 40), size=(1160, 35), font=3, text=2),
-				      ],
-				    ],
-				    # Extended help with headings
-				    # data[1:] = [heading, None, None]  # For heading entries
-				    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
-				    "extended+headings": [
-				      75,  # itemHeight
-				      [
+					  ],
+					],
+					# Extended help with headings
+					# data[1:] = [heading, None, None]  # For heading entries
+					# data[1:] = [None, helpText, extendedHelpText]  # For help entries
+					"extended+headings": [
+					  75,  # itemHeight
+					  [
 					MultiContentEntryText(pos=(0, 10), size=(1160, 40), font=0, text=1),
 					MultiContentEntryText(pos=(20, 0), size=(1140, 40), font=1, text=2),
 					MultiContentEntryText(pos=(20, 40), size=(1140, 35), font=3, text=3),
-				      ],
-				    ],
+					  ],
+					],
 				  },
 				  "fonts": [gFont("Regular", 38), gFont("Regular", 32), gFont("Regular", 32), gFont("Regular", 25)],
 				  "itemHeight": 50,
@@ -1066,42 +1066,42 @@
 				#{
 				#  # Template for use when "description" is used
 				#  "templates": {
-				#    # Simple help with no headings ("flat")
-				#    # data[1:] = [helpText]
-				#    "default": [
-				#      60,  # itemHeight
-				#      [
+				#	# Simple help with no headings ("flat")
+				#	# data[1:] = [helpText]
+				#	"default": [
+				#	  60,  # itemHeight
+				#	  [
 				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=1, text=1),
-				#      ]
-				#    ],
-				#    # Simple help with headings
-				#    # data[1:] = [heading, None]  # For heading entries
-				#    # data[1:] = [None, helpText]  # For help entries
-				#    "default+headings": [
-				#      60,  # itemHeight
-				#      [
+				#	  ]
+				#	],
+				#	# Simple help with headings
+				#	# data[1:] = [heading, None]  # For heading entries
+				#	# data[1:] = [None, helpText]  # For help entries
+				#	"default+headings": [
+				#	  60,  # itemHeight
+				#	  [
 				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=0, text=1),
 				#	MultiContentEntryText(pos=(20, 0), size=(1140, 50), font=1, text=2),
-				#      ]
-				#    ],
-				#    # Extended help with no headings
-				#    # data[1:] = [helpText, extendedHelpText]
-				#    "extended": [
-				#      60,  # itemHeight
-				#      [
+				#	  ]
+				#	],
+				#	# Extended help with no headings
+				#	# data[1:] = [helpText, extendedHelpText]
+				#	"extended": [
+				#	  60,  # itemHeight
+				#	  [
 				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=1, text=1),
-				#      ]
-				#    ],
-				#    # Extended help with headings
-				#    # data[1:] = [heading, None, None]  # For heading entries
-				#    # data[1:] = [None, helpText, extendedHelpText]  # For help entries
-				#    "extended+headings": [
-				#      45,  # itemHeight
-				#      [
+				#	  ]
+				#	],
+				#	# Extended help with headings
+				#	# data[1:] = [heading, None, None]  # For heading entries
+				#	# data[1:] = [None, helpText, extendedHelpText]  # For help entries
+				#	"extended+headings": [
+				#	  45,  # itemHeight
+				#	  [
 				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=0, text=1),
 				#	MultiContentEntryText(pos=(20, 0), size=(1140, 50), font=1, text=2),
-				#      ]
-				#    ],
+				#	  ]
+				#	],
 				#  },
 				#  "fonts": [gFont("Regular", 32), gFont("Regular", 28)],
 				#  "itemHeight": 60
@@ -1109,19 +1109,19 @@
 				#{
 				# # Compact template for use when "description" is used
 				#  "templates": dict(
-				#      list(dict.fromkeys(("default", "extended"), [
-				#      50,  # itemHeight
-				#      [
+				#	  list(dict.fromkeys(("default", "extended"), [
+				#	  50,  # itemHeight
+				#	  [
 				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=1, text=1),
-				#      ]
-				#    ]).items()) +
-				#    list(dict.fromkeys(("default+headings", "extended+headings"), [
-				#      50,  # itemHeight
-				#      [
+				#	  ]
+				#	]).items()) +
+				#	list(dict.fromkeys(("default+headings", "extended+headings"), [
+				#	  50,  # itemHeight
+				#	  [
 				#	MultiContentEntryText(pos=(0, 0), size=(1160, 50), font=0, text=1),
 				#	MultiContentEntryText(pos=(20, 0), size=(1140, 50), font=1, text=2),
-				#      ]
-				#    ]).items())
+				#	  ]
+				#	]).items())
 				#  ),
 				#  "fonts": [gFont("Regular", 32), gFont("Regular", 28)],
 				#  "itemHeight": 50
