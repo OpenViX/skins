@@ -191,8 +191,8 @@
 	<screen name="SecondInfoBar" flags="wfNoBorder" position="fill" backgroundColor="transparent">
 		<panel name="InfobarClients"/>
 		<widget name="channel" position="0,0" size="0,0"/>  #To remove debug warning
-		<ePixmap pixmap="infobar/2ndinfobar2.png" position="0,495" size="1920,315" zPosition="-1"/>
-		<widget source="session.Event_Now" render="Label" position="480,496" size="690,120" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
+		<ePixmap pixmap="infobar/2ndinfobar2.png" position="0,295" size="1920,525" zPosition="-1"/>
+		<widget source="session.Event_Now" render="Label" position="480,296" size="690,120" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<ePixmap position="780,893" size="600,10" pixmap="selectionbars/activitysliderbackground.png" alphatest="blend" zPosition="1"/>
@@ -203,19 +203,19 @@
 			<convert type="StreamInfo">StreamType</convert>
 		</widget>
 		<widget name="epg_description" position="0,0" size="0,0"/> #To remove debug warning
-		<widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="480,620" size="690,183" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
+		<widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="480,420" size="690,385" font="youvix-r;30" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="10,689" size="470,139" font="youvix-r;20" foregroundColor="grey" backgroundColor="background2" valign="top" transparent="1" zPosition="1">
+		<widget source="session.CurrentService" render="Label" position="10,639" size="470,139" font="youvix-r;20" foregroundColor="grey" backgroundColor="background2" valign="top" transparent="1" zPosition="1">
 			<convert type="PliExtraInfo">All</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="10,810" size="590,59" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" halign="left" valign="center" transparent="1" zPosition="1" >
 			<convert type="CryptoInfo">FullInfo</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="1200,496" size="690,120" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
+		<widget source="session.Event_Next" render="Label" position="1200,296" size="690,120" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Next" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="1200,620" size="690,183" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
+		<widget source="session.Event_Next" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="1200,420" size="690,385" font="youvix-r;30" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<ePixmap pixmap="infobar/2ndinfobar1.png" position="0,810" size="1920,60" zPosition="-1"/>
@@ -223,7 +223,7 @@
 		<widget name="key_green" position="870,810" size="180,59" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
 		<widget name="key_yellow" position="1100,810" size="180,59" font="youvix-r;24" foregroundColor="#00edf506" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
 		<widget name="key_blue" position="1330,810" size="180,59" font="youvix-r;24" foregroundColor="#00077cf5" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
-		<widget source="session.CurrentService" render="Picon" position="20,505" size="300,180" transparent="0" alphatest="blend" zPosition="2">
+		<widget source="session.CurrentService" render="Picon" position="20,405" size="300,180" transparent="0" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<widget source="session.FrontendStatus" render="FixedLabel" text="SNR:" position="1490,810" size="60,59" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" valign="center" noWrap="1" >
