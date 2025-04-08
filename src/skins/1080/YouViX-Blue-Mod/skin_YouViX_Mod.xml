@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 07.04.2025 -->
+	<!--  Modified by Orlandox 08.04.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -779,7 +779,7 @@
 		<widget name="AboutScrollLabel" position="800,267" size="950,660" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 07.04.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 08.04.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -1214,6 +1214,7 @@
 	<!-- ## VU BLUETOOTH SETUP ## -->
 	<screen name="BluetoothSetupScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel"/>
+		<panel name="MenuMySetupText" />
 		<widget source="description" render="Label" position="80,630" size="590,85" font="Regular;33" halign="center" valign="center" foregroundColor="red" backgroundColor="menubackground" transparent="1"/>
 		<widget source="deviceList" render="Listbox" position="680,165" size="1160,750" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="lightcolour" scrollbarSliderBorderColor="lightcolour" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
@@ -1233,35 +1234,40 @@
 	</screen>
 	<screen name="BluetoothSetupConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel"/>
+		<panel name="MenuMySetupText" />
 		<widget name="config" position="680,165" size="1160,750" font="youvix-r;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="lightcolour" scrollbarSliderBorderColor="lightcolour" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<panel name="MenuHelpwindowWidget" />
 	</screen>
 	<screen name="BluetoothDiscoveryScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel"/>
+		<panel name="MenuMySetupText" />
 		<widget source="deviceList" render="Listbox" position="680,165" size="1160,750" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="lightcolour" scrollbarSliderBorderColor="lightcolour" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png">
 			<convert type="TemplatedMultiContent">
 			{"template":
 				[
-					MultiContentEntryText (pos = (75,0), size=(1100,105), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=0), # index 0 is Name
-					MultiContentEntryPixmapAlphaTest (pos = (5,15), size = (75,75), png = 1), # index 1 is bt_icon
+					MultiContentEntryText (pos = (75,0), size=(1100,75), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=0), # index 0 is Name
+					MultiContentEntryPixmapAlphaTest (pos = (5,12), size = (50,50), png = 1), # index 1 is bt_icon
 				],
-				"fonts": [gFont("Regular",40), gFont("Regular",33) ,gFont("Regular",30), gFont("Regular",24)],
-				"itemHeight": 105
+				"fonts": [gFont("Regular",40), gFont("Regular",32) ,gFont("Regular",30), gFont("Regular",24)],
+				"itemHeight": 75
 			}
 			</convert>
 		</widget>
 		<panel name="MenuHelpwindowWidget" />
+		<panel name="MenuDescriptionWidget" />
 	</screen>
 	<screen name="BluetoothRCUSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel"/>
+		<panel name="MenuMySetupText" />
 		<widget name="deviceList" position="680,165" size="1160,750" font="youvix-r;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"
 				scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="lightcolour" scrollbarSliderBorderColor="lightcolour" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<panel name="MenuHelpwindowWidget" />
 	</screen>
 	<screen name="VuRcuOtaUpdate" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel"/>
+		<panel name="MenuMySetupText" />
 		<widget name="config" position="680,165" size="1160,750" font="youvix-r;33" itemHeight="45" foregroundColor="grey" scrollbarMode="showOnDemand" enableWrapAround="1"		scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="lightcolour" scrollbarSliderBorderColor="lightcolour" scrollbarBackgroundPicture="infobar/scrollbar.png" scrollbarSliderPicture="infobar/scrlbr.png"/>
 		<widget name="battery_check" position="735,120" size="600,50" font="youvix-r;33" foregroundColor="grey"/>
 		<widget name="app_version" position="735,180" size="600,50" font="youvix-r;33" foregroundColor="grey"/>
@@ -2290,10 +2296,10 @@
 		<widget source="languages" render="Listbox" position="680,165" size="1160,715" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (150,15), size = (500,35), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
+				MultiContentEntryText(pos = (150,0), size = (500,65), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
 				MultiContentEntryPixmapAlphaBlend(pos = (20,2), size = (90,60), png = 2), # index 2 is the pixmap
 				],
-				"fonts": [gFont("youvix-r",28)],
+				"fonts": [gFont("youvix-r",32)],
 				"itemHeight":65
 				}
 			</convert>
@@ -2400,7 +2406,7 @@
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
 		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
-		<widget name="text" position="680,165" size="1160,770" font="youvix-r;27" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
+		<widget name="text" position="680,165" size="1160,17*44" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="list" position="80,600" size="590,210" font="youvix-r;24" itemHeight="35" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
 	</screen>
 	<screen name="MessageBoxSimple" position="center,center" size="960,150" title="Message" zPosition="10" flags="wfNoBorder" backgroundColor="menubackground">
@@ -2732,11 +2738,11 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<widget source="config" render="Listbox" position="680,165" size="1160,750" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (15,0), size = (800,35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 2 is the Menu Title
-				MultiContentEntryText(pos = (25,35), size = (800,30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 3 is the Description
+				MultiContentEntryText(pos = (5,0), size = (900,40), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 2 is the Menu Title
+				MultiContentEntryText(pos = (20,40), size = (900,35), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 3 is the Description
 				MultiContentEntryPixmapAlphaBlend(pos = (1060,2), size = (72,72), png = 3), # index 4 is the pixmap
 				],
-				"fonts": [gFont("youvix-r",28),gFont("youvix-r",22)],
+				"fonts": [gFont("youvix-r",32),gFont("youvix-r",28)],
 				"itemHeight":75
 				}
 			</convert>
@@ -2754,19 +2760,19 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyNetworkText" />
 		<widget source="legend1" render="Label" position="680,165" size="350,80" font="youvix-b;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
-		<widget source="legend2" render="Label" position="1110,165" size="350,80" font="youvix-b;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
+		<widget source="legend2" render="Label" position="1210,165" size="350,80" font="youvix-b;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget source="legend3" render="Label" position="1650,165" size="180,80" font="youvix-b;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget source="config" render="Listbox" position="680,270" size="1160,450" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryPixmapAlphaBlend(pos = (10,2), size = (72,72), png = 0), # index 0 is the isMounted pixmap
-				MultiContentEntryText(pos = (100,0), size = (450,35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the sharename
-				MultiContentEntryText(pos = (500,5), size = (260,30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the IPdescription
-				MultiContentEntryText(pos = (100,37), size = (650,30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 3 is the DIRdescription
+				MultiContentEntryText(pos = (100,0), size = (450,40), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the sharename
+				MultiContentEntryText(pos = (600,2), size = (260,35), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the IPdescription
+				MultiContentEntryText(pos = (115,40), size = (650,35), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 3 is the DIRdescription
 				MultiContentEntryPixmapAlphaBlend(pos = (990,20), size = (72,72), png = 4), # index 4 is the activepng pixmap
 				MultiContentEntryPixmapAlphaBlend(pos = (1060,2), size = (72,72), png = 5), # index 4 is the mounttype pixmap
 				],
-				"fonts": [gFont("youvix-r",32),gFont("youvix-r",26)],
+				"fonts": [gFont("youvix-r",32),gFont("youvix-r",28)],
 				"itemHeight":75
 				}
 			</convert>
@@ -2843,13 +2849,13 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryPixmapAlphaBlend(pos = (0,0), size = (72,72), png = 1), # index 1 is the expandable/expanded/verticalline icon
-				MultiContentEntryText(pos = (100,4), size = (800,35), font=2, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the Hostname
-				MultiContentEntryText(pos = (240,5), size = (800,35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 3 is the sharename
-				MultiContentEntryText(pos = (240,40), size = (800,35), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # index 4 is the sharedescription
+				MultiContentEntryText(pos = (100,0), size = (800,40), font=2, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the Hostname
+				MultiContentEntryText(pos = (240,3), size = (800,37), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 3 is the sharename
+				MultiContentEntryText(pos = (255,40), size = (800,35), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # index 4 is the sharedescription
 				MultiContentEntryPixmapAlphaBlend(pos = (80,2), size = (72,72), png = 5), # index 5 is the nfs/cifs icon
 				MultiContentEntryPixmapAlphaBlend(pos = (158,2), size = (72,72), png = 6), # index 6 is the isMounted icon
 				],
-				"fonts": [gFont("youvix-r",28),gFont("youvix-r",22),gFont("youvix-r",28)],
+				"fonts": [gFont("youvix-r",30),gFont("youvix-r",26),gFont("youvix-r",32)],
 				"itemHeight":75
 				}
 			</convert>
@@ -2879,23 +2885,23 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<screen name="NetworkServiceSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyNetworkText" />
-		<widget name="lab1" position="1040,239" size="200,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
-		<widget name="labactive" position="1280,239" size="200,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
-		<widget name="lab2" position="1040,300" size="200,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
-		<widget name="labstop" position="1280,300" size="200,35" font="youvix-r;28" backgroundColor="red" valign="center" halign="center" zPosition="1" />
-		<widget name="labrun" position="1280,300" size="200,35" font="youvix-r;28" backgroundColor="green" valign="center" halign="center" zPosition="1" />
+		<widget name="lab1" position="1040,239" size="300,40" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
+		<widget name="labactive" position="1280,239" size="300,40" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
+		<widget name="lab2" position="1040,300" size="300,40" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
+		<widget name="labstop" position="1280,300" size="300,40" font="youvix-r;32" backgroundColor="red" valign="center" halign="center" zPosition="1" />
+		<widget name="labrun" position="1280,300" size="300,40" font="youvix-r;32" backgroundColor="green" valign="center" halign="center" zPosition="1" />
 	</screen>
 	<screen name="NetworkVpnLog" position="fill" flags="wfNoBorder">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyNetworkText" />
-		<widget name="infotext" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="50" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1"/>
+		<widget name="infotext" position="680,165" size="1160,750" font="youvix-r;32" itemHeight="44" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1"/>
 	</screen>
 	
 	<!-- ## Network - Password Setup ## -->
 	<screen name="NetworkSetPassword" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyNetworkText" />
-		<widget name="passwd" position="680,165" size="1160,750" font="youvix-r;28" itemHeight="50" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
+		<widget name="passwd" position="680,165" size="1160,750" font="youvix-r;32" itemHeight="44" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" />
 	</screen>
 	
 	<!-- ## Network - Telnet ## -->
@@ -3475,10 +3481,11 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- ## Position Setup ## -->
 	<screen name="UserInterfacePositioner" position="0,0" size="e,e" backgroundColor="transpBlue">
 		<panel name="MenuButtonBar" />
-		<widget name="config" position="c-262,c-112" size="525,225" font="youvix-r;22" itemHeight="45" backgroundColor="transpBlue" foregroundColor="grey"/>
-		<ePixmap pixmap="div-h.png" position="c-300,e-300" zPosition="1" size="600,3"/>
-		<widget source="status" render="Label" position="c-450,e-285" size="900,135" zPosition="10" font="youvix-r;22" foregroundColor="grey" halign="center" valign="center" transparent="1"/>
-		<panel name="MenuHelpwindowWidget" />	
+		<widget name="config" position="c-262,c-112" size="525,250" font="youvix-r;32" itemHeight="44" backgroundColor="transpBlue" foregroundColor="grey"/>
+		<ePixmap pixmap="div-h.png" position="c-500,e-330" zPosition="1" size="1000,3" scale="1"/>
+		<widget source="status" render="Label" position="c-450,e-300" size="900,135" zPosition="10" font="youvix-r;32" foregroundColor="grey" halign="center" valign="center" transparent="1"/>
+		<panel name="MenuKeyAutoTemplate" />
+		<panel name="MenuHelpwindowWidget" />
 	</screen>
 
 	<!-- ## Positioner Setup ## -->
@@ -3622,17 +3629,16 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<screen name="SkinSelector" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySkinsText" />
-<!--		<panel name="MenuIntroductionWidget" /> -->
 		<panel name="MenuDescriptionWidget" />
 		<widget name="preview" position="1020,165" size="480,360" alphatest="on" />
-		<widget source="skins" render="Listbox" position="680,527" size="1160,400" font="youvix-r;30" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1">
+		<widget source="skins" render="Listbox" position="680,529" size="1160,9*44" font="youvix-r;30" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="menubackground" transparent="1" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 		{"template": [
-				MultiContentEntryText(pos = (0,0), size = (495,40), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-				MultiContentEntryText(pos = (500,0), size = (400,40), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
+				MultiContentEntryText(pos = (0,0), size = (495,44), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+				MultiContentEntryText(pos = (500,0), size = (500,44), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
 			],
-		"fonts": [gFont("youvix-r",30)],
-		"itemHeight":40
+		"fonts": [gFont("youvix-r",32)],
+		"itemHeight":44
 		}
 			</convert>
 		</widget>
@@ -3671,17 +3677,17 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<panel name="MenuMyUpdatesText" />
 		<panel name="FeedsStatus" />
 		<ePixmap position="960,250" size="600,10" pixmap="selectionbars/activitysliderbackground.png" alphatest="blend" zPosition="-1"/>
-		<widget name="activityslider" position="960,250" size="600,10" pixmap="selectionbars/activityslider.png" transparent="1" zPosition="1" />	
-		<widget source="package" render="Label" position="680,280" size="1160,38" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" />
-		<widget source="status" render="Label" position="680,330" size="1160,95" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" />
-		<widget name="slider" position="680,440" size="1160,38" transparent="1" />
+		<widget name="activityslider" position="960,250" size="600,10" pixmap="selectionbars/activityslider.png" transparent="1" zPosition="1" />
+		<widget source="package" render="Label" position="680,280" size="1160,44" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" />
+		<widget source="status" render="Label" position="680,330" size="1160,96" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" />
+		<widget name="slider" position="680,440" size="1160,38" transparent="1" zPosition="1" />
 	</screen>
 	<screen name="SoftwareUpdateChoices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyUpdatesText" />
 		<panel name="FeedsStatus" />
-		<widget name="list" position="680,165" size="1160,300" itemHeight="44" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" />
-		<widget name="text" position="680,550" size="1160,200" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
+		<widget name="list" position="680,165" size="1160,7*44" itemHeight="44" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" />
+		<widget name="text" position="680,550" size="1160,5*44" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" />
 		<panel name="MenuDescriptionWidget" />
 	</screen>
 
@@ -4048,14 +4054,14 @@ self.autoResize()
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
 		<widget name="lab1" position="680,165" size="1160,650" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" />
-		<widget source="list" render="Listbox" position="680,165" size="1160,650" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="1">
+		<widget source="list" render="Listbox" position="680,165" size="1160,5*130" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (170,5), size = (850,35), font=0, text = 0),
-				MultiContentEntryText(pos = (170,50), size = (850,55), font=1, flags = RT_VALIGN_TOP, text = 1),
+				MultiContentEntryText(pos = (170,5), size = (865,44), font=0, text = 0),
+				MultiContentEntryText(pos = (185,50), size = (850,65), font=1, flags = RT_VALIGN_TOP, text = 1),
 				MultiContentEntryPixmapAlphaBlend(pos = (10,5), size = (120,120), png = 2),
 				],
-				"fonts": [gFont("youvix-r",32),gFont("youvix-r",24)],
+				"fonts": [gFont("youvix-r",32),gFont("youvix-r",28)],
 				"itemHeight":130
 				}
 			</convert>
@@ -4082,16 +4088,16 @@ self.autoResize()
 	<screen name="VIXSwap" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
-		<widget name="autostart_off" position="1090,213" pixmap="icons/lock_off.png" size="35,35" alphatest="blend" zPosition="1" />
-		<widget name="autostart_on" position="1090,213" pixmap="icons/lock_on.png" size="35,35" alphatest="blend" zPosition="1" />
-		<widget name="lab1" position="1160,213" size="500,35" font="youvix-r;28" valign="center" transparent="1" backgroundColor="menubackground" zPosition="1" />
-		<widget name="lab2" position="1090,273" size="550,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
-		<widget name="labplace" position="1240,273" size="420,35" font="youvix-r;28" valign="center" backgroundColor="menubackground" transparent="1" zPosition="1" />
-		<widget name="lab3" position="1090,313" size="550,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
-		<widget name="labsize" position="1240,313" size="420,35" font="youvix-r;28" valign="center" backgroundColor="menubackground" transparent="1" zPosition="1" />
-		<widget name="lab4" position="1090,353" size="550,35" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
-		<widget name="inactive" position="1240,353" size="200,35" font="youvix-r;28" valign="center" halign="center" backgroundColor="red" zPosition="1" />
-		<widget name="active" position="1240,353" size="200,35" font="youvix-r;28" valign="center" halign="center" backgroundColor="green" zPosition="1" />
+		<widget name="autostart_off" position="990,213" pixmap="icons/lock_off.png" size="35,35" alphatest="blend" zPosition="1" />
+		<widget name="autostart_on" position="990,213" pixmap="icons/lock_on.png" size="35,35" alphatest="blend" zPosition="1" />
+		<widget name="lab1" position="1060,210" size="500,44" font="youvix-r;32" valign="center" transparent="1" backgroundColor="menubackground" zPosition="1" />
+		<widget name="lab2" position="990,273" size="650,44" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
+		<widget name="labplace" position="1240,273" size="700,44" font="youvix-r;32" valign="center" backgroundColor="menubackground" transparent="1" zPosition="1" />
+		<widget name="lab3" position="990,320" size="650,44" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
+		<widget name="labsize" position="1240,320" size="700,44" font="youvix-r;32" valign="center" backgroundColor="menubackground" transparent="1" zPosition="1" />
+		<widget name="lab4" position="990,367" size="650,44" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1" />
+		<widget name="inactive" position="1240,367" size="500,44" font="youvix-r;32" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+		<widget name="active" position="1240,367" size="500,44" font="youvix-r;32" valign="center" halign="center" backgroundColor="green" zPosition="1" />
 	</screen>
 	
 	<!-- ## System Menu - Package Manager ## -->
@@ -4364,13 +4370,13 @@ self.autoResize()
 		<panel name="MenuMyWizardText" />
 		<panel name="WizardRemoteTemplate" />
 		<panel name="WizardDescriptionWidget" />
-		<widget source="languages" render="Listbox" position="680,395" size="1160,520" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand">
+		<widget source="languages" render="Listbox" position="680,395" size="1160,8*65" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (150,15), size = (500,35), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
+				MultiContentEntryText(pos = (150,0), size = (500,65), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
 				MultiContentEntryPixmapAlphaBlend(pos = (20,2), size = (90,60), png = 2), # index 2 is the pixmap
 				],
-				"fonts": [gFont("youvix-r",28)],
+				"fonts": [gFont("youvix-r",32)],
 				"itemHeight":65
 				}
 			</convert>
@@ -4649,10 +4655,10 @@ self.autoResize()
 	<screen name="PinInput" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
 		<panel name="MenuMyInputText" />
-		<widget name="service" position="680,165" size="1160,40" font="youvix-r;34" halign="center"/>
-		<widget name="text" position="680,215" size="1160,35" font="youvix-r;30" halign="center"/>
-		<widget name="tries" position="680,260" size="1160,35" font="youvix-r;30" halign="center"/>
-		<widget name="input" position="680,310" size="1160,60" font="youvix-r;75" halign="center"/>
+		<widget name="service" position="680,165" size="1160,50" font="youvix-r;34" halign="center"/>
+		<widget name="text" position="680,225" size="1160,44" font="youvix-r;32" halign="center"/>
+		<widget name="tries" position="680,270" size="1160,44" font="youvix-r;32" halign="center"/>
+		<widget name="input" position="680,330" size="1160,60" font="youvix-r;75" halign="center"/>
 	</screen>
 
 	<screen name="PinInputPopup" position="center,center" size="1065,240" flags="wfNoBorder" backgroundColor="transparent">
