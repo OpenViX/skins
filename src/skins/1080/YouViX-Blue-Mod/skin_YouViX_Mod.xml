@@ -302,40 +302,40 @@
 	</screen>
 	<screen name="SecondInfoBarSimple" flags="wfNoBorder" position="fill" backgroundColor="transparent">
 		<widget name="channel" position="0,0" size="0,0"/>  #To remove debug warning
-		<ePixmap pixmap="infobar/2ndinfobar1.png" position="0,495" size="1920,330" zPosition="-1"/>
-		<ePixmap pixmap="infobar/2ndinfobar1.png" position="0,820" size="1920,55" zPosition="-1"/>
-		<widget source="session.Event_Now" render="Label" position="480,496" size="690,120" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
+		<ePixmap pixmap="infobar/2ndinfobar2.png" position="0,295" size="1920,525" zPosition="-1"/>
+		<ePixmap pixmap="infobar/2ndinfobar1.png" position="0,810" size="1920,60" zPosition="-1"/>
+		<widget source="session.Event_Now" render="Label" position="480,296" size="690,120" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget name="epg_description" position="0,0" size="0,0"/> #To remove debug warning
-		<widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="480,620" size="690,210" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
+		<widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="280,420" size="690,385" font="youvix-r;30" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="20,730" size="255,30" font="youvix-b;24" foregroundColor="grey" backgroundColor="background2" transparent="1" zPosition="1">
+		<widget source="session.CurrentService" render="Label" position="20,630" size="255,30" font="youvix-b;24" foregroundColor="grey" backgroundColor="background2" transparent="1" zPosition="1">
 			<convert type="PliExtraInfo">TransponderInfo</convert>
 		</widget>
-		<eLabel text="Videokoodekki: " position="30,760" size="170,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2"/>
-		<widget source="session.CurrentService" render="Label" position="200,760" size="255,30" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" transparent="1" zPosition="1">
+		<eLabel text="Videokoodekki: " position="30,660" size="170,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2"/>
+		<widget source="session.CurrentService" render="Label" position="200,660" size="255,30" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" transparent="1" zPosition="1">
 			<convert type="PliExtraInfo">VideoCodec</convert>
 		</widget>
-		<eLabel text="Resoluutio: " position="30,790" size="160,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2"/>
-		<widget source="session.CurrentService" render="Label" position="200,790" size="255,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2">
+		<eLabel text="Resoluutio: " position="30,690" size="160,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2"/>
+		<widget source="session.CurrentService" render="Label" position="200,690" size="255,30" font="youvix-r;24" transparent="1" foregroundColor="grey" backgroundColor="background2">
 			<convert type="PliExtraInfo">ResolutionString</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="30,825" size="610,30" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="30,810" size="610,59" font="youvix-r;24" foregroundColor="grey" backgroundColor="background2" valign="center" transparent="1">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="1200,496" size="690,120" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
+		<widget source="session.Event_Next" render="Label" position="1200,296" size="690,120" font="youvix-b;34" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" halign="center" valign="center" zPosition="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Next" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="1200,620" size="690,210" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
+		<widget source="session.Event_Next" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="1200,420" size="690,385" font="youvix-r;30" foregroundColor="white" backgroundColor="background2" transparent="1" halign="center" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget name="key_red" position="690,830" size="270,35" font="youvix-r;24" foregroundColor="#00ff0808" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
-		<widget name="key_green" position="890,830" size="270,35" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
-		<widget name="key_yellow" position="1090,830" size="270,35" font="youvix-r;24" foregroundColor="#00edf506" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
-		<widget name="key_blue" position="1290,830" size="270,35" font="youvix-r;24" foregroundColor="#00077cf5" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
-		<widget source="session.CurrentService" render="Picon" position="20,505" size="320,192" transparent="0" alphatest="blend" zPosition="2">
+		<widget name="key_red" position="690,810" size="270,59" font="youvix-r;24" foregroundColor="#00ff0808" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
+		<widget name="key_green" position="890,810" size="270,59" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
+		<widget name="key_yellow" position="1090,810" size="270,59" font="youvix-r;24" foregroundColor="#00edf506" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
+		<widget name="key_blue" position="1290,810" size="270,59" font="youvix-r;24" foregroundColor="#00077cf5" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" />
+		<widget source="session.CurrentService" render="Picon" position="20,405" size="320,192" transparent="0" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<widget source="session.FrontendStatus" render="FixedLabel" text="SNR:" position="1490,810" size="60,59" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" valign="center" noWrap="1" >
@@ -779,7 +779,7 @@
 		<widget name="AboutScrollLabel" position="800,267" size="950,660" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 08.04.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 09.04.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="Devices" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -4658,7 +4658,7 @@ self.autoResize()
 		<widget name="service" position="680,165" size="1160,50" font="youvix-r;34" halign="center"/>
 		<widget name="text" position="680,225" size="1160,44" font="youvix-r;32" halign="center"/>
 		<widget name="tries" position="680,270" size="1160,44" font="youvix-r;32" halign="center"/>
-		<widget name="input" position="680,330" size="1160,60" font="youvix-r;75" halign="center"/>
+		<widget name="input" position="680,330" size="1160,60" font="youvix-pin;75" halign="center"/>
 	</screen>
 
 	<screen name="PinInputPopup" position="center,center" size="1065,240" flags="wfNoBorder" backgroundColor="transparent">
