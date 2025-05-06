@@ -977,7 +977,6 @@
 
 	<screen name="MovieSelection" title="Movie Selection" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="10,1031" size="52,38" zPosition="1"/>
 		<ePixmap pixmap="dvr/scale1024.png" position="30,565" size="720,12" zPosition="1"/>
 		<widget source="session.CurrentService" render="PositionGauge" position="30,562" size="720,18" zPosition="4" transparent="1" pointer="dvr/position_pointer1.png:720,4">
 			<convert type="ServicePosition">Gauge</convert>
@@ -1163,9 +1162,6 @@
 
 	<screen name="PluginBrowser" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<ePixmap pixmap="buttons/key_prev.png" alphatest="blend" position="e-196,1031" size="52,38"/>
-		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="e-134,1031" size="52,38"/>
-		<ePixmap pixmap="buttons/key_next.png" alphatest="blend" position="e-72,1031" size="52,38"/>
 		<widget name="list" position="780,100" size="1110,912" scrollbarMode="showOnDemand"/>
 	</screen>
 
@@ -2289,11 +2285,9 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	 <!-- Commit Info -->
 	<screen name="CommitInfo" position="fill" flags="wfNoBorder">
 		<panel name="PigLessTemplate"/>
-		<ePixmap pixmap="buttons/left.png" position="1064,1030" size="34,34" alphatest="blend"/>
-		<ePixmap pixmap="buttons/right.png" position="1500,1030" size="34,34" alphatest="blend"/>
 		<widget name="AboutScrollLabel" font="Regular;33" position="30,100" size="1860,912" zPosition="2" halign="left"/>
 	</screen>
-	 <!-- Troubleshoot -->
+	 <!-- Troubleshoot --><!--- what is this -->
 	<screen name="Troubleshoot" position="fill" flags="wfNoBorder">
 		<panel name="PigLessTemplate"/>
 		<ePixmap pixmap="buttons/left.png" position="1064,1030" size="34,34" alphatest="blend"/>
@@ -2319,7 +2313,6 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<screen name="VirtualKeyBoard" position="fill" zPosition="99" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<widget name="prompt" position="930,120" size="810,39" font="Regular;33" noWrap="1" transparent="1" valign="top"/>
-		<ePixmap pixmap="buttons/vkey_text.png" position="926,235" size="960,50" alphatest="on" zPosition="-4"/>
 		<widget name="text" position="930,236" size="952,48" font="Regular;38" halign="right" noWrap="1" transparent="1" valign="center"/>
 		<widget name="list" position="930,375" size="952,340" selectionDisabled="1" transparent="1"/>
 		<widget name="locale" position="930,800" size="800,39" font="Regular;33" foregroundColor="#a08500" transparent="1"/>
@@ -2422,7 +2415,6 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<screen name="InputBox" position="fill" title="Input" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<widget name="text" position="930,120" size="810,39" font="Regular;33" noWrap="1" transparent="1" valign="top"/>
-		<ePixmap pixmap="buttons/vkey_text.png" position="926,235" size="960,50" alphatest="on" zPosition="-4"/>
 		<widget name="input"  position="930,236" size="952,48" font="Regular;38" halign="right" noWrap="1" transparent="1" valign="center"/>
 	</screen>
 
