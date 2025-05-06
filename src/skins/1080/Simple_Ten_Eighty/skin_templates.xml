@@ -105,19 +105,38 @@
 	</screen>
 
 	<!-- Button Bar Template -->
-	<screen name="ColorButtonTemplate">
+	<!-- screen name="ColorButtonTemplate">
 		<widget addon="ColorButtonsSequence" connection="key_red,key_green,key_yellow,key_blue" 
 			textColors="key_red:buttonred,key_green:buttongreen,key_yellow:buttonyellow,key_blue:buttonblue" 
 			position="224,1030" size="1694,42" font="Regular;33" backgroundColor="darkgrey" transparent="1" alignment="left" zPosition="2" spacing="10" />
 	</screen>
 	<screen name="ActionButtonTemplate">
-		<widget addon="ButtonSequence" connection="key_previous,key_help,key_info,key_menu,key_play,key_text,VKeyIcon,key_next" 
-			pixmaps="key_previous:buttons/key_prev.png,key_help:buttons/key_help.png,key_info:buttons/key_info.png,key_menu:buttons/key_menu.png,key_play:buttons/key_right.png,key_text:buttons/key_text.png,VKeyIcon:buttons/key_text.png,key_next:buttons/key_next.png" 
+		<widget addon="ButtonSequence" connection="key_previous,key_left,key_help,key_info,key_menu,key_play,key_text,VKeyIcon,key_right,key_next,key_0" 
+		pixmaps="key_previous:buttons/key_prev.png,key_left:buttons/left.png,key_help:buttons/key_help.png,key_info:buttons/key_info.png,key_menu:buttons/key_menu.png,key_play:buttons/key_right.png,key_text:buttons/key_text.png,VKeyIcon:buttons/key_text.png,key_0:buttons/key_0.png,key_right:buttons/right.png,key_next:buttons/key_next.png" 
 			position="10,1031" size="212,38" spacing="0" transparent="1" zPosition="10"/>
 	</screen>
 	<screen name="ButtonTemplate">
 		<panel name="ColorButtonTemplate"/>
 		<panel name="ActionButtonTemplate"/>
+	</screen -->
+
+	<screen name="ButtonTemplate">
+		<widget addon="ScreenButtonsBar" 
+			connection="key_red,key_green,key_yellow,key_blue,key_previous,key_left,key_help,key_info,key_menu,key_play,key_text,VKeyIcon,key_right,key_next,key_0" 
+			pixmaps="key_previous:buttons/key_prev.png,key_left:buttons/left.png,key_help:buttons/key_help.png,key_info:buttons/key_info.png,key_menu:buttons/key_menu.png,key_play:buttons/key_right.png,key_text:buttons/key_text.png,VKeyIcon:buttons/key_text.png,key_0:buttons/key_0.png,key_right:buttons/right.png,key_next:buttons/key_next.png" 
+			textColors="key_red:buttonred,key_green:buttongreen,key_yellow:buttonyellow,key_blue:buttonblue"
+			position="20,1031" 
+			size="e-40,38" 
+			backgroundColor="darkgrey" 
+			transparent="1"
+			font="Regular;33" 
+			actionButtonsPos="farRight" 
+			zPosition="1000"
+			spacingAction="0"
+			spacingColor="60" 
+			spacingPixmapText="10" 
+			spacingActionColorGroups="5"
+		/>
 	</screen>
 
 	<screen name="KeyMenuTemplate">
