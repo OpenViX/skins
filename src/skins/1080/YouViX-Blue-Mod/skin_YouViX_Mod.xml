@@ -3898,17 +3898,19 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<screen name="RecordTimerQuestion" position="center,center" size="350,150" backgroundColor="black" zPosition="5" flags="wfNoBorder">
 		<widget name="description" position="0,0" size="0,0" />
-		<widget name="text" position="0,0" size="0,0" font="youvix-r;22" foregroundColor="yellow" backgroundColor="black" />
+		<widget name="text" position="0,0" size="350,75" font="youvix-r;22" foregroundColor="yellow" backgroundColor="black" />
 		<widget name="list" position="0,0" size="350,150" backgroundColor="black" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
-			self.autoResize()
+if len(self["title"].text) &lt; 55 and len(self["text"].text) &lt; 55:
+	self["text"].text = self["title"].text
+self.autoResize()
 		</applet>
 	</screen>
-	<screen name="RemoveTimerQuestion" position="center,center" size="500,300" backgroundColor="black" zPosition="5" flags="wfNoBorder" >
-		<widget name="text" position="0,0" size="0,0" font="youvix-r;32" backgroundColor="black" zPosition="5" />
-		<widget name="list" position="0,0" size="100,80" font="youvix-r;28" backgroundColor="black" zPosition="5" itemHeight="38" enableWrapAround="1" />
+	<screen name="RemoveTimerQuestion" position="center,center" size="350,150" backgroundColor="black" zPosition="5" flags="wfNoBorder" >
+		<widget name="text" position="0,0" size="350,75" font="youvix-r;22" foregroundColor="yellow" backgroundColor="black" />
+		<widget name="list" position="0,0" size="350,150" font="youvix-r;28" backgroundColor="black" itemHeight="38" enableWrapAround="1" />
 		<applet type="onLayoutFinish">
-			self.autoResize()
+self.autoResize()
 		</applet>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="5,150" size="80,80" alphatest="blend" zPosition="1" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="5,150" size="80,80" alphatest="blend" zPosition="1" />
