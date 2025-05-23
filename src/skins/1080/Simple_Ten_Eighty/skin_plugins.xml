@@ -2523,4 +2523,24 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
+
+	<!-- ShowClock -->
+	<screen name="ShowClockSetup" position="fill" flags="wfNoBorder" title="Clock Setup">
+		<panel name="SetupPanelPIG"/>
+		<widget source="help" render="Label" position="30,570" size="720,300" font="Regular;32" valign="top" halign="block"/>
+	</screen>
+	<screen name="ShowClock" size="180,60" zPosition="10" flags="wfNoBorder" backgroundColor="black" cornerRadius="16" >
+		<widget source="global.CurrentTime" render="Label" position="25,0" size="100,40" font="Regular;36" valign="center" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="125,13" size="40,25" font="Regular;22" valign="center" transparent="1">
+			<convert type="ClockToText">Format::%S</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="0,38" size="180,20" font="Regular;16" halign="center" valign="center" foregroundColor="grey" transparent="1">
+			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+		</widget>
+	</screen>
+	<screen name="ShowClockPositioner" size="180,60" zPosition="10" flags="wfNoBorder" backgroundColor="black" >
+		<panel name="ShowClock"/>
+	</screen>
 </skin>
