@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 22.05.2025 -->
+	<!--  Modified by Orlandox 04.06.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -783,7 +783,7 @@
 		<widget name="AboutScrollLabel" position="750,267" size="1050,660" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 22.05.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 04.06.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemMemoryInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -1979,23 +1979,16 @@
 		</widget>
 	</screen>
 	
-	<!-- ## Foreca 4.0.3 Mod ## -->
+	<!-- ## Foreca 4.0.x Mod ## -->
 	<screen name="ForecaPreview" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BasicMenuPanel" />
-		<panel name="MenuForwardArrow" />
-		<panel name="MenuTitle2" />
-		<panel name="MenuButtonBar" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMyWeatherForecaText" />
 		<widget source="Titel" render="Label" position="680,159" size="900,80" font="youvix-b;32" foregroundColor="yellow" backgroundColor="menubackground" valign="center" halign="center" transparent="1" zPosition="1"/>
 		<widget source="Titel2" render="Label" position="780,210" size="700,40" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" halign="left" valign="center" transparent="1" zPosition="1"/>
 		<widget name="MainList" position="680,232" size="1160,690" itemHeight="138" font0="youvix-r;26" font1="youvix-r;36" font2="youvix-r;22" font3="youvix-r;28" setTime="10,49,90,30" setPict="105,24,80,80" setPictScale="1" setTemp="200,22,120,30" setTempUnits="200,68,120,30" setWindPict="340,43,42,42" setWindPictScale="1" setWind="400,22,150,30" setWindUnits="400,68,150,30" text1Pos="500,22,660,35" text2Pos="520,57,500,27" text3Pos="520,84,500,27" text4Pos="520,111,500,27" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" />
-		<widget source="key_menu" render="Label" position="1598,160" size="220,44" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="1"/>
-		<widget source="key_info" render="Label" position="1398,206" size="420,44" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="1"/>
-		<widget source="key_ok" render="Label" position="1598,344" size="220,44" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="1"/>
-		<panel name="MenuMenuButton" />
-		<panel name="MenuInfoButton" />
-		<panel name="MenuOKButton" />
-		<panel name="MenuHelpButton" />
+		<widget source="key_menu" render="Label" position="0,0" size="0,0"/> #To remove debug warning
+		<widget source="key_info" render="Label" position="0,0" size="0,0"/> #To remove debug warning
+		<widget source="key_ok" render="Label" position="0,0" size="0,0"/> #To remove debug warning
 	</screen>
 	<screen name="ForecaPreviewCache" position="680,190" size="76,76" flags="wfNoBorder" backgroundColor="menubackground">
 		<widget name="spinner" position="14,14" zPosition="4" size="48,48" alphatest="blend"/>
@@ -2028,16 +2021,10 @@
 		<widget name="config" position="80,440" size="590,480" font="youvix-r;28" itemHeight="40" foregroundColor="white" backgroundColor="menubackground" transparent="1" scrollbarMode="showOnDemand" zPosition="1" />
 	</screen>
 	<screen name="CityPanel" position="fill" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="BasicMenuPanel" />
-		<panel name="MenuForwardArrow" />
-		<panel name="MenuTitle2" />
-		<panel name="MenuButtonBar" />
+		<panel name="BigMenuPanel" />
 		<panel name="MenuMyWeatherForecaText" />
 		<widget name="Mlist" position="680,165" size="1000,760" font="youvix-r;28" itemHeight="40" foregroundColor="white" foregroundColorSelected="white" backgroundColor="menubackground" backgroundColorSelected="lightcolour" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1"/>
-		<widget source="key_ok" render="Label" position="1598,344" size="220,44" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" halign="right" valign="center" zPosition="1"/>
-		<panel name="MenuHelpButton" />
-		<panel name="MenuOKButton" />
-		<panel name="MenuVirtualKeyboardVkey" />
+		<widget source="key_ok" render="Label" position="0,0" size="0,0"/>
 	</screen>
 
 	<!-- ## FPGA Update ## -->
