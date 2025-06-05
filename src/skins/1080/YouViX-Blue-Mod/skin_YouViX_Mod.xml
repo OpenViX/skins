@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 04.06.2025 -->
+	<!--  Modified by Orlandox 05.06.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -783,7 +783,7 @@
 		<widget name="AboutScrollLabel" position="750,267" size="1050,660" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 04.06.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 05.06.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemMemoryInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -4902,7 +4902,7 @@ self.autoResize()
 	<!-- ## M3UIPTV ## -->
 	<screen name="M3UIPTVManagerConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel"/>
-		<panel name="MenuMySetupText" />
+		<panel name="MenuMySetupText"/>
 		<panel name="MenuDescriptionWidget"/>
 		<widget conditional="progress" source="progress" render="Progress" position="80,660" size="590,40" backgroundColor="menubackground2" foregroundColor="white" zPosition="11" borderWidth="0" borderColor="grey" cornerRadius="5"/>
 		<widget source="list" render="Listbox" position="680,165" size="1110,17*44" transparent="1" scrollbarMode="showOnDemand">
@@ -4914,15 +4914,39 @@ self.autoResize()
 			</convert>
 		</widget>
 	</screen>
-
 	<screen name="M3UIPTVVoDMovies" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="M3UIPTVManagerConfig"/>
 	</screen>
-	
 	<screen name="CatchupPlayer" flags="wfNoBorder" position="0,0" size="1920,400" title="Movie player" backgroundColor="transparent">
 		<panel name="CatchupPlayerTemplate"/>
 		<widget name="statusicon" position="276,120" size="25,25" pixmaps="pvr/play.png,pvr/pause.png,pvr/stop.png,pvr/forward.png,pvr/backward.png,pvr/slow.png,pvr/blank.png" zPosition="1" alphatest="blend" />
 		<widget name="speed" position="306,113" size="60,38" font="youvix-r;25" foregroundColor="white" backgroundColor="background2" transparent="1" zPosition="4" valign="center" />
 	</screen>
 
+	<!-- ## EPG Translator ## -->
+	<screen name="translatorMain" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="BigMenuPanel"/>
+		<panel name="MenuMyLanguagesText"/>
+		<ePixmap position="231,530" size="288,288" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EPGTranslator/pic/flag/auto.png" alphatest="blend" zPosition="1"/>
+		<widget name="timing" position="680,160" size="1160,50" backgroundColor="menubackground" foregroundColor="yellow" transparent="1" zPosition="1" noWrap="1" font="youvix-b;32" halign="left" valign="center"/>
+		<widget name="text" position="780,210" size="1060,350" font="youvix-r;30" zPosition="1" backgroundColor="menubackground" transparent="1" valign="top"/>
+		<widget name="text2" position="780,575" size="1060,350" font="youvix-r;30" zPosition="1" backgroundColor="menubackground" transparent="1" valign="top"/>
+		<widget name="flag" position="677,210" size="100,100" alphatest="blend" zPosition="1" scale="1"/>
+		<widget name="flag2" position="677,575" size="100,100" alphatest="blend" zPosition="1" scale="1"/>
+		<widget name="label" position="0,0" size="0,0"/> #To remove debug warning
+		<widget name="label2" position="0,0" size="0,0"/> #To remove debug warning
+	</screen>
+	<screen name="translatorConfig" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="BasicMenuPanel" />
+		<panel name="MenuMySetupText" />
+		<panel name="MenuForwardArrow" />
+		<panel name="MenuTitle2" />
+		<panel name="MenuConfigWidget" />
+		<panel name="MenuDescriptionWidget" />
+		<panel name="MenuFootnoteWidget" />
+		<panel name="MenuButtonBar" />
+		<panel name="MenuHelpwindowWidget" />
+		<panel name="MenuKeyAutoTemplate" />
+		<widget name="flag" position="260,477" size="230,230" alphatest="blend" zPosition="1" scale="1"/>
+	</screen>
 </skin>
