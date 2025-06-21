@@ -2303,7 +2303,7 @@
 		<panel name="SetupPanelPIG"/>
 	</screen>
 
-	<!-- Bluetooth setup -->
+	<!-- Bluetooth setup used by Vu+ -->
 	<screen name="BluetoothSetupConfig" position="fill" flags="wfNoBorder">
 		<panel name="SetupPanelPIG"/>
 	</screen>
@@ -2342,7 +2342,14 @@
 		</widget>
 	</screen>
 
-		<!-- ## QuadPip ## -->
+	<!-- Bluetooth setup used by https://github.com/oe-alliance/oe-alliance-plugins/blob/master/BTDevicesManager/src/plugin.py -->
+	<screen name="BluetoothDevicesManager" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<widget name="devicelist" position="780,123" size="1110,855" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand"/>
+		<widget name="ConnStatus" position="30,570" size="720,300" zPosition="10" font="Regular;32" valign="center" halign="center"/>
+	</screen>
+
+	<!-- ## QuadPip ## -->
 	<screen name="CreateQuadPipChannelEntry" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<widget name="list" position="780,123" size="1110,630" itemHeight="45" transparent="1" serviceNumberFont="Regular;34"
