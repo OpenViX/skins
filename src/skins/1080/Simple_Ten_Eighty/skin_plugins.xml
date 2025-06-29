@@ -551,32 +551,34 @@
 		<widget name="previewo" position="885,570" size="900,450" zPosition="2" alphatest="blend"/>
 	</screen>
 
-	<!-- EPG Import Configuration -->
+	<!-- EPG Import -->
 
-	<screen name="EPGImportConfig" position="fill" title="EPG Import Configuration" flags="wfNoBorder">
+	<screen name="EPGImportSources" position="fill" flags="wfNoBorder">
+		<panel name="SetupPanelPIG"/>
+	</screen>
+
+	<screen name="EPGImportLog" position="fill" flags="wfNoBorder">
+		<panel name="SetupPanelPIG"/>
+	</screen>
+
+	<screen name="filtersServicesSelection" position="fill" flags="wfNoBorder">
+		<panel name="SetupPanelPIG"/>
+	</screen>
+
+	<screen name="filtersServicesSetup" position="fill" flags="wfNoBorder" >
 		<panel name="PigTemplate"/>
-		<panel name="KeyMenuInfoTemplate"/>
-		<widget name="config" position="780,123" size="1110,600" itemHeight="50" font="Regular;33" scrollbarMode="showOnDemand"/>
-		<widget name="statusbar" position="780,975" size="1110,50" font="Regular;33"/>
-		<widget name="status" position="780,803" size="1110,90" font="Regular;33"/>
-	</screen>
-
-	<!-- EPG Import Profile -->
-
-	<screen name="EPGImportProfile" position="fill" title="EPG Import Profile" flags="wfNoBorder">
-		<panel name="SetupPanelPIG"/>
-	</screen>
-
-	<!-- EPG Import Sources -->
-
-	<screen name="EPGImportSources" position="fill" title="EPG Import Sources" flags="wfNoBorder">
-		<panel name="SetupPanelPIG"/>
-	</screen>
-
-	<!-- EPG Import Log -->
-
-	<screen name="EPGImportLog" position="fill" title="EPG Import Log" flags="wfNoBorder">
-		<panel name="SetupPanelPIG"/>
+		<widget source="list" render="Listbox" transparent="0" position="780,100" size="1110,912" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+		{"template": [
+					MultiContentEntryText(pos = (10, 5), size = (1090, 28), font = 0, flags = RT_HALIGN_LEFT, text = 0),
+					MultiContentEntryText(pos = (50, 36), size = (720, 20), font = 1, flags = RT_HALIGN_LEFT, text = 1),
+					MultiContentEntryText(pos = (100, 58), size = (660, 17), font = 2, flags = RT_HALIGN_LEFT, text = 2),
+					],
+				"fonts": [gFont("Regular", 26), gFont("Regular", 19), gFont("Regular", 16)],
+			"itemHeight": 76
+		}
+			</convert>
+		</widget>
 	</screen>
 
 	<!-- Cross EPG -->
@@ -2289,17 +2291,14 @@
 		<panel name="PigTemplate"/>
 		<widget name="timing" position="780,100" size="880,60" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="secondFG" noWrap="1" font="Regular;36" halign="left" valign="center"/>
 	</screen>
-	<screen name="translatorMain" position="fill" flags="wfNoBorder">
+	<screen name="TranslatorMain" position="fill" flags="wfNoBorder">
 		<panel name="translatorPanel"/>
-		<widget name="text2" position="780,170" size="1110,823" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" valign="top" halign="block"/>
-		<widget name="text" position="30,558" size="720,423" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" valign="top" halign="block"/>
+		<widget name="text2" position="780,170" size="1110,50" font="Regular;36" zPosition="1" backgroundColor="transpBlack" transparent="1" valign="top" halign="left"/>
+		<widget name="text2d" position="780,230" size="1110,763" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" valign="top" halign="block"/>
+		<widget name="text" position="30,558" size="720,423" font="Regular;36" zPosition="1" backgroundColor="transpBlack" transparent="1" valign="top" halign="left"/>
+		<widget name="textd" position="30,618" size="720,363" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" valign="top" halign="block"/>
 	</screen>
-	 <screen name="translatorMainSingle" position="fill" flags="wfNoBorder">
-		<panel name="translatorPanel"/>
-		<widget name="text" position="780,170" size="1110,823" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" valign="top" halign="block"/>
-		<widget name="text2" position="30,558" size="720,423" font="Regular;30" zPosition="1" backgroundColor="transpBlack" transparent="1" valign="top" halign="block"/>
-	</screen>
-	<screen name="translatorConfig" position="fill" flags="wfNoBorder">
+	<screen name="TranslatorConfig" position="fill" flags="wfNoBorder">
 		<panel name="SetupPanelPIG"/>
 	</screen>
 
