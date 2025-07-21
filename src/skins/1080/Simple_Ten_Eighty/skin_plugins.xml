@@ -8,6 +8,7 @@
 		<parameter name="AutomaticVolumeAdjustmentList" value="5,0,900,45,0,925,0,180,45,0"/>
 		<parameter name="TMDbListName" value="5,2,900,45"/>
 		<parameter name="TMDbListFont" value="*Regular,33"/>
+		<parameter name="PlutoTvColors" value="#00f0f0f0,#00ffc000"/><!-- colors: foreground,orange -->
 	</parameters>
 
 	<!-- AutomaticVolumeAdjustment -->
@@ -2545,5 +2546,16 @@
 	</screen>
 	<screen name="ShowClockPositioner" size="180,60" zPosition="10" flags="wfNoBorder" backgroundColor="black" >
 		<panel name="ShowClock"/>
+	</screen>
+
+	<screen name="PlutoTV" position="fill" flags="wfNoBorder">
+		<ePixmap pixmap="extensions/plutotv-backdrop.jpg" position="0,0" size="e,1020" zPosition="-1"/>
+		<widget name="feedlist" position="70,170" size="615,728" enableWrapAround="1" zPosition="5" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget source="updated" render="Label" position="70,950" size="615,50" font="Regular;25" zPosition="5" transparent="1" valign="center" halign="center"/>
+		<panel name="PigLessTemplate"/>
+		<widget name="loading" position="center,center" size="800,60" font="Regular;50" backgroundColor="#00000000" transparent="0" zPosition="10" halign="center" valign="center" />
+		<widget name="poster" position="735,235" size="483,675" zPosition="3" alphatest="blend" />
+		<widget name="vtitle" position="778,180" size="1065,48" foregroundColor="orange" font="Regular;37" transparent="1" />
+		<widget name="info" position="1238,235" size="604,675" font="Regular;27" transparent="1" />
 	</screen>
 </skin>
