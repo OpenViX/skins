@@ -2550,12 +2550,22 @@
 
 	<screen name="PlutoTV" position="fill" flags="wfNoBorder">
 		<ePixmap pixmap="extensions/plutotv-backdrop.jpg" position="0,0" size="e,1020" zPosition="-1"/>
+
+		<ePixmap position="70,170" size="615,740" pixmap="extensions/transblack.png" zPosition="1" alphatest="blend" transparent="1"/><!-- list background -->
 		<widget name="feedlist" position="70,170" size="615,728" enableWrapAround="1" zPosition="5" scrollbarMode="showOnDemand" transparent="1"/>
+
+		<widget source="updated" render="Pixmap" pixmap="extensions/transblack.png" position="70,950" size="615,50" zPosition="1" transparent="1" alphatest="blend"><!-- updated background -->
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<widget source="updated" render="Label" position="70,950" size="615,50" font="Regular;25" zPosition="5" transparent="1" valign="center" halign="center"/>
 		<panel name="PigLessTemplate"/>
 		<widget name="loading" position="center,center" size="800,60" font="Regular;50" backgroundColor="#00000000" transparent="0" zPosition="10" halign="center" valign="center" />
-		<widget name="poster" position="735,235" size="483,675" zPosition="3" alphatest="blend" />
-		<widget name="vtitle" position="778,180" size="1065,48" foregroundColor="orange" font="Regular;37" transparent="1" />
-		<widget name="info" position="1238,235" size="604,675" font="Regular;27" transparent="1" />
+
+		<widget source="vtitle" render="Pixmap" pixmap="extensions/transblack.png" position="735,170" size="1780,740" zPosition="1" transparent="1" alphatest="blend"><!-- background for all info -->
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="vtitle" render="Label" position="778,180" size="1065,48" zPosition="5" foregroundColor="orange" font="Regular;37" transparent="1" />
+		<widget name="poster" position="735,235" size="483,675" zPosition="5" alphatest="blend" />
+		<widget name="info" position="1238,235" size="604,675" zPosition="5" font="Regular;27" transparent="1" />
 	</screen>
 </skin>
