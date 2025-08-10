@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 07.08.2025 -->
+	<!--  Modified by Orlandox 10.08.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -785,7 +785,7 @@
 		<widget name="AboutScrollLabel" position="750,267" size="1050,660" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 07.08.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 10.08.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -1420,7 +1420,7 @@
 		<panel name="ChannelSelectionBouquetName" />
 		<panel name="MenuKeyAutoTemplate" />
 		<panel name="MenuButtonBar" />
-		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="679,1010" size="61,44" zPosition="10"/>
+		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="271,1010" size="61,44" zPosition="10"/>
 	</screen>
 	<screen name="SlimChannelSelection" title="Channel Selection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
@@ -2291,11 +2291,11 @@
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMySetupText" />
 		<widget name="text" position="80,765" size="590,150" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1"/>
-		<widget name="target" position="680,165" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1"/>
-		<widget name="filelist" position="680,200" size="1160,450" font="youvix-r;28" itemHeight="48" foregroundColor="white" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" zPosition="1"/>
-		<widget name="textbook" position="680,650" size="1160,35" font="youvix-b;28" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" zPosition="1"/>
-		<widget name="booklist" position="680,685" size="1160,200" font="youvix-r;28" itemHeight="42" foregroundColor="white" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" zPosition="1"/>
-		<panel name="MenuKeyChButton" />
+		<widget name="target" position="680,165" size="1160,44" font="youvix-b;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1"/>
+		<widget name="filelist" position="680,215" size="1160,10*44" font="youvix-r;32" itemHeight="44" foregroundColor="white" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" zPosition="1"/>
+		<widget name="textbook" position="680,650" size="1160,44" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground" halign="center" valign="center" zPosition="1"/>
+		<widget name="booklist" position="680,700" size="1160,5*44" font="youvix-r;32" itemHeight="44" foregroundColor="white" backgroundColor="menubackground" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" zPosition="1"/>
+		<ePixmap pixmap="buttons/key_channel.png" position="209,1010" size="61,44" alphatest="blend" transparent="1" zPosition="1"/>
 		<widget name="red" position="0,0" size="0,0"/> #To reduce debug noise.
 		<widget name="green" position="0,0" size="0,0"/> #To reduce debug noise.
 		<widget name="yellow" position="0,0" size="0,0"/> #To reduce debug noise.
@@ -2510,7 +2510,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<widget name="list" position="680,222" size="1160,708" font="youvix-r;28" itemHeight="50" pbarHeight="20" pbarLargeWidth="58" pbarColour="lightcolour" pbarColourSeen="green" pbarColourRec="red" pbarColourPlayRec="yellow" partIconeShift="0" spaceIconeText="8" iconsWidth="37" spaceLeft="1" spaceRight="2" durationWidth="95" dateWidth="220" paddingFactor="8" foregroundColor="white" backgroundColor="menubackground" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
 		<panel name="MenuKeyAutoTemplate" />
 		<panel name="MenuButtonBar" />
-		<ePixmap pixmap="buttons/key_reclist.png" alphatest="blend" position="803,1010" size="61,44" zPosition="10"/>
+		<ePixmap pixmap="buttons/key_reclist.png" alphatest="blend" position="333,1010" size="61,44" zPosition="10"/>
 	</screen>
 	<screen name="MovieSelectionSlim" position="fill" backgroundColor="transparent" flags="wfNoBorder" >
 		<eLabel position="0,0" size="960,1080" backgroundColor="menubackground" zPosition="-1" />
@@ -2547,9 +2547,8 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<widget name="list" position="15,46" size="945,638" font="youvix-r;28" itemHeight="50" pbarHeight="20" pbarLargeWidth="58" pbarColour="lightcolour" pbarColourSeen="green" pbarColourRec="red" pbarColourPlayRec="yellow" partIconeShift="0" spaceIconeText="8" iconsWidth="37" spaceLeft="1" spaceRight="2" durationWidth="95" dateWidth="220" paddingFactor="8" foregroundColor="white" backgroundColor="menubackground" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2"/>
 		<panel name="BottomMenuBlock2" />
 		<panel name="MenuKeyAutoTemplate" />
-		<ePixmap pixmap="buttons/key_0.png" alphatest="blend" position="679,1010" size="61,44" zPosition="10"/>
 		<panel name="MenuButtonBar" />
-		<ePixmap pixmap="buttons/key_reclist.png" alphatest="blend" position="803,1010" size="61,44" zPosition="10"/>
+		<ePixmap pixmap="buttons/key_reclist.png" alphatest="blend" position="333,1010" size="61,44" zPosition="10"/>
 		<panel name="MenuClock" />
 		<widget source="session.CurrentService" backgroundColor="black" font="youvix-r;29" foregroundColor="yellow" halign="center" noWrap="1" position="965,90" valign="center" render="Label" size="965,40" transparent="1" zPosition="4">
 		  <convert type="ServiceName" nostrip="1">  ◦  ,NUMBER,NAME,ORBPOS,PROVIDER</convert>
@@ -2792,7 +2791,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<widget name="DNSInfo_Check" pixmaps="icons/lock_on.png,icons/lock_error.png" position="1545,565" size="35,35" alphatest="blend" zPosition="1" />
 		<widget name="DNSInfo_Text" position="1595,564" size="150,44" font="youvix-r;32" backgroundColor="menubackground" transparent="1" foregroundColors="darkergrey,grey,lightcolour" text="Info" zPosition="1" />
 		<widget name="DNSInfo" position="1595,564" size="150,44" transparent="1" zPosition="2"/>
-		<widget name="EditSettingsButton" pixmaps="buttons/blue.png,buttons/blue.png" position="1050,636" size="35,35" transparent="1" alphatest="blend" zPosition="1" />
+		<widget name="EditSettingsButton" pixmaps="buttons/grey.png,buttons/blue.png" position="1050,636" size="35,35" transparent="1" alphatest="blend" zPosition="1" />
 		<widget name="EditSettings_Text" position="1095,635" size="160,44" font="youvix-r;32" backgroundColor="menubackground" transparent="1" foregroundColors="#ffffff,#ffffff,grey" zPosition="1" />
 		<widget name="InfoText" position="80,650" size="590,265" font="youvix-r;22" foregroundColor="white" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1" />
 		<widget name="InfoTextBorder" position="80,680" size="590,265"/>
@@ -3990,7 +3989,6 @@ self.autoResize()
 		<panel name="MenuMyVirtualKeyboardText" />
 		<ePixmap pixmap="screens/virtualkeyboard.png" position="680,165" size="972,541" alphatest="blend" zPosition="-1" />
 		<widget name="prompt" position="690,170" size="750,35" font="youvix-r;30" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" />
-		<ePixmap pixmap="buttons/vkey_text.png" position="690,209" size="952,52" zPosition="-1" alphatest="blend" scale="1" />
 		<widget name="text" position="695,214" size="944,50" font="youvix-r;34" foregroundColor="white" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right" valign="center" />
 		<widget name="list" position="690,270" size="952,340" foregroundColor="white" backgroundColor="menubackground" transparent="1" selectionDisabled="1" />
 		<widget name="locale" position="690,665" size="800,30" font="youvix-r;25" foregroundColor="white" backgroundColor="menubackground" transparent="1" />
