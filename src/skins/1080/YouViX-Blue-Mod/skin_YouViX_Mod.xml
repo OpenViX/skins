@@ -446,6 +446,7 @@
 		<eLabel position="75,665" size="1770,120" backgroundColor="menubackground" zPosition="-1" />
 		<eLabel text="Infobar Grid EPG" position="85,677" size="800,45" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<ePixmap position="345,735" size="50,32" pixmap="icons/arrow-up.png" alphatest="blend" zPosition="1"/>
+		<widget addon="Pager" connection="list" maxPages="1" position="440,747" size="240,35" bubbletextFont="youvix-r;28" transparent="1" bubbletextPadding="4" bubbletextBackgroundColor="lightcolour" itemHeight="35" itemWidth="240" foregroundColor="white"/>
 		<eLabel position="0,785" size="75,170" backgroundColor="menubackground" zPosition="-1" />
 		<ePixmap pixmap="icons/arrow-left.png" position="35,847" size="32,48" alphatest="blend" zPosition="5" />
 		<eLabel position="75,785" size="600,170" backgroundColor="menubackground2" zPosition="-1" />
@@ -618,6 +619,7 @@
 		<eLabel text="Multi EPG" position="85,2" size="500,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<panel name="ChannelSelectionPicon" />
 		<panel name="ChannelSelectionBouquetName" />
+		<widget addon="Pager" connection="list" maxPages="1" position="630,218" size="240,35" bubbletextFont="youvix-r;28" transparent="1" bubbletextPadding="4" bubbletextBackgroundColor="lightcolour" itemHeight="35" itemWidth="240" foregroundColor="white"/>
 		<widget name="now_text" position="920,210" size="228,51" text="Now" font="youvix-r;32" halign="center" valign="center" foregroundColor="white" backgroundColor="lightcolour" transparent="1" zPosition="2" />
 		<widget name="now_button" pixmap="epg/now_next_more.png" position="920,210" size="228,51" alphatest="blend" zPosition="1" />
 		<widget name="now_button_sel" pixmap="epg/now_next_more_on.png" position="920,210" size="228,51" alphatest="blend" zPosition="1" />
@@ -659,12 +661,12 @@
 		<widget source="Event" render="Label" position="520,90" size="1280,35" font="youvix-r;31" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" noWrap="0" zPosition="1" >
 			<convert type="EventName">Name</convert>
 		</widget>
-		<ePixmap pixmap="icons/info2.png" position="1680,104" size="26,26" alphatest="blend" transparent="1" zPosition="2" />
-		<widget source="Event" render="Label" position="1715,103" font="youvix-r;24" size="120,35" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2" >
+		<ePixmap pixmap="icons/info2.png" position="1680,94" size="26,26" alphatest="blend" transparent="1" zPosition="2" />
+		<widget source="Event" render="Label" position="1715,93" font="youvix-r;24" size="120,35" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2" >
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="360,129" size="1440,149" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="top" zPosition="1">
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="360,128" size="1440,150" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="top" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1380,30" zPosition="1" size="250,40" font="youvix-b;32" foregroundColor="clockcolour" backgroundColor="menubackground" transparent="1" noWrap="1" halign="right">
@@ -675,6 +677,7 @@
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
 		<ePixmap position="center,280" size="50,32" pixmap="icons/arrow-up.png" alphatest="blend" zPosition="1"/>
+		<widget addon="Pager" connection="list" maxPages="1" position="center+100,279" size="240,33" bubbletextFont="youvix-r;28" transparent="1" bubbletextPadding="4" bubbletextBackgroundColor="lightcolour" itemHeight="33" itemWidth="240" foregroundColor="white"/>
 		<widget name="timeline_text" position="center,315" size="1760,40" itemHeight="40" TimelineFont="youvix-b;24" foregroundColor="white" transparent="1" zPosition="2"/>
 		<widget name="timeline_now" position="center,350" size="19,684" pixmap="epg/timeline-now3.png" transparent="1" alphatest="blend" zPosition="4" scale="1"/>
 		<widget name="bouquetlist" position="center,357" size="1760,665" itemHeight="43" font="youvix-r;30" backgroundColor="menubackground" foregroundColorSelected="white" backgroundColorSelected="darkcolour" scrollbarMode="showNever" transparent="0" zPosition="5" />
@@ -742,6 +745,7 @@
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
 		<ePixmap position="center,335" size="50,32" pixmap="icons/arrow-up.png" alphatest="blend" zPosition="1"/>
+		<widget addon="Pager" connection="list" maxPages="1" position="center+100,334" size="240,33" bubbletextFont="youvix-r;28" transparent="1" bubbletextPadding="4" bubbletextBackgroundColor="lightcolour" itemHeight="33" itemWidth="240" foregroundColor="white"/>
 		<widget name="timeline_text" position="center,370" size="1760,40" itemHeight="40" TimelineFont="youvix-b;24" foregroundColor="white" transparent="1" zPosition="2"/>
 		<widget name="timeline_now" position="center,405" size="19,629" pixmap="epg/timeline-now3.png" transparent="1" alphatest="blend" zPosition="4" />
 		<widget name="bouquetlist" position="center,412" size="1760,610" itemHeight="43" font="youvix-r;30" backgroundColor="menubackground" foregroundColorSelected="white" backgroundColorSelected="darkcolour" scrollbarMode="showNever" transparent="0" zPosition="5" />
