@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 04.10.2025 -->
+	<!--  Modified by Orlandox 06.10.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -789,7 +789,7 @@
 		<widget name="AboutScrollLabel" position="750,267" size="1050,660" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 04.10.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 06.10.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -1560,6 +1560,18 @@
 		<panel name="MenuIntroductionWidget" />
 	</screen>
 
+	<!-- ## Subservices Quickzap ## -->
+	<screen name="SubservicesQuickzap" position="c-384,c-15" size="768,300" title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="675,0" zPosition="1" size="30,30" alphatest="blend">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<eLabel text="Subservices" position="0,0" size="705,30" font="youvix-r;20" backgroundColor="menubackground2"/>
+		<widget name="CurrentSubserviceNumber" position="0,30" size="75,35" font="youvix-r;32" backgroundColor="menubackground2"/>
+		<widget source="session.CurrentService" render="Label" position="75,30" size="630,35" font="youvix-r;32" backgroundColor="menubackground2">
+			<convert type="ServiceName">NameOnly</convert>
+		</widget>
+	</screen>
+
 	<!-- ## Console Output Box ## -->
 	<screen name="Console" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="InfoPanel" />
@@ -1815,7 +1827,7 @@
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<widget name="FullDescription" position="680,165" size="1160,750" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="top" transparent="1" zPosition="1" />
+		<widget name="FullDescription" position="680,165" size="1160,785" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="top" transparent="1" zPosition="1" />
 		<widget source="Service" render="Picon" position="170,500" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
