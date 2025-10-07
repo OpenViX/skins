@@ -1563,13 +1563,14 @@
 	</screen>
 
 	<!-- ## Subservices Quickzap ## -->
-	<screen name="SubservicesQuickzap" position="c-384,c-15" size="768,300" title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
-		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="675,0" zPosition="1" size="30,30" alphatest="blend">
+	<screen name="SubservicesQuickzap" position="c-375,c-45" size="750,100" title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="713,7" zPosition="1" size="30,30" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<eLabel text="Subservices" position="0,0" size="705,30" font="youvix-r;20" backgroundColor="menubackground2"/>
-		<widget name="CurrentSubserviceNumber" position="0,30" size="75,35" font="youvix-r;32" backgroundColor="menubackground2"/>
-		<widget source="session.CurrentService" render="Label" position="75,30" size="630,35" font="youvix-r;32" backgroundColor="menubackground2">
+		<eLabel text="Subservices" position="0,0" size="750,45" font="youvix-r;32" backgroundColor="menubackground2" foregroundColor="darkcolour" />
+		<eLabel position="0,43" size="750,2" zPosition="1" backgroundColor="darkergrey" />
+		<widget name="CurrentSubserviceNumber" position="0,45" size="75,44" font="youvix-r;32" backgroundColor="menubackground2"/>
+		<widget source="session.CurrentService" render="Label" position="75,45" size="675,44" font="youvix-r;32" backgroundColor="menubackground2">
 			<convert type="ServiceName">NameOnly</convert>
 		</widget>
 	</screen>
