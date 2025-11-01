@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 26.10.2025 -->
+	<!--  Modified by Orlandox 01.11.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -711,8 +711,11 @@
 	<screen name="GraphicalEPGPIG" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Graphics Grid EPG" >
 		<ePixmap pixmap="screens/menu_background.png" position="0,0" size="1920,1080" zPosition="-1"/>
 		<eLabel text="Graphics Grid EPG" position="60,10" size="720,45" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1"/>
-		<eLabel text=">" font="youvix-r;32" position="60,64" size="35,38" foregroundColor="darkcolour" backgroundColor="menubackground" transparent="1" zPosition="1"/>
-		<widget source="Title" render="Label" position="90,66" size="840,38" font="youvix-r;32" foregroundColor="darkcolour" backgroundColor="menubackground" valign="center" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="75,42" size="800,40" zPosition="1" foregroundColor="yellow" transparent="1" font="youvix-r;32" backgroundColor="menubackground2" borderColor="black" borderWidth="2" noWrap="1" valign="center" halign="left">
+			<convert type="ServiceName">NameOnly</convert>
+		</widget>
+		<eLabel text=">" font="youvix-r;32" position="60,77" size="35,38" foregroundColor="darkcolour" backgroundColor="menubackground" transparent="1" zPosition="1"/>
+		<widget source="Title" render="Label" position="90,79" size="840,38" font="youvix-r;32" foregroundColor="darkcolour" backgroundColor="menubackground" valign="center" transparent="1" />
 		<widget source="Service" render="Picon" position="60,125" size="280,168" transparent="1" zPosition="2" alphatest="blend">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
@@ -789,7 +792,7 @@
 		<widget name="AboutScrollLabel" position="750,232" size="1050,693" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 26.10.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 01.11.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
