@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 05.12.2025 -->
+	<!--  Modified by Orlandox 14.12.2025 -->
 
 	<!--  ## Head ##  -->
 
@@ -792,7 +792,7 @@
 		<widget name="AboutScrollLabel" position="750,232" size="1050,693" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 05.12.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 14.12.2025 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2473,7 +2473,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- ## Jump picture for movie ## -->
 	<screen name="MinuteInput" position="center,center" size="400,150" >
 		<eLabel text="Seek" font="youvix-b;36" position="center,-9" size="330,42" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" zPosition="4" halign="center"/>
-		<widget name="minutes" font="youvix-r;32" position="center-60,center-10" size="120,40" transparent="1" zPosition="4" halign="left"/>
+		<widget name="minutes" font="youvix-r;32" position="center-60,center-10" size="120,40" transparent="1" zPosition="4"/>
 		<eLabel text="mins" font="youvix-r;32" position="center+110,center-10" size="330,40" foregroundColor="white" backgroundColor="background2" transparent="1" zPosition="4"/>
 		<eLabel text="+" font="youvix-r;36" position="-10,20" size="40,44" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" zPosition="4" halign="center"/>
 		<ePixmap pixmap="buttons/key_up.png" position="18,20" size="61,44" alphatest="blend" zPosition="1" />
@@ -3391,13 +3391,12 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		</widget>
 	</screen>
 	<screen name="Pic_Full_View" position="fill" flags="wfNoBorder">
-		<eLabel position="144,45" zPosition="0" size="1632,918" backgroundColor="black" />
-		<widget name="pic" position="144,45" size="1632,918" alphatest="blend" zPosition="1" />
-		<widget name="point" position="10,15" size="25,25" pixmap="icons/epgclock.png" alphatest="blend" zPosition="3" />
-		<widget name="play_icon" position="40,12" size="31,31" pixmap="icons/movie_play.png" alphatest="blend" zPosition="3"/>
-		<widget source="file" render="Label" position="75,15" size="600,27" font="youvix-r;22" foregroundColor="yellow" backgroundColor="menubackground" noWrap="1" transparent="1" zPosition="3"/>
-		<panel name="MenuButtonBar" />
-		<panel name="MenuKeyAutoTemplate" />
+		<panel name="MenuClock" />
+		<eLabel position="58,63" zPosition="0" size="1804,1015" backgroundColor="white" />
+		<widget name="pic" position="60,65" size="1800,1013" alphatest="blend" zPosition="1" />
+		<widget name="point" position="10,16" size="35,35" pixmap="icons/decode.png" alphatest="blend" zPosition="3" />
+		<widget name="play_icon" position="50,14" size="31,31" pixmap="icons/movie_play.png" alphatest="blend" zPosition="3"/>
+		<widget source="file" render="Label" position="85,15" size="1000,32" font="youvix-r;28" foregroundColor="yellow" backgroundColor="menubackground" noWrap="1" transparent="1" zPosition="3"/>
 	</screen>
 
 	<!-- ## Picture Player FS ## -->
