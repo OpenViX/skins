@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 11.01.2026 -->
+	<!--  Modified by Orlandox 21.01.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -792,7 +792,7 @@
 		<widget name="AboutScrollLabel" position="750,232" size="1050,693" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 11.01.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 21.01.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -1445,7 +1445,7 @@
 		<eLabel position="75,0" size="1105,150" backgroundColor="menubackground" zPosition="-1" />
 		<ePixmap pixmap="extensions/smallshadowline.png" position="0,149" size="1180,3" zPosition="2"/>
 		<eLabel position="1180,0" size="2,929" zPosition="-1" backgroundColor="darkergrey" />
-		<eLabel position="1180,370" size="740,2" zPosition="-1" backgroundColor="darkergrey" />
+		<eLabel position="1180,350" size="740,2" zPosition="-1" backgroundColor="darkergrey" />
 		<panel name="BottomMenuBlock2"/>
 		<panel name="MenuMyChannelText"/>
 		<eLabel position="0,150" size="1180,780" backgroundColor="menubackground" zPosition="-1" />
@@ -1463,7 +1463,8 @@
 		<widget source="session.CurrentService" render="Label" position="90,45" size="800,40" zPosition="1" foregroundColor="yellow" transparent="1" font="youvix-r;32" backgroundColor="menubackground" borderColor="black" borderWidth="2" noWrap="1" valign="center" halign="left">
 			<convert type="ServiceName">NameOnly</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1190,385" size="730,527" font="youvix-r;30" backgroundColor="menubackground" borderColor="black" borderWidth="3" foregroundColor="lightgrey" zPosition="2" transparent="1" halign="left">
+		<eLabel position="1182,352" size="738,577" backgroundColor="black" zPosition="-1"/>
+		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=50,repeat=5,always=0,oneshot=1,startdelay=8000,wrap" position="1190,357" size="730,560" font="youvix-r;30" backgroundColor="black" foregroundColor="lightgrey" zPosition="2" transparent="1" halign="left">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget addon="Pager" connection="list" maxPages="1" position="90,109" size="240,35" bubbletextFont="youvix-r;28" transparent="1" bubbletextPadding="4" bubbletextBackgroundColor="lightcolour" itemHeight="35" itemWidth="240" foregroundColor="white"/>
