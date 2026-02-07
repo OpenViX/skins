@@ -178,7 +178,7 @@
 	<!-- JobView -->
 
 	<screen name="JobView" position="fill" title="Job View" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="job_name" render="Label" position="780,105" size="1110,52" font="Regular;37"/>
 		<widget source="job_task" render="Label" position="780,282" size="1110,45" font="Regular;36"/>
 		<widget source="job_progress" render="Progress" position="780,390" size="1110,54" borderWidth="2" backgroundColor="#254f7497"/>
@@ -391,7 +391,7 @@
 	<!-- Simple channelselection -->
 
 	<screen name="SimpleChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="list" position="780,108" size="1110,900" itemHeight="45" transparent="1" serviceNumberFont="Regular;34"
 			scrollbarMode="showOnDemand" serviceInfoFont="Regular;32" serviceNameFont="Regular;34" serviceItemHeight="45"
 			picServiceEventProgressbar="window/progress.png" progressbarHeight="15" progressBarWidth="60"
@@ -404,7 +404,7 @@
 	<!-- EPG Stuff -->
 
 	<screen name="EPGSelection" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="list" position="780,100" size="1110,912" itemHeight="45" setEventItemFont="Regular;32" setColWidths="120,220" setColGap="40" setIconDistance="10" transparent="1" scrollbarMode="showOnDemand"/>
 		<widget source="Service" render="Label" position="30,525" size="720,30" foregroundColor="foreground" font="Regular;26" valign="center" halign="center" transparent="1" zPosition="1">
 			<convert type="TransponderInfo"/>
@@ -438,7 +438,7 @@
 	</screen>
 
 	<screen name="EventView" title="Eventview" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="FullDescription" position="780,100" size="1110,912" transparent="1" font="Regular;33" halign="block"/>
 		<widget source="session.CurrentService" render="Label" position="30,525" size="720,30" foregroundColor="foreground" font="Regular;26" valign="center" halign="center" transparent="1" zPosition="1">
 			<convert type="TransponderInfo"/>
@@ -468,13 +468,13 @@
 	</screen>
 
 	<screen name="EventViewContextMenu" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="ConfigMenuTemplate"/>
 		<panel name="DescriptionTemplate"/>
 	</screen>
 
 	<screen name="EPGSelectionMulti" title="EPG Selection" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="date" position="780,100" size="1110,38" font="Regular;34" transparent="1" valign="center" halign="center"/>
 		<widget name="list" position="780,210" size="1110,17*45" itemHeight="45" setEventItemFont="Regular;28" setEventTimeFont="Regular;22" setColWidths="350,150"
 			setColGap="20" setTimeWidth="135" setIconDistance="10" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand"/>
@@ -497,7 +497,7 @@
 	<!-- EPG Search -->
 
 	<screen name="EPGSearch" title="EPG Search" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="list" position="780,100" size="1110,912" itemHeight="38" setEventItemFont="Regular;32" setEventTimeFont="Regular;32"
 						setColWidths="120,220" setColGap="40" setIconDistance="-5" setPiconSize="50,30" setPiconDistance="0" setPboxDistance="80"
 						backgroundColor="background" transparent="1" scrollbarMode="showOnDemand"/>
@@ -518,7 +518,7 @@
 	<!-- GraphMultiEPG -->
 
 	<screen name="GraphMultiEPG" title="Electronic Program Guide" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="Event" render="Label" position="780,105" size="225,36" backgroundColor="background" transparent="1" foregroundColor="secondFG" font="Regular;33" valign="top">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">ShortDate</convert>
@@ -712,7 +712,7 @@
 	<!-- Softcam Setup -->
 
 	<screen name="SoftcamSetup" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="ConfigTemplate"/>
 		<widget name="info" position="780,315" size="1110,637" font="Fixed;27"/>
 	</screen>
@@ -720,7 +720,7 @@
 	<!-- ChoiceBox -->
 
 	<screen name="ChoiceBox" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="TextTemplate"/>
 		<widget name="list" position="780,100" size="1110,900" itemHeight="50" font="Regular;33" scrollbarMode="showOnDemand"/>
 	</screen>
@@ -756,14 +756,14 @@
 	<!-- Hotkey -->
 
 	<screen name="HotkeySetup" title="" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="list" position="780,100" size="1110,874" scrollbarMode="showOnDemand"/>
 		<widget name="choosen" position="0,570" size="750,360" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="780,983" size="1110,29" zPosition="1" font="Regular;24" halign="center"/>
 	</screen>
 
 	<screen name="HotkeySetupSelect" title="" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="list" position="780,100" size="1110,800" scrollbarMode="showOnDemand"/>
 		<widget name="choosen" position="0,570" size="750,360" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="780,913" size="1110,100" zPosition="1" font="Regular;24" halign="center"/>
@@ -772,7 +772,7 @@
 	<!--CI Config Menu -->
 
 	<screen name="CIconfigMenu" title="CI Assignment" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="CAidList_desc" render="Label" position="825,180" size="990,45" backgroundColor="background" transparent="1" font="Regular;36"/>
 		<eLabel position="825,238" size="990,3" backgroundColor="black"/>
 		<eLabel position="825,241" size="990,3" backgroundColor="grey"/>
@@ -787,7 +787,7 @@
 	<!-- Console -->
 
 	<screen name="Console" title="Command execution" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="text" position="825,100" size="1035,912" itemHeight="38" font="Fixed;28" transparent="1" foregroundColor="white" scrollbarMode="showOnDemand"/>
 	</screen>
 
@@ -977,7 +977,7 @@
 	<!-- Movie Selection -->
 
 	<screen name="MovieSelection" title="Movie Selection" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<ePixmap pixmap="dvr/scale1024.png" position="30,565" size="720,12" zPosition="1"/>
 		<widget source="session.CurrentService" render="PositionGauge" position="30,562" size="720,18" zPosition="4" transparent="1" pointer="dvr/position_pointer1.png:720,4">
 			<convert type="ServicePosition">Gauge</convert>
@@ -1048,7 +1048,7 @@
 	<!-- Audio and subtitle selection -->
 
 	<screen flags="wfNoBorder" name="AudioSelection" position="fill" title="Audio">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="config" position="900,105" size="990,280" itemHeight="45" font="Regular;32" scrollbarMode="showOnDemand"/>
 		<widget source="key_red" render="Pixmap" pixmap="buttons/red.png" position="810,110" size="34,34" alphatest="on">
 			<convert type="ConditionalShowHide"/>
@@ -1090,7 +1090,7 @@
 	<!-- ChannelContextMenu -->
 
 	<screen name="ChannelContextMenu" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="ConfigMenuTemplate"/>
 	</screen>
 
@@ -1105,7 +1105,7 @@
 	<!-- MovieContextMenu -->
 
 	<screen name="MovieContextMenu" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="ConfigMenuTemplate"/>
 	</screen>
 
@@ -1118,7 +1118,7 @@
 	<!-- Bouquet Selector -->
 
 	<screen name="BouquetSelector" position="fill" title="Choose bouquet" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="ConfigMenuTemplate"/>
 	</screen>
 
@@ -1129,20 +1129,20 @@
 	</screen>
 
 	<screen name="TimerEditList" position="fill" title="Timer Overview" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="timerlist" position="780,105" size="1110,900" scrollbarMode="showOnDemand" itemHeight="90" rowSplit="45" iconMargin="15"
 		setEventNameFont="Regular;33" setServiceNameFont="Regular;30" setFont="Regular;28" satPosLeft="250" zPosition="2" foregroundColor="foreground"/>
 		<widget name="description" position="30,570" size="720,300" font="Regular;32" valign="top" halign="block"/>
 	</screen>
 
 	<screen name="TimerLog" position="fill" title="Timer log" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="loglist" position="780,105" size="1110,900" itemHeight="90" scrollbarMode="showOnDemand" font="Regular;32"/>
 		<widget name="logentry" position="30,570" size="720,300" font="Regular;32" valign="top"/>
 	</screen>
 
 	<screen name="TimerSanityConflict" position="fill" title="Timer sanity error" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="key_red" position="780,110" size="34,34" render="Pixmap" pixmap="buttons/red.png" alphatest="on"/>
 		<widget name="key_red" position="840,110" size="370,38" backgroundColor="black" zPosition="1" transparent="1" font="Regular;34" halign="left"/>
 		<widget source="key_green" position="1350,110" size="34,34" render="Pixmap" pixmap="buttons/green.png" alphatest="on"/>
@@ -1157,28 +1157,28 @@
 	</screen>
 
 	<screen name="TimerSelection" position="fill" title="Timer selection" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="timerlist" position="780,100" size="1110,912" scrollbarMode="showOnDemand" itemHeight="76" rowSplit="42" setEventNameFont="Regular;32" setServiceNameFont="Regular;28" setFont="Regular;28" satPosLeft="250"/>
 	</screen>
 
 	<screen name="PluginBrowser" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="list" position="780,100" size="1110,912" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="PluginDownloadBrowser" title="Downloadable plugins" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="text" position="780,105" size="1110,75" zPosition="-1" transparent="1" font="Regular;32" valign="center" halign="center"/>
 		<widget name="list" position="780,100" size="1110,912" zPosition="3" transparent="0" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="FileBrowser" title="DVD File Browser" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="filelist" position="780,100" size="1110,912" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="ServiceInfoSimple" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="infolist" position="780,123" size="1110,840" itemHeight="40" font="Regular;31" selectionDisabled="1" scrollbarMode="showNever"/>
 		<widget addon="Pager" connection="infolist" position="780,985" size="1110,25" spacing="30" transparent="1" backgroundColor="background" zPosition="5"/>
 	</screen>
@@ -1201,20 +1201,20 @@
 	</screen>
 
 	<screen name="BackupSelection" title="Select files/folders to backup" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="checkList" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" backgroundColor="background" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<!-- Ipkg installer -->
 
 	<screen name="IpkgInstaller" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="list" position="780,100" size="1110,798" itemHeight="38" font="Regular;28" backgroundColor="background" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
 		<widget source="introduction" render="Label" position="780,975" size="1110,37" backgroundColor="background" zPosition="1" transparent="1" foregroundColor="white" font="Regular;33" halign="center"/>
 	</screen>
 
 	<screen name="Ipkg" title="Installing Software" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="package" position="780,110" size="1110,35" backgroundColor="darkgrey" transparent="1" font="Regular;32"/>
 		<widget name="status" position="780,163" size="1110,70" backgroundColor="darkgrey" transparent="1" font="Regular;32"/>
 		<panel name="SliderTemplate"/>
@@ -1223,21 +1223,21 @@
 	<!-- Choose upgrade source -->
 
 	<screen name="IPKGMenu" title="Select IPKG source" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="filelist" position="780,105" size="1110,450" itemHeight="38" font="Regular;28" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<!-- Edit upgrade source -->
 
 	<screen name="IPKGSource" title="IPKG source" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="text" position="30,570" size="1860,45" font="Regular;34" zPosition="3" transparent="1"/>
 	</screen>
 
 	<!-- Packet Manager -->
 
 	<screen name="PacketManager" title="IPKG upgrade" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="list" render="Listbox" position="780,105" size="1110,858" zPosition="3" transparent="1" scrollbarMode="showOnDemand">
 	<convert type="TemplatedMultiContent">
 		{"template": [
@@ -1254,7 +1254,7 @@
 	</screen>
 
 	<screen name="UpdatePlugin" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="package" render="Label" position="780,110" size="1110,35" backgroundColor="darkgrey" transparent="1" font="Regular;32"/>
 		<widget source="status" render="Label" position="780,163" size="1110,70" backgroundColor="darkgrey" transparent="1" font="Regular;32"/>
 		<panel name="SliderTemplate"/>
@@ -1263,7 +1263,7 @@
 	</screen>
 
 	<screen name="UpdatePluginMenu" title="Softwaremanager" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="menu" render="Listbox" position="780,105" size="1110,900" zPosition="3" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 			{"template": [
@@ -1287,7 +1287,7 @@
 	</screen>
 
 	<screen name="PluginManager" title="Plugin manager" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="list" render="Listbox" position="780,105" size="1110,825" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"templates":
@@ -1312,7 +1312,7 @@
 	</screen>
 
 	<screen name="PluginManagerInfo" title="Plugin manager activity" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="list" render="Listbox" position="780,105" size="1110,787" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1329,7 +1329,7 @@
 	</screen>
 
 	<screen name="PluginManagerHelp" title="Plugin manager help" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="list" render="Listbox" position="780,105" size="1110,787" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1346,7 +1346,7 @@
 	</screen>
 
 	<screen name="PluginDetails" position="fill" title="Plugin Details" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="statuspic" position="1306,952" size="48,48" alphatest="on"/>
 		<widget source="author" render="Label" position="780,105" size="1100,45" zPosition="10" font="Regular;28" backgroundColor="background" transparent="1"/>
 		<widget name="detailtext" position="780,200" size="1100,350" font="Regular;28" backgroundColor="background" transparent="1"/>
@@ -1363,7 +1363,7 @@
 	<!-- Restore -->
 
 	<screen name="RestoreMenu" title="Restore Backups" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="filelist" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 
@@ -1494,7 +1494,7 @@
 	<!-- ImageWizard -->
 
 	<screen name="ImageWizard" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<eLabel text="Welcome..." position="30,7" size="1830,75" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="left"/>
 		<widget name="text" position="1090,153" size="510,495" font="Regular;33"/>
 		<widget source="list" render="Listbox" position="864,661" size="735,270" scrollbarMode="showOnDemand">
@@ -1508,7 +1508,7 @@
 	</screen>
 
 	<screen name="SoftwareManagerInfo" title="SoftwareManager information" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="list" render="Listbox" position="780,100" size="1110,912" scrollbarMode="showOnDemand" selectionDisabled="0">
 		<convert type="TemplatedMultiContent">
 			{"template": [
@@ -1523,7 +1523,7 @@
 	</screen>
 
 	<screen name="AdapterSetupConfiguration" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="menulist" position="780,105" size="1110,456" itemHeight="38" font="Regular;28" zPosition="10" scrollbarMode="showOnDemand"/>
 		<widget source="description" render="Label" position="780,547" size="1110,300" transparent="1" font="Regular;31" valign="center" halign="center"/>
 		<widget source="IFtext" render="Label" position="1270,880" size="247,37" transparent="1" zPosition="10" font="Regular;31" halign="right"/>
@@ -1533,7 +1533,7 @@
 	</screen>
 
 	<screen name="AdapterSetup" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<!--panel name="KeyTextTemplate"/ -->
 		<widget name="config" position="780,105" size="1110,418" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 		<widget source="introduction" render="Label" position="780,619" size="1110,40" font="Regular;33" halign="center"/>
@@ -1554,13 +1554,13 @@
 	</screen>
 
 	<!-- screen name="NameserverSetup" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="config" position="780,105" size="1110,646" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 		<widget source="introduction" render="Label" position="780,975" size="1110,34" transparent="1" zPosition="10" font="Regular;30" valign="center" halign="center"/>
 	</screen -->
 
 	<screen name="NetworkAdapterSelection" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="list" render="Listbox" position="780,105" size="1110,420" zPosition="10" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1578,7 +1578,7 @@
 	</screen>
 
 	<screen name="NetworkAdapterTest" title="Network test" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="InfoText" position="780,105" size="1100,455" zPosition="25" font="Regular;31"/>
 		<widget name="InfoTextBorder" position="780,108" size="1110,525"/>
 
@@ -1618,7 +1618,7 @@
 	</screen>
 
 	<screen name="NetworkBrowser" title="Network Neighbourhood" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="list" render="Listbox" position="780,105" size="1110,858" zPosition="10" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 		{"template": [
@@ -1638,7 +1638,7 @@
 	</screen>
 
 	<screen name="AutoMountManager" title="MountManager" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="config" render="Listbox" position="780,105" size="1110,720" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1655,7 +1655,7 @@
 	</screen>
 
 	<screen name="UserManager" title="UserManager" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="config" render="Listbox" position="780,105" size="1110,630" zPosition="3" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1671,7 +1671,7 @@
 	</screen>
 
 	<screen name="AutoMountView" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="legend1" render="Label" position="780,105" size="300,75" transparent="1" zPosition="1" font="Regular;27" valign="center" halign="left"/>
 		<widget source="legend2" render="Label" position="1080,105" size="525,75" transparent="1" zPosition="1" font="Regular;27" valign="center" halign="center"/>
 		<widget source="legend3" render="Label" position="1590,105" size="300,75" transparent="1" zPosition="1" font="Regular;27" valign="center" halign="right"/>
@@ -1694,7 +1694,7 @@
 	</screen>
 
 	<screen name="AutoMountEdit" title="MountEdit" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="VKeyIcon" pixmap="buttons/key_text.png" alphatest="on" zPosition="1" position="165,1032" size="52,38"/>
 		<widget name="config" position="780,105" size="1110,412" itemHeight="38" font="Regular;28" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
 		<widget name="HelpWindow" position="960,600" size="1,1" zPosition="1" transparent="1" alphatest="on"/>
@@ -1702,7 +1702,7 @@
 	</screen>
 
 	<screen name="UserDialog" position="fill" title="UserDialog" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="VKeyIcon" pixmap="buttons/key_text.png" alphatest="on" zPosition="1" position="165,1032" size="52,38"/>
 		<widget name="config" position="780,105" size="1110,412" itemHeight="38" font="Regular;28" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
 		<widget name="HelpWindow" position="960,600" size="1,1" zPosition="1" transparent="1" alphatest="on"/>
@@ -1710,14 +1710,14 @@
 	</screen>
 
 	<screen name="ScanIP" position="fill" title="Scan IP" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="config" position="780,105" size="1110,38" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<!-- WirelessLan -->
 
 	<screen name="WlanStatus" position="fill" title="Wireless Network State" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="LabelBSSID" render="Label" position="885,120" size="300,37" valign="left" font="Regular;30" transparent="1" foregroundColor="white"/>
 		<widget source="LabelESSID" render="Label" position="885,225" size="300,37" valign="center" font="Regular;30" transparent="1" foregroundColor="white"/>
 		<widget source="LabelQuality" render="Label" position="885,285" size="300,37" valign="center" font="Regular;30" transparent="1" foregroundColor="white"/>
@@ -1738,7 +1738,7 @@
 	</screen>
 
 	<screen name="WlanScan" position="fill" title="Choose a Wireless Network" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="list" render="Listbox" position="780,105" size="1110,525" scrollbarMode="showOnDemand">
 	<convert type="TemplatedMultiContent">
 		{"template": [
@@ -1759,7 +1759,7 @@
 	<!-- Input Device Configuration -->
 
 	<screen name="InputDeviceSelection" title="Select input device" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="list" render="Listbox" position="780,105" size="1110,720" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 			<!-- device, description, devicepng, divpng -->
@@ -1782,14 +1782,14 @@
 	<!-- Harddisk selection -->
 
 	<screen name="HarddiskSelection" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="hddlist" position="780,100" itemHeight="45" font="Regular;33" size="1110,912" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<!-- Harddisk setup -->
 
 	<screen name="HarddiskSetup" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="model" position="780,105" size="1110,37" font="Regular;36"/>
 		<widget name="capacity" position="780,210" size="1110,37" font="Regular;36"/>
 		<widget name="bus" position="780,255" size="1110,37" font="Regular;36"/>
@@ -1924,24 +1924,24 @@
 	<!-- PPanel -->
 
 	<screen flags="wfNoBorder" name="ToplevelPPanel" position="fill" title="Toplevel PPanel">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="nodelist" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 		<widget name="helptext" position="30,560" size="720,390" font="Regular;30" valign="center" halign="left"/>
 	</screen>
 
 	<screen flags="wfNoBorder" name="PPanel" position="fill" title="PPanel">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="nodelist" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 		<widget name="helptext" position="30,560" size="720,390" font="Regular;30" valign="center" halign="left"/>
 	</screen>
 
 	<screen flags="wfNoBorder" name="File" position="fill" title="PPanel File">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="progress" position="30,1024" size="1860,6" pixmap="window/slider100.png" transparent="1"/>
 	</screen>
 
 	<screen flags="wfNoBorder" name="Tarball" position="fill" title="PPanel Entry">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="progress" position="30,1024" size="1860,6" pixmap="window/slider100.png" transparent="1"/>
 	</screen>
 
@@ -1953,12 +1953,12 @@
 	<!-- TextBox -->
 
 	<screen name="TextBox" title="Message" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="text" position="780,123" size="1110,855" font="RegularSmall;32" halign="block"/><!-- font has scale "95" which is required by ScrollLabel to get the arithmetic to work properly, otherwise text will be truncated -->
 	</screen>
 
 	<screen name="TextBoxSplit" title="Message" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="text" position="780,123" size="1110,855" font="RegularSmall;32" split="1" dividechar=":" colposition="0"/><!-- font has scale "95" which is required by ScrollLabel to get the arithmetic to work properly, otherwise text will be truncated -->
 	</screen>
 
@@ -1970,7 +1970,7 @@
 	<!-- MessageBox -->
 
 	<screen name="MessageBox" title="Message" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="text" position="870,105" size="1020,900" font="Regular;33"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="780,105" size="80,80" alphatest="blend"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="780,105" size="80,80" alphatest="blend"/>
@@ -2039,7 +2039,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- Language selection -->
 
 	<screen name="LanguageSelection" title="Language selection" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="DescriptionTemplate"/>
 		<widget source="languages" render="Listbox" position="780,99" size="1110,918" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
@@ -2057,7 +2057,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- Skin Selector -->
 
 	<screen name="SkinSelector" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="DescriptionTemplate"/>
 		<widget name="preview" position="165,680" size="420,315" alphatest="on"/>
 		<widget source="skins" render="Listbox" position="780,100" size="1110,900" scrollbarMode="showOnDemand">
@@ -2076,7 +2076,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- Nim selection -->
 
 	<screen name="NimSelection" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="nimlist" render="Listbox" position="780,100" size="1110,912" scrollbarMode="showOnDemand">
 		<convert type="TemplatedMultiContent">
 			{"template": [
@@ -2109,7 +2109,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- Positioner setup -->
 
 	<screen name="PositionerSetup" title="Positioner setup" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="list" position="780,105" size="1110,380" itemHeight="38" font="Regular;28" backgroundColor="secondBG" transparent="1"/>
 		<eLabel text="Frequency:" position="780,525" size="330,37" backgroundColor="secondBG" transparent="1" font="Regular;30"/>
 		<widget name="frequency_value" position="1110,525" size="150,37" backgroundColor="secondBG" transparent="1" font="Regular;30"/>
@@ -2134,7 +2134,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- Positioner Setup Log -->
 
 	<screen name="PositionerSetupLog" position="fill" title="Positioner Setup Log">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="list" font="Console;30" position="780,107" size="1110,910"/>
 	</screen>
 
@@ -2154,7 +2154,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- Rotor Nim Selection -->
 
 	<screen name="RotorNimSelection" position="fill" title="select Slot">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="nimlist" position="795,105" size="1110,150"/>
 	</screen>
 
@@ -2225,7 +2225,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 
 	<screen name="SatNimSelection" title="Select Tuner" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="nimlist" position="780,105" size="1080,900"/>
 	</screen>
 
@@ -2268,12 +2268,12 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- About -->
 
 	<screen name="About" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="AboutScrollLabel" font="Regular;33" position="780,100" size="1110,912" zPosition="2" split="1" dividechar=":" colposition="0"/>
 	</screen>
 	<!-- Memory Info -->
 	<screen name="MemoryInfo" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="lmemtext" font="Regular;30" position="780,100" size="450,910" zPosition="1" halign="left" backgroundColor="secondBG" transparent="1"/>
 		<widget name="lmemvalue" font="Regular;30" position="780,100" size="450,910" zPosition="2" halign="right" backgroundColor="secondBG" transparent="1"/>
 		<widget name="rmemtext" font="Regular;30" position="1440,100" size="450,910" zPosition="1" halign="left" backgroundColor="secondBG" transparent="1"/>
@@ -2298,7 +2298,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 	<!-- Translation Info -->
 	<screen flags="wfNoBorder" name="TranslationInfo" position="fill">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="TranslatorName" render="Label" position="780,110" size="1110,120" font="Regular;28" halign="center" backgroundColor="background" transparent="1"/>
 		<widget source="TranslationInfo" render="Label" position="780,270" size="1110,570" font="Regular;28" halign="center" backgroundColor="background" transparent="1"/>
 	</screen>
@@ -2306,7 +2306,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- Virtual Keyboard -->
 
 	<screen name="VirtualKeyBoard" position="fill" zPosition="99" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="prompt" position="930,120" size="810,39" font="Regular;33" noWrap="1" transparent="1" valign="top"/>
 		<widget name="text" position="930,236" size="952,48" font="Regular;38" halign="right" noWrap="1" transparent="1" valign="center"/>
 		<widget name="list" position="930,375" size="952,340" selectionDisabled="1" transparent="1"/>
@@ -2365,7 +2365,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- AutoBackup -->
 
 	<screen name="Config" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<widget name="config" position="780,105" size="1110,300" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 		<widget name="statusbar" position="780,495" size="1110,30" font="Regular;28"/>
@@ -2375,14 +2375,14 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- PicturePlayer -->
 
 	<screen name="picshow" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="thn" position="363,547" size="390,375" alphatest="on"/>
 		<widget name="filelist" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" zPosition="3" scrollbarMode="showOnDemand"/>
 		<widget name="label" position="783,975" size="390,34" transparent="1" font="Regular;30"/>
 	</screen>
 
 	<screen name="Pic_Exif" title="Info" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget source="menu" render="Listbox" position="780,105" size="1110,892" selectionDisabled="1" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [MultiContentEntryText(pos = (7,10),size = (375,45),flags = RT_HALIGN_LEFT,text = 0),
@@ -2408,7 +2408,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- Inputbox -->
 
 	<screen name="InputBox" position="fill" title="Input" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="text" position="930,120" size="810,39" font="Regular;33" noWrap="1" transparent="1" valign="top"/>
 		<widget name="input"  position="930,236" size="952,48" font="Regular;38" halign="right" noWrap="1" transparent="1" valign="center"/>
 	</screen>
@@ -2416,7 +2416,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- Location Box -->
 
 	<screen name="LocationBox" position="fill" title="Select Location" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="text" position="780,105" size="1110,37" font="Regular;33"/>
 		<widget name="target" position="780,150" size="1110,37" valign="center" font="Regular;33"/>
 		<widget name="filelist" position="780,195" size="1110,310" zPosition="1" scrollbarMode="showOnDemand" selectionDisabled="1"/>
@@ -2431,12 +2431,12 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	</screen>
 
 	<screen name="ParentalControlEditor" position="fill" title="Parental control services Editor" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="servicelist" scrollbarMode="showOnDemand" enableWrapAround="1" position="780,105" size="1110,720" transparent="1"/>
 	</screen>
 
 	<screen name="PinInput" position="fill" title="Change pin code" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="service" position="780,105" size="1110,40" font="Regular;34" halign="center"/>
 		<widget name="text" position="780,155" size="1110,35" font="Regular;30" halign="center"/>
 		<widget name="tries" position="780,200" size="1110,35" font="Regular;30" halign="center"/>
@@ -2494,7 +2494,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 
 	<!-- Common interface -->
 	<screen name="MMIDialog" position="fill">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="title" position="780,105" size="900,35" font="Regular;32"/>
 		<widget name="subtitle" position="780,145" size="900,35" font="Regular;32"/>
 		<widget name="entries" position="780,185" size="900,385" itemHeight="35" font="Regular;32" scrollbarMode="showOnDemand"/>
@@ -2503,13 +2503,13 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 
 	<!-- Common interface - selection -->
 	<screen name="CiSelection" position="fill" title="Common Interface">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="text" position="780,105" size="1100,35" font="Regular;33"/>
 		<widget name="entries" position="780,160" size="1100,570" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="CIselectMainMenu" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<widget name="CiList" position="780,105" size="1100,570" itemHeight="45" font="Regular;33" scrollbarMode="showOnDemand"/>
 	</screen>
 
