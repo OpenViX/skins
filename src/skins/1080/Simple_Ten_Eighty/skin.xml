@@ -1993,9 +1993,9 @@
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="10,10" size="80,80" alphatest="blend" conditional="QuestionPixmap" zPosition="2"/>
 		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="10,10" size="80,80" alphatest="blend" conditional="WarningPixmap" zPosition="2"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="10,10" size="80,80" alphatest="blend" conditional="InfoPixmap" zPosition="2"/>
-		<widget name="list" position="150,150" size="720,570" itemHeight="38" font="Regular;28" zPosition="3"/>
+		<widget name="list" position="150,150" size="720,570" itemHeight="38" font="Regular;28" zPosition="3" scrollbarMode="showOnDemand"/>
 	<applet type="onLayoutFinish">
-from enigma import eSize, ePoint, eListbox
+from enigma import eSize, ePoint
 if self.timerRunning:
 	titleheight = 30
 else:
@@ -2011,10 +2011,8 @@ textsize = (textsize[0] + 76, textsize[1] + 30)
 wsizex = textsize[0] + 90
 wsizey = textsize[1]
 lenlist = len(self.list)*38
-scrollbar = False
 if (lenlist &gt; 190):
 	lenlist = 190
-	scrollbar = True
 if (96 &gt; wsizey):
 	wsizey = 96
 if self.type == self.TYPE_YESNO:
@@ -2044,11 +2042,6 @@ if self.type == self.TYPE_YESNO:
 	listsize = (wsizex-6, lenlist)
 	self[&quot;list&quot;].instance.move(ePoint(3, int(wsizey - lenlist + titleheight - 3)))
 	self[&quot;list&quot;].instance.resize(eSize(*listsize))
-	if scrollbar:
-		self[&quot;list&quot;].instance.setScrollbarMode(eListbox.showAlways)
-		# force update
-		self[&quot;list&quot;].instance.moveSelection(self[&quot;list&quot;].instance.moveUp)
-		self[&quot;list&quot;].instance.moveSelection(self[&quot;list&quot;].instance.moveDown)
 newwidth = wsize[0]
 self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgpos.y() + (orgheight - wsizey) // 2)))
 	</applet>
