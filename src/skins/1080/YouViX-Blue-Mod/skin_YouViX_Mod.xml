@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 12.05.2026 -->
+	<!--  Modified by Orlandox 23.05.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -788,7 +788,7 @@
 		<widget name="AboutScrollLabel" position="750,232" size="1050,693" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 12.05.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 23.05.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -4718,16 +4718,23 @@ self.autoResize()
 		<widget source="File" render="Label" position="80,670" size="590,160" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground" transparent="1" valign="center" halign="center"/>
 	</screen>
 
-	<!-- ## tmdb ## -->
-	<screen name="tmdbScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database">
+	<!-- ## tmdb 1.0.2 ## -->
+	<screen name="tmdbScreen" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDB - The Movie Database">
 		<panel name="BigMenuPanel"/>
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="searchinfo" position="80,165" size="590,130" font="youvix-b;35" foregroundColor="yellow" halign="center" backgroundColor="menubackground" transparent="1" />
-		<eLabel position="164,294" size="422,632" backgroundColor="white"/>
-		<widget name="cover" position="165,295" size="420,630" zPosition="100" alphatest="blend" />
-		<widget name="list" conditional="list" position="680,165" size="1160,17*44" backgroundColor="menubackground" transparent="1" itemHeight="44" scrollbarMode="showOnDemand"/>
+		<eLabel position="207,294" size="335,502" backgroundColor="white"/>
+		<widget name="cover" position="208,295" size="333,500" zPosition="100" alphatest="blend" />
+		<widget name="title_txt" position="75,800" size="200,62" font="youvix-r;26" backgroundColor="menubackground" valign="bottom" transparent="1"/>
+		<widget name="title" position="280,800" size="320,62" font="youvix-r;26" backgroundColor="menubackground" valign="bottom" transparent="1"/>
+		<widget name="lang_txt" position="75,863" size="200,31" font="youvix-r;26" backgroundColor="menubackground" transparent="1"/>
+		<widget name="lang" position="280,863" size="320,31" noWrap="1" font="youvix-r;26" backgroundColor="menubackground" transparent="1"/>
+		<widget name="rating_txt" position="75,895" size="200,31" font="youvix-r;26" backgroundColor="menubackground" transparent="1"/>
+		<widget name="rating" position="280,895" size="320,31" noWrap="1" font="youvix-r;26" backgroundColor="menubackground" transparent="1"/>
+		<widget name="list" conditional="list" position="680,165" size="1160,10*44" backgroundColor="menubackground" transparent="1" itemHeight="44" scrollbarMode="showOnDemand"/>
+		<widget name="overview" position="680,608" size="1160,320" font="youvix-r;25" backgroundColor="menubackground" transparent="1" scrollbarMode="showNever"/>
 	</screen>
-	<screen name="tmdbScreenMovie" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Details">
+	<screen name="tmdbScreenMovie" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDB - The Movie Database - Details">
 		<panel name="BigMenuPanel"/>
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="searchinfo" position="80,165" size="590,130" font="youvix-b;35" foregroundColor="yellow" halign="center" backgroundColor="menubackground" transparent="1" />
@@ -4754,24 +4761,21 @@ self.autoResize()
 		<widget name="genre" position="790,690" size="730,70" zPosition="5" font="youvix-r;27" foregroundColor="white" transparent="1" alphatest="blend"/>
 		<widget name="studio_txt" position="680,760" size="110,40" zPosition="5" font="youvix-r;28" foregroundColor="white" transparent="1" alphatest="blend"/>
 		<widget name="studio" position="790,760" size="730,190" zPosition="5" font="youvix-r;27" foregroundColor="white" transparent="1" alphatest="blend"/>
-		<widget name="description" position="0,0" size="0,0" /> #To remove debug warning
-		<widget name="fsk" position="0,0" size="0,0" /> #To remove debug warning
-		<widget name="subtitle" position="0,0" size="0,0" /> #To remove debug warning
+		<widget name="fsk" position="880,160" size="100,100" zPosition="5" alphatest="blend"/>
 		<widget name="backdrop" position="675,272" size="1170,658" zPosition="0" alphatest="blend" />
 		<ePixmap position="675,272" size="1170,658" zPosition="1" pixmap="screens/backdrop_dark.png" alphatest="blend" />
 	</screen>
-	<screen name="tmdbScreenPeople" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Cast">
+	<screen name="tmdbScreenPeople" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDB - The Movie Database - Cast">
 		<panel name="BigMenuPanel"/>
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="searchinfo" position="80,165" size="590,130" font="youvix-b;35" foregroundColor="yellow" halign="center" backgroundColor="menubackground" transparent="1" />
 		<eLabel position="164,294" size="422,632" backgroundColor="white" zPosition="5"/>
 		<widget name="cover" position="165,295" size="420,630" zPosition="100" alphatest="blend" />
-		<widget name="data" position="0,0" size="0,0" /> #To remove debug warning
 		<widget name="list" position="680,165" size="1160,17*44" transparent="1" backgroundColor="menubackground" zPosition="5" itemHeight="44" scrollbarMode="showOnDemand"/>
 		<widget name="backdrop" position="675,272" size="1170,658" zPosition="0" alphatest="blend" />
 		<ePixmap position="675,272" size="1170,658" zPosition="1" pixmap="screens/backdrop_dark.png" alphatest="blend" />
 	</screen>
-	<screen name="tmdbScreenPerson" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Actor">
+	<screen name="tmdbScreenPerson" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDB - The Movie Database - Actor">
 		<panel name="BigMenuPanel"/>
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="searchinfo" position="80,165" size="590,130" font="youvix-b;35" foregroundColor="yellow" halign="center" backgroundColor="menubackground" transparent="1" />
@@ -4780,7 +4784,7 @@ self.autoResize()
 		<widget name="fulldescription" position="680,155" size="1160,775" transparent="1" backgroundColor="menubackground" zPosition="100" halign="left" font="youvix-r;30" scrollbarMode="showOnDemand"/>
 		<widget name="backdrop" position="0,0" size="0,0" /> #To remove debug warning
 	</screen>
-	<screen name="tmdbScreenSeason" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDb - The Movie Database - Seasons">
+	<screen name="tmdbScreenSeason" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="TMDB - The Movie Database - Seasons">
 		<panel name="BigMenuPanel"/>
 		<eLabel text="MyTMDb" position="85,2" size="300,43" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<widget name="searchinfo" position="80,165" size="590,130" font="youvix-b;35" foregroundColor="yellow" halign="center" backgroundColor="menubackground" transparent="1" />
