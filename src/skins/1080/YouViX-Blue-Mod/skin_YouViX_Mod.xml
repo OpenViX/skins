@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 13.06.2026 -->
+	<!--  Modified by Orlandox 04.07.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -442,6 +442,7 @@
 		</widget>
 	</screen>
 	<screen name="GraphicalInfoBarEPG" position="fill" backgroundColor="transparent" transparent="0" flags="wfNoBorder" title="Infobar Grid EPG" >
+		<panel name="ChannelSelectionOrbitalPosition" />
 		<eLabel position="75,665" size="1770,120" backgroundColor="menubackground" zPosition="-1" />
 		<eLabel text="Infobar Grid EPG" position="85,677" size="800,45" font="youvix-r;37" foregroundColor="white" backgroundColor="menubackground" valign="center" transparent="1" zPosition="1"/>
 		<ePixmap position="345,735" size="50,32" pixmap="icons/arrow-up.png" alphatest="blend" zPosition="1"/>
@@ -788,7 +789,7 @@
 		<widget name="AboutScrollLabel" position="750,232" size="1050,693" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 13.06.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 04.07.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -1846,8 +1847,8 @@
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">LongFullDate,Default</convert>
 		</widget>
-		<widget name="duration" position="80,380" size="590,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
-		<widget source="session.Event_Now" render="Label" position="535,57" size="350,35" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" noWrap="0" valign="center" halign="left" zPosition="1" >
+		<widget name="duration" position="80,380" size="220,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="right" zPosition="1" />
+		<widget source="session.Event_Now" render="Label" position="315,380" size="275,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="0" halign="left" zPosition="1" >
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
