@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 20.07.2026 -->
+	<!--  Modding done by Orlandox 07.08.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -330,15 +330,15 @@
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1131,113" size="240,38" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="right" valign="center">
-			<convert type="ServicePosition">Position</convert>
+			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
 		<eLabel text="/" font="youvix-r;26" position="1377,117" size="25,38" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" zPosition="1"/>
-		<widget source="session.CurrentService" render="Label" position="1395,113" size="130,38" font="youvix-r;26" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" valign="center">
-			<convert type="ServicePosition">Length</convert>
+		<widget source="session.CurrentService" render="Label" position="1393,113" size="130,38" font="youvix-r;26" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" valign="center">
+			<convert type="ServicePosition">Length,ShowHours</convert>
 		</widget>
-		<ePixmap position="1500,119" size="26,26" pixmap="icons/info3.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="1505,119" size="26,26" pixmap="icons/info3.png" alphatest="blend" zPosition="1"/>
 		<widget source="session.CurrentService" render="Label" position="1540,113" size="150,38" font="youvix-b;26" foregroundColor="yellow" backgroundColor="background2" transparent="1" valign="center">
-			<convert type="ServicePosition">Remaining</convert>
+			<convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="370,119" size="161,28" font="youvix-r;22" backgroundColor="background2" transparent="1" borderWidth="3" borderColor="black">
 			<convert type="PliExtraInfo">ResolutionString</convert>
