@@ -2258,35 +2258,36 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!--Media-Player -->
 
 	<screen name="MediaPlayer" title="MediaPlayer" position="fill" flags="wfNoBorder">
-		<panel name="BasicTemplate"/>
+		<panel name="PigLessTemplate"/>
 		<eLabel position="30,93" size="922,39" backgroundColor="grey" zPosition="5" text="F i l e l i s t" foregroundColor="black" font="Regular;33" halign="center"/>
-		<widget name="filelist" position="30,135" size="922,610" backgroundColor="noTransBG" scrollbarMode="showOnDemand"/>
+		<widget name="filelist" position="30,135" size="922,576" backgroundColor="noTransBG" scrollbarMode="showOnDemand"/>
 		<eLabel position="967,93" size="922,39" backgroundColor="grey" zPosition="5" text="P l a y l i s t" foregroundColor="black" font="Regular;33" halign="center"/>
-		<widget name="playlist" position="967,135" size="922,610" backgroundColor="noTransBG" selectionDisabled="1" scrollbarMode="showOnDemand"/>
-
-		<widget name="title" position="200,765" size="1520,60" backgroundColor="noTransBG" transparent="1" font="Regular;39" valign="top" halign="center"/>
-		<eLabel position="190,817" size="1540,3" backgroundColor="darkgrey"/>
-		<widget name="titletext" position="200,832" size="150,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top"/>
-		<widget name="currenttext" position="350,832" size="1200,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top"/>
-		<widget name="artisttext" position="200,877" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top"/>
-		<widget name="artist" position="350,877" size="1020,37" backgroundColor="noTransBG" transparent="1" font="Regular;30" valign="top"/>
-		<widget name="albumtext" position="200,922" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top"/>
-		<widget name="album" position="350,922" size="1020,37" backgroundColor="noTransBG" transparent="1" font="Regular;30" valign="top"/>
-		<widget name="yeartext" position="200,967" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top"/>
-		<widget name="year" position="350,967" size="375,37" backgroundColor="noTransBG" transparent="1" font="Regular;30" valign="top"/>
-		<widget name="genretext" position="825,967" size="150,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top"/>
-		<widget name="genre" position="975,967" size="517,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top"/>
-		<widget name="coverArt" pixmap="icons/no_coverArt.png" position="30,817" size="116,116" transparent="1" alphatest="blend"/>
-
-		<ePixmap pixmap="dvr/mpslider.png" position="180,1041" size="900,24" backgroundColor="noTransBG" zPosition="13" alphatest="on"/>
-		<widget name="PositionGauge" position="212,1042" size="836,21" transparent="0" zPosition="12" pointer="dvr/pointer.png:20,5"/>
-		<widget source="session.CurrentService" render="Label" position="10,1035" size="150,35" backgroundColor="noTransBG" transparent="1" zPosition="2" font="Regular;30" valign="center" halign="right">
-			<convert type="ServicePosition">Position</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="1100,1035" size="150,35" backgroundColor="noTransBG" transparent="1" zPosition="2" font="Regular;30" valign="center" halign="left">
-			<convert type="ServicePosition">Remaining</convert>
-		</widget>
-		<widget name="repeat" position="1785,1032" size="105,45" zPosition="10" pixmaps="buttons/repeat-off.png,buttons/repeat-on.png" alphatest="blend"/>
+		<widget name="playlist" position="967,135" size="922,576" backgroundColor="noTransBG" selectionDisabled="1" scrollbarMode="showOnDemand"/>
+		<panel position="0,-55" size="e,e"><!-- move block up 55 to insert button bar -->
+			<widget name="title" position="200,765" size="1520,60" backgroundColor="noTransBG" transparent="1" font="Regular;39" valign="top" halign="center"/>
+			<eLabel position="190,817" size="1540,3" backgroundColor="darkgrey"/>
+			<widget name="titletext" position="200,832" size="150,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top"/>
+			<widget name="currenttext" position="350,832" size="1200,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top"/>
+			<widget name="artisttext" position="200,877" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top"/>
+			<widget name="artist" position="350,877" size="1020,37" backgroundColor="noTransBG" transparent="1" font="Regular;30" valign="top"/>
+			<widget name="albumtext" position="200,922" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top"/>
+			<widget name="album" position="350,922" size="1020,37" backgroundColor="noTransBG" transparent="1" font="Regular;30" valign="top"/>
+			<widget name="yeartext" position="200,967" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top"/>
+			<widget name="year" position="350,967" size="375,37" backgroundColor="noTransBG" transparent="1" font="Regular;30" valign="top"/>
+			<widget name="genretext" position="825,967" size="150,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top"/>
+			<widget name="genre" position="975,967" size="517,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top"/>
+			<widget name="coverArt" pixmap="icons/no_coverArt.png" position="30,817" size="116,116" transparent="1" alphatest="blend"/>
+	
+			<ePixmap pixmap="dvr/mpslider.png" position="180,1041" size="900,24" backgroundColor="noTransBG" zPosition="13" alphatest="on"/>
+			<widget name="PositionGauge" position="212,1042" size="836,21" transparent="0" zPosition="12" pointer="dvr/pointer.png:20,5"/>
+			<widget source="session.CurrentService" render="Label" position="10,1035" size="150,35" backgroundColor="noTransBG" transparent="1" zPosition="2" font="Regular;30" valign="center" halign="right">
+				<convert type="ServicePosition">Position</convert>
+			</widget>
+			<widget source="session.CurrentService" render="Label" position="1100,1035" size="150,35" backgroundColor="noTransBG" transparent="1" zPosition="2" font="Regular;30" valign="center" halign="left">
+				<convert type="ServicePosition">Remaining</convert>
+			</widget>
+			<widget name="repeat" position="1785,1032" size="105,45" zPosition="10" pixmaps="buttons/repeat-off.png,buttons/repeat-on.png" alphatest="blend"/>
+		</panel>
 	</screen>
 
 	<screen name="SubtitleDisplay" position="fill" backgroundColor="transparent" zPosition="-1" flags="wfNoBorder"/>
