@@ -1170,9 +1170,41 @@
 		<widget name="timerlist" position="780,100" size="1110,912" scrollbarMode="showOnDemand" itemHeight="76" rowSplit="42" setEventNameFont="Regular;32" setServiceNameFont="Regular;28" setFont="Regular;28" satPosLeft="250"/>
 	</screen>
 
-	<screen name="PluginBrowser" position="fill" flags="wfNoBorder">
+	<screen name="PluginBrowser" position="fill" flags="wfNoBorder"><!-- not used, see below -->
 		<panel name="PigTemplate"/>
-		<widget name="list" position="780,100" size="1110,912" scrollbarMode="showOnDemand"/>
+		<!-- widget name="list" position="780,100" size="1110,912" scrollbarMode="showOnDemand"/ -->
+		<widget source="list" render="Listbox" position="780,100" size="1110,912" scrollbarMode="showOnDemand">
+				<convert type="TemplatedMultiContent"><!-- single column list -->
+				{
+					"template": [
+						MultiContentEntryPixmapAlphaBlend(pos = (3, 5), size = (150, 65), png = 3, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
+						MultiContentEntryText(pos = (180, 5), size = (930, 39), font = 0, text = 1), # name
+						MultiContentEntryText(pos = (180, 40), size = (930, 30), font = 1, text = 2), # desc
+					],
+					"fonts": [gFont("Regular", 32), gFont("Regular", 22)],
+					"itemHeight": 76,
+				}
+				</convert>
+			</widget>
+	</screen>
+
+	<screen name="PluginBrowser" position="fill" flags="wfNoBorder">
+		<panel name="PigLessTemplate"/>
+		<widget source="list" render="Listbox" position="30,100" size="1860,912" scrollbarMode="showOnDemand">
+				<convert type="TemplatedMultiContent"><!-- two column list -->
+				{
+					"template": [
+						MultiContentEntryPixmapAlphaBlend(pos = (15, 5), size = (150, 65), png = 3, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
+						MultiContentEntryText(pos = (180, 5), size = (745, 39), font = 0, text = 1), # name
+						MultiContentEntryText(pos = (180, 40), size = (745, 30), font = 1, text = 2), # desc
+					],
+					"fonts": [gFont("Regular", 32), gFont("Regular", 22)],
+					"itemHeight": 76,
+					"itemWidth": 925,
+					"orientation": "orGrid",
+				}
+				</convert>
+			</widget>
 	</screen>
 
 	<screen name="PluginDownloadBrowser" title="Downloadable plugins" position="fill" flags="wfNoBorder">
