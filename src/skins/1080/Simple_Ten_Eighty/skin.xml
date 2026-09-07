@@ -332,8 +332,8 @@
 
 	<screen name="MoviePlayer" title="InfoBar" position="150,67" size="1620,150" backgroundColor="secondBG" flags="wfNoBorder">
 		<panel name="PlayerTemplate"/>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1467,107" size="50,32" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsMultichannel</convert>
+		<widget source="session.CurrentService" render="AudioIcon" path="audioicon" position="1445,100" size="75,45" alphatest="on" zPosition="2">
+			<convert type="ServiceInfo">AudioCodecIcon</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_hd.png" position="1518,107" size="60,32" zPosition="4" alphatest="on">
