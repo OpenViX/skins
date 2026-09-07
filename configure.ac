@@ -357,6 +357,7 @@ src/skins/1080/YouViX-Red/spinner/Makefile
 src/skins/1080/YouViX-Red/vixcore/Makefile
 
 src/skins/1080/YouViX-Blue-Mod/Makefile
+src/skins/1080/YouViX-Blue-Mod/audioicon/Makefile
 src/skins/1080/YouViX-Blue-Mod/buttons/Makefile
 src/skins/1080/YouViX-Blue-Mod/countries/Makefile
 src/skins/1080/YouViX-Blue-Mod/crossepg/Makefile
