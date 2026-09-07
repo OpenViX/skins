@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 04.09.2026 -->
+	<!--  Modified by Orlandox 07.09.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -789,7 +789,7 @@
 		<widget name="AboutScrollLabel" position="750,232" size="1050,693" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 04.09.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 07.09.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -878,23 +878,24 @@
 	<screen name="AudioSelection" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel2" />
 		<panel name="MenuMySetupText" />
-		<widget name="config" position="1025,165" size="545,380" font="youvix-r;28" itemHeight="37" foregroundColor="white" backgroundColor="menubackground2" transparent="1" scrollbarMode="showOnDemand" />
-		<widget source="key_red" render="Pixmap" pixmap="buttons/red.png" position="980,167" size="35,35" alphatest="blend" zPosition="1">
+		<widget name="config" position="960,165" size="610,11*37" font="youvix-r;28" itemHeight="37" foregroundColor="white" backgroundColor="menubackground2" transparent="1" scrollbarMode="showOnDemand" />
+		<widget source="key_red" render="Pixmap" pixmap="buttons/red.png" position="920,167" size="35,35" alphatest="blend" zPosition="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="key_green" render="Pixmap" pixmap="buttons/green.png" position="980,203" size="35,35" alphatest="blend" zPosition="1">
+		<widget source="key_green" render="Pixmap" pixmap="buttons/green.png" position="920,203" size="35,35" alphatest="blend" zPosition="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="key_yellow" render="Pixmap" pixmap="buttons/yellow.png" position="980,239" size="35,35" alphatest="blend" zPosition="1">
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/yellow.png" position="920,239" size="35,35" alphatest="blend" zPosition="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="key_blue" render="Pixmap" pixmap="buttons/blue.png" position="980,275" size="35,35" alphatest="blend" zPosition="1">
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/blue.png" position="920,275" size="35,35" alphatest="blend" zPosition="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="680,510" size="1160,35" zPosition="1" foregroundColor="grey" backgroundColor="menubackground2" transparent="1" font="youvix-r;28" noWrap="1" valign="center" halign="center">
+		<eLabel position="680,585" size="1160,2" zPosition="-1" backgroundColor="darkergrey" />
+		<widget source="session.CurrentService" render="Label" position="680,587" size="1160,35" zPosition="1" foregroundColor="grey" backgroundColor="menubackground2" transparent="1" font="youvix-r;28" noWrap="1" valign="center" halign="center">
 			<convert type="ServiceName">NameOnly</convert>
 		</widget>
-		<widget source="streams" render="Listbox" position="680,550" size="1160,10*37" foregroundColor="white" backgroundColor="menubackground2" transparent="1" scrollbarMode="showOnDemand">
+		<widget source="streams" render="Listbox" position="680,632" size="1160,8*37" foregroundColor="white" backgroundColor="menubackground2" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"templates":
 				{"default": (37, [
