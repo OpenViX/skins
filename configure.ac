@@ -217,6 +217,7 @@ src/skins/1080/Magic-FHD/spinner/Makefile
 src/skins/1080/Magic-FHD/window/Makefile
 
 src/skins/1080/Simple_Ten_Eighty/Makefile
+src/skins/1080/Simple_Ten_Eighty/audioicon/Makefile 
 src/skins/1080/Simple_Ten_Eighty/border/Makefile
 src/skins/1080/Simple_Ten_Eighty/buttons/Makefile
 src/skins/1080/Simple_Ten_Eighty/dvr/Makefile
