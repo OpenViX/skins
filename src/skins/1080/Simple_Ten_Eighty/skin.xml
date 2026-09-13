@@ -330,24 +330,17 @@
 
 	<!-- Movie Player Infobar -->
 
-	<screen name="MoviePlayer" title="InfoBar" position="150,67" size="1620,150" backgroundColor="secondBG" flags="wfNoBorder">
+	<screen name="MoviePlayer" title="InfoBar" position="150,67" size="1620,170" backgroundColor="secondBG" flags="wfNoBorder">
 		<panel name="PlayerTemplate"/>
-		<widget source="session.CurrentService" render="AudioIcon" path="audioicon" position="1445,100" size="75,45" alphatest="on" zPosition="2">
-			<convert type="ServiceInfo">AudioCodecIcon</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_hd.png" position="1518,107" size="60,32" zPosition="4" alphatest="on">
-			<convert type="ServiceInfo">IsHD</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_16_9.png" position="1518,107" size="60,32" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsSDAndWidescreen</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4_3.png" position="1518,107" size="60,32" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsSDAndNotWidescreen</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
+		<widget addon="ServiceInfoBar" connection="session" position="970,112" size="600,45" zPosition="110" backgroundColor="background" transparent="1" 
+			elements="videoRes,audioChannels,audioCodec,videoCodec,gamma" 
+			pixmaps="IS_HD:infobar/icon_hd.png,IS_4K:infobar/icon_4k.png,IS_SD:infobar/icon_sd.png,IS_HDR:infobar/icon_hdr.png,IS_HDR10:infobar/icon_hdr10.png,IS_HLG:infobar/icon_hlg.png"
+			audioCodecIconPath="infobar"
+			videoCodecIconPath="infobar"
+			audioChannelsIconPath="infobar"
+			alignment="right" 
+			spacing="7" 
+			autoresizeMode="condensed" />
 	</screen>
 
 	<!-- DVD Player Infobar -->
