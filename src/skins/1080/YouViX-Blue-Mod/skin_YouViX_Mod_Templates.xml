@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 07.09.2026 -->
+	<!--  Modding done by Orlandox 19.09.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -136,7 +136,6 @@
 		<ePixmap position="786,937" size="30,30" pixmap="icons/nowplaying.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="InfobarRecIcon">
-<!--		<ePixmap pixmap="icons/record.png" position="740,937" size="30,30" zPosition="0" alphatest="blend" />  -->
 		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="751,937" size="30,30" zPosition="1" backgroundColor="lightcolour" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink,1000</convert>
 		</widget>
@@ -156,110 +155,138 @@
 		<ePixmap position="1535,936" size="35,35" pixmap="icons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="InfobarStatusIcons">
-		<widget source="session.Event_Now" render="Pixmap" pixmap="icons/ico_pdc.png" position="650,990" size="60,28" zPosition="1" alphatest="blend">
+		<widget source="session.Event_Now" render="AudioIcon" path="audioicon" pixmap="audioicon/icon_pdc.png" position="668,977" size="60,44" zPosition="1" alphatest="blend">
 			<convert type="EventName">Pdc</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_subservices.png" position="720,979" size="48,40" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_subservices.png" position="738,977" size="60,44" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/encrypted.png" position="778,982" size="35,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_crypted.png" position="808,977" size="60,44" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/encryptedscsa.png" position="778,982" size="35,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_crypted_csa.png" position="808,977" size="60,44" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">IsSoftCSA</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hd4k.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_avc.png" position="878,977" size="60,44" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsVideoAVC</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_hevc.png" position="878,977" size="60,44" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsVideoHEVC</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_mpeg4.png" position="878,977" size="60,44" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsStream</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_4k.png" position="948,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hd1080.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_fhd.png" position="948,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">Is1080</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hd720.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icaudioiconons/icon_hd.png" position="948,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">Is720</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/sd576.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_sd.png" position="948,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">Is576</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/sd480.png" position="823,962" size="111,75" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_sd.png" position="948,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">Is480</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/178.png" position="944,983" size="89,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_16-9.png" position="1018,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/133.png" position="944,983" size="70,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_4-3.png" position="1018,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">IsNotWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="AudioIcon" path="audioicon" position="1043,977" size="72,45" alphatest="blend" zPosition="1">
+		<widget source="session.CurrentService" render="AudioIcon" path="audioicon" position="1088,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">AudioCodecIcon</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/teksti-tv.png" position="1125,983" size="35,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_2.0.png" position="1158,977" size="60,44" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsMPEG1LayerII</convert>
+			<convert type="ConditionalShowHide">True</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_2.0.png" position="1158,977" size="60,44" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsAudio20</convert>
+			<convert type="ConditionalShowHide">True</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_2.0.png" position="1158,977" size="60,44" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsAudioStereo</convert>
+			<convert type="ConditionalShowHide">True</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_5.1.png" position="1158,977" size="60,44" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsAudio51</convert>
+			<convert type="ConditionalShowHide">True</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_7.1.png" position="1158,977" size="60,44" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsAudio71</convert>
+			<convert type="ConditionalShowHide">True</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_teletext.png" position="1228,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/AudioTracks.png" position="1170,983" size="50,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_audio_tracks.png" position="1298,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">AudioTracksAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/Subtitles.png" position="1230,983" size="44,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_subtitles.png" position="1368,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">SubtitlesAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/SDR.png" position="1284,983" size="133,35" zPosition="1" alphatest="blend">
-			<convert type="ServiceInfo">IsSDR</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/HDR.png" position="1284,983" size="133,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_hdr.png" position="1438,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">IsHDR</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/HDR10.png" position="1284,983" size="133,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_hdr10.png" position="1438,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">IsHDR10</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/HLG.png" position="1284,983" size="133,35" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_hlg.png" position="1438,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">IsHLG</convert>
 			<convert type="ConditionalShowHide" />
 		</widget> 
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hbbtv.png" position="1427,979" size="103,40" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_hbbtv.png" position="1508,977" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_dvb-s.png" position="1540,984" size="38,38" zPosition="1" alphatest="blend" scale="1">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_dvb-s.png" position="1578,985" size="38,38" alphatest="blend" zPosition="1">
 			<convert type="TransponderInfo">DVB-S;DVB-S2</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_dvb-t.png" position="1540,984" size="38,38" zPosition="1" alphatest="blend" scale="1">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_dvb-t.png" position="1578,985" size="38,38" alphatest="blend" zPosition="1">
 			<convert type="TransponderInfo">DVB-T;DVB-T2</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_dvb-c.png" position="1540,984" size="38,38" zPosition="1" alphatest="blend" scale="1">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_dvb-c.png" position="1578,985" size="38,38" alphatest="blend" zPosition="1">
 			<convert type="TransponderInfo">DVB-C</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_stream.png" position="1540,984" size="38,38" zPosition="1" alphatest="blend" scale="1">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_stream.png" position="1578,985" size="38,38" alphatest="blend" zPosition="1">
 			<convert type="TransponderInfo">Stream</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/catchup.png" position="1588,984" size="38,38" zPosition="1" alphatest="blend" scale="1">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/catchup.png" position="1626,985" size="38,38" alphatest="blend" zPosition="1">
 			<convert type="TransponderInfo">catchup</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="buttons/stableupdate.png" position="1750,1025" size="169,53" zPosition="1" alphatest="blend" >
+		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="buttons/stableupdate.png" position="1750,1025" size="169,53" alphatest="blend" zPosition="1">
 			<convert type="ConditionalShowHide">Blink,1000</convert>
 		</widget>
-		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="buttons/unstableupdate.png" position="1750,1025" size="169,53" zPosition="1" alphatest="blend" >
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="buttons/unstableupdate.png" position="1750,1025" size="169,53" alphatest="blend" zPosition="1">
 			<convert type="ConditionalShowHide">Blink,1000</convert>
 		</widget>
 	</screen>
@@ -305,7 +332,7 @@
 		<widget source="session.CurrentService" render="Label" position="325,34" size="850,60" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" valign="center" noWrap="0" zPosition="1">
 			<convert type="ServiceName">NameOnly</convert>
 		</widget>
-		<ePixmap position="center,25" size="1517,130" pixmap="infobar/moviebar.png" zPosition="-1" scale="1"/>
+		<ePixmap position="center,25" size="1517,137" pixmap="infobar/moviebar.png" zPosition="-1" scale="1"/>
 		<ePixmap position="275,48" size="35,35" pixmap="icons/info.png" alphatest="blend" zPosition="1"/>
 		<widget source="global.CurrentTime" render="Label" position="1275,57" size="200,38" font="youvix-b;30" foregroundColor="clockcolour" backgroundColor="background2" transparent="1" noWrap="1" halign="right" valign="center" zPosition="1">
 			<convert type="ClockToText">Format:%a %e %h</convert>
@@ -321,66 +348,88 @@
 		<widget source="session.CurrentService" render="Progress" backgroundColor="#064A6E" foregroundColor="lightcolour" position="center,98" zPosition="2" size="1367,12" transparent="1" cornerRadius="6">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1161,113" size="240,38" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="right" valign="center">
+		<widget source="session.CurrentService" render="Label" position="1161,115" size="240,38" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" halign="right" valign="center">
 			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
-		<eLabel text="/" font="youvix-r;26" position="1407,117" size="25,38" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" zPosition="1"/>
-		<widget source="session.CurrentService" render="Label" position="1423,113" size="130,38" font="youvix-r;26" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" valign="center">
+		<eLabel text="/" font="youvix-r;26" position="1407,119" size="25,38" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" zPosition="1"/>
+		<widget source="session.CurrentService" render="Label" position="1423,115" size="130,38" font="youvix-r;26" foregroundColor="lightcolour" backgroundColor="background2" transparent="1" valign="center">
 			<convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1490,113" size="150,38" font="youvix-b;26" foregroundColor="yellow" backgroundColor="background2" transparent="1" valign="center" halign="right">
+		<widget source="session.CurrentService" render="Label" position="1490,115" size="150,38" font="youvix-b;26" foregroundColor="yellow" backgroundColor="background2" transparent="1" valign="center" halign="right">
 			<convert type="ServicePosition">Length,ShowHours</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="370,119" size="161,28" font="youvix-r;22" backgroundColor="background2" transparent="1" borderWidth="3" borderColor="black">
+		<widget source="session.CurrentService" render="Label" position="370,122" size="161,28" font="youvix-r;22" backgroundColor="background2" transparent="1" borderWidth="3" borderColor="black">
 			<convert type="PliExtraInfo">ResolutionString</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/txt.png" position="536,119" size="60,28" zPosition="1" alphatest="blend">
-			<convert type="ServiceInfo">HasTelext</convert>
-			<convert type="ConditionalShowHide"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_avc.png" position="536,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsVideoAVC</convert>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<!-- <widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/2-0.png" position="601,119" size="60,28" zPosition="1" alphatest="blend">
-			<convert type="ServiceInfo">IsStereo</convert>
-			<convert type="ConditionalShowHide"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_hevc.png" position="536,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsVideoHEVC</convert>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/5-1.png" position="601,119" size="60,28" zPosition="1" alphatest="blend">
-			<convert type="ServiceInfo">IsMultichannel</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget> -->
-		<widget source="session.CurrentService" render="AudioIcon" path="audioicon" position="601,114" size="59,37" scale="1" alphatest="on" zPosition="2">
-			<convert type="ServiceInfo">AudioCodecIcon</convert>
-			<convert type="ConditionalShowHide"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_mpeg4.png" position="536,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsStream</convert>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/4-3.png" position="666,119" size="60,28" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_4k.png" position="601,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_fhd.png" position="601,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">Is1080</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icaudioiconons/icon_hd.png" position="601,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">Is720</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_sd.png" position="601,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">Is576</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_sd.png" position="601,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">Is480</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_4-3.png" position="666,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">IsNotWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/16-9.png" position="666,119" size="60,28" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_16-9.png" position="666,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/sdi.png" position="731,119" size="60,28" zPosition="1" alphatest="blend">
-			<convert type="ServiceInfo">IsSD</convert>
+		<widget source="session.CurrentService" render="AudioIcon" path="audioicon" position="731,114" size="60,44" alphatest="blend" zPosition="2">
+			<convert type="ServiceInfo">AudioCodecIcon</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/hdi.png" position="731,119" size="60,28" zPosition="1" alphatest="blend">
-			<convert type="ServiceInfo">IsHD</convert>
-			<convert type="ConditionalShowHide"/>
+				<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_2.0.png" position="796,114" size="60,44" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsMPEG1LayerII</convert>
+			<convert type="ConditionalShowHide">True</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/uhd.png" position="731,119" size="60,28" zPosition="1" alphatest="blend">
-			<convert type="ServiceInfo">Is4K</convert>
-			<convert type="ConditionalShowHide"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_2.0.png" position="796,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsAudio20</convert>
+			<convert type="ConditionalShowHide">True</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="796,119" size="100,28" font="youvix-r;22" foregroundColor="white" backgroundColor="background2" transparent="1" zPosition="1">
-			<convert type="PliExtraInfo">VideoCodec</convert>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_2.0.png" position="796,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsAudioStereo</convert>
+			<convert type="ConditionalShowHide">True</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="901,119" size="175,28" font="youvix-r;22" foregroundColor="white" backgroundColor="background2" transparent="1" zPosition="1">
-			<convert type="VAudioInfo">AudioCodec</convert>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_5.1.png" position="796,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsAudio51</convert>
+			<convert type="ConditionalShowHide">True</convert>
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/ico_stream2.png" position="1106,123" size="20,20" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_7.1.png" position="796,114" size="60,44" scale="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsAudio71</convert>
+			<convert type="ConditionalShowHide">True</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/ico_stream2.png" position="861,123" size="20,20" zPosition="1" alphatest="blend">
 			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/ico_rec.png" position="1081,123" size="20,20" zPosition="1" alphatest="blend">
+		<widget source="session.RecordState" render="Pixmap" pixmap="YouViX-Blue-Mod/icons/ico_rec.png" position="886,123" size="20,20" zPosition="1" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
