@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 20.09.2026 -->
+	<!--  Modified by Orlandox 21.09.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -786,7 +786,7 @@
 		<widget name="AboutScrollLabel" position="750,232" size="1050,693" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 20.09.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 21.09.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -1836,8 +1836,8 @@
 		<panel name="MenuMyGuideText" />
 		<panel name="MenuButtonBar" /> 
 		<panel name="MenuKeyAutoTemplate" />
-		<widget source="Title" render="Label" position="80,245" size="590,95" font="youvix-b;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="center" valign="center" zPosition="1" />
-		<widget source="session.CurrentService" render="Label" position="85,55" size="445,76" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" halign="left" zPosition="1" >
+		<widget source="Title" render="Label" position="80,245" size="590,95" font="youvix-b;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="center" valign="bottom" zPosition="1" />
+		<widget source="session.CurrentService" render="Label" position="85,55" size="590,76" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground" transparent="1" halign="left" zPosition="1" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget name="channel" position="80,200" size="590,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
@@ -1845,13 +1845,16 @@
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">LongFullDate,Default</convert>
 		</widget>
-		<widget name="duration" position="80,380" size="220,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="right" zPosition="1" />
-		<widget source="session.Event_Now" render="Label" position="315,380" size="275,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="0" halign="left" zPosition="1" >
+		<widget name="duration" position="80,380" size="590,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" zPosition="1" />
+		<widget source="session.Event_Now" render="Label" position="80,420" size="590,75" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" halign="center" valign="bottom" zPosition="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="80,495" size="590,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="0" halign="center" zPosition="1" >
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget name="FullDescription" position="680,165" size="1160,785" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="top" transparent="1" zPosition="1" />
-		<widget source="Service" render="Picon" position="170,500" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
+		<widget source="Service" render="Picon" position="170,600" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<widget name="epg_eventname" position="0,0" size="0,0"/> #To remove debug warning
@@ -1878,7 +1881,7 @@
 		</widget>
 		<widget name="duration" position="80,380" size="590,38" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" transparent="1" noWrap="1" halign="center" valign="center" zPosition="1" />
 		<widget name="FullDescription" position="680,165" size="1160,750" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="top" transparent="1" zPosition="1" />
-		<widget source="Service" render="Picon" position="170,500" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
+		<widget source="Service" render="Picon" position="170,600" size="400,240" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
 			<convert type="MovieReference"/>
 		</widget>
 		<widget name="epg_eventname" position="0,0" size="0,0"/> #To remove debug warning
