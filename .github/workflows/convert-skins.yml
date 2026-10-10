@@ -1,0 +1,177 @@
+name: Convert skins to 2560x1440
+
+on:
+  workflow_dispatch:
+    inputs:
+      skins:
+        description: >-
+          Skin folder names from OpenViX/skins src/skins/1080 (or 720),
+          separated by commas, e.g. "Simple_Ten_Eighty, YouViX-Blue". Use "all" for every 1080 skin.
+        required: true
+        default: Simple_Ten_Eighty
+      skins_ref:
+        description: Branch, tag or commit of OpenViX/skins to convert
+        required: true
+        default: master
+      add_to_repo:
+        description: Commit the converted skins to src/skins/1440 in this repo
+        type: boolean
+        default: true
+      release:
+        description: Also publish the converted skins as a GitHub release
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    name: Check skin names
+    runs-on: ubuntu-latest
+    outputs:
+      skins: ${{ steps.list.outputs.skins }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get OpenViX skins
+        uses: actions/checkout@v4
+        with:
+          repository: OpenViX/skins
+          ref: ${{ inputs.skins_ref }}
+          path: openvix-skins
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install "pillow>=10"
+
+      - name: Resolve skin list
+        id: list
+        env:
+          SKINS: ${{ inputs.skins }}
+        run: |
+          list=$(python3 wqhd_convert.py --skins-root openvix-skins/src/skins --skins "$SKINS" --list)
+          echo "Converting: $list"
+          echo "skins=$list" >> "$GITHUB_OUTPUT"
+
+  convert:
+    name: Convert ${{ matrix.skin }}
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        skin: ${{ fromJSON(needs.plan.outputs.skins) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get OpenViX skins
+        uses: actions/checkout@v4
+        with:
+          repository: OpenViX/skins
+          ref: ${{ inputs.skins_ref }}
+          path: openvix-skins
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install "pillow>=10"
+
+      - name: Convert
+        id: convert
+        env:
+          SKIN: ${{ matrix.skin }}
+        run: python3 wqhd_convert.py --skins-root openvix-skins/src/skins --skins "$SKIN" --out dist
+
+      - name: Add report to the job summary
+        env:
+          NEW_NAME: ${{ steps.convert.outputs.new_name }}
+        run: |
+          {
+            echo "## $NEW_NAME"
+            echo '```'
+            cat "dist/$NEW_NAME-report.txt"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # The artifact download is the installable zip: usr/share/enigma2/<skin>/...
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.convert.outputs.new_name }}
+          path: dist/${{ steps.convert.outputs.new_name }}/
+          if-no-files-found: error
+
+  commit:
+    name: Add to src/skins/1440
+    needs: convert
+    if: ${{ inputs.add_to_repo && !cancelled() && needs.convert.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # one push at a time if several runs finish together
+    concurrency:
+      group: add-to-repo-${{ github.ref }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: ${{ runner.temp }}/converted
+
+      - name: Copy into src/skins/1440 and write Makefile.am files
+        env:
+          CONVERTED: ${{ runner.temp }}/converted
+        run: python3 add_to_repo.py --repo-dir src/skins/1440 "$CONVERTED"/*/
+
+      - name: Commit and push
+        env:
+          SKINS: ${{ inputs.skins }}
+          SKINS_REF: ${{ inputs.skins_ref }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/skins/1440
+          if git diff --cached --quiet; then
+            echo "No changes - src/skins/1440 is already up to date."
+            exit 0
+          fi
+          git commit -q -m "WQHD: convert $SKINS (OpenViX/skins @ $SKINS_REF)"
+          git pull --rebase -q
+          git push
+          echo "Committed to src/skins/1440: $(git log -1 --format=%h)" >> "$GITHUB_STEP_SUMMARY"
+
+  release:
+    name: Publish release
+    needs: convert
+    if: ${{ inputs.release && !cancelled() && needs.convert.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Zip each skin
+        run: |
+          mkdir -p release
+          for d in artifacts/*/; do
+            name=$(basename "$d")
+            (cd "$d" && zip -qr "$GITHUB_WORKSPACE/release/$name.zip" .)
+          done
+          ls -l release
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SKINS_REF: ${{ inputs.skins_ref }}
+        run: |
+          tag="wqhd-${GITHUB_RUN_NUMBER}"
+          gh release create "$tag" release/*.zip \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "WQHD skins (run ${GITHUB_RUN_NUMBER})" \
+            --notes "2560x1440 conversions of OpenViX/skins @ ${SKINS_REF}. Unzip into / on the box - everything lands in /usr/share/enigma2/."
