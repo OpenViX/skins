@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 12.10.2026 -->
+	<!--  Modified by Orlandox 18.10.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -229,9 +229,14 @@
 		<widget name="key_green" position="860,810" size="180,59" font="youvix-r;24" foregroundColor="#0004c81b" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
 		<widget name="key_yellow" position="1080,810" size="180,59" font="youvix-r;24" foregroundColor="#00edf506" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
 		<widget name="key_blue" position="1300,810" size="180,59" font="youvix-r;24" foregroundColor="#00077cf5" backgroundColor="menubackground" transparent="1" valign="center" zPosition="2" borderWidth="1"/>
-		<widget source="session.CurrentService" render="Picon" position="38,345" size="400,240" transparent="0" alphatest="blend" zPosition="2">
+		<widget source="session.CurrentService" render="Picon" position="38,385" size="400,240" transparent="0" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
+		<widget source="session.CurrentService" render="Label" position="10,300" size="457,34" font="youvix-r;28" halign="center" foregroundColor="yellow" backgroundColor="background2" transparent="1" zPosition="1">
+			<convert type="BitrateInfo">Both</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="CiModuleControl" allVisible="0" position="10,344" size="457,34" font="youvix-r;28" borderWidth="1" borderColor="black" foregroundColor="yellow" backgroundColor="background2" transparent="1" zPosition="1"/>
 		<widget source="session.FrontendStatus" render="FixedLabel" text="SNR:" position="1490,810" size="60,59" font="youvix-r;26" foregroundColor="white" backgroundColor="background2" transparent="1" valign="center" noWrap="1" >
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ConditionalShowHide"/>
