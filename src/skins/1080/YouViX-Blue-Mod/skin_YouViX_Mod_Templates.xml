@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 23.10.2026 -->
+	<!--  Modding done by Orlandox 28.10.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -155,20 +155,24 @@
 		<ePixmap position="1535,126" size="35,35" pixmap="icons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="InfobarStatusIcons">
-		<widget source="session.Event_Now" render="AudioIcon" path="audioicon" pixmap="audioicon/icon_pdc.png" position="668,167" size="60,44" zPosition="1" alphatest="blend">
+		<widget source="session.Event_Now" render="AudioIcon" path="audioicon" pixmap="audioicon/icon_pdc.png" position="598,167" size="60,44" zPosition="1" alphatest="blend">
 			<convert type="EventName">Pdc</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_subservices.png" position="738,167" size="60,44" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_subservices.png" position="668,167" size="60,44" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_crypted.png" position="808,167" size="60,44" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_crypted.png" position="738,167" size="60,44" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_crypted_csa.png" position="808,167" size="60,44" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_crypted_csa.png" position="738,167" size="60,44" zPosition="1" alphatest="blend">
 			<convert type="ServiceInfo">IsSoftCSA</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_mpeg4.png" position="808,167" size="60,44" alphatest="blend" zPosition="1">
+			<convert type="ServiceInfo">IsStream</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_avc.png" position="878,167" size="60,44" alphatest="blend" zPosition="1">
@@ -177,10 +181,6 @@
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_hevc.png" position="878,167" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">IsVideoHEVC</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_mpeg4.png" position="878,167" size="60,44" alphatest="blend" zPosition="1">
-			<convert type="ServiceInfo">IsStream</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_4k.png" position="948,167" size="60,44" alphatest="blend" zPosition="1">
@@ -219,10 +219,10 @@
 			<convert type="ServiceInfo">IsMPEG1LayerII</convert>
 			<convert type="ConditionalShowHide">True</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_2.0.png" position="1158,167" size="60,44" alphatest="blend" zPosition="1">
+		<!-- <widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_2.0.png" position="1158,167" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">IsAudio20</convert>
 			<convert type="ConditionalShowHide">True</convert>
-		</widget>
+		</widget> -->
 		<widget source="session.CurrentService" render="Pixmap" pixmap="audioicon/icon_2.0.png" position="1158,167" size="60,44" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">IsAudioStereo</convert>
 			<convert type="ConditionalShowHide">True</convert>
