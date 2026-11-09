@@ -4,7 +4,7 @@
 	<!--  This skin is OpenSource. Anyone can modify it and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 05.11.2026 -->
+	<!--  Modding done by Orlandox 09.11.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -158,5 +158,41 @@
 		<pixmap name="menu_on" filename="icons/menu_on.png" />
 		<pixmap name="menu_off" filename="icons/menu_off.png" />
 	</switchpixmap>
-	
+
+	<servicelisttemplates>
+		<styles>
+			<style name="number" fgNotAvail="#777777" fgRecorded="#b40431" />
+			<style name="name" fgNotAvail="#777777" fgRecorded="#b40431" />
+			<style name="event" fg="lightgrey" fgSelected="lightgrey" fgNotAvail="#777777" />
+			<style name="next" fg="#787878" fgSelected="#787878" fgNotAvail="#777777" />
+			<style name="remain" fg="darkcolour" fgSelected="darkcolour" fgNotAvail="#777777" />
+			<style name="bar" fg="blue" fgSelected="yellow" border="white" borderSelected="blue" />
+			<style name="separator" fg="white" fgSelected="white" />
+		</styles>
+		<template name="grid" title="Grid" layout="grid" large="0" itemWidth="192" itemHeight="178">
+			<row id="picon" for="service" height="74">
+				<item type="picon" width="*" margin="8" align="center" visible="cfg.picons" />
+				<item type="number" text="{number}" pos="3,2,70,26" font="youvix-r;22" fontGroup="number" style="number" visible="hasnumber" />
+				<item type="crypto" pos="112,2,34,26" align="right" visible="cfg.cryptoAny,crypted" />
+				<item type="record" pos="150,2,34,26" align="right" visible="recorded" />
+			</row>
+			<row id="name" for="service" height="36" padding="3,3">
+				<item type="text" text="{name}" width="*" align="center" font="youvix-r;24" fontGroup="name" style="name" />
+			</row>
+			<row id="event" for="service" height="40" padding="3,3">
+				<item type="text" text="{event}" width="*" align="center" font="youvix-r;20" fontGroup="event" style="event" visible="event" />
+			</row>
+			<row id="bar" for="service" height="12" padding="10,10">
+				<item type="progress" width="*" style="bar" visible="event" />
+			</row>
+			<row id="marker" for="marker" padding="8,8">
+				<item type="text" text="{name}" width="*" align="center" font="youvix-r;24" fontGroup="name" style="name" />
+			</row>
+			<row id="folder" for="directory" gap="0" padding="2,2">
+				<item type="kind" width="80" pos="56,25,80,80"/>
+				<item type="text" text="{name}" width="*" pos="2,115,188,40" font="youvix-r;24" fontGroup="name" style="name" />
+			</row>
+		</template>
+	</servicelisttemplates>
+
 </skin>
