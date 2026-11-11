@@ -1,5 +1,0 @@
-SUBDIRS = 720
-
-if HAVE_SKINS1080
-SUBDIRS += 1080
-endif
