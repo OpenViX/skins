@@ -79,6 +79,10 @@
 		<color name="secondFG" value="#00F9C731"/>
 		<color name="selectedBG" value="#06303240"/>
 		<color name="selectedFG" value="#00fcc000"/>
+		<color name="semidarkgrey" value="#004c4c4c"/>
+		<color name="signallow" value="#00FF0000"/>
+		<color name="signalmid" value="#00FEFE7F"/>
+		<color name="signalhigh" value="#003DD50D"/>
 		<color name="transparent" value="#ff000000"/>
 		<color name="transpBlack" value="#2d101214"/>
 		<color name="transpDark" value="#54242424"/>
@@ -270,7 +274,7 @@
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="Progress" position="1590,25" size="300,30" pixmap="infobar/pbar_grey.png" backgroundColor="transpBlack" zPosition="1" borderWidth="1" borderColor="grey">
+		<widget source="session.FrontendStatus" render="Progress" position="1590,25" size="300,30" foregroundColor="semidarkgrey" backgroundColor="transpBlack" zPosition="1" borderWidth="1" borderColor="grey">
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -378,7 +382,7 @@
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Progress" position="120,573" size="540,15" pixmap="window/progress.png" transparent="0" backgroundColor="un33333a" borderWidth="0">
+		<widget source="ServiceEvent" render="Progress" position="120,574" size="540,12" foregroundColor="#00356e95,#006fA4ec,#0029546f,vertical" transparent="0" backgroundColor="un33333a" borderWidth="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="660,565" size="90,32" transparent="1" foregroundColor="foreground" font="Regular;28" halign="right">
@@ -541,7 +545,7 @@
 		<widget source="Event" render="Label" position="1185,105" size="705,36" backgroundColor="background" transparent="1" foregroundColor="secondFG" font="Regular;33" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Progress" pixmap="infobar/pbar.png" position="780,147" size="1110,12" transparent="0" borderWidth="0" backgroundColor="un33333a">
+		<widget source="Event" render="Progress" foregroundColor="#00356e95,#006fA4ec,#0029546f,vertical" position="780,147" size="1110,12" transparent="0" borderWidth="0" backgroundColor="un33333a">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="Event" render="Label" position="780,165" size="1110,320" backgroundColor="background" transparent="1" font="Regular;33" halign="block">
@@ -895,7 +899,7 @@
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar.png" position="260,892" size="1380,12" backgroundColor="un33333a" transparent="0" zPosition="2" borderWidth="0">
+		<widget source="session.Event_Now" render="Progress" foregroundColor="#00356e95,#006fA4ec,#0029546f,vertical" position="260,892" size="1380,12" backgroundColor="un33333a" transparent="0" zPosition="2" borderWidth="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4_3.png" position="1576,841" size="60,32" zPosition="3" alphatest="on">
@@ -2218,8 +2222,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 
 	<screen name="Satfinder" title="Satfinder" position="fill" flags="wfNoBorder">
 		<panel name="PigLessTemplate"/>
-
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="30,150" size="1860,75" borderWidth="1" borderColor="#00808888">
+		<widget source="Frontend" render="Progress" position="30,150" size="1860,75" foregroundColor="signallow,signalmid,signalhigh,horizontal" borderWidth="1" borderColor="#00808888">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<eLabel text="SNR:" position="37,150" size="150,75" valign="center" backgroundColor="darkgrey" borderWidth="1" transparent="1" font="Regular;52"/>
@@ -2227,7 +2230,7 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 
-		<widget source="Frontend" render="Progress" pixmap="infobar/bar_big.png" position="30,240" size="1860,75" borderWidth="1" borderColor="#00808888">
+		<widget source="Frontend" render="Progress" position="30,240" size="1860,75" foregroundColor="signallow,signalmid,signalhigh,horizontal" borderWidth="1" borderColor="#00808888">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<eLabel text="AGC:" position="37,240" size="150,75" valign="center" backgroundColor="darkgrey" borderWidth="1" transparent="1" font="Regular;52"/>
