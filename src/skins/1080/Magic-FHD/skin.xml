@@ -1118,9 +1118,10 @@
 	</screen>
 	<screen name="MessageBoxWizard" position="fill" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="810,150" size="81,81"/>
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="810,150" size="81,81"/>
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="810,150" size="81,81"/>
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="810,150" size="81,81" alphatest="blend" conditional="icon" zPosition="2"/>
+		<widget name="ErrorPixmap"  conditional="ErrorPixmap" pixmap="icons/input_error.png" position="810,150" size="81,81" alphatest="blend"/>
+		<widget name="QuestionPixmap" conditional="QuestionPixmap" pixmap="icons/input_question.png" position="810,150" size="81,81" alphatest="blend"/>
+		<widget name="InfoPixmap" conditional="InfoPixmap" pixmap="icons/input_info.png" position="810,150" size="81,81" alphatest="blend"/>
 		<widget name="text" position="930,120" size="1000,882" font="Regular;33" foregroundColor="grey"/>
 		<widget name="list" position="7,585" size="900,360" font="Regular;33"/>
 		<widget name="rc" pixmap="rc.png" position="1657,210" zPosition="10" size="231,750"/>
