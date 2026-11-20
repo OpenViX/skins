@@ -282,109 +282,7 @@
 		<widget source="session.Event_Next" render="Label" position="975,270" size="930,562" font="Regular;30" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-
-<!--
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_sub_on.png" position="975,125" size="54,36" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">SubservicesAvailable</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/crypt.png" position="1030,125" size="28,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsCrypted</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/mpeg2.png" position="1075,125" size="80,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsVideoMPEG2</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/avc.png" position="1075,125" size="80,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsVideoAVC</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/hevc.png" position="1075,125" size="80,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsVideoHEVC</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/2-0.png" position="1160,125" size="60,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsStereo</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/5-1.png" position="1160,125" size="60,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsMultichannel</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/txt.png" position="1225,125" size="60,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">HasTelext</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/4-3.png" position="1290,125" size="60,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsSDAndNotWidescreen</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/16-9.png" position="1290,125" size="60,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsSDAndWidescreen</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/hdi.png" position="1290,125" size="60,28" zPosition="4" alphatest="on">
-			<convert type="ServiceInfo">IsHD</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/uhd.png" position="1290,125" size="60,28" zPosition="6" alphatest="on">
-			<convert type="ServiceInfo">Is4K</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/hbbtv.png" position="1355,125" size="70,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">HasHBBTV</convert>
-			<convert type="ConditionalShowHide"	/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ip.png" position="1430,125" size="28,28" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsStream</convert>
-			<convert type="ConditionalShowHide"	/>
-		</widget>
-		<widget source="session.Event_Now" render="Pixmap" pixmap="infobar/ico_pdc.png" position="1465,125" size="40,25" zPosition="2" alphatest="on">
-			<convert type="EventName">Pdc</convert>
-			<convert type="ConditionalShowHide"	/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/sdr.png" position="1510,125" size="60,28" alphatest="blend">
-			<convert type="ServiceInfo">IsSDR</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/hdr.png" position="1510,125" size="60,28" alphatest="blend">
-			<convert type="ServiceInfo">IsHDR</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/hdr.png" position="1510,125" size="60,28" alphatest="blend">
-			<convert type="ServiceInfo">IsHDR10</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/hlg.png" position="1510,125" size="60,28" alphatest="blend">
-			<convert type="ServiceInfo">IsHLG</convert>
-		<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S:" position="1410,155" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
-			<convert type="FrontendInfo">TYPE</convert>
-			<convert type="ValueRange">0,0</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C:" position="1410,155" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
-			<convert type="FrontendInfo">TYPE</convert>
-			<convert type="ValueRange">1,1</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T:" position="1410,155" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" borderColor="black" borderWidth="1" transparent="1">
-			<convert type="FrontendInfo">TYPE</convert>
-			<convert type="ValueRange">2,2</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.FrontendInfo" render="Label" position="1537,155" size="255,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="yellow">
-			<convert type="FrontendInfo">STRING</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" text="	Signal:" position="1800,155" size="120,55" font="Regular;21" backgroundColor="transpBlack" transparent="1">
-			<convert type="RotorPosition"/>
-			<convert type="ConditionalShowHide"/>
-		</widget>
--->
-
-		<widget addon="ServiceInfoBar" connection="session" position="950,155" size="685,36" zPosition="2" backgroundColor="background" transparent="1" 
+		<widget addon="ServiceInfoBar" connection="session" position="950,145" size="685,45" zPosition="2" backgroundColor="background" transparent="1" 
 			elements="currentCrypto,crypt,videoRes,audioChannels,audioCodec,videoCodec,txt,subtitletrack,subservices,gamma,hbbtv,stream,updateStable,updateUnstable" 
 			pixmaps="crypt:infobar/icon_crypted.png,IS_CRYPT:infobar/icon_crypted.png,IS_CRYPT_CSA:infobar/icon_crypted_csa.png,IS_HD:infobar/icon_hd.png,IS_4K:infobar/icon_4k.png,IS_SD:infobar/icon_sd.png,IS_HDR:infobar/icon_hdr.png,IS_HDR10:infobar/icon_hdr10.png,IS_HLG:infobar/icon_hlg.png,stream:infobar/icon_clientsstreaming.png,subtitletrack:infobar/icon_subtitles.png,txt:infobar/icon_teletext.png,hbbtv:infobar/icon_hbbtv.png,subservices:infobar/icon_subservices.png,updateStable:infobar/icon_update-stable.png,updateUnstable:infobar/icon_update-unstable.png"
 			audioCodecIconPath="infobar"
@@ -395,8 +293,6 @@
 			autoresizeMode="condensed" 
 			separatorLineColor="transpDark" separatorLineThickness="1" 
 			font="Regular;40" foregroundColor="green" />
-
-
 	</screen>
 	<screen name="SecondInfoBarSimple" position="fill" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="1">
 		<panel name="InfoBarPanel"/>
