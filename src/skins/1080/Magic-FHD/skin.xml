@@ -1107,57 +1107,6 @@
 		<widget name="text" position="845,120" size="1070,877" font="Regular;33" foregroundColor="grey"/>
 		<widget name="list" position="7,530" size="715,475" font="Regular;33" itemHeight="45" foregroundColor="grey"/>
 		<widget name="icon" position="0,0" size="0,0"/> #To reduce debug noise.
-	<applet type="onLayoutFinish">
-from enigma import eSize, ePoint
-if self.timerRunning:
-	titleheight = 30
-else:
-	titleheight = 0
-	self.setTitle("")
-orgwidth = self.instance.size().width()
-orgheight = self.instance.size().height()
-orgpos = self.instance.position()
-textsize = self[&quot;text&quot;].getSize()
-if textsize[0] &lt; textsize[1]:
-	textsize = (textsize[1], textsize[0])
-textsize = (textsize[0] + 76, textsize[1] + 30)
-wsizex = textsize[0] + 90
-wsizey = textsize[1]
-lenlist = len(self.list)*38
-if (lenlist &gt; 190):
-	lenlist = 190
-if (96 &gt; wsizey):
-	wsizey = 96
-if self.type == self.TYPE_YESNO:
-	wsizey += lenlist + 15
-if (420 &gt; wsizex):
-	wsizex = 420
-wsize = (wsizex, wsizey + titleheight)
-self.instance.resize(eSize(*wsize))
-self[&quot;text&quot;].instance.move(ePoint(97, int(12 + titleheight)))
-self[&quot;text&quot;].instance.resize(eSize(*textsize))
-if &quot;ErrorPixmap&quot; in self:
-	self[&quot;ErrorPixmap&quot;].instance.move(ePoint(7, int(7 + titleheight)))
-	self[&quot;ErrorPixmap&quot;].instance.resize(eSize(80,80))
-if &quot;QuestionPixmap&quot; in self:
-	self[&quot;QuestionPixmap&quot;].instance.move(ePoint(7, int(7 + titleheight)))
-	self[&quot;QuestionPixmap&quot;].instance.resize(eSize(80,80))
-if &quot;WarningPixmap&quot; in self:
-	self[&quot;WarningPixmap&quot;].instance.move(ePoint(7, int(7 + titleheight)))
-	self[&quot;WarningPixmap&quot;].instance.resize(eSize(80,80))
-if &quot;InfoPixmap&quot; in self:
-	self[&quot;InfoPixmap&quot;].instance.move(ePoint(7, int(7 + titleheight)))
-	self[&quot;InfoPixmap&quot;].instance.resize(eSize(80,80))
-if &quot;icon&quot; in self:
-	self[&quot;icon&quot;].instance.move(ePoint(7, int(7 + titleheight)))
-	self[&quot;icon&quot;].instance.resize(eSize(80,80))
-if self.type == self.TYPE_YESNO:
-	listsize = (wsizex-6, lenlist)
-	self[&quot;list&quot;].instance.move(ePoint(3, int(wsizey - lenlist + titleheight - 3)))
-	self[&quot;list&quot;].instance.resize(eSize(*listsize))
-newwidth = wsize[0]
-self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgpos.y() + (orgheight - wsizey) // 2)))
-	</applet>
 	</screen>
 	<screen name="MessageBox" position="fill" flags="wfNoBorder">
 		<panel name="MessageBoxTemplate"/>
