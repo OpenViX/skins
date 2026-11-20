@@ -1099,7 +1099,6 @@
 	<screen name="MessageBoxTemplate">
 		<panel name="BasicTemplate"/>
 		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="760,150" size="81,81" alphatest="blend" conditional="icon"/>
-		<!-- ErrorPixmap, QuestionPixmap, InfoPixmap, WarningPixmap no longer used by openatv, openvix -->
 		<widget name="WarningPixmap" pixmap="icons/input_error.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="760,150" size="81,81" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="760,150" size="81,81" alphatest="on"/>
@@ -1112,6 +1111,9 @@
 		<panel name="MessageBoxTemplate"/>
 	</screen>
 	<screen name="MessageBoxSimple" position="fill" flags="wfNoBorder">
+		<panel name="MessageBoxTemplate"/>	
+	</screen>
+	<screen name="MessageBoxModal" position="fill" flags="wfNoBorder">
 		<panel name="MessageBoxTemplate"/>
 	</screen>
 	<screen name="MessageBoxWizard" position="fill" flags="wfNoBorder">
