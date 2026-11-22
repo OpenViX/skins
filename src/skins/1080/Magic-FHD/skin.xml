@@ -220,7 +220,7 @@
 		<widget source="session.CurrentService" render="Label" position="1,130" size="954,57" font="Regular;22" transparent="1" backgroundColor="transpBlack">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
-		<widget source="session.FrontendStatus" render="FixedLabel" text="	Quality:" position="975,5" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
+		<widget source="session.FrontendStatus" render="FixedLabel" text="	Quality:" position="975,5" size="120,30" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -232,7 +232,7 @@
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendStatus" render="FixedLabel" text="	Signal:" position="975,32" size="120,25" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
+		<widget source="session.FrontendStatus" render="FixedLabel" text="	Signal:" position="975,32" size="120,30" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1">
 			<convert type="FrontendInfo">AGC</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -257,7 +257,7 @@
 			<convert type="ConditionalShowHide">Invert</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1040,75" size="875,33" font="Regular;27" transparent="1" backgroundColor="transpBlack">
+		<widget source="session.CurrentService" render="Label" position="1040,70" size="875,33" font="Regular;27" transparent="1" backgroundColor="transpBlack">
 			<convert type="PliExtraInfo">All</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="7,190" size="937,45" font="Regular;33" backgroundColor="secondBG" transparent="1" foregroundColor="selectedFG" noWrap="1">
@@ -282,7 +282,7 @@
 		<widget source="session.Event_Next" render="Label" position="975,270" size="930,562" font="Regular;30" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget addon="ServiceInfoBar" connection="session" position="950,145" size="685,45" zPosition="2" backgroundColor="background" transparent="1" 
+		<widget addon="ServiceInfoBar" connection="session" position="937,115" size="685,40" backgroundColor="background" transparent="1" 
 			elements="currentCrypto,crypt,videoRes,audioChannels,audioCodec,videoCodec,txt,subtitletrack,subservices,gamma,hbbtv,stream" 
 			pixmaps="crypt:infobar/icon_crypted.png,IS_CRYPT:infobar/icon_crypted.png,IS_CRYPT_CSA:infobar/icon_crypted_csa.png,IS_HD:infobar/icon_hd.png,IS_4K:infobar/icon_4k.png,IS_SD:infobar/icon_sd.png,IS_HDR:infobar/icon_hdr.png,IS_HDR10:infobar/icon_hdr10.png,IS_HLG:infobar/icon_hlg.png,stream:infobar/icon_clientsstreaming.png,subtitletrack:infobar/icon_subtitles.png,txt:infobar/icon_teletext.png,hbbtv:infobar/icon_hbbtv.png,subservices:infobar"
 			audioCodecIconPath="infobar"
@@ -292,7 +292,29 @@
 			spacing="7" 
 			autoresizeMode="condensed" 
 			separatorLineColor="transpDark" separatorLineThickness="1" 
-			font="Regular;40" foregroundColor="green" />
+			font="Regular;28" foregroundColor="green" />
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S:" position="1410,155" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C:" position="1410,155" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T:" position="1410,155" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" borderColor="black" borderWidth="1" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Label" position="1537,155" size="255,36" font="Regular;30" backgroundColor="secondBG" transparent="1" zPosition="2" foregroundColor="yellow">
+			<convert type="FrontendInfo">STRING</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" text="	Signal:" position="1800,155" size="120,55" font="Regular;21" backgroundColor="transpBlack" transparent="1">
+			<convert type="RotorPosition"/>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
 	<screen name="SecondInfoBarSimple" position="fill" backgroundColor="transpBlack" flags="wfNoBorder" zPosition="1">
 		<panel name="InfoBarPanel"/>
