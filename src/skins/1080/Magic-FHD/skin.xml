@@ -282,17 +282,20 @@
 		<widget source="session.Event_Next" render="Label" position="975,270" size="930,562" font="Regular;30" backgroundColor="secondBG" transparent="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget addon="ServiceInfoBar" connection="session" position="937,115" size="685,40" backgroundColor="background" transparent="1" 
-			elements="currentCrypto,crypt,videoRes,audioChannels,audioCodec,videoCodec,txt,subtitletrack,pdc,subservices,gamma,hbbtv" 
+		<widget addon="ServiceInfoBar" connection="session" position="937,115" size="685,40" backgroundColor="background" transparent="1"
+			elements="pdc,crypt,videoRes,audioChannels,audioCodec,videoCodec,txt,subtitletrack,subservices,gamma,hbbtv" 
 			pixmaps="crypt:infobar/icon_crypted.png,IS_CRYPT:infobar/icon_crypted.png,IS_CRYPT_CSA:infobar/icon_crypted_csa.png,IS_HD:infobar/icon_hd.png,IS_4K:infobar/icon_4k.png,IS_SD:infobar/icon_sd.png,IS_HDR:infobar/icon_hdr.png,IS_HDR10:infobar/icon_hdr10.png,IS_HLG:infobar/icon_hlg.png,stream:infobar/icon_clientsstreaming.png,subtitletrack:infobar/icon_subtitles.png,pdc:infobar/icon_pdc.png,txt:infobar/icon_teletext.png,hbbtv:infobar/icon_hbbtv.png,subservices:infobar/icon_subservices.png"
 			audioCodecIconPath="infobar"
 			videoCodecIconPath="infobar"
 			audioChannelsIconPath="infobar"
 			alignment="right" 
-			spacing="7" 
+			spacing="6" 
 			autoresizeMode="condensed" 
-			separatorLineColor="transpDark" separatorLineThickness="1" 
-			font="Regular;28" foregroundColor="green" />
+			separatorLineColor="transpDark" separatorLineThickness="1"/>
+<!--		<widget source="session.Event_Now" render="Label" position="1627,117" font="Regular;25" size="60,30" backgroundColor="background" transparent="1">
+			<convert type="EventName">PdcTimeShort</convert>
+		</widget>
+		-->
 		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S:" position="1410,155" size="120,36" font="Regular;30" backgroundColor="transpBlack" halign="right" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
